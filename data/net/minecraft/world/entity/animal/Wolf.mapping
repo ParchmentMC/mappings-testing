@@ -58,6 +58,8 @@ CLASS net/minecraft/world/entity/animal/Wolf
 		ARG 1 compound
 	METHOD setCollarColor (Lnet/minecraft/world/item/DyeColor;)V
 		ARG 1 collarColor
+	METHOD setHasArmor (Z)V
+		ARG 1 armor
 	METHOD setIsInterested (Z)V
 		ARG 1 isInterested
 	METHOD setPersistentAngerTarget (Ljava/util/UUID;)V

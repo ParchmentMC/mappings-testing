@@ -18,6 +18,8 @@ CLASS net/minecraft/client/multiplayer/ServerData
 		ARG 1 iconBytes
 	METHOD setResourcePackStatus (Lnet/minecraft/client/multiplayer/ServerData$ServerPackStatus;)V
 		ARG 1 packStatus
+	METHOD setState (Lnet/minecraft/client/multiplayer/ServerData$State;)V
+		ARG 1 state
 	METHOD validateIcon ([B)[B
 		ARG 0 icon
 	METHOD write ()Lnet/minecraft/nbt/CompoundTag;

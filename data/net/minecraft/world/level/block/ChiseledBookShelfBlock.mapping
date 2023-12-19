@@ -6,6 +6,9 @@ CLASS net/minecraft/world/level/block/ChiseledBookShelfBlock
 		ARG 3 blockEntity
 		ARG 4 bookStack
 		ARG 5 slot
+	METHOD getHitSlot (Lnet/minecraft/world/phys/BlockHitResult;Lnet/minecraft/world/level/block/state/BlockState;)Ljava/util/OptionalInt;
+		ARG 1 hitReselt
+		ARG 2 state
 	METHOD getHitSlot (Lnet/minecraft/world/phys/Vec2;)I
 		ARG 0 hitPos
 	METHOD getRelativeHitCoordinatesForBlockFace (Lnet/minecraft/world/phys/BlockHitResult;Lnet/minecraft/core/Direction;)Ljava/util/Optional;

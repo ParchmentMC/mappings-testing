@@ -1,10 +1,15 @@
 CLASS net/minecraft/world/entity/ai/attributes/AttributeInstance
 	FIELD attribute Lnet/minecraft/world/entity/ai/attributes/Attribute;
 		COMMENT The Attribute this is an instance of
+	METHOD <init> (Lnet/minecraft/core/Holder;Ljava/util/function/Consumer;)V
+		ARG 1 attribute
+		ARG 2 onDirty
 	METHOD <init> (Lnet/minecraft/world/entity/ai/attributes/Attribute;Ljava/util/function/Consumer;)V
 		ARG 1 attribute
 		ARG 2 onDirty
 	METHOD addModifier (Lnet/minecraft/world/entity/ai/attributes/AttributeModifier;)V
+		ARG 1 modifier
+	METHOD addOrUpdateTransientModifier (Lnet/minecraft/world/entity/ai/attributes/AttributeModifier;)V
 		ARG 1 modifier
 	METHOD addPermanentModifier (Lnet/minecraft/world/entity/ai/attributes/AttributeModifier;)V
 		ARG 1 modifier

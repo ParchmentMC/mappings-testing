@@ -122,6 +122,11 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 category
 	METHOD findDimensionEntryPoint (Lnet/minecraft/server/level/ServerLevel;)Lnet/minecraft/world/level/portal/PortalInfo;
 		ARG 1 destination
+	METHOD gameEvent (Lnet/minecraft/core/Holder;)V
+		ARG 1 gameEvent
+	METHOD gameEvent (Lnet/minecraft/core/Holder;Lnet/minecraft/world/entity/Entity;)V
+		ARG 1 gameEvent
+		ARG 2 entity
 	METHOD gameEvent (Lnet/minecraft/world/level/gameevent/GameEvent;)V
 		ARG 1 event
 	METHOD gameEvent (Lnet/minecraft/world/level/gameevent/GameEvent;Lnet/minecraft/world/entity/Entity;)V
@@ -143,6 +148,10 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 4 yRot
 	METHOD getCommandSenderWorld ()Lnet/minecraft/world/level/Level;
 		COMMENT Get the world, if available. <b>{@code null} is not allowed!</b> If you are not an entity in the world, return the overworld
+	METHOD getDefaultPassengerAttachmentPoint (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/EntityAttachments;)Lnet/minecraft/world/phys/Vec3;
+		ARG 0 vehicle
+		ARG 1 passenger
+		ARG 2 attachments
 	METHOD getDimensionChangingDelay ()I
 		COMMENT Return the amount of cooldown before this entity can use a portal again.
 	METHOD getDimensions (Lnet/minecraft/world/entity/Pose;)Lnet/minecraft/world/entity/EntityDimensions;
@@ -188,6 +197,10 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 entity
 	METHOD getOnPos (F)Lnet/minecraft/core/BlockPos;
 		ARG 1 yOffset
+	METHOD getPassengerAttachmentPoint (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/EntityDimensions;F)Lnet/minecraft/world/phys/Vec3;
+		ARG 1 entity
+		ARG 2 dimensions
+		ARG 3 partialTick
 	METHOD getPassengerAttachmentPoint (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/EntityDimensions;F)Lorg/joml/Vector3f;
 		ARG 1 entity
 		ARG 2 dimensions
@@ -224,6 +237,8 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 partialTicks
 	METHOD getVehicle ()Lnet/minecraft/world/entity/Entity;
 		COMMENT Get entity this is riding
+	METHOD getVehicleAttachmentPoint (Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/phys/Vec3;
+		ARG 1 entity
 	METHOD getViewVector (F)Lnet/minecraft/world/phys/Vec3;
 		COMMENT Gets the interpolated look vector.
 		ARG 1 partialTicks
@@ -445,6 +460,8 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 2 secondaryState
 	METHOD playMuffledStepSound (Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 state
+	METHOD playProjectileDeflectionSound (Lnet/minecraft/world/entity/projectile/Projectile;)V
+		ARG 1 projectile
 	METHOD playSound (Lnet/minecraft/sounds/SoundEvent;)V
 		ARG 1 sound
 	METHOD playSound (Lnet/minecraft/sounds/SoundEvent;FF)V

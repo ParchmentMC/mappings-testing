@@ -8,6 +8,8 @@ CLASS net/minecraft/world/entity/ai/behavior/Swim
 	METHOD checkExtraStartConditions (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/Mob;)Z
 		ARG 1 level
 		ARG 2 owner
+	METHOD shouldSwim (Lnet/minecraft/world/entity/Mob;)Z
+		ARG 0 mob
 	METHOD tick (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/Mob;J)V
 		ARG 1 level
 		ARG 2 owner

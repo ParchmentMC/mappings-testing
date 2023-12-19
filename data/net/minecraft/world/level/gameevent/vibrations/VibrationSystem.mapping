@@ -1,12 +1,20 @@
 CLASS net/minecraft/world/level/gameevent/vibrations/VibrationSystem
+	METHOD getGameEventFrequency (Lnet/minecraft/core/Holder;)I
+		ARG 0 gameEvent
+	METHOD getGameEventFrequency (Lnet/minecraft/resources/ResourceKey;)I
+		ARG 0 eventKey
 	METHOD getGameEventFrequency (Lnet/minecraft/world/level/gameevent/GameEvent;)I
 		ARG 0 gameEvent
 	METHOD getRedstoneStrengthForDistance (FI)I
 		ARG 0 distance
 		ARG 1 maxDistance
+	METHOD getResonanceEventByFrequency (I)Lnet/minecraft/resources/ResourceKey;
+		ARG 0 frequency
 	METHOD getResonanceEventByFrequency (I)Lnet/minecraft/world/level/gameevent/GameEvent;
 		ARG 0 frequency
 	METHOD lambda$static$0 (Lit/unimi/dsi/fastutil/objects/Object2IntOpenHashMap;)V
+		ARG 0 map
+	METHOD lambda$static$0 (Lit/unimi/dsi/fastutil/objects/Reference2IntOpenHashMap;)V
 		ARG 0 map
 	CLASS Data
 		METHOD <init> (Lnet/minecraft/world/level/gameevent/vibrations/VibrationInfo;Lnet/minecraft/world/level/gameevent/vibrations/VibrationSelector;IZ)V
@@ -31,14 +39,29 @@ CLASS net/minecraft/world/level/gameevent/vibrations/VibrationSystem
 	CLASS User
 		METHOD calculateTravelTimeInTicks (F)I
 			ARG 1 distance
+		METHOD canReceiveVibration (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Holder;Lnet/minecraft/world/level/gameevent/GameEvent$Context;)Z
+			ARG 1 level
+			ARG 2 pos
+			ARG 3 gameEvent
+			ARG 4 context
 		METHOD canReceiveVibration (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/gameevent/GameEvent;Lnet/minecraft/world/level/gameevent/GameEvent$Context;)Z
 			ARG 1 level
 			ARG 2 pos
 			ARG 3 gameEvent
 			ARG 4 context
+		METHOD isValidVibration (Lnet/minecraft/core/Holder;Lnet/minecraft/world/level/gameevent/GameEvent$Context;)Z
+			ARG 1 gameEvent
+			ARG 2 context
 		METHOD isValidVibration (Lnet/minecraft/world/level/gameevent/GameEvent;Lnet/minecraft/world/level/gameevent/GameEvent$Context;)Z
 			ARG 1 gameEvent
 			ARG 2 context
+		METHOD onReceiveVibration (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Holder;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/Entity;F)V
+			ARG 1 level
+			ARG 2 pos
+			ARG 3 gameEvent
+			ARG 4 entity
+			ARG 5 playerEntity
+			ARG 6 distance
 		METHOD onReceiveVibration (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/gameevent/GameEvent;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/Entity;F)V
 			ARG 1 level
 			ARG 2 pos
@@ -75,6 +98,11 @@ CLASS net/minecraft/world/level/gameevent/vibrations/VibrationSystem
 		METHOD distanceBetweenInBlocks (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;)F
 			ARG 0 pos1
 			ARG 1 pos2
+		METHOD forceScheduleVibration (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/Holder;Lnet/minecraft/world/level/gameevent/GameEvent$Context;Lnet/minecraft/world/phys/Vec3;)V
+			ARG 1 level
+			ARG 2 gameEvent
+			ARG 3 context
+			ARG 4 pos
 		METHOD forceScheduleVibration (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/gameevent/GameEvent;Lnet/minecraft/world/level/gameevent/GameEvent$Context;Lnet/minecraft/world/phys/Vec3;)V
 			ARG 1 level
 			ARG 2 gameEvent
@@ -88,6 +116,13 @@ CLASS net/minecraft/world/level/gameevent/vibrations/VibrationSystem
 			ARG 5 vibrationUserPos
 		METHOD lambda$isOccluded$1 (Lnet/minecraft/world/level/block/state/BlockState;)Z
 			ARG 0 state
+		METHOD scheduleVibration (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/gameevent/vibrations/VibrationSystem$Data;Lnet/minecraft/core/Holder;Lnet/minecraft/world/level/gameevent/GameEvent$Context;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;)V
+			ARG 1 level
+			ARG 2 data
+			ARG 3 gameEvent
+			ARG 4 context
+			ARG 5 pos
+			ARG 6 sensorPos
 		METHOD scheduleVibration (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/gameevent/vibrations/VibrationSystem$Data;Lnet/minecraft/world/level/gameevent/GameEvent;Lnet/minecraft/world/level/gameevent/GameEvent$Context;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;)V
 			ARG 1 level
 			ARG 2 data

@@ -7,7 +7,11 @@ CLASS net/minecraft/world/inventory/BeaconMenu
 		ARG 2 container
 		ARG 3 beaconData
 		ARG 4 access
+	METHOD decodeEffect (I)Lnet/minecraft/core/Holder;
+		ARG 0 effectId
 	METHOD decodeEffect (I)Lnet/minecraft/world/effect/MobEffect;
+		ARG 0 effect
+	METHOD encodeEffect (Lnet/minecraft/core/Holder;)I
 		ARG 0 effect
 	METHOD encodeEffect (Lnet/minecraft/world/effect/MobEffect;)I
 		ARG 0 effect

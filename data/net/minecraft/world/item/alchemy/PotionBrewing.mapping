@@ -5,6 +5,10 @@ CLASS net/minecraft/world/item/alchemy/PotionBrewing
 		ARG 0 from
 		ARG 1 ingredient
 		ARG 2 to
+	METHOD addMix (Lnet/minecraft/core/Holder;Lnet/minecraft/world/item/Item;Lnet/minecraft/core/Holder;)V
+		ARG 0 from
+		ARG 1 ingredient
+		ARG 2 to
 	METHOD addMix (Lnet/minecraft/world/item/alchemy/Potion;Lnet/minecraft/world/item/Item;Lnet/minecraft/world/item/alchemy/Potion;)V
 		ARG 0 potionEntry
 		ARG 1 potionIngredient
@@ -18,6 +22,8 @@ CLASS net/minecraft/world/item/alchemy/PotionBrewing
 	METHOD hasPotionMix (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 0 input
 		ARG 1 reagent
+	METHOD isBrewablePotion (Lnet/minecraft/core/Holder;)Z
+		ARG 0 potion
 	METHOD isBrewablePotion (Lnet/minecraft/world/item/alchemy/Potion;)Z
 		ARG 0 potion
 	METHOD isContainerIngredient (Lnet/minecraft/world/item/ItemStack;)Z

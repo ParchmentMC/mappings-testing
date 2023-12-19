@@ -10,6 +10,8 @@ CLASS net/minecraft/advancements/critereon/ItemPredicate
 			ARG 1 nbt
 		METHOD hasStoredEnchantment (Lnet/minecraft/advancements/critereon/EnchantmentPredicate;)Lnet/minecraft/advancements/critereon/ItemPredicate$Builder;
 			ARG 1 storedEnchantment
+		METHOD isPotion (Lnet/minecraft/core/Holder;)Lnet/minecraft/advancements/critereon/ItemPredicate$Builder;
+			ARG 1 potion
 		METHOD isPotion (Lnet/minecraft/world/item/alchemy/Potion;)Lnet/minecraft/advancements/critereon/ItemPredicate$Builder;
 			ARG 1 potion
 		METHOD of (Lnet/minecraft/tags/TagKey;)Lnet/minecraft/advancements/critereon/ItemPredicate$Builder;

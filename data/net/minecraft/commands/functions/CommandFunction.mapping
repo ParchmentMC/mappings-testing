@@ -4,6 +4,9 @@ CLASS net/minecraft/commands/functions/CommandFunction
 		ARG 1 dispatcher
 		ARG 2 source
 		ARG 3 lines
+	METHOD instantiate (Lnet/minecraft/nbt/CompoundTag;Lcom/mojang/brigadier/CommandDispatcher;)Lnet/minecraft/commands/functions/InstantiatedFunction;
+		ARG 1 arguments
+		ARG 2 dispatcher
 	METHOD instantiate (Lnet/minecraft/nbt/CompoundTag;Lcom/mojang/brigadier/CommandDispatcher;Ljava/lang/Object;)Lnet/minecraft/commands/functions/InstantiatedFunction;
 		ARG 1 arguments
 		ARG 2 dispatcher

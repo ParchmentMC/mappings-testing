@@ -122,6 +122,12 @@ CLASS net/minecraft/world/entity/animal/horse/AbstractHorse
 		ARG 2 value
 	METHOD setIsJumping (Z)V
 		ARG 1 jumping
+	METHOD setOffspringAttribute (Lnet/minecraft/world/entity/AgeableMob;Lnet/minecraft/world/entity/animal/horse/AbstractHorse;Lnet/minecraft/core/Holder;DD)V
+		ARG 1 parent
+		ARG 2 child
+		ARG 3 attribute
+		ARG 4 min
+		ARG 6 max
 	METHOD setOffspringAttribute (Lnet/minecraft/world/entity/AgeableMob;Lnet/minecraft/world/entity/animal/horse/AbstractHorse;Lnet/minecraft/world/entity/ai/attributes/Attribute;DD)V
 		ARG 1 otherParent
 		ARG 2 child

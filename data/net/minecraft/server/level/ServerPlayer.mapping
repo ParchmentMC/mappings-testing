@@ -37,6 +37,10 @@ CLASS net/minecraft/server/level/ServerPlayer
 		ARG 1 gameType
 	METHOD canHarmPlayer (Lnet/minecraft/world/entity/player/Player;)Z
 		ARG 1 other
+	METHOD canInteractWithBlock (Lnet/minecraft/core/BlockPos;)Z
+		ARG 1 pos
+	METHOD canInteractWithEntity (Lnet/minecraft/world/phys/AABB;)Z
+		ARG 1 box
 	METHOD changeDimension (Lnet/minecraft/server/level/ServerLevel;)Lnet/minecraft/world/entity/Entity;
 		ARG 1 server
 	METHOD checkFallDamage (DZLnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)V

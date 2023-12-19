@@ -13,6 +13,10 @@ CLASS net/minecraft/world/entity/monster/breeze/LongJump
 	METHOD hasLineOfSight (Lnet/minecraft/world/entity/monster/breeze/Breeze;Lnet/minecraft/world/phys/Vec3;)Z
 		ARG 0 breeze
 		ARG 1 targetPos
+	METHOD isFinishedInhaling (Lnet/minecraft/world/entity/monster/breeze/Breeze;)Z
+		ARG 0 breeze
+	METHOD isFinishedJumping (Lnet/minecraft/world/entity/monster/breeze/Breeze;)Z
+		ARG 0 breeze
 	METHOD outOfAggroRange (Lnet/minecraft/world/entity/monster/breeze/Breeze;Lnet/minecraft/world/entity/LivingEntity;)Z
 		ARG 0 breeze
 		ARG 1 target

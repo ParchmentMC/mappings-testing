@@ -1,0 +1,14 @@
+CLASS net/minecraft/world/entity/animal/armadillo/Armadillo
+	METHOD isScaredBy (Lnet/minecraft/world/entity/LivingEntity;)Z
+		ARG 1 entity
+	METHOD rollOut (Z)V
+		ARG 1 silent
+	METHOD setScared (Z)V
+		ARG 1 scared
+	METHOD switchToState (Lnet/minecraft/world/entity/animal/armadillo/Armadillo$ArmadilloState;)V
+		ARG 1 state
+	CLASS ArmadilloState
+		METHOD <init> (Ljava/lang/String;ILjava/lang/String;)V
+			ARG 3 id
+		METHOD fromId (Ljava/lang/String;)Lnet/minecraft/world/entity/animal/armadillo/Armadillo$ArmadilloState;
+			ARG 0 id

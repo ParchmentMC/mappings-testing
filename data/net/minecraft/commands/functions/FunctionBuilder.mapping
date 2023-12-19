@@ -4,6 +4,10 @@ CLASS net/minecraft/commands/functions/FunctionBuilder
 	METHOD addMacro (Ljava/lang/String;I)V
 		ARG 1 name
 		ARG 2 lineNumber
+	METHOD addMacro (Ljava/lang/String;ILnet/minecraft/commands/ExecutionCommandSource;)V
+		ARG 1 name
+		ARG 2 lineNumber
+		ARG 3 compilationContext
 	METHOD build (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/commands/functions/CommandFunction;
 		ARG 1 id
 	METHOD convertToIndices (Ljava/util/List;)Lit/unimi/dsi/fastutil/ints/IntList;

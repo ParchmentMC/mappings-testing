@@ -9,6 +9,9 @@ CLASS net/minecraft/world/item/alchemy/PotionUtils
 		ARG 1 tooltipLines
 		ARG 2 durationFactor
 		ARG 3 ticksPerSecond
+	METHOD getAllEffects (Lnet/minecraft/core/Holder;Ljava/util/Collection;)Ljava/util/List;
+		ARG 0 potion
+		ARG 1 effects
 	METHOD getAllEffects (Lnet/minecraft/nbt/CompoundTag;)Ljava/util/List;
 		COMMENT Creates a list of {@code MobEffectInstance}s from data on a {@code CompoundTag}.
 		ARG 0 compoundTag
@@ -23,6 +26,8 @@ CLASS net/minecraft/world/item/alchemy/PotionUtils
 		COMMENT Gets the merged integer color based from a {@code Collection} of {@code MobEffectInstance}
 		ARG 0 effects
 			COMMENT the passed {@code Collection} of {@code MobEffectInstance}
+	METHOD getColor (Lnet/minecraft/core/Holder;)I
+		ARG 0 potion
 	METHOD getColor (Lnet/minecraft/world/item/ItemStack;)I
 		COMMENT Gets the integer color of an {@link net.minecraft.world.item.ItemStack} as defined by its stored potion color tag.
 		ARG 0 stack
@@ -49,11 +54,15 @@ CLASS net/minecraft/world/item/alchemy/PotionUtils
 		COMMENT Creates a list of {@code MobEffectInstance} from data on the passed {@code ItemStack} {@code CompoundTag}.
 		ARG 0 stack
 			COMMENT The passed {@code ItemStack}
+	METHOD getPotion (Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/core/Holder;
+		ARG 0 tag
 	METHOD getPotion (Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/item/alchemy/Potion;
 		COMMENT Attempts to get the {@link net.minecraft.world.item.alchemy.Potion Potion} from a {@link net.minecraft.nbt.CompoundTag CompoundTag}.
 		COMMENT If it fails, returns {@code net.minecraft.world.item.alchemy.Potions#EMPTY Potions#EMPTY}.
 		ARG 0 compoundTag
 			COMMENT the passed {@code net.minecraft.nbt.CompoundTag CompoundTag}
+	METHOD getPotion (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/core/Holder;
+		ARG 0 stack
 	METHOD getPotion (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/alchemy/Potion;
 		COMMENT Attempts to get the {@link net.minecraft.world.item.alchemy.Potion Potion} from an {@link net.minecraft.world.item.ItemStack ItemStack}.
 		COMMENT If it fails, returns {@link net.minecraft.world.item.alchemy.Potions#EMPTY Potions#EMPTY}.
@@ -65,6 +74,9 @@ CLASS net/minecraft/world/item/alchemy/PotionUtils
 			COMMENT the passed {@code ItemStack}
 		ARG 1 effects
 			COMMENT the passed {@code Collection} of {@code MobEffectInstance}
+	METHOD setPotion (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/core/Holder;)Lnet/minecraft/world/item/ItemStack;
+		ARG 0 stack
+		ARG 1 potion
 	METHOD setPotion (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/alchemy/Potion;)Lnet/minecraft/world/item/ItemStack;
 		COMMENT Sets the {@code Potion} type to the {@code ItemStack}
 		ARG 0 stack

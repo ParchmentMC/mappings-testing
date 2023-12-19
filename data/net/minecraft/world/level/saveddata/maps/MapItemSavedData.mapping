@@ -46,6 +46,8 @@ CLASS net/minecraft/world/level/saveddata/maps/MapItemSavedData
 		ARG 1 trackedCount
 	METHOD load (Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData;
 		ARG 0 compoundTag
+	METHOD mapMatcher (Lnet/minecraft/world/item/ItemStack;)Ljava/util/function/Predicate;
+		ARG 0 stack
 	METHOD removeDecoration (Ljava/lang/String;)V
 		ARG 1 identifier
 	METHOD removedFromFrame (Lnet/minecraft/core/BlockPos;I)V

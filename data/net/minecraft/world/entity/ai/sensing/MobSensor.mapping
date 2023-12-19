@@ -1,0 +1,13 @@
+CLASS net/minecraft/world/entity/ai/sensing/MobSensor
+	METHOD <init> (ILjava/util/function/BiPredicate;Ljava/util/function/Predicate;Lnet/minecraft/world/entity/ai/memory/MemoryModuleType;I)V
+		ARG 1 scanRate
+		ARG 2 mobTest
+		ARG 3 readyTest
+		ARG 4 toSet
+		ARG 5 memoryTimeToLive
+	METHOD checkForMobsNearby (Lnet/minecraft/world/entity/LivingEntity;)V
+		ARG 1 sensingEntity
+	METHOD clearMemory (Lnet/minecraft/world/entity/LivingEntity;)V
+		ARG 1 sensingEntity
+	METHOD mobDetected (Lnet/minecraft/world/entity/LivingEntity;)V
+		ARG 1 sensingEntity

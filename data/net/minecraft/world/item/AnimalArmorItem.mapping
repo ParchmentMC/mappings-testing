@@ -1,0 +1,9 @@
+CLASS net/minecraft/world/item/AnimalArmorItem
+	METHOD <init> (ILnet/minecraft/world/item/AnimalArmorItem$Type;Ljava/lang/String;Lnet/minecraft/world/item/Item$Properties;)V
+		ARG 1 protection
+		ARG 2 type
+		ARG 3 id
+		ARG 4 properties
+	CLASS Type
+		METHOD <init> (Ljava/lang/String;ILjava/util/function/Function;)V
+			ARG 3 textureLocator

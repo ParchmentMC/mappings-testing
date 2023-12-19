@@ -4,6 +4,11 @@ CLASS net/minecraft/world/effect/MobEffect
 	METHOD <init> (Lnet/minecraft/world/effect/MobEffectCategory;I)V
 		ARG 1 category
 		ARG 2 color
+	METHOD addAttributeModifier (Lnet/minecraft/core/Holder;Ljava/lang/String;DLnet/minecraft/world/entity/ai/attributes/AttributeModifier$Operation;)Lnet/minecraft/world/effect/MobEffect;
+		ARG 1 attribute
+		ARG 2 id
+		ARG 3 amount
+		ARG 5 operation
 	METHOD addAttributeModifier (Lnet/minecraft/world/entity/ai/attributes/Attribute;Ljava/lang/String;DLnet/minecraft/world/entity/ai/attributes/AttributeModifier$Operation;)Lnet/minecraft/world/effect/MobEffect;
 		COMMENT Adds an attribute modifier to this effect. This method can be called for more than one attribute. The attributes are applied to an entity when the potion effect is active and removed when it stops.
 		ARG 1 attribute
@@ -16,12 +21,18 @@ CLASS net/minecraft/world/effect/MobEffect
 	METHOD applyEffectTick (Lnet/minecraft/world/entity/LivingEntity;I)V
 		ARG 1 livingEntity
 		ARG 2 amplifier
+	METHOD applyEffectTick (Lnet/minecraft/world/entity/LivingEntity;I)Z
+		ARG 1 livingEntity
+		ARG 2 amplifier
 	METHOD applyInstantenousEffect (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/LivingEntity;ID)V
 		ARG 1 source
 		ARG 2 indirectSource
 		ARG 3 livingEntity
 		ARG 4 amplifier
 		ARG 5 health
+	METHOD createModifiers (ILjava/util/function/BiConsumer;)V
+		ARG 1 amplifier
+		ARG 2 output
 	METHOD getColor ()I
 		COMMENT Returns the color of the potion liquid.
 	METHOD getDescriptionId ()Ljava/lang/String;
@@ -35,11 +46,17 @@ CLASS net/minecraft/world/effect/MobEffect
 		ARG 2 amplifier
 	METHOD removeAttributeModifiers (Lnet/minecraft/world/entity/ai/attributes/AttributeMap;)V
 		ARG 1 attributeMap
+	METHOD setBlendDuration (I)Lnet/minecraft/world/effect/MobEffect;
+		ARG 1 blendDuration
 	METHOD setFactorDataFactory (Ljava/util/function/Supplier;)Lnet/minecraft/world/effect/MobEffect;
 		ARG 1 factorDataFactory
 	METHOD shouldApplyEffectTickThisTick (II)Z
 		ARG 1 duration
 		ARG 2 amplifier
+	CLASS AttributeTemplate
+		METHOD create (Ljava/lang/String;I)Lnet/minecraft/world/entity/ai/attributes/AttributeModifier;
+			ARG 1 description
+			ARG 2 amplifier
 	CLASS MobEffectAttributeModifierTemplate
 		METHOD <init> (Lnet/minecraft/world/effect/MobEffect;Ljava/util/UUID;DLnet/minecraft/world/entity/ai/attributes/AttributeModifier$Operation;)V
 			ARG 2 id

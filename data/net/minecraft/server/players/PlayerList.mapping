@@ -84,6 +84,8 @@ CLASS net/minecraft/server/players/PlayerList
 		ARG 1 profile
 	METHOD isWhiteListed (Lcom/mojang/authlib/GameProfile;)Z
 		ARG 1 profile
+	METHOD load (Lnet/minecraft/server/level/ServerPlayer;)Ljava/util/Optional;
+		ARG 1 player
 	METHOD load (Lnet/minecraft/server/level/ServerPlayer;)Lnet/minecraft/nbt/CompoundTag;
 		COMMENT Called during player login. Reads the player information from disk.
 		ARG 1 player

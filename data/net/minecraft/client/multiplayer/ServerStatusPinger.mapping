@@ -14,6 +14,10 @@ CLASS net/minecraft/client/multiplayer/ServerStatusPinger
 	METHOD pingServer (Lnet/minecraft/client/multiplayer/ServerData;Ljava/lang/Runnable;)V
 		ARG 1 server
 		ARG 2 serverListUpdater
+	METHOD pingServer (Lnet/minecraft/client/multiplayer/ServerData;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
+		ARG 1 serverData
+		ARG 2 serverListUpdater
+		ARG 3 stateUpdater
 	CLASS 2
 		METHOD initChannel (Lio/netty/channel/Channel;)V
 			ARG 1 channel
