@@ -1,0 +1,4 @@
+CLASS net/minecraft/gametest/framework/RetryOptions
+	METHOD hasTriesLeft (II)Z
+		ARG 1 attempts
+		ARG 2 successes

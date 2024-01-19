@@ -5,3 +5,5 @@ CLASS net/minecraft/network/protocol/game/ClientboundPlayerCombatEndPacket
 		ARG 1 buffer
 	METHOD <init> (Lnet/minecraft/world/damagesource/CombatTracker;)V
 		ARG 1 combatTracker
+	METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
+		ARG 1 buffer

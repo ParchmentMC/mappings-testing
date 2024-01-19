@@ -14,6 +14,8 @@ CLASS net/minecraft/network/protocol/game/ClientboundPlayerInfoUpdatePacket
 	METHOD lambda$write$1 (Lnet/minecraft/network/FriendlyByteBuf;Lnet/minecraft/network/protocol/game/ClientboundPlayerInfoUpdatePacket$Entry;)V
 		ARG 1 buf
 		ARG 2 entry
+	METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
+		ARG 1 buffer
 	CLASS Entry
 		METHOD <init> (Lnet/minecraft/server/level/ServerPlayer;)V
 			ARG 1 player

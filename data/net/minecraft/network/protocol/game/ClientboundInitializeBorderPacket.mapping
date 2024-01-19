@@ -3,3 +3,5 @@ CLASS net/minecraft/network/protocol/game/ClientboundInitializeBorderPacket
 		ARG 1 buffer
 	METHOD <init> (Lnet/minecraft/world/level/border/WorldBorder;)V
 		ARG 1 worldBorder
+	METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
+		ARG 1 buffer

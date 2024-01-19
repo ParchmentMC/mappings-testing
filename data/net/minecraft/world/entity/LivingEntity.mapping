@@ -145,6 +145,8 @@ CLASS net/minecraft/world/entity/LivingEntity
 		COMMENT Reduces damage, depending on potions
 		ARG 1 damageSource
 		ARG 2 damageAmount
+	METHOD getDefaultDimensions (Lnet/minecraft/world/entity/Pose;)Lnet/minecraft/world/entity/EntityDimensions;
+		ARG 1 pose
 	METHOD getDimensions (Lnet/minecraft/world/entity/Pose;)Lnet/minecraft/world/entity/EntityDimensions;
 		ARG 1 pose
 	METHOD getDrinkingSound (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/sounds/SoundEvent;
@@ -311,6 +313,8 @@ CLASS net/minecraft/world/entity/LivingEntity
 		ARG 2 target
 	METHOD makeBrain (Lcom/mojang/serialization/Dynamic;)Lnet/minecraft/world/entity/ai/Brain;
 		ARG 1 dynamic
+	METHOD makeSound (Lnet/minecraft/sounds/SoundEvent;)V
+		ARG 1 sound
 	METHOD onAttributeUpdated (Lnet/minecraft/core/Holder;)V
 		ARG 1 attribute
 	METHOD onAttributeUpdated (Lnet/minecraft/world/entity/ai/attributes/Attribute;)V
@@ -370,6 +374,8 @@ CLASS net/minecraft/world/entity/LivingEntity
 		ARG 0 relativePortalPosition
 	METHOD rideTick ()V
 		COMMENT Handles updating while riding another entity
+	METHOD sanitizeScale (F)F
+		ARG 1 scale
 	METHOD sendEffectToPassengers (Lnet/minecraft/world/effect/MobEffectInstance;)V
 		ARG 1 effectInstance
 	METHOD setAbsorptionAmount (F)V

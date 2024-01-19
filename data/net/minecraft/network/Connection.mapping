@@ -78,11 +78,27 @@ CLASS net/minecraft/network/Connection
 		COMMENT Checks if the channel is no longer active and if so, processes the disconnection
 		COMMENT by notifying the current packet listener, which will handle things like removing the player from the world (serverside) or
 		COMMENT showing the disconnection screen (clientside).
+	METHOD inboundHandlerName (Z)Ljava/lang/String;
+		ARG 0 serverbound
 	METHOD initiateServerboundConnection (Ljava/lang/String;ILnet/minecraft/network/PacketListener;Lnet/minecraft/network/protocol/handshake/ClientIntent;)V
 		ARG 1 hostName
 		ARG 2 port
 		ARG 3 disconnectListener
 		ARG 4 intention
+	METHOD initiateServerboundConnection (Ljava/lang/String;ILnet/minecraft/network/ProtocolInfo;Lnet/minecraft/network/ProtocolInfo;Lnet/minecraft/network/ClientboundPacketListener;Lnet/minecraft/network/protocol/handshake/ClientIntent;)V
+		ARG 1 hostName
+		ARG 2 port
+		ARG 3 serverboundProtocol
+		ARG 4 clientboundProtocol
+		ARG 5 disconnectListener
+		ARG 6 intention
+	METHOD initiateServerboundPlayConnection (Ljava/lang/String;ILnet/minecraft/network/ProtocolInfo;Lnet/minecraft/network/ProtocolInfo;Lnet/minecraft/network/ClientboundPacketListener;Z)V
+		ARG 1 hostName
+		ARG 2 port
+		ARG 3 serverboundProtocol
+		ARG 4 clientbountProtocol
+		ARG 5 disconnectListener
+		ARG 6 isTransfer
 	METHOD initiateServerboundPlayConnection (Ljava/lang/String;ILnet/minecraft/network/protocol/login/ClientLoginPacketListener;)V
 		ARG 1 hostName
 		ARG 2 port
@@ -99,6 +115,8 @@ CLASS net/minecraft/network/Connection
 		COMMENT True if this {@code Connection} uses a memory connection (single player game). False may imply both an active TCP connection or simply no active connection at all
 	METHOD lambda$initiateServerboundConnection$7 (Lnet/minecraft/network/protocol/handshake/ClientIntent;Lnet/minecraft/network/PacketListener;Ljava/lang/String;ILnet/minecraft/network/Connection;)V
 		ARG 5 connection
+	METHOD outboundHandlerName (Z)Ljava/lang/String;
+		ARG 0 clientbound
 	METHOD runOnceConnected (Ljava/util/function/Consumer;)V
 		ARG 1 action
 	METHOD send (Lnet/minecraft/network/protocol/Packet;)V
@@ -143,8 +161,16 @@ CLASS net/minecraft/network/Connection
 		COMMENT Compression is enabled as part of the connection handshake when the server sends {@link net.minecraft.network.protocol.login.ClientboundLoginCompressionPacket}.
 		ARG 1 threshold
 		ARG 2 validateDecompressed
+	METHOD setupInboundProtocol (Lnet/minecraft/network/ProtocolInfo;Lnet/minecraft/network/PacketListener;)V
+		ARG 1 protocolInfo
+		ARG 2 packetInfo
+	METHOD setupOutboundProtocol (Lnet/minecraft/network/ProtocolInfo;)V
+		ARG 1 protocolInfo
 	METHOD tick ()V
 		COMMENT Checks timeouts and processes all packets received
+	METHOD validateListener (Lnet/minecraft/network/ProtocolInfo;Lnet/minecraft/network/PacketListener;)V
+		ARG 1 protocolInfo
+		ARG 2 packetListener
 	CLASS 1
 		METHOD initChannel (Lio/netty/channel/Channel;)V
 			ARG 1 channel

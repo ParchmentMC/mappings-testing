@@ -11,3 +11,6 @@ CLASS net/minecraft/world/entity/animal/sniffer/Sniffer
 		ARG 1 pos
 	METHOD transitionTo (Lnet/minecraft/world/entity/animal/sniffer/Sniffer$State;)Lnet/minecraft/world/entity/animal/sniffer/Sniffer;
 		ARG 1 state
+	CLASS State
+		METHOD <init> (Ljava/lang/String;II)V
+			ARG 3 id

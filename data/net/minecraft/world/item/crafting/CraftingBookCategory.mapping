@@ -1,3 +1,6 @@
 CLASS net/minecraft/world/item/crafting/CraftingBookCategory
 	METHOD <init> (Ljava/lang/String;ILjava/lang/String;)V
 		ARG 3 name
+	METHOD <init> (Ljava/lang/String;ILjava/lang/String;I)V
+		ARG 3 name
+		ARG 4 id

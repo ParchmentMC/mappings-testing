@@ -172,6 +172,10 @@ CLASS net/minecraft/gametest/framework/GameTestHelper
 	METHOD assertTrue (ZLjava/lang/String;)V
 		ARG 1 condition
 		ARG 2 failureMessage
+	METHOD assertValueEqual (Ljava/lang/Number;Ljava/lang/Number;Ljava/lang/String;)V
+		ARG 1 value
+		ARG 2 expectedValue
+		ARG 3 valueName
 	METHOD destroyBlock (Lnet/minecraft/core/BlockPos;)V
 		ARG 1 pos
 	METHOD fail (Ljava/lang/String;)V
@@ -186,12 +190,32 @@ CLASS net/minecraft/gametest/framework/GameTestHelper
 		ARG 1 criterion
 	METHOD failIfEver (Ljava/lang/Runnable;)V
 		ARG 1 criterion
+	METHOD findClosestEntity (Lnet/minecraft/world/entity/EntityType;IIID)Lnet/minecraft/world/entity/Entity;
+		ARG 1 type
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 radius
+	METHOD findEntities (Lnet/minecraft/world/entity/EntityType;IIID)Ljava/util/List;
+		ARG 1 type
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 radius
+	METHOD findEntities (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/phys/Vec3;D)Ljava/util/List;
+		ARG 1 type
+		ARG 2 pos
+		ARG 3 radius
+	METHOD findOneEntity (Lnet/minecraft/world/entity/EntityType;)Lnet/minecraft/world/entity/Entity;
+		ARG 1 type
 	METHOD forEveryBlockInStructure (Ljava/util/function/Consumer;)V
 		ARG 1 consumer
 	METHOD getBlockEntity (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/entity/BlockEntity;
 		ARG 1 pos
 	METHOD getBlockState (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
 		ARG 1 pos
+	METHOD getEntities (Lnet/minecraft/world/entity/EntityType;)Ljava/util/List;
+		ARG 1 entityType
 	METHOD getEntities (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/core/BlockPos;D)Ljava/util/List;
 		ARG 1 entityType
 		ARG 2 pos

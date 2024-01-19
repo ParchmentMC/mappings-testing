@@ -48,6 +48,11 @@ CLASS net/minecraft/world/entity/ai/behavior/BehaviorUtils
 		ARG 0 firstEntity
 		ARG 1 secondEntity
 		ARG 2 speed
+	METHOD lockGazeAndWalkToEachOther (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/LivingEntity;FI)V
+		ARG 0 firstEntity
+		ARG 1 secondEntity
+		ARG 2 speed
+		ARG 3 distance
 	METHOD lookAtEachOther (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/LivingEntity;)V
 		ARG 0 firstEntity
 		ARG 1 secondEntity
@@ -73,6 +78,11 @@ CLASS net/minecraft/world/entity/ai/behavior/BehaviorUtils
 		ARG 0 firstEntity
 		ARG 1 secondEntity
 		ARG 2 speed
+	METHOD setWalkAndLookTargetMemoriesToEachOther (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/LivingEntity;FI)V
+		ARG 0 firstEntity
+		ARG 1 secondEntity
+		ARG 2 speed
+		ARG 3 distance
 	METHOD targetIsValid (Lnet/minecraft/world/entity/ai/Brain;Lnet/minecraft/world/entity/ai/memory/MemoryModuleType;Ljava/util/function/Predicate;)Z
 		ARG 0 brain
 		ARG 1 memoryType

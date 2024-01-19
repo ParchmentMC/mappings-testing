@@ -1,0 +1,4 @@
+CLASS net/minecraft/gametest/framework/StructureGridSpawner
+	METHOD <init> (Lnet/minecraft/core/BlockPos;I)V
+		ARG 1 firstTestNorthWestCorner
+		ARG 2 testsPerRow

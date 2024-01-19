@@ -37,13 +37,29 @@ CLASS net/minecraft/world/item/trading/MerchantOffer
 		ARG 6 xp
 		ARG 7 priceMultiplier
 		ARG 8 demand
+	METHOD <init> (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;IIIFIZ)V
+		ARG 1 baseCostA
+		ARG 2 costB
+		ARG 3 result
+		ARG 4 uses
+		ARG 5 maxUses
+		ARG 6 xp
+		ARG 7 priceMultiplier
+		ARG 8 demand
+		ARG 9 ignoreTags
 	METHOD <init> (Lnet/minecraft/world/item/trading/MerchantOffer;)V
 		ARG 1 other
 	METHOD addToSpecialPriceDiff (I)V
 		ARG 1 add
+	METHOD createFromStream (Lnet/minecraft/network/RegistryFriendlyByteBuf;)Lnet/minecraft/world/item/trading/MerchantOffer;
+		ARG 0 buffer
 	METHOD isRequiredItem (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 1 offer
 		ARG 2 cost
+	METHOD isRequiredItem (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;Z)Z
+		ARG 0 playerOffer
+		ARG 1 cost
+		ARG 2 ignoreTags
 	METHOD satisfiedBy (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 1 playerOfferA
 		ARG 2 playerOfferB
@@ -54,3 +70,6 @@ CLASS net/minecraft/world/item/trading/MerchantOffer
 		ARG 2 playerOfferB
 	METHOD updateDemand ()V
 		COMMENT Calculates the demand with following formula: demand = demand + uses - maxUses - uses
+	METHOD writeToStream (Lnet/minecraft/network/RegistryFriendlyByteBuf;Lnet/minecraft/world/item/trading/MerchantOffer;)V
+		ARG 0 buffer
+		ARG 1 offer

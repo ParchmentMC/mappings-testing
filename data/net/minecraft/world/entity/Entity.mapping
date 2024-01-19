@@ -276,6 +276,10 @@ CLASS net/minecraft/world/entity/Entity
 		COMMENT Called when the entity is attacked.
 		ARG 1 source
 		ARG 2 amount
+	METHOD igniteForSeconds (I)V
+		ARG 1 seconds
+	METHOD igniteForTicks (I)V
+		ARG 1 ticks
 	METHOD ignoreExplosion (Lnet/minecraft/world/level/Explosion;)Z
 		ARG 1 explosion
 	METHOD interact (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResult;

@@ -1,3 +1,8 @@
 CLASS net/minecraft/network/protocol/common/custom/CustomPacketPayload
+	METHOD codec (Lnet/minecraft/network/codec/StreamMemberEncoder;Lnet/minecraft/network/codec/StreamDecoder;)Lnet/minecraft/network/codec/StreamCodec;
+		ARG 0 encoder
+		ARG 1 decoder
+	METHOD createType (Ljava/lang/String;)Lnet/minecraft/network/protocol/common/custom/CustomPacketPayload$Type;
+		ARG 0 id
 	METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
 		ARG 1 buffer

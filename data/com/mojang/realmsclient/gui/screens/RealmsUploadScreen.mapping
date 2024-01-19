@@ -4,6 +4,12 @@ CLASS com/mojang/realmsclient/gui/screens/RealmsUploadScreen
 		ARG 3 slotId
 		ARG 4 lastScreen
 		ARG 5 selectedLevel
+	METHOD <init> (Lcom/mojang/realmsclient/util/task/RealmCreationTask;JILcom/mojang/realmsclient/gui/screens/RealmsResetWorldScreen;Lnet/minecraft/world/level/storage/LevelSummary;)V
+		ARG 1 realmCreationTask
+		ARG 2 realmId
+		ARG 4 slotId
+		ARG 5 lastScreen
+		ARG 6 selectedLevel
 	METHOD addFileToTarGz (Lorg/apache/commons/compress/archivers/tar/TarArchiveOutputStream;Ljava/lang/String;Ljava/lang/String;Z)V
 		ARG 1 tarArchiveOutputStream
 		ARG 2 pathname

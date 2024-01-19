@@ -4,3 +4,9 @@ CLASS net/minecraft/world/item/crafting/SmithingTransformRecipe
 		ARG 2 base
 		ARG 3 addition
 		ARG 4 result
+	CLASS Serializer
+		METHOD fromNetwork (Lnet/minecraft/network/RegistryFriendlyByteBuf;)Lnet/minecraft/world/item/crafting/SmithingTransformRecipe;
+			ARG 0 buffer
+		METHOD toNetwork (Lnet/minecraft/network/RegistryFriendlyByteBuf;Lnet/minecraft/world/item/crafting/SmithingTransformRecipe;)V
+			ARG 0 buffer
+			ARG 1 recipe

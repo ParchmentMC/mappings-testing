@@ -7,6 +7,10 @@ CLASS net/minecraft/gametest/framework/ReportGameListener
 		ARG 0 testName
 		ARG 1 required
 		ARG 2 message
+	METHOD handleRetry (Lnet/minecraft/gametest/framework/GameTestInfo;Lnet/minecraft/gametest/framework/GameTestRunner;Z)V
+		ARG 1 testInfo
+		ARG 2 runner
+		ARG 3 passed
 	METHOD lambda$createBook$0 (Ljava/lang/StringBuffer;Ljava/lang/String;)V
 		ARG 1 subName
 	METHOD lambda$say$1 (Lnet/minecraft/server/level/ServerPlayer;)Z

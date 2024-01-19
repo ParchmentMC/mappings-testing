@@ -9,6 +9,8 @@ CLASS net/minecraft/gametest/framework/GameTestRegistry
 		ARG 0 testName
 	METHOD getTestFunctionsForClassName (Ljava/lang/String;)Ljava/util/Collection;
 		ARG 0 className
+	METHOD getTestFunctionsForClassName (Ljava/lang/String;)Ljava/util/stream/Stream;
+		ARG 0 className
 	METHOD isTestClass (Ljava/lang/String;)Z
 		ARG 0 className
 	METHOD isTestFunctionPartOfClass (Lnet/minecraft/gametest/framework/TestFunction;Ljava/lang/String;)Z

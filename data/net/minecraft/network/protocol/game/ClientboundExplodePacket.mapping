@@ -1,4 +1,15 @@
 CLASS net/minecraft/network/protocol/game/ClientboundExplodePacket
+	METHOD <init> (DDDFLjava/util/List;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/level/Explosion$BlockInteraction;Lnet/minecraft/core/particles/ParticleOptions;Lnet/minecraft/core/particles/ParticleOptions;Lnet/minecraft/core/Holder;)V
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+		ARG 7 power
+		ARG 8 toBlow
+		ARG 9 knockback
+		ARG 10 blockInteraction
+		ARG 11 smallExplosionParticles
+		ARG 12 largeExplosionParticles
+		ARG 13 explosionSound
 	METHOD <init> (DDDFLjava/util/List;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/level/Explosion$BlockInteraction;Lnet/minecraft/core/particles/ParticleOptions;Lnet/minecraft/core/particles/ParticleOptions;Lnet/minecraft/sounds/SoundEvent;)V
 		ARG 1 x
 		ARG 3 y
@@ -12,6 +23,8 @@ CLASS net/minecraft/network/protocol/game/ClientboundExplodePacket
 		ARG 13 explosionSound
 	METHOD <init> (Lnet/minecraft/network/FriendlyByteBuf;)V
 		ARG 1 buffer
+	METHOD <init> (Lnet/minecraft/network/RegistryFriendlyByteBuf;)V
+		ARG 1 buffer
 	METHOD handle (Lnet/minecraft/network/protocol/game/ClientGamePacketListener;)V
 		COMMENT Passes this Packet on to the NetHandler for processing.
 		ARG 1 handler
@@ -20,6 +33,8 @@ CLASS net/minecraft/network/protocol/game/ClientboundExplodePacket
 		ARG 2 particleType
 	METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
 		COMMENT Writes the raw packet data to the data stream.
+		ARG 1 buffer
+	METHOD write (Lnet/minecraft/network/RegistryFriendlyByteBuf;)V
 		ARG 1 buffer
 	METHOD writeParticle (Lnet/minecraft/network/FriendlyByteBuf;Lnet/minecraft/core/particles/ParticleOptions;)V
 		ARG 1 buffer

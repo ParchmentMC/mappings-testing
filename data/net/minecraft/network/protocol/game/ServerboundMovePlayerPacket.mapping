@@ -60,3 +60,5 @@ CLASS net/minecraft/network/protocol/game/ServerboundMovePlayerPacket
 			ARG 1 onGround
 		METHOD read (Lnet/minecraft/network/FriendlyByteBuf;)Lnet/minecraft/network/protocol/game/ServerboundMovePlayerPacket$StatusOnly;
 			ARG 0 buffer
+		METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
+			ARG 1 buffer

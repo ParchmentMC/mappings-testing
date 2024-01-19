@@ -1,4 +1,10 @@
 CLASS net/minecraft/world/entity/animal/armadillo/Armadillo
+	METHOD checkArmadilloSpawnRules (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z
+		ARG 0 entityType
+		ARG 1 level
+		ARG 2 spawnType
+		ARG 3 pos
+		ARG 4 random
 	METHOD isScaredBy (Lnet/minecraft/world/entity/LivingEntity;)Z
 		ARG 1 entity
 	METHOD rollOut (Z)V
@@ -10,5 +16,10 @@ CLASS net/minecraft/world/entity/animal/armadillo/Armadillo
 	CLASS ArmadilloState
 		METHOD <init> (Ljava/lang/String;ILjava/lang/String;)V
 			ARG 3 id
+		METHOD <init> (Ljava/lang/String;ILjava/lang/String;I)V
+			ARG 3 name
+			ARG 4 id
 		METHOD fromId (Ljava/lang/String;)Lnet/minecraft/world/entity/animal/armadillo/Armadillo$ArmadilloState;
 			ARG 0 id
+		METHOD fromName (Ljava/lang/String;)Lnet/minecraft/world/entity/animal/armadillo/Armadillo$ArmadilloState;
+			ARG 0 name

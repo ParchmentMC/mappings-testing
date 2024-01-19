@@ -49,6 +49,10 @@ CLASS net/minecraft/world/Container
 	METHOD stillValidBlockEntity (Lnet/minecraft/world/level/block/entity/BlockEntity;Lnet/minecraft/world/entity/player/Player;)Z
 		ARG 0 blockEntity
 		ARG 1 player
+	METHOD stillValidBlockEntity (Lnet/minecraft/world/level/block/entity/BlockEntity;Lnet/minecraft/world/entity/player/Player;F)Z
+		ARG 0 blockEntity
+		ARG 1 player
+		ARG 2 distance
 	METHOD stillValidBlockEntity (Lnet/minecraft/world/level/block/entity/BlockEntity;Lnet/minecraft/world/entity/player/Player;I)Z
 		ARG 0 blockEntity
 		ARG 1 player

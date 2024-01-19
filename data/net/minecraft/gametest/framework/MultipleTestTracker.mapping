@@ -11,3 +11,5 @@ CLASS net/minecraft/gametest/framework/MultipleTestTracker
 		ARG 1 testInfo
 	METHOD lambda$getProgressBar$1 (Ljava/lang/StringBuffer;Lnet/minecraft/gametest/framework/GameTestInfo;)V
 		ARG 1 testInfo
+	METHOD remove (Lnet/minecraft/gametest/framework/GameTestInfo;)V
+		ARG 1 gameTestInfo

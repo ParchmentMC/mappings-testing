@@ -14,9 +14,18 @@ CLASS net/minecraft/world/entity/monster/Shulker
 		COMMENT The speed it takes to move the entity's rotationPitch through the faceEntity method. This is only currently use in wolves.
 	METHOD getPhysicalPeek (F)F
 		ARG 0 peek
+	METHOD getProgressAabb (FLnet/minecraft/core/Direction;F)Lnet/minecraft/world/phys/AABB;
+		ARG 0 scale
+		ARG 1 expansionDirection
+		ARG 2 peek
 	METHOD getProgressAabb (Lnet/minecraft/core/Direction;F)Lnet/minecraft/world/phys/AABB;
 		ARG 0 direction
 		ARG 1 delta
+	METHOD getProgressDeltaAabb (FLnet/minecraft/core/Direction;FF)Lnet/minecraft/world/phys/AABB;
+		ARG 0 scale
+		ARG 1 expansionDirection
+		ARG 2 currentPeek
+		ARG 3 oldPeek
 	METHOD getProgressDeltaAabb (Lnet/minecraft/core/Direction;FF)Lnet/minecraft/world/phys/AABB;
 		ARG 0 direction
 		ARG 1 delta

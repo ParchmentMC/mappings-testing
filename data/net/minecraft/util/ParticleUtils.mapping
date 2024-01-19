@@ -10,6 +10,7 @@ CLASS net/minecraft/util/ParticleUtils
 		ARG 0 level
 		ARG 1 pos
 		ARG 2 count
+		ARG 3 particle
 	METHOD spawnParticleOnFace (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;Lnet/minecraft/core/particles/ParticleOptions;Lnet/minecraft/world/phys/Vec3;D)V
 		ARG 0 level
 		ARG 1 pos

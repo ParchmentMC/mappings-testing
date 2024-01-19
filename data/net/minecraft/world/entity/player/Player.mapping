@@ -45,6 +45,15 @@ CLASS net/minecraft/world/entity/player/Player
 		ARG 1 canAlwaysEat
 	METHOD canHarmPlayer (Lnet/minecraft/world/entity/player/Player;)Z
 		ARG 1 other
+	METHOD canInteractWithBlock (Lnet/minecraft/core/BlockPos;D)Z
+		ARG 1 pos
+		ARG 2 distance
+	METHOD canInteractWithEntity (Lnet/minecraft/world/entity/Entity;D)Z
+		ARG 1 entity
+		ARG 2 distance
+	METHOD canInteractWithEntity (Lnet/minecraft/world/phys/AABB;D)Z
+		ARG 1 boundingBox
+		ARG 2 distance
 	METHOD canPlayerFitWithinBlocksAndEntitiesWhen (Lnet/minecraft/world/entity/Pose;)Z
 		ARG 1 pose
 	METHOD canTakeItem (Lnet/minecraft/world/item/ItemStack;)Z

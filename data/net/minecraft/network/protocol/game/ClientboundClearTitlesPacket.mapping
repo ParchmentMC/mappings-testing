@@ -3,3 +3,5 @@ CLASS net/minecraft/network/protocol/game/ClientboundClearTitlesPacket
 		ARG 1 buffer
 	METHOD <init> (Z)V
 		ARG 1 resetTimes
+	METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
+		ARG 1 buffer

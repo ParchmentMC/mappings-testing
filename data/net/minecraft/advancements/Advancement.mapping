@@ -14,12 +14,16 @@ CLASS net/minecraft/advancements/Advancement
 		ARG 0 advancement
 	METHOD read (Lnet/minecraft/network/FriendlyByteBuf;)Lnet/minecraft/advancements/Advancement;
 		ARG 0 buffer
+	METHOD read (Lnet/minecraft/network/RegistryFriendlyByteBuf;)Lnet/minecraft/advancements/Advancement;
+		ARG 0 buffer
 	METHOD validate (Lnet/minecraft/advancements/Advancement;)Lcom/mojang/serialization/DataResult;
 		ARG 0 advancement
 	METHOD validate (Lnet/minecraft/util/ProblemReporter;Lnet/minecraft/world/level/storage/loot/LootDataResolver;)V
 		ARG 1 problemReporter
 		ARG 2 lootDataResolver
 	METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
+		ARG 1 buffer
+	METHOD write (Lnet/minecraft/network/RegistryFriendlyByteBuf;)V
 		ARG 1 buffer
 	CLASS Builder
 		METHOD addCriterion (Ljava/lang/String;Lnet/minecraft/advancements/Criterion;)Lnet/minecraft/advancements/Advancement$Builder;

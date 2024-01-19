@@ -1,0 +1,13 @@
+CLASS net/minecraft/network/codec/IdDispatchCodec
+	METHOD <init> (Ljava/util/function/Function;Ljava/util/List;Lit/unimi/dsi/fastutil/objects/Object2IntMap;)V
+		ARG 1 typeGetter
+		ARG 2 byId
+		ARG 3 toId
+	METHOD builder (Ljava/util/function/Function;)Lnet/minecraft/network/codec/IdDispatchCodec$Builder;
+		ARG 0 typeGetter
+	CLASS Builder
+		METHOD <init> (Ljava/util/function/Function;)V
+			ARG 1 typeGetter
+		METHOD add (Ljava/lang/Object;Lnet/minecraft/network/codec/StreamCodec;)Lnet/minecraft/network/codec/IdDispatchCodec$Builder;
+			ARG 1 type
+			ARG 2 serializer

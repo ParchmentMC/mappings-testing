@@ -46,6 +46,9 @@ CLASS com/mojang/blaze3d/platform/NativeImage
 		ARG 8 shiftY
 		ARG 9 x
 		ARG 10 y
+	METHOD copyFromFont (Lorg/lwjgl/util/freetype/FT_Face;I)V
+		ARG 1 face
+		ARG 2 glyphIndex
 	METHOD copyRect (IIIIIIZZ)V
 		ARG 1 xFrom
 		ARG 2 yFrom

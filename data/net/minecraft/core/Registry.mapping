@@ -32,6 +32,9 @@ CLASS net/minecraft/core/Registry
 		ARG 1 key
 	METHOD getRandom (Lnet/minecraft/util/RandomSource;)Ljava/util/Optional;
 		ARG 1 random
+	METHOD getRandomElementOf (Lnet/minecraft/tags/TagKey;Lnet/minecraft/util/RandomSource;)Ljava/util/Optional;
+		ARG 1 key
+		ARG 2 random
 	METHOD getResourceKey (Ljava/lang/Object;)Ljava/util/Optional;
 		ARG 1 value
 	METHOD getTag (Lnet/minecraft/tags/TagKey;)Ljava/util/Optional;

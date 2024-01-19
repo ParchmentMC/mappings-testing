@@ -10,6 +10,8 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		ARG 1 index
 		ARG 2 length
 		ARG 3 value
+	METHOD capacity (I)Lio/netty/buffer/ByteBuf;
+		ARG 1 capacity
 	METHOD capacity (I)Lnet/minecraft/network/FriendlyByteBuf;
 		ARG 1 newCapacity
 	METHOD compareTo (Lio/netty/buffer/ByteBuf;)I
@@ -150,6 +152,8 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		COMMENT Reads a BlockPos encoded as a long from the buffer.
 		COMMENT
 		COMMENT @see #writeBlockPos
+	METHOD readBlockPos (Lio/netty/buffer/ByteBuf;)Lnet/minecraft/core/BlockPos;
+		ARG 0 buffer
 	METHOD readById (Ljava/util/function/IntFunction;)Ljava/lang/Object;
 		ARG 1 idLookuo
 	METHOD readById (Lnet/minecraft/core/IdMap;)Ljava/lang/Object;
@@ -202,6 +206,9 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		COMMENT @see #writeCollection
 		ARG 1 collectionFactory
 		ARG 2 elementReader
+	METHOD readCollection (Ljava/util/function/IntFunction;Lnet/minecraft/network/codec/StreamDecoder;)Ljava/util/Collection;
+		ARG 1 collectionFactory
+		ARG 2 elementReader
 	METHOD readComponent ()Lnet/minecraft/network/chat/Component;
 		COMMENT Reads a Component encoded as a JSON string from the buffer.
 		COMMENT
@@ -211,6 +218,9 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		COMMENT
 		COMMENT @see #writeDate
 	METHOD readEither (Lnet/minecraft/network/FriendlyByteBuf$Reader;Lnet/minecraft/network/FriendlyByteBuf$Reader;)Lcom/mojang/datafixers/util/Either;
+		ARG 1 leftReader
+		ARG 2 rightReader
+	METHOD readEither (Lnet/minecraft/network/codec/StreamDecoder;Lnet/minecraft/network/codec/StreamDecoder;)Lcom/mojang/datafixers/util/Either;
 		ARG 1 leftReader
 		ARG 2 rightReader
 	METHOD readEnum (Ljava/lang/Class;)Ljava/lang/Enum;
@@ -238,6 +248,8 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		COMMENT
 		COMMENT @see #writeCollection
 		ARG 1 elementReader
+	METHOD readList (Lnet/minecraft/network/codec/StreamDecoder;)Ljava/util/List;
+		ARG 1 elementReader
 	METHOD readLongArray ()[J
 		COMMENT Reads a length-prefixed array of longs from the buffer.
 	METHOD readLongArray ([J)[J
@@ -257,11 +269,18 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		ARG 1 mapFactory
 		ARG 2 keyReader
 		ARG 3 valueReader
+	METHOD readMap (Ljava/util/function/IntFunction;Lnet/minecraft/network/codec/StreamDecoder;Lnet/minecraft/network/codec/StreamDecoder;)Ljava/util/Map;
+		ARG 1 mapFactory
+		ARG 2 keyReader
+		ARG 3 valueReader
 	METHOD readMap (Lnet/minecraft/network/FriendlyByteBuf$Reader;Lnet/minecraft/network/FriendlyByteBuf$Reader;)Ljava/util/Map;
 		COMMENT Read a Map from this buffer. First a new HashMap is created.
 		COMMENT Then all keys and values are read using the given {@code keyReader} and {@code valueReader}.
 		COMMENT
 		COMMENT @see #writeMap
+		ARG 1 keyReader
+		ARG 2 valueReader
+	METHOD readMap (Lnet/minecraft/network/codec/StreamDecoder;Lnet/minecraft/network/codec/StreamDecoder;)Ljava/util/Map;
 		ARG 1 keyReader
 		ARG 2 valueReader
 	METHOD readNbt ()Lnet/minecraft/nbt/CompoundTag;
@@ -273,12 +292,23 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		COMMENT @see #writeNbt
 		COMMENT @see #readAnySizeNbt
 		COMMENT @see #readNbt(NbtAccounter)
+	METHOD readNbt (Lio/netty/buffer/ByteBuf;)Lnet/minecraft/nbt/CompoundTag;
+		ARG 0 buffer
+	METHOD readNbt (Lio/netty/buffer/ByteBuf;Lnet/minecraft/nbt/NbtAccounter;)Lnet/minecraft/nbt/Tag;
+		ARG 0 buffer
+		ARG 1 nbtAccounter
 	METHOD readNbt (Lnet/minecraft/nbt/NbtAccounter;)Lnet/minecraft/nbt/Tag;
 		ARG 1 nbtAccounter
 	METHOD readNullable (Lnet/minecraft/network/FriendlyByteBuf$Reader;)Ljava/lang/Object;
 		ARG 1 reader
+	METHOD readNullable (Lnet/minecraft/network/codec/StreamDecoder;)Ljava/lang/Object;
+		ARG 1 reader
 	METHOD readOptional (Lnet/minecraft/network/FriendlyByteBuf$Reader;)Ljava/util/Optional;
 		ARG 1 reader
+	METHOD readOptional (Lnet/minecraft/network/codec/StreamDecoder;)Ljava/util/Optional;
+		ARG 1 reader
+	METHOD readQuaternion (Lio/netty/buffer/ByteBuf;)Lorg/joml/Quaternionf;
+		ARG 0 buffer
 	METHOD readResourceKey (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/resources/ResourceKey;
 		ARG 1 registryKey
 	METHOD readResourceLocation ()Lnet/minecraft/resources/ResourceLocation;
@@ -297,6 +327,8 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		COMMENT Reads a UUID encoded as two longs from this buffer.
 		COMMENT
 		COMMENT @see #writeUUID
+	METHOD readUUID (Lio/netty/buffer/ByteBuf;)Ljava/util/UUID;
+		ARG 0 buffer
 	METHOD readUtf ()Ljava/lang/String;
 		COMMENT Reads a String with a maximum length of {@code Short.MAX_VALUE}.
 		COMMENT
@@ -324,6 +356,8 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		COMMENT Reads a compressed long from the buffer. To do so it maximally reads 10 byte-sized chunks whose most significant bit dictates whether another byte should be read.
 		COMMENT
 		COMMENT @see #writeVarLong
+	METHOD readVector3f (Lio/netty/buffer/ByteBuf;)Lorg/joml/Vector3f;
+		ARG 0 buffer
 	METHOD readWithCodec (Lcom/mojang/serialization/DynamicOps;Lcom/mojang/serialization/Codec;Lnet/minecraft/nbt/NbtAccounter;)Ljava/lang/Object;
 		ARG 1 ops
 		ARG 2 codec
@@ -451,6 +485,9 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		COMMENT
 		COMMENT @see #readBlockHitResult
 		ARG 1 result
+	METHOD writeBlockPos (Lio/netty/buffer/ByteBuf;Lnet/minecraft/core/BlockPos;)V
+		ARG 0 buffer
+		ARG 1 pos
 	METHOD writeBlockPos (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/network/FriendlyByteBuf;
 		COMMENT Writes a BlockPos encoded as a long to the buffer.
 		COMMENT
@@ -508,6 +545,9 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		COMMENT @see #readCollection
 		ARG 1 collection
 		ARG 2 elementWriter
+	METHOD writeCollection (Ljava/util/Collection;Lnet/minecraft/network/codec/StreamEncoder;)V
+		ARG 1 collection
+		ARG 2 elementWriter
 	METHOD writeComponent (Lnet/minecraft/network/chat/Component;)Lnet/minecraft/network/FriendlyByteBuf;
 		COMMENT Writes a Component encoded as a JSON string to the buffer.
 		COMMENT
@@ -521,6 +561,10 @@ CLASS net/minecraft/network/FriendlyByteBuf
 	METHOD writeDouble (D)Lnet/minecraft/network/FriendlyByteBuf;
 		ARG 1 value
 	METHOD writeEither (Lcom/mojang/datafixers/util/Either;Lnet/minecraft/network/FriendlyByteBuf$Writer;Lnet/minecraft/network/FriendlyByteBuf$Writer;)V
+		ARG 1 value
+		ARG 2 leftWriter
+		ARG 3 rightWriter
+	METHOD writeEither (Lcom/mojang/datafixers/util/Either;Lnet/minecraft/network/codec/StreamEncoder;Lnet/minecraft/network/codec/StreamEncoder;)V
 		ARG 1 value
 		ARG 2 leftWriter
 		ARG 3 rightWriter
@@ -586,22 +630,38 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		ARG 1 map
 		ARG 2 keyWriter
 		ARG 3 valueWriter
+	METHOD writeMap (Ljava/util/Map;Lnet/minecraft/network/codec/StreamEncoder;Lnet/minecraft/network/codec/StreamEncoder;)V
+		ARG 1 map
+		ARG 2 keyWriter
+		ARG 3 valueWriter
 	METHOD writeMedium (I)Lnet/minecraft/network/FriendlyByteBuf;
 		ARG 1 value
 	METHOD writeMediumLE (I)Lnet/minecraft/network/FriendlyByteBuf;
 		ARG 1 value
+	METHOD writeNbt (Lio/netty/buffer/ByteBuf;Lnet/minecraft/nbt/Tag;)V
+		ARG 0 buffer
+		ARG 1 nbt
 	METHOD writeNbt (Lnet/minecraft/nbt/Tag;)Lnet/minecraft/network/FriendlyByteBuf;
 		ARG 1 tag
 	METHOD writeNullable (Ljava/lang/Object;Lnet/minecraft/network/FriendlyByteBuf$Writer;)V
 		ARG 1 value
 		ARG 2 writer
+	METHOD writeNullable (Ljava/lang/Object;Lnet/minecraft/network/codec/StreamEncoder;)V
+		ARG 1 value
+		ARG 2 writer
 	METHOD writeOptional (Ljava/util/Optional;Lnet/minecraft/network/FriendlyByteBuf$Writer;)V
+		ARG 1 optional
+		ARG 2 writer
+	METHOD writeOptional (Ljava/util/Optional;Lnet/minecraft/network/codec/StreamEncoder;)V
 		ARG 1 optional
 		ARG 2 writer
 	METHOD writeProperty (Lcom/mojang/authlib/properties/Property;)V
 		ARG 1 property
 	METHOD writePublicKey (Ljava/security/PublicKey;)Lnet/minecraft/network/FriendlyByteBuf;
 		ARG 1 publicKey
+	METHOD writeQuaternion (Lio/netty/buffer/ByteBuf;Lorg/joml/Quaternionf;)V
+		ARG 0 buffer
+		ARG 1 quaternion
 	METHOD writeQuaternion (Lorg/joml/Quaternionf;)V
 		ARG 1 quaternion
 	METHOD writeResourceKey (Lnet/minecraft/resources/ResourceKey;)V
@@ -620,6 +680,9 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		ARG 1 value
 	METHOD writeShortLE (I)Lnet/minecraft/network/FriendlyByteBuf;
 		ARG 1 value
+	METHOD writeUUID (Lio/netty/buffer/ByteBuf;Ljava/util/UUID;)V
+		ARG 0 buffer
+		ARG 1 id
 	METHOD writeUUID (Ljava/util/UUID;)Lnet/minecraft/network/FriendlyByteBuf;
 		COMMENT Writes a UUID encoded as two longs to this buffer.
 		COMMENT
@@ -649,6 +712,9 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		ARG 1 value
 	METHOD writeVec3 (Lnet/minecraft/world/phys/Vec3;)V
 		ARG 1 vec3
+	METHOD writeVector3f (Lio/netty/buffer/ByteBuf;Lorg/joml/Vector3f;)V
+		ARG 0 buffer
+		ARG 1 vector3f
 	METHOD writeVector3f (Lorg/joml/Vector3f;)V
 		ARG 1 vector3f
 	METHOD writeWithCodec (Lcom/mojang/serialization/DynamicOps;Lcom/mojang/serialization/Codec;Ljava/lang/Object;)Lnet/minecraft/network/FriendlyByteBuf;

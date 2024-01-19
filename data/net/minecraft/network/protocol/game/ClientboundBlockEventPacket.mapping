@@ -12,6 +12,8 @@ CLASS net/minecraft/network/protocol/game/ClientboundBlockEventPacket
 			COMMENT second parameter of the block event. The meaning of this value depends on the block.
 	METHOD <init> (Lnet/minecraft/network/FriendlyByteBuf;)V
 		ARG 1 buffer
+	METHOD <init> (Lnet/minecraft/network/RegistryFriendlyByteBuf;)V
+		ARG 1 buffer
 	METHOD getB0 ()I
 		COMMENT First parameter of the block event. The meaning of this value depends on the block.
 	METHOD getB1 ()I
@@ -21,4 +23,6 @@ CLASS net/minecraft/network/protocol/game/ClientboundBlockEventPacket
 		ARG 1 handler
 	METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
 		COMMENT Writes the raw packet data to the data stream.
+		ARG 1 buffer
+	METHOD write (Lnet/minecraft/network/RegistryFriendlyByteBuf;)V
 		ARG 1 buffer

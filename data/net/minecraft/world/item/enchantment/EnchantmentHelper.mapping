@@ -22,6 +22,9 @@ CLASS net/minecraft/world/item/enchantment/EnchantmentHelper
 		ARG 2 allowTreasure
 	METHOD getBlockEfficiency (Lnet/minecraft/world/entity/LivingEntity;)I
 		ARG 0 entity
+	METHOD getDamageBonus (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/EntityType;)F
+		ARG 0 stack
+		ARG 1 entityType
 	METHOD getDamageBonus (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/MobType;)F
 		ARG 0 stack
 		ARG 1 creatureAttribute

@@ -118,6 +118,16 @@ CLASS net/minecraft/world/entity/npc/VillagerTrades
 			ARG 6 maxUses
 			ARG 7 villagerXp
 			ARG 8 priceMultiplier
+		METHOD <init> (Lnet/minecraft/world/level/ItemLike;IILnet/minecraft/world/item/Item;IIIFZ)V
+			ARG 1 fromItem
+			ARG 2 fromItemCount
+			ARG 3 emeraldCost
+			ARG 4 toItem
+			ARG 5 toItemCount
+			ARG 6 maxUses
+			ARG 7 villagerXp
+			ARG 8 priceMultiplier
+			ARG 9 ignoreTags
 		METHOD <init> (Lnet/minecraft/world/level/ItemLike;IILnet/minecraft/world/item/ItemStack;IIIF)V
 			ARG 1 fromItem
 			ARG 2 fromItemCount
@@ -127,6 +137,16 @@ CLASS net/minecraft/world/entity/npc/VillagerTrades
 			ARG 6 maxUses
 			ARG 7 villagerXp
 			ARG 8 priceMultiplier
+		METHOD <init> (Lnet/minecraft/world/level/ItemLike;IILnet/minecraft/world/item/ItemStack;IIIFZ)V
+			ARG 1 fromItem
+			ARG 2 fromItemCount
+			ARG 3 emeraldCount
+			ARG 4 toItem
+			ARG 5 toItemCount
+			ARG 6 maxUses
+			ARG 7 villagerXp
+			ARG 8 priceMultiplier
+			ARG 9 ignoreTags
 	CLASS EnchantedItemForEmeralds
 		METHOD <init> (Lnet/minecraft/world/item/Item;III)V
 			ARG 1 item

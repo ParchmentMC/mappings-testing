@@ -33,7 +33,7 @@ writtenbooks {
 }
 
 compass {
-    version = '23w51b'
+    version = '24w03a'
     migration {
         targetVersion = '1.20.4'
     }

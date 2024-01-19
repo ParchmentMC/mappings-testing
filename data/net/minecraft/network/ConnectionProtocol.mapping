@@ -14,6 +14,8 @@ CLASS net/minecraft/network/ConnectionProtocol
 		COMMENT The play protocol. This is the main protocol that is used while "in game" and most normal packets reside in here.
 	FIELD STATUS Lnet/minecraft/network/ConnectionProtocol;
 		COMMENT The status protocol. This protocol is used when a client pings a server while on the multiplayer screen.
+	METHOD <init> (Ljava/lang/String;ILjava/lang/String;)V
+		ARG 3 id
 	METHOD <init> (Ljava/lang/String;ILjava/lang/String;Lnet/minecraft/network/ConnectionProtocol$ProtocolBuilder;)V
 		ARG 3 id
 		ARG 4 builder

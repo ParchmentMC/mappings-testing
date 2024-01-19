@@ -6,12 +6,24 @@ CLASS net/minecraft/client/gui/screens/ConnectScreen
 		ARG 1 minecraft
 		ARG 2 serverAddress
 		ARG 3 serverData
+	METHOD connect (Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/multiplayer/resolver/ServerAddress;Lnet/minecraft/client/multiplayer/ServerData;Lnet/minecraft/client/multiplayer/TransferState;)V
+		ARG 1 minecraft
+		ARG 2 serverAddress
+		ARG 3 serverData
+		ARG 4 transferState
 	METHOD startConnecting (Lnet/minecraft/client/gui/screens/Screen;Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/multiplayer/resolver/ServerAddress;Lnet/minecraft/client/multiplayer/ServerData;Z)V
 		ARG 0 parent
 		ARG 1 minecraft
 		ARG 2 serverAddress
 		ARG 3 serverData
 		ARG 4 isQuickPlay
+	METHOD startConnecting (Lnet/minecraft/client/gui/screens/Screen;Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/multiplayer/resolver/ServerAddress;Lnet/minecraft/client/multiplayer/ServerData;ZLnet/minecraft/client/multiplayer/TransferState;)V
+		ARG 0 parent
+		ARG 1 minecraft
+		ARG 2 serverAddress
+		ARG 3 serverData
+		ARG 4 isQuickPlay
+		ARG 5 transferState
 	METHOD updateStatus (Lnet/minecraft/network/chat/Component;)V
 		ARG 1 status
 	CLASS 1

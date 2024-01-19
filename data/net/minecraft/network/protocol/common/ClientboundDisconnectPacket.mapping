@@ -3,3 +3,5 @@ CLASS net/minecraft/network/protocol/common/ClientboundDisconnectPacket
 		ARG 1 buffer
 	METHOD <init> (Lnet/minecraft/network/chat/Component;)V
 		ARG 1 reason
+	METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
+		ARG 1 buffer

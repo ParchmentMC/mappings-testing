@@ -62,5 +62,14 @@ CLASS net/minecraft/network/syncher/SynchedEntityData
 			ARG 0 buffer
 			ARG 1 id
 			ARG 2 serializer
+		METHOD read (Lnet/minecraft/network/RegistryFriendlyByteBuf;I)Lnet/minecraft/network/syncher/SynchedEntityData$DataValue;
+			ARG 0 buffer
+			ARG 1 id
+		METHOD read (Lnet/minecraft/network/RegistryFriendlyByteBuf;ILnet/minecraft/network/syncher/EntityDataSerializer;)Lnet/minecraft/network/syncher/SynchedEntityData$DataValue;
+			ARG 0 buffer
+			ARG 1 id
+			ARG 2 serializer
 		METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
+			ARG 1 buffer
+		METHOD write (Lnet/minecraft/network/RegistryFriendlyByteBuf;)V
 			ARG 1 buffer

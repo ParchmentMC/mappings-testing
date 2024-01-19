@@ -3,3 +3,9 @@ CLASS net/minecraft/world/item/crafting/SmithingTrimRecipe
 		ARG 1 template
 		ARG 2 base
 		ARG 3 addition
+	CLASS Serializer
+		METHOD fromNetwork (Lnet/minecraft/network/RegistryFriendlyByteBuf;)Lnet/minecraft/world/item/crafting/SmithingTrimRecipe;
+			ARG 0 buffer
+		METHOD toNetwork (Lnet/minecraft/network/RegistryFriendlyByteBuf;Lnet/minecraft/world/item/crafting/SmithingTrimRecipe;)V
+			ARG 0 buffer
+			ARG 1 recipe

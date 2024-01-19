@@ -4,5 +4,7 @@ CLASS net/minecraft/core/particles/BlockParticleOption
 		ARG 2 state
 	METHOD codec (Lnet/minecraft/core/particles/ParticleType;)Lcom/mojang/serialization/Codec;
 		ARG 0 type
+	METHOD streamCodec (Lnet/minecraft/core/particles/ParticleType;)Lnet/minecraft/network/codec/StreamCodec;
+		ARG 0 particleType
 	METHOD writeToNetwork (Lnet/minecraft/network/FriendlyByteBuf;)V
 		ARG 1 buffer

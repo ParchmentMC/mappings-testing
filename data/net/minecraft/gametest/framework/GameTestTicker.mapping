@@ -1,3 +1,5 @@
 CLASS net/minecraft/gametest/framework/GameTestTicker
 	METHOD add (Lnet/minecraft/gametest/framework/GameTestInfo;)V
 		ARG 1 testInfo
+	METHOD setRunner (Lnet/minecraft/gametest/framework/GameTestRunner;)V
+		ARG 1 runner

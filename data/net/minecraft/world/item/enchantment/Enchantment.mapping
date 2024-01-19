@@ -7,6 +7,10 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 		COMMENT The rarity of the enchantment.
 	FIELD slots [Lnet/minecraft/world/entity/EquipmentSlot;
 		COMMENT The valid equipment slots for the enchantment.
+	METHOD <init> (Lnet/minecraft/world/item/enchantment/Enchantment$Rarity;Lnet/minecraft/tags/TagKey;[Lnet/minecraft/world/entity/EquipmentSlot;)V
+		ARG 1 rarity
+		ARG 2 match
+		ARG 3 slots
 	METHOD <init> (Lnet/minecraft/world/item/enchantment/Enchantment$Rarity;Lnet/minecraft/world/item/enchantment/EnchantmentCategory;[Lnet/minecraft/world/entity/EquipmentSlot;)V
 		ARG 1 rarity
 		ARG 2 category
@@ -40,6 +44,9 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 			COMMENT The entity that attacked the target.
 		ARG 3 level
 			COMMENT The level of the enchantment.
+	METHOD getDamageBonus (ILnet/minecraft/world/entity/EntityType;)F
+		ARG 1 level
+		ARG 2 creatureType
 	METHOD getDamageBonus (ILnet/minecraft/world/entity/MobType;)F
 		COMMENT Calculates the amount of additional damage to deal when attacking with an item with the enchantment.
 		ARG 1 level

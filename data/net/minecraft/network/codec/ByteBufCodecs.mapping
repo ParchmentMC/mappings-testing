@@ -1,0 +1,46 @@
+CLASS net/minecraft/network/codec/ByteBufCodecs
+	METHOD collection (Ljava/util/function/IntFunction;)Lnet/minecraft/network/codec/StreamCodec$CodecOperation;
+		ARG 0 factory
+	METHOD collection (Ljava/util/function/IntFunction;Lnet/minecraft/network/codec/StreamCodec;)Lnet/minecraft/network/codec/StreamCodec;
+		ARG 0 factory
+		ARG 1 codec
+	METHOD fromCodec (Lcom/mojang/serialization/Codec;)Lnet/minecraft/network/codec/StreamCodec;
+		ARG 0 codec
+	METHOD holder (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/network/codec/StreamCodec;)Lnet/minecraft/network/codec/StreamCodec;
+		ARG 0 registryKey
+		ARG 1 codec
+	METHOD holderRegistry (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/network/codec/StreamCodec;
+		ARG 0 registryKey
+	METHOD idMapper (Ljava/util/function/IntFunction;Ljava/util/function/ToIntFunction;)Lnet/minecraft/network/codec/StreamCodec;
+		ARG 0 idLookup
+		ARG 1 idGetter
+	METHOD idMapper (Lnet/minecraft/core/IdMap;)Lnet/minecraft/network/codec/StreamCodec;
+		ARG 0 idMap
+	METHOD lambda$collection$6 (Ljava/util/function/IntFunction;Lnet/minecraft/network/codec/StreamCodec;)Lnet/minecraft/network/codec/StreamCodec;
+		ARG 1 codec
+	METHOD lambda$list$7 (Lnet/minecraft/network/codec/StreamCodec;)Lnet/minecraft/network/codec/StreamCodec;
+		ARG 0 codec
+	METHOD map (Ljava/util/function/IntFunction;Lnet/minecraft/network/codec/StreamCodec;Lnet/minecraft/network/codec/StreamCodec;)Lnet/minecraft/network/codec/StreamCodec;
+		ARG 0 factory
+		ARG 1 keyCodec
+		ARG 2 valueCodec
+	METHOD optional (Lnet/minecraft/network/codec/StreamCodec;)Lnet/minecraft/network/codec/StreamCodec;
+		ARG 0 codec
+	METHOD registry (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/network/codec/StreamCodec;
+		ARG 0 registryKey
+	METHOD registry (Lnet/minecraft/resources/ResourceKey;Ljava/util/function/Function;)Lnet/minecraft/network/codec/StreamCodec;
+		ARG 0 registryKey
+	METHOD stringUtf8 (I)Lnet/minecraft/network/codec/StreamCodec;
+		ARG 0 maxLength
+	METHOD tagCodec (Ljava/util/function/Supplier;)Lnet/minecraft/network/codec/StreamCodec;
+		ARG 0 accounter
+	CLASS 15
+		METHOD lambda$encode$0 (Lnet/minecraft/network/codec/StreamCodec;Lio/netty/buffer/ByteBuf;Lnet/minecraft/network/codec/StreamCodec;Ljava/lang/Object;Ljava/lang/Object;)V
+			ARG 3 key
+			ARG 4 value
+	CLASS 17
+		METHOD getRegistryOrThrow (Lnet/minecraft/network/RegistryFriendlyByteBuf;)Lnet/minecraft/core/IdMap;
+			ARG 1 buffer
+	CLASS 18
+		METHOD getRegistryOrThrow (Lnet/minecraft/network/RegistryFriendlyByteBuf;)Lnet/minecraft/core/IdMap;
+			ARG 1 buffer

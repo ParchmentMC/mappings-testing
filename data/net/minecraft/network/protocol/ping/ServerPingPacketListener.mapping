@@ -1,0 +1,3 @@
+CLASS net/minecraft/network/protocol/ping/ServerPingPacketListener
+	METHOD handlePingRequest (Lnet/minecraft/network/protocol/ping/ServerboundPingRequestPacket;)V
+		ARG 1 packet
