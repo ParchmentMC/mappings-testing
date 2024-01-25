@@ -5,3 +5,7 @@ CLASS net/minecraft/world/level/levelgen/structure/pools/alias/PoolAliasBindings
 		ARG 0 context
 		ARG 1 pool
 		ARG 2 bindings
+	METHOD registerTargetsAsPools (Lnet/minecraft/data/worldgen/BootstrapContext;Lnet/minecraft/core/Holder;Ljava/util/List;)V
+		ARG 0 context
+		ARG 1 pool
+		ARG 2 poolAliasBindings

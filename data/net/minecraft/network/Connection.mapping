@@ -41,6 +41,10 @@ CLASS net/minecraft/network/Connection
 		ARG 0 address
 		ARG 1 useEpollIfAvailable
 		ARG 2 bandwithLogger
+	METHOD connectToServer (Ljava/net/InetSocketAddress;ZLnet/minecraft/util/debugchart/SampleLogger;)Lnet/minecraft/network/Connection;
+		ARG 0 address
+		ARG 1 useEpollIfAvailable
+		ARG 2 logger
 	METHOD disconnect (Lnet/minecraft/network/chat/Component;)V
 		COMMENT Closes the channel with a given reason. The reason is stored for later and will be used for informational purposes (info log on server,
 		COMMENT disconnection screen on the client). This method is also called on the client when the server requests disconnection via

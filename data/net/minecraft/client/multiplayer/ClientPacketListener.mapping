@@ -236,3 +236,6 @@ CLASS net/minecraft/client/multiplayer/ClientPacketListener
 		ARG 1 x
 		ARG 2 z
 		ARG 3 data
+	METHOD updateTagsForRegistry (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/tags/TagNetworkSerialization$NetworkPayload;)V
+		ARG 1 registryKey
+		ARG 2 networkPayload

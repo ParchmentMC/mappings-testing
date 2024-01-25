@@ -123,6 +123,8 @@ CLASS net/minecraft/server/players/PlayerList
 	METHOD setAllowCheatsForAllPlayers (Z)V
 		COMMENT Sets whether all players are allowed to use commands (cheats) on the server.
 		ARG 1 allowCheatsForAllPlayers
+	METHOD setAllowCommandsForAllPlayers (Z)V
+		ARG 1 allowCommandsForAllPlayers
 	METHOD setSimulationDistance (I)V
 		ARG 1 simulationDistance
 	METHOD setUsingWhiteList (Z)V

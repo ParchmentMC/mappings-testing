@@ -9,6 +9,13 @@ CLASS net/minecraft/core/RegistrySynchronization
 		ARG 0 registryAccess
 	METHOD ownedNetworkableRegistries (Lnet/minecraft/core/RegistryAccess;)Ljava/util/stream/Stream;
 		ARG 0 registryAccess
+	METHOD packRegistries (Lcom/mojang/serialization/DynamicOps;Lnet/minecraft/core/RegistryAccess;Ljava/util/function/BiConsumer;)V
+		ARG 0 ops
+		ARG 1 registryAccess
+	METHOD packRegistry (Lcom/mojang/serialization/DynamicOps;Lnet/minecraft/resources/RegistryDataLoader$RegistryData;Lnet/minecraft/core/RegistryAccess;Ljava/util/function/BiConsumer;)V
+		ARG 0 ops
+		ARG 1 registryData
+		ARG 2 registryAccess
 	METHOD put (Lcom/google/common/collect/ImmutableMap$Builder;Lnet/minecraft/resources/ResourceKey;Lcom/mojang/serialization/Codec;)V
 		ARG 0 networkableMapBuilder
 		ARG 1 key

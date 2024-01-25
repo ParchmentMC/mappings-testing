@@ -62,3 +62,5 @@ CLASS net/minecraft/core/RegistrySetBuilder
 	CLASS RegistryBootstrap
 		METHOD run (Lnet/minecraft/data/worldgen/BootstapContext;)V
 			ARG 1 context
+		METHOD run (Lnet/minecraft/data/worldgen/BootstrapContext;)V
+			ARG 1 context

@@ -1,0 +1,8 @@
+CLASS net/minecraft/world/level/chunk/storage/RecreatingSimpleRegionStorage
+	METHOD <init> (Ljava/nio/file/Path;Ljava/nio/file/Path;Lcom/mojang/datafixers/DataFixer;ZLjava/lang/String;Lnet/minecraft/util/datafix/DataFixTypes;)V
+		ARG 1 folder
+		ARG 2 writeFolder
+		ARG 3 fixerUpper
+		ARG 4 sync
+		ARG 5 worldName
+		ARG 6 dataFixType

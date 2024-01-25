@@ -10,6 +10,11 @@ CLASS net/minecraft/world/level/StructureManager
 		ARG 2 structure
 		ARG 3 reference
 		ARG 5 structureAccess
+	METHOD checkStructurePresence (Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/world/level/levelgen/structure/Structure;Lnet/minecraft/world/level/levelgen/structure/placement/StructurePlacement;Z)Lnet/minecraft/world/level/levelgen/structure/StructureCheckResult;
+		ARG 1 chunkPos
+		ARG 2 structure
+		ARG 3 placement
+		ARG 4 skipKnownStructures
 	METHOD checkStructurePresence (Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/world/level/levelgen/structure/Structure;Z)Lnet/minecraft/world/level/levelgen/structure/StructureCheckResult;
 		ARG 1 chunkPos
 		ARG 2 structure
