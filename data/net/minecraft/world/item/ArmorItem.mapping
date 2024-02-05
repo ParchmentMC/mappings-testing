@@ -1,4 +1,8 @@
 CLASS net/minecraft/world/item/ArmorItem
+	METHOD <init> (Lnet/minecraft/core/Holder;Lnet/minecraft/world/item/ArmorItem$Type;Lnet/minecraft/world/item/Item$Properties;)V
+		ARG 1 material
+		ARG 2 type
+		ARG 3 properties
 	METHOD <init> (Lnet/minecraft/world/item/ArmorMaterial;Lnet/minecraft/world/item/ArmorItem$Type;Lnet/minecraft/world/item/Item$Properties;)V
 		ARG 1 material
 		ARG 2 type

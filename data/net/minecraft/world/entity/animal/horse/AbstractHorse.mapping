@@ -30,6 +30,9 @@ CLASS net/minecraft/world/entity/animal/horse/AbstractHorse
 	METHOD equipArmor (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/item/ItemStack;)V
 		ARG 1 player
 		ARG 2 armor
+	METHOD equipBodyArmor (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/item/ItemStack;)V
+		ARG 1 player
+		ARG 2 stack
 	METHOD executeRidersJump (FLnet/minecraft/world/phys/Vec3;)V
 		ARG 1 playerJumpPendingScale
 		ARG 2 travelVector

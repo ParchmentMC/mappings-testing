@@ -245,6 +245,9 @@ CLASS com/mojang/blaze3d/systems/RenderSystem
 	METHOD setupGuiFlatDiffuseLighting (Lorg/joml/Vector3f;Lorg/joml/Vector3f;)V
 		ARG 0 lightingVector1
 		ARG 1 lightingVector2
+	METHOD setupLevelDiffuseLighting (Lorg/joml/Vector3f;Lorg/joml/Vector3f;)V
+		ARG 0 lightingVector0
+		ARG 1 lightingVector1
 	METHOD setupLevelDiffuseLighting (Lorg/joml/Vector3f;Lorg/joml/Vector3f;Lorg/joml/Matrix4f;)V
 		ARG 0 lightingVector1
 		ARG 1 lightingVector2

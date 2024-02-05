@@ -41,6 +41,15 @@ CLASS net/minecraft/client/renderer/entity/layers/HumanoidArmorLayer
 		ARG 2 buffer
 		ARG 3 packedLight
 		ARG 4 model
+	METHOD renderModel (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;ILnet/minecraft/client/model/HumanoidModel;FFFLnet/minecraft/resources/ResourceLocation;)V
+		ARG 1 poseStack
+		ARG 2 buffer
+		ARG 3 packedLight
+		ARG 4 armorItem
+		ARG 5 red
+		ARG 6 green
+		ARG 7 blue
+		ARG 8 texture
 	METHOD renderModel (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;ILnet/minecraft/world/item/ArmorItem;Lnet/minecraft/client/model/HumanoidModel;ZFFFLjava/lang/String;)V
 		ARG 1 poseStack
 		ARG 2 buffer
@@ -52,6 +61,14 @@ CLASS net/minecraft/client/renderer/entity/layers/HumanoidArmorLayer
 		ARG 8 green
 		ARG 9 blue
 		ARG 10 armorSuffix
+	METHOD renderTrim (Lnet/minecraft/core/Holder;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;ILnet/minecraft/world/item/armortrim/ArmorTrim;Lnet/minecraft/client/model/HumanoidModel;Z)V
+		ARG 1 armorMaterial
+		ARG 2 poseStack
+		ARG 3 buffer
+		ARG 4 packedLight
+		ARG 5 trim
+		ARG 6 model
+		ARG 7 innerTexture
 	METHOD renderTrim (Lnet/minecraft/world/item/ArmorMaterial;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;ILnet/minecraft/world/item/armortrim/ArmorTrim;Lnet/minecraft/client/model/HumanoidModel;Z)V
 		ARG 1 armorMaterial
 		ARG 2 poseStack

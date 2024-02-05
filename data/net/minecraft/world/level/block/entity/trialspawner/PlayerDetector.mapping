@@ -3,3 +3,21 @@ CLASS net/minecraft/world/level/block/entity/trialspawner/PlayerDetector
 		ARG 1 level
 		ARG 2 pos
 		ARG 3 maxDistance
+	METHOD detect (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/block/entity/trialspawner/PlayerDetector$EntitySelector;Lnet/minecraft/core/BlockPos;D)Ljava/util/List;
+		ARG 1 level
+		ARG 2 entitySelector
+		ARG 3 pos
+		ARG 4 maxDistance
+	CLASS EntitySelector
+		METHOD getEntities (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/entity/EntityTypeTest;Lnet/minecraft/world/phys/AABB;Ljava/util/function/Predicate;)Ljava/util/List;
+			ARG 1 level
+			ARG 2 typeTest
+			ARG 3 boundingBox
+			ARG 4 predicate
+		METHOD getPlayers (Lnet/minecraft/server/level/ServerLevel;Ljava/util/function/Predicate;)Ljava/util/List;
+			ARG 1 level
+			ARG 2 predicate
+		METHOD onlySelectPlayer (Lnet/minecraft/world/entity/player/Player;)Lnet/minecraft/world/level/block/entity/trialspawner/PlayerDetector$EntitySelector;
+			ARG 0 player
+		METHOD onlySelectPlayers (Ljava/util/List;)Lnet/minecraft/world/level/block/entity/trialspawner/PlayerDetector$EntitySelector;
+			ARG 0 players

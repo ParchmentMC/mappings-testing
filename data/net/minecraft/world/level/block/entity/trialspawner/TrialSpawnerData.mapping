@@ -46,3 +46,9 @@ CLASS net/minecraft/world/level/block/entity/trialspawner/TrialSpawnerData
 		ARG 2 pos
 		ARG 3 platerDetector
 		ARG 4 players
+	METHOD tryDetectPlayers (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/entity/trialspawner/PlayerDetector;Lnet/minecraft/world/level/block/entity/trialspawner/PlayerDetector$EntitySelector;I)V
+		ARG 1 level
+		ARG 2 pos
+		ARG 3 playerDetector
+		ARG 4 entitySelector
+		ARG 5 maxDistance

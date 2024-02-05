@@ -10,6 +10,12 @@ CLASS net/minecraft/world/level/block/Block
 		ARG 2 level
 		ARG 3 tooltip
 		ARG 4 flag
+	METHOD appendHoverText (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/BlockGetter;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;Lnet/minecraft/core/RegistryAccess;)V
+		ARG 1 stack
+		ARG 2 level
+		ARG 3 tooltip
+		ARG 4 flag
+		ARG 5 registryAccess
 	METHOD box (DDDDDD)Lnet/minecraft/world/phys/shapes/VoxelShape;
 		ARG 0 x1
 		ARG 2 y1

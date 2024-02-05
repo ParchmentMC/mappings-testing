@@ -183,6 +183,12 @@ CLASS net/minecraft/client/renderer/GameRenderer
 		ARG 1 poseStack
 		ARG 2 activeRenderInfo
 		ARG 3 partialTicks
+	METHOD renderItemInHand (Lnet/minecraft/client/Camera;F)V
+		ARG 1 camera
+		ARG 2 partialTick
+	METHOD renderLevel (FJ)V
+		ARG 1 partialTick
+		ARG 2 nanoTime
 	METHOD renderLevel (FJLcom/mojang/blaze3d/vertex/PoseStack;)V
 		ARG 1 partialTicks
 		ARG 2 finishTimeNano

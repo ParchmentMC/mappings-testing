@@ -4,6 +4,8 @@ CLASS net/minecraft/network/protocol/game/ClientboundPlayerInfoUpdatePacket
 		ARG 2 players
 	METHOD <init> (Lnet/minecraft/network/FriendlyByteBuf;)V
 		ARG 1 buffer
+	METHOD <init> (Lnet/minecraft/network/RegistryFriendlyByteBuf;)V
+		ARG 1 buffer
 	METHOD <init> (Lnet/minecraft/network/protocol/game/ClientboundPlayerInfoUpdatePacket$Action;Lnet/minecraft/server/level/ServerPlayer;)V
 		ARG 1 action
 		ARG 2 player
@@ -15,6 +17,8 @@ CLASS net/minecraft/network/protocol/game/ClientboundPlayerInfoUpdatePacket
 		ARG 1 buf
 		ARG 2 entry
 	METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
+		ARG 1 buffer
+	METHOD write (Lnet/minecraft/network/RegistryFriendlyByteBuf;)V
 		ARG 1 buffer
 	CLASS Entry
 		METHOD <init> (Lnet/minecraft/server/level/ServerPlayer;)V
@@ -63,8 +67,14 @@ CLASS net/minecraft/network/protocol/game/ClientboundPlayerInfoUpdatePacket
 			METHOD read (Lnet/minecraft/network/protocol/game/ClientboundPlayerInfoUpdatePacket$EntryBuilder;Lnet/minecraft/network/FriendlyByteBuf;)V
 				ARG 1 entryBuilder
 				ARG 2 buffer
+			METHOD read (Lnet/minecraft/network/protocol/game/ClientboundPlayerInfoUpdatePacket$EntryBuilder;Lnet/minecraft/network/RegistryFriendlyByteBuf;)V
+				ARG 1 entryBuilder
+				ARG 2 buffer
 		CLASS Writer
 			METHOD write (Lnet/minecraft/network/FriendlyByteBuf;Lnet/minecraft/network/protocol/game/ClientboundPlayerInfoUpdatePacket$Entry;)V
+				ARG 1 buffer
+				ARG 2 entry
+			METHOD write (Lnet/minecraft/network/RegistryFriendlyByteBuf;Lnet/minecraft/network/protocol/game/ClientboundPlayerInfoUpdatePacket$Entry;)V
 				ARG 1 buffer
 				ARG 2 entry
 	CLASS EntryBuilder

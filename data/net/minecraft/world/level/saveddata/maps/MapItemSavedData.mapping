@@ -42,10 +42,16 @@ CLASS net/minecraft/world/level/saveddata/maps/MapItemSavedData
 	METHOD getUpdatePacket (ILnet/minecraft/world/entity/player/Player;)Lnet/minecraft/network/protocol/Packet;
 		ARG 1 mapId
 		ARG 2 player
+	METHOD getUpdatePacket (Lnet/minecraft/world/level/saveddata/maps/MapId;Lnet/minecraft/world/entity/player/Player;)Lnet/minecraft/network/protocol/Packet;
+		ARG 1 mapId
+		ARG 2 player
 	METHOD isTrackedCountOverLimit (I)Z
 		ARG 1 trackedCount
 	METHOD load (Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData;
 		ARG 0 compoundTag
+	METHOD load (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData;
+		ARG 0 tag
+		ARG 1 levelRegistry
 	METHOD mapMatcher (Lnet/minecraft/world/item/ItemStack;)Ljava/util/function/Predicate;
 		ARG 0 stack
 	METHOD removeDecoration (Ljava/lang/String;)V
@@ -84,6 +90,11 @@ CLASS net/minecraft/world/level/saveddata/maps/MapItemSavedData
 			ARG 5 mapColors
 		METHOD applyToMap (Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData;)V
 			ARG 1 savedData
+		METHOD read (Lio/netty/buffer/ByteBuf;)Ljava/util/Optional;
+			ARG 0 buffer
+		METHOD write (Lio/netty/buffer/ByteBuf;Ljava/util/Optional;)V
+			ARG 0 buffer
+			ARG 1 mapPatch
 	CLASS HoldingPlayer
 		FIELD maxDirtyX I
 			COMMENT The highest dirty x value
@@ -99,4 +110,6 @@ CLASS net/minecraft/world/level/saveddata/maps/MapItemSavedData
 			ARG 1 x
 			ARG 2 z
 		METHOD nextUpdatePacket (I)Lnet/minecraft/network/protocol/Packet;
+			ARG 1 mapId
+		METHOD nextUpdatePacket (Lnet/minecraft/world/level/saveddata/maps/MapId;)Lnet/minecraft/network/protocol/Packet;
 			ARG 1 mapId

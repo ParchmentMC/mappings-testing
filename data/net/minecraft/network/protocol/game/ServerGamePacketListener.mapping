@@ -40,6 +40,8 @@ CLASS net/minecraft/network/protocol/game/ServerGamePacketListener
 	METHOD handleCustomCommandSuggestions (Lnet/minecraft/network/protocol/game/ServerboundCommandSuggestionPacket;)V
 		COMMENT This method is only called for manual tab-completion (the {@link net.minecraft.commands.synchronization.SuggestionProviders#ASK_SERVER minecraft:ask_server} suggestion provider).
 		ARG 1 packet
+	METHOD handleDebugSampleSubscription (Lnet/minecraft/network/protocol/game/ServerboundDebugSampleSubscriptionPacket;)V
+		ARG 1 packet
 	METHOD handleEditBook (Lnet/minecraft/network/protocol/game/ServerboundEditBookPacket;)V
 		ARG 1 packet
 	METHOD handleEntityTagQuery (Lnet/minecraft/network/protocol/game/ServerboundEntityTagQuery;)V

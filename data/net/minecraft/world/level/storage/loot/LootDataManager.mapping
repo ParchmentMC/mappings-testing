@@ -1,4 +1,6 @@
 CLASS net/minecraft/world/level/storage/loot/LootDataManager
+	METHOD <init> (Lnet/minecraft/core/HolderLookup$Provider;)V
+		ARG 1 registries
 	METHOD apply (Ljava/util/Map;)V
 		ARG 1 collectedElements
 	METHOD castAndValidate (Lnet/minecraft/world/level/storage/loot/ValidationContext;Lnet/minecraft/world/level/storage/loot/LootDataId;Ljava/lang/Object;)V
@@ -30,6 +32,12 @@ CLASS net/minecraft/world/level/storage/loot/LootDataManager
 	METHOD lambda$scheduleElementParse$4 (Lnet/minecraft/world/level/storage/loot/LootDataType;Ljava/util/Map;Lnet/minecraft/resources/ResourceLocation;Lcom/google/gson/JsonElement;)V
 		ARG 2 elementName
 		ARG 3 elementJson
+	METHOD scheduleElementParse (Lnet/minecraft/world/level/storage/loot/LootDataType;Lnet/minecraft/core/HolderLookup$Provider;Lnet/minecraft/server/packs/resources/ResourceManager;Ljava/util/concurrent/Executor;Ljava/util/Map;)Ljava/util/concurrent/CompletableFuture;
+		ARG 0 lootDataType
+		ARG 1 registries
+		ARG 2 resourceManager
+		ARG 3 executor
+		ARG 4 output
 	METHOD scheduleElementParse (Lnet/minecraft/world/level/storage/loot/LootDataType;Lnet/minecraft/server/packs/resources/ResourceManager;Ljava/util/concurrent/Executor;Ljava/util/Map;)Ljava/util/concurrent/CompletableFuture;
 		ARG 0 lootDataType
 		ARG 1 resourceManager

@@ -85,6 +85,9 @@ CLASS net/minecraft/server/commands/TeamCommand
 		ARG 0 source
 	METHOD register (Lcom/mojang/brigadier/CommandDispatcher;)V
 		ARG 0 dispatcher
+	METHOD register (Lcom/mojang/brigadier/CommandDispatcher;Lnet/minecraft/commands/CommandBuildContext;)V
+		ARG 0 dispatcher
+		ARG 1 context
 	METHOD setCollision (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/world/scores/PlayerTeam;Lnet/minecraft/world/scores/Team$CollisionRule;)I
 		ARG 0 source
 		ARG 1 team

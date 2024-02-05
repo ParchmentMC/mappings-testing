@@ -8,6 +8,18 @@ CLASS net/minecraft/world/level/saveddata/maps/MapDecoration
 	METHOD equals (Ljava/lang/Object;)Z
 		ARG 1 other
 	CLASS Type
+		METHOD <init> (Ljava/lang/String;IILjava/lang/String;ZIZZ)V
+			ARG 3 id
+			ARG 4 name
+			ARG 5 renderedOnFrame
+			ARG 6 mapColor
+			ARG 7 trackCount
+			ARG 8 isExplorationMapElement
+		METHOD <init> (Ljava/lang/String;IILjava/lang/String;ZZ)V
+			ARG 3 id
+			ARG 4 name
+			ARG 5 renderedOnFrame
+			ARG 6 trackCount
 		METHOD <init> (Ljava/lang/String;ILjava/lang/String;ZIZZ)V
 			ARG 3 name
 			ARG 4 renderedOnFrame

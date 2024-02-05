@@ -17,3 +17,8 @@ CLASS net/minecraft/server/ReloadableServerResources
 	METHOD updateRegistryTags (Lnet/minecraft/core/RegistryAccess;Lnet/minecraft/tags/TagManager$LoadResult;)V
 		ARG 0 registryAccess
 		ARG 1 loadResult
+	CLASS ConfigurableRegistryLookup
+		METHOD <init> (Lnet/minecraft/core/RegistryAccess;)V
+			ARG 1 registryAccess
+		METHOD missingTagAccessPolicy (Lnet/minecraft/server/ReloadableServerResources$MissingTagAccessPolicy;)V
+			ARG 1 missingTagAccessPolicy

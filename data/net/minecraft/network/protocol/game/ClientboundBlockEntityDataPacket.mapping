@@ -9,6 +9,9 @@ CLASS net/minecraft/network/protocol/game/ClientboundBlockEntityDataPacket
 		ARG 1 buffer
 	METHOD create (Lnet/minecraft/world/level/block/entity/BlockEntity;)Lnet/minecraft/network/protocol/game/ClientboundBlockEntityDataPacket;
 		ARG 0 blockEntity
+	METHOD create (Lnet/minecraft/world/level/block/entity/BlockEntity;Ljava/util/function/BiFunction;)Lnet/minecraft/network/protocol/game/ClientboundBlockEntityDataPacket;
+		ARG 0 blockEntity
+		ARG 1 dataGetter
 	METHOD create (Lnet/minecraft/world/level/block/entity/BlockEntity;Ljava/util/function/Function;)Lnet/minecraft/network/protocol/game/ClientboundBlockEntityDataPacket;
 		ARG 0 blockEntity
 		ARG 1 tagGetter

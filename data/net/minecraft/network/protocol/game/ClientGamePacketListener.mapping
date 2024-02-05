@@ -69,6 +69,8 @@ CLASS net/minecraft/network/protocol/game/ClientGamePacketListener
 		ARG 1 packet
 	METHOD handleDamageEvent (Lnet/minecraft/network/protocol/game/ClientboundDamageEventPacket;)V
 		ARG 1 packet
+	METHOD handleDebugSample (Lnet/minecraft/network/protocol/game/ClientboundDebugSamplePacket;)V
+		ARG 1 packet
 	METHOD handleDeleteChat (Lnet/minecraft/network/protocol/game/ClientboundDeleteChatPacket;)V
 		ARG 1 packet
 	METHOD handleDisguisedChat (Lnet/minecraft/network/protocol/game/ClientboundDisguisedChatPacket;)V

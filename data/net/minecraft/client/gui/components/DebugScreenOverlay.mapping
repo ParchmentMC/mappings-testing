@@ -13,6 +13,9 @@ CLASS net/minecraft/client/gui/components/DebugScreenOverlay
 		ARG 0 enumMap
 	METHOD logFrameDuration (J)V
 		ARG 1 frameDuration
+	METHOD logRemoteSample ([JLnet/minecraft/util/debugchart/RemoteDebugSampleType;)V
+		ARG 1 sample
+		ARG 2 sampleType
 	METHOD logTickDuration (J)V
 		ARG 1 tickDuration
 	METHOD printBiome (Lnet/minecraft/core/Holder;)Ljava/lang/String;

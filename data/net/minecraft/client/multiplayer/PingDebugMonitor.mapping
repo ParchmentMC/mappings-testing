@@ -2,6 +2,9 @@ CLASS net/minecraft/client/multiplayer/PingDebugMonitor
 	METHOD <init> (Lnet/minecraft/client/multiplayer/ClientPacketListener;Lnet/minecraft/util/SampleLogger;)V
 		ARG 1 connection
 		ARG 2 delayTimer
+	METHOD <init> (Lnet/minecraft/client/multiplayer/ClientPacketListener;Lnet/minecraft/util/debugchart/LocalSampleLogger;)V
+		ARG 1 connection
+		ARG 2 delayTimer
 	METHOD <init> (Lnet/minecraft/client/multiplayer/ClientPacketListener;Lnet/minecraft/util/debugchart/SampleLogger;)V
 		ARG 1 connection
 		ARG 2 delayTimer

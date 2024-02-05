@@ -4,3 +4,7 @@ CLASS net/minecraft/commands/ParserUtils
 	METHOD parseJson (Lcom/mojang/brigadier/StringReader;Lcom/mojang/serialization/Codec;)Ljava/lang/Object;
 		ARG 0 reader
 		ARG 1 codec
+	METHOD parseJson (Lnet/minecraft/core/HolderLookup$Provider;Lcom/mojang/brigadier/StringReader;Lcom/mojang/serialization/Codec;)Ljava/lang/Object;
+		ARG 0 registries
+		ARG 1 reader
+		ARG 2 codec

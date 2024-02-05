@@ -1,4 +1,8 @@
 CLASS net/minecraft/Util
+	METHOD allOf (Ljava/util/List;)Ljava/util/function/Predicate;
+		ARG 0 predicates
+	METHOD anyOf (Ljava/util/List;)Ljava/util/function/Predicate;
+		ARG 0 predicates
 	METHOD blockUntilDone (Ljava/util/function/Function;)Ljava/util/concurrent/CompletableFuture;
 		ARG 0 task
 	METHOD blockUntilDone (Ljava/util/function/Function;Ljava/util/function/Predicate;)Ljava/lang/Object;

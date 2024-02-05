@@ -1,0 +1,7 @@
+CLASS net/minecraft/commands/arguments/item/ItemPredicateParser
+	METHOD <init> (Lnet/minecraft/core/HolderLookup$Provider;)V
+		ARG 1 registries
+	METHOD fillSuggestions (Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;
+		ARG 1 builder
+	METHOD parse (Lcom/mojang/brigadier/StringReader;)Ljava/util/function/Predicate;
+		ARG 1 reader

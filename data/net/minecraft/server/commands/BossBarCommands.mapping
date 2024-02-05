@@ -80,6 +80,9 @@ CLASS net/minecraft/server/commands/BossBarCommands
 		ARG 0 source
 	METHOD register (Lcom/mojang/brigadier/CommandDispatcher;)V
 		ARG 0 dispatcher
+	METHOD register (Lcom/mojang/brigadier/CommandDispatcher;Lnet/minecraft/commands/CommandBuildContext;)V
+		ARG 0 dispatcher
+		ARG 1 context
 	METHOD removeBar (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/server/bossevents/CustomBossEvent;)I
 		ARG 0 source
 		ARG 1 bossbar

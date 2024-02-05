@@ -232,6 +232,8 @@ CLASS net/minecraft/world/level/Level
 		COMMENT Returns the world's WorldInfo object
 	METHOD getMapData (Ljava/lang/String;)Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData;
 		ARG 1 mapName
+	METHOD getMapData (Lnet/minecraft/world/level/saveddata/maps/MapId;)Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData;
+		ARG 1 mapId
 	METHOD getRainLevel (F)F
 		COMMENT Returns rain strength.
 		ARG 1 delta
@@ -432,6 +434,9 @@ CLASS net/minecraft/world/level/Level
 	METHOD setMapData (Ljava/lang/String;Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData;)V
 		ARG 1 mapName
 		ARG 2 data
+	METHOD setMapData (Lnet/minecraft/world/level/saveddata/maps/MapId;Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData;)V
+		ARG 1 mapId
+		ARG 2 mapData
 	METHOD setRainLevel (F)V
 		COMMENT Sets the strength of the rain.
 		ARG 1 strength

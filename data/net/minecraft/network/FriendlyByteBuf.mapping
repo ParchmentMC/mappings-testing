@@ -163,6 +163,11 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		ARG 2 reader
 	METHOD readByteArray (I)[B
 		ARG 1 maxLength
+	METHOD readByteArray (Lio/netty/buffer/ByteBuf;)[B
+		ARG 0 buffer
+	METHOD readByteArray (Lio/netty/buffer/ByteBuf;I)[B
+		ARG 0 buffer
+		ARG 1 maxSize
 	METHOD readBytes (I)Lio/netty/buffer/ByteBuf;
 		ARG 1 length
 	METHOD readBytes (Lio/netty/buffer/ByteBuf;)Lnet/minecraft/network/FriendlyByteBuf;
@@ -299,6 +304,9 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		ARG 1 nbtAccounter
 	METHOD readNbt (Lnet/minecraft/nbt/NbtAccounter;)Lnet/minecraft/nbt/Tag;
 		ARG 1 nbtAccounter
+	METHOD readNullable (Lio/netty/buffer/ByteBuf;Lnet/minecraft/network/codec/StreamDecoder;)Ljava/lang/Object;
+		ARG 0 buffer
+		ARG 1 reader
 	METHOD readNullable (Lnet/minecraft/network/FriendlyByteBuf$Reader;)Ljava/lang/Object;
 		ARG 1 reader
 	METHOD readNullable (Lnet/minecraft/network/codec/StreamDecoder;)Ljava/lang/Object;
@@ -500,6 +508,9 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		ARG 2 value
 	METHOD writeByte (I)Lnet/minecraft/network/FriendlyByteBuf;
 		ARG 1 value
+	METHOD writeByteArray (Lio/netty/buffer/ByteBuf;[B)V
+		ARG 0 buffer
+		ARG 1 array
 	METHOD writeByteArray ([B)Lnet/minecraft/network/FriendlyByteBuf;
 		ARG 1 array
 	METHOD writeBytes (Lio/netty/buffer/ByteBuf;)Lnet/minecraft/network/FriendlyByteBuf;
@@ -643,6 +654,10 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		ARG 1 nbt
 	METHOD writeNbt (Lnet/minecraft/nbt/Tag;)Lnet/minecraft/network/FriendlyByteBuf;
 		ARG 1 tag
+	METHOD writeNullable (Lio/netty/buffer/ByteBuf;Ljava/lang/Object;Lnet/minecraft/network/codec/StreamEncoder;)V
+		ARG 0 buffer
+		ARG 1 value
+		ARG 2 writer
 	METHOD writeNullable (Ljava/lang/Object;Lnet/minecraft/network/FriendlyByteBuf$Writer;)V
 		ARG 1 value
 		ARG 2 writer

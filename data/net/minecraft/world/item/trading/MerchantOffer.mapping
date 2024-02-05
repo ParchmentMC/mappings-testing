@@ -47,6 +47,18 @@ CLASS net/minecraft/world/item/trading/MerchantOffer
 		ARG 7 priceMultiplier
 		ARG 8 demand
 		ARG 9 ignoreTags
+	METHOD <init> (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;IIZIIFIZ)V
+		ARG 1 baseCostA
+		ARG 2 costB
+		ARG 3 result
+		ARG 4 uses
+		ARG 5 maxUses
+		ARG 6 rewardExp
+		ARG 7 specialPriceDiff
+		ARG 8 demand
+		ARG 9 priceMultiplier
+		ARG 10 xp
+		ARG 11 ignoreTags
 	METHOD <init> (Lnet/minecraft/world/item/trading/MerchantOffer;)V
 		ARG 1 other
 	METHOD addToSpecialPriceDiff (I)V

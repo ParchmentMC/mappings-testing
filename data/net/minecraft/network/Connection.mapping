@@ -41,6 +41,10 @@ CLASS net/minecraft/network/Connection
 		ARG 0 address
 		ARG 1 useEpollIfAvailable
 		ARG 2 bandwithLogger
+	METHOD connectToServer (Ljava/net/InetSocketAddress;ZLnet/minecraft/util/debugchart/LocalSampleLogger;)Lnet/minecraft/network/Connection;
+		ARG 0 address
+		ARG 1 useEpollIfAvailable
+		ARG 2 sampleLogger
 	METHOD connectToServer (Ljava/net/InetSocketAddress;ZLnet/minecraft/util/debugchart/SampleLogger;)Lnet/minecraft/network/Connection;
 		ARG 0 address
 		ARG 1 useEpollIfAvailable

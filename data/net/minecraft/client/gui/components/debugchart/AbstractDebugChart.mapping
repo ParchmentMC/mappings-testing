@@ -5,6 +5,9 @@ CLASS net/minecraft/client/gui/components/debugchart/AbstractDebugChart
 	METHOD <init> (Lnet/minecraft/client/gui/Font;Lnet/minecraft/util/debugchart/SampleLogger;)V
 		ARG 1 font
 		ARG 2 logger
+	METHOD <init> (Lnet/minecraft/client/gui/Font;Lnet/minecraft/util/debugchart/SampleStorage;)V
+		ARG 1 font
+		ARG 2 sampleStorage
 	METHOD drawAdditionalDimensions (Lnet/minecraft/client/gui/GuiGraphics;III)V
 		ARG 1 guiGraphics
 		ARG 2 height

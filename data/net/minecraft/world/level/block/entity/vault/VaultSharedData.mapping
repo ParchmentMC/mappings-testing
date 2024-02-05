@@ -1,0 +1,15 @@
+CLASS net/minecraft/world/level/block/entity/vault/VaultSharedData
+	METHOD <init> (Lnet/minecraft/world/item/ItemStack;Ljava/util/Set;D)V
+		ARG 1 displayItem
+		ARG 2 connectedPlayers
+		ARG 3 connectedParticlesRange
+	METHOD set (Lnet/minecraft/world/level/block/entity/vault/VaultSharedData;)V
+		ARG 1 other
+	METHOD setDisplayItem (Lnet/minecraft/world/item/ItemStack;)V
+		ARG 1 displayItem
+	METHOD updateConnectedPlayersWithinRange (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/entity/vault/VaultServerData;Lnet/minecraft/world/level/block/entity/vault/VaultConfig;D)V
+		ARG 1 level
+		ARG 2 pos
+		ARG 3 serverData
+		ARG 4 config
+		ARG 5 deactivationRange

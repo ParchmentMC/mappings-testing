@@ -186,6 +186,9 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 2 onMetricsRecordingFinished
 	METHOD stopServer ()V
 		COMMENT Saves all necessary data as preparation for stopping the server.
+	METHOD subscribeToDebugSample (Lnet/minecraft/server/level/ServerPlayer;Lnet/minecraft/util/debugchart/RemoteDebugSampleType;)V
+		ARG 1 player
+		ARG 2 sampleType
 	METHOD synchronizeTime (Lnet/minecraft/server/level/ServerLevel;)V
 		ARG 1 level
 	METHOD tickChildren (Ljava/util/function/BooleanSupplier;)V

@@ -1,4 +1,6 @@
 CLASS net/minecraft/commands/arguments/StyleArgument
+	METHOD <init> (Lnet/minecraft/core/HolderLookup$Provider;)V
+		ARG 1 registries
 	METHOD getStyle (Lcom/mojang/brigadier/context/CommandContext;Ljava/lang/String;)Lnet/minecraft/network/chat/Style;
 		ARG 0 context
 		ARG 1 name

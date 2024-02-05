@@ -1,4 +1,7 @@
 CLASS net/minecraft/server/ServerAdvancementManager
+	METHOD <init> (Lnet/minecraft/core/HolderLookup$Provider;Lnet/minecraft/world/level/storage/loot/LootDataManager;)V
+		ARG 1 registries
+		ARG 2 lootData
 	METHOD <init> (Lnet/minecraft/world/level/storage/loot/LootDataManager;)V
 		ARG 1 lootData
 	METHOD apply (Ljava/util/Map;Lnet/minecraft/server/packs/resources/ResourceManager;Lnet/minecraft/util/profiling/ProfilerFiller;)V

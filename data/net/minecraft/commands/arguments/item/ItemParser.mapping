@@ -1,10 +1,14 @@
 CLASS net/minecraft/commands/arguments/item/ItemParser
 	FIELD suggestions Ljava/util/function/Function;
 		COMMENT Builder to be used when creating a list of suggestions
+	METHOD <init> (Lnet/minecraft/core/HolderLookup$Provider;)V
+		ARG 1 registries
 	METHOD <init> (Lnet/minecraft/core/HolderLookup;Lcom/mojang/brigadier/StringReader;Z)V
 		ARG 1 items
 		ARG 2 reader
 		ARG 3 allowTags
+	METHOD fillSuggestions (Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;
+		ARG 1 builder
 	METHOD fillSuggestions (Lnet/minecraft/core/HolderLookup;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;Z)Ljava/util/concurrent/CompletableFuture;
 		ARG 0 lookup
 		ARG 1 builder
@@ -17,6 +21,8 @@ CLASS net/minecraft/commands/arguments/item/ItemParser
 		ARG 0 itemId
 	METHOD lambda$static$1 (Ljava/lang/Object;)Lcom/mojang/brigadier/Message;
 		ARG 0 itemTag
+	METHOD parse (Lcom/mojang/brigadier/StringReader;)Lnet/minecraft/commands/arguments/item/ItemParser$ItemResult;
+		ARG 1 reader
 	METHOD parseForItem (Lnet/minecraft/core/HolderLookup;Lcom/mojang/brigadier/StringReader;)Lnet/minecraft/commands/arguments/item/ItemParser$ItemResult;
 		ARG 0 lookup
 		ARG 1 reader

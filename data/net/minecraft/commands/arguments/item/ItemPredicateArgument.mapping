@@ -7,6 +7,9 @@ CLASS net/minecraft/commands/arguments/item/ItemPredicateArgument
 	METHOD getItemPredicate (Lcom/mojang/brigadier/context/CommandContext;Ljava/lang/String;)Ljava/util/function/Predicate;
 		ARG 0 context
 		ARG 1 name
+	METHOD getItemPredicate (Lcom/mojang/brigadier/context/CommandContext;Ljava/lang/String;)Lnet/minecraft/commands/arguments/item/ItemPredicateArgument$Result;
+		ARG 0 context
+		ARG 1 name
 	METHOD itemPredicate (Lnet/minecraft/commands/CommandBuildContext;)Lnet/minecraft/commands/arguments/item/ItemPredicateArgument;
 		ARG 0 context
 	METHOD lambda$createResult$3 (Ljava/util/function/Predicate;Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/world/item/ItemStack;)Z
