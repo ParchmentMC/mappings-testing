@@ -7,6 +7,10 @@ CLASS net/minecraft/client/multiplayer/RegistryDataCollector
 	METHOD collectGameRegistries (Lnet/minecraft/core/RegistryAccess;Z)Lnet/minecraft/core/RegistryAccess$Frozen;
 		ARG 1 registryAccess
 		ARG 2 isMemoryConnection
+	METHOD collectGameRegistries (Lnet/minecraft/server/packs/resources/ResourceProvider;Lnet/minecraft/core/RegistryAccess;Z)Lnet/minecraft/core/RegistryAccess$Frozen;
+		ARG 1 resourceProvider
+		ARG 2 registryAccess
+		ARG 3 isMemoryConnection
 	CLASS TagCollector
 		METHOD append (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/tags/TagNetworkSerialization$NetworkPayload;)V
 			ARG 1 registryKey

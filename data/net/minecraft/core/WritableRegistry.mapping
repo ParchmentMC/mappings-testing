@@ -3,3 +3,7 @@ CLASS net/minecraft/core/WritableRegistry
 		ARG 1 key
 		ARG 2 value
 		ARG 3 lifecycle
+	METHOD register (Lnet/minecraft/resources/ResourceKey;Ljava/lang/Object;Lnet/minecraft/core/RegistrationInfo;)Lnet/minecraft/core/Holder$Reference;
+		ARG 1 key
+		ARG 2 value
+		ARG 3 registrationInfo

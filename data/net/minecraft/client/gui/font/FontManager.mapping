@@ -4,11 +4,20 @@ CLASS net/minecraft/client/gui/font/FontManager
 	METHOD apply (Lnet/minecraft/client/gui/font/FontManager$Preparation;Lnet/minecraft/util/profiling/ProfilerFiller;)V
 		ARG 1 preperation
 		ARG 2 profiler
+	METHOD finalizeProviderLoading (Ljava/util/List;Lcom/mojang/blaze3d/font/GlyphProvider$Conditional;)V
+		ARG 1 providers
+		ARG 2 fallbackProvider
 	METHOD finalizeProviderLoading (Ljava/util/List;Lcom/mojang/blaze3d/font/GlyphProvider;)V
 		ARG 1 providers
 		ARG 2 missingProvider
 	METHOD getActualId (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/resources/ResourceLocation;
 		ARG 1 id
+	METHOD getFontOptions (Lnet/minecraft/client/Options;)Ljava/util/Set;
+		ARG 0 options
+	METHOD getFontSetCached (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/gui/font/FontSet;
+		ARG 1 fontSet
+	METHOD getFontSetRaw (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/gui/font/FontSet;
+		ARG 1 fontSet
 	METHOD loadResourceStack (Ljava/util/List;Lnet/minecraft/resources/ResourceLocation;)Ljava/util/List;
 		ARG 0 resources
 		ARG 1 fontId
@@ -24,7 +33,11 @@ CLASS net/minecraft/client/gui/font/FontManager
 		ARG 4 executor
 	METHOD setRenames (Ljava/util/Map;)V
 		ARG 1 unicodeForcedMap
+	METHOD updateOptions (Lnet/minecraft/client/Options;)V
+		ARG 1 options
 	CLASS BuilderResult
+		METHOD mergeFilters (Lcom/mojang/blaze3d/font/GlyphProvider$Conditional;)Lcom/mojang/blaze3d/font/GlyphProvider$Conditional;
+			ARG 1 conditional
 		METHOD resolve (Ljava/util/function/Function;)Ljava/util/Optional;
 			ARG 1 providerResolver
 	CLASS UnresolvedBuilderBundle
@@ -33,6 +46,14 @@ CLASS net/minecraft/client/gui/font/FontManager
 		METHOD add (Lnet/minecraft/client/gui/font/FontManager$BuilderId;Ljava/util/concurrent/CompletableFuture;)V
 			ARG 1 id
 			ARG 2 providerFuture
+		METHOD add (Lnet/minecraft/client/gui/font/FontManager$BuilderId;Lnet/minecraft/client/gui/font/FontOption$Filter;Ljava/util/concurrent/CompletableFuture;)V
+			ARG 1 builderId
+			ARG 2 filter
+			ARG 3 glyphProvider
+		METHOD add (Lnet/minecraft/client/gui/font/FontManager$BuilderId;Lnet/minecraft/client/gui/font/FontOption$Filter;Lnet/minecraft/client/gui/font/providers/GlyphProviderDefinition$Reference;)V
+			ARG 1 builderId
+			ARG 2 filter
+			ARG 3 glyphProvider
 		METHOD add (Lnet/minecraft/client/gui/font/FontManager$BuilderId;Lnet/minecraft/client/gui/font/providers/GlyphProviderDefinition$Reference;)V
 			ARG 1 builderId
 			ARG 2 reference

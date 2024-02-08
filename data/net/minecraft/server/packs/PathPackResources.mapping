@@ -3,6 +3,9 @@ CLASS net/minecraft/server/packs/PathPackResources
 		ARG 1 name
 		ARG 2 root
 		ARG 3 isBuiltin
+	METHOD <init> (Lnet/minecraft/server/packs/PackLocationInfo;Ljava/nio/file/Path;)V
+		ARG 1 location
+		ARG 2 root
 	METHOD getResource (Lnet/minecraft/resources/ResourceLocation;Ljava/nio/file/Path;)Lnet/minecraft/server/packs/resources/IoSupplier;
 		ARG 0 location
 		ARG 1 path
@@ -16,6 +19,8 @@ CLASS net/minecraft/server/packs/PathPackResources
 	METHOD validatePath (Ljava/nio/file/Path;)Z
 		ARG 0 path
 	CLASS PathResourcesSupplier
+		METHOD <init> (Ljava/nio/file/Path;)V
+			ARG 1 content
 		METHOD <init> (Ljava/nio/file/Path;Z)V
 			ARG 1 content
 			ARG 2 isBuiltin

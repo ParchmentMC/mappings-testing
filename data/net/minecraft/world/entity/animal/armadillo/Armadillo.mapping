@@ -19,7 +19,14 @@ CLASS net/minecraft/world/entity/animal/armadillo/Armadillo
 		METHOD <init> (Ljava/lang/String;ILjava/lang/String;I)V
 			ARG 3 name
 			ARG 4 id
+		METHOD <init> (Ljava/lang/String;ILjava/lang/String;ZII)V
+			ARG 3 name
+			ARG 4 isThreatened
+			ARG 5 animationDuration
+			ARG 6 id
 		METHOD fromId (Ljava/lang/String;)Lnet/minecraft/world/entity/animal/armadillo/Armadillo$ArmadilloState;
 			ARG 0 id
 		METHOD fromName (Ljava/lang/String;)Lnet/minecraft/world/entity/animal/armadillo/Armadillo$ArmadilloState;
 			ARG 0 name
+		METHOD shouldHideInShell (J)Z
+			ARG 1 inStateTicks

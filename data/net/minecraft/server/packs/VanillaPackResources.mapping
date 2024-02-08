@@ -4,6 +4,12 @@ CLASS net/minecraft/server/packs/VanillaPackResources
 		ARG 2 namespaces
 		ARG 3 rootPaths
 		ARG 4 pathsForType
+	METHOD <init> (Lnet/minecraft/server/packs/PackLocationInfo;Lnet/minecraft/server/packs/BuiltInMetadata;Ljava/util/Set;Ljava/util/List;Ljava/util/Map;)V
+		ARG 1 location
+		ARG 2 metadata
+		ARG 3 namespaces
+		ARG 4 rootPaths
+		ARG 5 pathsForType
 	METHOD getMetadataSection (Lnet/minecraft/server/packs/metadata/MetadataSectionSerializer;)Ljava/lang/Object;
 		ARG 1 deserializer
 	METHOD getNamespaces (Lnet/minecraft/server/packs/PackType;)Ljava/util/Set;

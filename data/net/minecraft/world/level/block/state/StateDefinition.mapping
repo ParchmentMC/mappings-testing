@@ -38,3 +38,7 @@ CLASS net/minecraft/world/level/block/state/StateDefinition
 			ARG 1 property
 			ARG 2 propToValueMap
 			ARG 3 propCodec
+		METHOD create (Ljava/lang/Object;Lit/unimi/dsi/fastutil/objects/Reference2ObjectArrayMap;Lcom/mojang/serialization/MapCodec;)Ljava/lang/Object;
+			ARG 1 owner
+			ARG 2 values
+			ARG 3 propertiesCodec

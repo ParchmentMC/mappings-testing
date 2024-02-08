@@ -9,3 +9,6 @@ CLASS net/minecraft/world/entity/animal/armadillo/ArmadilloAi
 		ARG 0 brain
 	METHOD updateActivity (Lnet/minecraft/world/entity/animal/armadillo/Armadillo;)V
 		ARG 0 armadillo
+	CLASS ArmadilloBallUp
+		METHOD pickNextPeekTimer (Lnet/minecraft/world/entity/animal/armadillo/Armadillo;)I
+			ARG 1 armadillo

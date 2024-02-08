@@ -1,0 +1,16 @@
+CLASS net/minecraft/util/datafix/fixes/BlockPosFormatAndRenamesFix
+	METHOD <init> (Lcom/mojang/datafixers/schemas/Schema;)V
+		ARG 1 outputSchema
+	METHOD addBlockEntityRules (Ljava/util/List;)V
+		ARG 1 output
+	METHOD addEntityRules (Ljava/util/List;)V
+		ARG 1 output
+	METHOD createEntityFixer (Lcom/mojang/datafixers/DSL$TypeReference;Ljava/lang/String;Ljava/util/Map;)Lcom/mojang/datafixers/TypeRewriteRule;
+		ARG 1 reference
+		ARG 2 entityId
+		ARG 3 renames
+	METHOD fixFields (Lcom/mojang/datafixers/Typed;Ljava/util/Map;)Lcom/mojang/datafixers/Typed;
+		ARG 1 data
+		ARG 2 renames
+	METHOD fixMapSavedData (Lcom/mojang/serialization/Dynamic;)Lcom/mojang/serialization/Dynamic;
+		ARG 1 data

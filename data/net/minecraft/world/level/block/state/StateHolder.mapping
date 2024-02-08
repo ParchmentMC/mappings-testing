@@ -3,6 +3,10 @@ CLASS net/minecraft/world/level/block/state/StateHolder
 		ARG 1 owner
 		ARG 2 values
 		ARG 3 propertiesCodec
+	METHOD <init> (Ljava/lang/Object;Lit/unimi/dsi/fastutil/objects/Reference2ObjectArrayMap;Lcom/mojang/serialization/MapCodec;)V
+		ARG 1 owner
+		ARG 2 values
+		ARG 3 propertiesCodec
 	METHOD codec (Lcom/mojang/serialization/Codec;Ljava/util/function/Function;)Lcom/mojang/serialization/Codec;
 		ARG 0 propertyMap
 		ARG 1 holderFunction
@@ -38,6 +42,8 @@ CLASS net/minecraft/world/level/block/state/StateHolder
 		ARG 1 property
 		ARG 2 value
 	CLASS 1
+		METHOD apply (Ljava/lang/Object;)Ljava/lang/Object;
+			ARG 1 property
 		METHOD apply (Ljava/util/Map$Entry;)Ljava/lang/String;
 			ARG 1 propertyEntry
 		METHOD getName (Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/String;

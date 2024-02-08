@@ -1,4 +1,6 @@
 CLASS net/minecraft/commands/functions/CommandFunction
+	METHOD checkCommandLineLength (Ljava/lang/CharSequence;)V
+		ARG 0 command
 	METHOD fromLines (Lnet/minecraft/resources/ResourceLocation;Lcom/mojang/brigadier/CommandDispatcher;Lnet/minecraft/commands/ExecutionCommandSource;Ljava/util/List;)Lnet/minecraft/commands/functions/CommandFunction;
 		ARG 0 id
 		ARG 1 dispatcher

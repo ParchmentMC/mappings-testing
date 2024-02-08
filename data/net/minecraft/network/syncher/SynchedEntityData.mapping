@@ -4,6 +4,9 @@ CLASS net/minecraft/network/syncher/SynchedEntityData
 	COMMENT
 	COMMENT Use {@link #defineId} to register a piece of data for your entity class.
 	COMMENT Use {@link #define} during {@link Entity#defineSynchedData} to set the default value for a given parameter.
+	METHOD <init> (Lnet/minecraft/network/syncher/SyncedDataHolder;[Lnet/minecraft/network/syncher/SynchedEntityData$DataItem;)V
+		ARG 1 entity
+		ARG 2 itemsById
 	METHOD <init> (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 entity
 	METHOD assignValue (Lnet/minecraft/network/syncher/SynchedEntityData$DataItem;Lnet/minecraft/network/syncher/SynchedEntityData$DataValue;)V
@@ -43,6 +46,12 @@ CLASS net/minecraft/network/syncher/SynchedEntityData
 		ARG 1 key
 		ARG 2 value
 		ARG 3 force
+	CLASS Builder
+		METHOD <init> (Lnet/minecraft/network/syncher/SyncedDataHolder;)V
+			ARG 1 entity
+		METHOD define (Lnet/minecraft/network/syncher/EntityDataAccessor;Ljava/lang/Object;)Lnet/minecraft/network/syncher/SynchedEntityData$Builder;
+			ARG 1 accessor
+			ARG 2 value
 	CLASS DataItem
 		METHOD <init> (Lnet/minecraft/network/syncher/EntityDataAccessor;Ljava/lang/Object;)V
 			ARG 1 accessor

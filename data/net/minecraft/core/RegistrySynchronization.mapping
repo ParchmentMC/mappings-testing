@@ -3,15 +3,28 @@ CLASS net/minecraft/core/RegistrySynchronization
 		ARG 0 mapCodec
 	METHOD getNetworkCodec (Lnet/minecraft/resources/ResourceKey;)Lcom/mojang/serialization/DataResult;
 		ARG 0 registryKey
+	METHOD lambda$packRegistries$0 (Lcom/mojang/serialization/DynamicOps;Lnet/minecraft/core/RegistryAccess;Ljava/util/Set;Ljava/util/function/BiConsumer;Lnet/minecraft/resources/RegistryDataLoader$RegistryData;)V
+		ARG 4 registryData
 	METHOD networkSafeRegistries (Lnet/minecraft/core/LayeredRegistryAccess;)Ljava/util/stream/Stream;
 		ARG 0 registryAccess
 	METHOD networkedRegistries (Lnet/minecraft/core/LayeredRegistryAccess;)Ljava/util/stream/Stream;
 		ARG 0 registryAccess
 	METHOD ownedNetworkableRegistries (Lnet/minecraft/core/RegistryAccess;)Ljava/util/stream/Stream;
 		ARG 0 registryAccess
+	METHOD packRegistries (Lcom/mojang/serialization/DynamicOps;Lnet/minecraft/core/RegistryAccess;Ljava/util/Set;Ljava/util/function/BiConsumer;)V
+		ARG 0 ops
+		ARG 1 registryAccess
+		ARG 2 packs
+		ARG 3 packetSender
 	METHOD packRegistries (Lcom/mojang/serialization/DynamicOps;Lnet/minecraft/core/RegistryAccess;Ljava/util/function/BiConsumer;)V
 		ARG 0 ops
 		ARG 1 registryAccess
+	METHOD packRegistry (Lcom/mojang/serialization/DynamicOps;Lnet/minecraft/resources/RegistryDataLoader$RegistryData;Lnet/minecraft/core/RegistryAccess;Ljava/util/Set;Ljava/util/function/BiConsumer;)V
+		ARG 0 ops
+		ARG 1 registryData
+		ARG 2 registryAccess
+		ARG 3 packs
+		ARG 4 packetSender
 	METHOD packRegistry (Lcom/mojang/serialization/DynamicOps;Lnet/minecraft/resources/RegistryDataLoader$RegistryData;Lnet/minecraft/core/RegistryAccess;Ljava/util/function/BiConsumer;)V
 		ARG 0 ops
 		ARG 1 registryData

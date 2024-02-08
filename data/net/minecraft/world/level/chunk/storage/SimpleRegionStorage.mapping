@@ -5,6 +5,12 @@ CLASS net/minecraft/world/level/chunk/storage/SimpleRegionStorage
 		ARG 3 sync
 		ARG 4 worldName
 		ARG 5 dataFixType
+	METHOD <init> (Lnet/minecraft/world/level/chunk/storage/RegionStorageInfo;Ljava/nio/file/Path;Lcom/mojang/datafixers/DataFixer;ZLnet/minecraft/util/datafix/DataFixTypes;)V
+		ARG 1 info
+		ARG 2 folder
+		ARG 3 fixerUpper
+		ARG 4 sync
+		ARG 5 dataFixType
 	METHOD read (Lnet/minecraft/world/level/ChunkPos;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 chunkPos
 	METHOD synchronize (Z)Ljava/util/concurrent/CompletableFuture;

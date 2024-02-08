@@ -35,12 +35,16 @@ CLASS net/minecraft/client/Options
 		COMMENT Loads the options from the options file. It appears that this has replaced the previous 'loadOptions'
 	METHOD loadSelectedResourcePacks (Lnet/minecraft/server/packs/repository/PackRepository;)V
 		ARG 1 resourcePackList
+	METHOD logMouse (I)D
+		ARG 0 input
 	METHOD percentValueLabel (Lnet/minecraft/network/chat/Component;D)Lnet/minecraft/network/chat/Component;
 		ARG 0 text
 		ARG 1 value
 	METHOD pixelValueLabel (Lnet/minecraft/network/chat/Component;I)Lnet/minecraft/network/chat/Component;
 		ARG 0 text
 		ARG 1 value
+	METHOD processDumpedOptions (Lnet/minecraft/client/Options$OptionAccess;)V
+		ARG 1 optionAccess
 	METHOD processOptions (Lnet/minecraft/client/Options$FieldAccess;)V
 		ARG 1 accessor
 	METHOD readListOfStrings (Ljava/lang/String;)Ljava/util/List;
@@ -60,6 +64,8 @@ CLASS net/minecraft/client/Options
 	METHOD toggleModelPart (Lnet/minecraft/world/entity/player/PlayerModelPart;Z)V
 		ARG 1 playerModelPart
 		ARG 2 enable
+	METHOD unlogMouse (D)I
+		ARG 0 input
 	METHOD updateResourcePacks (Lnet/minecraft/server/packs/repository/PackRepository;)V
 		ARG 1 packRepository
 	METHOD useNativeTransport ()Z
@@ -89,5 +95,9 @@ CLASS net/minecraft/client/Options
 			ARG 1 name
 			ARG 2 optionInstance
 		METHOD process (Ljava/lang/String;Z)Z
+			ARG 1 name
+			ARG 2 value
+	CLASS OptionAccess
+		METHOD process (Ljava/lang/String;Lnet/minecraft/client/OptionInstance;)V
 			ARG 1 name
 			ARG 2 value

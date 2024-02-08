@@ -23,6 +23,16 @@ CLASS net/minecraft/util/profiling/jfr/JvmProfiler
 		ARG 2 packetType
 		ARG 3 address
 		ARG 4 size
+	METHOD onRegionFileRead (Lnet/minecraft/world/level/chunk/storage/RegionStorageInfo;Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/world/level/chunk/storage/RegionFileVersion;I)V
+		ARG 1 regionStorageInfo
+		ARG 2 chunkPos
+		ARG 3 version
+		ARG 4 bytes
+	METHOD onRegionFileWrite (Lnet/minecraft/world/level/chunk/storage/RegionStorageInfo;Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/world/level/chunk/storage/RegionFileVersion;I)V
+		ARG 1 regionStorageInfo
+		ARG 2 chunkPos
+		ARG 3 version
+		ARG 4 bytes
 	METHOD onServerTick (F)V
 		ARG 1 currentAverageTickTime
 	METHOD start (Lnet/minecraft/util/profiling/jfr/Environment;)Z

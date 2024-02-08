@@ -3,6 +3,10 @@ CLASS net/minecraft/world/level/material/FluidState
 		ARG 1 owner
 		ARG 2 values
 		ARG 3 propertiesCodec
+	METHOD <init> (Lnet/minecraft/world/level/material/Fluid;Lit/unimi/dsi/fastutil/objects/Reference2ObjectArrayMap;Lcom/mojang/serialization/MapCodec;)V
+		ARG 1 owner
+		ARG 2 values
+		ARG 3 propertiesCodec
 	METHOD animateTick (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)V
 		ARG 1 level
 		ARG 2 pos

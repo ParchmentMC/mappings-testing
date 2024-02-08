@@ -1,4 +1,8 @@
 CLASS net/minecraft/core/registries/BuiltInRegistries
+	METHOD internalRegister (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/core/WritableRegistry;Lnet/minecraft/core/registries/BuiltInRegistries$RegistryBootstrap;)Lnet/minecraft/core/WritableRegistry;
+		ARG 0 key
+		ARG 1 registry
+		ARG 2 bootstrap
 	METHOD internalRegister (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/core/WritableRegistry;Lnet/minecraft/core/registries/BuiltInRegistries$RegistryBootstrap;Lcom/mojang/serialization/Lifecycle;)Lnet/minecraft/core/WritableRegistry;
 		ARG 0 key
 		ARG 1 registry

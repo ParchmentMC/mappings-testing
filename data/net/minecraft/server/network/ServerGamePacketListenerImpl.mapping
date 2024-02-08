@@ -35,6 +35,8 @@ CLASS net/minecraft/server/network/ServerGamePacketListenerImpl
 		ARG 1 text
 	METHOD filterTextPacket (Ljava/util/List;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 texts
+	METHOD getMaximumFlyingTicks (Lnet/minecraft/world/entity/Entity;)I
+		ARG 1 entity
 	METHOD getSignedMessage (Lnet/minecraft/network/protocol/game/ServerboundChatPacket;Lnet/minecraft/network/chat/LastSeenMessages;)Lnet/minecraft/network/chat/PlayerChatMessage;
 		ARG 1 packet
 		ARG 2 lastSeenMessages

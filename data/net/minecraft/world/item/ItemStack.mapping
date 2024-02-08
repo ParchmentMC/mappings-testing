@@ -31,6 +31,9 @@ CLASS net/minecraft/world/item/ItemStack
 	METHOD appendEnchantmentNames (Ljava/util/List;Lnet/minecraft/nbt/ListTag;)V
 		ARG 0 tooltipComponents
 		ARG 1 storedEnchantments
+	METHOD consume (ILnet/minecraft/world/entity/LivingEntity;)V
+		ARG 1 amount
+		ARG 2 entity
 	METHOD copy ()Lnet/minecraft/world/item/ItemStack;
 		COMMENT Returns a new stack with the same properties.
 	METHOD copyWithCount (I)Lnet/minecraft/world/item/ItemStack;

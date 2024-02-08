@@ -90,6 +90,10 @@ CLASS net/minecraft/world/entity/Entity
 	METHOD copyPosition (Lnet/minecraft/world/entity/Entity;)V
 		COMMENT Sets this entity's location and angles to the location and angles of the passed in entity.
 		ARG 1 entity
+	METHOD defineSynchedData (Lnet/minecraft/network/syncher/SynchedEntityData$Builder;)V
+		ARG 1 builder
+	METHOD deflection (Lnet/minecraft/world/entity/projectile/Projectile;)Lnet/minecraft/world/entity/projectile/ProjectileDeflection;
+		ARG 1 projectile
 	METHOD dismountTo (DDD)V
 		ARG 1 x
 		ARG 3 y
@@ -442,6 +446,8 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 numbers
 	METHOD onAboveBubbleCol (Z)V
 		ARG 1 downwards
+	METHOD onExplosionHit (Lnet/minecraft/world/entity/Entity;)V
+		ARG 1 entity
 	METHOD onInsideBlock (Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 state
 	METHOD onInsideBubbleColumn (Z)V

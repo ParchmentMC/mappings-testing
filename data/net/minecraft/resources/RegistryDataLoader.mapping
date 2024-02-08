@@ -10,6 +10,11 @@ CLASS net/minecraft/resources/RegistryDataLoader
 		ARG 0 registryEntries
 		ARG 1 registryAccess
 		ARG 2 registryData
+	METHOD load (Ljava/util/Map;Lnet/minecraft/server/packs/resources/ResourceProvider;Lnet/minecraft/core/RegistryAccess;Ljava/util/List;)Lnet/minecraft/core/RegistryAccess$Frozen;
+		ARG 0 elements
+		ARG 1 resourceProvider
+		ARG 2 registryAccess
+		ARG 3 registryData
 	METHOD load (Lnet/minecraft/resources/RegistryDataLoader$LoadingFunction;Lnet/minecraft/core/RegistryAccess;Ljava/util/List;)Lnet/minecraft/core/RegistryAccess$Frozen;
 		ARG 0 loadingFunction
 		ARG 1 registryAccess
@@ -28,6 +33,20 @@ CLASS net/minecraft/resources/RegistryDataLoader
 		ARG 2 registry
 		ARG 3 codec
 		ARG 4 loadingErrors
+	METHOD loadContentsFromNetwork (Ljava/util/Map;Lnet/minecraft/server/packs/resources/ResourceProvider;Lnet/minecraft/resources/RegistryOps$RegistryInfoLookup;Lnet/minecraft/core/WritableRegistry;Lcom/mojang/serialization/Decoder;Ljava/util/Map;)V
+		ARG 0 elements
+		ARG 1 resourceProvider
+		ARG 2 registryInfoLookup
+		ARG 3 registry
+		ARG 4 codec
+		ARG 5 loadingErrors
+	METHOD loadElementFromResource (Lnet/minecraft/core/WritableRegistry;Lcom/mojang/serialization/Decoder;Lnet/minecraft/resources/RegistryOps;Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/server/packs/resources/Resource;Lnet/minecraft/core/RegistrationInfo;)V
+		ARG 0 registry
+		ARG 1 codec
+		ARG 2 ops
+		ARG 3 resourceKey
+		ARG 4 resource
+		ARG 5 registrationInfo
 	METHOD loadRegistryContents (Lnet/minecraft/resources/RegistryOps$RegistryInfoLookup;Lnet/minecraft/server/packs/resources/ResourceManager;Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/core/WritableRegistry;Lcom/mojang/serialization/Decoder;Ljava/util/Map;)V
 		ARG 0 lookup
 		ARG 1 manager
@@ -46,6 +65,10 @@ CLASS net/minecraft/resources/RegistryDataLoader
 		METHOD loadFromNetwork (Ljava/util/Map;Lnet/minecraft/resources/RegistryOps$RegistryInfoLookup;)V
 			ARG 1 registryEntries
 			ARG 2 registryInfoLookup
+		METHOD loadFromNetwork (Ljava/util/Map;Lnet/minecraft/server/packs/resources/ResourceProvider;Lnet/minecraft/resources/RegistryOps$RegistryInfoLookup;)V
+			ARG 1 elements
+			ARG 2 resourceProvider
+			ARG 3 registryInfoLookup
 		METHOD loadFromResources (Lnet/minecraft/server/packs/resources/ResourceManager;Lnet/minecraft/resources/RegistryOps$RegistryInfoLookup;)V
 			ARG 1 resouceManager
 			ARG 2 registryInfoLookup

@@ -4,6 +4,12 @@ CLASS net/minecraft/server/packs/repository/FolderRepositorySource
 		ARG 2 packType
 		ARG 3 packSource
 		ARG 4 validator
+	METHOD createDiscoveredFilePackInfo (Ljava/nio/file/Path;)Lnet/minecraft/server/packs/PackLocationInfo;
+		ARG 1 path
+	METHOD discoverPacks (Ljava/nio/file/Path;Lnet/minecraft/world/level/validation/DirectoryValidator;Ljava/util/function/BiConsumer;)V
+		ARG 0 folder
+		ARG 1 validator
+		ARG 2 output
 	METHOD discoverPacks (Ljava/nio/file/Path;Lnet/minecraft/world/level/validation/DirectoryValidator;ZLjava/util/function/BiConsumer;)V
 		ARG 0 folder
 		ARG 1 validator

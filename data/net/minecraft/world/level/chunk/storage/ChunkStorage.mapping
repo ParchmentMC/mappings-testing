@@ -3,6 +3,11 @@ CLASS net/minecraft/world/level/chunk/storage/ChunkStorage
 		ARG 1 regionFolder
 		ARG 2 fixerUpper
 		ARG 3 sync
+	METHOD <init> (Lnet/minecraft/world/level/chunk/storage/RegionStorageInfo;Ljava/nio/file/Path;Lcom/mojang/datafixers/DataFixer;Z)V
+		ARG 1 info
+		ARG 2 folder
+		ARG 3 fixerUpper
+		ARG 4 sync
 	METHOD getLegacyStructureHandler (Lnet/minecraft/resources/ResourceKey;Ljava/util/function/Supplier;)Lnet/minecraft/world/level/levelgen/structure/LegacyStructureDataHandler;
 		ARG 1 level
 		ARG 2 storage

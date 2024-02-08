@@ -1,0 +1,10 @@
+CLASS net/minecraft/server/network/config/SynchronizeRegistriesTask
+	METHOD <init> (Ljava/util/List;Lnet/minecraft/core/LayeredRegistryAccess;)V
+		ARG 1 requestedPacks
+		ARG 2 registries
+	METHOD handleResponse (Ljava/util/List;Ljava/util/function/Consumer;)V
+		ARG 1 packs
+		ARG 2 packetSender
+	METHOD sendRegistries (Ljava/util/function/Consumer;Ljava/util/Set;)V
+		ARG 1 packetSender
+		ARG 2 packs

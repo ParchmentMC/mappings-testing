@@ -55,6 +55,8 @@ CLASS net/minecraft/world/entity/LivingEntity
 		ARG 1 fluidState
 	METHOD canTakeItem (Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 1 stack
+	METHOD canUseSlot (Lnet/minecraft/world/entity/EquipmentSlot;)Z
+		ARG 1 slot
 	METHOD checkAutoSpinAttack (Lnet/minecraft/world/phys/AABB;Lnet/minecraft/world/phys/AABB;)V
 		ARG 1 boundingBoxBeforeSpin
 		ARG 2 boundingBoxAfterSpin
@@ -135,6 +137,8 @@ CLASS net/minecraft/world/entity/LivingEntity
 		COMMENT Gets the bounding box of this Entity, adjusted to take auxiliary entities into account (e.g. the tile contained by a minecart, such as a command block).
 	METHOD getCombatTracker ()Lnet/minecraft/world/damagesource/CombatTracker;
 		COMMENT 1.8.9
+	METHOD getComfortableFallDistance (F)I
+		ARG 1 health
 	METHOD getCurrentSwingDuration ()I
 		COMMENT Returns an integer indicating the end point of the swing animation, used by {@link #swingProgress} to provide a progress indicator. Takes dig speed enchantments into account.
 	METHOD getDamageAfterArmorAbsorb (Lnet/minecraft/world/damagesource/DamageSource;F)F
@@ -179,6 +183,8 @@ CLASS net/minecraft/world/entity/LivingEntity
 		ARG 1 slot
 	METHOD getItemInHand (Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/item/ItemStack;
 		ARG 1 hand
+	METHOD getJumpPower (F)F
+		ARG 1 multiplier
 	METHOD getLastArmorItem (Lnet/minecraft/world/entity/EquipmentSlot;)Lnet/minecraft/world/item/ItemStack;
 		ARG 1 slot
 	METHOD getLastHandItem (Lnet/minecraft/world/entity/EquipmentSlot;)Lnet/minecraft/world/item/ItemStack;
@@ -194,6 +200,8 @@ CLASS net/minecraft/world/entity/LivingEntity
 		ARG 2 travelVector
 	METHOD getRiddenSpeed (Lnet/minecraft/world/entity/player/Player;)F
 		ARG 1 player
+	METHOD getSlotForHand (Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/entity/EquipmentSlot;
+		ARG 0 hand
 	METHOD getSoundVolume ()F
 		COMMENT Returns the volume for the sounds this mob makes.
 	METHOD getSpeed ()F
