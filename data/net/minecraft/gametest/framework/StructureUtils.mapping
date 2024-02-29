@@ -26,6 +26,10 @@ CLASS net/minecraft/gametest/framework/StructureUtils
 		ARG 0 structureBlockPos
 		ARG 1 posToTest
 		ARG 2 serverLevel
+	METHOD encaseStructure (Lnet/minecraft/world/phys/AABB;Lnet/minecraft/server/level/ServerLevel;Z)V
+		ARG 0 bounds
+		ARG 1 level
+		ARG 2 placeBarriers
 	METHOD findNearestStructureBlock (Lnet/minecraft/core/BlockPos;ILnet/minecraft/server/level/ServerLevel;)Ljava/util/Optional;
 		ARG 0 pos
 		ARG 1 radius
@@ -82,3 +86,6 @@ CLASS net/minecraft/gametest/framework/StructureUtils
 		ARG 0 radius
 		ARG 1 pos
 		ARG 2 level
+	METHOD removeBarriers (Lnet/minecraft/world/phys/AABB;Lnet/minecraft/server/level/ServerLevel;)V
+		ARG 0 bounds
+		ARG 1 level

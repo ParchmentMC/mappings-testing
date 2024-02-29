@@ -27,8 +27,29 @@ CLASS net/minecraft/world/level/pathfinder/NodeEvaluator
 		ARG 3 z
 	METHOD getNode (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/pathfinder/Node;
 		ARG 1 pos
+	METHOD getPathType (Lnet/minecraft/world/level/BlockGetter;III)Lnet/minecraft/world/level/pathfinder/PathType;
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD getPathTypeOfMob (Lnet/minecraft/world/level/BlockGetter;IIILnet/minecraft/world/entity/Mob;)Lnet/minecraft/world/level/pathfinder/PathType;
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 mob
+	METHOD getTarget (DDD)Lnet/minecraft/world/level/pathfinder/Target;
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
 	METHOD getTargetFromNode (Lnet/minecraft/world/level/pathfinder/Node;)Lnet/minecraft/world/level/pathfinder/Target;
 		ARG 1 node
+	METHOD getTargetNodeAt (DDD)Lnet/minecraft/world/level/pathfinder/Target;
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD isBurningBlock (Lnet/minecraft/world/level/block/state/BlockState;)Z
+		ARG 0 state
 	METHOD lambda$getNode$0 (IIII)Lnet/minecraft/world/level/pathfinder/Node;
 		ARG 3 key
 	METHOD prepare (Lnet/minecraft/world/level/PathNavigationRegion;Lnet/minecraft/world/entity/Mob;)V

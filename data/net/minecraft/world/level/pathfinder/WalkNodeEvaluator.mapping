@@ -8,8 +8,14 @@ CLASS net/minecraft/world/level/pathfinder/WalkNodeEvaluator
 		ARG 0 level
 		ARG 1 centerPos
 		ARG 2 nodeType
+	METHOD checkNeighbourBlocks (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos$MutableBlockPos;Lnet/minecraft/world/level/pathfinder/PathType;)Lnet/minecraft/world/level/pathfinder/PathType;
+		ARG 0 level
+		ARG 1 pos
+		ARG 2 pathType
 	METHOD doesBlockHavePartialCollision (Lnet/minecraft/world/level/pathfinder/BlockPathTypes;)Z
 		ARG 0 blockPathType
+	METHOD doesBlockHavePartialCollision (Lnet/minecraft/world/level/pathfinder/PathType;)Z
+		ARG 0 pathType
 	METHOD done ()V
 		COMMENT This method is called when all nodes have been processed and PathEntity is created.
 	METHOD evaluateBlockPathType (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/pathfinder/BlockPathTypes;)Lnet/minecraft/world/level/pathfinder/BlockPathTypes;
@@ -17,6 +23,14 @@ CLASS net/minecraft/world/level/pathfinder/WalkNodeEvaluator
 		ARG 2 pos
 		ARG 3 pathTypes
 	METHOD findAcceptedNode (IIIIDLnet/minecraft/core/Direction;Lnet/minecraft/world/level/pathfinder/BlockPathTypes;)Lnet/minecraft/world/level/pathfinder/Node;
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 verticalDeltaLimit
+		ARG 5 nodeFloorLevel
+		ARG 7 direction
+		ARG 8 pathType
+	METHOD findAcceptedNode (IIIIDLnet/minecraft/core/Direction;Lnet/minecraft/world/level/pathfinder/PathType;)Lnet/minecraft/world/level/pathfinder/Node;
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
@@ -59,6 +73,15 @@ CLASS net/minecraft/world/level/pathfinder/WalkNodeEvaluator
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
+	METHOD getCachedPathType (III)Lnet/minecraft/world/level/pathfinder/PathType;
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD getClosedNode (IIILnet/minecraft/world/level/pathfinder/PathType;)Lnet/minecraft/world/level/pathfinder/Node;
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 pathType
 	METHOD getFloorLevel (Lnet/minecraft/core/BlockPos;)D
 		ARG 1 pos
 	METHOD getFloorLevel (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)D
@@ -70,6 +93,23 @@ CLASS net/minecraft/world/level/pathfinder/WalkNodeEvaluator
 		ARG 3 z
 		ARG 4 type
 		ARG 5 costMalus
+	METHOD getNodeAndUpdateCostToMax (IIILnet/minecraft/world/level/pathfinder/PathType;F)Lnet/minecraft/world/level/pathfinder/Node;
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 pathType
+		ARG 5 malus
+	METHOD getPathTypeFromState (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/pathfinder/PathType;
+		ARG 0 level
+		ARG 1 pos
+	METHOD getPathTypeStatic (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos$MutableBlockPos;)Lnet/minecraft/world/level/pathfinder/PathType;
+		ARG 0 level
+		ARG 1 pos
+	METHOD getPathTypeWithinMobBB (Lnet/minecraft/world/level/BlockGetter;III)Ljava/util/Set;
+		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
 	METHOD getStartNode (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/pathfinder/Node;
 		ARG 1 pos
 	METHOD hasCollisions (Lnet/minecraft/world/phys/AABB;)Z
@@ -77,6 +117,12 @@ CLASS net/minecraft/world/level/pathfinder/WalkNodeEvaluator
 	METHOD isBurningBlock (Lnet/minecraft/world/level/block/state/BlockState;)Z
 		COMMENT Checks whether the specified block state can cause burn damage
 		ARG 0 state
+	METHOD isDiagonalValid (Lnet/minecraft/world/level/pathfinder/Node;)Z
+		ARG 1 node
+	METHOD isDiagonalValid (Lnet/minecraft/world/level/pathfinder/Node;Lnet/minecraft/world/level/pathfinder/Node;Lnet/minecraft/world/level/pathfinder/Node;)Z
+		ARG 1 root
+		ARG 2 xNode
+		ARG 3 zNode
 	METHOD isDiagonalValid (Lnet/minecraft/world/level/pathfinder/Node;Lnet/minecraft/world/level/pathfinder/Node;Lnet/minecraft/world/level/pathfinder/Node;Lnet/minecraft/world/level/pathfinder/Node;)Z
 		ARG 1 root
 		ARG 2 xNode
@@ -89,3 +135,21 @@ CLASS net/minecraft/world/level/pathfinder/WalkNodeEvaluator
 		ARG 5 key
 	METHOD lambda$hasCollisions$0 (Lnet/minecraft/world/phys/AABB;Ljava/lang/Object;)Z
 		ARG 2 key
+	METHOD tryFindFirstGroundNodeBelow (III)Lnet/minecraft/world/level/pathfinder/Node;
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD tryFindFirstNonWaterBelow (IIILnet/minecraft/world/level/pathfinder/Node;)Lnet/minecraft/world/level/pathfinder/Node;
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 node
+	METHOD tryJumpOn (IIIIDLnet/minecraft/core/Direction;Lnet/minecraft/world/level/pathfinder/PathType;Lnet/minecraft/core/BlockPos$MutableBlockPos;)Lnet/minecraft/world/level/pathfinder/Node;
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 verticalDeltaLimit
+		ARG 5 nodeFloorLevel
+		ARG 7 direction
+		ARG 8 pathType
+		ARG 9 pos

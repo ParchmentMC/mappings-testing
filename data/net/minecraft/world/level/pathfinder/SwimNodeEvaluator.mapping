@@ -15,6 +15,12 @@ CLASS net/minecraft/world/level/pathfinder/SwimNodeEvaluator
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
+	METHOD getCachedBlockType (III)Lnet/minecraft/world/level/pathfinder/PathType;
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD hasMalus (Lnet/minecraft/world/level/pathfinder/Node;)Z
+		ARG 0 node
 	METHOD isDiagonalNodeValid (Lnet/minecraft/world/level/pathfinder/Node;Lnet/minecraft/world/level/pathfinder/Node;Lnet/minecraft/world/level/pathfinder/Node;)Z
 		ARG 1 root
 		ARG 2 horizontal

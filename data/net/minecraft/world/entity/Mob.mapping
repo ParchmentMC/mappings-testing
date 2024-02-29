@@ -92,6 +92,8 @@ CLASS net/minecraft/world/entity/Mob
 		COMMENT Will return how many at most can spawn in a chunk at once.
 	METHOD getPathfindingMalus (Lnet/minecraft/world/level/pathfinder/BlockPathTypes;)F
 		ARG 1 nodeType
+	METHOD getPathfindingMalus (Lnet/minecraft/world/level/pathfinder/PathType;)F
+		ARG 1 pathType
 	METHOD getTarget ()Lnet/minecraft/world/entity/LivingEntity;
 		COMMENT Gets the active target the Goal system uses for tracking
 	METHOD interact (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResult;
@@ -195,6 +197,9 @@ CLASS net/minecraft/world/entity/Mob
 		ARG 1 noAi
 	METHOD setPathfindingMalus (Lnet/minecraft/world/level/pathfinder/BlockPathTypes;F)V
 		ARG 1 nodeType
+		ARG 2 malus
+	METHOD setPathfindingMalus (Lnet/minecraft/world/level/pathfinder/PathType;F)V
+		ARG 1 pathType
 		ARG 2 malus
 	METHOD setPersistenceRequired ()V
 		COMMENT Enable the Entity persistence
