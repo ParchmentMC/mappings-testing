@@ -1,0 +1,10 @@
+CLASS net/minecraft/world/level/pathfinder/PathfindingContext
+	METHOD <init> (Lnet/minecraft/world/level/CollisionGetter;Lnet/minecraft/world/entity/Mob;)V
+		ARG 1 level
+		ARG 2 mob
+	METHOD getBlockState (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+		ARG 1 pos
+	METHOD getPathTypeFromState (III)Lnet/minecraft/world/level/pathfinder/PathType;
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z

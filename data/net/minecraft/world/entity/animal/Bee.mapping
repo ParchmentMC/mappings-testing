@@ -59,6 +59,8 @@ CLASS net/minecraft/world/entity/animal/Bee
 		ARG 1 hasNectar
 	METHOD setHasStung (Z)V
 		ARG 1 hasStung
+	METHOD setHivePos (Lnet/minecraft/core/BlockPos;)V
+		ARG 1 hivePos
 	METHOD setPersistentAngerTarget (Ljava/util/UUID;)V
 		ARG 1 target
 	METHOD setRemainingPersistentAngerTime (I)V

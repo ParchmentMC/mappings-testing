@@ -2,6 +2,10 @@ CLASS net/minecraft/advancements/critereon/ItemPredicate
 	METHOD matches (Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 1 item
 	CLASS Builder
+		METHOD hasComponents (Lnet/minecraft/core/component/DataComponentPredicate;)Lnet/minecraft/advancements/critereon/ItemPredicate$Builder;
+			ARG 1 components
+		METHOD hasCustomData (Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/advancements/critereon/ItemPredicate$Builder;
+			ARG 1 customData
 		METHOD hasDurability (Lnet/minecraft/advancements/critereon/MinMaxBounds$Ints;)Lnet/minecraft/advancements/critereon/ItemPredicate$Builder;
 			ARG 1 durability
 		METHOD hasEnchantment (Lnet/minecraft/advancements/critereon/EnchantmentPredicate;)Lnet/minecraft/advancements/critereon/ItemPredicate$Builder;
@@ -12,6 +16,8 @@ CLASS net/minecraft/advancements/critereon/ItemPredicate
 			ARG 1 storedEnchantment
 		METHOD isPotion (Lnet/minecraft/core/Holder;)Lnet/minecraft/advancements/critereon/ItemPredicate$Builder;
 			ARG 1 potion
+		METHOD isPotion (Lnet/minecraft/core/HolderSet;)Lnet/minecraft/advancements/critereon/ItemPredicate$Builder;
+			ARG 1 potions
 		METHOD isPotion (Lnet/minecraft/world/item/alchemy/Potion;)Lnet/minecraft/advancements/critereon/ItemPredicate$Builder;
 			ARG 1 potion
 		METHOD of (Lnet/minecraft/tags/TagKey;)Lnet/minecraft/advancements/critereon/ItemPredicate$Builder;

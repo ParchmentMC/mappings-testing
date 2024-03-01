@@ -56,6 +56,12 @@ CLASS net/minecraft/util/ExtraCodecs
 	METHOD recursiveMap (Ljava/lang/String;Ljava/util/function/Function;)Lcom/mojang/serialization/MapCodec;
 		ARG 0 name
 		ARG 1 wrapper
+	METHOD sizeLimitedList (Lcom/mojang/serialization/Codec;I)Lcom/mojang/serialization/Codec;
+		ARG 0 listCodec
+		ARG 1 maxSize
+	METHOD sizeLimitedMap (Lcom/mojang/serialization/Codec;I)Lcom/mojang/serialization/Codec;
+		ARG 0 mapCodec
+		ARG 1 maxSize
 	METHOD sizeLimitedString (II)Lcom/mojang/serialization/Codec;
 		ARG 0 minSize
 		ARG 1 maxSize

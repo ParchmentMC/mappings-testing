@@ -4,6 +4,10 @@ CLASS net/minecraft/world/level/storage/loot/functions/SetBannerPatternFunction
 		ARG 1 conditions
 		ARG 2 patterns
 		ARG 3 append
+	METHOD <init> (Ljava/util/List;Lnet/minecraft/world/level/block/entity/BannerPatternLayers;Z)V
+		ARG 1 conditions
+		ARG 2 patterns
+		ARG 3 append
 	METHOD setBannerPattern (Z)Lnet/minecraft/world/level/storage/loot/functions/SetBannerPatternFunction$Builder;
 		ARG 0 append
 	CLASS Builder

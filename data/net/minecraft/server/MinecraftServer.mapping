@@ -123,6 +123,10 @@ CLASS net/minecraft/server/MinecraftServer
 	METHOD reloadResources (Ljava/util/Collection;)Ljava/util/concurrent/CompletableFuture;
 		COMMENT Replaces currently selected list of datapacks, reloads them, and sends new data to players.
 		ARG 1 selectedIds
+	METHOD reportChunkLoadFailure (Lnet/minecraft/world/level/ChunkPos;)V
+		ARG 1 chunkPos
+	METHOD reportChunkSaveFailure (Lnet/minecraft/world/level/ChunkPos;)V
+		ARG 1 chunkPos
 	METHOD saveAllChunks (ZZZ)Z
 		ARG 1 suppressLog
 		ARG 2 flush

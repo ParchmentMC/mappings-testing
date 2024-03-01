@@ -4,3 +4,5 @@ CLASS net/minecraft/advancements/critereon/EnchantmentPredicate
 		ARG 2 level
 	METHOD containedIn (Ljava/util/Map;)Z
 		ARG 1 enchantments
+	METHOD containedIn (Lnet/minecraft/world/item/enchantment/ItemEnchantments;)Z
+		ARG 1 enchantments

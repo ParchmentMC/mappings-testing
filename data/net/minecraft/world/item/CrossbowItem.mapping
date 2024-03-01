@@ -32,11 +32,20 @@ CLASS net/minecraft/world/item/CrossbowItem
 	METHOD getPowerForTime (ILnet/minecraft/world/item/ItemStack;)F
 		ARG 0 useTime
 		ARG 1 crossbowStack
+	METHOD getProjectileShotVector (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/phys/Vec3;F)Lorg/joml/Vector3f;
+		ARG 0 shooter
+		ARG 1 distance
+		ARG 2 angle
 	METHOD getRandomShotPitch (ZLnet/minecraft/util/RandomSource;)F
 		ARG 0 isHighPitched
 		ARG 1 random
 	METHOD getShootingPower (Lnet/minecraft/world/item/ItemStack;)F
 		ARG 0 crossbowStack
+	METHOD getShootingPower (Lnet/minecraft/world/item/component/ChargedProjectiles;)F
+		ARG 0 projectile
+	METHOD getShotPitch (Lnet/minecraft/util/RandomSource;I)F
+		ARG 0 random
+		ARG 1 index
 	METHOD getShotPitches (Lnet/minecraft/util/RandomSource;)[F
 		ARG 0 random
 	METHOD getStartSound (I)Lnet/minecraft/sounds/SoundEvent;
@@ -77,6 +86,14 @@ CLASS net/minecraft/world/item/CrossbowItem
 		ARG 3 crossbowStack
 		ARG 4 velocity
 		ARG 5 inaccuracy
+	METHOD performShooting (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/item/ItemStack;FFLnet/minecraft/world/entity/LivingEntity;)V
+		ARG 1 level
+		ARG 2 shooter
+		ARG 3 hand
+		ARG 4 weapon
+		ARG 5 velocity
+		ARG 6 inaccuracy
+		ARG 7 target
 	METHOD releaseUsing (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;I)V
 		COMMENT Called when the player stops using an Item (stops holding the right mouse button).
 		ARG 1 stack

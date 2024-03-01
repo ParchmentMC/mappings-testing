@@ -3,3 +3,6 @@ CLASS net/minecraft/world/level/block/entity/BannerPatterns
 		ARG 0 registry
 	METHOD create (Ljava/lang/String;)Lnet/minecraft/resources/ResourceKey;
 		ARG 0 name
+	METHOD register (Lnet/minecraft/core/Registry;Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/world/level/block/entity/BannerPattern;
+		ARG 0 registry
+		ARG 1 resourceKey

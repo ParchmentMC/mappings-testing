@@ -27,13 +27,27 @@ CLASS net/minecraft/world/level/pathfinder/NodeEvaluator
 		ARG 3 z
 	METHOD getNode (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/pathfinder/Node;
 		ARG 1 pos
+	METHOD getPathType (Lnet/minecraft/world/entity/Mob;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/pathfinder/PathType;
+		ARG 1 mob
+		ARG 2 pos
 	METHOD getPathType (Lnet/minecraft/world/level/BlockGetter;III)Lnet/minecraft/world/level/pathfinder/PathType;
 		ARG 1 level
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
+	METHOD getPathType (Lnet/minecraft/world/level/pathfinder/PathfindingContext;III)Lnet/minecraft/world/level/pathfinder/PathType;
+		ARG 1 context
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
 	METHOD getPathTypeOfMob (Lnet/minecraft/world/level/BlockGetter;IIILnet/minecraft/world/entity/Mob;)Lnet/minecraft/world/level/pathfinder/PathType;
 		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+		ARG 5 mob
+	METHOD getPathTypeOfMob (Lnet/minecraft/world/level/pathfinder/PathfindingContext;IIILnet/minecraft/world/entity/Mob;)Lnet/minecraft/world/level/pathfinder/PathType;
+		ARG 1 context
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z

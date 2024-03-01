@@ -1,0 +1,7 @@
+CLASS net/minecraft/data/info/ItemListReport
+	METHOD <init> (Lnet/minecraft/data/PackOutput;Ljava/util/concurrent/CompletableFuture;)V
+		ARG 1 output
+		ARG 2 registries
+	METHOD dumpComponent (Lnet/minecraft/core/component/TypedDataComponent;Lcom/mojang/serialization/DynamicOps;)Lcom/google/gson/JsonElement;
+		ARG 0 component
+		ARG 1 ops

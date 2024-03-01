@@ -85,6 +85,9 @@ CLASS net/minecraft/world/item/MapItem
 	METHOD renderBiomePreviewMap (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/item/ItemStack;)V
 		ARG 0 serverLevel
 		ARG 1 stack
+	METHOD scaleMap (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;)V
+		ARG 0 stack
+		ARG 1 level
 	METHOD scaleMap (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;I)V
 		ARG 0 stack
 		ARG 1 level

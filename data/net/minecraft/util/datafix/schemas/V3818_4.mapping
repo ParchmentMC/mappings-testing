@@ -1,0 +1,3 @@
+CLASS net/minecraft/util/datafix/schemas/V3818_4
+	METHOD registerTypes (Lcom/mojang/datafixers/schemas/Schema;Ljava/util/Map;Ljava/util/Map;)V
+		ARG 1 schema

@@ -22,6 +22,9 @@ CLASS net/minecraft/world/item/alchemy/Potion
 		COMMENT @return The prefixed potion name.
 		ARG 1 prefix
 			COMMENT The prefix to add on to the base name.
+	METHOD getName (Ljava/util/Optional;Ljava/lang/String;)Ljava/lang/String;
+		ARG 0 potion
+		ARG 1 descriptionId
 	METHOD getName (Lnet/minecraft/core/Holder;Ljava/lang/String;)Ljava/lang/String;
 		ARG 0 potion
 		ARG 1 prefix

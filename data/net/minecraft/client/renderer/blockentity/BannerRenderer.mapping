@@ -22,3 +22,22 @@ CLASS net/minecraft/client/renderer/blockentity/BannerRenderer
 			COMMENT if {@code true}, uses banner material; otherwise if {@code false} uses shield material
 		ARG 7 patterns
 		ARG 8 glint
+	METHOD renderPatterns (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IILnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/resources/model/Material;ZLnet/minecraft/world/level/block/entity/BannerPatternLayers;)V
+		ARG 0 poseStack
+		ARG 1 buffer
+		ARG 2 packedLight
+		ARG 3 packedOverlay
+		ARG 4 flag
+		ARG 5 material
+		ARG 6 isBanner
+		ARG 7 layers
+	METHOD renderPatterns (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IILnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/resources/model/Material;ZLnet/minecraft/world/level/block/entity/BannerPatternLayers;Z)V
+		ARG 0 poseStack
+		ARG 1 buffer
+		ARG 2 packedLight
+		ARG 3 packedOverlay
+		ARG 4 flag
+		ARG 5 material
+		ARG 6 isBanner
+		ARG 7 layers
+		ARG 8 withGlint

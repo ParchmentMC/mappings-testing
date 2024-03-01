@@ -22,5 +22,7 @@ CLASS net/minecraft/world/level/storage/loot/functions/SetAttributesFunction
 			ARG 4 amount
 		METHOD forSlot (Lnet/minecraft/world/entity/EquipmentSlot;)Lnet/minecraft/world/level/storage/loot/functions/SetAttributesFunction$ModifierBuilder;
 			ARG 1 slot
+		METHOD forSlot (Lnet/minecraft/world/entity/EquipmentSlotGroup;)Lnet/minecraft/world/level/storage/loot/functions/SetAttributesFunction$ModifierBuilder;
+			ARG 1 slot
 		METHOD withUuid (Ljava/util/UUID;)Lnet/minecraft/world/level/storage/loot/functions/SetAttributesFunction$ModifierBuilder;
 			ARG 1 id

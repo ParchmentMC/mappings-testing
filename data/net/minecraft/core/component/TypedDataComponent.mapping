@@ -1,0 +1,17 @@
+CLASS net/minecraft/core/component/TypedDataComponent
+	METHOD applyTo (Lnet/minecraft/core/component/PatchedDataComponentMap;)V
+		ARG 1 map
+	METHOD createUnchecked (Lnet/minecraft/core/component/DataComponentType;Ljava/lang/Object;)Lnet/minecraft/core/component/TypedDataComponent;
+		ARG 0 type
+		ARG 1 value
+	METHOD encodeValue (Lcom/mojang/serialization/DynamicOps;)Lcom/mojang/serialization/DataResult;
+		ARG 1 ops
+	METHOD fromEntryUnchecked (Ljava/util/Map$Entry;)Lnet/minecraft/core/component/TypedDataComponent;
+		ARG 0 entry
+	CLASS 1
+		METHOD decodeTyped (Lnet/minecraft/network/RegistryFriendlyByteBuf;Lnet/minecraft/core/component/DataComponentType;)Lnet/minecraft/core/component/TypedDataComponent;
+			ARG 0 buffer
+			ARG 1 component
+		METHOD encodeCap (Lnet/minecraft/network/RegistryFriendlyByteBuf;Lnet/minecraft/core/component/TypedDataComponent;)V
+			ARG 0 buffer
+			ARG 1 component

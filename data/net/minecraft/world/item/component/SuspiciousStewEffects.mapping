@@ -1,0 +1,3 @@
+CLASS net/minecraft/world/item/component/SuspiciousStewEffects
+	METHOD withEffectAdded (Lnet/minecraft/world/item/component/SuspiciousStewEffects$Entry;)Lnet/minecraft/world/item/component/SuspiciousStewEffects;
+		ARG 1 entry

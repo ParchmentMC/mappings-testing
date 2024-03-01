@@ -1,0 +1,15 @@
+CLASS net/minecraft/world/item/component/BlockItemStateProperties
+	METHOD apply (Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/state/BlockState;
+		ARG 1 state
+	METHOD get (Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
+		ARG 1 property
+	METHOD updateState (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/String;)Lnet/minecraft/world/level/block/state/BlockState;
+		ARG 0 state
+		ARG 1 property
+		ARG 2 propertyName
+	METHOD with (Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Lnet/minecraft/world/item/component/BlockItemStateProperties;
+		ARG 1 property
+		ARG 2 value
+	METHOD with (Lnet/minecraft/world/level/block/state/properties/Property;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/item/component/BlockItemStateProperties;
+		ARG 1 property
+		ARG 2 state

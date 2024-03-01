@@ -33,6 +33,10 @@ CLASS net/minecraft/world/item/BlockItem
 		ARG 0 stack
 		ARG 1 blockEntityType
 		ARG 2 blockEntityData
+	METHOD updateBlockEntityComponents (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/item/ItemStack;)V
+		ARG 0 level
+		ARG 1 poa
+		ARG 2 stack
 	METHOD updateBlockStateFromTag (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/state/BlockState;
 		ARG 1 pos
 		ARG 2 level

@@ -1,0 +1,3 @@
+CLASS net/minecraft/world/item/component/WritableBookContent
+	METHOD getPages (Z)Ljava/util/stream/Stream;
+		ARG 1 filtered

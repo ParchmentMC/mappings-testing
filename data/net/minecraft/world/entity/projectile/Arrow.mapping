@@ -26,5 +26,7 @@ CLASS net/minecraft/world/entity/projectile/Arrow
 		ARG 1 stack
 	METHOD setFixedColor (I)V
 		ARG 1 fixedColor
+	METHOD setPotionContents (Lnet/minecraft/world/item/alchemy/PotionContents;)V
+		ARG 1 potionContents
 	METHOD tick ()V
 		COMMENT Called to update the entity's position/logic.

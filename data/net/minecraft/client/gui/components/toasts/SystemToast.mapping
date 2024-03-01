@@ -28,6 +28,14 @@ CLASS net/minecraft/client/gui/components/toasts/SystemToast
 		ARG 3 message
 	METHOD nullToEmpty (Lnet/minecraft/network/chat/Component;)Lcom/google/common/collect/ImmutableList;
 		ARG 0 message
+	METHOD onChunkLoadFailure (Lnet/minecraft/client/Minecraft;Lnet/minecraft/world/level/ChunkPos;)V
+		ARG 0 minecraft
+		ARG 1 chunkPos
+	METHOD onChunkSaveFailure (Lnet/minecraft/client/Minecraft;Lnet/minecraft/world/level/ChunkPos;)V
+		ARG 0 minecraft
+		ARG 1 chunkPos
+	METHOD onLowDiskSpace (Lnet/minecraft/client/Minecraft;)V
+		ARG 0 minecraft
 	METHOD onPackCopyFailure (Lnet/minecraft/client/Minecraft;Ljava/lang/String;)V
 		ARG 0 minecraft
 		ARG 1 message

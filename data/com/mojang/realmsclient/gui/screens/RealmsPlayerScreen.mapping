@@ -15,6 +15,14 @@ CLASS com/mojang/realmsclient/gui/screens/RealmsPlayerScreen
 	CLASS Entry
 		METHOD <init> (Lcom/mojang/realmsclient/gui/screens/RealmsPlayerScreen;Lcom/mojang/realmsclient/dto/PlayerInfo;)V
 			ARG 2 playerInfo
+		METHOD deop (I)V
+			ARG 1 index
+		METHOD op (I)V
+			ARG 1 index
+		METHOD uninvite (I)V
+			ARG 1 index
+		METHOD updateOps (Lcom/mojang/realmsclient/dto/Ops;)V
+			ARG 1 ops
 	CLASS InvitedObjectSelectionList
 		METHOD addEntry (Lcom/mojang/realmsclient/dto/PlayerInfo;)V
 			ARG 1 playerInfo

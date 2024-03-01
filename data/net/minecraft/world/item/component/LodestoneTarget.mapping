@@ -1,0 +1,3 @@
+CLASS net/minecraft/world/item/component/LodestoneTarget
+	METHOD checkInvalid (Lnet/minecraft/server/level/ServerLevel;)Z
+		ARG 1 level

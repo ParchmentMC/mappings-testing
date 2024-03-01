@@ -6,7 +6,7 @@ CLASS net/minecraft/world/item/Item
 		ARG 1 stack
 		ARG 2 level
 		ARG 3 tooltipComponents
-		ARG 4 isAdvanced
+		ARG 4 tooltipFlag
 	METHOD byBlock (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/item/Item;
 		ARG 0 block
 	METHOD byId (I)Lnet/minecraft/world/item/Item;
@@ -155,6 +155,8 @@ CLASS net/minecraft/world/item/Item
 		ARG 1 context
 	METHOD useOnRelease (Lnet/minecraft/world/item/ItemStack;)Z
 		COMMENT If this stack's item is a crossbow
+		ARG 1 stack
+	METHOD verifyComponentsAfterLoad (Lnet/minecraft/world/item/ItemStack;)V
 		ARG 1 stack
 	METHOD verifyTagAfterLoad (Lnet/minecraft/nbt/CompoundTag;)V
 		ARG 1 tag

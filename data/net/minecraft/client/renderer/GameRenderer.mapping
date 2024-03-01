@@ -166,6 +166,8 @@ CLASS net/minecraft/client/renderer/GameRenderer
 		ARG 3 format
 	METHOD preloadUiShader (Lnet/minecraft/server/packs/resources/ResourceProvider;)V
 		ARG 1 resourceProvider
+	METHOD processBlurEffect (F)V
+		ARG 1 partialTick
 	METHOD reloadShaders (Lnet/minecraft/server/packs/resources/ResourceProvider;)V
 		ARG 1 resourceProvider
 	METHOD render (FJZ)V

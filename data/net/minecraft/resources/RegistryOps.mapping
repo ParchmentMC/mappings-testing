@@ -21,6 +21,8 @@ CLASS net/minecraft/resources/RegistryOps
 		ARG 0 key
 	METHOD retrieveGetter (Lnet/minecraft/resources/ResourceKey;)Lcom/mojang/serialization/codecs/RecordCodecBuilder;
 		ARG 0 registryOps
+	METHOD withParent (Lcom/mojang/serialization/DynamicOps;)Lnet/minecraft/resources/RegistryOps;
+		ARG 1 ops
 	CLASS RegistryInfoLookup
 		METHOD lookup (Lnet/minecraft/resources/ResourceKey;)Ljava/util/Optional;
 			ARG 1 registryKey

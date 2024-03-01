@@ -30,3 +30,5 @@ CLASS net/minecraft/world/level/block/entity/BannerBlockEntity
 		ARG 0 stack
 	METHOD setCustomName (Lnet/minecraft/network/chat/Component;)V
 		ARG 1 name
+	METHOD setPatterns (Lnet/minecraft/world/level/block/entity/BannerPatternLayers;)V
+		ARG 1 patterns

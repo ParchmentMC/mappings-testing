@@ -33,6 +33,8 @@ CLASS net/minecraft/world/level/chunk/ProtoChunk
 		ARG 1 lightEngine
 	METHOD setStatus (Lnet/minecraft/world/level/chunk/ChunkStatus;)V
 		ARG 1 status
+	METHOD setStatus (Lnet/minecraft/world/level/chunk/status/ChunkStatus;)V
+		ARG 1 status
 	METHOD unpackOffsetCoordinates (SILnet/minecraft/world/level/ChunkPos;)Lnet/minecraft/core/BlockPos;
 		ARG 0 packedPos
 		ARG 1 yOffset

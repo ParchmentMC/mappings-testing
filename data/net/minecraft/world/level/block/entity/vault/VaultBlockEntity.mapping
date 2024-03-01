@@ -5,6 +5,10 @@ CLASS net/minecraft/world/level/block/entity/vault/VaultBlockEntity
 	METHOD encode (Lcom/mojang/serialization/Codec;Ljava/lang/Object;)Lnet/minecraft/nbt/Tag;
 		ARG 0 codec
 		ARG 1 value
+	METHOD encode (Lcom/mojang/serialization/Codec;Ljava/lang/Object;Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/nbt/Tag;
+		ARG 0 codec
+		ARG 1 value
+		ARG 2 levelRegistry
 	METHOD lambda$load$1 (Lnet/minecraft/world/level/block/entity/vault/VaultConfig;)V
 		ARG 1 config
 	METHOD setConfig (Lnet/minecraft/world/level/block/entity/vault/VaultConfig;)V

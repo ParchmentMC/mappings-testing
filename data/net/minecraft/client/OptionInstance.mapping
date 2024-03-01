@@ -38,6 +38,8 @@ CLASS net/minecraft/client/OptionInstance
 		ARG 0 key
 		ARG 1 initialValue
 		ARG 2 onValueUpdate
+	METHOD createButton (Lnet/minecraft/client/Options;)Lnet/minecraft/client/gui/components/AbstractWidget;
+		ARG 1 options
 	METHOD createButton (Lnet/minecraft/client/Options;III)Lnet/minecraft/client/gui/components/AbstractWidget;
 		ARG 1 options
 		ARG 2 x

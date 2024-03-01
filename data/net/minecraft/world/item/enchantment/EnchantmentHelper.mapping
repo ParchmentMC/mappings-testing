@@ -1,4 +1,6 @@
 CLASS net/minecraft/world/item/enchantment/EnchantmentHelper
+	METHOD canStoreEnchantments (Lnet/minecraft/world/item/ItemStack;)Z
+		ARG 0 stack
 	METHOD deserializeEnchantments (Lnet/minecraft/nbt/ListTag;)Ljava/util/Map;
 		ARG 0 serialized
 	METHOD doPostDamageEffects (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/Entity;)V
@@ -22,6 +24,8 @@ CLASS net/minecraft/world/item/enchantment/EnchantmentHelper
 		ARG 2 allowTreasure
 	METHOD getBlockEfficiency (Lnet/minecraft/world/entity/LivingEntity;)I
 		ARG 0 entity
+	METHOD getComponentType (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/core/component/DataComponentType;
+		ARG 0 stack
 	METHOD getDamageBonus (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/EntityType;)F
 		ARG 0 stack
 		ARG 1 entityType
@@ -51,6 +55,8 @@ CLASS net/minecraft/world/item/enchantment/EnchantmentHelper
 		ARG 1 entity
 	METHOD getEnchantments (Lnet/minecraft/world/item/ItemStack;)Ljava/util/Map;
 		COMMENT Return the enchantments for the specified stack.
+		ARG 0 stack
+	METHOD getEnchantmentsForCrafting (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/enchantment/ItemEnchantments;
 		ARG 0 stack
 	METHOD getFireAspect (Lnet/minecraft/world/entity/LivingEntity;)I
 		COMMENT Returns the fire aspect modifier of the players held item.
@@ -144,9 +150,15 @@ CLASS net/minecraft/world/item/enchantment/EnchantmentHelper
 		COMMENT Set the enchantments for the specified stack.
 		ARG 0 enchantmentsMap
 		ARG 1 stack
+	METHOD setEnchantments (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/enchantment/ItemEnchantments;)V
+		ARG 0 stack
+		ARG 1 enchantments
 	METHOD storeEnchantment (Lnet/minecraft/resources/ResourceLocation;I)Lnet/minecraft/nbt/CompoundTag;
 		ARG 0 id
 		ARG 1 level
+	METHOD updateEnchantments (Lnet/minecraft/world/item/ItemStack;Ljava/util/function/Consumer;)Lnet/minecraft/world/item/enchantment/ItemEnchantments;
+		ARG 0 stack
+		ARG 1 updater
 	CLASS EnchantmentVisitor
 		METHOD accept (Lnet/minecraft/world/item/enchantment/Enchantment;I)V
 			ARG 1 enchantment

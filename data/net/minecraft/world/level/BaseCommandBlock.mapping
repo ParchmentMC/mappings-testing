@@ -18,13 +18,21 @@ CLASS net/minecraft/world/level/BaseCommandBlock
 	METHOD load (Lnet/minecraft/nbt/CompoundTag;)V
 		COMMENT Reads NBT formatting and stored data into variables.
 		ARG 1 nbt
+	METHOD load (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/core/HolderLookup$Provider;)V
+		ARG 1 tag
+		ARG 2 levelRegistry
 	METHOD performCommand (Lnet/minecraft/world/level/Level;)Z
 		ARG 1 level
 	METHOD save (Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/nbt/CompoundTag;
 		ARG 1 compound
+	METHOD save (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/nbt/CompoundTag;
+		ARG 1 tag
+		ARG 2 levelRegistry
 	METHOD setCommand (Ljava/lang/String;)V
 		COMMENT Sets the command.
 		ARG 1 command
+	METHOD setCustomName (Lnet/minecraft/network/chat/Component;)V
+		ARG 1 customName
 	METHOD setLastOutput (Lnet/minecraft/network/chat/Component;)V
 		ARG 1 lastOutputMessage
 	METHOD setName (Lnet/minecraft/network/chat/Component;)V

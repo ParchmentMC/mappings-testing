@@ -8,6 +8,13 @@ CLASS net/minecraft/Util
 	METHOD blockUntilDone (Ljava/util/function/Function;Ljava/util/function/Predicate;)Ljava/lang/Object;
 		ARG 0 task
 		ARG 1 donePredicate
+	METHOD copyAndAdd (Ljava/util/List;Ljava/lang/Object;)Ljava/util/List;
+		ARG 0 list
+		ARG 1 value
+	METHOD copyAndPut (Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
+		ARG 0 map
+		ARG 1 key
+		ARG 2 value
 	METHOD copyBetweenDirs (Ljava/nio/file/Path;Ljava/nio/file/Path;Ljava/nio/file/Path;)V
 		ARG 0 fromDirectory
 		ARG 1 toDirectory
@@ -76,6 +83,9 @@ CLASS net/minecraft/Util
 	METHOD getRandomSafe (Ljava/util/List;Lnet/minecraft/util/RandomSource;)Ljava/util/Optional;
 		ARG 0 selections
 		ARG 1 random
+	METHOD getRegisteredName (Lnet/minecraft/core/Registry;Ljava/lang/Object;)Ljava/lang/String;
+		ARG 0 registry
+		ARG 1 value
 	METHOD ifElse (Ljava/util/Optional;Ljava/util/function/Consumer;Ljava/lang/Runnable;)Ljava/util/Optional;
 		ARG 0 opt
 		ARG 1 consumer

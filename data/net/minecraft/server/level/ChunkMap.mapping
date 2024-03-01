@@ -64,6 +64,9 @@ CLASS net/minecraft/server/level/ChunkMap
 		COMMENT Gets an unmodifiable iterable of all loaded chunks in the chunk manager
 	METHOD getDependencyStatus (Lnet/minecraft/world/level/chunk/ChunkStatus;I)Lnet/minecraft/world/level/chunk/ChunkStatus;
 		ARG 1 chunkStatus
+	METHOD getDependencyStatus (Lnet/minecraft/world/level/chunk/status/ChunkStatus;I)Lnet/minecraft/world/level/chunk/status/ChunkStatus;
+		ARG 1 status
+		ARG 2 distance
 	METHOD getPlayerViewDistance (Lnet/minecraft/server/level/ServerPlayer;)I
 		ARG 1 player
 	METHOD getPlayersCloseForSpawning (Lnet/minecraft/world/level/ChunkPos;)Ljava/util/List;
@@ -73,6 +76,9 @@ CLASS net/minecraft/server/level/ChunkMap
 	METHOD getVisibleChunkIfPresent (J)Lnet/minecraft/server/level/ChunkHolder;
 		ARG 1 chunkPos
 	METHOD handleChunkLoadFailure (Ljava/lang/Throwable;Lnet/minecraft/world/level/ChunkPos;)Lcom/mojang/datafixers/util/Either;
+		ARG 1 exception
+		ARG 2 chunkPos
+	METHOD handleChunkLoadFailure (Ljava/lang/Throwable;Lnet/minecraft/world/level/ChunkPos;)Lnet/minecraft/world/level/chunk/ChunkAccess;
 		ARG 1 exception
 		ARG 2 chunkPos
 	METHOD isChunkDataValid (Lnet/minecraft/nbt/CompoundTag;)Z
@@ -100,10 +106,15 @@ CLASS net/minecraft/server/level/ChunkMap
 	METHOD markPosition (Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/world/level/chunk/ChunkStatus$ChunkType;)B
 		ARG 1 chunkPos
 		ARG 2 chunkType
+	METHOD markPosition (Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/world/level/chunk/status/ChunkType;)B
+		ARG 1 chunkPos
+		ARG 2 chunkType
 	METHOD markPositionReplaceable (Lnet/minecraft/world/level/ChunkPos;)V
 		ARG 1 chunkPos
 	METHOD move (Lnet/minecraft/server/level/ServerPlayer;)V
 		ARG 1 player
+	METHOD onChunkReadyToSend (Lnet/minecraft/world/level/chunk/LevelChunk;)V
+		ARG 1 chunk
 	METHOD onFullChunkStatusChange (Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/server/level/FullChunkStatus;)V
 		ARG 1 chunkPos
 		ARG 2 fullChunkStatus
@@ -125,6 +136,9 @@ CLASS net/minecraft/server/level/ChunkMap
 		ARG 1 hasMoreTime
 	METHOD protoChunkToFullChunk (Lnet/minecraft/server/level/ChunkHolder;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 holder
+	METHOD protoChunkToFullChunk (Lnet/minecraft/server/level/ChunkHolder;Lnet/minecraft/world/level/chunk/ChunkAccess;)Ljava/util/concurrent/CompletableFuture;
+		ARG 1 chunkHolder
+		ARG 2 chunk
 	METHOD readChunk (Lnet/minecraft/world/level/ChunkPos;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 pos
 	METHOD releaseLightTicket (Lnet/minecraft/world/level/ChunkPos;)V
@@ -142,7 +156,13 @@ CLASS net/minecraft/server/level/ChunkMap
 	METHOD schedule (Lnet/minecraft/server/level/ChunkHolder;Lnet/minecraft/world/level/chunk/ChunkStatus;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 holder
 		ARG 2 status
+	METHOD schedule (Lnet/minecraft/server/level/ChunkHolder;Lnet/minecraft/world/level/chunk/status/ChunkStatus;)Ljava/util/concurrent/CompletableFuture;
+		ARG 1 chunkHolder
+		ARG 2 chunkStatus
 	METHOD scheduleChunkGeneration (Lnet/minecraft/server/level/ChunkHolder;Lnet/minecraft/world/level/chunk/ChunkStatus;)Ljava/util/concurrent/CompletableFuture;
+		ARG 1 chunkHolder
+		ARG 2 chunkStatus
+	METHOD scheduleChunkGeneration (Lnet/minecraft/server/level/ChunkHolder;Lnet/minecraft/world/level/chunk/status/ChunkStatus;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 chunkHolder
 		ARG 2 chunkStatus
 	METHOD scheduleChunkLoad (Lnet/minecraft/world/level/ChunkPos;)Ljava/util/concurrent/CompletableFuture;
@@ -174,6 +194,7 @@ CLASS net/minecraft/server/level/ChunkMap
 		ARG 1 tag
 	METHOD waitForLightBeforeSending (Lnet/minecraft/world/level/ChunkPos;I)V
 		ARG 1 chunkPos
+		ARG 2 range
 	CLASS TrackedEntity
 		METHOD <init> (Lnet/minecraft/server/level/ChunkMap;Lnet/minecraft/world/entity/Entity;IIZ)V
 			ARG 2 entity

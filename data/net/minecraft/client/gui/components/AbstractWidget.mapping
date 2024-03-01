@@ -42,6 +42,12 @@ CLASS net/minecraft/client/gui/components/AbstractWidget
 		ARG 3 mouseY
 	METHOD playDownSound (Lnet/minecraft/client/sounds/SoundManager;)V
 		ARG 1 handler
+	METHOD renderMenuBackground (Lnet/minecraft/client/gui/GuiGraphics;IIII)V
+		ARG 1 guiGraphics
+		ARG 2 startX
+		ARG 3 startY
+		ARG 4 endX
+		ARG 5 endY
 	METHOD renderScrollingString (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/gui/Font;II)V
 		ARG 1 guiGraphics
 		ARG 2 font
@@ -92,6 +98,8 @@ CLASS net/minecraft/client/gui/components/AbstractWidget
 		ARG 1 tooltip
 	METHOD setTooltipDelay (I)V
 		ARG 1 tooltipMsDelay
+	METHOD setTooltipDelay (Ljava/time/Duration;)V
+		ARG 1 tooltipDelay
 	METHOD setWidth (I)V
 		ARG 1 width
 	METHOD setX (I)V

@@ -26,6 +26,8 @@ CLASS net/minecraft/data/models/ItemModelGenerators
 		ARG 1 item
 		ARG 2 layerZeroItem
 		ARG 3 modelTemplate
+	METHOD generateItemWithOverlay (Lnet/minecraft/world/item/Item;)V
+		ARG 1 item
 	METHOD generateLayeredItem (Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/resources/ResourceLocation;)V
 		ARG 1 modelLocation
 		ARG 2 layer0

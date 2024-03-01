@@ -34,6 +34,12 @@ CLASS net/minecraft/world/level/StructureManager
 	METHOD getStructureAt (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/levelgen/structure/Structure;)Lnet/minecraft/world/level/levelgen/structure/StructureStart;
 		ARG 1 pos
 		ARG 2 structure
+	METHOD getStructureWithPieceAt (Lnet/minecraft/core/BlockPos;Ljava/util/function/Predicate;)Lnet/minecraft/world/level/levelgen/structure/StructureStart;
+		ARG 1 pos
+		ARG 2 predicate
+	METHOD getStructureWithPieceAt (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/HolderSet;)Lnet/minecraft/world/level/levelgen/structure/StructureStart;
+		ARG 1 pos
+		ARG 2 structures
 	METHOD getStructureWithPieceAt (Lnet/minecraft/core/BlockPos;Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/world/level/levelgen/structure/StructureStart;
 		ARG 1 pos
 		ARG 2 structureKey

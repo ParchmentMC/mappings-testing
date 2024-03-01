@@ -1,0 +1,11 @@
+CLASS net/minecraft/world/item/component/ChargedProjectiles
+	METHOD <init> (Ljava/util/List;)V
+		ARG 1 items
+	METHOD contains (Lnet/minecraft/world/item/Item;)Z
+		ARG 1 item
+	METHOD equals (Ljava/lang/Object;)Z
+		ARG 1 other
+	METHOD of (Ljava/util/List;)Lnet/minecraft/world/item/component/ChargedProjectiles;
+		ARG 0 stack
+	METHOD of (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/component/ChargedProjectiles;
+		ARG 0 stack

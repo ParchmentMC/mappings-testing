@@ -15,6 +15,11 @@ CLASS net/minecraft/network/chat/HoverEvent
 			ARG 1 name
 			ARG 2 allowFromServer
 			ARG 3 codec
+		METHOD <init> (Ljava/lang/String;ZLcom/mojang/serialization/Codec;Lnet/minecraft/network/chat/HoverEvent$LegacyConverter;)V
+			ARG 1 name
+			ARG 2 allowFromServer
+			ARG 3 codec
+			ARG 4 legacyConverter
 		METHOD cast (Ljava/lang/Object;)Ljava/lang/Object;
 			ARG 1 parameter
 		METHOD filterForSerialization (Lnet/minecraft/network/chat/HoverEvent$Action;)Lcom/mojang/serialization/DataResult;
@@ -22,6 +27,10 @@ CLASS net/minecraft/network/chat/HoverEvent
 		METHOD isAllowedFromServer ()Z
 			COMMENT Indicates whether this event can be run from chat text.
 	CLASS ItemStackInfo
+		METHOD <init> (Lnet/minecraft/core/Holder;ILnet/minecraft/core/component/DataComponentPatch;)V
+			ARG 1 item
+			ARG 2 count
+			ARG 3 components
 		METHOD <init> (Lnet/minecraft/world/item/Item;ILjava/util/Optional;)V
 			ARG 1 item
 			ARG 2 count
@@ -36,6 +45,13 @@ CLASS net/minecraft/network/chat/HoverEvent
 			ARG 1 other
 		METHOD legacyCreate (Lnet/minecraft/network/chat/Component;)Lcom/mojang/serialization/DataResult;
 			ARG 0 component
+		METHOD legacyCreate (Lnet/minecraft/network/chat/Component;Lnet/minecraft/resources/RegistryOps;)Lcom/mojang/serialization/DataResult;
+			ARG 0 name
+			ARG 1 ops
+	CLASS LegacyConverter
+		METHOD parse (Lnet/minecraft/network/chat/Component;Lnet/minecraft/resources/RegistryOps;)Lcom/mojang/serialization/DataResult;
+			ARG 1 name
+			ARG 2 ops
 	CLASS EntityTooltipInfo
 		METHOD <init> (Lnet/minecraft/world/entity/EntityType;Ljava/util/UUID;Ljava/util/Optional;)V
 			ARG 1 type
@@ -49,3 +65,6 @@ CLASS net/minecraft/network/chat/HoverEvent
 			ARG 1 other
 		METHOD legacyCreate (Lnet/minecraft/network/chat/Component;)Lcom/mojang/serialization/DataResult;
 			ARG 0 component
+		METHOD legacyCreate (Lnet/minecraft/network/chat/Component;Lnet/minecraft/resources/RegistryOps;)Lcom/mojang/serialization/DataResult;
+			ARG 0 name
+			ARG 1 ops

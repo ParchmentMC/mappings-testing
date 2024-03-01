@@ -72,6 +72,8 @@ CLASS net/minecraft/world/entity/projectile/AbstractArrow
 		ARG 1 noPhysics
 	METHOD setOwner (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 entity
+	METHOD setPickupItemStack (Lnet/minecraft/world/item/ItemStack;)V
+		ARG 1 pickupItemStack
 	METHOD setPierceLevel (B)V
 		ARG 1 pierceLevel
 	METHOD setShotFromCrossbow (Z)V

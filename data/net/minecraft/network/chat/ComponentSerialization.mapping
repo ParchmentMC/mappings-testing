@@ -8,6 +8,12 @@ CLASS net/minecraft/network/chat/ComponentSerialization
 		ARG 1 codecGetter
 		ARG 2 typeGetter
 		ARG 3 typeFieldName
+	METHOD flatCodec (I)Lcom/mojang/serialization/Codec;
+		ARG 0 maxSize
+	CLASS 1
+		METHOD encode (Ljava/lang/Object;Lcom/mojang/serialization/DynamicOps;Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
+			ARG 1 component
+			ARG 2 ops
 	CLASS FuzzyCodec
 		METHOD <init> (Ljava/util/List;Ljava/util/function/Function;)V
 			ARG 1 codecs

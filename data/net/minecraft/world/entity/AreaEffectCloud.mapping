@@ -33,6 +33,8 @@ CLASS net/minecraft/world/entity/AreaEffectCloud
 		ARG 1 potion
 	METHOD setPotion (Lnet/minecraft/world/item/alchemy/Potion;)V
 		ARG 1 potion
+	METHOD setPotionContents (Lnet/minecraft/world/item/alchemy/PotionContents;)V
+		ARG 1 potionContents
 	METHOD setRadius (F)V
 		ARG 1 radius
 	METHOD setRadiusOnUse (F)V

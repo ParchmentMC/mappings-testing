@@ -1,0 +1,16 @@
+CLASS net/minecraft/world/level/pathfinder/PathTypeCache
+	METHOD compute (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;IJ)Lnet/minecraft/world/level/pathfinder/PathType;
+		ARG 1 level
+		ARG 2 pos
+		ARG 3 index
+		ARG 4 packedPos
+	METHOD get (IJ)Lnet/minecraft/world/level/pathfinder/PathType;
+		ARG 1 index
+		ARG 2 pos
+	METHOD getOrCompute (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/pathfinder/PathType;
+		ARG 1 level
+		ARG 2 pos
+	METHOD index (J)I
+		ARG 0 pos
+	METHOD invalidate (Lnet/minecraft/core/BlockPos;)V
+		ARG 1 pos

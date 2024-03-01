@@ -1,0 +1,12 @@
+CLASS net/minecraft/world/item/component/ItemAttributeModifiers
+	METHOD compute (DLnet/minecraft/world/entity/EquipmentSlot;)D
+		ARG 1 baseValue
+		ARG 3 equipmentSlot
+	METHOD forEach (Lnet/minecraft/world/entity/EquipmentSlot;Ljava/util/function/BiConsumer;)V
+		ARG 1 equipmentSlot
+		ARG 2 action
+	CLASS Builder
+		METHOD add (Lnet/minecraft/core/Holder;Lnet/minecraft/world/entity/ai/attributes/AttributeModifier;Lnet/minecraft/world/entity/EquipmentSlotGroup;)Lnet/minecraft/world/item/component/ItemAttributeModifiers$Builder;
+			ARG 1 attribute
+			ARG 2 modifier
+			ARG 3 slot

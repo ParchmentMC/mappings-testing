@@ -27,6 +27,12 @@ CLASS net/minecraft/world/item/ArmorItem
 		ARG 2 player
 		ARG 3 hand
 	CLASS Type
+		METHOD <init> (Ljava/lang/String;ILnet/minecraft/world/entity/EquipmentSlot;ILjava/lang/String;)V
+			ARG 3 slot
+			ARG 4 durability
+			ARG 5 name
 		METHOD <init> (Ljava/lang/String;ILnet/minecraft/world/entity/EquipmentSlot;Ljava/lang/String;)V
 			ARG 3 slot
 			ARG 4 name
+		METHOD getDurability (I)I
+			ARG 1 durabilityFactor

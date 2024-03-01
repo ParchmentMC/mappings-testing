@@ -12,6 +12,12 @@ CLASS net/minecraft/world/level/pathfinder/WalkNodeEvaluator
 		ARG 0 level
 		ARG 1 pos
 		ARG 2 pathType
+	METHOD checkNeighbourBlocks (Lnet/minecraft/world/level/pathfinder/PathfindingContext;IIILnet/minecraft/world/level/pathfinder/PathType;)Lnet/minecraft/world/level/pathfinder/PathType;
+		ARG 0 context
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 pathType
 	METHOD doesBlockHavePartialCollision (Lnet/minecraft/world/level/pathfinder/BlockPathTypes;)Z
 		ARG 0 blockPathType
 	METHOD doesBlockHavePartialCollision (Lnet/minecraft/world/level/pathfinder/PathType;)Z
@@ -102,11 +108,22 @@ CLASS net/minecraft/world/level/pathfinder/WalkNodeEvaluator
 	METHOD getPathTypeFromState (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/pathfinder/PathType;
 		ARG 0 level
 		ARG 1 pos
+	METHOD getPathTypeStatic (Lnet/minecraft/world/entity/Mob;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/pathfinder/PathType;
+		ARG 0 mob
+		ARG 1 pos
 	METHOD getPathTypeStatic (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos$MutableBlockPos;)Lnet/minecraft/world/level/pathfinder/PathType;
 		ARG 0 level
 		ARG 1 pos
+	METHOD getPathTypeStatic (Lnet/minecraft/world/level/pathfinder/PathfindingContext;Lnet/minecraft/core/BlockPos$MutableBlockPos;)Lnet/minecraft/world/level/pathfinder/PathType;
+		ARG 0 context
+		ARG 1 pos
 	METHOD getPathTypeWithinMobBB (Lnet/minecraft/world/level/BlockGetter;III)Ljava/util/Set;
 		ARG 1 level
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD getPathTypeWithinMobBB (Lnet/minecraft/world/level/pathfinder/PathfindingContext;III)Ljava/util/Set;
+		ARG 1 context
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z

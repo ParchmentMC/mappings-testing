@@ -1,0 +1,17 @@
+CLASS net/minecraft/world/item/component/ItemContainerContents
+	METHOD <init> (I)V
+		ARG 1 size
+	METHOD <init> (Ljava/util/List;)V
+		ARG 1 items
+	METHOD <init> (Lnet/minecraft/core/NonNullList;)V
+		ARG 1 items
+	METHOD copyInto (Lnet/minecraft/core/NonNullList;)V
+		ARG 1 list
+	METHOD copyOf (Ljava/util/List;)Lnet/minecraft/world/item/component/ItemContainerContents;
+		ARG 0 items
+	METHOD equals (Ljava/lang/Object;)Z
+		ARG 1 other
+	METHOD fromSlots (Ljava/util/List;)Lnet/minecraft/world/item/component/ItemContainerContents;
+		ARG 0 slots
+	METHOD getFilledSize (Ljava/util/List;)I
+		ARG 0 items

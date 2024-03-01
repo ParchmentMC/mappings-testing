@@ -38,7 +38,11 @@ CLASS net/minecraft/server/level/ChunkHolder
 		ARG 2 fullChunkStatus
 	METHOD getFutureIfPresent (Lnet/minecraft/world/level/chunk/ChunkStatus;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 chunkStatus
+	METHOD getFutureIfPresent (Lnet/minecraft/world/level/chunk/status/ChunkStatus;)Ljava/util/concurrent/CompletableFuture;
+		ARG 1 chunkStatus
 	METHOD getFutureIfPresentUnchecked (Lnet/minecraft/world/level/chunk/ChunkStatus;)Ljava/util/concurrent/CompletableFuture;
+		ARG 1 chunkStatus
+	METHOD getFutureIfPresentUnchecked (Lnet/minecraft/world/level/chunk/status/ChunkStatus;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 chunkStatus
 	METHOD getOrScheduleFuture (Lnet/minecraft/world/level/chunk/ChunkStatus;Lnet/minecraft/server/level/ChunkMap;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 status
