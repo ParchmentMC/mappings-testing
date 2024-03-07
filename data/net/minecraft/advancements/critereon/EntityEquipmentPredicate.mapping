@@ -1,4 +1,6 @@
 CLASS net/minecraft/advancements/critereon/EntityEquipmentPredicate
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	METHOD captainPredicate (Lnet/minecraft/core/HolderGetter;)Lnet/minecraft/advancements/critereon/EntityEquipmentPredicate;
 		ARG 0 patternRegistry
 	METHOD matches (Lnet/minecraft/world/entity/Entity;)Z

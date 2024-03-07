@@ -46,7 +46,7 @@ CLASS net/minecraft/gametest/framework/StructureUtils
 		ARG 0 pos
 		ARG 1 radius
 		ARG 2 serverLevel
-	METHOD findStructureBlocks (Lnet/minecraft/core/BlockPos;ILnet/minecraft/server/level/ServerLevel;)Ljava/util/stream/Stream;
+	METHOD findStructureBlocks (Lnet/minecraft/world/level/levelgen/structure/BoundingBox;ILnet/minecraft/server/level/ServerLevel;)Ljava/util/stream/Stream;
 		ARG 0 pos
 		ARG 1 radius
 		ARG 2 level
@@ -71,6 +71,16 @@ CLASS net/minecraft/gametest/framework/StructureUtils
 		ARG 0 pos
 		ARG 1 offset
 		ARG 2 rotation
+	METHOD lambda$clearSpaceForStructure$2 (ILnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;)V
+		ARG 2 blockPos
+	METHOD lambda$clearSpaceForStructure$3 (Lnet/minecraft/world/entity/Entity;)Z
+		ARG 0 entity
+	METHOD lambda$findNearestStructureBlock$5 (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;)I
+		ARG 1 blockPos
+	METHOD lambda$findStructureBlockContainingPos$4 (Lnet/minecraft/core/BlockPos;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;)Z
+		ARG 2 structurePos
+	METHOD lambda$findStructureBlocks$6 (Lnet/minecraft/server/level/ServerLevel;Ljava/util/Collection;Lnet/minecraft/core/BlockPos;)V
+		ARG 2 structurePos
 	METHOD lambda$forceLoadChunks$1 (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/ChunkPos;)V
 		ARG 1 chunk
 	METHOD lookedAtStructureBlockPos (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/server/level/ServerLevel;)Ljava/util/stream/Stream;
