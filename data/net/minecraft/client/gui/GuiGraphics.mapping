@@ -221,6 +221,9 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 12 nineSliceHeight
 	METHOD bufferSource ()Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;
 		COMMENT {@return returns the buffer source for rendering.}
+	METHOD containsPointInScissor (II)Z
+		ARG 1 x
+		ARG 2 y
 	METHOD disableScissor ()V
 		COMMENT Disables scissoring.
 	METHOD drawCenteredString (Lnet/minecraft/client/gui/Font;Ljava/lang/String;III)V
@@ -835,6 +838,9 @@ CLASS net/minecraft/client/gui/GuiGraphics
 			COMMENT the color of the line.
 	CLASS ScissorStack
 		COMMENT A utility class for managing a stack of screen rectangles for scissoring.
+		METHOD containsPoint (II)Z
+			ARG 1 x
+			ARG 2 y
 		METHOD pop ()Lnet/minecraft/client/gui/navigation/ScreenRectangle;
 			COMMENT Pops the top screen rectangle from the scissor stack.
 			COMMENT <p>

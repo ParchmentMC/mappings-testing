@@ -10,3 +10,5 @@ CLASS net/minecraft/world/level/block/entity/BaseContainerBlockEntity
 		ARG 2 inventory
 	METHOD setCustomName (Lnet/minecraft/network/chat/Component;)V
 		ARG 1 name
+	METHOD setItems (Lnet/minecraft/core/NonNullList;)V
+		ARG 1 items

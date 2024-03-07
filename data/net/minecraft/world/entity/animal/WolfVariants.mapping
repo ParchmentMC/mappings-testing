@@ -1,0 +1,13 @@
+CLASS net/minecraft/world/entity/animal/WolfVariants
+	METHOD bootstrap (Lnet/minecraft/data/worldgen/BootstrapContext;)V
+		ARG 0 context
+	METHOD createKey (Ljava/lang/String;)Lnet/minecraft/resources/ResourceKey;
+		ARG 0 name
+	METHOD getSpawnVariant (Lnet/minecraft/core/RegistryAccess;Lnet/minecraft/core/Holder;)Lnet/minecraft/core/Holder;
+		ARG 0 registryAccess
+		ARG 1 biome
+	METHOD register (Lnet/minecraft/data/worldgen/BootstrapContext;Lnet/minecraft/resources/ResourceKey;Ljava/lang/String;Lnet/minecraft/resources/ResourceKey;)V
+		ARG 0 context
+		ARG 1 key
+		ARG 2 name
+		ARG 3 spawnBiome

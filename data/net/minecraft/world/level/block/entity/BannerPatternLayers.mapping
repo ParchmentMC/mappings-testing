@@ -12,3 +12,7 @@ CLASS net/minecraft/world/level/block/entity/BannerPatternLayers
 			ARG 1 layer
 		METHOD addAll (Lnet/minecraft/world/level/block/entity/BannerPatternLayers;)Lnet/minecraft/world/level/block/entity/BannerPatternLayers$Builder;
 			ARG 1 layers
+		METHOD addIfRegistered (Lnet/minecraft/core/HolderGetter;Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/world/item/DyeColor;)Lnet/minecraft/world/level/block/entity/BannerPatternLayers$Builder;
+			ARG 1 patterns
+			ARG 2 patternKey
+			ARG 3 color

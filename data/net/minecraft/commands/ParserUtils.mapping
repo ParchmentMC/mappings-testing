@@ -8,3 +8,6 @@ CLASS net/minecraft/commands/ParserUtils
 		ARG 0 registries
 		ARG 1 reader
 		ARG 2 codec
+	METHOD readWhile (Lcom/mojang/brigadier/StringReader;Lnet/minecraft/CharPredicate;)Ljava/lang/String;
+		ARG 0 reader
+		ARG 1 predicate

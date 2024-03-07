@@ -28,6 +28,8 @@ CLASS net/minecraft/util/datafix/fixes/ItemStackComponentizationFix
 		ARG 2 key
 		ARG 3 component
 		ARG 4 hide
+	METHOD fixBlockStateTag (Lcom/mojang/serialization/Dynamic;)Lcom/mojang/serialization/Dynamic;
+		ARG 0 tag
 	METHOD fixBookPages (Lnet/minecraft/util/datafix/fixes/ItemStackComponentizationFix$ItemStackData;Lcom/mojang/serialization/Dynamic;)Lcom/mojang/serialization/Dynamic;
 		ARG 0 itemStackData
 		ARG 1 tag
@@ -56,6 +58,9 @@ CLASS net/minecraft/util/datafix/fixes/ItemStackComponentizationFix
 	METHOD fixLodestoneTarget (Lnet/minecraft/util/datafix/fixes/ItemStackComponentizationFix$ItemStackData;Lcom/mojang/serialization/Dynamic;)V
 		ARG 0 itemStackData
 		ARG 1 tag
+	METHOD fixLodestoneTracker (Lnet/minecraft/util/datafix/fixes/ItemStackComponentizationFix$ItemStackData;Lcom/mojang/serialization/Dynamic;)V
+		ARG 0 itemStackData
+		ARG 1 tag
 	METHOD fixMapDecoration (Lcom/mojang/serialization/Dynamic;)Lcom/mojang/datafixers/util/Pair;
 		ARG 0 tag
 	METHOD fixMapDecorationType (I)Ljava/lang/String;
@@ -73,6 +78,8 @@ CLASS net/minecraft/util/datafix/fixes/ItemStackComponentizationFix
 	METHOD fixWrittenBook (Lnet/minecraft/util/datafix/fixes/ItemStackComponentizationFix$ItemStackData;Lcom/mojang/serialization/Dynamic;)V
 		ARG 0 itemStackData
 		ARG 1 tag
+	METHOD isValidPlayerName (Ljava/lang/String;)Z
+		ARG 0 name
 	METHOD parseEnchantment (Lcom/mojang/serialization/Dynamic;)Ljava/util/Optional;
 		ARG 0 enchantmentTag
 	CLASS ItemStackData
@@ -84,6 +91,8 @@ CLASS net/minecraft/util/datafix/fixes/ItemStackComponentizationFix
 			ARG 1 key
 			ARG 2 skipIfEmpty
 			ARG 3 fixer
+		METHOD hasComponent (Ljava/lang/String;)Z
+			ARG 1 component
 		METHOD is (Ljava/lang/String;)Z
 			ARG 1 item
 		METHOD is (Ljava/util/Set;)Z

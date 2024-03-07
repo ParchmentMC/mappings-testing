@@ -1,0 +1,7 @@
+CLASS net/minecraft/advancements/critereon/SlotsPredicate
+	METHOD matchSlots (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/advancements/critereon/ItemPredicate;Lit/unimi/dsi/fastutil/ints/IntList;)Z
+		ARG 0 entity
+		ARG 1 predicate
+		ARG 2 slots
+	METHOD matches (Lnet/minecraft/world/entity/Entity;)Z
+		ARG 1 entity

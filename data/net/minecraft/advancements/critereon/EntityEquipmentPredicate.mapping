@@ -1,4 +1,6 @@
 CLASS net/minecraft/advancements/critereon/EntityEquipmentPredicate
+	METHOD captainPredicate (Lnet/minecraft/core/HolderGetter;)Lnet/minecraft/advancements/critereon/EntityEquipmentPredicate;
+		ARG 0 patternRegistry
 	METHOD matches (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 1 entity
 	CLASS Builder

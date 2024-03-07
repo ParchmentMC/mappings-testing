@@ -75,6 +75,9 @@ CLASS net/minecraft/world/entity/animal/Wolf
 	METHOD wantsToAttack (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/LivingEntity;)Z
 		ARG 1 target
 		ARG 2 owner
+	CLASS WolfPackData
+		METHOD <init> (Lnet/minecraft/core/Holder;)V
+			ARG 1 type
 	CLASS WolfPanicGoal
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Wolf;D)V
 			ARG 2 speedModifier

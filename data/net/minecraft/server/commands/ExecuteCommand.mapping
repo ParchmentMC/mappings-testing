@@ -41,6 +41,15 @@ CLASS net/minecraft/server/commands/ExecuteCommand
 	METHOD checkUnlessRegions (Lcom/mojang/brigadier/context/CommandContext;Z)I
 		ARG 0 context
 		ARG 1 isMasked
+	METHOD countItems (Ljava/lang/Iterable;Lnet/minecraft/world/inventory/SlotRange;Ljava/util/function/Predicate;)I
+		ARG 0 targets
+		ARG 1 slotRange
+		ARG 2 filter
+	METHOD countItems (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/inventory/SlotRange;Ljava/util/function/Predicate;)I
+		ARG 0 source
+		ARG 1 pos
+		ARG 2 slotRange
+		ARG 3 filter
 	METHOD createNumericConditionalHandler (ZLnet/minecraft/server/commands/ExecuteCommand$CommandNumericPredicate;)Lcom/mojang/brigadier/Command;
 		ARG 0 isIf
 		ARG 1 predicate

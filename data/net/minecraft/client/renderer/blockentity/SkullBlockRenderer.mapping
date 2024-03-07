@@ -6,6 +6,9 @@ CLASS net/minecraft/client/renderer/blockentity/SkullBlockRenderer
 	METHOD getRenderType (Lnet/minecraft/world/level/block/SkullBlock$Type;Lcom/mojang/authlib/GameProfile;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 0 skullType
 		ARG 1 gameProfile
+	METHOD getRenderType (Lnet/minecraft/world/level/block/SkullBlock$Type;Lnet/minecraft/world/item/component/ResolvableProfile;)Lnet/minecraft/client/renderer/RenderType;
+		ARG 0 type
+		ARG 1 profile
 	METHOD lambda$static$0 (Ljava/util/HashMap;)V
 		ARG 0 skinByType
 	METHOD renderSkull (Lnet/minecraft/core/Direction;FFLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;ILnet/minecraft/client/model/SkullModelBase;Lnet/minecraft/client/renderer/RenderType;)V

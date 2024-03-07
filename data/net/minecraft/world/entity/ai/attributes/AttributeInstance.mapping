@@ -20,6 +20,8 @@ CLASS net/minecraft/world/entity/ai/attributes/AttributeInstance
 	METHOD getModifier (Ljava/util/UUID;)Lnet/minecraft/world/entity/ai/attributes/AttributeModifier;
 		COMMENT Returns attribute modifier, if any, by the given UUID
 		ARG 1 uuid
+	METHOD getModifiers (Lnet/minecraft/world/entity/ai/attributes/AttributeModifier$Operation;)Ljava/util/Map;
+		ARG 1 operation
 	METHOD getModifiers (Lnet/minecraft/world/entity/ai/attributes/AttributeModifier$Operation;)Ljava/util/Set;
 		ARG 1 operation
 	METHOD getModifiersOrEmpty (Lnet/minecraft/world/entity/ai/attributes/AttributeModifier$Operation;)Ljava/util/Collection;
