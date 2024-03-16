@@ -1,0 +1,8 @@
+CLASS net/minecraft/world/level/storage/loot/functions/SetBookCoverFunction
+	METHOD <init> (Ljava/util/List;Ljava/util/Optional;Ljava/util/Optional;Ljava/util/Optional;)V
+		ARG 1 conditons
+		ARG 2 title
+		ARG 3 author
+		ARG 4 generation
+	METHOD apply (Lnet/minecraft/world/item/component/WrittenBookContent;)Lnet/minecraft/world/item/component/WrittenBookContent;
+		ARG 1 writtenBookContent

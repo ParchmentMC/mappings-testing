@@ -44,6 +44,8 @@ CLASS net/minecraft/world/entity/animal/Cat
 		ARG 1 relaxStateOne
 	METHOD tick ()V
 		COMMENT Called to update the entity's position/logic.
+	METHOD tryToTame (Lnet/minecraft/world/entity/player/Player;)V
+		ARG 1 player
 	CLASS CatTemptGoal
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Cat;DLnet/minecraft/world/item/crafting/Ingredient;Z)V
 			ARG 1 cat

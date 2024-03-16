@@ -25,6 +25,10 @@ CLASS net/minecraft/world/phys/shapes/BitSetDiscreteVoxelShape
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
+	METHOD isInterior (III)Z
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
 	METHOD isXZRectangleFull (IIIII)Z
 		ARG 1 xMin
 		ARG 2 xMax

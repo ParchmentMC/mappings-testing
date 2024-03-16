@@ -78,6 +78,13 @@ CLASS net/minecraft/client/gui/screens/Screen
 		ARG 2 y
 		ARG 3 width
 		ARG 4 height
+	METHOD renderMenuBackgroundTexture (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/resources/ResourceLocation;IIFFII)V
+		ARG 0 guiGraphics
+		ARG 1 texture
+		ARG 2 x
+		ARG 3 y
+		ARG 6 width
+		ARG 7 height
 	METHOD renderPanorama (Lnet/minecraft/client/gui/GuiGraphics;F)V
 		ARG 1 guiGraphics
 		ARG 2 partialTick

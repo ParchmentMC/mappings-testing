@@ -188,6 +188,10 @@ CLASS net/minecraft/client/renderer/GameRenderer
 	METHOD renderItemInHand (Lnet/minecraft/client/Camera;F)V
 		ARG 1 camera
 		ARG 2 partialTick
+	METHOD renderItemInHand (Lnet/minecraft/client/Camera;FLorg/joml/Matrix4f;)V
+		ARG 1 camera
+		ARG 2 partialTick
+		ARG 3 projectionMatrix
 	METHOD renderLevel (FJ)V
 		ARG 1 partialTick
 		ARG 2 nanoTime

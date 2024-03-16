@@ -77,6 +77,12 @@ CLASS net/minecraft/world/entity/ai/navigation/PathNavigation
 		ARG 3 y
 		ARG 5 z
 		ARG 7 speed
+	METHOD moveTo (DDDID)Z
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+		ARG 7 accuracy
+		ARG 8 speed
 	METHOD moveTo (Lnet/minecraft/world/entity/Entity;D)Z
 		COMMENT Try to find and set a path to EntityLiving. Returns {@code true} if successful.
 		ARG 1 entity

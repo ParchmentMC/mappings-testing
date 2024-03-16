@@ -4,6 +4,10 @@ CLASS net/minecraft/world/effect/MobEffect
 	METHOD <init> (Lnet/minecraft/world/effect/MobEffectCategory;I)V
 		ARG 1 category
 		ARG 2 color
+	METHOD <init> (Lnet/minecraft/world/effect/MobEffectCategory;ILnet/minecraft/core/particles/ParticleOptions;)V
+		ARG 1 category
+		ARG 2 color
+		ARG 3 particle
 	METHOD addAttributeModifier (Lnet/minecraft/core/Holder;Ljava/lang/String;DLnet/minecraft/world/entity/ai/attributes/AttributeModifier$Operation;)Lnet/minecraft/world/effect/MobEffect;
 		ARG 1 attribute
 		ARG 2 id
@@ -33,6 +37,8 @@ CLASS net/minecraft/world/effect/MobEffect
 	METHOD createModifiers (ILjava/util/function/BiConsumer;)V
 		ARG 1 amplifier
 		ARG 2 output
+	METHOD createParticleOptions (Lnet/minecraft/world/effect/MobEffectInstance;)Lnet/minecraft/core/particles/ParticleOptions;
+		ARG 1 effect
 	METHOD getColor ()I
 		COMMENT Returns the color of the potion liquid.
 	METHOD getDescriptionId ()Ljava/lang/String;

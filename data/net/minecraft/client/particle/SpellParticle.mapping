@@ -56,6 +56,9 @@ CLASS net/minecraft/client/particle/SpellParticle
 			ARG 9 xSpeed
 			ARG 11 ySpeed
 			ARG 13 zSpeed
+	CLASS MobEffectProvider
+		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
+			ARG 1 sprite
 	CLASS AmbientMobProvider
 		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
 			ARG 1 sprites

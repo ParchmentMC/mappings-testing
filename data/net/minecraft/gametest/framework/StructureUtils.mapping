@@ -46,6 +46,10 @@ CLASS net/minecraft/gametest/framework/StructureUtils
 		ARG 0 pos
 		ARG 1 radius
 		ARG 2 serverLevel
+	METHOD findStructureBlocks (Lnet/minecraft/core/BlockPos;ILnet/minecraft/server/level/ServerLevel;)Ljava/util/stream/Stream;
+		ARG 0 pos
+		ARG 1 radius
+		ARG 2 level
 	METHOD findStructureBlocks (Lnet/minecraft/world/level/levelgen/structure/BoundingBox;ILnet/minecraft/server/level/ServerLevel;)Ljava/util/stream/Stream;
 		ARG 0 pos
 		ARG 1 radius

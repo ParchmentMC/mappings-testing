@@ -1,0 +1,28 @@
+CLASS net/minecraft/advancements/critereon/EntitySubPredicates
+	METHOD bootstrap (Lnet/minecraft/core/Registry;)Lcom/mojang/serialization/MapCodec;
+		ARG 0 registry
+	METHOD register (Ljava/lang/String;Lcom/mojang/serialization/MapCodec;)Lcom/mojang/serialization/MapCodec;
+		ARG 0 name
+		ARG 1 codec
+	METHOD register (Ljava/lang/String;Lnet/minecraft/advancements/critereon/EntitySubPredicates$EntityVariantPredicateType;)Lnet/minecraft/advancements/critereon/EntitySubPredicates$EntityVariantPredicateType;
+		ARG 0 name
+		ARG 1 predicateType
+	METHOD variant (Lnet/minecraft/world/entity/animal/CatVariant;)Lnet/minecraft/advancements/critereon/EntitySubPredicate;
+		ARG 0 variant
+	METHOD variant (Lnet/minecraft/world/entity/animal/FrogVariant;)Lnet/minecraft/advancements/critereon/EntitySubPredicate;
+		ARG 0 variant
+	CLASS EntityVariantPredicateType
+		METHOD <init> (Lcom/mojang/serialization/Codec;Ljava/util/function/Function;)V
+			ARG 1 codec
+			ARG 2 getter
+		METHOD create (Lcom/mojang/serialization/Codec;Ljava/util/function/Function;)Lnet/minecraft/advancements/critereon/EntitySubPredicates$EntityVariantPredicateType;
+			ARG 0 codec
+			ARG 1 getter
+		METHOD create (Lnet/minecraft/core/Registry;Ljava/util/function/Function;)Lnet/minecraft/advancements/critereon/EntitySubPredicates$EntityVariantPredicateType;
+			ARG 0 variantRegistry
+			ARG 1 getter
+		METHOD createPredicate (Ljava/lang/Object;)Lnet/minecraft/advancements/critereon/EntitySubPredicate;
+			ARG 1 variant
+		CLASS Instance
+			METHOD <init> (Lnet/minecraft/advancements/critereon/EntitySubPredicates$EntityVariantPredicateType;Ljava/lang/Object;)V
+				ARG 2 variant

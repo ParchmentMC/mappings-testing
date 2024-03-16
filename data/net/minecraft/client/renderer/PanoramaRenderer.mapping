@@ -6,6 +6,12 @@ CLASS net/minecraft/client/renderer/PanoramaRenderer
 	METHOD render (FF)V
 		ARG 1 partialTick
 		ARG 2 alpha
+	METHOD render (Lnet/minecraft/client/gui/GuiGraphics;IIFF)V
+		ARG 1 guiGraphics
+		ARG 2 width
+		ARG 3 height
+		ARG 4 fade
+		ARG 5 partialTick
 	METHOD wrap (FF)F
 		ARG 0 value
 		ARG 1 max

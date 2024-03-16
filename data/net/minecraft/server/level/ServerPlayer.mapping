@@ -219,6 +219,8 @@ CLASS net/minecraft/server/level/ServerPlayer
 		ARG 5 sendMessage
 	METHOD setServerLevel (Lnet/minecraft/server/level/ServerLevel;)V
 		ARG 1 level
+	METHOD setSpawnExtraParticlesOnFall (Z)V
+		ARG 1 spawnExtraParticlesOnFall
 	METHOD shouldFilterMessageTo (Lnet/minecraft/server/level/ServerPlayer;)Z
 		ARG 1 player
 	METHOD startSleepInBed (Lnet/minecraft/core/BlockPos;)Lcom/mojang/datafixers/util/Either;

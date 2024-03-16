@@ -1,0 +1,10 @@
+CLASS net/minecraft/world/level/storage/loot/functions/SetFireworkExplosionFunction
+	METHOD <init> (Ljava/util/List;Ljava/util/Optional;Ljava/util/Optional;Ljava/util/Optional;Ljava/util/Optional;Ljava/util/Optional;)V
+		ARG 1 conditions
+		ARG 2 shape
+		ARG 3 colors
+		ARG 4 fadeColors
+		ARG 5 trail
+		ARG 6 twinkle
+	METHOD apply (Lnet/minecraft/world/item/component/FireworkExplosion;)Lnet/minecraft/world/item/component/FireworkExplosion;
+		ARG 1 fireworkExplosion

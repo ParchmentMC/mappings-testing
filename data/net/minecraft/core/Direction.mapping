@@ -66,6 +66,8 @@ CLASS net/minecraft/core/Direction
 		ARG 0 x
 		ARG 1 y
 		ARG 2 z
+	METHOD getNearest (Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/core/Direction;
+		ARG 0 ois
 	METHOD getNormal ()Lnet/minecraft/core/Vec3i;
 		COMMENT @return the normalized Vector that points in the direction of this Direction.
 	METHOD getOpposite ()Lnet/minecraft/core/Direction;

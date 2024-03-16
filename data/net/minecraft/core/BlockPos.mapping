@@ -83,6 +83,12 @@ CLASS net/minecraft/core/BlockPos
 		ARG 0 positions
 	METHOD lambda$static$2 (Lnet/minecraft/core/BlockPos;)Ljava/util/stream/IntStream;
 		ARG 0 blockPos
+	METHOD max (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/core/BlockPos;
+		ARG 0 pos1
+		ARG 1 pos2
+	METHOD min (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/core/BlockPos;
+		ARG 0 pos1
+		ARG 1 pos2
 	METHOD of (J)Lnet/minecraft/core/BlockPos;
 		ARG 0 packedPos
 	METHOD offset (JIII)J

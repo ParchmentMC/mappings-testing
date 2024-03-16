@@ -72,6 +72,8 @@ CLASS net/minecraft/world/entity/animal/Wolf
 		ARG 1 tamed
 	METHOD tick ()V
 		COMMENT Called to update the entity's position/logic.
+	METHOD tryToTame (Lnet/minecraft/world/entity/player/Player;)V
+		ARG 1 player
 	METHOD wantsToAttack (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/LivingEntity;)Z
 		ARG 1 target
 		ARG 2 owner

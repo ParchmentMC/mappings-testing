@@ -124,6 +124,11 @@ CLASS net/minecraft/world/level/levelgen/structure/templatesystem/StructureTempl
 		ARG 3 x
 		ARG 4 y
 		ARG 5 z
+	METHOD updateShapeAtEdge (Lnet/minecraft/world/level/LevelAccessor;ILnet/minecraft/world/phys/shapes/DiscreteVoxelShape;Lnet/minecraft/core/BlockPos;)V
+		ARG 0 level
+		ARG 1 flags
+		ARG 2 shape
+		ARG 3 pos
 	CLASS Palette
 		METHOD <init> (Ljava/util/List;)V
 			ARG 1 blocks
