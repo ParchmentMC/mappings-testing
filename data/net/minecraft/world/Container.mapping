@@ -21,6 +21,8 @@ CLASS net/minecraft/world/Container
 		ARG 1 slot
 	METHOD getMaxStackSize ()I
 		COMMENT Returns the maximum stack size for an inventory slot. Seems to always be 64, possibly will be extended.
+	METHOD getMaxStackSize (Lnet/minecraft/world/item/ItemStack;)I
+		ARG 1 stack
 	METHOD hasAnyMatching (Ljava/util/function/Predicate;)Z
 		ARG 1 predicate
 	METHOD hasAnyOf (Ljava/util/Set;)Z

@@ -14,3 +14,5 @@ CLASS net/minecraft/world/food/FoodProperties
 			ARG 1 nutrition
 		METHOD saturationMod (F)Lnet/minecraft/world/food/FoodProperties$Builder;
 			ARG 1 saturationModifier
+		METHOD saturationModifier (F)Lnet/minecraft/world/food/FoodProperties$Builder;
+			ARG 1 saturationModifier

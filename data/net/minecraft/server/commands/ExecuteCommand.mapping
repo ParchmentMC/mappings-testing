@@ -14,6 +14,9 @@ CLASS net/minecraft/server/commands/ExecuteCommand
 		ARG 1 literal
 		ARG 2 isIf
 		ARG 3 isMasked
+	METHOD checkCustomPredicate (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/core/Holder;)Z
+		ARG 0 source
+		ARG 1 condition
 	METHOD checkCustomPredicate (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/world/level/storage/loot/predicates/LootItemCondition;)Z
 		ARG 0 source
 		ARG 1 predicate

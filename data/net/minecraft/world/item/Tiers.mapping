@@ -6,3 +6,10 @@ CLASS net/minecraft/world/item/Tiers
 		ARG 6 damage
 		ARG 7 enchantmentValue
 		ARG 8 repairIngredient
+	METHOD <init> (Ljava/lang/String;ILnet/minecraft/tags/TagKey;IFFILjava/util/function/Supplier;)V
+		ARG 3 incorrectBlockForDrops
+		ARG 4 uses
+		ARG 5 speed
+		ARG 6 damage
+		ARG 7 enchantmentValue
+		ARG 8 repairIngredient

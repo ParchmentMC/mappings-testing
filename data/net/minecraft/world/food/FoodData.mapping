@@ -12,6 +12,8 @@ CLASS net/minecraft/world/food/FoodData
 	METHOD eat (Lnet/minecraft/world/item/Item;Lnet/minecraft/world/item/ItemStack;)V
 		ARG 1 item
 		ARG 2 stack
+	METHOD eat (Lnet/minecraft/world/item/ItemStack;)V
+		ARG 1 stack
 	METHOD getFoodLevel ()I
 		COMMENT Get the player's food level.
 	METHOD getSaturationLevel ()F

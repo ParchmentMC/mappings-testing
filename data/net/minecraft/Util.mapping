@@ -8,6 +8,9 @@ CLASS net/minecraft/Util
 	METHOD blockUntilDone (Ljava/util/function/Function;Ljava/util/function/Predicate;)Ljava/lang/Object;
 		ARG 0 task
 		ARG 1 donePredicate
+	METHOD copyAndAdd (Ljava/lang/Object;Ljava/util/List;)Ljava/util/List;
+		ARG 0 value
+		ARG 1 list
 	METHOD copyAndAdd (Ljava/util/List;Ljava/lang/Object;)Ljava/util/List;
 		ARG 0 list
 		ARG 1 value
@@ -142,6 +145,7 @@ CLASS net/minecraft/Util
 	METHOD readTypedOrThrow (Lcom/mojang/datafixers/types/Type;Lcom/mojang/serialization/Dynamic;Z)Lcom/mojang/datafixers/Typed;
 		ARG 0 type
 		ARG 1 data
+		ARG 2 partial
 	METHOD runWithRetries (ILjava/lang/String;[Ljava/util/function/BooleanSupplier;)Z
 		ARG 0 maxTries
 		ARG 1 actionName

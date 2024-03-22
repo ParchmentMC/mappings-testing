@@ -108,6 +108,13 @@ CLASS net/minecraft/world/entity/npc/VillagerTrades
 			ARG 1 villagerXp
 			ARG 2 tradeableEnchantments
 	CLASS TreasureMapForEmeralds
+		METHOD <init> (ILnet/minecraft/tags/TagKey;Ljava/lang/String;Lnet/minecraft/core/Holder;II)V
+			ARG 1 emeraldCost
+			ARG 2 destination
+			ARG 3 displayName
+			ARG 4 destinationType
+			ARG 5 maxUses
+			ARG 6 villagerXp
 		METHOD <init> (ILnet/minecraft/tags/TagKey;Ljava/lang/String;Lnet/minecraft/world/level/saveddata/maps/MapDecoration$Type;II)V
 			ARG 1 emeraldCost
 			ARG 2 destination

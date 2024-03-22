@@ -3,6 +3,9 @@ CLASS net/minecraft/world/item/armortrim/TrimMaterials
 		ARG 0 context
 	METHOD bootstrap (Lnet/minecraft/data/worldgen/BootstrapContext;)V
 		ARG 0 context
+	METHOD getFromIngredient (Lnet/minecraft/core/HolderLookup$Provider;Lnet/minecraft/world/item/ItemStack;)Ljava/util/Optional;
+		ARG 0 regustries
+		ARG 1 ingredient
 	METHOD getFromIngredient (Lnet/minecraft/core/RegistryAccess;Lnet/minecraft/world/item/ItemStack;)Ljava/util/Optional;
 		ARG 0 registryAccess
 		ARG 1 ingredient

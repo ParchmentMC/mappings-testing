@@ -1,6 +1,9 @@
 CLASS net/minecraft/client/gui/MapRenderer
 	METHOD <init> (Lnet/minecraft/client/renderer/texture/TextureManager;)V
 		ARG 1 textureManager
+	METHOD <init> (Lnet/minecraft/client/renderer/texture/TextureManager;Lnet/minecraft/client/resources/MapDecorationTextureManager;)V
+		ARG 1 textureManager
+		ARG 2 decorationTextures
 	METHOD getOrCreateMapInstance (ILnet/minecraft/world/level/saveddata/maps/MapItemSavedData;)Lnet/minecraft/client/gui/MapRenderer$MapInstance;
 		ARG 1 mapId
 		ARG 2 mapData

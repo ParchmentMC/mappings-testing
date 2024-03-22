@@ -1,4 +1,7 @@
 CLASS net/minecraft/advancements/critereon/CriterionValidator
+	METHOD <init> (Lnet/minecraft/util/ProblemReporter;Lnet/minecraft/core/HolderGetter$Provider;)V
+		ARG 1 reporter
+		ARG 2 lootData
 	METHOD <init> (Lnet/minecraft/util/ProblemReporter;Lnet/minecraft/world/level/storage/loot/LootDataResolver;)V
 		ARG 1 reporter
 		ARG 2 lootData

@@ -1,4 +1,7 @@
 CLASS net/minecraft/world/item/enchantment/DamageEnchantment
+	METHOD <init> (Lnet/minecraft/world/item/enchantment/Enchantment$EnchantmentDefinition;Ljava/util/Optional;)V
+		ARG 1 definition
+		ARG 2 targets
 	METHOD <init> (Lnet/minecraft/world/item/enchantment/Enchantment$Rarity;IIILjava/util/Optional;[Lnet/minecraft/world/entity/EquipmentSlot;)V
 		ARG 1 rarity
 		ARG 2 minCost

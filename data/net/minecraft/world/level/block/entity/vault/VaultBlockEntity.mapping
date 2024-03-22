@@ -70,6 +70,10 @@ CLASS net/minecraft/world/level/block/entity/vault/VaultBlockEntity
 			ARG 2 config
 			ARG 3 sharedData
 			ARG 4 pos
+		METHOD getRandomDisplayItemFromLootTable (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/world/item/ItemStack;
+			ARG 0 level
+			ARG 1 pos
+			ARG 2 lootTable
 		METHOD getRandomDisplayItemFromLootTable (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/world/item/ItemStack;
 			ARG 0 level
 			ARG 1 pos

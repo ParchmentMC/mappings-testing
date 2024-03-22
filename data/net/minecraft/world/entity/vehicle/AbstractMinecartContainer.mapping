@@ -34,6 +34,9 @@ CLASS net/minecraft/world/entity/vehicle/AbstractMinecartContainer
 		COMMENT Sets the given item stack to the specified slot in the inventory (can be crafting or armor sections).
 		ARG 1 index
 		ARG 2 stack
+	METHOD setLootTable (Lnet/minecraft/resources/ResourceKey;J)V
+		ARG 1 lootTable
+		ARG 2 seed
 	METHOD setLootTable (Lnet/minecraft/resources/ResourceLocation;J)V
 		ARG 1 lootTable
 		ARG 2 lootTableSeed

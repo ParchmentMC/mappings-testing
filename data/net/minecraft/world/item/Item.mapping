@@ -23,6 +23,9 @@ CLASS net/minecraft/world/item/Item
 		ARG 1 stack
 		ARG 2 level
 		ARG 3 livingEntity
+	METHOD getAttackDamageBonus (Lnet/minecraft/world/entity/player/Player;F)F
+		ARG 1 player
+		ARG 2 baseAttackDamage
 	METHOD getBarColor (Lnet/minecraft/world/item/ItemStack;)I
 		ARG 1 stack
 	METHOD getBarWidth (Lnet/minecraft/world/item/ItemStack;)I
@@ -87,6 +90,9 @@ CLASS net/minecraft/world/item/Item
 		ARG 1 stack
 	METHOD isComplex ()Z
 		COMMENT Returns {@code true} if this is a complex item.
+	METHOD isCorrectToolForDrops (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/block/state/BlockState;)Z
+		ARG 1 stack
+		ARG 2 state
 	METHOD isCorrectToolForDrops (Lnet/minecraft/world/level/block/state/BlockState;)Z
 		COMMENT Check whether this Item can harvest the given Block
 		ARG 1 block

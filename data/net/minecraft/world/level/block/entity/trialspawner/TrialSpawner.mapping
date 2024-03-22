@@ -32,6 +32,10 @@ CLASS net/minecraft/world/level/block/entity/trialspawner/TrialSpawner
 		ARG 2 random
 	METHOD canSpawnInLevel (Lnet/minecraft/world/level/Level;)Z
 		ARG 1 level
+	METHOD ejectReward (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/resources/ResourceKey;)V
+		ARG 1 level
+		ARG 2 pos
+		ARG 3 lootTable
 	METHOD ejectReward (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/resources/ResourceLocation;)V
 		ARG 1 level
 		ARG 2 pos

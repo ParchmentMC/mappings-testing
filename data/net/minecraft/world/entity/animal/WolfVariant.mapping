@@ -1,0 +1,9 @@
+CLASS net/minecraft/world/entity/animal/WolfVariant
+	METHOD <init> (Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/core/HolderSet;)V
+		ARG 1 wildTexture
+		ARG 2 tameTexture
+		ARG 3 angryTexture
+	METHOD equals (Ljava/lang/Object;)Z
+		ARG 1 other
+	METHOD fullTextureId (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/resources/ResourceLocation;
+		ARG 0 texture

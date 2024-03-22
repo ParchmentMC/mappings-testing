@@ -90,8 +90,12 @@ CLASS net/minecraft/world/item/enchantment/EnchantmentHelper
 		ARG 0 stack
 	METHOD getSneakingSpeedBonus (Lnet/minecraft/world/entity/LivingEntity;)F
 		ARG 0 entity
+	METHOD getSweepingDamageRatio (I)F
+		ARG 0 enchantmentLevel
 	METHOD getSweepingDamageRatio (Lnet/minecraft/world/entity/LivingEntity;)F
 		ARG 0 entity
+	METHOD hasAnyEnchantments (Lnet/minecraft/world/item/ItemStack;)Z
+		ARG 0 stack
 	METHOD hasAquaAffinity (Lnet/minecraft/world/entity/LivingEntity;)Z
 		ARG 0 entity
 	METHOD hasBindingCurse (Lnet/minecraft/world/item/ItemStack;)Z

@@ -84,6 +84,10 @@ CLASS net/minecraft/world/entity/LivingEntity
 		ARG 1 vehicle
 	METHOD doAutoAttackOnTouch (Lnet/minecraft/world/entity/LivingEntity;)V
 		ARG 1 target
+	METHOD doHurtEquipment (Lnet/minecraft/world/damagesource/DamageSource;F[Lnet/minecraft/world/entity/EquipmentSlot;)V
+		ARG 1 damageSource
+		ARG 2 damageAmount
+		ARG 3 slots
 	METHOD doHurtTarget (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 1 target
 	METHOD doPush (Lnet/minecraft/world/entity/Entity;)V

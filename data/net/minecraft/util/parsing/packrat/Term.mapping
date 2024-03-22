@@ -1,0 +1,16 @@
+CLASS net/minecraft/util/parsing/packrat/Term
+	METHOD alternative ([Lnet/minecraft/util/parsing/packrat/Term;)Lnet/minecraft/util/parsing/packrat/Term;
+		ARG 0 elements
+	METHOD marker (Lnet/minecraft/util/parsing/packrat/Atom;Ljava/lang/Object;)Lnet/minecraft/util/parsing/packrat/Term;
+		ARG 0 name
+		ARG 1 value
+	METHOD named (Lnet/minecraft/util/parsing/packrat/Atom;)Lnet/minecraft/util/parsing/packrat/Term;
+		ARG 0 name
+	METHOD optional (Lnet/minecraft/util/parsing/packrat/Term;)Lnet/minecraft/util/parsing/packrat/Term;
+		ARG 0 term
+	METHOD parse (Lnet/minecraft/util/parsing/packrat/ParseState;Lnet/minecraft/util/parsing/packrat/Scope;Lnet/minecraft/util/parsing/packrat/Control;)Z
+		ARG 1 parseState
+		ARG 2 scope
+		ARG 3 control
+	METHOD sequence ([Lnet/minecraft/util/parsing/packrat/Term;)Lnet/minecraft/util/parsing/packrat/Term;
+		ARG 0 elements

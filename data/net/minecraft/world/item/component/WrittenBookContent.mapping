@@ -4,6 +4,10 @@ CLASS net/minecraft/world/item/component/WrittenBookContent
 	METHOD isPageTooLarge (Lnet/minecraft/network/chat/Component;Lnet/minecraft/core/HolderLookup$Provider;)Z
 		ARG 0 page
 		ARG 1 registryAccess
+	METHOD pageCodec (Lcom/mojang/serialization/Codec;)Lcom/mojang/serialization/Codec;
+		ARG 0 codec
+	METHOD pagesCodec (Lcom/mojang/serialization/Codec;)Lcom/mojang/serialization/Codec;
+		ARG 0 codec
 	METHOD resolve (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/world/entity/player/Player;)Lnet/minecraft/world/item/component/WrittenBookContent;
 		ARG 1 source
 		ARG 2 player

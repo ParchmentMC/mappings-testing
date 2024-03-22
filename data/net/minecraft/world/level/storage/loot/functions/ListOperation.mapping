@@ -3,6 +3,8 @@ CLASS net/minecraft/world/level/storage/loot/functions/ListOperation
 		ARG 1 currentValue
 		ARG 2 operand
 		ARG 3 maxSize
+	METHOD codec (I)Lcom/mojang/serialization/MapCodec;
+		ARG 0 maxSize
 	CLASS Type
 		METHOD <init> (Ljava/lang/String;ILjava/lang/String;Lcom/mojang/serialization/MapCodec;)V
 			ARG 3 id

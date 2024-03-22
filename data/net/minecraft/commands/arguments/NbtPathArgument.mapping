@@ -83,6 +83,8 @@ CLASS net/minecraft/commands/arguments/NbtPathArgument
 			ARG 1 b
 		METHOD lambda$set$2 (Lnet/minecraft/commands/arguments/NbtPathArgument$Node;Lorg/apache/commons/lang3/mutable/MutableBoolean;Lnet/minecraft/nbt/Tag;Lnet/minecraft/nbt/Tag;)Ljava/lang/Integer;
 			ARG 3 listElementTag
+		METHOD of (Ljava/lang/String;)Lnet/minecraft/commands/arguments/NbtPathArgument$NbtPath;
+			ARG 0 path
 		METHOD remove (Lnet/minecraft/nbt/Tag;)I
 			ARG 1 tag
 		METHOD set (Lnet/minecraft/nbt/Tag;Lnet/minecraft/nbt/Tag;)I

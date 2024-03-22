@@ -1,4 +1,7 @@
 CLASS net/minecraft/world/item/enchantment/ProtectionEnchantment
+	METHOD <init> (Lnet/minecraft/world/item/enchantment/Enchantment$EnchantmentDefinition;Lnet/minecraft/world/item/enchantment/ProtectionEnchantment$Type;)V
+		ARG 1 definition
+		ARG 2 type
 	METHOD <init> (Lnet/minecraft/world/item/enchantment/Enchantment$Rarity;Lnet/minecraft/world/item/enchantment/ProtectionEnchantment$Type;[Lnet/minecraft/world/entity/EquipmentSlot;)V
 		ARG 1 rarity
 		ARG 2 type

@@ -7,6 +7,8 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 		COMMENT The rarity of the enchantment.
 	FIELD slots [Lnet/minecraft/world/entity/EquipmentSlot;
 		COMMENT The valid equipment slots for the enchantment.
+	METHOD <init> (Lnet/minecraft/world/item/enchantment/Enchantment$EnchantmentDefinition;)V
+		ARG 1 definition
 	METHOD <init> (Lnet/minecraft/world/item/enchantment/Enchantment$Rarity;Lnet/minecraft/tags/TagKey;[Lnet/minecraft/world/entity/EquipmentSlot;)V
 		ARG 1 rarity
 		ARG 2 match
@@ -28,6 +30,25 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 		COMMENT @return Whether the two enchantments are compatible.
 		ARG 1 other
 			COMMENT The other enchantment to test compatibility with.
+	METHOD constantCost (I)Lnet/minecraft/world/item/enchantment/Enchantment$Cost;
+		ARG 0 cost
+	METHOD definition (Lnet/minecraft/tags/TagKey;IILnet/minecraft/world/item/enchantment/Enchantment$Cost;Lnet/minecraft/world/item/enchantment/Enchantment$Cost;I[Lnet/minecraft/world/entity/EquipmentSlot;)Lnet/minecraft/world/item/enchantment/Enchantment$EnchantmentDefinition;
+		ARG 0 supportedItems
+		ARG 1 weight
+		ARG 2 maxLevel
+		ARG 3 minCost
+		ARG 4 maxCost
+		ARG 5 anvilCost
+		ARG 6 slots
+	METHOD definition (Lnet/minecraft/tags/TagKey;Lnet/minecraft/tags/TagKey;IILnet/minecraft/world/item/enchantment/Enchantment$Cost;Lnet/minecraft/world/item/enchantment/Enchantment$Cost;I[Lnet/minecraft/world/entity/EquipmentSlot;)Lnet/minecraft/world/item/enchantment/Enchantment$EnchantmentDefinition;
+		ARG 0 supportedItems
+		ARG 1 primaryItems
+		ARG 2 weight
+		ARG 3 maxLevel
+		ARG 4 minCost
+		ARG 5 maxCost
+		ARG 6 anvilCost
+		ARG 7 slots
 	METHOD doPostAttack (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/Entity;I)V
 		COMMENT A hook that is called every time an entity with this enchantment attacks another entity.
 		ARG 1 attacker
@@ -44,6 +65,9 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 			COMMENT The entity that attacked the target.
 		ARG 3 level
 			COMMENT The level of the enchantment.
+	METHOD dynamicCost (II)Lnet/minecraft/world/item/enchantment/Enchantment$Cost;
+		ARG 0 base
+		ARG 1 perLevel
 	METHOD getDamageBonus (ILnet/minecraft/world/entity/EntityType;)F
 		ARG 1 level
 		ARG 2 creatureType
@@ -93,12 +117,17 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 	METHOD isDiscoverable ()Z
 		COMMENT Checks if the enchantment can be discovered by game mechanics which pull random enchantments from the enchantment registry.
 		COMMENT @return Whether the enchantment can be discovered.
+	METHOD isPrimaryItem (Lnet/minecraft/world/item/ItemStack;)Z
+		ARG 1 stack
 	METHOD isTradeable ()Z
 		COMMENT Checks if the enchantment can be traded by NPCs like villagers.
 		COMMENT @return Whether this enchantment can be traded.
 	METHOD isTreasureOnly ()Z
 		COMMENT Checks if the enchantment should be considered a treasure enchantment. These enchantments can not be obtained using the enchantment table. The mending enchantment is an example of a treasure enchantment.
 		COMMENT @return Whether the enchantment is a treasure enchantment.
+	CLASS Cost
+		METHOD calculate (I)I
+			ARG 1 level
 	CLASS Rarity
 		METHOD <init> (Ljava/lang/String;II)V
 			ARG 3 weight

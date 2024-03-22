@@ -23,6 +23,9 @@ CLASS net/minecraft/commands/arguments/item/ItemParser
 		ARG 0 itemTag
 	METHOD parse (Lcom/mojang/brigadier/StringReader;)Lnet/minecraft/commands/arguments/item/ItemParser$ItemResult;
 		ARG 1 reader
+	METHOD parse (Lcom/mojang/brigadier/StringReader;Lnet/minecraft/commands/arguments/item/ItemParser$Visitor;)V
+		ARG 1 reader
+		ARG 2 visitor
 	METHOD parseForItem (Lnet/minecraft/core/HolderLookup;Lcom/mojang/brigadier/StringReader;)Lnet/minecraft/commands/arguments/item/ItemParser$ItemResult;
 		ARG 0 lookup
 		ARG 1 reader
@@ -37,3 +40,33 @@ CLASS net/minecraft/commands/arguments/item/ItemParser
 		ARG 1 builder
 	METHOD suggestTag (Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 builder
+	CLASS State
+		METHOD <init> (Lnet/minecraft/commands/arguments/item/ItemParser;Lcom/mojang/brigadier/StringReader;Lnet/minecraft/commands/arguments/item/ItemParser$Visitor;)V
+			ARG 2 reader
+			ARG 3 visitor
+		METHOD readComponent (Lnet/minecraft/core/component/DataComponentType;)V
+			ARG 1 componentType
+		METHOD readComponentType (Lcom/mojang/brigadier/StringReader;)Lnet/minecraft/core/component/DataComponentType;
+			ARG 0 reader
+		METHOD suggestAssignment (Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;
+			ARG 1 builder
+		METHOD suggestComponentAssignment (Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;
+			ARG 1 builder
+		METHOD suggestItem (Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;
+			ARG 1 builder
+		METHOD suggestNextOrEndComponents (Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;
+			ARG 1 builder
+		METHOD suggestStartComponents (Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;
+			ARG 1 builder
+	CLASS Visitor
+		METHOD visitComponent (Lnet/minecraft/core/component/DataComponentType;Ljava/lang/Object;)V
+			ARG 1 componentType
+			ARG 2 value
+		METHOD visitItem (Lnet/minecraft/core/Holder;)V
+			ARG 1 item
+		METHOD visitSuggestions (Ljava/util/function/Function;)V
+			ARG 1 suggestions
+	CLASS SuggestionsVisitor
+		METHOD resolveSuggestions (Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;Lcom/mojang/brigadier/StringReader;)Ljava/util/concurrent/CompletableFuture;
+			ARG 1 builder
+			ARG 2 reader

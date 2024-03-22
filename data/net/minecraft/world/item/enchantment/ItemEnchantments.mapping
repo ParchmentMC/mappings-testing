@@ -6,6 +6,8 @@ CLASS net/minecraft/world/item/enchantment/ItemEnchantments
 		ARG 1 other
 	METHOD getLevel (Lnet/minecraft/world/item/enchantment/Enchantment;)I
 		ARG 1 enchantment
+	METHOD withTooltip (Z)Lnet/minecraft/world/item/enchantment/ItemEnchantments;
+		ARG 1 showInTooltip
 	CLASS Mutable
 		METHOD <init> (Lnet/minecraft/world/item/enchantment/ItemEnchantments;)V
 			ARG 1 enchantments

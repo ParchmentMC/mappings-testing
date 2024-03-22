@@ -99,6 +99,10 @@ CLASS net/minecraft/client/gui/Gui
 			COMMENT the GuiGraphics object used for rendering.
 		ARG 2 partialTick
 			COMMENT the partial tick value for smooth animations.
+	METHOD renderArmor (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/world/entity/player/Player;IIII)V
+		ARG 0 guiGraphics
+		ARG 1 player
+		ARG 5 x
 	METHOD renderCameraOverlays (Lnet/minecraft/client/gui/GuiGraphics;F)V
 		ARG 1 guiGraphics
 		ARG 2 partialTick
@@ -134,6 +138,9 @@ CLASS net/minecraft/client/gui/Gui
 			COMMENT the x-coordinate for rendering the experience bar.
 	METHOD renderExperienceLevel (Lnet/minecraft/client/gui/GuiGraphics;F)V
 		ARG 1 guiGraphics
+	METHOD renderFood (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/world/entity/player/Player;II)V
+		ARG 1 guiGraphics
+		ARG 2 player
 	METHOD renderHeart (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/gui/Gui$HeartType;IIZZZ)V
 		ARG 1 guiGraphics
 		ARG 2 heartType

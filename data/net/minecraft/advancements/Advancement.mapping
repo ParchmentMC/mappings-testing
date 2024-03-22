@@ -41,6 +41,9 @@ CLASS net/minecraft/advancements/Advancement
 		ARG 0 buffer
 	METHOD validate (Lnet/minecraft/advancements/Advancement;)Lcom/mojang/serialization/DataResult;
 		ARG 0 advancement
+	METHOD validate (Lnet/minecraft/util/ProblemReporter;Lnet/minecraft/core/HolderGetter$Provider;)V
+		ARG 1 reporter
+		ARG 2 lootData
 	METHOD validate (Lnet/minecraft/util/ProblemReporter;Lnet/minecraft/world/level/storage/loot/LootDataResolver;)V
 		ARG 1 problemReporter
 		ARG 2 lootDataResolver

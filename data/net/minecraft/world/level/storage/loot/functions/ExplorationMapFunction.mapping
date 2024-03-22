@@ -1,5 +1,12 @@
 CLASS net/minecraft/world/level/storage/loot/functions/ExplorationMapFunction
 	COMMENT Convert any empty maps into explorer maps that lead to a structure that is nearest to the current {@linkplain LootContextParams.ORIGIN}, if present.
+	METHOD <init> (Ljava/util/List;Lnet/minecraft/tags/TagKey;Lnet/minecraft/core/Holder;BIZ)V
+		ARG 1 conditons
+		ARG 2 destination
+		ARG 3 mapDecoration
+		ARG 4 zoom
+		ARG 5 searchRadius
+		ARG 6 skipKnownStructures
 	METHOD <init> (Ljava/util/List;Lnet/minecraft/tags/TagKey;Lnet/minecraft/world/level/saveddata/maps/MapDecoration$Type;BIZ)V
 		ARG 1 conditions
 		ARG 2 destination
@@ -13,6 +20,8 @@ CLASS net/minecraft/world/level/storage/loot/functions/ExplorationMapFunction
 	CLASS Builder
 		METHOD setDestination (Lnet/minecraft/tags/TagKey;)Lnet/minecraft/world/level/storage/loot/functions/ExplorationMapFunction$Builder;
 			ARG 1 destination
+		METHOD setMapDecoration (Lnet/minecraft/core/Holder;)Lnet/minecraft/world/level/storage/loot/functions/ExplorationMapFunction$Builder;
+			ARG 1 mapDecoration
 		METHOD setMapDecoration (Lnet/minecraft/world/level/saveddata/maps/MapDecoration$Type;)Lnet/minecraft/world/level/storage/loot/functions/ExplorationMapFunction$Builder;
 			ARG 1 mapDecoration
 		METHOD setSearchRadius (I)Lnet/minecraft/world/level/storage/loot/functions/ExplorationMapFunction$Builder;

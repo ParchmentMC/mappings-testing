@@ -6,6 +6,12 @@ CLASS net/minecraft/world/item/armortrim/ArmorTrim
 		ARG 1 material
 		ARG 2 pattern
 		ARG 3 showInTooltip
+	METHOD <init> (Lnet/minecraft/core/Holder;Lnet/minecraft/core/Holder;ZLjava/util/function/Function;Ljava/util/function/Function;)V
+		ARG 1 material
+		ARG 2 pattern
+		ARG 3 showInTooltip
+		ARG 4 innerTexture
+		ARG 5 outerTexture
 	METHOD appendUpgradeHoverText (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/core/RegistryAccess;Ljava/util/List;)V
 		ARG 0 armor
 		ARG 1 registryAccess
@@ -13,6 +19,9 @@ CLASS net/minecraft/world/item/armortrim/ArmorTrim
 	METHOD equals (Ljava/lang/Object;)Z
 		ARG 1 other
 	METHOD getColorPaletteSuffix (Lnet/minecraft/core/Holder;)Ljava/lang/String;
+		ARG 1 armorMaterial
+	METHOD getColorPaletteSuffix (Lnet/minecraft/core/Holder;Lnet/minecraft/core/Holder;)Ljava/lang/String;
+		ARG 0 trimMaterial
 		ARG 1 armorMaterial
 	METHOD getColorPaletteSuffix (Lnet/minecraft/world/item/ArmorMaterial;)Ljava/lang/String;
 		ARG 1 armorMaterial
@@ -35,3 +44,5 @@ CLASS net/minecraft/world/item/armortrim/ArmorTrim
 		ARG 0 registryAccess
 		ARG 1 armor
 		ARG 2 trim
+	METHOD withTooltip (Z)Lnet/minecraft/world/item/armortrim/ArmorTrim;
+		ARG 1 showInTooltip

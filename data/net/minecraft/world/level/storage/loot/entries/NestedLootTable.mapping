@@ -7,5 +7,7 @@ CLASS net/minecraft/world/level/storage/loot/entries/NestedLootTable
 		ARG 5 functions
 	METHOD inlineLootTable (Lnet/minecraft/world/level/storage/loot/LootTable;)Lnet/minecraft/world/level/storage/loot/entries/LootPoolSingletonContainer$Builder;
 		ARG 0 lootTable
+	METHOD lootTableReference (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/world/level/storage/loot/entries/LootPoolSingletonContainer$Builder;
+		ARG 0 lootTable
 	METHOD lootTableReference (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/world/level/storage/loot/entries/LootPoolSingletonContainer$Builder;
 		ARG 0 lootTable

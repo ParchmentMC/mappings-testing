@@ -3,6 +3,9 @@ CLASS net/minecraft/world/item/armortrim/TrimPatterns
 		ARG 0 context
 	METHOD bootstrap (Lnet/minecraft/data/worldgen/BootstrapContext;)V
 		ARG 0 context
+	METHOD getFromTemplate (Lnet/minecraft/core/HolderLookup$Provider;Lnet/minecraft/world/item/ItemStack;)Ljava/util/Optional;
+		ARG 0 registries
+		ARG 1 template
 	METHOD getFromTemplate (Lnet/minecraft/core/RegistryAccess;Lnet/minecraft/world/item/ItemStack;)Ljava/util/Optional;
 		ARG 0 registry
 		ARG 1 template

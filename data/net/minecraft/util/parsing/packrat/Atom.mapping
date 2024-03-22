@@ -1,0 +1,3 @@
+CLASS net/minecraft/util/parsing/packrat/Atom
+	METHOD of (Ljava/lang/String;)Lnet/minecraft/util/parsing/packrat/Atom;
+		ARG 0 name

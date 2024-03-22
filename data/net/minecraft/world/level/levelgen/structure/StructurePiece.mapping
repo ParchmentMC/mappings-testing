@@ -21,6 +21,13 @@ CLASS net/minecraft/world/level/levelgen/structure/StructurePiece
 		ARG 5 box
 	METHOD createBoundingBox (Ljava/util/stream/Stream;)Lnet/minecraft/world/level/levelgen/structure/BoundingBox;
 		ARG 0 pieces
+	METHOD createChest (Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/world/level/levelgen/structure/BoundingBox;Lnet/minecraft/util/RandomSource;Lnet/minecraft/core/BlockPos;Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/world/level/block/state/BlockState;)Z
+		ARG 1 level
+		ARG 2 box
+		ARG 3 random
+		ARG 4 pos
+		ARG 5 lootTable
+		ARG 6 state
 	METHOD createChest (Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/world/level/levelgen/structure/BoundingBox;Lnet/minecraft/util/RandomSource;Lnet/minecraft/core/BlockPos;Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 1 level
 		ARG 2 box
@@ -28,6 +35,14 @@ CLASS net/minecraft/world/level/levelgen/structure/StructurePiece
 		ARG 4 pos
 		ARG 5 lootTable
 		ARG 6 state
+	METHOD createChest (Lnet/minecraft/world/level/WorldGenLevel;Lnet/minecraft/world/level/levelgen/structure/BoundingBox;Lnet/minecraft/util/RandomSource;IIILnet/minecraft/resources/ResourceKey;)Z
+		ARG 1 level
+		ARG 2 box
+		ARG 3 random
+		ARG 4 x
+		ARG 5 y
+		ARG 6 z
+		ARG 7 lootTable
 	METHOD createChest (Lnet/minecraft/world/level/WorldGenLevel;Lnet/minecraft/world/level/levelgen/structure/BoundingBox;Lnet/minecraft/util/RandomSource;IIILnet/minecraft/resources/ResourceLocation;)Z
 		ARG 1 level
 		ARG 2 box
@@ -36,6 +51,15 @@ CLASS net/minecraft/world/level/levelgen/structure/StructurePiece
 		ARG 5 y
 		ARG 6 z
 		ARG 7 lootTable
+	METHOD createDispenser (Lnet/minecraft/world/level/WorldGenLevel;Lnet/minecraft/world/level/levelgen/structure/BoundingBox;Lnet/minecraft/util/RandomSource;IIILnet/minecraft/core/Direction;Lnet/minecraft/resources/ResourceKey;)Z
+		ARG 1 level
+		ARG 2 box
+		ARG 3 random
+		ARG 4 x
+		ARG 5 y
+		ARG 6 z
+		ARG 7 facing
+		ARG 8 lootTable
 	METHOD createDispenser (Lnet/minecraft/world/level/WorldGenLevel;Lnet/minecraft/world/level/levelgen/structure/BoundingBox;Lnet/minecraft/util/RandomSource;IIILnet/minecraft/core/Direction;Lnet/minecraft/resources/ResourceLocation;)Z
 		ARG 1 level
 		ARG 2 box
