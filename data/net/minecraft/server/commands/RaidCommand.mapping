@@ -32,6 +32,9 @@ CLASS net/minecraft/server/commands/RaidCommand
 	METHOD setBadOmenLevel (Lnet/minecraft/commands/CommandSourceStack;I)I
 		ARG 0 source
 		ARG 1 level
+	METHOD setRaidOmenLevel (Lnet/minecraft/commands/CommandSourceStack;I)I
+		ARG 0 source
+		ARG 1 level
 	METHOD spawnLeader (Lnet/minecraft/commands/CommandSourceStack;)I
 		ARG 0 source
 	METHOD start (Lnet/minecraft/commands/CommandSourceStack;I)I

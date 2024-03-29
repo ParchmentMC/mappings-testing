@@ -19,6 +19,10 @@ CLASS net/minecraft/world/level/levelgen/SurfaceRules
 		ARG 0 registry
 		ARG 1 name
 		ARG 2 value
+	METHOD register (Lnet/minecraft/core/Registry;Ljava/lang/String;Lnet/minecraft/util/KeyDispatchDataCodec;)Lcom/mojang/serialization/MapCodec;
+		ARG 0 registry
+		ARG 1 name
+		ARG 2 codec
 	METHOD sequence ([Lnet/minecraft/world/level/levelgen/SurfaceRules$RuleSource;)Lnet/minecraft/world/level/levelgen/SurfaceRules$RuleSource;
 		ARG 0 rules
 	METHOD state (Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/levelgen/SurfaceRules$RuleSource;
@@ -82,6 +86,8 @@ CLASS net/minecraft/world/level/levelgen/SurfaceRules
 	CLASS RuleSource
 		METHOD bootstrap (Lnet/minecraft/core/Registry;)Lcom/mojang/serialization/Codec;
 			ARG 0 registry
+		METHOD bootstrap (Lnet/minecraft/core/Registry;)Lcom/mojang/serialization/MapCodec;
+			ARG 0 registry
 	CLASS SurfaceRule
 		METHOD tryApply (III)Lnet/minecraft/world/level/block/state/BlockState;
 			ARG 1 x
@@ -103,6 +109,8 @@ CLASS net/minecraft/world/level/levelgen/SurfaceRules
 			ARG 1 context
 	CLASS ConditionSource
 		METHOD bootstrap (Lnet/minecraft/core/Registry;)Lcom/mojang/serialization/Codec;
+			ARG 0 registry
+		METHOD bootstrap (Lnet/minecraft/core/Registry;)Lcom/mojang/serialization/MapCodec;
 			ARG 0 registry
 	CLASS StoneDepthCheck
 		METHOD apply (Lnet/minecraft/world/level/levelgen/SurfaceRules$Context;)Lnet/minecraft/world/level/levelgen/SurfaceRules$Condition;

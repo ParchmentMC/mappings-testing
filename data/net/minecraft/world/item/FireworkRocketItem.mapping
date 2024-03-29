@@ -5,6 +5,9 @@ CLASS net/minecraft/world/item/FireworkRocketItem
 		ARG 2 level
 		ARG 3 tooltip
 		ARG 4 flag
+	METHOD getEntityPokingOutOfBlockPos (Lnet/minecraft/core/dispenser/BlockSource;Lnet/minecraft/core/Direction;)Lnet/minecraft/world/phys/Vec3;
+		ARG 0 source
+		ARG 1 direction
 	METHOD setDuration (Lnet/minecraft/world/item/ItemStack;B)V
 		ARG 0 stack
 		ARG 1 flightDuration

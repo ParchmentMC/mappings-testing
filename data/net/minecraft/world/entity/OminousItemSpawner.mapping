@@ -1,0 +1,6 @@
+CLASS net/minecraft/world/entity/OminousItemSpawner
+	METHOD create (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/entity/OminousItemSpawner;
+		ARG 0 level
+		ARG 1 item
+	METHOD setItem (Lnet/minecraft/world/item/ItemStack;)V
+		ARG 1 item

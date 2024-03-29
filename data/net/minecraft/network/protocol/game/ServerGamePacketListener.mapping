@@ -106,6 +106,8 @@ CLASS net/minecraft/network/protocol/game/ServerGamePacketListener
 		ARG 1 packet
 	METHOD handleSignUpdate (Lnet/minecraft/network/protocol/game/ServerboundSignUpdatePacket;)V
 		ARG 1 packet
+	METHOD handleSignedChatCommand (Lnet/minecraft/network/protocol/game/ServerboundChatCommandSignedPacket;)V
+		ARG 1 packet
 	METHOD handleTeleportToEntityPacket (Lnet/minecraft/network/protocol/game/ServerboundTeleportToEntityPacket;)V
 		ARG 1 packet
 	METHOD handleUseItem (Lnet/minecraft/network/protocol/game/ServerboundUseItemPacket;)V

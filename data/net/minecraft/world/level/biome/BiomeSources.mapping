@@ -1,3 +1,5 @@
 CLASS net/minecraft/world/level/biome/BiomeSources
 	METHOD bootstrap (Lnet/minecraft/core/Registry;)Lcom/mojang/serialization/Codec;
 		ARG 0 registry
+	METHOD bootstrap (Lnet/minecraft/core/Registry;)Lcom/mojang/serialization/MapCodec;
+		ARG 0 registry

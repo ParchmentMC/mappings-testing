@@ -3,6 +3,8 @@ CLASS net/minecraft/core/component/DataComponentPatch
 		ARG 1 map
 	METHOD equals (Ljava/lang/Object;)Z
 		ARG 1 other
+	METHOD forget (Ljava/util/function/Predicate;)Lnet/minecraft/core/component/DataComponentPatch;
+		ARG 1 predicate
 	METHOD get (Lnet/minecraft/core/component/DataComponentType;)Ljava/util/Optional;
 		ARG 1 component
 	METHOD toString (Lit/unimi/dsi/fastutil/objects/Reference2ObjectMap;)Ljava/lang/String;

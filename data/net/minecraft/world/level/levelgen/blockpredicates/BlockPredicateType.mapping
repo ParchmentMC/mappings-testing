@@ -2,3 +2,6 @@ CLASS net/minecraft/world/level/levelgen/blockpredicates/BlockPredicateType
 	METHOD register (Ljava/lang/String;Lcom/mojang/serialization/Codec;)Lnet/minecraft/world/level/levelgen/blockpredicates/BlockPredicateType;
 		ARG 0 name
 		ARG 1 codec
+	METHOD register (Ljava/lang/String;Lcom/mojang/serialization/MapCodec;)Lnet/minecraft/world/level/levelgen/blockpredicates/BlockPredicateType;
+		ARG 0 name
+		ARG 1 codec

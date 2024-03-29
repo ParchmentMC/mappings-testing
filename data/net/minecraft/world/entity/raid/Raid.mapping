@@ -8,6 +8,8 @@ CLASS net/minecraft/world/entity/raid/Raid
 		ARG 2 compound
 	METHOD absorbBadOmen (Lnet/minecraft/world/entity/player/Player;)V
 		ARG 1 player
+	METHOD absorbRaidOmen (Lnet/minecraft/server/level/ServerPlayer;)Z
+		ARG 1 player
 	METHOD addHeroOfTheVillage (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 player
 	METHOD addWaveMob (ILnet/minecraft/world/entity/raid/Raider;)Z
@@ -65,6 +67,8 @@ CLASS net/minecraft/world/entity/raid/Raid
 	METHOD setLeader (ILnet/minecraft/world/entity/raid/Raider;)V
 		ARG 1 wave
 		ARG 2 raider
+	METHOD setRaidOmenLevel (I)V
+		ARG 1 raidOmenLevel
 	METHOD spawnGroup (Lnet/minecraft/core/BlockPos;)V
 		ARG 1 pos
 	CLASS RaidStatus

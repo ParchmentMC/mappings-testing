@@ -2,5 +2,5 @@ CLASS net/minecraft/data/loot/LootTableSubProvider
 	METHOD generate (Ljava/util/function/BiConsumer;)V
 		ARG 1 output
 	METHOD generate (Lnet/minecraft/core/HolderLookup$Provider;Ljava/util/function/BiConsumer;)V
-		ARG 1 levelRegistry
+		ARG 1 registries
 		ARG 2 generator

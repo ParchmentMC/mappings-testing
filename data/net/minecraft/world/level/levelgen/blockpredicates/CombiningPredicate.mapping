@@ -3,3 +3,5 @@ CLASS net/minecraft/world/level/levelgen/blockpredicates/CombiningPredicate
 		ARG 1 predicates
 	METHOD codec (Ljava/util/function/Function;)Lcom/mojang/serialization/Codec;
 		ARG 0 factory
+	METHOD codec (Ljava/util/function/Function;)Lcom/mojang/serialization/MapCodec;
+		ARG 0 factory

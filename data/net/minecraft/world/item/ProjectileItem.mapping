@@ -1,0 +1,27 @@
+CLASS net/minecraft/world/item/ProjectileItem
+	METHOD asProjectile (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/Position;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/core/Direction;)Lnet/minecraft/world/entity/projectile/Projectile;
+		ARG 1 level
+		ARG 2 pos
+		ARG 3 stack
+		ARG 4 direction
+	METHOD shoot (Lnet/minecraft/world/entity/projectile/Projectile;DDDFF)V
+		ARG 1 projectile
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 velocity
+		ARG 9 inaccuracy
+	CLASS DispenseConfig
+		CLASS Builder
+			METHOD overrideDispenseEvent (I)Lnet/minecraft/world/item/ProjectileItem$DispenseConfig$Builder;
+				ARG 1 overrideDispenseEvent
+			METHOD positionFunction (Lnet/minecraft/world/item/ProjectileItem$PositionFunction;)Lnet/minecraft/world/item/ProjectileItem$DispenseConfig$Builder;
+				ARG 1 positionFunction
+			METHOD power (F)Lnet/minecraft/world/item/ProjectileItem$DispenseConfig$Builder;
+				ARG 1 power
+			METHOD uncertainty (F)Lnet/minecraft/world/item/ProjectileItem$DispenseConfig$Builder;
+				ARG 1 uncertainty
+	CLASS PositionFunction
+		METHOD getDispensePosition (Lnet/minecraft/core/dispenser/BlockSource;Lnet/minecraft/core/Direction;)Lnet/minecraft/core/Position;
+			ARG 1 source
+			ARG 2 direction

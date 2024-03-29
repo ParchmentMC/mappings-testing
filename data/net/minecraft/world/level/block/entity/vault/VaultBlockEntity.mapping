@@ -19,6 +19,12 @@ CLASS net/minecraft/world/level/block/entity/vault/VaultBlockEntity
 			ARG 1 pos
 			ARG 2 state
 			ARG 3 sharedData
+		METHOD emitActivationParticles (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/entity/vault/VaultSharedData;Lnet/minecraft/core/particles/ParticleOptions;)V
+			ARG 0 level
+			ARG 1 pos
+			ARG 2 state
+			ARG 3 sharedData
+			ARG 4 particle
 		METHOD emitConnectionParticlesForNearbyPlayers (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/entity/vault/VaultSharedData;)V
 			ARG 0 level
 			ARG 1 pos
@@ -31,10 +37,19 @@ CLASS net/minecraft/world/level/block/entity/vault/VaultBlockEntity
 		METHOD emitDeactivationParticles (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)V
 			ARG 0 level
 			ARG 1 pos
+		METHOD emitDeactivationParticles (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/particles/ParticleOptions;)V
+			ARG 0 level
+			ARG 1 pos
+			ARG 2 particle
 		METHOD emitIdleParticles (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/entity/vault/VaultSharedData;)V
 			ARG 0 level
 			ARG 1 pos
 			ARG 2 sharedData
+		METHOD emitIdleParticles (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/entity/vault/VaultSharedData;Lnet/minecraft/core/particles/ParticleOptions;)V
+			ARG 0 level
+			ARG 1 pos
+			ARG 2 sharedData
+			ARG 3 particle
 		METHOD isWithinConnectionRange (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/entity/vault/VaultSharedData;Lnet/minecraft/world/entity/player/Player;)Z
 			ARG 0 pos
 			ARG 1 sharedData

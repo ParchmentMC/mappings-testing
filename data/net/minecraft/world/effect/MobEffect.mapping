@@ -47,9 +47,21 @@ CLASS net/minecraft/world/effect/MobEffect
 		COMMENT Get if the potion is beneficial to the player. Beneficial potions are shown on the first row of the HUD
 	METHOD isInstantenous ()Z
 		COMMENT Returns {@code true} if the potion has an instant effect instead of a continuous one (e.g. Harming)
+	METHOD onEffectAdded (Lnet/minecraft/world/entity/LivingEntity;I)V
+		ARG 1 livingEntity
+		ARG 2 amplifier
 	METHOD onEffectStarted (Lnet/minecraft/world/entity/LivingEntity;I)V
 		ARG 1 livingEntity
 		ARG 2 amplifier
+	METHOD onMobHurt (Lnet/minecraft/world/entity/LivingEntity;ILnet/minecraft/world/damagesource/DamageSource;F)V
+		ARG 1 livingEntity
+		ARG 2 amplifier
+		ARG 3 damageSource
+		ARG 4 amount
+	METHOD onMobRemoved (Lnet/minecraft/world/entity/LivingEntity;ILnet/minecraft/world/entity/Entity$RemovalReason;)V
+		ARG 1 livingEntity
+		ARG 2 amplifier
+		ARG 3 reason
 	METHOD removeAttributeModifiers (Lnet/minecraft/world/entity/ai/attributes/AttributeMap;)V
 		ARG 1 attributeMap
 	METHOD setBlendDuration (I)Lnet/minecraft/world/effect/MobEffect;

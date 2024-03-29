@@ -35,6 +35,8 @@ CLASS net/minecraft/server/network/ServerGamePacketListenerImpl
 		ARG 1 text
 	METHOD filterTextPacket (Ljava/util/List;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 texts
+	METHOD filterableFromOutgoing (Lnet/minecraft/server/network/FilteredText;)Lnet/minecraft/server/network/Filterable;
+		ARG 1 filteredText
 	METHOD getMaximumFlyingTicks (Lnet/minecraft/world/entity/Entity;)I
 		ARG 1 entity
 	METHOD getSignedMessage (Lnet/minecraft/network/protocol/game/ServerboundChatPacket;Lnet/minecraft/network/chat/LastSeenMessages;)Lnet/minecraft/network/chat/PlayerChatMessage;
@@ -165,6 +167,11 @@ CLASS net/minecraft/server/network/ServerGamePacketListenerImpl
 	METHOD performChatCommand (Lnet/minecraft/network/protocol/game/ServerboundChatCommandPacket;Lnet/minecraft/network/chat/LastSeenMessages;)V
 		ARG 1 packet
 		ARG 2 lastSeenMessages
+	METHOD performSignedChatCommand (Lnet/minecraft/network/protocol/game/ServerboundChatCommandSignedPacket;Lnet/minecraft/network/chat/LastSeenMessages;)V
+		ARG 1 packet
+		ARG 2 lastSeenMessages
+	METHOD performUnsignedChatCommand (Ljava/lang/String;)V
+		ARG 1 command
 	METHOD resetPlayerChatState (Lnet/minecraft/network/chat/RemoteChatSession;)V
 		ARG 1 chatSession
 	METHOD sendDisguisedChatMessage (Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/ChatType$Bound;)V
@@ -191,6 +198,9 @@ CLASS net/minecraft/server/network/ServerGamePacketListenerImpl
 		ARG 7 yaw
 		ARG 8 pitch
 		ARG 9 relativeSet
+	METHOD tryHandleChat (Ljava/lang/String;Ljava/lang/Runnable;)V
+		ARG 1 message
+		ARG 2 handler
 	METHOD tryHandleChat (Lnet/minecraft/network/chat/LastSeenMessages$Update;)Ljava/util/Optional;
 		ARG 1 update
 	METHOD unpackAndApplyLastSeen (Lnet/minecraft/network/chat/LastSeenMessages$Update;)Ljava/util/Optional;

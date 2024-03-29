@@ -32,6 +32,15 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 			COMMENT The other enchantment to test compatibility with.
 	METHOD constantCost (I)Lnet/minecraft/world/item/enchantment/Enchantment$Cost;
 		ARG 0 cost
+	METHOD definition (Lnet/minecraft/tags/TagKey;IILnet/minecraft/world/item/enchantment/Enchantment$Cost;Lnet/minecraft/world/item/enchantment/Enchantment$Cost;ILnet/minecraft/world/flag/FeatureFlagSet;[Lnet/minecraft/world/entity/EquipmentSlot;)Lnet/minecraft/world/item/enchantment/Enchantment$EnchantmentDefinition;
+		ARG 0 supportedItems
+		ARG 1 weight
+		ARG 2 maxLevel
+		ARG 3 minCost
+		ARG 4 maxCost
+		ARG 5 anvilCost
+		ARG 6 requiredFeatures
+		ARG 7 slots
 	METHOD definition (Lnet/minecraft/tags/TagKey;IILnet/minecraft/world/item/enchantment/Enchantment$Cost;Lnet/minecraft/world/item/enchantment/Enchantment$Cost;I[Lnet/minecraft/world/entity/EquipmentSlot;)Lnet/minecraft/world/item/enchantment/Enchantment$EnchantmentDefinition;
 		ARG 0 supportedItems
 		ARG 1 weight
@@ -65,6 +74,10 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 			COMMENT The entity that attacked the target.
 		ARG 3 level
 			COMMENT The level of the enchantment.
+	METHOD doPostItemStackHurt (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/Entity;I)V
+		ARG 1 attacker
+		ARG 2 target
+		ARG 3 level
 	METHOD dynamicCost (II)Lnet/minecraft/world/item/enchantment/Enchantment$Cost;
 		ARG 0 base
 		ARG 1 perLevel

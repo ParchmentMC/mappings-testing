@@ -12,6 +12,12 @@ CLASS net/minecraft/world/level/block/entity/vault/VaultState
 		ARG 2 pos
 		ARG 3 config
 		ARG 4 sharedData
+	METHOD onEnter (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/entity/vault/VaultConfig;Lnet/minecraft/world/level/block/entity/vault/VaultSharedData;Z)V
+		ARG 1 level
+		ARG 2 pos
+		ARG 3 config
+		ARG 4 sharedData
+		ARG 5 isOminous
 	METHOD onExit (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/entity/vault/VaultConfig;Lnet/minecraft/world/level/block/entity/vault/VaultSharedData;)V
 		ARG 1 level
 		ARG 2 pos
@@ -23,6 +29,13 @@ CLASS net/minecraft/world/level/block/entity/vault/VaultState
 		ARG 3 state
 		ARG 4 config
 		ARG 5 sharedData
+	METHOD onTransition (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/entity/vault/VaultState;Lnet/minecraft/world/level/block/entity/vault/VaultConfig;Lnet/minecraft/world/level/block/entity/vault/VaultSharedData;Z)V
+		ARG 1 level
+		ARG 2 pos
+		ARG 3 state
+		ARG 4 config
+		ARG 5 sharedData
+		ARG 6 isOminous
 	METHOD tickAndGetNext (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/entity/vault/VaultConfig;Lnet/minecraft/world/level/block/entity/vault/VaultServerData;Lnet/minecraft/world/level/block/entity/vault/VaultSharedData;)Lnet/minecraft/world/level/block/entity/vault/VaultState;
 		ARG 1 level
 		ARG 2 pos

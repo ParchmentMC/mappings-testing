@@ -1,0 +1,14 @@
+CLASS net/minecraft/client/particle/FlyStraightTowardsParticle
+	METHOD <init> (Lnet/minecraft/client/multiplayer/ClientLevel;DDDDDDII)V
+		ARG 1 level
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 xSpeed
+		ARG 10 ySpeed
+		ARG 12 zSpeed
+		ARG 14 startColor
+		ARG 15 endColor
+	CLASS OminousSpawnProvider
+		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
+			ARG 1 sprite

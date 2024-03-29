@@ -21,6 +21,8 @@ CLASS net/minecraft/world/item/alchemy/PotionContents
 		ARG 0 potion
 	METHOD getColorOptional (Ljava/lang/Iterable;)I
 		ARG 0 effects
+	METHOD getColorOptional (Ljava/lang/Iterable;)Ljava/util/OptionalInt;
+		ARG 0 effects
 	METHOD is (Lnet/minecraft/core/Holder;)Z
 		ARG 1 potion
 	METHOD withEffectAdded (Lnet/minecraft/world/effect/MobEffectInstance;)Lnet/minecraft/world/item/alchemy/PotionContents;

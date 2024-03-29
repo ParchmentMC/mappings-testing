@@ -5,6 +5,11 @@ CLASS net/minecraft/world/level/storage/loot/functions/SetNameFunction
 		ARG 1 conditions
 		ARG 2 name
 		ARG 3 resolutionContext
+	METHOD <init> (Ljava/util/List;Ljava/util/Optional;Ljava/util/Optional;Lnet/minecraft/world/level/storage/loot/functions/SetNameFunction$Target;)V
+		ARG 1 conditions
+		ARG 2 name
+		ARG 3 resolutionContext
+		ARG 4 target
 	METHOD createResolver (Lnet/minecraft/world/level/storage/loot/LootContext;Lnet/minecraft/world/level/storage/loot/LootContext$EntityTarget;)Ljava/util/function/UnaryOperator;
 		COMMENT Create a UnaryOperator that resolves Components based on the given LootContext and EntityTarget.
 		COMMENT This will replace for example score components.
@@ -18,3 +23,13 @@ CLASS net/minecraft/world/level/storage/loot/functions/SetNameFunction
 	METHOD setName (Lnet/minecraft/network/chat/Component;Lnet/minecraft/world/level/storage/loot/LootContext$EntityTarget;)Lnet/minecraft/world/level/storage/loot/functions/LootItemConditionalFunction$Builder;
 		ARG 0 name
 		ARG 1 resolutionContext
+	METHOD setName (Lnet/minecraft/network/chat/Component;Lnet/minecraft/world/level/storage/loot/functions/SetNameFunction$Target;)Lnet/minecraft/world/level/storage/loot/functions/LootItemConditionalFunction$Builder;
+		ARG 0 name
+		ARG 1 target
+	METHOD setName (Lnet/minecraft/network/chat/Component;Lnet/minecraft/world/level/storage/loot/functions/SetNameFunction$Target;Lnet/minecraft/world/level/storage/loot/LootContext$EntityTarget;)Lnet/minecraft/world/level/storage/loot/functions/LootItemConditionalFunction$Builder;
+		ARG 0 name
+		ARG 1 target
+		ARG 2 resolutionContext
+	CLASS Target
+		METHOD <init> (Ljava/lang/String;ILjava/lang/String;)V
+			ARG 3 name

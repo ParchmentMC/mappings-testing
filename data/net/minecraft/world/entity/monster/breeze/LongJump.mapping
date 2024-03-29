@@ -6,6 +6,9 @@ CLASS net/minecraft/world/entity/monster/breeze/LongJump
 	METHOD canJumpFromCurrentPosition (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/monster/breeze/Breeze;)Z
 		ARG 0 level
 		ARG 1 breeze
+	METHOD canRun (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/monster/breeze/Breeze;)Z
+		ARG 0 level
+		ARG 1 breeze
 	METHOD finishedInhaling (Lnet/minecraft/world/entity/monster/breeze/Breeze;)Z
 		ARG 0 breeze
 	METHOD finishedJumping (Lnet/minecraft/world/entity/monster/breeze/Breeze;)Z

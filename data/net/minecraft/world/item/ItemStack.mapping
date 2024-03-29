@@ -196,6 +196,8 @@ CLASS net/minecraft/world/item/ItemStack
 		ARG 1 other
 	METHOD isStackable ()Z
 		COMMENT Returns {@code true} if the {@code ItemStack} can hold 2 or more units of the item.
+	METHOD lenientOptionalFieldOf (Ljava/lang/String;)Lcom/mojang/serialization/MapCodec;
+		ARG 0 fieldName
 	METHOD limitSize (I)V
 		ARG 1 maxSize
 	METHOD listMatches (Ljava/util/List;Ljava/util/List;)Z

@@ -40,6 +40,8 @@ CLASS net/minecraft/world/entity/Mob
 	METHOD convertTo (Lnet/minecraft/world/entity/EntityType;Z)Lnet/minecraft/world/entity/Mob;
 		ARG 1 entityType
 		ARG 2 transferInventory
+	METHOD createEquipmentParams (Lnet/minecraft/server/level/ServerLevel;)Lnet/minecraft/world/level/storage/loot/LootParams;
+		ARG 1 level
 	METHOD createNavigation (Lnet/minecraft/world/level/Level;)Lnet/minecraft/world/entity/ai/navigation/PathNavigation;
 		ARG 1 level
 	METHOD doHurtTarget (Lnet/minecraft/world/entity/Entity;)Z
@@ -62,6 +64,8 @@ CLASS net/minecraft/world/entity/Mob
 	METHOD enchantSpawnedWeapon (Lnet/minecraft/util/RandomSource;F)V
 		ARG 1 random
 		ARG 2 chanceMultiplier
+	METHOD equip (Lnet/minecraft/resources/ResourceLocation;)V
+		ARG 1 lootTable
 	METHOD equipItemIfPossible (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/ItemStack;
 		ARG 1 stack
 	METHOD finalizeSpawn (Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/world/DifficultyInstance;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/world/entity/SpawnGroupData;)Lnet/minecraft/world/entity/SpawnGroupData;

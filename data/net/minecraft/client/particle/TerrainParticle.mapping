@@ -18,6 +18,15 @@ CLASS net/minecraft/client/particle/TerrainParticle
 		ARG 12 zSpeed
 		ARG 14 state
 		ARG 15 pos
+	METHOD createTerrainParticle (Lnet/minecraft/core/particles/BlockParticleOption;Lnet/minecraft/client/multiplayer/ClientLevel;DDDDDD)Lnet/minecraft/client/particle/TerrainParticle;
+		ARG 0 type
+		ARG 1 level
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 xSpeed
+		ARG 10 ySpeed
+		ARG 12 zSpeed
 	METHOD getLightColor (F)I
 		ARG 1 partialTick
 	CLASS Provider

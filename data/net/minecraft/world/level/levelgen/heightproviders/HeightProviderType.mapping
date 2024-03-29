@@ -2,3 +2,6 @@ CLASS net/minecraft/world/level/levelgen/heightproviders/HeightProviderType
 	METHOD register (Ljava/lang/String;Lcom/mojang/serialization/Codec;)Lnet/minecraft/world/level/levelgen/heightproviders/HeightProviderType;
 		ARG 0 key
 		ARG 1 codec
+	METHOD register (Ljava/lang/String;Lcom/mojang/serialization/MapCodec;)Lnet/minecraft/world/level/levelgen/heightproviders/HeightProviderType;
+		ARG 0 name
+		ARG 1 codec

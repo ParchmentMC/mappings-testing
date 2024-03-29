@@ -15,6 +15,10 @@ CLASS net/minecraft/world/level/block/DispenserBlock
 		ARG 1 stack
 	METHOD getDispensePosition (Lnet/minecraft/core/dispenser/BlockSource;)Lnet/minecraft/core/Position;
 		ARG 0 blockSource
+	METHOD getDispensePosition (Lnet/minecraft/core/dispenser/BlockSource;DLnet/minecraft/world/phys/Vec3;)Lnet/minecraft/core/Position;
+		ARG 0 blockSource
+		ARG 1 multiplier
+		ARG 3 offset
 	METHOD getRenderShape (Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/RenderShape;
 		ARG 1 state
 	METHOD getStateForPlacement (Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;
@@ -42,6 +46,8 @@ CLASS net/minecraft/world/level/block/DispenserBlock
 	METHOD registerBehavior (Lnet/minecraft/world/level/ItemLike;Lnet/minecraft/core/dispenser/DispenseItemBehavior;)V
 		ARG 0 item
 		ARG 1 behavior
+	METHOD registerProjectileBehavior (Lnet/minecraft/world/level/ItemLike;)V
+		ARG 0 item
 	METHOD rotate (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/block/state/BlockState;
 		ARG 1 state
 		ARG 2 rotation

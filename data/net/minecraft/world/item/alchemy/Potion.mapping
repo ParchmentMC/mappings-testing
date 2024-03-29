@@ -31,3 +31,5 @@ CLASS net/minecraft/world/item/alchemy/Potion
 	METHOD hasInstantEffects ()Z
 		COMMENT Checks if the potion contains any instant effects such as instant health or instant damage.
 		COMMENT @return Whether the potion contained an instant effect.
+	METHOD requiredFeatures ([Lnet/minecraft/world/flag/FeatureFlag;)Lnet/minecraft/world/item/alchemy/Potion;
+		ARG 1 requiredFeatures
