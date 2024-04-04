@@ -34,10 +34,10 @@ CLASS net/minecraft/gametest/framework/TestCommand
 		ARG 2 player
 	METHOD register (Lcom/mojang/brigadier/CommandDispatcher;)V
 		ARG 0 dispatcher
-	METHOD resetNearbyTest (Lnet/minecraft/commands/CommandSourceStack;)I
-		ARG 0 source
 	METHOD resetGameTestInfo (Lnet/minecraft/gametest/framework/GameTestInfo;)I
 		ARG 0 gameTestInfo
+	METHOD resetNearbyTest (Lnet/minecraft/commands/CommandSourceStack;)I
+		ARG 0 source
 	METHOD resetNearbyTest (Lnet/minecraft/commands/CommandSourceStack;Z)I
 		ARG 0 source
 	METHOD runAllNearbyTests (Lnet/minecraft/commands/CommandSourceStack;Z)I

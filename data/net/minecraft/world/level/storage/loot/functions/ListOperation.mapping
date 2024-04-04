@@ -5,10 +5,10 @@ CLASS net/minecraft/world/level/storage/loot/functions/ListOperation
 		ARG 3 maxSize
 	METHOD codec (I)Lcom/mojang/serialization/MapCodec;
 		ARG 0 maxSize
+	CLASS ReplaceSection
+		METHOD <init> (I)V
+			ARG 1 offset
 	CLASS Type
 		METHOD <init> (Ljava/lang/String;ILjava/lang/String;Lcom/mojang/serialization/MapCodec;)V
 			ARG 3 id
 			ARG 4 mapCodec
-	CLASS ReplaceSection
-		METHOD <init> (I)V
-			ARG 1 offset

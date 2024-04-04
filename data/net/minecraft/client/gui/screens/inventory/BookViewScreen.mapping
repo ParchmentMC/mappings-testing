@@ -53,14 +53,14 @@ CLASS net/minecraft/client/gui/screens/inventory/BookViewScreen
 			COMMENT Returns the size of the book
 		METHOD getPageRaw (I)Lnet/minecraft/network/chat/FormattedText;
 			ARG 1 index
-	CLASS WrittenBookAccess
+	CLASS WritableBookAccess
 		METHOD <init> (Lnet/minecraft/world/item/ItemStack;)V
 			ARG 1 writtenBookStack
 		METHOD getPageCount ()I
 			COMMENT Returns the size of the book
 		METHOD readPages (Lnet/minecraft/world/item/ItemStack;)Ljava/util/List;
 			ARG 0 writtenBookStack
-	CLASS WritableBookAccess
+	CLASS WrittenBookAccess
 		METHOD <init> (Lnet/minecraft/world/item/ItemStack;)V
 			ARG 1 writtenBookStack
 		METHOD getPageCount ()I

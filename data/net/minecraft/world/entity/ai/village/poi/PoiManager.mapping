@@ -121,11 +121,6 @@ CLASS net/minecraft/world/entity/ai/village/poi/PoiManager
 		ARG 1 section
 		ARG 2 sectionPos
 		ARG 3 posToTypeConsumer
-	CLASS Occupancy
-		METHOD <init> (Ljava/lang/String;ILjava/util/function/Predicate;)V
-			ARG 3 test
-		METHOD lambda$static$0 (Lnet/minecraft/world/entity/ai/village/poi/PoiRecord;)Z
-			ARG 0 test
 	CLASS DistanceTracker
 		METHOD getLevel (J)I
 			ARG 1 sectionPos
@@ -134,3 +129,8 @@ CLASS net/minecraft/world/entity/ai/village/poi/PoiManager
 		METHOD setLevel (JI)V
 			ARG 1 sectionPos
 			ARG 3 level
+	CLASS Occupancy
+		METHOD <init> (Ljava/lang/String;ILjava/util/function/Predicate;)V
+			ARG 3 test
+		METHOD lambda$static$0 (Lnet/minecraft/world/entity/ai/village/poi/PoiRecord;)Z
+			ARG 0 test

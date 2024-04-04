@@ -5,6 +5,11 @@ CLASS net/minecraft/world/level/block/Block
 		ARG 2 level
 		ARG 3 pos
 		ARG 4 random
+	METHOD appendHoverText (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/Item$TooltipContext;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V
+		ARG 1 stack
+		ARG 2 context
+		ARG 3 tootipComponents
+		ARG 4 tooltipFlag
 	METHOD appendHoverText (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/BlockGetter;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V
 		ARG 1 stack
 		ARG 2 level

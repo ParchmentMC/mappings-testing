@@ -25,13 +25,13 @@ CLASS net/minecraft/world/item/crafting/Ingredient
 		ARG 1 stack
 	METHOD toNetwork (Lnet/minecraft/network/FriendlyByteBuf;)V
 		ARG 1 buffer
-	CLASS TagValue
-		METHOD <init> (Lnet/minecraft/tags/TagKey;)V
-			ARG 1 tag
-		METHOD equals (Ljava/lang/Object;)Z
-			ARG 1 other
 	CLASS ItemValue
 		METHOD <init> (Lnet/minecraft/world/item/ItemStack;)V
 			ARG 1 item
+		METHOD equals (Ljava/lang/Object;)Z
+			ARG 1 other
+	CLASS TagValue
+		METHOD <init> (Lnet/minecraft/tags/TagKey;)V
+			ARG 1 tag
 		METHOD equals (Ljava/lang/Object;)Z
 			ARG 1 other

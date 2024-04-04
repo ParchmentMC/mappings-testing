@@ -1,14 +1,4 @@
 CLASS net/minecraft/client/resources/metadata/gui/GuiSpriteScaling
-	CLASS Tile
-		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
-			ARG 0 instance
-	CLASS Type
-		METHOD <init> (Ljava/lang/String;ILjava/lang/String;Lcom/mojang/serialization/Codec;)V
-			ARG 3 key
-			ARG 4 codec
-		METHOD <init> (Ljava/lang/String;ILjava/lang/String;Lcom/mojang/serialization/MapCodec;)V
-			ARG 3 key
-			ARG 4 codec
 	CLASS NineSlice
 		METHOD validate (Lnet/minecraft/client/resources/metadata/gui/GuiSpriteScaling$NineSlice;)Lcom/mojang/serialization/DataResult;
 			ARG 0 nineSlice
@@ -23,3 +13,13 @@ CLASS net/minecraft/client/resources/metadata/gui/GuiSpriteScaling
 				ARG 0 either
 			METHOD lambda$static$5 (Lnet/minecraft/client/resources/metadata/gui/GuiSpriteScaling$NineSlice$Border;)Lcom/mojang/datafixers/util/Either;
 				ARG 0 border
+	CLASS Tile
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
+	CLASS Type
+		METHOD <init> (Ljava/lang/String;ILjava/lang/String;Lcom/mojang/serialization/Codec;)V
+			ARG 3 key
+			ARG 4 codec
+		METHOD <init> (Ljava/lang/String;ILjava/lang/String;Lcom/mojang/serialization/MapCodec;)V
+			ARG 3 key
+			ARG 4 codec

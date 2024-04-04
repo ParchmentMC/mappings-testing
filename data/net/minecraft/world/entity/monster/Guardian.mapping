@@ -54,11 +54,11 @@ CLASS net/minecraft/world/entity/monster/Guardian
 			COMMENT Reset the task's internal state. Called when this task is interrupted by another one
 		METHOD tick ()V
 			COMMENT Keep ticking a continuous task that has already been started
-	CLASS GuardianMoveControl
-		METHOD <init> (Lnet/minecraft/world/entity/monster/Guardian;)V
-			ARG 1 guardian
 	CLASS GuardianAttackSelector
 		METHOD <init> (Lnet/minecraft/world/entity/monster/Guardian;)V
 			ARG 1 guardian
 		METHOD test (Lnet/minecraft/world/entity/LivingEntity;)Z
 			ARG 1 entity
+	CLASS GuardianMoveControl
+		METHOD <init> (Lnet/minecraft/world/entity/monster/Guardian;)V
+			ARG 1 guardian

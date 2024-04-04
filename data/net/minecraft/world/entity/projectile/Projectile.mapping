@@ -9,6 +9,8 @@ CLASS net/minecraft/world/entity/projectile/Projectile
 		ARG 5 z
 		ARG 7 velocity
 		ARG 8 inaccuracy
+	METHOD hitOrDeflect (Lnet/minecraft/world/phys/HitResult;)Lnet/minecraft/world/entity/projectile/ProjectileDeflection;
+		ARG 1 hitResult
 	METHOD lambda$checkLeftOwner$0 (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 0 entity
 	METHOD lerpMotion (DDD)V

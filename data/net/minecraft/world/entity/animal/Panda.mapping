@@ -86,26 +86,13 @@ CLASS net/minecraft/world/entity/animal/Panda
 		METHOD getVariantFromGenes (Lnet/minecraft/world/entity/animal/Panda$Gene;Lnet/minecraft/world/entity/animal/Panda$Gene;)Lnet/minecraft/world/entity/animal/Panda$Gene;
 			ARG 0 mainGene
 			ARG 1 hiddenGene
-	CLASS PandaSitGoal
-		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress EntityAIBase should continue executing
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-		METHOD start ()V
-			COMMENT Execute a one shot task or start executing a continuous task
-		METHOD stop ()V
-			COMMENT Reset the task's internal state. Called when this task is interrupted by another one
-		METHOD tick ()V
-			COMMENT Keep ticking a continuous task that has already been started
-	CLASS PandaRollGoal
-		METHOD <init> (Lnet/minecraft/world/entity/animal/Panda;)V
+	CLASS PandaAttackGoal
+		METHOD <init> (Lnet/minecraft/world/entity/animal/Panda;DZ)V
 			ARG 1 panda
-		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress EntityAIBase should continue executing
+			ARG 2 speedModifier
+			ARG 4 followingTargetEvenIfNotSeen
 		METHOD canUse ()Z
 			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-		METHOD start ()V
-			COMMENT Execute a one shot task or start executing a continuous task
 	CLASS PandaAvoidGoal
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Panda;Ljava/lang/Class;FDD)V
 			ARG 1 panda
@@ -121,31 +108,15 @@ CLASS net/minecraft/world/entity/animal/Panda
 			ARG 2 speedModifier
 		METHOD canUse ()Z
 			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-	CLASS PandaPanicGoal
-		METHOD <init> (Lnet/minecraft/world/entity/animal/Panda;D)V
+	CLASS PandaHurtByTargetGoal
+		METHOD <init> (Lnet/minecraft/world/entity/animal/Panda;[Ljava/lang/Class;)V
 			ARG 1 panda
-			ARG 2 speedModifier
+			ARG 2 entityClassToIgnoreDamage
+		METHOD alertOther (Lnet/minecraft/world/entity/Mob;Lnet/minecraft/world/entity/LivingEntity;)V
+			ARG 1 mob
+			ARG 2 target
 		METHOD canContinueToUse ()Z
 			COMMENT Returns whether an in-progress EntityAIBase should continue executing
-	CLASS PandaAttackGoal
-		METHOD <init> (Lnet/minecraft/world/entity/animal/Panda;DZ)V
-			ARG 1 panda
-			ARG 2 speedModifier
-			ARG 4 followingTargetEvenIfNotSeen
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-	CLASS PandaSneezeGoal
-		METHOD <init> (Lnet/minecraft/world/entity/animal/Panda;)V
-			ARG 1 panda
-		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress EntityAIBase should continue executing
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-		METHOD start ()V
-			COMMENT Execute a one shot task or start executing a continuous task
-	CLASS PandaMoveControl
-		METHOD <init> (Lnet/minecraft/world/entity/animal/Panda;)V
-			ARG 1 panda
 	CLASS PandaLieOnBackGoal
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Panda;)V
 			ARG 1 panda
@@ -157,15 +128,6 @@ CLASS net/minecraft/world/entity/animal/Panda
 			COMMENT Execute a one shot task or start executing a continuous task
 		METHOD stop ()V
 			COMMENT Reset the task's internal state. Called when this task is interrupted by another one
-	CLASS PandaHurtByTargetGoal
-		METHOD <init> (Lnet/minecraft/world/entity/animal/Panda;[Ljava/lang/Class;)V
-			ARG 1 panda
-			ARG 2 entityClassToIgnoreDamage
-		METHOD alertOther (Lnet/minecraft/world/entity/Mob;Lnet/minecraft/world/entity/LivingEntity;)V
-			ARG 1 mob
-			ARG 2 target
-		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress EntityAIBase should continue executing
 	CLASS PandaLookAtPlayerGoal
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Panda;Ljava/lang/Class;F)V
 			ARG 1 panda
@@ -179,3 +141,41 @@ CLASS net/minecraft/world/entity/animal/Panda
 			ARG 1 lookAt
 		METHOD tick ()V
 			COMMENT Keep ticking a continuous task that has already been started
+	CLASS PandaMoveControl
+		METHOD <init> (Lnet/minecraft/world/entity/animal/Panda;)V
+			ARG 1 panda
+	CLASS PandaPanicGoal
+		METHOD <init> (Lnet/minecraft/world/entity/animal/Panda;D)V
+			ARG 1 panda
+			ARG 2 speedModifier
+		METHOD canContinueToUse ()Z
+			COMMENT Returns whether an in-progress EntityAIBase should continue executing
+	CLASS PandaRollGoal
+		METHOD <init> (Lnet/minecraft/world/entity/animal/Panda;)V
+			ARG 1 panda
+		METHOD canContinueToUse ()Z
+			COMMENT Returns whether an in-progress EntityAIBase should continue executing
+		METHOD canUse ()Z
+			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
+		METHOD start ()V
+			COMMENT Execute a one shot task or start executing a continuous task
+	CLASS PandaSitGoal
+		METHOD canContinueToUse ()Z
+			COMMENT Returns whether an in-progress EntityAIBase should continue executing
+		METHOD canUse ()Z
+			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
+		METHOD start ()V
+			COMMENT Execute a one shot task or start executing a continuous task
+		METHOD stop ()V
+			COMMENT Reset the task's internal state. Called when this task is interrupted by another one
+		METHOD tick ()V
+			COMMENT Keep ticking a continuous task that has already been started
+	CLASS PandaSneezeGoal
+		METHOD <init> (Lnet/minecraft/world/entity/animal/Panda;)V
+			ARG 1 panda
+		METHOD canContinueToUse ()Z
+			COMMENT Returns whether an in-progress EntityAIBase should continue executing
+		METHOD canUse ()Z
+			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
+		METHOD start ()V
+			COMMENT Execute a one shot task or start executing a continuous task

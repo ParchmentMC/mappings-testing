@@ -50,9 +50,15 @@ CLASS net/minecraft/world/level/levelgen/NoiseChunk
 		ARG 1 densityFunction
 	METHOD wrapNew (Lnet/minecraft/world/level/levelgen/DensityFunction;)Lnet/minecraft/world/level/levelgen/DensityFunction;
 		ARG 1 densityFunction
+	CLASS BlockStateFiller
+		METHOD calculate (Lnet/minecraft/world/level/levelgen/DensityFunction$FunctionContext;)Lnet/minecraft/world/level/block/state/BlockState;
+			ARG 1 context
 	CLASS Cache2D
 		METHOD <init> (Lnet/minecraft/world/level/levelgen/DensityFunction;)V
 			ARG 1 function
+	CLASS CacheAllInCell
+		METHOD <init> (Lnet/minecraft/world/level/levelgen/NoiseChunk;Lnet/minecraft/world/level/levelgen/DensityFunction;)V
+			ARG 2 noiseFilter
 	CLASS CacheOnce
 		METHOD <init> (Lnet/minecraft/world/level/levelgen/NoiseChunk;Lnet/minecraft/world/level/levelgen/DensityFunction;)V
 			ARG 2 function
@@ -60,12 +66,6 @@ CLASS net/minecraft/world/level/levelgen/NoiseChunk
 		METHOD <init> (Lnet/minecraft/world/level/levelgen/NoiseChunk;Lnet/minecraft/world/level/levelgen/DensityFunction;Z)V
 			ARG 2 noiseFiller
 			ARG 3 computeValues
-	CLASS CacheAllInCell
-		METHOD <init> (Lnet/minecraft/world/level/levelgen/NoiseChunk;Lnet/minecraft/world/level/levelgen/DensityFunction;)V
-			ARG 2 noiseFilter
-	CLASS BlockStateFiller
-		METHOD calculate (Lnet/minecraft/world/level/levelgen/DensityFunction$FunctionContext;)Lnet/minecraft/world/level/block/state/BlockState;
-			ARG 1 context
 	CLASS NoiseInterpolator
 		METHOD <init> (Lnet/minecraft/world/level/levelgen/NoiseChunk;Lnet/minecraft/world/level/levelgen/DensityFunction;)V
 			ARG 2 noiseFilter

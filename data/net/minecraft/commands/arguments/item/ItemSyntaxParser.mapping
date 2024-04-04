@@ -31,6 +31,10 @@ CLASS net/minecraft/commands/arguments/item/ItemSyntaxParser
 			ARG 1 builder
 		METHOD suggestTag (Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;
 			ARG 1 builder
+	CLASS SuggestionsVisitor
+		METHOD resolveSuggestions (Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;Lcom/mojang/brigadier/StringReader;)Ljava/util/concurrent/CompletableFuture;
+			ARG 1 builder
+			ARG 2 reader
 	CLASS Visitor
 		METHOD visitComponent (Lnet/minecraft/core/component/DataComponentType;Ljava/lang/Object;)V
 			ARG 1 componentType
@@ -45,7 +49,3 @@ CLASS net/minecraft/commands/arguments/item/ItemSyntaxParser
 			ARG 1 suggestions
 		METHOD visitTag (Lnet/minecraft/core/HolderSet;)V
 			ARG 1 tag
-	CLASS SuggestionsVisitor
-		METHOD resolveSuggestions (Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;Lcom/mojang/brigadier/StringReader;)Ljava/util/concurrent/CompletableFuture;
-			ARG 1 builder
-			ARG 2 reader

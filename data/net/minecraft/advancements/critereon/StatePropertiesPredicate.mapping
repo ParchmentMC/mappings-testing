@@ -29,18 +29,18 @@ CLASS net/minecraft/advancements/critereon/StatePropertiesPredicate
 		METHOD hasProperty (Lnet/minecraft/world/level/block/state/properties/Property;Z)Lnet/minecraft/advancements/critereon/StatePropertiesPredicate$Builder;
 			ARG 1 property
 			ARG 2 value
-	CLASS ValueMatcher
-		METHOD lambda$static$3 (Lnet/minecraft/advancements/critereon/StatePropertiesPredicate$ValueMatcher;)Lcom/mojang/datafixers/util/Either;
-			ARG 0 valueMatcher
-		METHOD match (Lnet/minecraft/world/level/block/state/StateHolder;Lnet/minecraft/world/level/block/state/properties/Property;)Z
-			ARG 1 stateHolder
-			ARG 2 property
-	CLASS RangedMatcher
-		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
-			ARG 0 instance
 	CLASS PropertyMatcher
 		METHOD checkState (Lnet/minecraft/world/level/block/state/StateDefinition;)Ljava/util/Optional;
 			ARG 1 state
 		METHOD match (Lnet/minecraft/world/level/block/state/StateDefinition;Lnet/minecraft/world/level/block/state/StateHolder;)Z
 			ARG 1 properties
 			ARG 2 propertyToMatch
+	CLASS RangedMatcher
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
+	CLASS ValueMatcher
+		METHOD lambda$static$3 (Lnet/minecraft/advancements/critereon/StatePropertiesPredicate$ValueMatcher;)Lcom/mojang/datafixers/util/Either;
+			ARG 0 valueMatcher
+		METHOD match (Lnet/minecraft/world/level/block/state/StateHolder;Lnet/minecraft/world/level/block/state/properties/Property;)Z
+			ARG 1 stateHolder
+			ARG 2 property

@@ -63,6 +63,8 @@ CLASS net/minecraft/world/level/block/entity/BlockEntity
 	METHOD saveAdditional (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/core/HolderLookup$Provider;)V
 		ARG 1 tag
 		ARG 2 registries
+	METHOD saveCustomAndMetadata (Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/nbt/CompoundTag;
+		ARG 1 registries
 	METHOD saveCustomOnly (Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/nbt/CompoundTag;
 		ARG 1 registries
 	METHOD saveId (Lnet/minecraft/nbt/CompoundTag;)V

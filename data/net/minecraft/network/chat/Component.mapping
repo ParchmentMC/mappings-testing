@@ -41,9 +41,6 @@ CLASS net/minecraft/network/chat/Component
 	METHOD translatableEscape (Ljava/lang/String;[Ljava/lang/Object;)Lnet/minecraft/network/chat/MutableComponent;
 		ARG 0 key
 		ARG 1 args
-	METHOD translatableEscape (Ljava/lang/String;[Ljava/lang/Object;)Lnet/minecraft/network/chat/MutableComponent;
-		ARG 0 key
-		ARG 1 args
 	METHOD translatableWithFallback (Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
 		ARG 0 key
 		ARG 1 fallback

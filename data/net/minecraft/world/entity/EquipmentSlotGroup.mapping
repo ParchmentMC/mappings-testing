@@ -7,5 +7,7 @@ CLASS net/minecraft/world/entity/EquipmentSlotGroup
 		ARG 3 id
 		ARG 4 key
 		ARG 5 slot
+	METHOD bySlot (Lnet/minecraft/world/entity/EquipmentSlot;)Lnet/minecraft/world/entity/EquipmentSlotGroup;
+		ARG 0 slot
 	METHOD test (Lnet/minecraft/world/entity/EquipmentSlot;)Z
 		ARG 1 slot

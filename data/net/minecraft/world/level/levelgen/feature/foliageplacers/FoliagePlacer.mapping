@@ -82,14 +82,14 @@ CLASS net/minecraft/world/level/levelgen/feature/foliageplacers/FoliagePlacer
 		ARG 2 random
 		ARG 3 treeConfiguration
 		ARG 4 pos
+	CLASS FoliageAttachment
+		METHOD <init> (Lnet/minecraft/core/BlockPos;IZ)V
+			ARG 1 pos
+			ARG 2 radiusOffset
+			ARG 3 doubleTrunk
 	CLASS FoliageSetter
 		METHOD isSet (Lnet/minecraft/core/BlockPos;)Z
 			ARG 1 pos
 		METHOD set (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
 			ARG 1 pos
 			ARG 2 state
-	CLASS FoliageAttachment
-		METHOD <init> (Lnet/minecraft/core/BlockPos;IZ)V
-			ARG 1 pos
-			ARG 2 radiusOffset
-			ARG 3 doubleTrunk

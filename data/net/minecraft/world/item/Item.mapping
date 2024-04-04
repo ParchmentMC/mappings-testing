@@ -1,6 +1,11 @@
 CLASS net/minecraft/world/item/Item
 	METHOD <init> (Lnet/minecraft/world/item/Item$Properties;)V
 		ARG 1 properties
+	METHOD appendHoverText (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/Item$TooltipContext;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V
+		ARG 1 stack
+		ARG 2 context
+		ARG 3 tooltipComponents
+		ARG 4 tooltipFlag
 	METHOD appendHoverText (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V
 		COMMENT Allows items to add custom lines of information to the mouseover description.
 		ARG 1 stack
@@ -169,6 +174,11 @@ CLASS net/minecraft/world/item/Item
 	CLASS Properties
 		FIELD foodProperties Lnet/minecraft/world/food/FoodProperties;
 			COMMENT Sets food information to this item
+		METHOD attributes (Lnet/minecraft/world/item/component/ItemAttributeModifiers;)Lnet/minecraft/world/item/Item$Properties;
+			ARG 1 attributes
+		METHOD component (Lnet/minecraft/core/component/DataComponentType;Ljava/lang/Object;)Lnet/minecraft/world/item/Item$Properties;
+			ARG 1 component
+			ARG 2 value
 		METHOD craftRemainder (Lnet/minecraft/world/item/Item;)Lnet/minecraft/world/item/Item$Properties;
 			ARG 1 craftingRemainingItem
 		METHOD defaultDurability (I)Lnet/minecraft/world/item/Item$Properties;
@@ -183,3 +193,10 @@ CLASS net/minecraft/world/item/Item
 			ARG 1 requiredFeatures
 		METHOD stacksTo (I)Lnet/minecraft/world/item/Item$Properties;
 			ARG 1 maxStackSize
+	CLASS TooltipContext
+		METHOD mapData (Lnet/minecraft/world/level/saveddata/maps/MapId;)Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData;
+			ARG 1 mapId
+		METHOD of (Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/world/item/Item$TooltipContext;
+			ARG 0 registries
+		METHOD of (Lnet/minecraft/world/level/Level;)Lnet/minecraft/world/item/Item$TooltipContext;
+			ARG 0 level

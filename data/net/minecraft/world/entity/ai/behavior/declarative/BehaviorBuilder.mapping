@@ -62,11 +62,11 @@ CLASS net/minecraft/world/entity/ai/behavior/declarative/BehaviorBuilder
 	CLASS PureMemory
 		METHOD <init> (Lnet/minecraft/world/entity/ai/behavior/declarative/MemoryCondition;)V
 			ARG 1 memoryCondition
-	CLASS TriggerWrapper
-		METHOD <init> (Lnet/minecraft/world/entity/ai/behavior/declarative/Trigger;)V
-			ARG 1 trigger
 	CLASS TriggerWithResult
 		METHOD tryTrigger (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LivingEntity;J)Ljava/lang/Object;
 			ARG 1 level
 			ARG 2 entity
 			ARG 3 gameTime
+	CLASS TriggerWrapper
+		METHOD <init> (Lnet/minecraft/world/entity/ai/behavior/declarative/Trigger;)V
+			ARG 1 trigger

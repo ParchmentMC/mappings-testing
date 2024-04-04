@@ -18,6 +18,18 @@ CLASS net/minecraft/advancements/critereon/EntitySubPredicates
 		ARG 0 variant
 	METHOD variant (Lnet/minecraft/world/entity/animal/FrogVariant;)Lnet/minecraft/advancements/critereon/EntitySubPredicate;
 		ARG 0 variant
+	CLASS EntityHolderVariantPredicateType
+		METHOD <init> (Lnet/minecraft/resources/ResourceKey;Ljava/util/function/Function;)V
+			ARG 1 registryKey
+			ARG 2 getter
+		METHOD create (Lnet/minecraft/resources/ResourceKey;Ljava/util/function/Function;)Lnet/minecraft/advancements/critereon/EntitySubPredicates$EntityHolderVariantPredicateType;
+			ARG 0 registryKey
+			ARG 1 getter
+		METHOD createPredicate (Lnet/minecraft/core/HolderSet;)Lnet/minecraft/advancements/critereon/EntitySubPredicate;
+			ARG 1 variants
+		CLASS Instance
+			METHOD <init> (Lnet/minecraft/advancements/critereon/EntitySubPredicates$EntityHolderVariantPredicateType;Lnet/minecraft/core/HolderSet;)V
+				ARG 2 variants
 	CLASS EntityVariantPredicateType
 		METHOD <init> (Lcom/mojang/serialization/Codec;Ljava/util/function/Function;)V
 			ARG 1 codec
@@ -33,15 +45,3 @@ CLASS net/minecraft/advancements/critereon/EntitySubPredicates
 		CLASS Instance
 			METHOD <init> (Lnet/minecraft/advancements/critereon/EntitySubPredicates$EntityVariantPredicateType;Ljava/lang/Object;)V
 				ARG 2 variant
-	CLASS EntityHolderVariantPredicateType
-		METHOD <init> (Lnet/minecraft/resources/ResourceKey;Ljava/util/function/Function;)V
-			ARG 1 registryKey
-			ARG 2 getter
-		METHOD create (Lnet/minecraft/resources/ResourceKey;Ljava/util/function/Function;)Lnet/minecraft/advancements/critereon/EntitySubPredicates$EntityHolderVariantPredicateType;
-			ARG 0 registryKey
-			ARG 1 getter
-		METHOD createPredicate (Lnet/minecraft/core/HolderSet;)Lnet/minecraft/advancements/critereon/EntitySubPredicate;
-			ARG 1 variants
-		CLASS Instance
-			METHOD <init> (Lnet/minecraft/advancements/critereon/EntitySubPredicates$EntityHolderVariantPredicateType;Lnet/minecraft/core/HolderSet;)V
-				ARG 2 variants

@@ -13,6 +13,10 @@ CLASS net/minecraft/server/commands/DebugCommand
 		ARG 0 source
 	METHOD stop (Lnet/minecraft/commands/CommandSourceStack;)I
 		ARG 0 source
+	CLASS TraceCustomExecutor
+		METHOD lambda$runGuarded$2 (Ljava/util/Collection;Lnet/minecraft/commands/CommandSourceStack;ILjava/lang/String;Lnet/minecraft/commands/execution/ExecutionContext;Lnet/minecraft/commands/execution/Frame;)V
+			ARG 4 executionContext
+			ARG 5 frame
 	CLASS Tracer
 		METHOD <init> (Ljava/io/PrintWriter;)V
 			ARG 1 output
@@ -20,7 +24,3 @@ CLASS net/minecraft/server/commands/DebugCommand
 			ARG 1 indent
 		METHOD printIndent (I)V
 			ARG 1 indent
-	CLASS TraceCustomExecutor
-		METHOD lambda$runGuarded$2 (Ljava/util/Collection;Lnet/minecraft/commands/CommandSourceStack;ILjava/lang/String;Lnet/minecraft/commands/execution/ExecutionContext;Lnet/minecraft/commands/execution/Frame;)V
-			ARG 4 executionContext
-			ARG 5 frame

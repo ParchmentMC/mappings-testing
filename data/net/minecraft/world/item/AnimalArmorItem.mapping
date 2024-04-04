@@ -13,12 +13,12 @@ CLASS net/minecraft/world/item/AnimalArmorItem
 		ARG 2 bodyType
 		ARG 3 hasOverlay
 		ARG 4 properties
-	CLASS Type
-		METHOD <init> (Ljava/lang/String;ILjava/util/function/Function;)V
-			ARG 3 textureLocator
 	CLASS BodyType
 		METHOD <init> (Ljava/lang/String;ILjava/util/function/Function;)V
 			ARG 3 texureLocator
 		METHOD <init> (Ljava/lang/String;ILjava/util/function/Function;Lnet/minecraft/sounds/SoundEvent;)V
 			ARG 3 textureLocator
 			ARG 4 breakingSound
+	CLASS Type
+		METHOD <init> (Ljava/lang/String;ILjava/util/function/Function;)V
+			ARG 3 textureLocator

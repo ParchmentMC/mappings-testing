@@ -9,23 +9,6 @@ CLASS net/minecraft/core/dispenser/DispenseItemBehavior
 	METHOD lambda$static$0 (Lnet/minecraft/core/dispenser/BlockSource;Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/ItemStack;
 		ARG 0 blockSource
 		ARG 1 item
-	CLASS 4
-		METHOD lambda$getProjectile$0 (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/projectile/ThrownEgg;)V
-			ARG 1 entity
-	CLASS 5
-		METHOD lambda$getProjectile$0 (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/projectile/Snowball;)V
-			ARG 1 entity
-	CLASS 6
-		METHOD lambda$getProjectile$0 (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/projectile/ThrownExperienceBottle;)V
-			ARG 1 entity
-	CLASS 7
-		CLASS 1
-			METHOD lambda$getProjectile$0 (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/projectile/ThrownPotion;)V
-				ARG 1 entity
-	CLASS 8
-		CLASS 1
-			METHOD lambda$getProjectile$0 (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/projectile/ThrownPotion;)V
-				ARG 1 entity
 	CLASS 11
 		METHOD lambda$execute$0 (Lnet/minecraft/world/entity/LivingEntity;)Z
 			ARG 0 entity
@@ -55,3 +38,20 @@ CLASS net/minecraft/core/dispenser/DispenseItemBehavior
 			ARG 1 blockSource
 			ARG 2 item
 			ARG 3 newItem
+	CLASS 4
+		METHOD lambda$getProjectile$0 (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/projectile/ThrownEgg;)V
+			ARG 1 entity
+	CLASS 5
+		METHOD lambda$getProjectile$0 (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/projectile/Snowball;)V
+			ARG 1 entity
+	CLASS 6
+		METHOD lambda$getProjectile$0 (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/projectile/ThrownExperienceBottle;)V
+			ARG 1 entity
+	CLASS 7
+		CLASS 1
+			METHOD lambda$getProjectile$0 (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/projectile/ThrownPotion;)V
+				ARG 1 entity
+	CLASS 8
+		CLASS 1
+			METHOD lambda$getProjectile$0 (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/projectile/ThrownPotion;)V
+				ARG 1 entity

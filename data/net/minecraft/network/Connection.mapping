@@ -125,10 +125,10 @@ CLASS net/minecraft/network/Connection
 		ARG 2 future
 	METHOD lambda$initiateServerboundConnection$7 (Lnet/minecraft/network/protocol/handshake/ClientIntent;Lnet/minecraft/network/PacketListener;Ljava/lang/String;ILnet/minecraft/network/Connection;)V
 		ARG 5 connection
-	METHOD outboundHandlerName (Z)Ljava/lang/String;
-		ARG 0 clientbound
 	METHOD lambda$send$8 (Lnet/minecraft/network/protocol/Packet;Lnet/minecraft/network/PacketSendListener;ZLnet/minecraft/network/Connection;)V
 		ARG 3 connection
+	METHOD outboundHandlerName (Z)Ljava/lang/String;
+		ARG 0 clientbound
 	METHOD runOnceConnected (Ljava/util/function/Consumer;)V
 		ARG 1 action
 	METHOD send (Lnet/minecraft/network/protocol/Packet;)V

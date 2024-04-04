@@ -1,0 +1,9 @@
+CLASS net/minecraft/util/ListAndDeque
+	METHOD addFirst (Ljava/lang/Object;)V
+		ARG 1 element
+	METHOD addLast (Ljava/lang/Object;)V
+		ARG 1 element
+	METHOD offer (Ljava/lang/Object;)Z
+		ARG 1 element
+	METHOD push (Ljava/lang/Object;)V
+		ARG 1 element
