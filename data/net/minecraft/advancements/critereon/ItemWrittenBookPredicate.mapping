@@ -1,0 +1,4 @@
+CLASS net/minecraft/advancements/critereon/ItemWrittenBookPredicate
+	CLASS PagePredicate
+		METHOD test (Ljava/lang/Object;)Z
+			ARG 1 contents

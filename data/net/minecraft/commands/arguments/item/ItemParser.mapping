@@ -40,6 +40,10 @@ CLASS net/minecraft/commands/arguments/item/ItemParser
 		ARG 1 builder
 	METHOD suggestTag (Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 builder
+	METHOD validateComponents (Lcom/mojang/brigadier/StringReader;Lnet/minecraft/core/Holder;Lnet/minecraft/core/component/DataComponentMap;)V
+		ARG 0 reader
+		ARG 1 item
+		ARG 2 components
 	CLASS State
 		METHOD <init> (Lnet/minecraft/commands/arguments/item/ItemParser;Lcom/mojang/brigadier/StringReader;Lnet/minecraft/commands/arguments/item/ItemParser$Visitor;)V
 			ARG 2 reader

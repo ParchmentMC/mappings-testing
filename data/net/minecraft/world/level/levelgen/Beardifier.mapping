@@ -19,6 +19,10 @@ CLASS net/minecraft/world/level/levelgen/Beardifier
 		ARG 1 y
 		ARG 2 z
 		ARG 3 height
+	METHOD getBuryContribution (DDD)D
+		ARG 0 x
+		ARG 2 y
+		ARG 4 z
 	METHOD getBuryContribution (III)D
 		ARG 0 x
 		ARG 1 y

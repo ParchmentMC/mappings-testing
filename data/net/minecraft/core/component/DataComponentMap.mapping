@@ -1,4 +1,7 @@
 CLASS net/minecraft/core/component/DataComponentMap
+	METHOD composite (Lnet/minecraft/core/component/DataComponentMap;Lnet/minecraft/core/component/DataComponentMap;)Lnet/minecraft/core/component/DataComponentMap;
+		ARG 0 map1
+		ARG 1 map2
 	METHOD filter (Ljava/util/function/Predicate;)Lnet/minecraft/core/component/DataComponentMap;
 		ARG 1 predicate
 	METHOD get (Lnet/minecraft/core/component/DataComponentType;)Ljava/lang/Object;

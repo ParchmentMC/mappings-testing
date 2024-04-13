@@ -1,0 +1,8 @@
+CLASS net/minecraft/data/tags/EnchantmentTagsProvider
+	METHOD <init> (Lnet/minecraft/data/PackOutput;Ljava/util/concurrent/CompletableFuture;Lnet/minecraft/world/flag/FeatureFlagSet;)V
+		ARG 1 output
+		ARG 2 lookupProvider
+		ARG 3 enabledFeatures
+	METHOD tooltipOrder (Lnet/minecraft/core/HolderLookup$Provider;[Lnet/minecraft/world/item/enchantment/Enchantment;)V
+		ARG 1 provider
+		ARG 2 enchantments

@@ -76,6 +76,12 @@ CLASS net/minecraft/network/codec/ByteBufCodecs
 		METHOD encode (Lio/netty/buffer/ByteBuf;[B)V
 			ARG 1 buffer
 			ARG 2 value
+	CLASS 11
+		METHOD decode (Lio/netty/buffer/ByteBuf;)[B
+			ARG 1 buffer
+		METHOD encode (Lio/netty/buffer/ByteBuf;[B)V
+			ARG 1 buffer
+			ARG 2 value
 	CLASS 15
 		METHOD lambda$encode$0 (Lnet/minecraft/network/codec/StreamCodec;Lio/netty/buffer/ByteBuf;Lnet/minecraft/network/codec/StreamCodec;Ljava/lang/Object;Ljava/lang/Object;)V
 			ARG 3 key
@@ -93,6 +99,9 @@ CLASS net/minecraft/network/codec/ByteBufCodecs
 		METHOD getRegistryOrThrow (Lnet/minecraft/network/RegistryFriendlyByteBuf;)Lnet/minecraft/core/IdMap;
 			ARG 1 buffer
 	CLASS 23
+		METHOD getRegistryOrThrow (Lnet/minecraft/network/RegistryFriendlyByteBuf;)Lnet/minecraft/core/IdMap;
+			ARG 1 buffer
+	CLASS 24
 		METHOD getRegistryOrThrow (Lnet/minecraft/network/RegistryFriendlyByteBuf;)Lnet/minecraft/core/IdMap;
 			ARG 1 buffer
 	CLASS 8

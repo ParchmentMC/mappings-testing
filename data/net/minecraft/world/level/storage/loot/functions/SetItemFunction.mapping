@@ -1,0 +1,6 @@
+CLASS net/minecraft/world/level/storage/loot/functions/SetItemFunction
+	METHOD <init> (Ljava/util/List;Lnet/minecraft/core/Holder;)V
+		ARG 1 conditions
+		ARG 2 item
+	METHOD lambda$static$1 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

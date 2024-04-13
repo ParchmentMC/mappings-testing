@@ -1,4 +1,7 @@
 CLASS net/minecraft/world/level/storage/loot/functions/ListOperation
+	METHOD apply (Ljava/util/List;Ljava/util/List;)Ljava/util/List;
+		ARG 1 currentValue
+		ARG 2 operand
 	METHOD apply (Ljava/util/List;Ljava/util/List;I)Ljava/util/List;
 		ARG 1 currentValue
 		ARG 2 operand

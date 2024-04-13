@@ -64,8 +64,13 @@ CLASS net/minecraft/world/entity/Mob
 	METHOD enchantSpawnedWeapon (Lnet/minecraft/util/RandomSource;F)V
 		ARG 1 random
 		ARG 2 chanceMultiplier
+	METHOD equip (Lnet/minecraft/resources/ResourceKey;Ljava/util/Map;)V
+		ARG 1 equipmentLootTable
+		ARG 2 slotDropChances
 	METHOD equip (Lnet/minecraft/resources/ResourceLocation;)V
 		ARG 1 lootTable
+	METHOD equip (Lnet/minecraft/world/entity/EquipmentTable;)V
+		ARG 1 equipmentTable
 	METHOD equipItemIfPossible (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/ItemStack;
 		ARG 1 stack
 	METHOD finalizeSpawn (Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/world/DifficultyInstance;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/world/entity/SpawnGroupData;)Lnet/minecraft/world/entity/SpawnGroupData;

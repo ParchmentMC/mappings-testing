@@ -1,0 +1,7 @@
+CLASS net/minecraft/world/level/storage/loot/functions/ModifyContainerContents
+	METHOD <init> (Ljava/util/List;Lnet/minecraft/world/level/storage/loot/ContainerComponentManipulator;Lnet/minecraft/world/level/storage/loot/functions/LootItemFunction;)V
+		ARG 1 conditions
+		ARG 2 components
+		ARG 3 modifier
+	METHOD lambda$static$2 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

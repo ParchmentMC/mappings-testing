@@ -6,6 +6,8 @@ CLASS net/minecraft/world/food/FoodProperties
 		ARG 4 canAlwaysEat
 		ARG 5 fastFood
 		ARG 6 effects
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	CLASS Builder
 		METHOD effect (Lnet/minecraft/world/effect/MobEffectInstance;F)Lnet/minecraft/world/food/FoodProperties$Builder;
 			ARG 1 effect
@@ -16,3 +18,6 @@ CLASS net/minecraft/world/food/FoodProperties
 			ARG 1 saturationModifier
 		METHOD saturationModifier (F)Lnet/minecraft/world/food/FoodProperties$Builder;
 			ARG 1 saturationModifier
+	CLASS PossibleEffect
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance

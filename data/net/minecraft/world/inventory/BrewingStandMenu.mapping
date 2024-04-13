@@ -24,6 +24,12 @@ CLASS net/minecraft/world/inventory/BrewingStandMenu
 			COMMENT Returns {@code true} if the given {@link net.minecraft.world.item.ItemStack} is usable as fuel in the brewing stand.
 			ARG 0 itemStack
 	CLASS IngredientsSlot
+		METHOD <init> (Lnet/minecraft/world/item/alchemy/PotionBrewing;Lnet/minecraft/world/Container;III)V
+			ARG 1 potionBrewing
+			ARG 2 container
+			ARG 3 slot
+			ARG 4 x
+			ARG 5 y
 		METHOD getMaxStackSize ()I
 			COMMENT Returns the maximum stack size for a given slot (usually the same as getInventoryStackLimit(), but 1 in the case of armor slots)
 		METHOD mayPlace (Lnet/minecraft/world/item/ItemStack;)Z

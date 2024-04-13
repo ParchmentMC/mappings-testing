@@ -17,10 +17,15 @@ CLASS net/minecraft/world/item/component/CustomData
 		ARG 1 tag
 	METHOD of (Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/item/component/CustomData;
 		ARG 0 tag
+	METHOD read (Lcom/mojang/serialization/MapDecoder;)Lcom/mojang/serialization/DataResult;
+		ARG 1 decoder
 	METHOD set (Lnet/minecraft/core/component/DataComponentType;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/nbt/CompoundTag;)V
 		ARG 0 componentType
 		ARG 1 stack
 		ARG 2 tag
+	METHOD update (Lcom/mojang/serialization/MapEncoder;Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
+		ARG 1 encoder
+		ARG 2 value
 	METHOD update (Ljava/util/function/Consumer;)Lnet/minecraft/world/item/component/CustomData;
 		ARG 1 updater
 	METHOD update (Lnet/minecraft/core/component/DataComponentType;Lnet/minecraft/world/item/ItemStack;Ljava/util/function/Consumer;)V

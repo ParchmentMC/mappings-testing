@@ -8,6 +8,8 @@ CLASS net/minecraft/world/level/ExplosionDamageCalculator
 	METHOD getEntityDamageAmount (Lnet/minecraft/world/level/Explosion;Lnet/minecraft/world/entity/Entity;)F
 		ARG 1 explosion
 		ARG 2 entity
+	METHOD getKnockbackMultiplier (Lnet/minecraft/world/entity/Entity;)F
+		ARG 1 entity
 	METHOD shouldBlockExplode (Lnet/minecraft/world/level/Explosion;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;F)Z
 		ARG 1 explosion
 		ARG 2 reader

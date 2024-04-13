@@ -34,6 +34,9 @@ CLASS net/minecraft/gametest/framework/TestFinder
 		METHOD failedTests (Lcom/mojang/brigadier/context/CommandContext;Z)Ljava/lang/Object;
 			ARG 1 context
 			ARG 2 onlyRequired
+		METHOD locateByName (Lcom/mojang/brigadier/context/CommandContext;Ljava/lang/String;)Ljava/lang/Object;
+			ARG 1 context
+			ARG 2 name
 		METHOD lookedAt (Lcom/mojang/brigadier/context/CommandContext;)Ljava/lang/Object;
 			ARG 1 context
 		METHOD nearest (Lcom/mojang/brigadier/context/CommandContext;)Ljava/lang/Object;

@@ -54,9 +54,18 @@ CLASS net/minecraft/gametest/framework/StructureUtils
 		ARG 0 pos
 		ARG 1 radius
 		ARG 2 level
+	METHOD findStructureByTestFunction (Lnet/minecraft/core/BlockPos;ILnet/minecraft/server/level/ServerLevel;Ljava/lang/String;)Ljava/util/stream/Stream;
+		ARG 0 pos
+		ARG 1 radius
+		ARG 2 level
+		ARG 3 testName
 	METHOD forceLoadChunks (Lnet/minecraft/world/level/levelgen/structure/BoundingBox;Lnet/minecraft/server/level/ServerLevel;)V
 		ARG 0 boundingBox
 		ARG 1 level
+	METHOD getBoundingBoxAtGround (Lnet/minecraft/core/BlockPos;ILnet/minecraft/server/level/ServerLevel;)Lnet/minecraft/world/level/levelgen/structure/BoundingBox;
+		ARG 0 pos
+		ARG 1 radius
+		ARG 2 level
 	METHOD getRotationForRotationSteps (I)Lnet/minecraft/world/level/block/Rotation;
 		ARG 0 rotationSteps
 	METHOD getRotationStepsForRotation (Lnet/minecraft/world/level/block/Rotation;)I
