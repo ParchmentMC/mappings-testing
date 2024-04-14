@@ -16,3 +16,6 @@ CLASS net/minecraft/world/level/block/entity/BannerPatternLayers
 			ARG 1 patterns
 			ARG 2 patternKey
 			ARG 3 color
+	CLASS Layer
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instabce

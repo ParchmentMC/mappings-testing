@@ -15,6 +15,10 @@ CLASS net/minecraft/core/RegistrySetBuilder
 	METHOD buildProviderWithContext (Lnet/minecraft/core/RegistryAccess;Ljava/util/stream/Stream;)Lnet/minecraft/core/HolderLookup$Provider;
 		ARG 0 registry
 		ARG 1 lookups
+	METHOD buildProviderWithContext (Lnet/minecraft/core/RegistrySetBuilder$UniversalOwner;Lnet/minecraft/core/RegistryAccess;Ljava/util/stream/Stream;)Lnet/minecraft/core/HolderLookup$Provider;
+		ARG 0 owner
+		ARG 1 registryAccess
+		ARG 2 lookups
 	METHOD createLazyFullPatchedRegistries (Lnet/minecraft/core/HolderOwner;Lnet/minecraft/core/Cloner$Factory;Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/core/HolderLookup$Provider;Lnet/minecraft/core/HolderLookup$Provider;Lorg/apache/commons/lang3/mutable/MutableObject;)Lnet/minecraft/core/HolderLookup$RegistryLookup;
 		ARG 1 owner
 		ARG 2 clonerFactory
@@ -57,6 +61,11 @@ CLASS net/minecraft/core/RegistrySetBuilder
 	METHOD lookupFromMap (Lnet/minecraft/resources/ResourceKey;Lcom/mojang/serialization/Lifecycle;Ljava/util/Map;)Lnet/minecraft/core/HolderLookup$RegistryLookup;
 		ARG 0 registryKey
 		ARG 1 lifecycle
+	METHOD lookupFromMap (Lnet/minecraft/resources/ResourceKey;Lcom/mojang/serialization/Lifecycle;Lnet/minecraft/core/HolderOwner;Ljava/util/Map;)Lnet/minecraft/core/HolderLookup$RegistryLookup;
+		ARG 0 registryKey
+		ARG 1 registryLifecycle
+		ARG 2 owner
+		ARG 3 elements
 	METHOD wrapContextLookup (Lnet/minecraft/core/HolderLookup$RegistryLookup;)Lnet/minecraft/core/HolderGetter;
 		ARG 0 owner
 	CLASS BuildState
@@ -76,6 +85,10 @@ CLASS net/minecraft/core/RegistrySetBuilder
 	CLASS EmptyTagLookup
 		METHOD <init> (Lnet/minecraft/core/HolderOwner;)V
 			ARG 1 owner
+	CLASS EmptyTagLookupWrapper
+		METHOD <init> (Lnet/minecraft/core/HolderOwner;Lnet/minecraft/core/HolderLookup$RegistryLookup;)V
+			ARG 1 owner
+			ARG 2 parent
 	CLASS LazyHolder
 		METHOD <init> (Lnet/minecraft/core/HolderOwner;Lnet/minecraft/resources/ResourceKey;)V
 			ARG 1 owner
@@ -87,6 +100,8 @@ CLASS net/minecraft/core/RegistrySetBuilder
 			ARG 1 context
 	CLASS RegistryContents
 		METHOD buildAsLookup (Lnet/minecraft/core/RegistrySetBuilder$CompositeOwner;)Lnet/minecraft/core/HolderLookup$RegistryLookup;
+			ARG 1 owner
+		METHOD buildAsLookup (Lnet/minecraft/core/RegistrySetBuilder$UniversalOwner;)Lnet/minecraft/core/HolderLookup$RegistryLookup;
 			ARG 1 owner
 		METHOD lambda$buildAsLookup$1 (Lnet/minecraft/core/RegistrySetBuilder$CompositeOwner;Ljava/util/Map$Entry;)Lnet/minecraft/core/Holder$Reference;
 			ARG 1 valueAndHolder

@@ -14,6 +14,7 @@ CLASS net/minecraft/client/renderer/PostPass
 		ARG 2 name
 		ARG 3 inTarget
 		ARG 4 outTarget
+		ARG 5 useLinearFilter
 	METHOD addAuxAsset (Ljava/lang/String;Ljava/util/function/IntSupplier;II)V
 		ARG 1 auxName
 		ARG 2 auxFramebuffer

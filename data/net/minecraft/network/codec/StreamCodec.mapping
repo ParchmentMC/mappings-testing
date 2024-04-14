@@ -55,12 +55,22 @@ CLASS net/minecraft/network/codec/StreamCodec
 		ARG 10 codec6
 		ARG 11 getter6
 		ARG 12 factory
+	METHOD dispatch (Ljava/util/function/Function;Ljava/util/function/Function;)Lnet/minecraft/network/codec/StreamCodec;
+		ARG 1 keyGetter
+		ARG 2 codecGetter
+	METHOD map (Ljava/util/function/Function;Ljava/util/function/Function;)Lnet/minecraft/network/codec/StreamCodec;
+		ARG 1 factory
+		ARG 2 getter
+	METHOD mapStream (Ljava/util/function/Function;)Lnet/minecraft/network/codec/StreamCodec;
+		ARG 1 bufferFactory
 	METHOD of (Lnet/minecraft/network/codec/StreamEncoder;Lnet/minecraft/network/codec/StreamDecoder;)Lnet/minecraft/network/codec/StreamCodec;
 		ARG 0 encoder
 		ARG 1 decoder
 	METHOD ofMember (Lnet/minecraft/network/codec/StreamMemberEncoder;Lnet/minecraft/network/codec/StreamDecoder;)Lnet/minecraft/network/codec/StreamCodec;
 		ARG 0 encoder
 		ARG 1 decoder
+	METHOD recursive (Ljava/util/function/UnaryOperator;)Lnet/minecraft/network/codec/StreamCodec;
+		ARG 0 modifier
 	CLASS CodecOperation
 		METHOD apply (Lnet/minecraft/network/codec/StreamCodec;)Lnet/minecraft/network/codec/StreamCodec;
 			ARG 1 codec

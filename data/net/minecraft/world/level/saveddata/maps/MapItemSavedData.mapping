@@ -28,6 +28,7 @@ CLASS net/minecraft/world/level/saveddata/maps/MapItemSavedData
 	METHOD addTargetDecoration (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/core/BlockPos;Ljava/lang/String;Lnet/minecraft/core/Holder;)V
 		ARG 0 stack
 		ARG 1 pos
+		ARG 2 type
 		ARG 3 mapDecorationType
 	METHOD addTargetDecoration (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/core/BlockPos;Ljava/lang/String;Lnet/minecraft/world/level/saveddata/maps/MapDecoration$Type;)V
 		ARG 0 map

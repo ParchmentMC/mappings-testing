@@ -3,3 +3,5 @@ CLASS net/minecraft/client/multiplayer/ClientConfigurationPacketListenerImpl
 		ARG 1 payload
 	METHOD lambda$handleRegistryData$0 (Lnet/minecraft/core/RegistryAccess$RegistryEntry;)V
 		ARG 0 holder
+	METHOD runWithResources (Ljava/util/function/Function;)Ljava/lang/Object;
+		ARG 1 resources

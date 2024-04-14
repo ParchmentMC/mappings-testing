@@ -77,6 +77,13 @@ CLASS net/minecraft/gametest/framework/TestCommand
 		ARG 1 tests
 		ARG 2 rotationSteps
 		ARG 3 testsPerRow
+	METHOD runWithRetryOptions (Lcom/mojang/brigadier/builder/ArgumentBuilder;Ljava/util/function/Function;)Lcom/mojang/brigadier/builder/ArgumentBuilder;
+		ARG 0 argumentBuilder
+		ARG 1 runnerGetter
+	METHOD runWithRetryOptions (Lcom/mojang/brigadier/builder/ArgumentBuilder;Ljava/util/function/Function;Ljava/util/function/Function;)Lcom/mojang/brigadier/builder/ArgumentBuilder;
+		ARG 0 argumentBuilder
+		ARG 1 runnerGetter
+		ARG 2 modifier
 	METHOD runWithRetryOptionsAndBuildInfo (Lcom/mojang/brigadier/builder/ArgumentBuilder;Ljava/util/function/Function;)Lcom/mojang/brigadier/builder/ArgumentBuilder;
 		ARG 0 argumentBuilder
 		ARG 1 runnerGetter

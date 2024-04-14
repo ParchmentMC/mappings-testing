@@ -6,5 +6,11 @@ CLASS net/minecraft/client/gui/LayeredDraw
 		ARG 2 renderInner
 	METHOD render (Lnet/minecraft/client/gui/GuiGraphics;F)V
 		ARG 1 guiGraphics
+		ARG 2 partialTick
 	METHOD renderInner (Lnet/minecraft/client/gui/GuiGraphics;F)V
 		ARG 1 guiGraphics
+		ARG 2 partialTick
+	CLASS Layer
+		METHOD render (Lnet/minecraft/client/gui/GuiGraphics;F)V
+			ARG 1 guiGraphics
+			ARG 2 partialTick

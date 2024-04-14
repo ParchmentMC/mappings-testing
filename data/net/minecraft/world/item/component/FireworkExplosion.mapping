@@ -8,6 +8,8 @@ CLASS net/minecraft/world/item/component/FireworkExplosion
 		ARG 1 colors
 	METHOD getColorName (I)Lnet/minecraft/network/chat/Component;
 		ARG 0 id
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	METHOD withFadeColors (Lit/unimi/dsi/fastutil/ints/IntList;)Lnet/minecraft/world/item/component/FireworkExplosion;
 		ARG 1 fadeColors
 	CLASS Shape

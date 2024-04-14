@@ -77,6 +77,8 @@ CLASS net/minecraft/world/level/block/entity/BeehiveBlockEntity
 		METHOD createEntity (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/entity/Entity;
 			ARG 1 level
 			ARG 2 pos
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
 		METHOD of (Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/level/block/entity/BeehiveBlockEntity$Occupant;
 			ARG 0 entity
 		METHOD setBeeReleaseData (ILnet/minecraft/world/entity/animal/Bee;)V

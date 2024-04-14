@@ -724,6 +724,7 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 2 state
 		ARG 3 playStepSound
 		ARG 4 broadcastGameEvent
+		ARG 5 entityPos
 	METHOD walkingStepSound (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 pos
 		ARG 2 state

@@ -5,6 +5,7 @@ CLASS net/minecraft/util/StringUtil
 		ARG 0 text
 	METHOD filterText (Ljava/lang/String;Z)Ljava/lang/String;
 		ARG 0 text
+		ARG 1 allowLineBreaks
 	METHOD formatTickDuration (IF)Ljava/lang/String;
 		ARG 0 ticks
 		ARG 1 ticksPerSecond

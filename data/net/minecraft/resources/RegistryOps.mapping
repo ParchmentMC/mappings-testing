@@ -34,6 +34,9 @@ CLASS net/minecraft/resources/RegistryOps
 	CLASS 2
 		METHOD lambda$lookup$0 (Lnet/minecraft/core/HolderLookup$RegistryLookup;)Lnet/minecraft/resources/RegistryOps$RegistryInfo;
 			ARG 0 registryLookup
+	CLASS RegistryInfo
+		METHOD fromRegistryLookup (Lnet/minecraft/core/HolderLookup$RegistryLookup;)Lnet/minecraft/resources/RegistryOps$RegistryInfo;
+			ARG 0 registryLookup
 	CLASS RegistryInfoLookup
 		METHOD lookup (Lnet/minecraft/resources/ResourceKey;)Ljava/util/Optional;
 			ARG 1 registryKey

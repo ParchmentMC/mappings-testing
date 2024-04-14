@@ -29,9 +29,15 @@ CLASS net/minecraft/network/chat/ComponentSerialization
 	METHOD lambda$static$1 (Lnet/minecraft/network/chat/Component;)Lcom/mojang/serialization/DataResult;
 		ARG 0 component
 	CLASS 1
+		METHOD asJsonOps (Lcom/mojang/serialization/DynamicOps;)Lcom/mojang/serialization/DynamicOps;
+			ARG 0 ops
+		METHOD decode (Lcom/mojang/serialization/DynamicOps;Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
+			ARG 1 ops
+			ARG 2 input
 		METHOD encode (Ljava/lang/Object;Lcom/mojang/serialization/DynamicOps;Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
-			ARG 1 component
+			ARG 1 input
 			ARG 2 ops
+			ARG 3 value
 	CLASS FuzzyCodec
 		METHOD <init> (Ljava/util/List;Ljava/util/function/Function;)V
 			ARG 1 codecs

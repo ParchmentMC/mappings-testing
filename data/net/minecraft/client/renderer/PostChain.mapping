@@ -17,6 +17,7 @@ CLASS net/minecraft/client/renderer/PostChain
 		ARG 1 name
 		ARG 2 inTarget
 		ARG 3 outTarget
+		ARG 4 useLinearFilter
 	METHOD addTempTarget (Ljava/lang/String;II)V
 		ARG 1 name
 		ARG 2 width

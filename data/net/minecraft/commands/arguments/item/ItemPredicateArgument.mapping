@@ -22,6 +22,20 @@ CLASS net/minecraft/commands/arguments/item/ItemPredicateArgument
 		ARG 0 itemResult
 	METHOD lambda$parse$2 (Lnet/minecraft/commands/arguments/item/ItemParser$TagResult;)Lnet/minecraft/commands/arguments/item/ItemPredicateArgument$Result;
 		ARG 0 tagResult
+	METHOD lambda$static$0 (Ljava/lang/Object;)Lcom/mojang/brigadier/Message;
+		ARG 0 item
+	METHOD lambda$static$1 (Ljava/lang/Object;)Lcom/mojang/brigadier/Message;
+		ARG 0 tag
+	METHOD lambda$static$2 (Ljava/lang/Object;)Lcom/mojang/brigadier/Message;
+		ARG 0 component
+	METHOD lambda$static$3 (Ljava/lang/Object;Ljava/lang/Object;)Lcom/mojang/brigadier/Message;
+		ARG 0 component
+		ARG 1 value
+	METHOD lambda$static$4 (Ljava/lang/Object;)Lcom/mojang/brigadier/Message;
+		ARG 0 predicate
+	METHOD lambda$static$5 (Ljava/lang/Object;Ljava/lang/Object;)Lcom/mojang/brigadier/Message;
+		ARG 0 predicate
+		ARG 1 value
 	METHOD listSuggestions (Lcom/mojang/brigadier/context/CommandContext;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 context
 		ARG 2 builder

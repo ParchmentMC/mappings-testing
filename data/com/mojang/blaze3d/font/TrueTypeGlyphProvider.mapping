@@ -10,7 +10,11 @@ CLASS com/mojang/blaze3d/font/TrueTypeGlyphProvider
 	METHOD <init> (Ljava/nio/ByteBuffer;Lorg/lwjgl/util/freetype/FT_Face;FFFFLjava/lang/String;)V
 		ARG 1 fontMemory
 		ARG 2 face
+		ARG 3 size
 		ARG 4 oversample
+		ARG 5 shiftX
+		ARG 6 shiftY
+		ARG 7 skip
 	METHOD lambda$getSupportedGlyphs$1 (I)Z
 		ARG 1 codePoint
 	CLASS Glyph

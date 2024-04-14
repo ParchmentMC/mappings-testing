@@ -12,6 +12,8 @@ CLASS net/minecraft/world/item/trading/ItemCost
 		ARG 0 item
 		ARG 1 count
 		ARG 2 componentPredicate
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	METHOD test (Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 1 stack
 	METHOD withComponents (Ljava/util/function/UnaryOperator;)Lnet/minecraft/world/item/trading/ItemCost;

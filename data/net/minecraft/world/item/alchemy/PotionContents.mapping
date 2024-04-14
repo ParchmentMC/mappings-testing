@@ -25,6 +25,8 @@ CLASS net/minecraft/world/item/alchemy/PotionContents
 		ARG 0 effects
 	METHOD is (Lnet/minecraft/core/Holder;)Z
 		ARG 1 potion
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	METHOD withEffectAdded (Lnet/minecraft/world/effect/MobEffectInstance;)Lnet/minecraft/world/item/alchemy/PotionContents;
 		ARG 1 effect
 	METHOD withPotion (Lnet/minecraft/core/Holder;)Lnet/minecraft/world/item/alchemy/PotionContents;

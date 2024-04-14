@@ -86,6 +86,8 @@ CLASS net/minecraft/world/effect/MobEffectInstance
 		ARG 1 other
 	METHOD isVisible ()Z
 		COMMENT Gets whether this potion effect will show ambient particles or not.
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	METHOD load (Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/effect/MobEffectInstance;
 		COMMENT Read a custom potion effect from a potion item's NBT data.
 		ARG 0 nbt
@@ -142,6 +144,8 @@ CLASS net/minecraft/world/effect/MobEffectInstance
 			ARG 3 showParticles
 			ARG 4 showIcon
 			ARG 5 hiddenEffect
+		METHOD lambda$static$1 (Lcom/mojang/serialization/Codec;Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 1 instance
 	CLASS FactorData
 		METHOD <init> (I)V
 			ARG 1 paddingDuration

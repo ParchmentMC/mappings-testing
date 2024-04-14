@@ -11,3 +11,5 @@ CLASS net/minecraft/world/level/block/entity/vault/VaultConfig
 		ARG 4 deactivationRange
 		ARG 6 keyItem
 		ARG 7 overrideLootTableToDisplay
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

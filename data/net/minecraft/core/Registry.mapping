@@ -79,6 +79,10 @@ CLASS net/minecraft/core/Registry
 		ARG 0 registry
 		ARG 1 name
 		ARG 2 value
+	METHOD registrationInfo (Lnet/minecraft/resources/ResourceKey;)Ljava/util/Optional;
+		ARG 1 key
+	METHOD safeCastToReference (Lnet/minecraft/core/Holder;)Lcom/mojang/serialization/DataResult;
+		ARG 1 value
 	METHOD wrapAsHolder (Ljava/lang/Object;)Lnet/minecraft/core/Holder;
 		ARG 1 value
 	CLASS 1

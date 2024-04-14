@@ -64,6 +64,8 @@ CLASS net/minecraft/world/effect/MobEffect
 		ARG 3 reason
 	METHOD removeAttributeModifiers (Lnet/minecraft/world/entity/ai/attributes/AttributeMap;)V
 		ARG 1 attributeMap
+	METHOD requiredFeatures ([Lnet/minecraft/world/flag/FeatureFlag;)Lnet/minecraft/world/effect/MobEffect;
+		ARG 1 requiredFeatures
 	METHOD setBlendDuration (I)Lnet/minecraft/world/effect/MobEffect;
 		ARG 1 blendDuration
 	METHOD setFactorDataFactory (Ljava/util/function/Supplier;)Lnet/minecraft/world/effect/MobEffect;
@@ -71,6 +73,8 @@ CLASS net/minecraft/world/effect/MobEffect
 	METHOD shouldApplyEffectTickThisTick (II)Z
 		ARG 1 duration
 		ARG 2 amplifier
+	METHOD withSoundOnAdded (Lnet/minecraft/sounds/SoundEvent;)Lnet/minecraft/world/effect/MobEffect;
+		ARG 1 sound
 	CLASS AttributeTemplate
 		METHOD create (Ljava/lang/String;I)Lnet/minecraft/world/entity/ai/attributes/AttributeModifier;
 			ARG 1 description

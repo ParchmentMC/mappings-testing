@@ -3,6 +3,8 @@ CLASS net/minecraft/world/item/component/Tool
 		ARG 1 state
 	METHOD isCorrectForDrops (Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 1 state
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	CLASS Rule
 		METHOD deniesDrops (Lnet/minecraft/tags/TagKey;)Lnet/minecraft/world/item/component/Tool$Rule;
 			ARG 0 blocks
@@ -14,6 +16,8 @@ CLASS net/minecraft/world/item/component/Tool
 			ARG 0 tag
 			ARG 1 speed
 			ARG 2 correctForDrops
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
 		METHOD minesAndDrops (Ljava/util/List;F)Lnet/minecraft/world/item/component/Tool$Rule;
 			ARG 0 blocks
 			ARG 1 speed

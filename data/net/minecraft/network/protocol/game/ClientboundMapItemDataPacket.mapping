@@ -15,7 +15,7 @@ CLASS net/minecraft/network/protocol/game/ClientboundMapItemDataPacket
 		ARG 5 colorPatch
 	METHOD applyToMap (Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData;)V
 		COMMENT Sets new MapData from the packet to given MapData param
-		ARG 1 mapdata
+		ARG 1 mapData
 	METHOD handle (Lnet/minecraft/network/protocol/game/ClientGamePacketListener;)V
 		COMMENT Passes this Packet on to the NetHandler for processing.
 		ARG 1 handler

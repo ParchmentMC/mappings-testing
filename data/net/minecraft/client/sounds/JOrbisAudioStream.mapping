@@ -21,5 +21,7 @@ CLASS net/minecraft/client/sounds/JOrbisAudioStream
 		ARG 6 output
 	METHOD getSamplesToWrite (I)J
 		ARG 1 samples
+	METHOD isError (I)Z
+		ARG 0 value
 	METHOD readIdentificationPacket (Lcom/jcraft/jogg/Page;)Lcom/jcraft/jogg/Packet;
 		ARG 1 page

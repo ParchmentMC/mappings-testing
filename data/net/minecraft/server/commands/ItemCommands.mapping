@@ -79,6 +79,7 @@ CLASS net/minecraft/server/commands/ItemCommands
 		ARG 2 sourceSlot
 		ARG 3 targets
 		ARG 4 slot
+		ARG 5 modifier
 	METHOD entityToEntities (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/world/entity/Entity;ILjava/util/Collection;ILnet/minecraft/world/level/storage/loot/functions/LootItemFunction;)I
 		ARG 0 source
 		ARG 1 sourceEntity

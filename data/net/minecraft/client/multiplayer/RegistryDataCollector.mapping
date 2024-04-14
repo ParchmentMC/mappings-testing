@@ -17,6 +17,9 @@ CLASS net/minecraft/client/multiplayer/RegistryDataCollector
 			ARG 2 entries
 		METHOD loadRegistries (Lnet/minecraft/core/RegistryAccess;)Lnet/minecraft/core/RegistryAccess;
 			ARG 1 registryAccess
+		METHOD loadRegistries (Lnet/minecraft/server/packs/resources/ResourceProvider;Lnet/minecraft/core/RegistryAccess;)Lnet/minecraft/core/RegistryAccess;
+			ARG 1 resourceProvider
+			ARG 2 registryAccess
 	CLASS TagCollector
 		METHOD append (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/tags/TagNetworkSerialization$NetworkPayload;)V
 			ARG 1 registryKey

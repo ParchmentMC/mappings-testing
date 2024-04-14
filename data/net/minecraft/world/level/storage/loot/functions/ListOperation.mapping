@@ -11,6 +11,8 @@ CLASS net/minecraft/world/level/storage/loot/functions/ListOperation
 	CLASS ReplaceSection
 		METHOD <init> (I)V
 			ARG 1 offset
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
 	CLASS Type
 		METHOD <init> (Ljava/lang/String;ILjava/lang/String;Lcom/mojang/serialization/MapCodec;)V
 			ARG 3 id

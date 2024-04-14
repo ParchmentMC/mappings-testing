@@ -1,9 +1,17 @@
 CLASS net/minecraft/world/item/component/WrittenBookContent
+	METHOD <init> (Lnet/minecraft/server/network/Filterable;Ljava/lang/String;ILjava/util/List;Z)V
+		ARG 1 title
+		ARG 2 author
+		ARG 3 generation
+		ARG 4 pages
+		ARG 5 resolved
 	METHOD getPages (Z)Ljava/util/List;
 		ARG 1 filtered
 	METHOD isPageTooLarge (Lnet/minecraft/network/chat/Component;Lnet/minecraft/core/HolderLookup$Provider;)Z
 		ARG 0 page
 		ARG 1 registryAccess
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	METHOD pageCodec (Lcom/mojang/serialization/Codec;)Lcom/mojang/serialization/Codec;
 		ARG 0 codec
 	METHOD pagesCodec (Lcom/mojang/serialization/Codec;)Lcom/mojang/serialization/Codec;

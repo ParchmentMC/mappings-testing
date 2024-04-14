@@ -10,6 +10,8 @@ CLASS net/minecraft/world/level/storage/loot/functions/CopyComponentsFunction
 		ARG 4 exclude
 	METHOD copyComponents (Lnet/minecraft/world/level/storage/loot/functions/CopyComponentsFunction$Source;)Lnet/minecraft/world/level/storage/loot/functions/CopyComponentsFunction$Builder;
 		ARG 0 source
+	METHOD lambda$static$3 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	CLASS Builder
 		METHOD <init> (Lnet/minecraft/world/level/storage/loot/functions/CopyComponentsFunction$Source;)V
 			ARG 1 source

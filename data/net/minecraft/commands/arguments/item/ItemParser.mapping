@@ -21,6 +21,13 @@ CLASS net/minecraft/commands/arguments/item/ItemParser
 		ARG 0 itemId
 	METHOD lambda$static$1 (Ljava/lang/Object;)Lcom/mojang/brigadier/Message;
 		ARG 0 itemTag
+	METHOD lambda$static$2 (Ljava/lang/Object;Ljava/lang/Object;)Lcom/mojang/brigadier/Message;
+		ARG 0 component
+		ARG 1 value
+	METHOD lambda$static$3 (Ljava/lang/Object;)Lcom/mojang/brigadier/Message;
+		ARG 0 component
+	METHOD lambda$static$4 (Ljava/lang/Object;)Lcom/mojang/brigadier/Message;
+		ARG 0 item
 	METHOD parse (Lcom/mojang/brigadier/StringReader;)Lnet/minecraft/commands/arguments/item/ItemParser$ItemResult;
 		ARG 1 reader
 	METHOD parse (Lcom/mojang/brigadier/StringReader;Lnet/minecraft/commands/arguments/item/ItemParser$Visitor;)V

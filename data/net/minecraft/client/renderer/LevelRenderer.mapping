@@ -247,6 +247,7 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 	METHOD renderLevel (FJZLnet/minecraft/client/Camera;Lnet/minecraft/client/renderer/GameRenderer;Lnet/minecraft/client/renderer/LightTexture;Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;)V
 		ARG 1 partialTick
 		ARG 2 nanoTime
+		ARG 4 renderBlockOutline
 		ARG 5 camera
 		ARG 6 gameRenderer
 		ARG 7 lightTexture

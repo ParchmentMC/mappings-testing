@@ -146,6 +146,8 @@ CLASS net/minecraft/network/Connection
 		ARG 3 flush
 	METHOD setBandwidthLogger (Lnet/minecraft/util/SampleLogger;)V
 		ARG 1 bandwithLogger
+	METHOD setBandwidthLogger (Lnet/minecraft/util/debugchart/LocalSampleLogger;)V
+		ARG 1 bandwithLogger
 	METHOD setClientboundProtocolAfterHandshake (Lnet/minecraft/network/protocol/handshake/ClientIntent;)V
 		ARG 1 intention
 	METHOD setEncryptionKey (Ljavax/crypto/Cipher;Ljavax/crypto/Cipher;)V
@@ -187,5 +189,8 @@ CLASS net/minecraft/network/Connection
 		METHOD initChannel (Lio/netty/channel/Channel;)V
 			ARG 1 channel
 	CLASS 2
+		METHOD initChannel (Lio/netty/channel/Channel;)V
+			ARG 1 channel
+	CLASS 3
 		METHOD initChannel (Lio/netty/channel/Channel;)V
 			ARG 1 channel

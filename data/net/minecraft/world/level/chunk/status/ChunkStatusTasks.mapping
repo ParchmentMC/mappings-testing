@@ -33,6 +33,7 @@ CLASS net/minecraft/world/level/chunk/status/ChunkStatusTasks
 		ARG 2 executor
 		ARG 3 toFullChunk
 		ARG 4 cache
+		ARG 5 loadingChunk
 	METHOD generateInitializeLight (Lnet/minecraft/world/level/chunk/status/WorldGenContext;Lnet/minecraft/world/level/chunk/status/ChunkStatus;Ljava/util/concurrent/Executor;Lnet/minecraft/world/level/chunk/status/ToFullChunk;Ljava/util/List;Lnet/minecraft/world/level/chunk/ChunkAccess;)Ljava/util/concurrent/CompletableFuture;
 		ARG 0 context
 		ARG 1 status
@@ -94,6 +95,7 @@ CLASS net/minecraft/world/level/chunk/status/ChunkStatusTasks
 		ARG 0 context
 		ARG 1 status
 		ARG 2 toFullChunk
+		ARG 3 loadingChunk
 	METHOD loadInitializeLight (Lnet/minecraft/world/level/chunk/status/WorldGenContext;Lnet/minecraft/world/level/chunk/status/ChunkStatus;Lnet/minecraft/world/level/chunk/status/ToFullChunk;Lnet/minecraft/world/level/chunk/ChunkAccess;)Ljava/util/concurrent/CompletableFuture;
 		ARG 0 context
 		ARG 1 status

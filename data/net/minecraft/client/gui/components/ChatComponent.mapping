@@ -21,6 +21,8 @@ CLASS net/minecraft/client/gui/components/ChatComponent
 		ARG 3 tag
 	METHOD addMessageToDisplayQueue (Lnet/minecraft/client/GuiMessage;)V
 		ARG 1 message
+	METHOD addMessageToQueue (Lnet/minecraft/client/GuiMessage;)V
+		ARG 1 message
 	METHOD addRecentChat (Ljava/lang/String;)V
 		COMMENT Adds this string to the list of sent messages, for recall using the up/down arrow keys
 		ARG 1 message

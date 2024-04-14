@@ -36,5 +36,8 @@ CLASS net/minecraft/server/ReloadableServerResources
 	CLASS ConfigurableRegistryLookup
 		METHOD <init> (Lnet/minecraft/core/RegistryAccess;)V
 			ARG 1 registryAccess
+		METHOD createDispatchedLookup (Lnet/minecraft/core/HolderLookup$RegistryLookup;Lnet/minecraft/core/HolderLookup$RegistryLookup;)Lnet/minecraft/core/HolderLookup$RegistryLookup;
+			ARG 1 lookup
+			ARG 2 tagAddingLookup
 		METHOD missingTagAccessPolicy (Lnet/minecraft/server/ReloadableServerResources$MissingTagAccessPolicy;)V
 			ARG 1 missingTagAccessPolicy

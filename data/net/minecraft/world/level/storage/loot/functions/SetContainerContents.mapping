@@ -9,11 +9,15 @@ CLASS net/minecraft/world/level/storage/loot/functions/SetContainerContents
 		ARG 1 conditions
 		ARG 2 component
 		ARG 3 entries
+	METHOD lambda$static$2 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	METHOD run (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/storage/loot/LootContext;)Lnet/minecraft/world/item/ItemStack;
 		ARG 1 stack
 		ARG 2 context
 	METHOD setContents (Lnet/minecraft/world/level/block/entity/BlockEntityType;)Lnet/minecraft/world/level/storage/loot/functions/SetContainerContents$Builder;
 		ARG 0 type
+	METHOD setContents (Lnet/minecraft/world/level/storage/loot/ContainerComponentManipulator;)Lnet/minecraft/world/level/storage/loot/functions/SetContainerContents$Builder;
+		ARG 0 component
 	CLASS Builder
 		METHOD <init> (Lnet/minecraft/world/level/block/entity/BlockEntityType;)V
 			ARG 1 type
