@@ -235,6 +235,9 @@ CLASS net/minecraft/client/Minecraft
 	METHOD setLevel (Lnet/minecraft/client/multiplayer/ClientLevel;)V
 		COMMENT Unloads the current world first.
 		ARG 1 levelClient
+	METHOD setLevel (Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/client/gui/screens/ReceivingLevelScreen$Reason;)V
+		ARG 1 level
+		ARG 2 reason
 	METHOD setOverlay (Lnet/minecraft/client/gui/screens/Overlay;)V
 		ARG 1 loadingGui
 	METHOD setScreen (Lnet/minecraft/client/gui/screens/Screen;)V

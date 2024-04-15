@@ -43,6 +43,10 @@ CLASS net/minecraft/world/entity/player/Player
 		ARG 1 entity
 	METHOD canEat (Z)Z
 		ARG 1 canAlwaysEat
+	METHOD canFallAtLeast (DDF)Z
+		ARG 1 x
+		ARG 3 z
+		ARG 5 distance
 	METHOD canHarmPlayer (Lnet/minecraft/world/entity/player/Player;)Z
 		ARG 1 other
 	METHOD canInteractWithBlock (Lnet/minecraft/core/BlockPos;D)Z
@@ -155,6 +159,8 @@ CLASS net/minecraft/world/entity/player/Player
 	METHOD interactOn (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResult;
 		ARG 1 entityToInteractOn
 		ARG 2 hand
+	METHOD isAboveGround (F)Z
+		ARG 1 maxUpStep
 	METHOD isAlwaysExperienceDropper ()Z
 		COMMENT Only use is to identify if class is an instance of player for experience dropping
 	METHOD isHurt ()Z

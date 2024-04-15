@@ -15,6 +15,16 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 1 dataPackConfig
 		ARG 2 safeMode
 		ARG 3 enabledFeatures
+	METHOD configurePackRepository (Lnet/minecraft/server/packs/repository/PackRepository;Lnet/minecraft/world/level/WorldDataConfiguration;ZZ)Lnet/minecraft/world/level/WorldDataConfiguration;
+		ARG 0 packRepository
+		ARG 1 initialDataConfig
+		ARG 2 initMode
+		ARG 3 safeMode
+	METHOD configureRepositoryWithSelection (Lnet/minecraft/server/packs/repository/PackRepository;Ljava/util/Collection;Lnet/minecraft/world/flag/FeatureFlagSet;Z)Lnet/minecraft/world/level/WorldDataConfiguration;
+		ARG 0 packRepository
+		ARG 1 selectedPacks
+		ARG 2 enabledFeatures
+		ARG 3 safeMode
 	METHOD constructOrExtractCrashReport (Ljava/lang/Throwable;)Lnet/minecraft/CrashReport;
 		ARG 0 cause
 	METHOD createGameModeForPlayer (Lnet/minecraft/server/level/ServerPlayer;)Lnet/minecraft/server/level/ServerPlayerGameMode;
@@ -37,6 +47,9 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 1 path
 	METHOD dumpThreads (Ljava/nio/file/Path;)V
 		ARG 1 path
+	METHOD enableForcedFeaturePacks (Lnet/minecraft/server/packs/repository/PackRepository;Lnet/minecraft/world/flag/FeatureFlagSet;)V
+		ARG 0 packRepository
+		ARG 1 enabledFeatures
 	METHOD fillServerSystemReport (Lnet/minecraft/SystemReport;)Lnet/minecraft/SystemReport;
 		ARG 1 report
 	METHOD fillSystemReport (Lnet/minecraft/SystemReport;)Lnet/minecraft/SystemReport;
@@ -67,6 +80,9 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 1 trackingDistance
 	METHOD getSelectedPacks (Lnet/minecraft/server/packs/repository/PackRepository;)Lnet/minecraft/world/level/DataPackConfig;
 		ARG 0 packRepository
+	METHOD getSelectedPacks (Lnet/minecraft/server/packs/repository/PackRepository;Z)Lnet/minecraft/world/level/DataPackConfig;
+		ARG 0 packRepository
+		ARG 1 safeMode
 	METHOD getServerVersion ()Ljava/lang/String;
 		COMMENT Returns the server's Minecraft version as string.
 	METHOD getSpawnProtectionRadius ()I

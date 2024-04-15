@@ -130,5 +130,7 @@ CLASS net/minecraft/world/level/block/Blocks
 		ARG 0 color
 	METHOD stair (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 baseBlock
+	METHOD waterloggedMapColor (Lnet/minecraft/world/level/material/MapColor;)Ljava/util/function/Function;
+		ARG 0 unwaterloggedMapColor
 	METHOD woodenButton (Lnet/minecraft/world/level/block/state/properties/BlockSetType;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 type

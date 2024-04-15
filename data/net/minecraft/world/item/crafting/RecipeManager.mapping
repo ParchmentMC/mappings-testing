@@ -7,6 +7,11 @@ CLASS net/minecraft/world/item/crafting/RecipeManager
 		ARG 3 profiler
 	METHOD byKey (Lnet/minecraft/resources/ResourceLocation;)Ljava/util/Optional;
 		ARG 1 recipeId
+	METHOD byKeyTyped (Lnet/minecraft/world/item/crafting/RecipeType;Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/world/item/crafting/RecipeHolder;
+		ARG 1 type
+		ARG 2 name
+	METHOD byType (Lnet/minecraft/world/item/crafting/RecipeType;)Ljava/util/Collection;
+		ARG 1 type
 	METHOD byType (Lnet/minecraft/world/item/crafting/RecipeType;)Ljava/util/Map;
 		ARG 1 recipeType
 	METHOD createCheck (Lnet/minecraft/world/item/crafting/RecipeType;)Lnet/minecraft/world/item/crafting/RecipeManager$CachedCheck;

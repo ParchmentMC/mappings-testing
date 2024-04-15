@@ -231,6 +231,9 @@ CLASS net/minecraft/client/Options
 	METHOD percentValueLabel (Lnet/minecraft/network/chat/Component;D)Lnet/minecraft/network/chat/Component;
 		ARG 0 text
 		ARG 1 value
+	METHOD percentValueOrOffLabel (Lnet/minecraft/network/chat/Component;D)Lnet/minecraft/network/chat/Component;
+		ARG 0 text
+		ARG 1 value
 	METHOD pixelValueLabel (Lnet/minecraft/network/chat/Component;I)Lnet/minecraft/network/chat/Component;
 		ARG 0 text
 		ARG 1 value

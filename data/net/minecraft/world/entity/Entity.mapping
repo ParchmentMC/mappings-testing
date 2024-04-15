@@ -74,6 +74,15 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 entity
 		ARG 2 horizontalDistance
 		ARG 4 verticalDistance
+	METHOD collectCandidateStepUpHeights (Lnet/minecraft/world/phys/AABB;Ljava/util/List;F)[F
+		ARG 0 boundingBox
+		ARG 1 colliders
+		ARG 2 maxUpStep
+	METHOD collectColliders (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/phys/AABB;)Ljava/util/List;
+		ARG 0 entity
+		ARG 1 level
+		ARG 2 collisions
+		ARG 3 collisionBoundingBox
 	METHOD collide (Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/world/phys/Vec3;
 		COMMENT Given a motion vector, return an updated vector that takes into account restrictions such as collisions (from all directions) and step-up from stepHeight
 		ARG 1 vec
@@ -209,6 +218,8 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 entity
 		ARG 2 dimensions
 		ARG 3 scale
+	METHOD getPassengerClosestTo (Lnet/minecraft/world/phys/Vec3;)Ljava/util/Optional;
+		ARG 1 pos
 	METHOD getPassengerRidingPosition (Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/phys/Vec3;
 		ARG 1 entity
 	METHOD getPortalWaitTime ()I

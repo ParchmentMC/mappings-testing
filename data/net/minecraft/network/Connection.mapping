@@ -28,6 +28,10 @@ CLASS net/minecraft/network/Connection
 		ARG 0 pipeline
 		ARG 1 flow
 		ARG 2 bandwithMonitor
+	METHOD configureSerialization (Lio/netty/channel/ChannelPipeline;Lnet/minecraft/network/protocol/PacketFlow;ZLnet/minecraft/network/BandwidthDebugMonitor;)V
+		ARG 0 pipeline
+		ARG 1 flow
+		ARG 3 bandwithDebugMonitor
 	METHOD connect (Ljava/net/InetSocketAddress;ZLnet/minecraft/network/Connection;)Lio/netty/channel/ChannelFuture;
 		ARG 0 address
 		ARG 1 useEpollIfAvailable
@@ -49,6 +53,8 @@ CLASS net/minecraft/network/Connection
 		ARG 0 address
 		ARG 1 useEpollIfAvailable
 		ARG 2 logger
+	METHOD createFrameDecoder (Lnet/minecraft/network/BandwidthDebugMonitor;Z)Lio/netty/channel/ChannelInboundHandler;
+		ARG 0 bandwithDebugMonitor
 	METHOD disconnect (Lnet/minecraft/network/chat/Component;)V
 		COMMENT Closes the channel with a given reason. The reason is stored for later and will be used for informational purposes (info log on server,
 		COMMENT disconnection screen on the client). This method is also called on the client when the server requests disconnection via
@@ -180,6 +186,8 @@ CLASS net/minecraft/network/Connection
 		ARG 2 packetInfo
 	METHOD setupOutboundProtocol (Lnet/minecraft/network/ProtocolInfo;)V
 		ARG 1 protocolInfo
+	METHOD syncAfterConfigurationChange (Lio/netty/channel/ChannelFuture;)V
+		ARG 0 future
 	METHOD tick ()V
 		COMMENT Checks timeouts and processes all packets received
 	METHOD validateListener (Lnet/minecraft/network/ProtocolInfo;Lnet/minecraft/network/PacketListener;)V

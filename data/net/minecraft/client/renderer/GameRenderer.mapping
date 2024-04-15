@@ -150,6 +150,8 @@ CLASS net/minecraft/client/renderer/GameRenderer
 		ARG 0 shader
 	METHOD lambda$reloadShaders$9 (Lnet/minecraft/client/renderer/ShaderInstance;)V
 		ARG 0 shader
+	METHOD loadBlurEffect (Lnet/minecraft/server/packs/resources/ResourceProvider;)V
+		ARG 1 resourceProvider
 	METHOD loadEffect (Lnet/minecraft/resources/ResourceLocation;)V
 		ARG 1 resourceLocation
 	METHOD pick (F)V

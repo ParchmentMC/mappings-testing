@@ -3,6 +3,8 @@ CLASS net/minecraft/server/packs/repository/PackRepository
 		ARG 1 sources
 	METHOD addPack (Ljava/lang/String;)Z
 		ARG 1 id
+	METHOD displayPackList (Ljava/util/Collection;)Ljava/lang/String;
+		ARG 0 packs
 	METHOD getAvailablePacks ()Ljava/util/Collection;
 		COMMENT Gets all known packs, including those that are not enabled.
 	METHOD getAvailablePacks (Ljava/util/Collection;)Ljava/util/stream/Stream;
