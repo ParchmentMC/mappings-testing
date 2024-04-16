@@ -45,6 +45,12 @@ CLASS net/minecraft/world/level/levelgen/structure/Structure
 	METHOD getLowestYIn5by5BoxOffset7Blocks (Lnet/minecraft/world/level/levelgen/structure/Structure$GenerationContext;Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/core/BlockPos;
 		ARG 1 context
 		ARG 2 rotation
+	METHOD getMeanFirstOccupiedHeight (Lnet/minecraft/world/level/levelgen/structure/Structure$GenerationContext;IIII)I
+		ARG 0 context
+		ARG 1 minX
+		ARG 2 maxX
+		ARG 3 minZ
+		ARG 4 maxZ
 	METHOD isValidBiome (Lnet/minecraft/world/level/levelgen/structure/Structure$GenerationStub;Lnet/minecraft/world/level/levelgen/structure/Structure$GenerationContext;)Z
 		ARG 0 stub
 		ARG 1 context

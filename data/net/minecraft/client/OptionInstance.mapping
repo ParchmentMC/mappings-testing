@@ -83,6 +83,10 @@ CLASS net/minecraft/client/OptionInstance
 			METHOD set (Lnet/minecraft/client/OptionInstance;Ljava/lang/Object;)V
 				ARG 1 instance
 				ARG 2 value
+	CLASS IntRange
+		METHOD <init> (II)V
+			ARG 1 minInclusive
+			ARG 2 maxInclusive
 	CLASS IntRangeBase
 		METHOD xmap (Ljava/util/function/IntFunction;Ljava/util/function/ToIntFunction;)Lnet/minecraft/client/OptionInstance$SliderableValueSet;
 			ARG 1 to
@@ -98,6 +102,17 @@ CLASS net/minecraft/client/OptionInstance
 			ARG 7 values
 			ARG 8 tooltipSupplier
 			ARG 9 onValueChanged
+		METHOD <init> (Lnet/minecraft/client/Options;IIIILnet/minecraft/client/OptionInstance;Lnet/minecraft/client/OptionInstance$SliderableValueSet;Lnet/minecraft/client/OptionInstance$TooltipSupplier;Ljava/util/function/Consumer;Z)V
+			ARG 1 options
+			ARG 2 x
+			ARG 3 y
+			ARG 4 width
+			ARG 5 height
+			ARG 6 instance
+			ARG 7 values
+			ARG 8 tooltipSupplier
+			ARG 9 onValueChanged
+			ARG 10 applyValueImmediately
 	CLASS SliderableValueSet
 		METHOD fromSliderValue (D)Ljava/lang/Object;
 			ARG 1 value
@@ -108,6 +123,10 @@ CLASS net/minecraft/client/OptionInstance
 	CLASS TooltipSupplier
 		METHOD apply (Ljava/lang/Object;)Lnet/minecraft/client/gui/components/Tooltip;
 			ARG 1 value
+	CLASS UnitDouble
+		METHOD xmap (Ljava/util/function/DoubleFunction;Ljava/util/function/ToDoubleFunction;)Lnet/minecraft/client/OptionInstance$SliderableValueSet;
+			ARG 1 encoder
+			ARG 2 decoder
 	CLASS ValueSet
 		METHOD createButton (Lnet/minecraft/client/OptionInstance$TooltipSupplier;Lnet/minecraft/client/Options;IIILjava/util/function/Consumer;)Ljava/util/function/Function;
 			ARG 1 tooltipSupplier

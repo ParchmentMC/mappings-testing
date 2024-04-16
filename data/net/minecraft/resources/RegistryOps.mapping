@@ -8,6 +8,8 @@ CLASS net/minecraft/resources/RegistryOps
 	METHOD create (Lcom/mojang/serialization/DynamicOps;Lnet/minecraft/resources/RegistryOps$RegistryInfoLookup;)Lnet/minecraft/resources/RegistryOps;
 		ARG 0 delegate
 		ARG 1 lookupProvider
+	METHOD equals (Ljava/lang/Object;)Z
+		ARG 1 other
 	METHOD getter (Lnet/minecraft/resources/ResourceKey;)Ljava/util/Optional;
 		ARG 1 registryKey
 	METHOD injectRegistryContext (Lcom/mojang/serialization/Dynamic;Lnet/minecraft/core/HolderLookup$Provider;)Lcom/mojang/serialization/Dynamic;
@@ -34,6 +36,13 @@ CLASS net/minecraft/resources/RegistryOps
 	CLASS 2
 		METHOD lambda$lookup$0 (Lnet/minecraft/core/HolderLookup$RegistryLookup;)Lnet/minecraft/resources/RegistryOps$RegistryInfo;
 			ARG 0 registryLookup
+	CLASS HolderLookupAdapter
+		METHOD <init> (Lnet/minecraft/core/HolderLookup$Provider;)V
+			ARG 1 lookupProvider
+		METHOD createLookup (Lnet/minecraft/resources/ResourceKey;)Ljava/util/Optional;
+			ARG 1 registryKey
+		METHOD equals (Ljava/lang/Object;)Z
+			ARG 1 other
 	CLASS RegistryInfo
 		METHOD fromRegistryLookup (Lnet/minecraft/core/HolderLookup$RegistryLookup;)Lnet/minecraft/resources/RegistryOps$RegistryInfo;
 			ARG 0 registryLookup
