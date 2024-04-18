@@ -3,3 +3,8 @@ CLASS net/minecraft/util/datafix/fixes/HorseBodyArmorItemFix
 		ARG 1 outputSchema
 		ARG 2 entityName
 		ARG 3 previousBodyArmorTag
+	METHOD <init> (Lcom/mojang/datafixers/schemas/Schema;Ljava/lang/String;Ljava/lang/String;Z)V
+		ARG 1 outputSchema
+		ARG 2 entityName
+		ARG 3 previousBodyArmorTag
+		ARG 4 clearArmorItems
