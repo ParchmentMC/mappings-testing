@@ -111,6 +111,14 @@ CLASS net/minecraft/world/level/chunk/ChunkStatus
 		ARG 3 heightmaps
 		ARG 4 type
 		ARG 5 generationTask
+	CLASS LoadingTask
+		METHOD doWork (Lnet/minecraft/world/level/chunk/ChunkStatus;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplateManager;Lnet/minecraft/server/level/ThreadedLevelLightEngine;Ljava/util/function/Function;Lnet/minecraft/world/level/chunk/ChunkAccess;)Ljava/util/concurrent/CompletableFuture;
+			ARG 1 status
+			ARG 2 level
+			ARG 3 structureTemplateManager
+			ARG 4 lightEngine
+			ARG 5 task
+			ARG 6 chunk
 	CLASS GenerationTask
 		METHOD doWork (Lnet/minecraft/world/level/chunk/ChunkStatus;Ljava/util/concurrent/Executor;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/chunk/ChunkGenerator;Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplateManager;Lnet/minecraft/server/level/ThreadedLevelLightEngine;Ljava/util/function/Function;Ljava/util/List;Lnet/minecraft/world/level/chunk/ChunkAccess;)Ljava/util/concurrent/CompletableFuture;
 			ARG 1 status
@@ -122,14 +130,6 @@ CLASS net/minecraft/world/level/chunk/ChunkStatus
 			ARG 7 task
 			ARG 8 cache
 			ARG 9 loadingChunk
-	CLASS LoadingTask
-		METHOD doWork (Lnet/minecraft/world/level/chunk/ChunkStatus;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplateManager;Lnet/minecraft/server/level/ThreadedLevelLightEngine;Ljava/util/function/Function;Lnet/minecraft/world/level/chunk/ChunkAccess;)Ljava/util/concurrent/CompletableFuture;
-			ARG 1 status
-			ARG 2 level
-			ARG 3 structureTemplateManager
-			ARG 4 lightEngine
-			ARG 5 task
-			ARG 6 chunk
 	CLASS SimpleGenerationTask
 		COMMENT A {@link GenerationTask} which completes all work synchronously.
 		METHOD doWork (Lnet/minecraft/world/level/chunk/ChunkStatus;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/chunk/ChunkGenerator;Ljava/util/List;Lnet/minecraft/world/level/chunk/ChunkAccess;)V

@@ -89,14 +89,14 @@ CLASS net/minecraft/world/level/levelgen/blending/BlendingData
 			ARG 1 x
 			ARG 2 z
 			ARG 3 biome
+	CLASS HeightConsumer
+		METHOD consume (IID)V
+			ARG 1 x
+			ARG 2 z
+			ARG 3 height
 	CLASS DensityConsumer
 		METHOD consume (IIID)V
 			ARG 1 x
 			ARG 2 y
 			ARG 3 z
 			ARG 4 density
-	CLASS HeightConsumer
-		METHOD consume (IID)V
-			ARG 1 x
-			ARG 2 z
-			ARG 3 height

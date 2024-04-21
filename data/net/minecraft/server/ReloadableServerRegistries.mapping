@@ -18,9 +18,6 @@ CLASS net/minecraft/server/ReloadableServerRegistries
 		ARG 0 context
 		ARG 1 lootDataType
 		ARG 2 registryAccess
-	CLASS EmptyTagLookupWrapper
-		METHOD <init> (Lnet/minecraft/core/RegistryAccess;)V
-			ARG 1 registryAccess
 	CLASS Holder
 		METHOD <init> (Lnet/minecraft/core/RegistryAccess$Frozen;)V
 			ARG 1 registries
@@ -28,3 +25,6 @@ CLASS net/minecraft/server/ReloadableServerRegistries
 			ARG 1 registryKey
 		METHOD getLootTable (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/world/level/storage/loot/LootTable;
 			ARG 1 lootTableKey
+	CLASS EmptyTagLookupWrapper
+		METHOD <init> (Lnet/minecraft/core/RegistryAccess;)V
+			ARG 1 registryAccess

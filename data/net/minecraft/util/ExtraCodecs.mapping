@@ -124,18 +124,6 @@ CLASS net/minecraft/util/ExtraCodecs
 			ARG 1 ops
 			ARG 2 input
 			ARG 3 t
-	CLASS 1ContextRetrievalCodec
-		METHOD <init> (Ljava/util/function/Function;)V
-			ARG 1 valGetter
-		METHOD decode (Lcom/mojang/serialization/DynamicOps;Lcom/mojang/serialization/MapLike;)Lcom/mojang/serialization/DataResult;
-			ARG 1 ops
-			ARG 2 input
-		METHOD encode (Ljava/lang/Object;Lcom/mojang/serialization/DynamicOps;Lcom/mojang/serialization/RecordBuilder;)Lcom/mojang/serialization/RecordBuilder;
-			ARG 1 input
-			ARG 2 ops
-			ARG 3 prefix
-		METHOD keys (Lcom/mojang/serialization/DynamicOps;)Ljava/util/stream/Stream;
-			ARG 1 ops
 	CLASS 2
 		METHOD decode (Lcom/mojang/serialization/DynamicOps;Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
 			ARG 1 ops
@@ -183,6 +171,19 @@ CLASS net/minecraft/util/ExtraCodecs
 		METHOD isEmptyMap (Lcom/mojang/serialization/DynamicOps;Ljava/lang/Object;)Z
 			ARG 0 ops
 			ARG 1 value
+	CLASS XorCodec
+		METHOD <init> (Lcom/mojang/serialization/Codec;Lcom/mojang/serialization/Codec;)V
+			ARG 1 first
+			ARG 2 second
+		METHOD decode (Lcom/mojang/serialization/DynamicOps;Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
+			ARG 1 ops
+			ARG 2 input
+		METHOD encode (Lcom/mojang/datafixers/util/Either;Lcom/mojang/serialization/DynamicOps;Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
+			ARG 1 input
+			ARG 2 ops
+			ARG 3 prefix
+		METHOD equals (Ljava/lang/Object;)Z
+			ARG 1 other
 	CLASS EitherCodec
 		METHOD <init> (Lcom/mojang/serialization/Codec;Lcom/mojang/serialization/Codec;)V
 			ARG 1 first
@@ -220,6 +221,29 @@ CLASS net/minecraft/util/ExtraCodecs
 			ARG 3 value
 		METHOD keys (Lcom/mojang/serialization/DynamicOps;)Ljava/util/stream/Stream;
 			ARG 1 ops
+	CLASS 1ContextRetrievalCodec
+		METHOD <init> (Ljava/util/function/Function;)V
+			ARG 1 valGetter
+		METHOD decode (Lcom/mojang/serialization/DynamicOps;Lcom/mojang/serialization/MapLike;)Lcom/mojang/serialization/DataResult;
+			ARG 1 ops
+			ARG 2 input
+		METHOD encode (Ljava/lang/Object;Lcom/mojang/serialization/DynamicOps;Lcom/mojang/serialization/RecordBuilder;)Lcom/mojang/serialization/RecordBuilder;
+			ARG 1 input
+			ARG 2 ops
+			ARG 3 prefix
+		METHOD keys (Lcom/mojang/serialization/DynamicOps;)Ljava/util/stream/Stream;
+			ARG 1 ops
+	CLASS StrictUnboundedMapCodec
+		METHOD decode (Lcom/mojang/serialization/DynamicOps;Lcom/mojang/serialization/MapLike;)Lcom/mojang/serialization/DataResult;
+			ARG 1 ops
+			ARG 2 input
+		METHOD decode (Lcom/mojang/serialization/DynamicOps;Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
+			ARG 1 ops
+			ARG 2 input
+		METHOD encode (Ljava/util/Map;Lcom/mojang/serialization/DynamicOps;Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
+			ARG 1 input
+			ARG 2 ops
+			ARG 3 value
 	CLASS StrictOptionalFieldCodec
 		METHOD <init> (Ljava/lang/String;Lcom/mojang/serialization/Codec;)V
 			ARG 1 name
@@ -235,27 +259,3 @@ CLASS net/minecraft/util/ExtraCodecs
 			ARG 1 other
 		METHOD keys (Lcom/mojang/serialization/DynamicOps;)Ljava/util/stream/Stream;
 			ARG 1 ops
-	CLASS StrictUnboundedMapCodec
-		METHOD decode (Lcom/mojang/serialization/DynamicOps;Lcom/mojang/serialization/MapLike;)Lcom/mojang/serialization/DataResult;
-			ARG 1 ops
-			ARG 2 input
-		METHOD decode (Lcom/mojang/serialization/DynamicOps;Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
-			ARG 1 ops
-			ARG 2 input
-		METHOD encode (Ljava/util/Map;Lcom/mojang/serialization/DynamicOps;Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
-			ARG 1 input
-			ARG 2 ops
-			ARG 3 value
-	CLASS XorCodec
-		METHOD <init> (Lcom/mojang/serialization/Codec;Lcom/mojang/serialization/Codec;)V
-			ARG 1 first
-			ARG 2 second
-		METHOD decode (Lcom/mojang/serialization/DynamicOps;Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
-			ARG 1 ops
-			ARG 2 input
-		METHOD encode (Lcom/mojang/datafixers/util/Either;Lcom/mojang/serialization/DynamicOps;Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
-			ARG 1 input
-			ARG 2 ops
-			ARG 3 prefix
-		METHOD equals (Ljava/lang/Object;)Z
-			ARG 1 other

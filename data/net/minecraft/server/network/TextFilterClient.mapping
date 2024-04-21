@@ -57,6 +57,9 @@ CLASS net/minecraft/server/network/TextFilterClient
 		ARG 2 text
 		ARG 3 ignoreStrategy
 		ARG 4 executor
+	CLASS PlayerContext
+		METHOD <init> (Lnet/minecraft/server/network/TextFilterClient;Lcom/mojang/authlib/GameProfile;)V
+			ARG 2 profile
 	CLASS IgnoreStrategy
 		METHOD ignoreOverThreshold (I)Lnet/minecraft/server/network/TextFilterClient$IgnoreStrategy;
 			ARG 0 threshold
@@ -74,16 +77,13 @@ CLASS net/minecraft/server/network/TextFilterClient
 		METHOD shouldIgnore (Ljava/lang/String;I)Z
 			ARG 1 text
 			ARG 2 threshold
-	CLASS JoinOrLeaveEncoder
-		METHOD encode (Lcom/mojang/authlib/GameProfile;)Lcom/google/gson/JsonObject;
-			ARG 1 profile
 	CLASS MessageEncoder
 		METHOD encode (Lcom/mojang/authlib/GameProfile;Ljava/lang/String;)Lcom/google/gson/JsonObject;
 			ARG 1 profile
 			ARG 2 text
-	CLASS PlayerContext
-		METHOD <init> (Lnet/minecraft/server/network/TextFilterClient;Lcom/mojang/authlib/GameProfile;)V
-			ARG 2 profile
+	CLASS JoinOrLeaveEncoder
+		METHOD encode (Lcom/mojang/authlib/GameProfile;)Lcom/google/gson/JsonObject;
+			ARG 1 profile
 	CLASS RequestFailedException
 		METHOD <init> (Ljava/lang/String;)V
 			ARG 1 message

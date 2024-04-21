@@ -40,30 +40,6 @@ CLASS net/minecraft/network/chat/HoverEvent
 			ARG 0 component
 		METHOD lambda$new$3 (Ljava/lang/Object;)Lnet/minecraft/network/chat/HoverEvent$TypedHoverEvent;
 			ARG 1 component
-	CLASS EntityTooltipInfo
-		METHOD <init> (Lnet/minecraft/world/entity/EntityType;Ljava/util/UUID;Ljava/util/Optional;)V
-			ARG 1 type
-			ARG 2 id
-			ARG 3 name
-		METHOD <init> (Lnet/minecraft/world/entity/EntityType;Ljava/util/UUID;Lnet/minecraft/network/chat/Component;)V
-			ARG 1 type
-			ARG 2 id
-			ARG 3 name
-		METHOD equals (Ljava/lang/Object;)Z
-			ARG 1 other
-		METHOD lambda$static$0 (Lnet/minecraft/network/chat/HoverEvent$EntityTooltipInfo;)Lnet/minecraft/world/entity/EntityType;
-			ARG 0 info
-		METHOD lambda$static$1 (Lnet/minecraft/network/chat/HoverEvent$EntityTooltipInfo;)Ljava/util/UUID;
-			ARG 0 info
-		METHOD lambda$static$2 (Lnet/minecraft/network/chat/HoverEvent$EntityTooltipInfo;)Ljava/util/Optional;
-			ARG 0 info
-		METHOD lambda$static$3 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
-			ARG 0 instance
-		METHOD legacyCreate (Lnet/minecraft/network/chat/Component;)Lcom/mojang/serialization/DataResult;
-			ARG 0 component
-		METHOD legacyCreate (Lnet/minecraft/network/chat/Component;Lnet/minecraft/resources/RegistryOps;)Lcom/mojang/serialization/DataResult;
-			ARG 0 name
-			ARG 1 ops
 	CLASS ItemStackInfo
 		METHOD <init> (Lnet/minecraft/core/Holder;ILnet/minecraft/core/component/DataComponentPatch;)V
 			ARG 1 item
@@ -104,3 +80,27 @@ CLASS net/minecraft/network/chat/HoverEvent
 		METHOD parse (Lnet/minecraft/network/chat/Component;Lnet/minecraft/resources/RegistryOps;)Lcom/mojang/serialization/DataResult;
 			ARG 1 name
 			ARG 2 ops
+	CLASS EntityTooltipInfo
+		METHOD <init> (Lnet/minecraft/world/entity/EntityType;Ljava/util/UUID;Ljava/util/Optional;)V
+			ARG 1 type
+			ARG 2 id
+			ARG 3 name
+		METHOD <init> (Lnet/minecraft/world/entity/EntityType;Ljava/util/UUID;Lnet/minecraft/network/chat/Component;)V
+			ARG 1 type
+			ARG 2 id
+			ARG 3 name
+		METHOD equals (Ljava/lang/Object;)Z
+			ARG 1 other
+		METHOD lambda$static$0 (Lnet/minecraft/network/chat/HoverEvent$EntityTooltipInfo;)Lnet/minecraft/world/entity/EntityType;
+			ARG 0 info
+		METHOD lambda$static$1 (Lnet/minecraft/network/chat/HoverEvent$EntityTooltipInfo;)Ljava/util/UUID;
+			ARG 0 info
+		METHOD lambda$static$2 (Lnet/minecraft/network/chat/HoverEvent$EntityTooltipInfo;)Ljava/util/Optional;
+			ARG 0 info
+		METHOD lambda$static$3 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
+		METHOD legacyCreate (Lnet/minecraft/network/chat/Component;)Lcom/mojang/serialization/DataResult;
+			ARG 0 component
+		METHOD legacyCreate (Lnet/minecraft/network/chat/Component;Lnet/minecraft/resources/RegistryOps;)Lcom/mojang/serialization/DataResult;
+			ARG 0 name
+			ARG 1 ops

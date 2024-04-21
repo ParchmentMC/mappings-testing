@@ -23,16 +23,6 @@ CLASS net/minecraft/util/profiling/metrics/MetricSampler
 		ARG 1 other
 	METHOD onEndTick (I)V
 		ARG 1 tickTime
-	CLASS MetricSamplerBuilder
-		METHOD <init> (Ljava/lang/String;Lnet/minecraft/util/profiling/metrics/MetricCategory;Ljava/util/function/ToDoubleFunction;Ljava/lang/Object;)V
-			ARG 1 name
-			ARG 2 category
-			ARG 3 sampler
-			ARG 4 context
-		METHOD withBeforeTick (Ljava/util/function/Consumer;)Lnet/minecraft/util/profiling/metrics/MetricSampler$MetricSamplerBuilder;
-			ARG 1 beforeTick
-		METHOD withThresholdAlert (Lnet/minecraft/util/profiling/metrics/MetricSampler$ThresholdTest;)Lnet/minecraft/util/profiling/metrics/MetricSampler$MetricSamplerBuilder;
-			ARG 1 thresholdTest
 	CLASS SamplerResult
 		METHOD <init> (IILit/unimi/dsi/fastutil/ints/Int2DoubleMap;)V
 			ARG 1 firstTick
@@ -43,6 +33,16 @@ CLASS net/minecraft/util/profiling/metrics/MetricSampler
 	CLASS ThresholdTest
 		METHOD test (D)Z
 			ARG 1 value
+	CLASS MetricSamplerBuilder
+		METHOD <init> (Ljava/lang/String;Lnet/minecraft/util/profiling/metrics/MetricCategory;Ljava/util/function/ToDoubleFunction;Ljava/lang/Object;)V
+			ARG 1 name
+			ARG 2 category
+			ARG 3 sampler
+			ARG 4 context
+		METHOD withBeforeTick (Ljava/util/function/Consumer;)Lnet/minecraft/util/profiling/metrics/MetricSampler$MetricSamplerBuilder;
+			ARG 1 beforeTick
+		METHOD withThresholdAlert (Lnet/minecraft/util/profiling/metrics/MetricSampler$ThresholdTest;)Lnet/minecraft/util/profiling/metrics/MetricSampler$MetricSamplerBuilder;
+			ARG 1 thresholdTest
 	CLASS ValueIncreasedByPercentage
 		METHOD <init> (F)V
 			ARG 1 percentageIncreaseThreshold

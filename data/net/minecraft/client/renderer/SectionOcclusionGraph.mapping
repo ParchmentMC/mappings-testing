@@ -53,12 +53,6 @@ CLASS net/minecraft/client/renderer/SectionOcclusionGraph
 		ARG 4 sections
 	METHOD waitAndReset (Lnet/minecraft/client/renderer/ViewArea;)V
 		ARG 1 viewArea
-	CLASS GraphState
-		METHOD <init> (I)V
-			ARG 1 size
-	CLASS GraphStorage
-		METHOD <init> (I)V
-			ARG 1 size
 	CLASS Node
 		METHOD <init> (Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$RenderSection;Lnet/minecraft/core/Direction;I)V
 			ARG 1 section
@@ -75,6 +69,12 @@ CLASS net/minecraft/client/renderer/SectionOcclusionGraph
 		METHOD setDirections (BLnet/minecraft/core/Direction;)V
 			ARG 1 currentValue
 			ARG 2 direction
+	CLASS GraphState
+		METHOD <init> (I)V
+			ARG 1 size
+	CLASS GraphStorage
+		METHOD <init> (I)V
+			ARG 1 size
 	CLASS SectionToNodeMap
 		METHOD <init> (I)V
 			ARG 1 size

@@ -10,14 +10,6 @@ CLASS net/minecraft/client/gui/screens/inventory/BeaconScreen
 	CLASS BeaconButton
 		METHOD updateStatus (I)V
 			ARG 1 beaconTier
-	CLASS BeaconCancelButton
-		METHOD <init> (Lnet/minecraft/client/gui/screens/inventory/BeaconScreen;II)V
-			ARG 2 x
-			ARG 3 y
-	CLASS BeaconConfirmButton
-		METHOD <init> (Lnet/minecraft/client/gui/screens/inventory/BeaconScreen;II)V
-			ARG 2 x
-			ARG 3 y
 	CLASS BeaconPowerButton
 		METHOD <init> (Lnet/minecraft/client/gui/screens/inventory/BeaconScreen;IILnet/minecraft/core/Holder;ZI)V
 			ARG 2 x
@@ -39,6 +31,10 @@ CLASS net/minecraft/client/gui/screens/inventory/BeaconScreen
 			ARG 1 effect
 		METHOD setEffect (Lnet/minecraft/world/effect/MobEffect;)V
 			ARG 1 effect
+	CLASS BeaconCancelButton
+		METHOD <init> (Lnet/minecraft/client/gui/screens/inventory/BeaconScreen;II)V
+			ARG 2 x
+			ARG 3 y
 	CLASS BeaconScreenButton
 		METHOD <init> (II)V
 			ARG 1 x
@@ -51,6 +47,10 @@ CLASS net/minecraft/client/gui/screens/inventory/BeaconScreen
 			ARG 1 guiGraphics
 		METHOD setSelected (Z)V
 			ARG 1 selected
+	CLASS BeaconConfirmButton
+		METHOD <init> (Lnet/minecraft/client/gui/screens/inventory/BeaconScreen;II)V
+			ARG 2 x
+			ARG 3 y
 	CLASS BeaconSpriteScreenButton
 		METHOD <init> (IILnet/minecraft/resources/ResourceLocation;Lnet/minecraft/network/chat/Component;)V
 			ARG 1 x

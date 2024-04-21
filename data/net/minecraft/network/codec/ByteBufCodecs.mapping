@@ -76,6 +76,18 @@ CLASS net/minecraft/network/codec/ByteBufCodecs
 		ARG 0 buffer
 		ARG 1 count
 		ARG 2 maxSize
+	CLASS 8
+		METHOD decode (Lio/netty/buffer/ByteBuf;)[B
+			ARG 1 buffer
+		METHOD encode (Lio/netty/buffer/ByteBuf;[B)V
+			ARG 1 buffer
+			ARG 2 value
+	CLASS 9
+		METHOD decode (Lio/netty/buffer/ByteBuf;)[B
+			ARG 1 buffer
+		METHOD encode (Lio/netty/buffer/ByteBuf;[B)V
+			ARG 1 buffer
+			ARG 2 value
 	CLASS 10
 		METHOD decode (Lio/netty/buffer/ByteBuf;)[B
 			ARG 1 buffer
@@ -110,15 +122,3 @@ CLASS net/minecraft/network/codec/ByteBufCodecs
 	CLASS 24
 		METHOD getRegistryOrThrow (Lnet/minecraft/network/RegistryFriendlyByteBuf;)Lnet/minecraft/core/IdMap;
 			ARG 1 buffer
-	CLASS 8
-		METHOD decode (Lio/netty/buffer/ByteBuf;)[B
-			ARG 1 buffer
-		METHOD encode (Lio/netty/buffer/ByteBuf;[B)V
-			ARG 1 buffer
-			ARG 2 value
-	CLASS 9
-		METHOD decode (Lio/netty/buffer/ByteBuf;)[B
-			ARG 1 buffer
-		METHOD encode (Lio/netty/buffer/ByteBuf;[B)V
-			ARG 1 buffer
-			ARG 2 value

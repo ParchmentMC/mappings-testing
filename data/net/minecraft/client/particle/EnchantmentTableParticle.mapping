@@ -5,7 +5,7 @@ CLASS net/minecraft/client/particle/EnchantmentTableParticle
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
-	CLASS NautilusProvider
+	CLASS Provider
 		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
 			ARG 1 sprites
 		METHOD createParticle (Lnet/minecraft/core/particles/SimpleParticleType;Lnet/minecraft/client/multiplayer/ClientLevel;DDDDDD)Lnet/minecraft/client/particle/Particle;
@@ -17,7 +17,7 @@ CLASS net/minecraft/client/particle/EnchantmentTableParticle
 			ARG 9 xSpeed
 			ARG 11 ySpeed
 			ARG 13 zSpeed
-	CLASS Provider
+	CLASS NautilusProvider
 		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
 			ARG 1 sprites
 		METHOD createParticle (Lnet/minecraft/core/particles/SimpleParticleType;Lnet/minecraft/client/multiplayer/ClientLevel;DDDDDD)Lnet/minecraft/client/particle/Particle;

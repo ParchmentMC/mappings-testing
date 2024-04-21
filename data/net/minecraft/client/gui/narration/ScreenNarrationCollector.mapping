@@ -9,6 +9,9 @@ CLASS net/minecraft/client/gui/narration/ScreenNarrationCollector
 	CLASS 1
 		METHOD accept (Ljava/lang/String;)V
 			ARG 1 str
+	CLASS Output
+		METHOD <init> (Lnet/minecraft/client/gui/narration/ScreenNarrationCollector;I)V
+			ARG 2 depth
 	CLASS EntryKey
 		METHOD <init> (Lnet/minecraft/client/gui/narration/NarratedElementType;I)V
 			ARG 1 type
@@ -17,6 +20,3 @@ CLASS net/minecraft/client/gui/narration/ScreenNarrationCollector
 		METHOD update (ILnet/minecraft/client/gui/narration/NarrationThunk;)Lnet/minecraft/client/gui/narration/ScreenNarrationCollector$NarrationEntry;
 			ARG 1 generation
 			ARG 2 contents
-	CLASS Output
-		METHOD <init> (Lnet/minecraft/client/gui/narration/ScreenNarrationCollector;I)V
-			ARG 2 depth

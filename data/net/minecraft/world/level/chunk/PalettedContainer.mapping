@@ -96,15 +96,6 @@ CLASS net/minecraft/world/level/chunk/PalettedContainer
 		ARG 2 packedData
 	METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
 		ARG 1 buffer
-	CLASS Configuration
-		METHOD createData (Lnet/minecraft/core/IdMap;Lnet/minecraft/world/level/chunk/PaletteResize;I)Lnet/minecraft/world/level/chunk/PalettedContainer$Data;
-			ARG 1 registry
-			ARG 2 paletteResize
-			ARG 3 size
-	CLASS CountConsumer
-		METHOD accept (Ljava/lang/Object;I)V
-			ARG 1 state
-			ARG 2 count
 	CLASS Data
 		METHOD copyFrom (Lnet/minecraft/world/level/chunk/Palette;Lnet/minecraft/util/BitStorage;)V
 			ARG 1 palette
@@ -124,3 +115,12 @@ CLASS net/minecraft/world/level/chunk/PalettedContainer
 			ARG 1 x
 			ARG 2 y
 			ARG 3 z
+	CLASS Configuration
+		METHOD createData (Lnet/minecraft/core/IdMap;Lnet/minecraft/world/level/chunk/PaletteResize;I)Lnet/minecraft/world/level/chunk/PalettedContainer$Data;
+			ARG 1 registry
+			ARG 2 paletteResize
+			ARG 3 size
+	CLASS CountConsumer
+		METHOD accept (Ljava/lang/Object;I)V
+			ARG 1 state
+			ARG 2 count

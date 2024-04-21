@@ -33,6 +33,12 @@ CLASS net/minecraft/world/level/chunk/status/ChunkStatus
 		ARG 5 chunkType
 		ARG 6 generationTask
 		ARG 7 loadingTask
+	CLASS LoadingTask
+		METHOD doWork (Lnet/minecraft/world/level/chunk/status/WorldGenContext;Lnet/minecraft/world/level/chunk/status/ChunkStatus;Lnet/minecraft/world/level/chunk/status/ToFullChunk;Lnet/minecraft/world/level/chunk/ChunkAccess;)Ljava/util/concurrent/CompletableFuture;
+			ARG 1 context
+			ARG 2 status
+			ARG 3 toFullChunk
+			ARG 4 loadingChunk
 	CLASS GenerationTask
 		METHOD doWork (Lnet/minecraft/world/level/chunk/status/WorldGenContext;Lnet/minecraft/world/level/chunk/status/ChunkStatus;Ljava/util/concurrent/Executor;Lnet/minecraft/world/level/chunk/status/ToFullChunk;Ljava/util/List;Lnet/minecraft/world/level/chunk/ChunkAccess;)Ljava/util/concurrent/CompletableFuture;
 			ARG 1 context
@@ -41,9 +47,3 @@ CLASS net/minecraft/world/level/chunk/status/ChunkStatus
 			ARG 4 toFullChunk
 			ARG 5 cache
 			ARG 6 loadingChunk
-	CLASS LoadingTask
-		METHOD doWork (Lnet/minecraft/world/level/chunk/status/WorldGenContext;Lnet/minecraft/world/level/chunk/status/ChunkStatus;Lnet/minecraft/world/level/chunk/status/ToFullChunk;Lnet/minecraft/world/level/chunk/ChunkAccess;)Ljava/util/concurrent/CompletableFuture;
-			ARG 1 context
-			ARG 2 status
-			ARG 3 toFullChunk
-			ARG 4 loadingChunk

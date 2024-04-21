@@ -26,6 +26,17 @@ CLASS net/minecraft/network/protocol/game/ClientboundMoveEntityPacket
 		METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
 			COMMENT Writes the raw packet data to the data stream.
 			ARG 1 buffer
+	CLASS Rot
+		METHOD <init> (IBBZ)V
+			ARG 1 entityId
+			ARG 2 yRot
+			ARG 3 xRot
+			ARG 4 onGround
+		METHOD read (Lnet/minecraft/network/FriendlyByteBuf;)Lnet/minecraft/network/protocol/game/ClientboundMoveEntityPacket$Rot;
+			ARG 0 buffer
+		METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
+			COMMENT Writes the raw packet data to the data stream.
+			ARG 1 buffer
 	CLASS PosRot
 		METHOD <init> (ISSSBBZ)V
 			ARG 1 entityId
@@ -36,17 +47,6 @@ CLASS net/minecraft/network/protocol/game/ClientboundMoveEntityPacket
 			ARG 6 xRot
 			ARG 7 onGround
 		METHOD read (Lnet/minecraft/network/FriendlyByteBuf;)Lnet/minecraft/network/protocol/game/ClientboundMoveEntityPacket$PosRot;
-			ARG 0 buffer
-		METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
-			COMMENT Writes the raw packet data to the data stream.
-			ARG 1 buffer
-	CLASS Rot
-		METHOD <init> (IBBZ)V
-			ARG 1 entityId
-			ARG 2 yRot
-			ARG 3 xRot
-			ARG 4 onGround
-		METHOD read (Lnet/minecraft/network/FriendlyByteBuf;)Lnet/minecraft/network/protocol/game/ClientboundMoveEntityPacket$Rot;
 			ARG 0 buffer
 		METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
 			COMMENT Writes the raw packet data to the data stream.

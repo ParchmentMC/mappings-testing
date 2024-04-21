@@ -54,6 +54,11 @@ CLASS net/minecraft/world/item/alchemy/PotionBrewing
 		ARG 0 reagent
 		ARG 1 potion
 		ARG 2 potionItem
+	CLASS Mix
+		METHOD <init> (Ljava/lang/Object;Lnet/minecraft/world/item/crafting/Ingredient;Ljava/lang/Object;)V
+			ARG 1 from
+			ARG 2 ingredient
+			ARG 3 to
 	CLASS Builder
 		METHOD <init> (Lnet/minecraft/world/flag/FeatureFlagSet;)V
 			ARG 1 enabledFeatures
@@ -72,8 +77,3 @@ CLASS net/minecraft/world/item/alchemy/PotionBrewing
 			ARG 2 result
 		METHOD expectPotion (Lnet/minecraft/world/item/Item;)V
 			ARG 0 item
-	CLASS Mix
-		METHOD <init> (Ljava/lang/Object;Lnet/minecraft/world/item/crafting/Ingredient;Ljava/lang/Object;)V
-			ARG 1 from
-			ARG 2 ingredient
-			ARG 3 to

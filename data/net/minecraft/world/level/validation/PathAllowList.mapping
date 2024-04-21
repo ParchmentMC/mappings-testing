@@ -19,6 +19,12 @@ CLASS net/minecraft/world/level/validation/PathAllowList
 		ARG 1 path
 	METHOD readPlain (Ljava/io/BufferedReader;)Lnet/minecraft/world/level/validation/PathAllowList;
 		ARG 0 reader
+	CLASS EntryType
+		METHOD compile (Ljava/nio/file/FileSystem;Ljava/lang/String;)Ljava/nio/file/PathMatcher;
+			ARG 1 fileSystem
+			ARG 2 pattern
+		METHOD lambda$static$0 (Ljava/lang/String;Ljava/nio/file/Path;)Z
+			ARG 1 path
 	CLASS ConfigEntry
 		METHOD compile (Ljava/nio/file/FileSystem;)Ljava/nio/file/PathMatcher;
 			ARG 1 fileSystem
@@ -30,9 +36,3 @@ CLASS net/minecraft/world/level/validation/PathAllowList
 			ARG 0 prefix
 		METHOD regex (Ljava/lang/String;)Lnet/minecraft/world/level/validation/PathAllowList$ConfigEntry;
 			ARG 0 regex
-	CLASS EntryType
-		METHOD compile (Ljava/nio/file/FileSystem;Ljava/lang/String;)Ljava/nio/file/PathMatcher;
-			ARG 1 fileSystem
-			ARG 2 pattern
-		METHOD lambda$static$0 (Ljava/lang/String;Ljava/nio/file/Path;)Z
-			ARG 1 path
