@@ -1,7 +1,4 @@
 CLASS net/minecraft/world/level/storage/DimensionDataStorage
-	METHOD <init> (Ljava/io/File;Lcom/mojang/datafixers/DataFixer;)V
-		ARG 1 dataFolder
-		ARG 2 fixerUpper
 	METHOD <init> (Ljava/io/File;Lcom/mojang/datafixers/DataFixer;Lnet/minecraft/core/HolderLookup$Provider;)V
 		ARG 1 dataFolder
 		ARG 2 fixerUpper
@@ -23,10 +20,6 @@ CLASS net/minecraft/world/level/storage/DimensionDataStorage
 		ARG 1 reader
 		ARG 2 dataFixType
 		ARG 3 filename
-	METHOD readSavedData (Ljava/util/function/Function;Lnet/minecraft/util/datafix/DataFixTypes;Ljava/lang/String;)Lnet/minecraft/world/level/saveddata/SavedData;
-		ARG 1 deserializer
-		ARG 2 dataFixType
-		ARG 3 name
 	METHOD readTagFromDisk (Ljava/lang/String;Lnet/minecraft/util/datafix/DataFixTypes;I)Lnet/minecraft/nbt/CompoundTag;
 		ARG 1 filename
 		ARG 2 dataFixType

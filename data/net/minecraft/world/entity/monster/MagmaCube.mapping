@@ -5,8 +5,6 @@ CLASS net/minecraft/world/entity/monster/MagmaCube
 		ARG 2 spawnType
 		ARG 3 pos
 		ARG 4 random
-	METHOD checkSpawnObstruction (Lnet/minecraft/world/level/LevelReader;)Z
-		ARG 1 level
 	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
 		ARG 1 damageSource
 	METHOD getJumpDelay ()I

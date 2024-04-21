@@ -13,11 +13,6 @@ CLASS net/minecraft/world/level/block/SlabBlock
 		ARG 4 context
 	METHOD getStateForPlacement (Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;
 		ARG 1 context
-	METHOD isPathfindable (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/pathfinder/PathComputationType;)Z
-		ARG 1 state
-		ARG 2 level
-		ARG 3 pos
-		ARG 4 type
 	METHOD placeLiquid (Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/material/FluidState;)Z
 		ARG 1 level
 		ARG 2 pos

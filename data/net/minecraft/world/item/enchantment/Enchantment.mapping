@@ -1,22 +1,8 @@
 CLASS net/minecraft/world/item/enchantment/Enchantment
-	FIELD category Lnet/minecraft/world/item/enchantment/EnchantmentCategory;
-		COMMENT The category of the enchantment. This often controls which items the enchantment can be applied to and which creative tabs the enchantment will be displayed under.
 	FIELD descriptionId Ljava/lang/String;
 		COMMENT The descriptionId for the enchantment. Commonly used to create localization keys.
-	FIELD rarity Lnet/minecraft/world/item/enchantment/Enchantment$Rarity;
-		COMMENT The rarity of the enchantment.
-	FIELD slots [Lnet/minecraft/world/entity/EquipmentSlot;
-		COMMENT The valid equipment slots for the enchantment.
 	METHOD <init> (Lnet/minecraft/world/item/enchantment/Enchantment$EnchantmentDefinition;)V
 		ARG 1 definition
-	METHOD <init> (Lnet/minecraft/world/item/enchantment/Enchantment$Rarity;Lnet/minecraft/tags/TagKey;[Lnet/minecraft/world/entity/EquipmentSlot;)V
-		ARG 1 rarity
-		ARG 2 match
-		ARG 3 slots
-	METHOD <init> (Lnet/minecraft/world/item/enchantment/Enchantment$Rarity;Lnet/minecraft/world/item/enchantment/EnchantmentCategory;[Lnet/minecraft/world/entity/EquipmentSlot;)V
-		ARG 1 rarity
-		ARG 2 category
-		ARG 3 applicableSlots
 	METHOD byId (I)Lnet/minecraft/world/item/enchantment/Enchantment;
 		COMMENT Gets an {@code Enchantment} from the registry using its internal numeric Id.
 		ARG 0 id
@@ -84,11 +70,6 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 	METHOD getDamageBonus (ILnet/minecraft/world/entity/EntityType;)F
 		ARG 1 level
 		ARG 2 creatureType
-	METHOD getDamageBonus (ILnet/minecraft/world/entity/MobType;)F
-		COMMENT Calculates the amount of additional damage to deal when attacking with an item with the enchantment.
-		ARG 1 level
-			COMMENT The level of the enchantment being used.
-		ARG 2 type
 	METHOD getDamageProtection (ILnet/minecraft/world/damagesource/DamageSource;)I
 		COMMENT Calculates the amount of additional damage protection to provide when a user is damaged.
 		ARG 1 level
@@ -113,8 +94,6 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 		COMMENT Gets the minimum level of the enchantment under normal circumstances such as the enchanting table. This limit is not strictly enforced and may be ignored through custom item NBT or other customizations.
 	METHOD getOrCreateDescriptionId ()Ljava/lang/String;
 		COMMENT Lazily initializes a {@code descriptionId} for an enchantment using the enchantment's registry name.
-	METHOD getRarity ()Lnet/minecraft/world/item/enchantment/Enchantment$Rarity;
-		COMMENT Gets the rarity of the enchantment. This determines how rare the enchantment will be in enchantment pools such as the enchanting table and loot tables.
 	METHOD getSlotItems (Lnet/minecraft/world/entity/LivingEntity;)Ljava/util/Map;
 		COMMENT Creates a new map containing all items equipped by an entity in {@linkplain #slots slots that the enchantment cares about}. These items are not tested for having the enchantment.
 		ARG 1 entity
@@ -141,8 +120,3 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 	CLASS Cost
 		METHOD calculate (I)I
 			ARG 1 level
-	CLASS Rarity
-		METHOD <init> (Ljava/lang/String;II)V
-			ARG 3 weight
-		METHOD getWeight ()I
-			COMMENT Retrieves the weight of Rarity.

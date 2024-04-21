@@ -9,9 +9,6 @@ CLASS net/minecraft/server/bossevents/CustomBossEvent
 		ARG 1 player
 	METHOD lambda$getDisplayName$0 (Lnet/minecraft/network/chat/Style;)Lnet/minecraft/network/chat/Style;
 		ARG 1 style
-	METHOD load (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/server/bossevents/CustomBossEvent;
-		ARG 0 nbt
-		ARG 1 id
 	METHOD load (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/server/bossevents/CustomBossEvent;
 		ARG 0 tag
 		ARG 1 id

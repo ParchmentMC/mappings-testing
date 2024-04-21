@@ -3,5 +3,3 @@ CLASS net/minecraft/world/item/Rarity
 		ARG 3 id
 		ARG 4 name
 		ARG 5 color
-	METHOD <init> (Ljava/lang/String;ILnet/minecraft/ChatFormatting;)V
-		ARG 3 color

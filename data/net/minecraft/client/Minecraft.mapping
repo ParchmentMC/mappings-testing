@@ -5,9 +5,6 @@ CLASS net/minecraft/client/Minecraft
 		COMMENT Time in nanoseconds of when the class is loaded
 	METHOD <init> (Lnet/minecraft/client/main/GameConfig;)V
 		ARG 1 gameConfig
-	METHOD addCustomNbtData (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/block/entity/BlockEntity;)V
-		ARG 1 stack
-		ARG 2 be
 	METHOD addCustomNbtData (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/block/entity/BlockEntity;Lnet/minecraft/core/RegistryAccess;)V
 		ARG 1 stack
 		ARG 2 blockEntity
@@ -154,8 +151,6 @@ CLASS net/minecraft/client/Minecraft
 		ARG 0 stack
 	METHOD lambda$createSearchTrees$19 (Ljava/util/List;)Lnet/minecraft/client/searchtree/RefreshableSearchTree;
 		ARG 0 items
-	METHOD lambda$createSearchTrees$20 (Lnet/minecraft/client/gui/screens/recipebook/RecipeCollection;Lnet/minecraft/world/item/crafting/RecipeHolder;)Ljava/util/stream/Stream;
-		ARG 1 recipe
 	METHOD lambda$createSearchTrees$21 (Lnet/minecraft/network/chat/Component;)Ljava/lang/String;
 		ARG 0 component
 	METHOD lambda$createSearchTrees$22 (Ljava/lang/String;)Z
@@ -182,14 +177,10 @@ CLASS net/minecraft/client/Minecraft
 		ARG 0 results
 	METHOD lambda$debugClientMetricsStart$45 (Ljava/util/function/Consumer;Lnet/minecraft/util/profiling/ProfileResults;)V
 		ARG 2 results
-	METHOD lambda$delayTextureReload$64 (Ljava/util/concurrent/CompletableFuture;)Ljava/util/concurrent/CompletionStage;
-		ARG 0 future
 	METHOD lambda$doWorldLoad$48 (I)Lnet/minecraft/server/level/progress/ChunkProgressListener;
 		ARG 1 radius
 	METHOD lambda$doWorldLoad$49 (Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;Lnet/minecraft/server/packs/repository/PackRepository;Lnet/minecraft/server/WorldStem;Lnet/minecraft/server/Services;Ljava/lang/Thread;)Lnet/minecraft/client/server/IntegratedServer;
 		ARG 5 thread
-	METHOD lambda$grabPanoramixScreenshot$65 (Lnet/minecraft/network/chat/Component;)V
-		ARG 0 component
 	METHOD lambda$new$3 (Lnet/minecraft/client/Minecraft$GameLoadCookie;Ljava/lang/Throwable;)V
 		ARG 2 exception
 	METHOD lambda$new$5 (Lnet/minecraft/client/Minecraft$GameLoadCookie;Ljava/util/Optional;)V
@@ -226,15 +217,10 @@ CLASS net/minecraft/client/Minecraft
 		ARG 2 gameLoadCookie
 	METHOD runTick (Z)V
 		ARG 1 renderLevel
-	METHOD selectMainFont (Z)V
-		ARG 1 forced
 	METHOD setCameraEntity (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 viewingEntity
 	METHOD setLastInputType (Lnet/minecraft/client/InputType;)V
 		ARG 1 lastInputType
-	METHOD setLevel (Lnet/minecraft/client/multiplayer/ClientLevel;)V
-		COMMENT Unloads the current world first.
-		ARG 1 levelClient
 	METHOD setLevel (Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/client/gui/screens/ReceivingLevelScreen$Reason;)V
 		ARG 1 level
 		ARG 2 reason

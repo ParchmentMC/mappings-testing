@@ -1,6 +1,4 @@
 CLASS net/minecraft/network/protocol/game/ClientboundDamageEventPacket
-	METHOD <init> (Lnet/minecraft/network/FriendlyByteBuf;)V
-		ARG 1 buffer
 	METHOD <init> (Lnet/minecraft/network/RegistryFriendlyByteBuf;)V
 		ARG 1 buffer
 	METHOD <init> (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/damagesource/DamageSource;)V
@@ -12,8 +10,6 @@ CLASS net/minecraft/network/protocol/game/ClientboundDamageEventPacket
 		ARG 0 buffer
 	METHOD readOptionalEntityId (Lnet/minecraft/network/FriendlyByteBuf;)I
 		ARG 0 buffer
-	METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
-		ARG 1 buffer
 	METHOD write (Lnet/minecraft/network/RegistryFriendlyByteBuf;)V
 		ARG 1 buffer
 	METHOD writeOptionalEntityId (Lnet/minecraft/network/FriendlyByteBuf;I)V

@@ -1,11 +1,4 @@
 CLASS net/minecraft/util/debugchart/SampleLogger
-	METHOD <init> (I)V
-		ARG 1 dimensions
-	METHOD get (I)J
-		ARG 1 index
-	METHOD get (II)J
-		ARG 1 index
-		ARG 2 dimension
 	METHOD logFullSample ([J)V
 		ARG 1 sample
 	METHOD logPartialSample (JI)V
@@ -13,5 +6,3 @@ CLASS net/minecraft/util/debugchart/SampleLogger
 		ARG 3 index
 	METHOD logSample (J)V
 		ARG 1 value
-	METHOD wrapIndex (I)I
-		ARG 1 index

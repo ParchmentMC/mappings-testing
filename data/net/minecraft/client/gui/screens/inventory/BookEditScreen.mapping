@@ -100,8 +100,6 @@ CLASS net/minecraft/client/gui/screens/inventory/BookEditScreen
 		ARG 3 modifiers
 	METHOD updateButtonVisibility ()V
 		COMMENT Sets visibility for book buttons
-	METHOD updateLocalCopy (Z)V
-		ARG 1 sign
 	CLASS Pos2i
 		METHOD <init> (II)V
 			ARG 1 x

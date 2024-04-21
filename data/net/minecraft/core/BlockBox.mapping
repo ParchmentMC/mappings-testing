@@ -1,7 +1,7 @@
 CLASS net/minecraft/core/BlockBox
 	METHOD <init> (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;)V
-		ARG 1 pos1
-		ARG 2 pos2
+		ARG 1 min
+		ARG 2 max
 	METHOD contains (Lnet/minecraft/core/BlockPos;)Z
 		ARG 1 pos
 	METHOD extend (Lnet/minecraft/core/Direction;I)Lnet/minecraft/core/BlockBox;

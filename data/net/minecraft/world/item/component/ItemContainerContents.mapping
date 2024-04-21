@@ -7,8 +7,6 @@ CLASS net/minecraft/world/item/component/ItemContainerContents
 		ARG 1 items
 	METHOD copyInto (Lnet/minecraft/core/NonNullList;)V
 		ARG 1 list
-	METHOD copyOf (Ljava/util/List;)Lnet/minecraft/world/item/component/ItemContainerContents;
-		ARG 0 items
 	METHOD equals (Ljava/lang/Object;)Z
 		ARG 1 other
 	METHOD findLastNonEmptySlot (Ljava/util/List;)I
@@ -17,8 +15,6 @@ CLASS net/minecraft/world/item/component/ItemContainerContents
 		ARG 0 items
 	METHOD fromSlots (Ljava/util/List;)Lnet/minecraft/world/item/component/ItemContainerContents;
 		ARG 0 slots
-	METHOD getFilledSize (Ljava/util/List;)I
-		ARG 0 items
 	CLASS Slot
 		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 			ARG 0 instance

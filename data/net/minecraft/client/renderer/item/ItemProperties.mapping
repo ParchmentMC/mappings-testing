@@ -1,7 +1,4 @@
 CLASS net/minecraft/client/renderer/item/ItemProperties
-	METHOD getProperty (Lnet/minecraft/world/item/Item;Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/item/ItemPropertyFunction;
-		ARG 0 item
-		ARG 1 name
 	METHOD getProperty (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/item/ItemPropertyFunction;
 		ARG 0 stack
 		ARG 1 location

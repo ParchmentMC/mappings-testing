@@ -1,34 +1,12 @@
 CLASS net/minecraft/world/item/BundleItem
-	METHOD add (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)I
-		ARG 0 bundleStack
-		ARG 1 insertedStack
 	METHOD dropContents (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/player/Player;)Z
 		ARG 0 stack
 		ARG 1 player
-	METHOD getContentWeight (Lnet/minecraft/world/item/ItemStack;)I
-		ARG 0 stack
-	METHOD getContents (Lnet/minecraft/world/item/ItemStack;)Ljava/util/stream/Stream;
-		ARG 0 stack
 	METHOD getFullnessDisplay (Lnet/minecraft/world/item/ItemStack;)F
 		ARG 0 stack
-	METHOD getMatchingItem (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/nbt/ListTag;)Ljava/util/Optional;
-		ARG 0 stack
-		ARG 1 list
-	METHOD getWeight (Lnet/minecraft/world/item/ItemStack;)I
-		ARG 0 stack
-	METHOD lambda$getContentWeight$3 (Lnet/minecraft/world/item/ItemStack;)I
-		ARG 0 bundleStack
-	METHOD lambda$getMatchingItem$2 (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/nbt/CompoundTag;)Z
-		ARG 1 tag
-	METHOD lambda$overrideOtherStackedOnMe$1 (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/entity/SlotAccess;Lnet/minecraft/world/item/ItemStack;)V
-		ARG 3 stack
-	METHOD lambda$overrideStackedOnOther$0 (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/inventory/Slot;Lnet/minecraft/world/item/ItemStack;)V
-		ARG 2 insertedStack
 	METHOD playDropContentsSound (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 entity
 	METHOD playInsertSound (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 entity
 	METHOD playRemoveOneSound (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 entity
-	METHOD removeOne (Lnet/minecraft/world/item/ItemStack;)Ljava/util/Optional;
-		ARG 0 stack

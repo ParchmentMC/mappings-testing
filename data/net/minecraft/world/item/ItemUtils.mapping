@@ -11,9 +11,6 @@ CLASS net/minecraft/world/item/ItemUtils
 	METHOD onContainerDestroyed (Lnet/minecraft/world/entity/item/ItemEntity;Ljava/lang/Iterable;)V
 		ARG 0 container
 		ARG 1 contents
-	METHOD onContainerDestroyed (Lnet/minecraft/world/entity/item/ItemEntity;Ljava/util/stream/Stream;)V
-		ARG 0 itemEntity
-		ARG 1 containerContents
 	METHOD startUsingInstantly (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResultHolder;
 		ARG 0 level
 		ARG 1 player

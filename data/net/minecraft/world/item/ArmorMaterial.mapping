@@ -1,12 +1,6 @@
 CLASS net/minecraft/world/item/ArmorMaterial
 	METHOD getDefense (Lnet/minecraft/world/item/ArmorItem$Type;)I
 		ARG 1 type
-	METHOD getDefenseForType (Lnet/minecraft/world/item/ArmorItem$Type;)I
-		ARG 1 type
-	METHOD getDurabilityForType (Lnet/minecraft/world/item/ArmorItem$Type;)I
-		ARG 1 type
-	METHOD getKnockbackResistance ()F
-		COMMENT Gets the percentage of knockback resistance provided by armor of the material.
 	CLASS Layer
 		METHOD <init> (Lnet/minecraft/resources/ResourceLocation;)V
 			ARG 1 assetName

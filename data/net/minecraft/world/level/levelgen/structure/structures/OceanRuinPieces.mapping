@@ -29,10 +29,6 @@ CLASS net/minecraft/world/level/levelgen/structure/structures/OceanRuinPieces
 		ARG 0 block
 		ARG 1 suspiciousBlock
 		ARG 2 lootTable
-	METHOD archyRuleProcessor (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureProcessor;
-		ARG 0 input
-		ARG 1 output
-		ARG 2 lootTable
 	METHOD getBigWarmRuin (Lnet/minecraft/util/RandomSource;)Lnet/minecraft/resources/ResourceLocation;
 		ARG 0 random
 	METHOD getSmallWarmRuin (Lnet/minecraft/util/RandomSource;)Lnet/minecraft/resources/ResourceLocation;

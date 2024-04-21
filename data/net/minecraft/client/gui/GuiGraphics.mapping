@@ -605,8 +605,6 @@ CLASS net/minecraft/client/gui/GuiGraphics
 			COMMENT the blue component of the color tint.
 		ARG 14 alpha
 			COMMENT the alpha component of the color tint.
-	METHOD lambda$renderTooltip$4 (Ljava/util/List;Lnet/minecraft/world/inventory/tooltip/TooltipComponent;)V
-		ARG 1 component
 	METHOD pose ()Lcom/mojang/blaze3d/vertex/PoseStack;
 		COMMENT {@return returns the PoseStack used for transformations and rendering.}
 	METHOD renderComponentHoverEffect (Lnet/minecraft/client/gui/Font;Lnet/minecraft/network/chat/Style;II)V

@@ -1,14 +1,9 @@
 CLASS net/minecraft/world/level/block/entity/BannerPatternLayers
-	METHOD withBase (Lnet/minecraft/world/item/DyeColor;)Lnet/minecraft/world/level/block/entity/BannerPatternLayers;
-		ARG 1 base
 	CLASS Layer
 		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 			ARG 0 instabce
 	CLASS Builder
 		METHOD add (Lnet/minecraft/core/Holder;Lnet/minecraft/world/item/DyeColor;)Lnet/minecraft/world/level/block/entity/BannerPatternLayers$Builder;
-			ARG 1 pattern
-			ARG 2 color
-		METHOD add (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/world/item/DyeColor;)Lnet/minecraft/world/level/block/entity/BannerPatternLayers$Builder;
 			ARG 1 pattern
 			ARG 2 color
 		METHOD add (Lnet/minecraft/world/level/block/entity/BannerPatternLayers$Layer;)Lnet/minecraft/world/level/block/entity/BannerPatternLayers$Builder;

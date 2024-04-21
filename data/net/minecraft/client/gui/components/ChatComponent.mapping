@@ -9,12 +9,6 @@ CLASS net/minecraft/client/gui/components/ChatComponent
 		ARG 1 minecraft
 	METHOD addMessage (Lnet/minecraft/network/chat/Component;)V
 		ARG 1 chatComponent
-	METHOD addMessage (Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/MessageSignature;ILnet/minecraft/client/GuiMessageTag;Z)V
-		ARG 1 chatComponent
-		ARG 2 headerSignature
-		ARG 3 addedTime
-		ARG 4 tag
-		ARG 5 onlyTrim
 	METHOD addMessage (Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/MessageSignature;Lnet/minecraft/client/GuiMessageTag;)V
 		ARG 1 chatComponent
 		ARG 2 headerSignature
@@ -74,14 +68,6 @@ CLASS net/minecraft/client/gui/components/ChatComponent
 		ARG 2 message
 	METHOD logChatMessage (Lnet/minecraft/client/GuiMessage;)V
 		ARG 1 message
-	METHOD logChatMessage (Lnet/minecraft/network/chat/Component;Lnet/minecraft/client/GuiMessageTag;)V
-		ARG 1 chatComponent
-		ARG 2 tag
-	METHOD render (Lnet/minecraft/client/gui/GuiGraphics;III)V
-		ARG 1 guiGraphics
-		ARG 2 tickCount
-		ARG 3 mouseX
-		ARG 4 mouseY
 	METHOD render (Lnet/minecraft/client/gui/GuiGraphics;IIIZ)V
 		ARG 1 guiGraphics
 		ARG 2 tickCount

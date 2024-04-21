@@ -8,8 +8,6 @@ CLASS net/minecraft/world/item/crafting/RepairItemRecipe
 		ARG 2 height
 	METHOD getItemsToCombine (Lnet/minecraft/world/inventory/CraftingContainer;)Lcom/mojang/datafixers/util/Pair;
 		ARG 1 craftingContainer
-	METHOD lambda$assemble$0 (Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Lnet/minecraft/world/item/enchantment/Enchantment;)V
-		ARG 3 enchantment
 	METHOD matches (Lnet/minecraft/world/inventory/CraftingContainer;Lnet/minecraft/world/level/Level;)Z
 		COMMENT Used to check if a recipe matches current crafting inventory
 		ARG 1 inv

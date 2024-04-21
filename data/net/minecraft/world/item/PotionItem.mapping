@@ -1,10 +1,4 @@
 CLASS net/minecraft/world/item/PotionItem
-	METHOD appendHoverText (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V
-		COMMENT Allows items to add custom lines of information to the mouseover description.
-		ARG 1 stack
-		ARG 2 level
-		ARG 3 tooltip
-		ARG 4 flag
 	METHOD finishUsingItem (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;)Lnet/minecraft/world/item/ItemStack;
 		COMMENT Called when the player finishes using this Item (E.g. finishes eating.). Not called when the player stops using the Item before the action is complete.
 		ARG 1 stack

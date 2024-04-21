@@ -4,8 +4,6 @@ CLASS net/minecraft/commands/arguments/SlotArgument
 		ARG 1 name
 	METHOD lambda$static$0 (Ljava/lang/Object;)Lcom/mojang/brigadier/Message;
 		ARG 0 slot
-	METHOD lambda$static$1 (Ljava/util/HashMap;)V
-		ARG 0 slots
 	METHOD listSuggestions (Lcom/mojang/brigadier/context/CommandContext;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 context
 		ARG 2 builder

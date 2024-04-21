@@ -2,10 +2,5 @@ CLASS net/minecraft/world/level/storage/loot/functions/FunctionReference
 	METHOD <init> (Ljava/util/List;Lnet/minecraft/resources/ResourceKey;)V
 		ARG 1 conditions
 		ARG 2 name
-	METHOD <init> (Ljava/util/List;Lnet/minecraft/resources/ResourceLocation;)V
-		ARG 1 conditions
-		ARG 2 name
 	METHOD functionReference (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/world/level/storage/loot/functions/LootItemConditionalFunction$Builder;
 		ARG 0 key
-	METHOD functionReference (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/world/level/storage/loot/functions/LootItemConditionalFunction$Builder;
-		ARG 0 name

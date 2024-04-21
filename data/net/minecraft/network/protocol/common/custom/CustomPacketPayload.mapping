@@ -7,8 +7,6 @@ CLASS net/minecraft/network/protocol/common/custom/CustomPacketPayload
 		ARG 1 typeAndCodecs
 	METHOD createType (Ljava/lang/String;)Lnet/minecraft/network/protocol/common/custom/CustomPacketPayload$Type;
 		ARG 0 id
-	METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
-		ARG 1 buffer
 	CLASS 1
 		METHOD writeCap (Lnet/minecraft/network/FriendlyByteBuf;Lnet/minecraft/network/protocol/common/custom/CustomPacketPayload$Type;Lnet/minecraft/network/protocol/common/custom/CustomPacketPayload;)V
 			ARG 1 buffer

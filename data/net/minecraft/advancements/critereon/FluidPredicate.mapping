@@ -5,8 +5,6 @@ CLASS net/minecraft/advancements/critereon/FluidPredicate
 		ARG 1 level
 		ARG 2 pos
 	CLASS Builder
-		METHOD of (Lnet/minecraft/tags/TagKey;)Lnet/minecraft/advancements/critereon/FluidPredicate$Builder;
-			ARG 1 fluids
 		METHOD of (Lnet/minecraft/world/level/material/Fluid;)Lnet/minecraft/advancements/critereon/FluidPredicate$Builder;
 			ARG 1 fluid
 		METHOD setProperties (Lnet/minecraft/advancements/critereon/StatePropertiesPredicate;)Lnet/minecraft/advancements/critereon/FluidPredicate$Builder;

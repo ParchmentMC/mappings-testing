@@ -15,8 +15,6 @@ CLASS com/mojang/realmsclient/client/RealmsClient
 		ARG 1 parentId
 	METHOD deleteRealm (J)V
 		ARG 1 worldId
-	METHOD deleteWorld (J)V
-		ARG 1 worldId
 	METHOD deop (JLjava/util/UUID;)Lcom/mojang/realmsclient/dto/Ops;
 		ARG 1 worldId
 		ARG 3 profileUuid
@@ -30,13 +28,7 @@ CLASS com/mojang/realmsclient/client/RealmsClient
 		ARG 1 worldId
 	METHOD getOwnRealm (J)Lcom/mojang/realmsclient/dto/RealmsServer;
 		ARG 1 id
-	METHOD getOwnWorld (J)Lcom/mojang/realmsclient/dto/RealmsServer;
-		ARG 1 serverId
 	METHOD initializeRealm (JLjava/lang/String;Ljava/lang/String;)V
-		ARG 1 worldId
-		ARG 3 name
-		ARG 4 description
-	METHOD initializeWorld (JLjava/lang/String;Ljava/lang/String;)V
 		ARG 1 worldId
 		ARG 3 name
 		ARG 4 description

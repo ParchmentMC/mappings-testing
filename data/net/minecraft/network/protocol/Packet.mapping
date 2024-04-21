@@ -7,6 +7,3 @@ CLASS net/minecraft/network/protocol/Packet
 		ARG 1 handler
 	METHOD isSkippable ()Z
 		COMMENT Whether decoding errors will be ignored for this packet.
-	METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
-		COMMENT Writes the raw packet data to the data stream.
-		ARG 1 buffer

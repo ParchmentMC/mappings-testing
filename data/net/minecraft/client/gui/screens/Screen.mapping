@@ -21,8 +21,6 @@ CLASS net/minecraft/client/gui/screens/Screen
 		ARG 1 item
 	METHOD handleComponentClicked (Lnet/minecraft/network/chat/Style;)Z
 		ARG 1 style
-	METHOD hideWidgets ([Lnet/minecraft/client/gui/components/AbstractWidget;)V
-		ARG 0 widgets
 	METHOD init (Lnet/minecraft/client/Minecraft;II)V
 		ARG 1 minecraft
 		ARG 2 width
@@ -62,8 +60,6 @@ CLASS net/minecraft/client/gui/screens/Screen
 		ARG 4 partialTick
 	METHOD renderBlurredBackground (F)V
 		ARG 1 partialTick
-	METHOD renderDirtBackground (Lnet/minecraft/client/gui/GuiGraphics;)V
-		ARG 1 guiGraphics
 	METHOD renderMenuBackground (Lnet/minecraft/client/gui/GuiGraphics;)V
 		ARG 1 partialTick
 	METHOD renderMenuBackground (Lnet/minecraft/client/gui/GuiGraphics;IIII)V
@@ -72,12 +68,6 @@ CLASS net/minecraft/client/gui/screens/Screen
 		ARG 3 y
 		ARG 4 width
 		ARG 5 height
-	METHOD renderMenuBackgroundTexture (Lnet/minecraft/client/gui/GuiGraphics;IIII)V
-		ARG 0 guiGraphics
-		ARG 1 x
-		ARG 2 y
-		ARG 3 width
-		ARG 4 height
 	METHOD renderMenuBackgroundTexture (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/resources/ResourceLocation;IIFFII)V
 		ARG 0 guiGraphics
 		ARG 1 texture

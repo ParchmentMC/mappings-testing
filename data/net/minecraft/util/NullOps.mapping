@@ -1,76 +1,76 @@
 CLASS net/minecraft/util/NullOps
-	METHOD convertTo (Lcom/mojang/serialization/DynamicOps;Ljava/lang/Object;)Ljava/lang/Object;
+	METHOD convertTo (Lcom/mojang/serialization/DynamicOps;Lnet/minecraft/util/Unit;)Ljava/lang/Object;
 		ARG 1 ops
 		ARG 2 unit
-	METHOD createBoolean (Z)Ljava/lang/Object;
+	METHOD createBoolean (Z)Lnet/minecraft/util/Unit;
 		ARG 1 value
-	METHOD createByte (B)Ljava/lang/Object;
+	METHOD createByte (B)Lnet/minecraft/util/Unit;
 		ARG 1 value
-	METHOD createByteList (Ljava/nio/ByteBuffer;)Ljava/lang/Object;
+	METHOD createByteList (Ljava/nio/ByteBuffer;)Lnet/minecraft/util/Unit;
 		ARG 1 input
-	METHOD createDouble (D)Ljava/lang/Object;
+	METHOD createDouble (D)Lnet/minecraft/util/Unit;
 		ARG 1 value
-	METHOD createFloat (F)Ljava/lang/Object;
+	METHOD createFloat (F)Lnet/minecraft/util/Unit;
 		ARG 1 value
-	METHOD createInt (I)Ljava/lang/Object;
+	METHOD createInt (I)Lnet/minecraft/util/Unit;
 		ARG 1 value
-	METHOD createIntList (Ljava/util/stream/IntStream;)Ljava/lang/Object;
+	METHOD createIntList (Ljava/util/stream/IntStream;)Lnet/minecraft/util/Unit;
 		ARG 1 input
-	METHOD createList (Ljava/util/stream/Stream;)Ljava/lang/Object;
+	METHOD createList (Ljava/util/stream/Stream;)Lnet/minecraft/util/Unit;
 		ARG 1 input
-	METHOD createLong (J)Ljava/lang/Object;
+	METHOD createLong (J)Lnet/minecraft/util/Unit;
 		ARG 1 value
-	METHOD createLongList (Ljava/util/stream/LongStream;)Ljava/lang/Object;
+	METHOD createLongList (Ljava/util/stream/LongStream;)Lnet/minecraft/util/Unit;
 		ARG 1 input
-	METHOD createMap (Ljava/util/Map;)Ljava/lang/Object;
+	METHOD createMap (Ljava/util/Map;)Lnet/minecraft/util/Unit;
 		ARG 1 map
-	METHOD createMap (Ljava/util/stream/Stream;)Ljava/lang/Object;
+	METHOD createMap (Ljava/util/stream/Stream;)Lnet/minecraft/util/Unit;
 		ARG 1 map
-	METHOD createNumeric (Ljava/lang/Number;)Ljava/lang/Object;
+	METHOD createNumeric (Ljava/lang/Number;)Lnet/minecraft/util/Unit;
 		ARG 1 value
-	METHOD createShort (S)Ljava/lang/Object;
+	METHOD createShort (S)Lnet/minecraft/util/Unit;
 		ARG 1 value
-	METHOD createString (Ljava/lang/String;)Ljava/lang/Object;
+	METHOD createString (Ljava/lang/String;)Lnet/minecraft/util/Unit;
 		ARG 1 value
-	METHOD getBooleanValue (Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
+	METHOD getBooleanValue (Lnet/minecraft/util/Unit;)Lcom/mojang/serialization/DataResult;
 		ARG 1 input
-	METHOD getByteBuffer (Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
+	METHOD getByteBuffer (Lnet/minecraft/util/Unit;)Lcom/mojang/serialization/DataResult;
 		ARG 1 input
-	METHOD getIntStream (Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
+	METHOD getIntStream (Lnet/minecraft/util/Unit;)Lcom/mojang/serialization/DataResult;
 		ARG 1 input
-	METHOD getList (Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
+	METHOD getList (Lnet/minecraft/util/Unit;)Lcom/mojang/serialization/DataResult;
 		ARG 1 input
-	METHOD getLongStream (Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
+	METHOD getLongStream (Lnet/minecraft/util/Unit;)Lcom/mojang/serialization/DataResult;
 		ARG 1 input
-	METHOD getMap (Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
+	METHOD getMap (Lnet/minecraft/util/Unit;)Lcom/mojang/serialization/DataResult;
 		ARG 1 input
-	METHOD getMapEntries (Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
+	METHOD getMapEntries (Lnet/minecraft/util/Unit;)Lcom/mojang/serialization/DataResult;
 		ARG 1 input
-	METHOD getMapValues (Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
+	METHOD getMapValues (Lnet/minecraft/util/Unit;)Lcom/mojang/serialization/DataResult;
 		ARG 1 input
-	METHOD getNumberValue (Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
+	METHOD getNumberValue (Lnet/minecraft/util/Unit;)Lcom/mojang/serialization/DataResult;
 		ARG 1 input
-	METHOD getStream (Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
+	METHOD getStream (Lnet/minecraft/util/Unit;)Lcom/mojang/serialization/DataResult;
 		ARG 1 input
-	METHOD getStringValue (Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
+	METHOD getStringValue (Lnet/minecraft/util/Unit;)Lcom/mojang/serialization/DataResult;
 		ARG 1 input
-	METHOD mergeToList (Ljava/lang/Object;Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
+	METHOD mergeToList (Lnet/minecraft/util/Unit;Ljava/util/List;)Lcom/mojang/serialization/DataResult;
+		ARG 1 list
+		ARG 2 values
+	METHOD mergeToList (Lnet/minecraft/util/Unit;Lnet/minecraft/util/Unit;)Lcom/mojang/serialization/DataResult;
 		ARG 1 list
 		ARG 2 value
-	METHOD mergeToList (Ljava/lang/Object;Ljava/util/List;)Lcom/mojang/serialization/DataResult;
-		ARG 1 list
-		ARG 2 values
-	METHOD mergeToMap (Ljava/lang/Object;Lcom/mojang/serialization/MapLike;)Lcom/mojang/serialization/DataResult;
+	METHOD mergeToMap (Lnet/minecraft/util/Unit;Lcom/mojang/serialization/MapLike;)Lcom/mojang/serialization/DataResult;
 		ARG 1 map
 		ARG 2 values
-	METHOD mergeToMap (Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
+	METHOD mergeToMap (Lnet/minecraft/util/Unit;Ljava/util/Map;)Lcom/mojang/serialization/DataResult;
+		ARG 1 map
+		ARG 2 values
+	METHOD mergeToMap (Lnet/minecraft/util/Unit;Lnet/minecraft/util/Unit;Lnet/minecraft/util/Unit;)Lcom/mojang/serialization/DataResult;
 		ARG 1 map
 		ARG 2 key
 		ARG 3 value
-	METHOD mergeToMap (Ljava/lang/Object;Ljava/util/Map;)Lcom/mojang/serialization/DataResult;
-		ARG 1 map
-		ARG 2 values
-	METHOD remove (Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+	METHOD remove (Lnet/minecraft/util/Unit;Ljava/lang/String;)Lnet/minecraft/util/Unit;
 		ARG 1 input
 		ARG 2 key
 	CLASS NullMapBuilder

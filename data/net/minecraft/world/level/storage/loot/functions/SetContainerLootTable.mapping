@@ -5,11 +5,6 @@ CLASS net/minecraft/world/level/storage/loot/functions/SetContainerLootTable
 		ARG 2 name
 		ARG 3 seed
 		ARG 5 type
-	METHOD <init> (Ljava/util/List;Lnet/minecraft/resources/ResourceLocation;JLnet/minecraft/core/Holder;)V
-		ARG 1 conditions
-		ARG 2 name
-		ARG 3 seed
-		ARG 5 type
 	METHOD run (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/storage/loot/LootContext;)Lnet/minecraft/world/item/ItemStack;
 		ARG 1 stack
 		ARG 2 context
@@ -19,11 +14,4 @@ CLASS net/minecraft/world/level/storage/loot/functions/SetContainerLootTable
 	METHOD withLootTable (Lnet/minecraft/world/level/block/entity/BlockEntityType;Lnet/minecraft/resources/ResourceKey;J)Lnet/minecraft/world/level/storage/loot/functions/LootItemConditionalFunction$Builder;
 		ARG 0 type
 		ARG 1 lootTable
-		ARG 2 seed
-	METHOD withLootTable (Lnet/minecraft/world/level/block/entity/BlockEntityType;Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/world/level/storage/loot/functions/LootItemConditionalFunction$Builder;
-		ARG 0 type
-		ARG 1 name
-	METHOD withLootTable (Lnet/minecraft/world/level/block/entity/BlockEntityType;Lnet/minecraft/resources/ResourceLocation;J)Lnet/minecraft/world/level/storage/loot/functions/LootItemConditionalFunction$Builder;
-		ARG 0 type
-		ARG 1 name
 		ARG 2 seed

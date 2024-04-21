@@ -76,11 +76,6 @@ CLASS net/minecraft/server/commands/CloneCommands
 	CLASS Mode
 		METHOD <init> (Ljava/lang/String;IZ)V
 			ARG 3 canOverlap
-	CLASS CloneBlockInfo
-		METHOD <init> (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/nbt/CompoundTag;)V
-			ARG 1 pos
-			ARG 2 state
-			ARG 3 tag
 	CLASS CommandFunction
 		METHOD apply (Ljava/lang/Object;)Ljava/lang/Object;
 			ARG 1 input

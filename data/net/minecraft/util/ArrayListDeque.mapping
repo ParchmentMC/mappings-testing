@@ -17,13 +17,9 @@ CLASS net/minecraft/util/ArrayListDeque
 		ARG 1 index
 	METHOD getInner (I)Ljava/lang/Object;
 		ARG 1 index
-	METHOD offer (Ljava/lang/Object;)Z
-		ARG 1 element
 	METHOD offerFirst (Ljava/lang/Object;)Z
 		ARG 1 element
 	METHOD offerLast (Ljava/lang/Object;)Z
-		ARG 1 element
-	METHOD push (Ljava/lang/Object;)V
 		ARG 1 element
 	METHOD remove (I)Ljava/lang/Object;
 		ARG 1 index

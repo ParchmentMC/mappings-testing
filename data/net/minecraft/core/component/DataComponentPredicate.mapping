@@ -5,9 +5,9 @@ CLASS net/minecraft/core/component/DataComponentPredicate
 		ARG 0 expectedComponents
 	METHOD equals (Ljava/lang/Object;)Z
 		ARG 1 other
-	METHOD test (Ljava/lang/Object;)Z
-		ARG 1 components
 	METHOD test (Lnet/minecraft/core/component/DataComponentHolder;)Z
+		ARG 1 components
+	METHOD test (Lnet/minecraft/core/component/DataComponentMap;)Z
 		ARG 1 components
 	CLASS Builder
 		METHOD expect (Lnet/minecraft/core/component/DataComponentType;Ljava/lang/Object;)Lnet/minecraft/core/component/DataComponentPredicate$Builder;

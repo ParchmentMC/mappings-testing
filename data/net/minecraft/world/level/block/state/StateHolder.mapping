@@ -1,8 +1,4 @@
 CLASS net/minecraft/world/level/block/state/StateHolder
-	METHOD <init> (Ljava/lang/Object;Lcom/google/common/collect/ImmutableMap;Lcom/mojang/serialization/MapCodec;)V
-		ARG 1 owner
-		ARG 2 values
-		ARG 3 propertiesCodec
 	METHOD <init> (Ljava/lang/Object;Lit/unimi/dsi/fastutil/objects/Reference2ObjectArrayMap;Lcom/mojang/serialization/MapCodec;)V
 		ARG 1 owner
 		ARG 2 values
@@ -28,8 +24,6 @@ CLASS net/minecraft/world/level/block/state/StateHolder
 		ARG 0 type
 	METHOD lambda$codec$1 (Lnet/minecraft/world/level/block/state/StateHolder;Ljava/util/Optional;)Lnet/minecraft/world/level/block/state/StateHolder;
 		ARG 1 result
-	METHOD lambda$codec$2 (Ljava/util/function/Function;Ljava/lang/Object;)Lcom/mojang/serialization/Codec;
-		ARG 1 property
 	METHOD makeNeighbourValues (Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/util/Map;
 		ARG 1 property
 		ARG 2 value
@@ -42,8 +36,6 @@ CLASS net/minecraft/world/level/block/state/StateHolder
 		ARG 1 property
 		ARG 2 value
 	CLASS 1
-		METHOD apply (Ljava/lang/Object;)Ljava/lang/Object;
-			ARG 1 property
 		METHOD apply (Ljava/util/Map$Entry;)Ljava/lang/String;
 			ARG 1 propertyEntry
 		METHOD getName (Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/String;

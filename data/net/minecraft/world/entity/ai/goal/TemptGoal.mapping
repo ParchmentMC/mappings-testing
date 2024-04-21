@@ -4,11 +4,6 @@ CLASS net/minecraft/world/entity/ai/goal/TemptGoal
 		ARG 2 speedModifier
 		ARG 4 items
 		ARG 5 canScare
-	METHOD <init> (Lnet/minecraft/world/entity/PathfinderMob;DLnet/minecraft/world/item/crafting/Ingredient;Z)V
-		ARG 1 mob
-		ARG 2 speedModifier
-		ARG 4 items
-		ARG 5 canScare
 	METHOD canContinueToUse ()Z
 		COMMENT Returns whether an in-progress EntityAIBase should continue executing
 	METHOD canUse ()Z

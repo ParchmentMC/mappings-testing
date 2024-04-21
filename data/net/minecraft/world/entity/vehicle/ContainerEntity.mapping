@@ -1,6 +1,4 @@
 CLASS net/minecraft/world/entity/vehicle/ContainerEntity
-	METHOD addChestVehicleSaveData (Lnet/minecraft/nbt/CompoundTag;)V
-		ARG 1 tag
 	METHOD addChestVehicleSaveData (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/core/HolderLookup$Provider;)V
 		ARG 1 tag
 		ARG 2 levelRegistry
@@ -16,8 +14,6 @@ CLASS net/minecraft/world/entity/vehicle/ContainerEntity
 		ARG 1 player
 	METHOD isChestVehicleStillValid (Lnet/minecraft/world/entity/player/Player;)Z
 		ARG 1 player
-	METHOD readChestVehicleSaveData (Lnet/minecraft/nbt/CompoundTag;)V
-		ARG 1 tag
 	METHOD readChestVehicleSaveData (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/core/HolderLookup$Provider;)V
 		ARG 1 tag
 		ARG 2 levelRegistry
@@ -30,8 +26,6 @@ CLASS net/minecraft/world/entity/vehicle/ContainerEntity
 		ARG 1 slot
 		ARG 2 stack
 	METHOD setLootTable (Lnet/minecraft/resources/ResourceKey;)V
-		ARG 1 lootTable
-	METHOD setLootTable (Lnet/minecraft/resources/ResourceLocation;)V
 		ARG 1 lootTable
 	METHOD setLootTableSeed (J)V
 		ARG 1 lootTableSeed

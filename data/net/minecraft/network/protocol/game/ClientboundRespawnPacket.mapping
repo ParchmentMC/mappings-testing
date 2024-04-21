@@ -1,6 +1,4 @@
 CLASS net/minecraft/network/protocol/game/ClientboundRespawnPacket
-	METHOD <init> (Lnet/minecraft/network/FriendlyByteBuf;)V
-		ARG 1 buffer
 	METHOD <init> (Lnet/minecraft/network/RegistryFriendlyByteBuf;)V
 		ARG 1 buffer
 	METHOD handle (Lnet/minecraft/network/protocol/game/ClientGamePacketListener;)V
@@ -8,8 +6,5 @@ CLASS net/minecraft/network/protocol/game/ClientboundRespawnPacket
 		ARG 1 handler
 	METHOD shouldKeep (B)Z
 		ARG 1 data
-	METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
-		COMMENT Writes the raw packet data to the data stream.
-		ARG 1 buffer
 	METHOD write (Lnet/minecraft/network/RegistryFriendlyByteBuf;)V
 		ARG 1 buffer

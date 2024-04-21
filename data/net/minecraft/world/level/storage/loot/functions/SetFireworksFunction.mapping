@@ -1,9 +1,4 @@
 CLASS net/minecraft/world/level/storage/loot/functions/SetFireworksFunction
-	METHOD <init> (Ljava/util/List;Ljava/util/List;Lnet/minecraft/world/level/storage/loot/functions/ListOperation;Ljava/util/Optional;)V
-		ARG 1 conditions
-		ARG 2 explosions
-		ARG 3 explosionsOperation
-		ARG 4 flightDuration
 	METHOD <init> (Ljava/util/List;Ljava/util/Optional;Ljava/util/Optional;)V
 		ARG 1 conditions
 		ARG 2 explosions

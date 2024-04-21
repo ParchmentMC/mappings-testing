@@ -19,9 +19,6 @@ CLASS net/minecraft/client/gui/Gui
 		COMMENT A timer for the current title and subtitle displayed
 	METHOD <init> (Lnet/minecraft/client/Minecraft;)V
 		ARG 1 minecraft
-	METHOD <init> (Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/renderer/entity/ItemRenderer;)V
-		ARG 1 minecraft
-		ARG 2 itemRenderer
 	METHOD canRenderCrosshairForSpectator (Lnet/minecraft/world/phys/HitResult;)Z
 		COMMENT Checks if the crosshair can be rendered for a spectator based on the provided {@link HitResult}.
 		COMMENT <p>
@@ -84,12 +81,6 @@ CLASS net/minecraft/client/gui/Gui
 			COMMENT the health of the mount entity.
 	METHOD isShowingChatDisabledByPlayer ()Z
 		COMMENT {@return {@code true} if the chat disabled message is being shown, {@code false} otherwise}
-	METHOD lambda$displayScoreboardSidebar$1 (Lnet/minecraft/world/scores/PlayerScoreEntry;)Z
-		ARG 0 playerScores
-	METHOD lambda$displayScoreboardSidebar$2 (Lnet/minecraft/world/scores/Scoreboard;Lnet/minecraft/network/chat/numbers/NumberFormat;Lnet/minecraft/world/scores/PlayerScoreEntry;)Lnet/minecraft/client/gui/Gui$1DisplayEntry;
-		ARG 3 score
-	METHOD lambda$displayScoreboardSidebar$3 (I)[Lnet/minecraft/client/gui/Gui$1DisplayEntry;
-		ARG 0 index
 	METHOD onDisconnected ()V
 		COMMENT Called when the player is disconnected from the server.
 		COMMENT Resets various UI elements and clears messages.
@@ -112,24 +103,12 @@ CLASS net/minecraft/client/gui/Gui
 	METHOD renderChat (Lnet/minecraft/client/gui/GuiGraphics;F)V
 		ARG 1 guiGraphics
 		ARG 2 partialTick
-	METHOD renderCrosshair (Lnet/minecraft/client/gui/GuiGraphics;)V
-		COMMENT Renders the Crosshair element of the base gui.
-		ARG 1 guiGraphics
-			COMMENT the GuiGraphics object used for rendering.
 	METHOD renderCrosshair (Lnet/minecraft/client/gui/GuiGraphics;F)V
 		ARG 1 guiGraphics
 		ARG 2 partialTick
-	METHOD renderDemoOverlay (Lnet/minecraft/client/gui/GuiGraphics;)V
-		COMMENT Renders the demo overlay on the screen using the provided GuiGraphics object.
-		ARG 1 guiGraphics
-			COMMENT the GuiGraphics object used for rendering.
 	METHOD renderDemoOverlay (Lnet/minecraft/client/gui/GuiGraphics;F)V
 		ARG 1 guiGraphics
 		ARG 2 partialTick
-	METHOD renderEffects (Lnet/minecraft/client/gui/GuiGraphics;)V
-		COMMENT Renders the active effects on the screen using the provided GuiGraphics object.
-		ARG 1 guiGraphics
-			COMMENT the GuiGraphics object used for rendering.
 	METHOD renderEffects (Lnet/minecraft/client/gui/GuiGraphics;F)V
 		ARG 1 guiGraphics
 		ARG 2 partialTick
@@ -179,12 +158,6 @@ CLASS net/minecraft/client/gui/Gui
 			COMMENT the absorption amount of the player.
 		ARG 11 renderHighlight
 			COMMENT determines whether to render the highlight hearts.
-	METHOD renderHotbar (FLnet/minecraft/client/gui/GuiGraphics;)V
-		COMMENT Renders the hotbar on the screen using the provided partial tick value and GuiGraphics object.
-		ARG 1 partialTick
-			COMMENT the partial tick value for smooth animations.
-		ARG 2 guiGraphics
-			COMMENT the GuiGraphics object used for rendering.
 	METHOD renderHotbarAndDecorations (Lnet/minecraft/client/gui/GuiGraphics;F)V
 		ARG 1 guiGraphics
 		ARG 2 partialTick
@@ -212,10 +185,6 @@ CLASS net/minecraft/client/gui/Gui
 			COMMENT the graphics object used for rendering.
 		ARG 2 alpha
 			COMMENT the alpha value of the overlay.
-	METHOD renderSavingIndicator (Lnet/minecraft/client/gui/GuiGraphics;)V
-		COMMENT Renders the autosave indicator on the screen.
-		ARG 1 guiGraphics
-			COMMENT the {@link GuiGraphics} instance used for rendering.
 	METHOD renderSavingIndicator (Lnet/minecraft/client/gui/GuiGraphics;F)V
 		ARG 1 guiGraphics
 		ARG 2 partialTick

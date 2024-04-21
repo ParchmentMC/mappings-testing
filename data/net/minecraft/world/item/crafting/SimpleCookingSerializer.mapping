@@ -11,9 +11,6 @@ CLASS net/minecraft/world/item/crafting/SimpleCookingSerializer
 		ARG 6 cookingTime
 	METHOD fromNetwork (Lnet/minecraft/network/RegistryFriendlyByteBuf;)Lnet/minecraft/world/item/crafting/AbstractCookingRecipe;
 		ARG 1 buffer
-	METHOD toNetwork (Lnet/minecraft/network/FriendlyByteBuf;Lnet/minecraft/world/item/crafting/AbstractCookingRecipe;)V
-		ARG 1 buffer
-		ARG 2 recipe
 	METHOD toNetwork (Lnet/minecraft/network/RegistryFriendlyByteBuf;Lnet/minecraft/world/item/crafting/AbstractCookingRecipe;)V
 		ARG 1 buffer
 		ARG 2 recipe

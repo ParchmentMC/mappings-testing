@@ -1,8 +1,6 @@
 CLASS net/minecraft/client/player/inventory/Hotbar
 	METHOD <init> (Ljava/util/List;)V
 		ARG 1 items
-	METHOD fromTag (Lnet/minecraft/nbt/ListTag;)V
-		ARG 1 tag
 	METHOD isEmpty (Lcom/mojang/serialization/Dynamic;)Z
 		ARG 0 dynamic
 	METHOD load (Lnet/minecraft/core/HolderLookup$Provider;)Ljava/util/List;

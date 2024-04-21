@@ -66,11 +66,6 @@ CLASS net/minecraft/world/level/levelgen/structure/templatesystem/StructureTempl
 		ARG 4 sizeZ
 	METHOD lambda$fillEntityList$3 (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 0 entity
-	METHOD lambda$updateShapeAtEdge$4 (IIILnet/minecraft/world/level/LevelAccessor;ILnet/minecraft/core/Direction;III)V
-		ARG 5 direction
-		ARG 6 x
-		ARG 7 y
-		ARG 8 z
 	METHOD load (Lnet/minecraft/core/HolderGetter;Lnet/minecraft/nbt/CompoundTag;)V
 		ARG 1 blockGetter
 		ARG 2 tag

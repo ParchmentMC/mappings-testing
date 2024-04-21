@@ -3,8 +3,6 @@ CLASS net/minecraft/world/scores/Score
 		ARG 1 display
 	METHOD numberFormat (Lnet/minecraft/network/chat/numbers/NumberFormat;)V
 		ARG 1 numberFormat
-	METHOD read (Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/scores/Score;
-		ARG 0 tag
 	METHOD read (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/world/scores/Score;
 		ARG 0 tag
 		ARG 1 levelRegistry

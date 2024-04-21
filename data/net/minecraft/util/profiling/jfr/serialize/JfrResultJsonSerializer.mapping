@@ -16,8 +16,6 @@ CLASS net/minecraft/util/profiling/jfr/serialize/JfrResultJsonSerializer
 		ARG 2 serializer
 	METHOD network (Lnet/minecraft/util/profiling/jfr/parse/JfrStatsResult;)Lcom/google/gson/JsonElement;
 		ARG 1 result
-	METHOD packets (Lnet/minecraft/util/profiling/jfr/stats/NetworkPacketSummary;)Lcom/google/gson/JsonElement;
-		ARG 1 summary
 	METHOD serializeChunkId (Lnet/minecraft/util/profiling/jfr/stats/ChunkIdentification;Lcom/google/gson/JsonObject;)V
 		ARG 0 chunkIndentification
 		ARG 1 json

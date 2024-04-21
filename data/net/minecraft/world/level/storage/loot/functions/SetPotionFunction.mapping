@@ -4,5 +4,3 @@ CLASS net/minecraft/world/level/storage/loot/functions/SetPotionFunction
 		ARG 2 potion
 	METHOD setPotion (Lnet/minecraft/core/Holder;)Lnet/minecraft/world/level/storage/loot/functions/LootItemConditionalFunction$Builder;
 		ARG 0 potion
-	METHOD setPotion (Lnet/minecraft/world/item/alchemy/Potion;)Lnet/minecraft/world/level/storage/loot/functions/LootItemConditionalFunction$Builder;
-		ARG 0 potion

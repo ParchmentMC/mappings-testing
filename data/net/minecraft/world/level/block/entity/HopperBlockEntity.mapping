@@ -35,11 +35,6 @@ CLASS net/minecraft/world/level/block/entity/HopperBlockEntity
 		ARG 0 level
 		ARG 1 pos
 		ARG 2 blockEntity
-	METHOD ejectItems (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/Container;)Z
-		ARG 0 level
-		ARG 1 pos
-		ARG 2 state
-		ARG 3 sourceContainer
 	METHOD entityInside (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/level/block/entity/HopperBlockEntity;)V
 		ARG 0 level
 		ARG 1 pos
@@ -50,20 +45,10 @@ CLASS net/minecraft/world/level/block/entity/HopperBlockEntity
 		ARG 0 level
 		ARG 1 pos
 		ARG 2 blockEntity
-	METHOD getAttachedContainer (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/Container;
-		ARG 0 level
-		ARG 1 pos
-		ARG 2 state
 	METHOD getBlockContainer (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/Container;
 		ARG 0 level
 		ARG 1 pos
 		ARG 2 state
-	METHOD getContainerAt (Lnet/minecraft/world/level/Level;DDD)Lnet/minecraft/world/Container;
-		COMMENT @return the container for the given position or {@code null} if none was found
-		ARG 0 level
-		ARG 1 x
-		ARG 3 y
-		ARG 5 z
 	METHOD getContainerAt (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/Container;
 		ARG 0 level
 		ARG 1 pos
@@ -82,36 +67,18 @@ CLASS net/minecraft/world/level/block/entity/HopperBlockEntity
 	METHOD getItemsAtAndAbove (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/level/block/entity/Hopper;)Ljava/util/List;
 		ARG 0 level
 		ARG 1 hopper
-	METHOD getSlots (Lnet/minecraft/world/Container;Lnet/minecraft/core/Direction;)Ljava/util/stream/IntStream;
-		ARG 0 container
-		ARG 1 direction
 	METHOD getSlots (Lnet/minecraft/world/Container;Lnet/minecraft/core/Direction;)[I
 		ARG 0 container
 		ARG 1 direction
-	METHOD getSourceContainer (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/level/block/entity/Hopper;)Lnet/minecraft/world/Container;
-		ARG 0 level
-		ARG 1 hopper
 	METHOD getSourceContainer (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/level/block/entity/Hopper;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/Container;
 		ARG 0 level
 		ARG 1 hopper
 		ARG 2 pos
 		ARG 3 state
-	METHOD isEmptyContainer (Lnet/minecraft/world/Container;Lnet/minecraft/core/Direction;)Z
-		COMMENT @return whether the given {@code container} is empty from the given face
-		ARG 0 container
-		ARG 1 direction
 	METHOD isFullContainer (Lnet/minecraft/world/Container;Lnet/minecraft/core/Direction;)Z
 		COMMENT @return {@code false} if the {@code container} has any room to place items in
 		ARG 0 container
 		ARG 1 direction
-	METHOD lambda$getItemsAtAndAbove$4 (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/level/block/entity/Hopper;Lnet/minecraft/world/phys/AABB;)Ljava/util/stream/Stream;
-		ARG 2 bounds
-	METHOD lambda$isEmptyContainer$2 (Lnet/minecraft/world/Container;I)Z
-		ARG 1 slotIndex
-	METHOD lambda$isFullContainer$1 (Lnet/minecraft/world/Container;I)Z
-		ARG 1 slot
-	METHOD lambda$suckInItems$3 (Lnet/minecraft/world/level/block/entity/Hopper;Lnet/minecraft/world/Container;Lnet/minecraft/core/Direction;I)Z
-		ARG 3 slot
 	METHOD pushItemsTick (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/entity/HopperBlockEntity;)V
 		ARG 0 level
 		ARG 1 pos

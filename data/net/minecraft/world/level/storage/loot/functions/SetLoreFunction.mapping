@@ -6,14 +6,6 @@ CLASS net/minecraft/world/level/storage/loot/functions/SetLoreFunction
 		ARG 2 lore
 		ARG 3 mode
 		ARG 4 resolutionContext
-	METHOD <init> (Ljava/util/List;ZLjava/util/List;Ljava/util/Optional;)V
-		ARG 1 conditions
-		ARG 2 replace
-		ARG 3 lore
-		ARG 4 resolutionContext
-	METHOD getLoreTag (Lnet/minecraft/world/item/ItemStack;Z)Lnet/minecraft/nbt/ListTag;
-		ARG 1 stack
-		ARG 2 createIfMissing
 	METHOD run (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/storage/loot/LootContext;)Lnet/minecraft/world/item/ItemStack;
 		ARG 1 stack
 		ARG 2 context
@@ -25,7 +17,5 @@ CLASS net/minecraft/world/level/storage/loot/functions/SetLoreFunction
 			ARG 1 line
 		METHOD setMode (Lnet/minecraft/world/level/storage/loot/functions/ListOperation;)Lnet/minecraft/world/level/storage/loot/functions/SetLoreFunction$Builder;
 			ARG 1 mode
-		METHOD setReplace (Z)Lnet/minecraft/world/level/storage/loot/functions/SetLoreFunction$Builder;
-			ARG 1 replace
 		METHOD setResolutionContext (Lnet/minecraft/world/level/storage/loot/LootContext$EntityTarget;)Lnet/minecraft/world/level/storage/loot/functions/SetLoreFunction$Builder;
 			ARG 1 resolutionContext

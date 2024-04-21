@@ -140,8 +140,6 @@ CLASS net/minecraft/client/renderer/GameRenderer
 		ARG 0 shader
 	METHOD lambda$reloadShaders$57 (Lnet/minecraft/client/renderer/ShaderInstance;)V
 		ARG 0 shader
-	METHOD lambda$reloadShaders$58 (Lnet/minecraft/client/renderer/ShaderInstance;)V
-		ARG 0 shader
 	METHOD lambda$reloadShaders$6 (Lnet/minecraft/client/renderer/ShaderInstance;)V
 		ARG 0 shader
 	METHOD lambda$reloadShaders$7 (Lnet/minecraft/client/renderer/ShaderInstance;)V
@@ -183,13 +181,6 @@ CLASS net/minecraft/client/renderer/GameRenderer
 		ARG 1 widthsp
 		ARG 2 heightScaled
 		ARG 3 partialTicks
-	METHOD renderItemInHand (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/Camera;F)V
-		ARG 1 poseStack
-		ARG 2 activeRenderInfo
-		ARG 3 partialTicks
-	METHOD renderItemInHand (Lnet/minecraft/client/Camera;F)V
-		ARG 1 camera
-		ARG 2 partialTick
 	METHOD renderItemInHand (Lnet/minecraft/client/Camera;FLorg/joml/Matrix4f;)V
 		ARG 1 camera
 		ARG 2 partialTick
@@ -197,10 +188,6 @@ CLASS net/minecraft/client/renderer/GameRenderer
 	METHOD renderLevel (FJ)V
 		ARG 1 partialTick
 		ARG 2 nanoTime
-	METHOD renderLevel (FJLcom/mojang/blaze3d/vertex/PoseStack;)V
-		ARG 1 partialTicks
-		ARG 2 finishTimeNano
-		ARG 4 poseStack
 	METHOD renderZoomed (FFF)V
 		ARG 1 zoom
 		ARG 2 zoomX

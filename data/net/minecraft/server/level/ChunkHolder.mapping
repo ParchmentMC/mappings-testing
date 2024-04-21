@@ -36,17 +36,10 @@ CLASS net/minecraft/server/level/ChunkHolder
 	METHOD demoteFullChunk (Lnet/minecraft/server/level/ChunkMap;Lnet/minecraft/server/level/FullChunkStatus;)V
 		ARG 1 chunkMap
 		ARG 2 fullChunkStatus
-	METHOD getFutureIfPresent (Lnet/minecraft/world/level/chunk/ChunkStatus;)Ljava/util/concurrent/CompletableFuture;
-		ARG 1 chunkStatus
 	METHOD getFutureIfPresent (Lnet/minecraft/world/level/chunk/status/ChunkStatus;)Ljava/util/concurrent/CompletableFuture;
-		ARG 1 chunkStatus
-	METHOD getFutureIfPresentUnchecked (Lnet/minecraft/world/level/chunk/ChunkStatus;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 chunkStatus
 	METHOD getFutureIfPresentUnchecked (Lnet/minecraft/world/level/chunk/status/ChunkStatus;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 chunkStatus
-	METHOD getOrScheduleFuture (Lnet/minecraft/world/level/chunk/ChunkStatus;Lnet/minecraft/server/level/ChunkMap;)Ljava/util/concurrent/CompletableFuture;
-		ARG 1 status
-		ARG 2 map
 	METHOD getOrScheduleFuture (Lnet/minecraft/world/level/chunk/status/ChunkStatus;Lnet/minecraft/server/level/ChunkMap;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 chunkStatus
 		ARG 2 chunkMap

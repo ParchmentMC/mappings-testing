@@ -1,44 +1,6 @@
 CLASS net/minecraft/util/datafix/ExtraDataFixUtils
-	METHOD asBoolean (Lcom/mojang/serialization/Dynamic;)Lcom/mojang/serialization/DataResult;
-		ARG 0 data
-	METHOD asBoolean (Lcom/mojang/serialization/DynamicLike;)Lcom/mojang/serialization/DataResult;
-		ARG 0 data
-	METHOD asBoolean (Lcom/mojang/serialization/DynamicLike;Z)Z
-		ARG 0 data
-		ARG 1 defaultValue
 	METHOD cast (Lcom/mojang/datafixers/types/Type;Lcom/mojang/datafixers/Typed;)Lcom/mojang/datafixers/Typed;
 		ARG 0 type
 		ARG 1 data
-	METHOD copyAndFixField (Lcom/mojang/serialization/Dynamic;Ljava/lang/String;Lcom/mojang/serialization/Dynamic;Ljava/lang/String;Ljava/util/function/UnaryOperator;)Lcom/mojang/serialization/Dynamic;
-		ARG 0 sourceData
-		ARG 1 sourceName
-		ARG 2 destinationData
-		ARG 3 destinationName
-		ARG 4 fixer
-	METHOD copyField (Lcom/mojang/serialization/Dynamic;Ljava/lang/String;Lcom/mojang/serialization/Dynamic;Ljava/lang/String;)Lcom/mojang/serialization/Dynamic;
-		ARG 0 sourceData
-		ARG 1 sourceName
-		ARG 2 destinationData
-		ARG 3 destinationName
 	METHOD fixBlockPos (Lcom/mojang/serialization/Dynamic;)Lcom/mojang/serialization/Dynamic;
 		ARG 0 data
-	METHOD optionalFields ([Lcom/mojang/datafixers/util/Pair;)Lcom/mojang/datafixers/types/templates/TypeTemplate;
-		ARG 0 fields
-	METHOD renameAndFixField (Lcom/mojang/serialization/Dynamic;Ljava/lang/String;Ljava/lang/String;Ljava/util/function/UnaryOperator;)Lcom/mojang/serialization/Dynamic;
-		ARG 0 data
-		ARG 1 oldName
-		ARG 2 newName
-		ARG 3 fixer
-	METHOD renameField (Lcom/mojang/serialization/Dynamic;Ljava/lang/String;Ljava/lang/String;)Lcom/mojang/serialization/Dynamic;
-		ARG 0 data
-		ARG 1 oldName
-		ARG 2 newName
-	METHOD replaceField (Lcom/mojang/serialization/Dynamic;Ljava/lang/String;Ljava/lang/String;Ljava/util/Optional;)Lcom/mojang/serialization/Dynamic;
-		ARG 0 data
-		ARG 1 oldFieldName
-		ARG 2 newFieldName
-		ARG 3 newValue
-	METHOD setFieldIfPresent (Lcom/mojang/serialization/Dynamic;Ljava/lang/String;Ljava/util/Optional;)Lcom/mojang/serialization/Dynamic;
-		ARG 0 data
-		ARG 1 fieldName
-		ARG 2 value

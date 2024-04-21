@@ -1,6 +1,4 @@
 CLASS net/minecraft/world/level/chunk/storage/ChunkSerializer
-	METHOD getChunkTypeFromTag (Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/level/chunk/ChunkStatus$ChunkType;
-		ARG 0 chunkNBT
 	METHOD getChunkTypeFromTag (Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/level/chunk/status/ChunkType;
 		ARG 0 tag
 	METHOD getListOfCompoundsOrNull (Lnet/minecraft/nbt/CompoundTag;Ljava/lang/String;)Lnet/minecraft/nbt/ListTag;

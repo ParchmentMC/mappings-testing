@@ -1,18 +1,7 @@
 CLASS net/minecraft/world/level/block/FlowerBlock
-	METHOD <init> (Ljava/util/List;Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-		ARG 1 suspiciousStewEffects
-		ARG 2 properties
 	METHOD <init> (Lnet/minecraft/core/Holder;FLnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
 		ARG 1 effect
 		ARG 2 seconds
-		ARG 3 properties
-	METHOD <init> (Lnet/minecraft/core/Holder;ILnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-		ARG 1 effect
-		ARG 2 duration
-		ARG 3 propertird
-	METHOD <init> (Lnet/minecraft/world/effect/MobEffect;ILnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
-		ARG 1 suspiciousStewEffect
-		ARG 2 effectDuration
 		ARG 3 properties
 	METHOD <init> (Lnet/minecraft/world/item/component/SuspiciousStewEffects;Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
 		ARG 1 suspiciousStewEffects
@@ -25,12 +14,3 @@ CLASS net/minecraft/world/level/block/FlowerBlock
 	METHOD makeEffectList (Lnet/minecraft/core/Holder;F)Lnet/minecraft/world/item/component/SuspiciousStewEffects;
 		ARG 0 effect
 		ARG 1 seconds
-	METHOD makeEffectList (Lnet/minecraft/core/Holder;I)Ljava/util/List;
-		ARG 0 effect
-		ARG 1 duration
-	METHOD makeEffectList (Lnet/minecraft/core/Holder;I)Lnet/minecraft/world/item/component/SuspiciousStewEffects;
-		ARG 0 effect
-		ARG 1 seconds
-	METHOD makeEffectList (Lnet/minecraft/world/effect/MobEffect;I)Ljava/util/List;
-		ARG 0 effect
-		ARG 1 duration

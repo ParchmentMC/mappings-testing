@@ -1,7 +1,4 @@
 CLASS net/minecraft/server/commands/ScoreboardCommand
-	METHOD addNumberFormats (Lcom/mojang/brigadier/builder/ArgumentBuilder;Lnet/minecraft/server/commands/ScoreboardCommand$NumberFormatCommandExecutor;)Lcom/mojang/brigadier/builder/ArgumentBuilder;
-		ARG 0 builder
-		ARG 1 commandExecutor
 	METHOD addNumberFormats (Lnet/minecraft/commands/CommandBuildContext;Lcom/mojang/brigadier/builder/ArgumentBuilder;Lnet/minecraft/server/commands/ScoreboardCommand$NumberFormatCommandExecutor;)Lcom/mojang/brigadier/builder/ArgumentBuilder;
 		ARG 0 context
 		ARG 1 argumentBuilder
@@ -78,8 +75,6 @@ CLASS net/minecraft/server/commands/ScoreboardCommand
 		ARG 3 operation
 		ARG 4 sourceEntities
 		ARG 5 sourceObjective
-	METHOD register (Lcom/mojang/brigadier/CommandDispatcher;)V
-		ARG 0 dispatcher
 	METHOD register (Lcom/mojang/brigadier/CommandDispatcher;Lnet/minecraft/commands/CommandBuildContext;)V
 		ARG 0 dispatcher
 		ARG 1 context

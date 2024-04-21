@@ -1,6 +1,0 @@
-CLASS net/minecraft/core/dispenser/AbstractProjectileDispenseBehavior
-	METHOD getProjectile (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/Position;Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/entity/projectile/Projectile;
-		COMMENT Return the projectile entity spawned by this dispense behavior.
-		ARG 1 level
-		ARG 2 position
-		ARG 3 stack

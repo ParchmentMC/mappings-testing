@@ -67,8 +67,6 @@ CLASS net/minecraft/world/entity/Mob
 	METHOD equip (Lnet/minecraft/resources/ResourceKey;Ljava/util/Map;)V
 		ARG 1 equipmentLootTable
 		ARG 2 slotDropChances
-	METHOD equip (Lnet/minecraft/resources/ResourceLocation;)V
-		ARG 1 lootTable
 	METHOD equip (Lnet/minecraft/world/entity/EquipmentTable;)V
 		ARG 1 equipmentTable
 	METHOD equipItemIfPossible (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/ItemStack;
@@ -78,12 +76,6 @@ CLASS net/minecraft/world/entity/Mob
 		ARG 2 difficulty
 		ARG 3 spawnType
 		ARG 4 spawnGroupData
-	METHOD finalizeSpawn (Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/world/DifficultyInstance;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/world/entity/SpawnGroupData;Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/entity/SpawnGroupData;
-		ARG 1 level
-		ARG 2 difficulty
-		ARG 3 reason
-		ARG 4 spawnData
-		ARG 5 dataTag
 	METHOD getAmbientSoundInterval ()I
 		COMMENT Get number of ticks, at least during which the living entity will be silent.
 	METHOD getApproximateAttackDamageWithItem (Lnet/minecraft/world/item/ItemStack;)D
@@ -101,8 +93,6 @@ CLASS net/minecraft/world/entity/Mob
 		COMMENT The speed it takes to move the entity's head rotation through the faceEntity method.
 	METHOD getMaxSpawnClusterSize ()I
 		COMMENT Will return how many at most can spawn in a chunk at once.
-	METHOD getPathfindingMalus (Lnet/minecraft/world/level/pathfinder/BlockPathTypes;)F
-		ARG 1 nodeType
 	METHOD getPathfindingMalus (Lnet/minecraft/world/level/pathfinder/PathType;)F
 		ARG 1 pathType
 	METHOD getTarget ()Lnet/minecraft/world/entity/LivingEntity;
@@ -126,23 +116,11 @@ CLASS net/minecraft/world/entity/Mob
 		ARG 1 entity
 	METHOD isWithinRestriction (Lnet/minecraft/core/BlockPos;)Z
 		ARG 1 pos
-	METHOD lambda$canReplaceEqualItem$0 (Ljava/lang/String;)Z
-		ARG 0 stack
-	METHOD lambda$canReplaceEqualItem$1 (Ljava/lang/String;)Z
-		ARG 0 stack
-	METHOD lambda$checkAndHandleImportantInteractions$2 (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/entity/Mob;)V
-		ARG 2 mob
-	METHOD lambda$removeAfterChangingDimensions$4 (Lnet/minecraft/world/item/ItemStack;)V
-		ARG 0 slot
 	METHOD lookAt (Lnet/minecraft/world/entity/Entity;FF)V
 		COMMENT Changes the X and Y rotation so that this entity is facing the given entity.
 		ARG 1 entity
 		ARG 2 maxYRotIncrease
 		ARG 3 maxXRotIncrease
-	METHOD maybeDisableShield (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)V
-		ARG 1 player
-		ARG 2 mobItemStack
-		ARG 3 playerItemStack
 	METHOD mobInteract (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResult;
 		ARG 1 player
 		ARG 2 hand
@@ -208,9 +186,6 @@ CLASS net/minecraft/world/entity/Mob
 	METHOD setNoAi (Z)V
 		COMMENT Set whether this Entity's AI is disabled
 		ARG 1 noAi
-	METHOD setPathfindingMalus (Lnet/minecraft/world/level/pathfinder/BlockPathTypes;F)V
-		ARG 1 nodeType
-		ARG 2 malus
 	METHOD setPathfindingMalus (Lnet/minecraft/world/level/pathfinder/PathType;F)V
 		ARG 1 pathType
 		ARG 2 malus

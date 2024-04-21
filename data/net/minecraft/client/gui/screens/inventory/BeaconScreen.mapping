@@ -17,19 +17,9 @@ CLASS net/minecraft/client/gui/screens/inventory/BeaconScreen
 			ARG 4 effect
 			ARG 5 isPrimary
 			ARG 6 tier
-		METHOD <init> (Lnet/minecraft/client/gui/screens/inventory/BeaconScreen;IILnet/minecraft/world/effect/MobEffect;ZI)V
-			ARG 2 x
-			ARG 3 y
-			ARG 4 effect
-			ARG 5 isPrimary
-			ARG 6 tier
 		METHOD createEffectDescription (Lnet/minecraft/core/Holder;)Lnet/minecraft/network/chat/MutableComponent;
 			ARG 1 effect
-		METHOD createEffectDescription (Lnet/minecraft/world/effect/MobEffect;)Lnet/minecraft/network/chat/MutableComponent;
-			ARG 1 effect
 		METHOD setEffect (Lnet/minecraft/core/Holder;)V
-			ARG 1 effect
-		METHOD setEffect (Lnet/minecraft/world/effect/MobEffect;)V
 			ARG 1 effect
 	CLASS BeaconCancelButton
 		METHOD <init> (Lnet/minecraft/client/gui/screens/inventory/BeaconScreen;II)V
@@ -59,10 +49,6 @@ CLASS net/minecraft/client/gui/screens/inventory/BeaconScreen
 			ARG 4 message
 	CLASS BeaconUpgradePowerButton
 		METHOD <init> (Lnet/minecraft/client/gui/screens/inventory/BeaconScreen;IILnet/minecraft/core/Holder;)V
-			ARG 2 x
-			ARG 3 y
-			ARG 4 effect
-		METHOD <init> (Lnet/minecraft/client/gui/screens/inventory/BeaconScreen;IILnet/minecraft/world/effect/MobEffect;)V
 			ARG 2 x
 			ARG 3 y
 			ARG 4 effect

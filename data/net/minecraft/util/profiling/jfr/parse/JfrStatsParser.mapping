@@ -10,9 +10,6 @@ CLASS net/minecraft/util/profiling/jfr/parse/JfrStatsParser
 	METHOD collectIoStats (Ljava/time/Duration;Ljava/util/Map;)Lnet/minecraft/util/profiling/jfr/stats/IoSummary;
 		ARG 0 recordingDuration
 		ARG 1 entries
-	METHOD collectPacketStats (Ljava/time/Duration;Ljava/util/Map;)Lnet/minecraft/util/profiling/jfr/stats/NetworkPacketSummary;
-		ARG 0 recordingDuration
-		ARG 1 packets
 	METHOD incrementChunk (Ljdk/jfr/consumer/RecordedEvent;ILjava/util/Map;)V
 		ARG 1 event
 		ARG 2 increment

@@ -8,8 +8,6 @@ CLASS net/minecraft/world/level/levelgen/structure/StructureFeatureIndexSavedDat
 		ARG 1 index
 	METHOD hasUnhandledIndex (J)Z
 		ARG 1 index
-	METHOD load (Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/level/levelgen/structure/StructureFeatureIndexSavedData;
-		ARG 0 tag
 	METHOD load (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/world/level/levelgen/structure/StructureFeatureIndexSavedData;
 		ARG 0 tag
 		ARG 1 registries

@@ -1,6 +1,4 @@
 CLASS net/minecraft/client/renderer/entity/ItemEntityRenderer
-	METHOD getRenderAmount (Lnet/minecraft/world/item/ItemStack;)I
-		ARG 1 stack
 	METHOD getRenderedAmount (I)I
 		ARG 0 count
 	METHOD getSeedForItemStack (Lnet/minecraft/world/item/ItemStack;)I

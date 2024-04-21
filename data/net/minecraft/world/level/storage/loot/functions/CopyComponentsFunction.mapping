@@ -1,8 +1,4 @@
 CLASS net/minecraft/world/level/storage/loot/functions/CopyComponentsFunction
-	METHOD <init> (Ljava/util/List;Lnet/minecraft/world/level/storage/loot/functions/CopyComponentsFunction$Source;Ljava/util/List;)V
-		ARG 1 condtions
-		ARG 2 source
-		ARG 3 components
 	METHOD <init> (Ljava/util/List;Lnet/minecraft/world/level/storage/loot/functions/CopyComponentsFunction$Source;Ljava/util/Optional;Ljava/util/Optional;)V
 		ARG 1 conditions
 		ARG 2 source
@@ -20,8 +16,6 @@ CLASS net/minecraft/world/level/storage/loot/functions/CopyComponentsFunction
 	CLASS Builder
 		METHOD <init> (Lnet/minecraft/world/level/storage/loot/functions/CopyComponentsFunction$Source;)V
 			ARG 1 source
-		METHOD copy (Lnet/minecraft/core/component/DataComponentType;)Lnet/minecraft/world/level/storage/loot/functions/CopyComponentsFunction$Builder;
-			ARG 1 component
 		METHOD exclude (Lnet/minecraft/core/component/DataComponentType;)Lnet/minecraft/world/level/storage/loot/functions/CopyComponentsFunction$Builder;
 			ARG 1 exclude
 		METHOD include (Lnet/minecraft/core/component/DataComponentType;)Lnet/minecraft/world/level/storage/loot/functions/CopyComponentsFunction$Builder;

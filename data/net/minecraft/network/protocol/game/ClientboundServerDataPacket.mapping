@@ -1,12 +1,4 @@
 CLASS net/minecraft/network/protocol/game/ClientboundServerDataPacket
-	METHOD <init> (Lnet/minecraft/network/FriendlyByteBuf;)V
-		ARG 1 buffer
 	METHOD <init> (Lnet/minecraft/network/chat/Component;Ljava/util/Optional;)V
 		ARG 1 motd
 		ARG 2 iconBytes
-	METHOD <init> (Lnet/minecraft/network/chat/Component;Ljava/util/Optional;Z)V
-		ARG 1 motd
-		ARG 2 iconBytes
-		ARG 3 enforcesSecureChat
-	METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
-		ARG 1 buffer

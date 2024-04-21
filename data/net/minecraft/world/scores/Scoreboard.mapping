@@ -48,8 +48,6 @@ CLASS net/minecraft/world/scores/Scoreboard
 		ARG 1 objective
 	METHOD listPlayerScores (Lnet/minecraft/world/scores/ScoreHolder;)Lit/unimi/dsi/fastutil/objects/Object2IntMap;
 		ARG 1 scoreHolder
-	METHOD loadPlayerScores (Lnet/minecraft/nbt/ListTag;)V
-		ARG 1 tag
 	METHOD loadPlayerScores (Lnet/minecraft/nbt/ListTag;Lnet/minecraft/core/HolderLookup$Provider;)V
 		ARG 1 tag
 		ARG 2 levelRegistry

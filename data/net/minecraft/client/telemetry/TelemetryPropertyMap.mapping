@@ -1,8 +1,6 @@
 CLASS net/minecraft/client/telemetry/TelemetryPropertyMap
 	METHOD <init> (Ljava/util/Map;)V
 		ARG 1 entries
-	METHOD createCodec (Ljava/util/List;)Lcom/mojang/serialization/Codec;
-		ARG 0 properties
 	METHOD createCodec (Ljava/util/List;)Lcom/mojang/serialization/MapCodec;
 		ARG 0 properties
 	METHOD get (Lnet/minecraft/client/telemetry/TelemetryProperty;)Ljava/lang/Object;

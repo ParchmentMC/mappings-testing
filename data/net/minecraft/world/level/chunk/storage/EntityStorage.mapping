@@ -1,10 +1,4 @@
 CLASS net/minecraft/world/level/chunk/storage/EntityStorage
-	METHOD <init> (Lnet/minecraft/server/level/ServerLevel;Ljava/nio/file/Path;Lcom/mojang/datafixers/DataFixer;ZLjava/util/concurrent/Executor;)V
-		ARG 1 level
-		ARG 2 folder
-		ARG 3 fixerUpper
-		ARG 4 sync
-		ARG 5 mainThreadExecutor
 	METHOD <init> (Lnet/minecraft/world/level/chunk/storage/SimpleRegionStorage;Lnet/minecraft/server/level/ServerLevel;Ljava/util/concurrent/Executor;)V
 		ARG 1 simpleRegionStorage
 		ARG 2 level
@@ -19,8 +13,6 @@ CLASS net/minecraft/world/level/chunk/storage/EntityStorage
 		ARG 1 exception
 	METHOD readChunkPos (Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/level/ChunkPos;
 		ARG 0 tag
-	METHOD upgradeChunkTag (Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/nbt/CompoundTag;
-		ARG 1 tag
 	METHOD writeChunkPos (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/world/level/ChunkPos;)V
 		ARG 0 tag
 		ARG 1 pos

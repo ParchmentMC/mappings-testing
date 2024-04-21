@@ -1,7 +1,4 @@
 CLASS net/minecraft/world/level/levelgen/BelowZeroRetrogen
-	METHOD <init> (Lnet/minecraft/world/level/chunk/ChunkStatus;Ljava/util/Optional;)V
-		ARG 1 targetStatus
-		ARG 2 missingBedrockBits
 	METHOD <init> (Lnet/minecraft/world/level/chunk/status/ChunkStatus;Ljava/util/Optional;)V
 		ARG 1 targetStatus
 		ARG 2 missingBedrock

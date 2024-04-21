@@ -65,12 +65,6 @@ CLASS net/minecraft/Util
 	METHOD fixedSize (Ljava/util/stream/LongStream;I)Lcom/mojang/serialization/DataResult;
 		ARG 0 stream
 		ARG 1 expectedSize
-	METHOD getOrThrow (Lcom/mojang/serialization/DataResult;Ljava/util/function/Function;)Ljava/lang/Object;
-		ARG 0 dataResult
-		ARG 1 exceptionGetter
-	METHOD getPartialOrThrow (Lcom/mojang/serialization/DataResult;Ljava/util/function/Function;)Ljava/lang/Object;
-		ARG 0 dataResult
-		ARG 1 exceptionGetter
 	METHOD getPropertyName (Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Object;)Ljava/lang/String;
 		ARG 0 property
 		ARG 1 value
@@ -93,10 +87,6 @@ CLASS net/minecraft/Util
 		ARG 0 opt
 		ARG 1 consumer
 		ARG 2 orElse
-	METHOD isBlank (Ljava/lang/String;)Z
-		ARG 0 string
-	METHOD isWhitespace (I)Z
-		ARG 0 character
 	METHOD lastOf (Ljava/util/List;)Ljava/lang/Object;
 		ARG 0 list
 	METHOD logAndPauseIfInIde (Ljava/lang/String;)V

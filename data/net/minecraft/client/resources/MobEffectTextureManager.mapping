@@ -3,5 +3,3 @@ CLASS net/minecraft/client/resources/MobEffectTextureManager
 		ARG 1 textureManager
 	METHOD get (Lnet/minecraft/core/Holder;)Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;
 		ARG 1 effect
-	METHOD get (Lnet/minecraft/world/effect/MobEffect;)Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;
-		ARG 1 effect

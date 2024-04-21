@@ -15,10 +15,6 @@ CLASS net/minecraft/world/level/StructureManager
 		ARG 2 structure
 		ARG 3 placement
 		ARG 4 skipKnownStructures
-	METHOD checkStructurePresence (Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/world/level/levelgen/structure/Structure;Z)Lnet/minecraft/world/level/levelgen/structure/StructureCheckResult;
-		ARG 1 chunkPos
-		ARG 2 structure
-		ARG 3 skipKnownStructures
 	METHOD fillStartsForStructure (Lnet/minecraft/world/level/levelgen/structure/Structure;Lit/unimi/dsi/fastutil/longs/LongSet;Ljava/util/function/Consumer;)V
 		ARG 1 structure
 		ARG 2 structureRefs
@@ -40,9 +36,6 @@ CLASS net/minecraft/world/level/StructureManager
 	METHOD getStructureWithPieceAt (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/HolderSet;)Lnet/minecraft/world/level/levelgen/structure/StructureStart;
 		ARG 1 pos
 		ARG 2 structures
-	METHOD getStructureWithPieceAt (Lnet/minecraft/core/BlockPos;Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/world/level/levelgen/structure/StructureStart;
-		ARG 1 pos
-		ARG 2 structureKey
 	METHOD getStructureWithPieceAt (Lnet/minecraft/core/BlockPos;Lnet/minecraft/tags/TagKey;)Lnet/minecraft/world/level/levelgen/structure/StructureStart;
 		ARG 1 pos
 		ARG 2 structureTag

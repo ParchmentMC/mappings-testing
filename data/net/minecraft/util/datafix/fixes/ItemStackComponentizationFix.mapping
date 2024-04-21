@@ -55,9 +55,6 @@ CLASS net/minecraft/util/datafix/fixes/ItemStackComponentizationFix
 	METHOD fixItemStack (Lnet/minecraft/util/datafix/fixes/ItemStackComponentizationFix$ItemStackData;Lcom/mojang/serialization/Dynamic;)V
 		ARG 0 itemStackData
 		ARG 1 tag
-	METHOD fixLodestoneTarget (Lnet/minecraft/util/datafix/fixes/ItemStackComponentizationFix$ItemStackData;Lcom/mojang/serialization/Dynamic;)V
-		ARG 0 itemStackData
-		ARG 1 tag
 	METHOD fixLodestoneTracker (Lnet/minecraft/util/datafix/fixes/ItemStackComponentizationFix$ItemStackData;Lcom/mojang/serialization/Dynamic;)V
 		ARG 0 itemStackData
 		ARG 1 tag

@@ -1,11 +1,4 @@
 CLASS net/minecraft/world/level/levelgen/structure/structures/ShipwreckPieces
-	METHOD addPieces (Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplateManager;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Rotation;Lnet/minecraft/world/level/levelgen/structure/StructurePieceAccessor;Lnet/minecraft/util/RandomSource;Z)V
-		ARG 0 structureTemplateManager
-		ARG 1 pos
-		ARG 2 rotation
-		ARG 3 pieces
-		ARG 4 random
-		ARG 5 isBeached
 	METHOD addRandomPiece (Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplateManager;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Rotation;Lnet/minecraft/world/level/levelgen/structure/StructurePieceAccessor;Lnet/minecraft/util/RandomSource;Z)Lnet/minecraft/world/level/levelgen/structure/structures/ShipwreckPieces$ShipwreckPiece;
 		ARG 0 structureTemplateManager
 		ARG 1 pos

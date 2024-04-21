@@ -34,18 +34,10 @@ CLASS net/minecraft/world/level/block/entity/trialspawner/TrialSpawnerData
 		ARG 1 level
 		ARG 2 delay
 		ARG 3 targetCooldownLength
-	METHOD isReadyToEjectItems (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawnerConfig;F)Z
-		ARG 1 level
-		ARG 2 config
-		ARG 3 timeBetweenEjections
 	METHOD isReadyToOpenShutter (Lnet/minecraft/server/level/ServerLevel;FI)Z
 		ARG 1 level
 		ARG 2 delay
 		ARG 3 targetCooldownLength
-	METHOD isReadyToOpenShutter (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawnerConfig;F)Z
-		ARG 1 level
-		ARG 2 config
-		ARG 3 delay
 	METHOD isReadyToSpawnNextMob (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawnerConfig;I)Z
 		ARG 1 level
 		ARG 2 config
@@ -62,22 +54,9 @@ CLASS net/minecraft/world/level/block/entity/trialspawner/TrialSpawnerData
 		ARG 1 spawner
 		ARG 2 random
 		ARG 3 entityType
-	METHOD setSpawnPotentialsFromConfig (Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawnerConfig;)V
-		ARG 1 config
 	METHOD transformBadOmenIntoTrialOmen (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/effect/MobEffectInstance;)V
 		ARG 1 player
 		ARG 2 effectInstance
-	METHOD tryDetectPlayers (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/entity/trialspawner/PlayerDetector;I)V
-		ARG 1 level
-		ARG 2 pos
-		ARG 3 platerDetector
-		ARG 4 players
-	METHOD tryDetectPlayers (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/entity/trialspawner/PlayerDetector;Lnet/minecraft/world/level/block/entity/trialspawner/PlayerDetector$EntitySelector;I)V
-		ARG 1 level
-		ARG 2 pos
-		ARG 3 playerDetector
-		ARG 4 entitySelector
-		ARG 5 maxDistance
 	METHOD tryDetectPlayers (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawner;)V
 		ARG 1 level
 		ARG 2 pos

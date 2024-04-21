@@ -1,8 +1,4 @@
 CLASS net/minecraft/network/protocol/game/ClientboundLevelChunkPacketData
-	METHOD <init> (Lnet/minecraft/network/FriendlyByteBuf;II)V
-		ARG 1 heightmaps
-		ARG 2 chunkX
-		ARG 3 chunkZ
 	METHOD <init> (Lnet/minecraft/network/RegistryFriendlyByteBuf;II)V
 		ARG 1 buffer
 		ARG 2 x
@@ -21,8 +17,6 @@ CLASS net/minecraft/network/protocol/game/ClientboundLevelChunkPacketData
 	METHOD getBlockEntitiesTagsConsumer (II)Ljava/util/function/Consumer;
 		ARG 1 chunkX
 		ARG 2 chunkZ
-	METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
-		ARG 1 buffer
 	METHOD write (Lnet/minecraft/network/RegistryFriendlyByteBuf;)V
 		ARG 1 buffer
 	CLASS BlockEntityInfo
@@ -31,14 +25,10 @@ CLASS net/minecraft/network/protocol/game/ClientboundLevelChunkPacketData
 			ARG 2 y
 			ARG 3 type
 			ARG 4 tag
-		METHOD <init> (Lnet/minecraft/network/FriendlyByteBuf;)V
-			ARG 1 buffer
 		METHOD <init> (Lnet/minecraft/network/RegistryFriendlyByteBuf;)V
 			ARG 1 buffer
 		METHOD create (Lnet/minecraft/world/level/block/entity/BlockEntity;)Lnet/minecraft/network/protocol/game/ClientboundLevelChunkPacketData$BlockEntityInfo;
 			ARG 0 blockEntity
-		METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
-			ARG 1 buffer
 		METHOD write (Lnet/minecraft/network/RegistryFriendlyByteBuf;)V
 			ARG 1 buffer
 	CLASS BlockEntityTagOutput

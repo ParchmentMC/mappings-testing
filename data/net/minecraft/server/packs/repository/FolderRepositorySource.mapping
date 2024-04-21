@@ -10,17 +10,8 @@ CLASS net/minecraft/server/packs/repository/FolderRepositorySource
 		ARG 0 folder
 		ARG 1 validator
 		ARG 2 output
-	METHOD discoverPacks (Ljava/nio/file/Path;Lnet/minecraft/world/level/validation/DirectoryValidator;ZLjava/util/function/BiConsumer;)V
-		ARG 0 folder
-		ARG 1 validator
-		ARG 2 isBuiltin
-		ARG 3 output
 	METHOD lambda$loadPacks$0 (Ljava/util/function/Consumer;Ljava/nio/file/Path;Lnet/minecraft/server/packs/repository/Pack$ResourcesSupplier;)V
 		ARG 2 path
 		ARG 3 resources
 	METHOD nameFromPath (Ljava/nio/file/Path;)Ljava/lang/String;
 		ARG 0 path
-	CLASS FolderPackDetector
-		METHOD <init> (Lnet/minecraft/world/level/validation/DirectoryValidator;Z)V
-			ARG 1 validator
-			ARG 2 isBuiltin

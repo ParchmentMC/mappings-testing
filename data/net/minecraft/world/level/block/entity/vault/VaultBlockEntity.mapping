@@ -2,23 +2,13 @@ CLASS net/minecraft/world/level/block/entity/vault/VaultBlockEntity
 	METHOD <init> (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 pos
 		ARG 2 state
-	METHOD encode (Lcom/mojang/serialization/Codec;Ljava/lang/Object;)Lnet/minecraft/nbt/Tag;
-		ARG 0 codec
-		ARG 1 value
 	METHOD encode (Lcom/mojang/serialization/Codec;Ljava/lang/Object;Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/nbt/Tag;
 		ARG 0 codec
 		ARG 1 value
 		ARG 2 levelRegistry
-	METHOD lambda$load$1 (Lnet/minecraft/world/level/block/entity/vault/VaultConfig;)V
-		ARG 1 config
 	METHOD setConfig (Lnet/minecraft/world/level/block/entity/vault/VaultConfig;)V
 		ARG 1 config
 	CLASS Client
-		METHOD emitActivationParticles (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/entity/vault/VaultSharedData;)V
-			ARG 0 level
-			ARG 1 pos
-			ARG 2 state
-			ARG 3 sharedData
 		METHOD emitActivationParticles (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/entity/vault/VaultSharedData;Lnet/minecraft/core/particles/ParticleOptions;)V
 			ARG 0 level
 			ARG 1 pos
@@ -34,17 +24,10 @@ CLASS net/minecraft/world/level/block/entity/vault/VaultBlockEntity
 			ARG 0 level
 			ARG 1 pos
 			ARG 2 player
-		METHOD emitDeactivationParticles (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)V
-			ARG 0 level
-			ARG 1 pos
 		METHOD emitDeactivationParticles (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/particles/ParticleOptions;)V
 			ARG 0 level
 			ARG 1 pos
 			ARG 2 particle
-		METHOD emitIdleParticles (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/entity/vault/VaultSharedData;)V
-			ARG 0 level
-			ARG 1 pos
-			ARG 2 sharedData
 		METHOD emitIdleParticles (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/entity/vault/VaultSharedData;Lnet/minecraft/core/particles/ParticleOptions;)V
 			ARG 0 level
 			ARG 1 pos
@@ -86,10 +69,6 @@ CLASS net/minecraft/world/level/block/entity/vault/VaultBlockEntity
 			ARG 3 sharedData
 			ARG 4 pos
 		METHOD getRandomDisplayItemFromLootTable (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/world/item/ItemStack;
-			ARG 0 level
-			ARG 1 pos
-			ARG 2 lootTable
-		METHOD getRandomDisplayItemFromLootTable (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/world/item/ItemStack;
 			ARG 0 level
 			ARG 1 pos
 			ARG 2 lootTable

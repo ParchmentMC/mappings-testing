@@ -7,10 +7,6 @@ CLASS net/minecraft/data/models/ItemModelGenerators
 		ARG 1 modelLocation
 		ARG 2 modelGetter
 		ARG 3 armorMaterial
-	METHOD generateBaseArmorTrimTemplate (Lnet/minecraft/resources/ResourceLocation;Ljava/util/Map;Lnet/minecraft/world/item/ArmorMaterial;)Lcom/google/gson/JsonObject;
-		ARG 1 modelLocation
-		ARG 2 modelGetter
-		ARG 3 armorMaterial
 	METHOD generateClockItem (Lnet/minecraft/world/item/Item;)V
 		ARG 1 item
 	METHOD generateCompassItem (Lnet/minecraft/world/item/Item;)V
@@ -42,6 +38,4 @@ CLASS net/minecraft/data/models/ItemModelGenerators
 		ARG 2 trimId
 	CLASS TrimModelData
 		METHOD name (Lnet/minecraft/core/Holder;)Ljava/lang/String;
-			ARG 1 armorMaterial
-		METHOD name (Lnet/minecraft/world/item/ArmorMaterial;)Ljava/lang/String;
 			ARG 1 armorMaterial

@@ -18,10 +18,6 @@ CLASS net/minecraft/world/level/levelgen/structure/StructureCheck
 		ARG 2 structure
 		ARG 3 placement
 		ARG 4 skipKnownStructures
-	METHOD checkStart (Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/world/level/levelgen/structure/Structure;Z)Lnet/minecraft/world/level/levelgen/structure/StructureCheckResult;
-		ARG 1 chunkPos
-		ARG 2 structure
-		ARG 3 skipKnownStructures
 	METHOD checkStructureInfo (Lit/unimi/dsi/fastutil/objects/Object2IntMap;Lnet/minecraft/world/level/levelgen/structure/Structure;Z)Lnet/minecraft/world/level/levelgen/structure/StructureCheckResult;
 		ARG 1 structureChunks
 		ARG 2 structure

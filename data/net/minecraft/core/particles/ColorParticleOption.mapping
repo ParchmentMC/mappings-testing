@@ -2,10 +2,6 @@ CLASS net/minecraft/core/particles/ColorParticleOption
 	METHOD <init> (Lnet/minecraft/core/particles/ParticleType;I)V
 		ARG 1 type
 		ARG 2 color
-	METHOD as32BitChannel (F)I
-		ARG 0 value
-	METHOD codec (Lnet/minecraft/core/particles/ParticleType;)Lcom/mojang/serialization/Codec;
-		ARG 0 type
 	METHOD codec (Lnet/minecraft/core/particles/ParticleType;)Lcom/mojang/serialization/MapCodec;
 		ARG 0 particleType
 	METHOD create (Lnet/minecraft/core/particles/ParticleType;FFF)Lnet/minecraft/core/particles/ColorParticleOption;

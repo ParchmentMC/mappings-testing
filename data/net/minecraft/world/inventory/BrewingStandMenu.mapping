@@ -15,8 +15,6 @@ CLASS net/minecraft/world/inventory/BrewingStandMenu
 		COMMENT Determines whether supplied player can use this container
 		ARG 1 player
 	CLASS FuelSlot
-		METHOD getMaxStackSize ()I
-			COMMENT Returns the maximum stack size for a given slot (usually the same as getInventoryStackLimit(), but 1 in the case of armor slots)
 		METHOD mayPlace (Lnet/minecraft/world/item/ItemStack;)Z
 			COMMENT Check if the stack is allowed to be placed in this slot, used for armor slots as well as furnace fuel.
 			ARG 1 stack
@@ -39,8 +37,6 @@ CLASS net/minecraft/world/inventory/BrewingStandMenu
 			ARG 3 slot
 			ARG 4 x
 			ARG 5 y
-		METHOD getMaxStackSize ()I
-			COMMENT Returns the maximum stack size for a given slot (usually the same as getInventoryStackLimit(), but 1 in the case of armor slots)
 		METHOD mayPlace (Lnet/minecraft/world/item/ItemStack;)Z
 			COMMENT Check if the stack is allowed to be placed in this slot, used for armor slots as well as furnace fuel.
 			ARG 1 stack

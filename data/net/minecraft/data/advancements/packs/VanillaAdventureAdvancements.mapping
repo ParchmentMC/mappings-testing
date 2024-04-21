@@ -1,7 +1,4 @@
 CLASS net/minecraft/data/advancements/packs/VanillaAdventureAdvancements
-	METHOD addBiomes (Lnet/minecraft/advancements/Advancement$Builder;Ljava/util/List;)Lnet/minecraft/advancements/Advancement$Builder;
-		ARG 0 builder
-		ARG 1 biomes
 	METHOD addBiomes (Lnet/minecraft/advancements/Advancement$Builder;Lnet/minecraft/core/HolderLookup$Provider;Ljava/util/List;)Lnet/minecraft/advancements/Advancement$Builder;
 		ARG 0 builder
 		ARG 1 levelRegistry
@@ -11,10 +8,6 @@ CLASS net/minecraft/data/advancements/packs/VanillaAdventureAdvancements
 		ARG 1 mobs
 	METHOD craftingANewLook (Lnet/minecraft/advancements/Advancement$Builder;)Lnet/minecraft/advancements/Advancement$Builder;
 		ARG 0 builder
-	METHOD createAdventuringTime (Ljava/util/function/Consumer;Lnet/minecraft/advancements/AdvancementHolder;Lnet/minecraft/world/level/biome/MultiNoiseBiomeSourceParameterList$Preset;)V
-		ARG 0 consumer
-		ARG 1 advancement
-		ARG 2 preset
 	METHOD createAdventuringTime (Lnet/minecraft/core/HolderLookup$Provider;Ljava/util/function/Consumer;Lnet/minecraft/advancements/AdvancementHolder;Lnet/minecraft/world/level/biome/MultiNoiseBiomeSourceParameterList$Preset;)V
 		ARG 0 levelRegistry
 		ARG 1 writer

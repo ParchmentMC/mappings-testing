@@ -2,9 +2,6 @@ CLASS net/minecraft/client/gui/font/providers/FreeTypeUtil
 	METHOD assertError (ILjava/lang/String;)V
 		ARG 0 errorId
 		ARG 1 action
-	METHOD checkError (ILjava/lang/String;)V
-		ARG 0 errorId
-		ARG 1 action
 	METHOD checkError (ILjava/lang/String;)Z
 		ARG 0 errorId
 		ARG 1 action

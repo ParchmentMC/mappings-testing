@@ -2,8 +2,6 @@ CLASS net/minecraft/world/level/block/entity/SculkSensorBlockEntity
 	METHOD <init> (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 pos
 		ARG 2 blockState
-	METHOD lambda$load$0 (Lnet/minecraft/world/level/gameevent/vibrations/VibrationSystem$Data;)V
-		ARG 1 vibrationData
 	METHOD lambda$saveAdditional$1 (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/nbt/Tag;)V
 		ARG 1 vibrationDataTag
 	METHOD setLastVibrationFrequency (I)V

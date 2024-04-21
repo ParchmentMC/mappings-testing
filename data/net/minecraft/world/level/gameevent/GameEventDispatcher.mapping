@@ -7,7 +7,3 @@ CLASS net/minecraft/world/level/gameevent/GameEventDispatcher
 		ARG 1 gameEvent
 		ARG 2 pos
 		ARG 3 context
-	METHOD post (Lnet/minecraft/world/level/gameevent/GameEvent;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/level/gameevent/GameEvent$Context;)V
-		ARG 1 event
-		ARG 2 pos
-		ARG 3 context

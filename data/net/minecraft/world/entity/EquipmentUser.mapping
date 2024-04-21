@@ -8,13 +8,6 @@ CLASS net/minecraft/world/entity/EquipmentUser
 		ARG 1 equipmentLootTable
 		ARG 2 params
 		ARG 3 slotDropChances
-	METHOD equip (Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/world/level/storage/loot/LootParams;)V
-		ARG 1 lootTable
-		ARG 2 parma
-	METHOD equip (Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/world/level/storage/loot/LootParams;J)V
-		ARG 1 lootTable
-		ARG 2 params
-		ARG 3 seed
 	METHOD equip (Lnet/minecraft/world/entity/EquipmentTable;Lnet/minecraft/world/level/storage/loot/LootParams;)V
 		ARG 1 equipmentTable
 		ARG 2 params

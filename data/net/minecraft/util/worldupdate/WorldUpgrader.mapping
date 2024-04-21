@@ -1,15 +1,4 @@
 CLASS net/minecraft/util/worldupdate/WorldUpgrader
-	METHOD <init> (Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;Lcom/mojang/datafixers/DataFixer;Lnet/minecraft/core/Registry;Z)V
-		ARG 1 levelStoarge
-		ARG 2 dataFixer
-		ARG 3 dimensions
-		ARG 4 eraseCache
-	METHOD <init> (Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;Lcom/mojang/datafixers/DataFixer;Lnet/minecraft/core/Registry;ZZ)V
-		ARG 1 levelStorage
-		ARG 2 dataFixer
-		ARG 3 dimensions
-		ARG 4 eraseCache
-		ARG 5 recreateRegionFiles
 	METHOD <init> (Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;Lcom/mojang/datafixers/DataFixer;Lnet/minecraft/core/RegistryAccess;ZZ)V
 		ARG 1 levelStorage
 		ARG 2 dataFixer
@@ -17,8 +6,6 @@ CLASS net/minecraft/util/worldupdate/WorldUpgrader
 		ARG 4 eraseCache
 		ARG 5 recreateRegionFiles
 	METHOD dimensionProgress (Lnet/minecraft/resources/ResourceKey;)F
-		ARG 1 level
-	METHOD getAllChunkPos (Lnet/minecraft/resources/ResourceKey;)Ljava/util/List;
 		ARG 1 level
 	METHOD resolveRecreateDirectory (Ljava/nio/file/Path;)Ljava/nio/file/Path;
 		ARG 0 path
@@ -29,29 +16,12 @@ CLASS net/minecraft/util/worldupdate/WorldUpgrader
 			ARG 4 folderName
 			ARG 5 upgradingStatus
 			ARG 6 finishedStatus
-		METHOD <init> (Lnet/minecraft/util/worldupdate/WorldUpgrader;Lnet/minecraft/util/datafix/DataFixTypes;Ljava/lang/String;Lnet/minecraft/network/chat/MutableComponent;Lnet/minecraft/network/chat/MutableComponent;)V
-			ARG 2 dataFixType
-			ARG 3 folderName
-			ARG 4 upgradingStatus
-			ARG 5 finishedStatus
-		METHOD createStorage (Ljava/lang/String;Ljava/nio/file/Path;Ljava/nio/file/Path;)Ljava/lang/AutoCloseable;
-			ARG 1 folderName
-			ARG 2 dimensionFolder
-			ARG 3 regionFolder
 		METHOD createStorage (Lnet/minecraft/world/level/chunk/storage/RegionStorageInfo;Ljava/nio/file/Path;)Ljava/lang/AutoCloseable;
 			ARG 1 regionStorageInfo
 			ARG 2 path
-		METHOD getAllChunkPositions (Lnet/minecraft/resources/ResourceKey;Ljava/lang/String;)Ljava/util/List;
-			ARG 1 dimension
-			ARG 2 folderName
 		METHOD getAllChunkPositions (Lnet/minecraft/world/level/chunk/storage/RegionStorageInfo;Ljava/nio/file/Path;)Ljava/util/List;
 			ARG 0 regionStorageInfo
 			ARG 1 path
-		METHOD getDimensionsToUpgrade (Ljava/lang/String;)Ljava/util/List;
-			ARG 1 folderName
-		METHOD getFilesToProcess (Ljava/lang/String;Lnet/minecraft/resources/ResourceKey;)Ljava/util/ListIterator;
-			ARG 1 folderName
-			ARG 2 dimension
 		METHOD getFilesToProcess (Lnet/minecraft/world/level/chunk/storage/RegionStorageInfo;Ljava/nio/file/Path;)Ljava/util/ListIterator;
 			ARG 1 regionStorageInfo
 			ARG 2 path

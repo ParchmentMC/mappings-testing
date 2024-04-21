@@ -8,10 +8,6 @@ CLASS net/minecraft/world/inventory/SlotRanges
 		ARG 1 prefix
 		ARG 2 startValue
 		ARG 3 size
-	METHOD addSlotRange (Ljava/util/List;Ljava/lang/String;[I)V
-		ARG 0 list
-		ARG 1 name
-		ARG 2 values
 	METHOD addSlots (Ljava/util/List;Ljava/lang/String;[I)V
 		ARG 0 list
 		ARG 1 name
