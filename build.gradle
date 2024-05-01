@@ -49,9 +49,10 @@ repositories {
         name = 'QuiltMC <333'
         url = 'https://maven.quiltmc.org/repository/release/'
     }
+    // remove when ASM 9.8 is released
     maven {
-        name = "Vineflower snapshots for Enigma"
-        url = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
+        name = 'OW2 Snapshots for Enigma'
+        url = "https://repository.ow2.org/nexus/content/repositories/snapshots/"
     }
     mavenLocal()
 }
@@ -69,7 +70,7 @@ dependencies {
     remapper 'net.minecraftforge:ForgeAutoRenamingTool:1.0.2'
 
     // Enigma, gorgeous interface for editing mappings
-    enigma 'org.quiltmc:enigma-swing:2.2.1'
+    enigma 'org.quiltmc:enigma-swing:2.3.1'
 
     // ParchmentJAM, JAMMER integration for migrating mapping data
     jammer 'org.parchmentmc.jam:jam-parchment:0.1.0'
