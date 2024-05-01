@@ -3,6 +3,9 @@ CLASS net/minecraft/world/item/Items
 		ARG 0 item
 	METHOD registerBlock (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/item/Item;
 		ARG 0 block
+	METHOD registerBlock (Lnet/minecraft/world/level/block/Block;Ljava/util/function/UnaryOperator;)Lnet/minecraft/world/item/Item;
+		ARG 0 block
+		ARG 1 propertiesModifier
 	METHOD registerBlock (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/item/Item;)Lnet/minecraft/world/item/Item;
 		ARG 0 block
 		ARG 1 item

@@ -1,0 +1,5 @@
+CLASS net/minecraft/world/level/storage/loot/functions/FilteredFunction
+	METHOD <init> (Ljava/util/List;Lnet/minecraft/advancements/critereon/ItemPredicate;Lnet/minecraft/world/level/storage/loot/functions/LootItemFunction;)V
+		ARG 1 conditions
+		ARG 2 filter
+		ARG 3 modifier

@@ -1,13 +1,10 @@
 CLASS net/minecraft/world/level/chunk/storage/SectionStorage
-	METHOD <init> (Ljava/nio/file/Path;Ljava/util/function/Function;Ljava/util/function/Function;Lcom/mojang/datafixers/DataFixer;Lnet/minecraft/util/datafix/DataFixTypes;ZLnet/minecraft/core/RegistryAccess;Lnet/minecraft/world/level/LevelHeightAccessor;)V
-		ARG 1 folder
+	METHOD <init> (Lnet/minecraft/world/level/chunk/storage/SimpleRegionStorage;Ljava/util/function/Function;Ljava/util/function/Function;Lnet/minecraft/core/RegistryAccess;Lnet/minecraft/world/level/LevelHeightAccessor;)V
+		ARG 1 simpleRegionStorage
 		ARG 2 codec
 		ARG 3 factory
-		ARG 4 fixerUpper
-		ARG 5 type
-		ARG 6 sync
-		ARG 7 registryAccess
-		ARG 8 levelHeightAccessor
+		ARG 4 registryAccess
+		ARG 5 levelHeightAccessor
 	METHOD flush (Lnet/minecraft/world/level/ChunkPos;)V
 		ARG 1 chunkPos
 	METHOD get (J)Ljava/util/Optional;
@@ -35,10 +32,10 @@ CLASS net/minecraft/world/level/chunk/storage/SectionStorage
 		ARG 1 sectionKey
 	METHOD readColumn (Lnet/minecraft/world/level/ChunkPos;)V
 		ARG 1 chunkPos
-	METHOD readColumn (Lnet/minecraft/world/level/ChunkPos;Lcom/mojang/serialization/DynamicOps;Ljava/lang/Object;)V
+	METHOD readColumn (Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/resources/RegistryOps;Lnet/minecraft/nbt/CompoundTag;)V
 		ARG 1 chunkPos
 		ARG 2 ops
-		ARG 3 value
+		ARG 3 tag
 	METHOD setDirty (J)V
 		ARG 1 sectionPos
 	METHOD tick (Ljava/util/function/BooleanSupplier;)V

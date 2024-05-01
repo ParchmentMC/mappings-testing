@@ -1,0 +1,6 @@
+CLASS net/minecraft/world/item/component/SuspiciousStewEffects
+	METHOD withEffectAdded (Lnet/minecraft/world/item/component/SuspiciousStewEffects$Entry;)Lnet/minecraft/world/item/component/SuspiciousStewEffects;
+		ARG 1 entry
+	CLASS Entry
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance

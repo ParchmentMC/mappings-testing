@@ -3,6 +3,8 @@ CLASS net/minecraft/network/protocol/game/ClientboundChunksBiomesPacket
 		ARG 1 buffer
 	METHOD forChunks (Ljava/util/List;)Lnet/minecraft/network/protocol/game/ClientboundChunksBiomesPacket;
 		ARG 0 chunks
+	METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
+		ARG 1 buffer
 	CLASS ChunkBiomeData
 		METHOD <init> (Lnet/minecraft/network/FriendlyByteBuf;)V
 			ARG 1 buffer

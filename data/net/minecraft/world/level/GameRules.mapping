@@ -105,6 +105,11 @@ CLASS net/minecraft/world/level/GameRules
 			ARG 2 value
 		METHOD create (I)Lnet/minecraft/world/level/GameRules$Type;
 			ARG 0 defaultValue
+		METHOD create (IIILjava/util/function/BiConsumer;)Lnet/minecraft/world/level/GameRules$Type;
+			ARG 0 defaultValue
+			ARG 1 min
+			ARG 2 max
+			ARG 3 changeListener
 		METHOD create (ILjava/util/function/BiConsumer;)Lnet/minecraft/world/level/GameRules$Type;
 			ARG 0 defaultValue
 			ARG 1 changeListener
@@ -112,9 +117,8 @@ CLASS net/minecraft/world/level/GameRules
 			ARG 1 value
 		METHOD lambda$create$0 (ILnet/minecraft/world/level/GameRules$Type;)Lnet/minecraft/world/level/GameRules$IntegerValue;
 			ARG 1 type
-		METHOD lambda$create$1 (Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/world/level/GameRules$IntegerValue;)V
-			ARG 0 key
-			ARG 1 value
+		METHOD lambda$create$2 (ILnet/minecraft/world/level/GameRules$Type;)Lnet/minecraft/world/level/GameRules$IntegerValue;
+			ARG 1 type
 		METHOD safeParse (Ljava/lang/String;)I
 			ARG 0 strValue
 		METHOD set (ILnet/minecraft/server/MinecraftServer;)V

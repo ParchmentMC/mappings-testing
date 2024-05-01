@@ -27,6 +27,8 @@ CLASS net/minecraft/world/level/levelgen/synth/PerlinNoise
 		ARG 0 random
 		ARG 1 firstOctave
 		ARG 2 amplitudes
+	METHOD edgeValue (D)D
+		ARG 1 multiplier
 	METHOD getOctaveNoise (I)Lnet/minecraft/world/level/levelgen/synth/ImprovedNoise;
 		COMMENT @return A single octave of Perlin noise.
 		ARG 1 octave
@@ -47,6 +49,8 @@ CLASS net/minecraft/world/level/levelgen/synth/PerlinNoise
 		ARG 0 amplitude
 	METHOD makeAmplitudes (Lit/unimi/dsi/fastutil/ints/IntSortedSet;)Lcom/mojang/datafixers/util/Pair;
 		ARG 0 octaves
+	METHOD maxBrokenValue (D)D
+		ARG 1 yMultiplier
 	METHOD parityConfigString (Ljava/lang/StringBuilder;)V
 		ARG 1 builder
 	METHOD skipOctave (Lnet/minecraft/util/RandomSource;)V

@@ -2,7 +2,7 @@ CLASS net/minecraft/world/level/storage/loot/predicates/CompositeLootItemConditi
 	METHOD <init> (Ljava/util/List;Ljava/util/function/Predicate;)V
 		ARG 1 terms
 		ARG 2 composedPredicate
-	METHOD createCodec (Ljava/util/function/Function;)Lcom/mojang/serialization/Codec;
+	METHOD createCodec (Ljava/util/function/Function;)Lcom/mojang/serialization/MapCodec;
 		ARG 0 factory
 	METHOD createInlineCodec (Ljava/util/function/Function;)Lcom/mojang/serialization/Codec;
 		ARG 0 factory

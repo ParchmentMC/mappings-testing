@@ -13,6 +13,8 @@ CLASS net/minecraft/world/flag/FeatureFlagSet
 		ARG 1 flags
 	METHOD equals (Ljava/lang/Object;)Z
 		ARG 1 other
+	METHOD intersects (Lnet/minecraft/world/flag/FeatureFlagSet;)Z
+		ARG 1 set
 	METHOD isSubsetOf (Lnet/minecraft/world/flag/FeatureFlagSet;)Z
 		ARG 1 set
 	METHOD join (Lnet/minecraft/world/flag/FeatureFlagSet;)Lnet/minecraft/world/flag/FeatureFlagSet;
@@ -22,3 +24,5 @@ CLASS net/minecraft/world/flag/FeatureFlagSet
 	METHOD of (Lnet/minecraft/world/flag/FeatureFlag;[Lnet/minecraft/world/flag/FeatureFlag;)Lnet/minecraft/world/flag/FeatureFlagSet;
 		ARG 0 flag
 		ARG 1 others
+	METHOD subtract (Lnet/minecraft/world/flag/FeatureFlagSet;)Lnet/minecraft/world/flag/FeatureFlagSet;
+		ARG 1 other

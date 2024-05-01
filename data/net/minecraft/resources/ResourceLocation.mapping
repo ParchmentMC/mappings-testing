@@ -62,6 +62,10 @@ CLASS net/minecraft/resources/ResourceLocation
 		ARG 0 reader
 	METHOD read (Ljava/lang/String;)Lcom/mojang/serialization/DataResult;
 		ARG 0 location
+	METHOD readGreedy (Lcom/mojang/brigadier/StringReader;)Ljava/lang/String;
+		ARG 0 reader
+	METHOD readNonEmpty (Lcom/mojang/brigadier/StringReader;)Lnet/minecraft/resources/ResourceLocation;
+		ARG 0 reader
 	METHOD toLanguageKey (Ljava/lang/String;)Ljava/lang/String;
 		ARG 1 type
 	METHOD toLanguageKey (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;

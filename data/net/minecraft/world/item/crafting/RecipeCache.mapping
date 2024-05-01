@@ -7,7 +7,7 @@ CLASS net/minecraft/world/item/crafting/RecipeCache
 	METHOD get (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/inventory/CraftingContainer;)Ljava/util/Optional;
 		ARG 1 level
 		ARG 2 container
-	METHOD insert (Ljava/util/List;Lnet/minecraft/world/item/crafting/CraftingRecipe;)V
+	METHOD insert (Ljava/util/List;Lnet/minecraft/world/item/crafting/RecipeHolder;)V
 		ARG 1 items
 		ARG 2 recipe
 	METHOD moveEntryToFront (I)V

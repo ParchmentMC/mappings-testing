@@ -1,0 +1,5 @@
+CLASS net/minecraft/util/parsing/packrat/commands/StringReaderTerms
+	METHOD character (C)Lnet/minecraft/util/parsing/packrat/Term;
+		ARG 0 value
+	METHOD word (Ljava/lang/String;)Lnet/minecraft/util/parsing/packrat/Term;
+		ARG 0 value

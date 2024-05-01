@@ -18,10 +18,6 @@ CLASS net/minecraft/server/network/ServerGamePacketListenerImpl
 		ARG 0 value
 	METHOD clampVertical (D)D
 		ARG 0 value
-	METHOD collectSignedArguments (Lnet/minecraft/network/protocol/game/ServerboundChatCommandPacket;Lnet/minecraft/network/chat/SignableCommand;Lnet/minecraft/network/chat/LastSeenMessages;)Ljava/util/Map;
-		ARG 1 packet
-		ARG 2 command
-		ARG 3 lastSeenMessages
 	METHOD containsInvalidValues (DDDFF)Z
 		ARG 0 x
 		ARG 2 y
@@ -35,14 +31,16 @@ CLASS net/minecraft/server/network/ServerGamePacketListenerImpl
 		ARG 1 text
 	METHOD filterTextPacket (Ljava/util/List;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 texts
+	METHOD filterableFromOutgoing (Lnet/minecraft/server/network/FilteredText;)Lnet/minecraft/server/network/Filterable;
+		ARG 1 filteredText
+	METHOD getMaximumFlyingTicks (Lnet/minecraft/world/entity/Entity;)I
+		ARG 1 entity
 	METHOD getSignedMessage (Lnet/minecraft/network/protocol/game/ServerboundChatPacket;Lnet/minecraft/network/chat/LastSeenMessages;)Lnet/minecraft/network/chat/PlayerChatMessage;
 		ARG 1 packet
 		ARG 2 lastSeenMessages
 	METHOD handleAcceptTeleportPacket (Lnet/minecraft/network/protocol/game/ServerboundAcceptTeleportationPacket;)V
 		ARG 1 packet
 	METHOD handleAnimate (Lnet/minecraft/network/protocol/game/ServerboundSwingPacket;)V
-		ARG 1 packet
-	METHOD handleBlockEntityTagQuery (Lnet/minecraft/network/protocol/game/ServerboundBlockEntityTagQuery;)V
 		ARG 1 packet
 	METHOD handleChat (Lnet/minecraft/network/protocol/game/ServerboundChatPacket;)V
 		COMMENT Process chat messages (broadcast back to clients) and commands (executes)
@@ -63,8 +61,6 @@ CLASS net/minecraft/server/network/ServerGamePacketListenerImpl
 		COMMENT This method is only called for manual tab-completion (the {@link net.minecraft.commands.synchronization.SuggestionProviders#ASK_SERVER minecraft:ask_server} suggestion provider).
 		ARG 1 packet
 	METHOD handleEditBook (Lnet/minecraft/network/protocol/game/ServerboundEditBookPacket;)V
-		ARG 1 packet
-	METHOD handleEntityTagQuery (Lnet/minecraft/network/protocol/game/ServerboundEntityTagQuery;)V
 		ARG 1 packet
 	METHOD handleInteract (Lnet/minecraft/network/protocol/game/ServerboundInteractPacket;)V
 		COMMENT Processes left and right clicks on entities
@@ -135,8 +131,6 @@ CLASS net/minecraft/server/network/ServerGamePacketListenerImpl
 		ARG 7 z
 	METHOD lambda$filterTextPacket$0 (Ljava/lang/Object;)Ljava/lang/Object;
 		ARG 1 result
-	METHOD lambda$handleChat$6 (Lnet/minecraft/network/chat/PlayerChatMessage;Lnet/minecraft/network/chat/Component;Lnet/minecraft/server/network/FilteredText;)V
-		ARG 3 text
 	METHOD lambda$handleCustomCommandSuggestions$1 (Lnet/minecraft/network/protocol/game/ServerboundCommandSuggestionPacket;Lcom/mojang/brigadier/suggestion/Suggestions;)V
 		ARG 2 suggestions
 	METHOD lambda$handleEditBook$2 (ILjava/util/List;)V
@@ -147,12 +141,6 @@ CLASS net/minecraft/server/network/ServerGamePacketListenerImpl
 		ARG 2 recipeHolder
 	METHOD lambda$handleSignUpdate$11 (Lnet/minecraft/network/protocol/game/ServerboundSignUpdatePacket;Ljava/util/List;)V
 		ARG 2 texts
-	METHOD lambda$performChatCommand$9 (Lnet/minecraft/commands/CommandSigningContext;Lnet/minecraft/commands/CommandSourceStack;)Lnet/minecraft/commands/CommandSourceStack;
-		ARG 2 source
-	METHOD lambda$signBook$4 (Ljava/lang/String;)Ljava/lang/String;
-		ARG 0 text
-	METHOD lambda$updateBookPages$5 (Ljava/util/function/UnaryOperator;Lnet/minecraft/server/network/FilteredText;)Lnet/minecraft/nbt/StringTag;
-		ARG 1 text
 	METHOD noBlocksAround (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 1 entity
 	METHOD onDisconnect (Lnet/minecraft/network/chat/Component;)V
@@ -160,9 +148,11 @@ CLASS net/minecraft/server/network/ServerGamePacketListenerImpl
 		ARG 1 reason
 	METHOD parseCommand (Ljava/lang/String;)Lcom/mojang/brigadier/ParseResults;
 		ARG 1 command
-	METHOD performChatCommand (Lnet/minecraft/network/protocol/game/ServerboundChatCommandPacket;Lnet/minecraft/network/chat/LastSeenMessages;)V
+	METHOD performSignedChatCommand (Lnet/minecraft/network/protocol/game/ServerboundChatCommandSignedPacket;Lnet/minecraft/network/chat/LastSeenMessages;)V
 		ARG 1 packet
 		ARG 2 lastSeenMessages
+	METHOD performUnsignedChatCommand (Ljava/lang/String;)V
+		ARG 1 command
 	METHOD resetPlayerChatState (Lnet/minecraft/network/chat/RemoteChatSession;)V
 		ARG 1 chatSession
 	METHOD sendDisguisedChatMessage (Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/ChatType$Bound;)V
@@ -189,17 +179,14 @@ CLASS net/minecraft/server/network/ServerGamePacketListenerImpl
 		ARG 7 yaw
 		ARG 8 pitch
 		ARG 9 relativeSet
-	METHOD tryHandleChat (Lnet/minecraft/network/chat/LastSeenMessages$Update;)Ljava/util/Optional;
-		ARG 1 update
+	METHOD tryHandleChat (Ljava/lang/String;Ljava/lang/Runnable;)V
+		ARG 1 message
+		ARG 2 handler
 	METHOD unpackAndApplyLastSeen (Lnet/minecraft/network/chat/LastSeenMessages$Update;)Ljava/util/Optional;
 		ARG 1 update
 	METHOD updateBookContents (Ljava/util/List;I)V
 		ARG 1 pages
 		ARG 2 index
-	METHOD updateBookPages (Ljava/util/List;Ljava/util/function/UnaryOperator;Lnet/minecraft/world/item/ItemStack;)V
-		ARG 1 pages
-		ARG 2 updater
-		ARG 3 book
 	METHOD updateSignText (Lnet/minecraft/network/protocol/game/ServerboundSignUpdatePacket;Ljava/util/List;)V
 		ARG 1 packet
 		ARG 2 filteredText

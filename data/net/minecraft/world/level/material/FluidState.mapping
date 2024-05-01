@@ -1,5 +1,5 @@
 CLASS net/minecraft/world/level/material/FluidState
-	METHOD <init> (Lnet/minecraft/world/level/material/Fluid;Lcom/google/common/collect/ImmutableMap;Lcom/mojang/serialization/MapCodec;)V
+	METHOD <init> (Lnet/minecraft/world/level/material/Fluid;Lit/unimi/dsi/fastutil/objects/Reference2ObjectArrayMap;Lcom/mojang/serialization/MapCodec;)V
 		ARG 1 owner
 		ARG 2 values
 		ARG 3 propertiesCodec

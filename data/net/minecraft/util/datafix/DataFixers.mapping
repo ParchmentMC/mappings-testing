@@ -8,3 +8,5 @@ CLASS net/minecraft/util/datafix/DataFixers
 		ARG 1 newName
 	METHOD createRenamer (Ljava/util/Map;)Ljava/util/function/UnaryOperator;
 		ARG 0 renameMap
+	METHOD createRenamerNoNamespace (Ljava/util/Map;)Ljava/util/function/UnaryOperator;
+		ARG 0 renameMap

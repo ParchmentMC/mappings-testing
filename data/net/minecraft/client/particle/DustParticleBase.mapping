@@ -1,5 +1,5 @@
 CLASS net/minecraft/client/particle/DustParticleBase
-	METHOD <init> (Lnet/minecraft/client/multiplayer/ClientLevel;DDDDDDLnet/minecraft/core/particles/DustParticleOptionsBase;Lnet/minecraft/client/particle/SpriteSet;)V
+	METHOD <init> (Lnet/minecraft/client/multiplayer/ClientLevel;DDDDDDLnet/minecraft/core/particles/ScalableParticleOptionsBase;Lnet/minecraft/client/particle/SpriteSet;)V
 		ARG 1 level
 		ARG 2 x
 		ARG 4 y

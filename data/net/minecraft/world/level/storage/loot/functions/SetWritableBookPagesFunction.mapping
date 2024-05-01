@@ -1,0 +1,7 @@
+CLASS net/minecraft/world/level/storage/loot/functions/SetWritableBookPagesFunction
+	METHOD <init> (Ljava/util/List;Ljava/util/List;Lnet/minecraft/world/level/storage/loot/functions/ListOperation;)V
+		ARG 1 conditions
+		ARG 2 pages
+		ARG 3 pageOperation
+	METHOD apply (Lnet/minecraft/world/item/component/WritableBookContent;)Lnet/minecraft/world/item/component/WritableBookContent;
+		ARG 1 writableBookContent

@@ -1,3 +1,6 @@
 CLASS net/minecraft/client/model/BreezeModel
 	METHOD <init> (Lnet/minecraft/client/model/geom/ModelPart;)V
 		ARG 1 root
+	METHOD createBodyLayer (II)Lnet/minecraft/client/model/geom/builders/LayerDefinition;
+		ARG 0 width
+		ARG 1 height

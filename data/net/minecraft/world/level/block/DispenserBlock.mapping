@@ -11,10 +11,15 @@ CLASS net/minecraft/world/level/block/DispenserBlock
 		ARG 1 blockState
 		ARG 2 level
 		ARG 3 pos
-	METHOD getDispenseMethod (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/core/dispenser/DispenseItemBehavior;
-		ARG 1 stack
+	METHOD getDispenseMethod (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/core/dispenser/DispenseItemBehavior;
+		ARG 1 level
+		ARG 2 item
 	METHOD getDispensePosition (Lnet/minecraft/core/dispenser/BlockSource;)Lnet/minecraft/core/Position;
 		ARG 0 blockSource
+	METHOD getDispensePosition (Lnet/minecraft/core/dispenser/BlockSource;DLnet/minecraft/world/phys/Vec3;)Lnet/minecraft/core/Position;
+		ARG 0 blockSource
+		ARG 1 multiplier
+		ARG 3 offset
 	METHOD getRenderShape (Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/RenderShape;
 		ARG 1 state
 	METHOD getStateForPlacement (Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;
@@ -42,19 +47,8 @@ CLASS net/minecraft/world/level/block/DispenserBlock
 	METHOD registerBehavior (Lnet/minecraft/world/level/ItemLike;Lnet/minecraft/core/dispenser/DispenseItemBehavior;)V
 		ARG 0 item
 		ARG 1 behavior
+	METHOD registerProjectileBehavior (Lnet/minecraft/world/level/ItemLike;)V
+		ARG 0 item
 	METHOD rotate (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/block/state/BlockState;
 		ARG 1 state
 		ARG 2 rotation
-	METHOD setPlacedBy (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;)V
-		ARG 1 level
-		ARG 2 pos
-		ARG 3 state
-		ARG 4 placer
-		ARG 5 stack
-	METHOD use (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;
-		ARG 1 state
-		ARG 2 level
-		ARG 3 pos
-		ARG 4 player
-		ARG 5 hand
-		ARG 6 hit

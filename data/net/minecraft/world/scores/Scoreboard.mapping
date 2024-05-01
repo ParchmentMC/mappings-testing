@@ -48,8 +48,9 @@ CLASS net/minecraft/world/scores/Scoreboard
 		ARG 1 objective
 	METHOD listPlayerScores (Lnet/minecraft/world/scores/ScoreHolder;)Lit/unimi/dsi/fastutil/objects/Object2IntMap;
 		ARG 1 scoreHolder
-	METHOD loadPlayerScores (Lnet/minecraft/nbt/ListTag;)V
+	METHOD loadPlayerScores (Lnet/minecraft/nbt/ListTag;Lnet/minecraft/core/HolderLookup$Provider;)V
 		ARG 1 tag
+		ARG 2 levelRegistry
 	METHOD onObjectiveAdded (Lnet/minecraft/world/scores/Objective;)V
 		ARG 1 objective
 	METHOD onObjectiveChanged (Lnet/minecraft/world/scores/Objective;)V
@@ -90,6 +91,8 @@ CLASS net/minecraft/world/scores/Scoreboard
 	METHOD resetSinglePlayerScore (Lnet/minecraft/world/scores/ScoreHolder;Lnet/minecraft/world/scores/Objective;)V
 		ARG 1 scoreHolder
 		ARG 2 objective
+	METHOD savePlayerScores (Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/nbt/ListTag;
+		ARG 1 levelRegistry
 	METHOD setDisplayObjective (Lnet/minecraft/world/scores/DisplaySlot;Lnet/minecraft/world/scores/Objective;)V
 		ARG 1 slot
 		ARG 2 objective

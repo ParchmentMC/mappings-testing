@@ -38,6 +38,8 @@ CLASS net/minecraft/client/OptionInstance
 		ARG 0 key
 		ARG 1 initialValue
 		ARG 2 onValueUpdate
+	METHOD createButton (Lnet/minecraft/client/Options;)Lnet/minecraft/client/gui/components/AbstractWidget;
+		ARG 1 options
 	METHOD createButton (Lnet/minecraft/client/Options;III)Lnet/minecraft/client/gui/components/AbstractWidget;
 		ARG 1 options
 		ARG 2 x
@@ -69,6 +71,10 @@ CLASS net/minecraft/client/OptionInstance
 		ARG 1 value
 	METHOD set (Ljava/lang/Object;)V
 		ARG 1 value
+	CLASS IntRange
+		METHOD <init> (II)V
+			ARG 1 minInclusive
+			ARG 2 maxInclusive
 	CLASS ValueSet
 		METHOD createButton (Lnet/minecraft/client/OptionInstance$TooltipSupplier;Lnet/minecraft/client/Options;IIILjava/util/function/Consumer;)Ljava/util/function/Function;
 			ARG 1 tooltipSupplier
@@ -79,6 +85,10 @@ CLASS net/minecraft/client/OptionInstance
 			ARG 6 onValueChanged
 		METHOD validateValue (Ljava/lang/Object;)Ljava/util/Optional;
 			ARG 1 value
+	CLASS UnitDouble
+		METHOD xmap (Ljava/util/function/DoubleFunction;Ljava/util/function/ToDoubleFunction;)Lnet/minecraft/client/OptionInstance$SliderableValueSet;
+			ARG 1 encoder
+			ARG 2 decoder
 	CLASS IntRangeBase
 		METHOD xmap (Ljava/util/function/IntFunction;Ljava/util/function/ToIntFunction;)Lnet/minecraft/client/OptionInstance$SliderableValueSet;
 			ARG 1 to
@@ -106,7 +116,7 @@ CLASS net/minecraft/client/OptionInstance
 		METHOD lambda$codec$1 (Ljava/lang/Integer;)Lcom/mojang/serialization/DataResult;
 			ARG 1 integer
 	CLASS OptionInstanceSliderButton
-		METHOD <init> (Lnet/minecraft/client/Options;IIIILnet/minecraft/client/OptionInstance;Lnet/minecraft/client/OptionInstance$SliderableValueSet;Lnet/minecraft/client/OptionInstance$TooltipSupplier;Ljava/util/function/Consumer;)V
+		METHOD <init> (Lnet/minecraft/client/Options;IIIILnet/minecraft/client/OptionInstance;Lnet/minecraft/client/OptionInstance$SliderableValueSet;Lnet/minecraft/client/OptionInstance$TooltipSupplier;Ljava/util/function/Consumer;Z)V
 			ARG 1 options
 			ARG 2 x
 			ARG 3 y
@@ -116,3 +126,4 @@ CLASS net/minecraft/client/OptionInstance
 			ARG 7 values
 			ARG 8 tooltipSupplier
 			ARG 9 onValueChanged
+			ARG 10 applyValueImmediately

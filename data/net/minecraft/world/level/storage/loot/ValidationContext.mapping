@@ -1,22 +1,22 @@
 CLASS net/minecraft/world/level/storage/loot/ValidationContext
 	COMMENT Context for validating loot tables. Loot tables are validated recursively by checking that all functions, conditions, etc. (implementing {@link LootContextUser}) are valid according to their LootTable's {@link LootContextParamSet}.
-	METHOD <init> (Lnet/minecraft/util/ProblemReporter;Lnet/minecraft/world/level/storage/loot/parameters/LootContextParamSet;Lnet/minecraft/world/level/storage/loot/LootDataResolver;)V
+	METHOD <init> (Lnet/minecraft/util/ProblemReporter;Lnet/minecraft/world/level/storage/loot/parameters/LootContextParamSet;Lnet/minecraft/core/HolderGetter$Provider;)V
 		ARG 1 reporter
 		ARG 2 params
 		ARG 3 resolver
-	METHOD <init> (Lnet/minecraft/util/ProblemReporter;Lnet/minecraft/world/level/storage/loot/parameters/LootContextParamSet;Lnet/minecraft/world/level/storage/loot/LootDataResolver;Ljava/util/Set;)V
+	METHOD <init> (Lnet/minecraft/util/ProblemReporter;Lnet/minecraft/world/level/storage/loot/parameters/LootContextParamSet;Lnet/minecraft/core/HolderGetter$Provider;Ljava/util/Set;)V
 		ARG 1 reporter
 		ARG 2 params
 		ARG 3 resolver
 		ARG 4 visitedElements
-	METHOD enterElement (Ljava/lang/String;Lnet/minecraft/world/level/storage/loot/LootDataId;)Lnet/minecraft/world/level/storage/loot/ValidationContext;
-		ARG 1 childName
-		ARG 2 element
+	METHOD enterElement (Ljava/lang/String;Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/world/level/storage/loot/ValidationContext;
+		ARG 1 name
+		ARG 2 key
 	METHOD forChild (Ljava/lang/String;)Lnet/minecraft/world/level/storage/loot/ValidationContext;
 		COMMENT Create a new ValidationContext with {@code childName} being added to the context.
 		ARG 1 childName
-	METHOD hasVisitedElement (Lnet/minecraft/world/level/storage/loot/LootDataId;)Z
-		ARG 1 element
+	METHOD hasVisitedElement (Lnet/minecraft/resources/ResourceKey;)Z
+		ARG 1 key
 	METHOD reportProblem (Ljava/lang/String;)V
 		COMMENT Report a problem to this ValidationContext.
 		ARG 1 problem

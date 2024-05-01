@@ -1,6 +1,6 @@
 CLASS net/minecraft/client/gui/screens/inventory/tooltip/ClientBundleTooltip
-	METHOD <init> (Lnet/minecraft/world/inventory/tooltip/BundleTooltip;)V
-		ARG 1 bundleTooltip
+	METHOD <init> (Lnet/minecraft/world/item/component/BundleContents;)V
+		ARG 1 contents
 	METHOD blit (Lnet/minecraft/client/gui/GuiGraphics;IILnet/minecraft/client/gui/screens/inventory/tooltip/ClientBundleTooltip$Texture;)V
 		ARG 1 guiGraphics
 		ARG 2 x

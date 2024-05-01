@@ -1,8 +1,9 @@
 CLASS com/mojang/realmsclient/gui/screens/RealmsSelectFileToUploadScreen
-	METHOD <init> (JILcom/mojang/realmsclient/gui/screens/RealmsResetWorldScreen;)V
-		ARG 1 worldId
-		ARG 3 slotId
-		ARG 4 lastScreen
+	METHOD <init> (Lcom/mojang/realmsclient/util/task/RealmCreationTask;JILcom/mojang/realmsclient/gui/screens/RealmsResetWorldScreen;)V
+		ARG 1 realmCreationTask
+		ARG 2 realmId
+		ARG 4 slotId
+		ARG 5 lastScreen
 	METHOD formatLastPlayed (Lnet/minecraft/world/level/storage/LevelSummary;)Ljava/lang/String;
 		ARG 0 levelSummary
 	METHOD gameModeName (Lnet/minecraft/world/level/storage/LevelSummary;)Lnet/minecraft/network/chat/Component;

@@ -23,14 +23,12 @@ CLASS net/minecraft/world/entity/AreaEffectCloud
 		ARG 1 duration
 	METHOD setDurationOnUse (I)V
 		ARG 1 durationOnUse
-	METHOD setFixedColor (I)V
-		ARG 1 color
 	METHOD setOwner (Lnet/minecraft/world/entity/LivingEntity;)V
 		ARG 1 owner
 	METHOD setParticle (Lnet/minecraft/core/particles/ParticleOptions;)V
 		ARG 1 particleOption
-	METHOD setPotion (Lnet/minecraft/world/item/alchemy/Potion;)V
-		ARG 1 potion
+	METHOD setPotionContents (Lnet/minecraft/world/item/alchemy/PotionContents;)V
+		ARG 1 potionContents
 	METHOD setRadius (F)V
 		ARG 1 radius
 	METHOD setRadiusOnUse (F)V

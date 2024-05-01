@@ -1,38 +1,49 @@
 CLASS net/minecraft/world/item/alchemy/PotionBrewing
-	METHOD addContainer (Lnet/minecraft/world/item/Item;)V
-		ARG 0 container
-	METHOD addContainerRecipe (Lnet/minecraft/world/item/Item;Lnet/minecraft/world/item/Item;Lnet/minecraft/world/item/Item;)V
-		ARG 0 from
-		ARG 1 ingredient
-		ARG 2 to
-	METHOD addMix (Lnet/minecraft/world/item/alchemy/Potion;Lnet/minecraft/world/item/Item;Lnet/minecraft/world/item/alchemy/Potion;)V
-		ARG 0 potionEntry
-		ARG 1 potionIngredient
-		ARG 2 potionResult
+	METHOD <init> (Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
+		ARG 1 containers
+		ARG 2 potionMixes
+		ARG 3 containerMixes
+	METHOD addVanillaMixes (Lnet/minecraft/world/item/alchemy/PotionBrewing$Builder;)V
+		ARG 0 builder
+	METHOD bootstrap (Lnet/minecraft/world/flag/FeatureFlagSet;)Lnet/minecraft/world/item/alchemy/PotionBrewing;
+		ARG 0 enabledFeatures
 	METHOD hasContainerMix (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Z
-		ARG 0 input
 		ARG 1 reagent
+		ARG 2 potionItem
 	METHOD hasMix (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Z
-		ARG 0 input
 		ARG 1 reagent
+		ARG 2 potionItem
 	METHOD hasPotionMix (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Z
-		ARG 0 input
 		ARG 1 reagent
-	METHOD isBrewablePotion (Lnet/minecraft/world/item/alchemy/Potion;)Z
-		ARG 0 potion
-	METHOD isContainerIngredient (Lnet/minecraft/world/item/ItemStack;)Z
-		ARG 0 input
-	METHOD isIngredient (Lnet/minecraft/world/item/ItemStack;)Z
-		ARG 0 input
-	METHOD isPotionIngredient (Lnet/minecraft/world/item/ItemStack;)Z
-		ARG 0 input
-	METHOD lambda$static$0 (Lnet/minecraft/world/item/ItemStack;)Z
-		ARG 0 input
-	METHOD mix (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/ItemStack;
-		ARG 0 reagent
+		ARG 2 potionItem
+	METHOD isBrewablePotion (Lnet/minecraft/core/Holder;)Z
 		ARG 1 potion
-	CLASS Mix
-		METHOD <init> (Ljava/lang/Object;Lnet/minecraft/world/item/crafting/Ingredient;Ljava/lang/Object;)V
-			ARG 1 from
-			ARG 2 ingredient
-			ARG 3 to
+	METHOD isContainer (Lnet/minecraft/world/item/ItemStack;)Z
+		ARG 1 stack
+	METHOD isContainerIngredient (Lnet/minecraft/world/item/ItemStack;)Z
+		ARG 1 stack
+	METHOD isIngredient (Lnet/minecraft/world/item/ItemStack;)Z
+		ARG 1 stack
+	METHOD isPotionIngredient (Lnet/minecraft/world/item/ItemStack;)Z
+		ARG 1 stack
+	METHOD mix (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/ItemStack;
+		ARG 1 potion
+		ARG 2 potionItem
+	CLASS Builder
+		METHOD <init> (Lnet/minecraft/world/flag/FeatureFlagSet;)V
+			ARG 1 enabledFeatures
+		METHOD addContainer (Lnet/minecraft/world/item/Item;)V
+			ARG 1 container
+		METHOD addContainerRecipe (Lnet/minecraft/world/item/Item;Lnet/minecraft/world/item/Item;Lnet/minecraft/world/item/Item;)V
+			ARG 1 input
+			ARG 2 reagent
+			ARG 3 result
+		METHOD addMix (Lnet/minecraft/core/Holder;Lnet/minecraft/world/item/Item;Lnet/minecraft/core/Holder;)V
+			ARG 1 input
+			ARG 2 reagent
+			ARG 3 result
+		METHOD addStartMix (Lnet/minecraft/world/item/Item;Lnet/minecraft/core/Holder;)V
+			ARG 1 reagent
+			ARG 2 result
+		METHOD expectPotion (Lnet/minecraft/world/item/Item;)V
+			ARG 0 item

@@ -1,6 +1,10 @@
 CLASS net/minecraft/commands/ParserUtils
 	METHOD getPos (Lcom/google/gson/stream/JsonReader;)I
 		ARG 0 reader
-	METHOD parseJson (Lcom/mojang/brigadier/StringReader;Lcom/mojang/serialization/Codec;)Ljava/lang/Object;
+	METHOD parseJson (Lnet/minecraft/core/HolderLookup$Provider;Lcom/mojang/brigadier/StringReader;Lcom/mojang/serialization/Codec;)Ljava/lang/Object;
+		ARG 0 registries
+		ARG 1 reader
+		ARG 2 codec
+	METHOD readWhile (Lcom/mojang/brigadier/StringReader;Lnet/minecraft/CharPredicate;)Ljava/lang/String;
 		ARG 0 reader
-		ARG 1 codec
+		ARG 1 predicate

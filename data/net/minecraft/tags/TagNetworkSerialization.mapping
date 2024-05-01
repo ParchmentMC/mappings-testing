@@ -19,11 +19,13 @@ CLASS net/minecraft/tags/TagNetworkSerialization
 		ARG 0 registry
 	CLASS TagOutput
 		METHOD accept (Lnet/minecraft/tags/TagKey;Ljava/util/List;)V
-			ARG 1 tagKey
-			ARG 2 holders
+			ARG 1 key
+			ARG 2 values
 	CLASS NetworkPayload
 		METHOD <init> (Ljava/util/Map;)V
 			ARG 1 tags
+		METHOD applyToRegistry (Lnet/minecraft/core/Registry;)V
+			ARG 1 registry
 		METHOD read (Lnet/minecraft/network/FriendlyByteBuf;)Lnet/minecraft/tags/TagNetworkSerialization$NetworkPayload;
 			ARG 0 buffer
 		METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V

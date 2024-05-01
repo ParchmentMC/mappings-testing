@@ -15,6 +15,10 @@ CLASS net/minecraft/client/multiplayer/ClientPacketListener
 		ARG 3 playerInfo
 	METHOD createEntityFromPacket (Lnet/minecraft/network/protocol/game/ClientboundAddEntityPacket;)Lnet/minecraft/world/entity/Entity;
 		ARG 1 packet
+	METHOD determineLevelLoadingReason (ZLnet/minecraft/resources/ResourceKey;Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/client/gui/screens/ReceivingLevelScreen$Reason;
+		ARG 1 dying
+		ARG 2 spawnDimension
+		ARG 3 currentDimension
 	METHOD enableChunkLight (Lnet/minecraft/world/level/chunk/LevelChunk;II)V
 		ARG 1 chunk
 		ARG 2 x
@@ -219,8 +223,8 @@ CLASS net/minecraft/client/multiplayer/ClientPacketListener
 		ARG 2 recipeHolder
 	METHOD lambda$handleRemoveEntities$1 (I)V
 		ARG 1 entityId
-	METHOD lambda$handleSetEquipment$6 (Lnet/minecraft/world/entity/Entity;Lcom/mojang/datafixers/util/Pair;)V
-		ARG 1 equipmentSlot
+	METHOD lambda$handleSetEquipment$6 (Lnet/minecraft/world/entity/LivingEntity;Lcom/mojang/datafixers/util/Pair;)V
+		ARG 1 slot
 	METHOD lambda$handleSetPlayerTeamPacket$11 (Lnet/minecraft/world/scores/PlayerTeam;Lnet/minecraft/network/protocol/game/ClientboundSetPlayerTeamPacket$Parameters;)V
 		ARG 1 parameters
 	METHOD lambda$sendCommand$14 (Ljava/time/Instant;JLnet/minecraft/network/chat/LastSeenMessagesTracker$Update;Ljava/lang/String;)Lnet/minecraft/network/chat/MessageSignature;
@@ -252,9 +256,10 @@ CLASS net/minecraft/client/multiplayer/ClientPacketListener
 		ARG 1 command
 	METHOD setKeyPair (Lnet/minecraft/world/entity/player/ProfileKeyPair;)V
 		ARG 1 keyPair
-	METHOD startWaitingForNewLevel (Lnet/minecraft/client/player/LocalPlayer;Lnet/minecraft/client/multiplayer/ClientLevel;)V
+	METHOD startWaitingForNewLevel (Lnet/minecraft/client/player/LocalPlayer;Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/client/gui/screens/ReceivingLevelScreen$Reason;)V
 		ARG 1 player
 		ARG 2 level
+		ARG 3 reason
 	METHOD updateLevelChunk (IILnet/minecraft/network/protocol/game/ClientboundLevelChunkPacketData;)V
 		ARG 1 x
 		ARG 2 z

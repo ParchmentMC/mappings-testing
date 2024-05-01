@@ -207,9 +207,7 @@ CLASS net/minecraft/util/Mth
 		ARG 2 end
 			COMMENT End value for the lerp
 	METHOD lerp2 (DDDDDD)D
-		COMMENT
 		ARG 0 delta1
-			COMMENT
 		ARG 2 delta2
 		ARG 4 start1
 		ARG 6 end1
@@ -253,6 +251,9 @@ CLASS net/minecraft/util/Mth
 		ARG 2 inputMax
 		ARG 3 outputMin
 		ARG 4 outputMax
+	METHOD mulAndTruncate (Lorg/apache/commons/lang3/math/Fraction;I)I
+		ARG 0 fraction
+		ARG 1 factor
 	METHOD murmurHash3Mixer (I)I
 		ARG 0 input
 	METHOD nextDouble (Lnet/minecraft/util/RandomSource;DD)D

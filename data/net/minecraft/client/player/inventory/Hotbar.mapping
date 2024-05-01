@@ -1,3 +1,10 @@
 CLASS net/minecraft/client/player/inventory/Hotbar
-	METHOD fromTag (Lnet/minecraft/nbt/ListTag;)V
-		ARG 1 tag
+	METHOD <init> (Ljava/util/List;)V
+		ARG 1 items
+	METHOD isEmpty (Lcom/mojang/serialization/Dynamic;)Z
+		ARG 0 dynamic
+	METHOD load (Lnet/minecraft/core/HolderLookup$Provider;)Ljava/util/List;
+		ARG 1 registries
+	METHOD storeFrom (Lnet/minecraft/world/entity/player/Inventory;Lnet/minecraft/core/RegistryAccess;)V
+		ARG 1 inventory
+		ARG 2 registryAccess

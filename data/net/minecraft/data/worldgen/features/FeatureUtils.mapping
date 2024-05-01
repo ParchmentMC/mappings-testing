@@ -1,13 +1,13 @@
 CLASS net/minecraft/data/worldgen/features/FeatureUtils
-	METHOD bootstrap (Lnet/minecraft/data/worldgen/BootstapContext;)V
+	METHOD bootstrap (Lnet/minecraft/data/worldgen/BootstrapContext;)V
 		ARG 0 context
 	METHOD createKey (Ljava/lang/String;)Lnet/minecraft/resources/ResourceKey;
 		ARG 0 name
-	METHOD register (Lnet/minecraft/data/worldgen/BootstapContext;Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/world/level/levelgen/feature/Feature;)V
+	METHOD register (Lnet/minecraft/data/worldgen/BootstrapContext;Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/world/level/levelgen/feature/Feature;)V
 		ARG 0 context
 		ARG 1 key
 		ARG 2 feature
-	METHOD register (Lnet/minecraft/data/worldgen/BootstapContext;Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/world/level/levelgen/feature/Feature;Lnet/minecraft/world/level/levelgen/feature/configurations/FeatureConfiguration;)V
+	METHOD register (Lnet/minecraft/data/worldgen/BootstrapContext;Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/world/level/levelgen/feature/Feature;Lnet/minecraft/world/level/levelgen/feature/configurations/FeatureConfiguration;)V
 		ARG 0 context
 		ARG 1 key
 		ARG 2 feature

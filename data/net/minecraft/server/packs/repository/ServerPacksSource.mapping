@@ -1,6 +1,9 @@
 CLASS net/minecraft/server/packs/repository/ServerPacksSource
 	METHOD <init> (Lnet/minecraft/world/level/validation/DirectoryValidator;)V
 		ARG 1 validator
+	METHOD createBuiltInPackLocation (Ljava/lang/String;Lnet/minecraft/network/chat/Component;)Lnet/minecraft/server/packs/PackLocationInfo;
+		ARG 0 id
+		ARG 1 title
 	METHOD createPackRepository (Ljava/nio/file/Path;Lnet/minecraft/world/level/validation/DirectoryValidator;)Lnet/minecraft/server/packs/repository/PackRepository;
 		ARG 0 folder
 		ARG 1 validator

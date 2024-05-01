@@ -1,0 +1,11 @@
+CLASS net/minecraft/world/item/component/DyedItemColor
+	METHOD applyDyes (Lnet/minecraft/world/item/ItemStack;Ljava/util/List;)Lnet/minecraft/world/item/ItemStack;
+		ARG 0 stack
+		ARG 1 dyes
+	METHOD getOrDefault (Lnet/minecraft/world/item/ItemStack;I)I
+		ARG 0 stack
+		ARG 1 defaultValue
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
+	METHOD withTooltip (Z)Lnet/minecraft/world/item/component/DyedItemColor;
+		ARG 1 showInTooltip

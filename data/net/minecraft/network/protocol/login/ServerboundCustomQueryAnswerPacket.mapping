@@ -6,3 +6,5 @@ CLASS net/minecraft/network/protocol/login/ServerboundCustomQueryAnswerPacket
 		ARG 1 buffer
 	METHOD readUnknownPayload (Lnet/minecraft/network/FriendlyByteBuf;)Lnet/minecraft/network/protocol/login/custom/CustomQueryAnswerPayload;
 		ARG 0 buffer
+	METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
+		ARG 1 buffer

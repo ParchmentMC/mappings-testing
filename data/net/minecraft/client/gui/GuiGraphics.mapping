@@ -229,6 +229,9 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 12 nineSliceHeight
 	METHOD bufferSource ()Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;
 		COMMENT {@return returns the buffer source for rendering.}
+	METHOD containsPointInScissor (II)Z
+		ARG 1 x
+		ARG 2 y
 	METHOD disableScissor ()V
 		COMMENT Disables scissoring.
 	METHOD drawCenteredString (Lnet/minecraft/client/gui/Font;Ljava/lang/String;III)V
@@ -509,6 +512,13 @@ CLASS net/minecraft/client/gui/GuiGraphics
 			COMMENT the ending color of the gradient.
 		ARG 8 z
 			COMMENT the z-level of the rectangle.
+	METHOD fillRenderType (Lnet/minecraft/client/renderer/RenderType;IIIII)V
+		ARG 1 renderType
+		ARG 2 x1
+		ARG 3 y1
+		ARG 4 x2
+		ARG 5 y2
+		ARG 6 z
 	METHOD flush ()V
 		COMMENT Flushes the render state, ending the current batch and enabling depth testing.
 	METHOD flushIfManaged ()V
@@ -595,8 +605,6 @@ CLASS net/minecraft/client/gui/GuiGraphics
 			COMMENT the blue component of the color tint.
 		ARG 14 alpha
 			COMMENT the alpha component of the color tint.
-	METHOD lambda$renderTooltip$4 (Ljava/util/List;Lnet/minecraft/world/inventory/tooltip/TooltipComponent;)V
-		ARG 1 component
 	METHOD pose ()Lcom/mojang/blaze3d/vertex/PoseStack;
 		COMMENT {@return returns the PoseStack used for transformations and rendering.}
 	METHOD renderComponentHoverEffect (Lnet/minecraft/client/gui/Font;Lnet/minecraft/network/chat/Style;II)V
@@ -838,6 +846,9 @@ CLASS net/minecraft/client/gui/GuiGraphics
 			COMMENT the color of the line.
 	CLASS ScissorStack
 		COMMENT A utility class for managing a stack of screen rectangles for scissoring.
+		METHOD containsPoint (II)Z
+			ARG 1 x
+			ARG 2 y
 		METHOD pop ()Lnet/minecraft/client/gui/navigation/ScreenRectangle;
 			COMMENT Pops the top screen rectangle from the scissor stack.
 			COMMENT <p>

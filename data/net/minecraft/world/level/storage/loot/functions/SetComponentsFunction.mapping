@@ -1,0 +1,7 @@
+CLASS net/minecraft/world/level/storage/loot/functions/SetComponentsFunction
+	METHOD <init> (Ljava/util/List;Lnet/minecraft/core/component/DataComponentPatch;)V
+		ARG 1 condition
+		ARG 2 components
+	METHOD setComponent (Lnet/minecraft/core/component/DataComponentType;Ljava/lang/Object;)Lnet/minecraft/world/level/storage/loot/functions/LootItemConditionalFunction$Builder;
+		ARG 0 component
+		ARG 1 value

@@ -1,0 +1,15 @@
+CLASS net/minecraft/client/gui/components/WidgetTooltipHolder
+	METHOD createTooltipPositioner (Lnet/minecraft/client/gui/navigation/ScreenRectangle;ZZ)Lnet/minecraft/client/gui/screens/inventory/tooltip/ClientTooltipPositioner;
+		ARG 1 screenRectangle
+		ARG 2 hovering
+		ARG 3 focused
+	METHOD refreshTooltipForNextRenderPass (ZZLnet/minecraft/client/gui/navigation/ScreenRectangle;)V
+		ARG 1 hovering
+		ARG 2 focused
+		ARG 3 screenRectangle
+	METHOD set (Lnet/minecraft/client/gui/components/Tooltip;)V
+		ARG 1 tooltip
+	METHOD setDelay (Ljava/time/Duration;)V
+		ARG 1 delay
+	METHOD updateNarration (Lnet/minecraft/client/gui/narration/NarrationElementOutput;)V
+		ARG 1 output

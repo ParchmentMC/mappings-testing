@@ -3,8 +3,16 @@ CLASS net/minecraft/client/gui/components/FocusableTextWidget
 		ARG 1 maxWidth
 		ARG 2 message
 		ARG 3 font
-	METHOD <init> (ILnet/minecraft/network/chat/Component;Lnet/minecraft/client/gui/Font;Z)V
+	METHOD <init> (ILnet/minecraft/network/chat/Component;Lnet/minecraft/client/gui/Font;I)V
+		ARG 1 maxWidth
+		ARG 2 message
+		ARG 3 font
+		ARG 4 padding
+	METHOD <init> (ILnet/minecraft/network/chat/Component;Lnet/minecraft/client/gui/Font;ZI)V
 		ARG 1 maxWidth
 		ARG 2 message
 		ARG 3 font
 		ARG 4 alwaysShowBorder
+		ARG 5 padding
+	METHOD containWithin (I)V
+		ARG 1 width

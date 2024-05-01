@@ -1,0 +1,4 @@
+CLASS net/minecraft/world/item/component/DebugStickState
+	METHOD withProperty (Lnet/minecraft/core/Holder;Lnet/minecraft/world/level/block/state/properties/Property;)Lnet/minecraft/world/item/component/DebugStickState;
+		ARG 1 block
+		ARG 2 property

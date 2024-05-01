@@ -3,6 +3,8 @@ CLASS net/minecraft/world/entity/EntityDimensions
 		ARG 1 width
 		ARG 2 height
 		ARG 3 fixed
+	METHOD defaultEyeHeight (F)F
+		ARG 0 height
 	METHOD fixed (FF)Lnet/minecraft/world/entity/EntityDimensions;
 		ARG 0 width
 		ARG 1 height
@@ -20,3 +22,7 @@ CLASS net/minecraft/world/entity/EntityDimensions
 	METHOD scale (FF)Lnet/minecraft/world/entity/EntityDimensions;
 		ARG 1 widthFactor
 		ARG 2 heightFactor
+	METHOD withAttachments (Lnet/minecraft/world/entity/EntityAttachments$Builder;)Lnet/minecraft/world/entity/EntityDimensions;
+		ARG 1 attachments
+	METHOD withEyeHeight (F)Lnet/minecraft/world/entity/EntityDimensions;
+		ARG 1 eyeHeight

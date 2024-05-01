@@ -1,12 +1,51 @@
 CLASS net/minecraft/world/item/ProjectileWeaponItem
+	METHOD createProjectile (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;Z)Lnet/minecraft/world/entity/projectile/Projectile;
+		ARG 1 level
+		ARG 2 shooter
+		ARG 3 weapon
+		ARG 4 ammo
+		ARG 5 isCrit
+	METHOD draw (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/LivingEntity;)Ljava/util/List;
+		ARG 0 weapon
+		ARG 1 ammo
+		ARG 2 shooter
 	METHOD getAllSupportedProjectiles ()Ljava/util/function/Predicate;
 		COMMENT Get the predicate to match ammunition when searching the player's inventory, not their main/offhand
+	METHOD getDurabilityUse (Lnet/minecraft/world/item/ItemStack;)I
+		ARG 1 stack
 	METHOD getEnchantmentValue ()I
 		COMMENT Return the enchantability factor of the item, most of the time is based on material.
 	METHOD getHeldProjectile (Lnet/minecraft/world/entity/LivingEntity;Ljava/util/function/Predicate;)Lnet/minecraft/world/item/ItemStack;
 		ARG 0 shooter
 		ARG 1 isAmmo
+	METHOD hasInfiniteArrows (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;Z)Z
+		ARG 0 weapon
+		ARG 1 ammo
+		ARG 2 hasInfiniteMaterials
 	METHOD lambda$static$0 (Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 0 stack
 	METHOD lambda$static$1 (Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 0 stack
+	METHOD shoot (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/item/ItemStack;Ljava/util/List;FFZLnet/minecraft/world/entity/LivingEntity;)V
+		ARG 1 level
+		ARG 2 shooter
+		ARG 3 hand
+		ARG 4 weapon
+		ARG 5 projectileItems
+		ARG 6 velocity
+		ARG 7 inaccuracy
+		ARG 8 isCrit
+		ARG 9 target
+	METHOD shootProjectile (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/projectile/Projectile;IFFFLnet/minecraft/world/entity/LivingEntity;)V
+		ARG 1 shooter
+		ARG 2 projectile
+		ARG 3 index
+		ARG 4 velocity
+		ARG 5 inaccuracy
+		ARG 6 angle
+		ARG 7 target
+	METHOD useAmmo (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/LivingEntity;Z)Lnet/minecraft/world/item/ItemStack;
+		ARG 0 weapon
+		ARG 1 ammo
+		ARG 2 shooter
+		ARG 3 intangable

@@ -1,8 +1,10 @@
 CLASS net/minecraft/network/protocol/game/ClientboundLevelChunkWithLightPacket
-	METHOD <init> (Lnet/minecraft/network/FriendlyByteBuf;)V
+	METHOD <init> (Lnet/minecraft/network/RegistryFriendlyByteBuf;)V
 		ARG 1 buffer
 	METHOD <init> (Lnet/minecraft/world/level/chunk/LevelChunk;Lnet/minecraft/world/level/lighting/LevelLightEngine;Ljava/util/BitSet;Ljava/util/BitSet;)V
 		ARG 1 chunk
 		ARG 2 lightEngine
 		ARG 3 skyLight
 		ARG 4 blockLight
+	METHOD write (Lnet/minecraft/network/RegistryFriendlyByteBuf;)V
+		ARG 1 buffer

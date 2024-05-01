@@ -1,0 +1,3 @@
+CLASS net/minecraft/util/parsing/packrat/SuggestionSupplier
+	METHOD possibleValues (Lnet/minecraft/util/parsing/packrat/ParseState;)Ljava/util/stream/Stream;
+		ARG 1 parseState

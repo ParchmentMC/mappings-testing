@@ -1,6 +1,8 @@
 CLASS net/minecraft/server/level/progress/ChunkProgressListener
-	METHOD onStatusChange (Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/world/level/chunk/ChunkStatus;)V
-		ARG 1 chunkPosition
-		ARG 2 newStatus
+	METHOD calculateDiameter (I)I
+		ARG 0 radius
+	METHOD onStatusChange (Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/world/level/chunk/status/ChunkStatus;)V
+		ARG 1 chunkPos
+		ARG 2 chunkStatus
 	METHOD updateSpawnPos (Lnet/minecraft/world/level/ChunkPos;)V
 		ARG 1 center

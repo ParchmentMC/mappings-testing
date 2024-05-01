@@ -1,13 +1,16 @@
 CLASS net/minecraft/world/item/SmithingTemplateItem
-	METHOD <init> (Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/Component;Ljava/util/List;Ljava/util/List;)V
+	METHOD <init> (Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/Component;Ljava/util/List;Ljava/util/List;[Lnet/minecraft/world/flag/FeatureFlag;)V
 		ARG 1 appliesTo
 		ARG 2 ingredients
-		ARG 3 updradeDescription
-		ARG 4 baseSlotDescription
+		ARG 3 upgradeDescription
+		ARG 4 baseSlorDescription
 		ARG 5 additionsSlotDescription
 		ARG 6 baseSlotEmptyIcons
-		ARG 7 additonalSlotEmptyIcons
-	METHOD createArmorTrimTemplate (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/world/item/SmithingTemplateItem;
-		ARG 0 patternKey
-	METHOD createArmorTrimTemplate (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/world/item/SmithingTemplateItem;
-		ARG 0 location
+		ARG 7 additionalSlotEmptyIcons
+		ARG 8 requiredFeatures
+	METHOD createArmorTrimTemplate (Lnet/minecraft/resources/ResourceKey;[Lnet/minecraft/world/flag/FeatureFlag;)Lnet/minecraft/world/item/SmithingTemplateItem;
+		ARG 0 key
+		ARG 1 requiredFeatures
+	METHOD createArmorTrimTemplate (Lnet/minecraft/resources/ResourceLocation;[Lnet/minecraft/world/flag/FeatureFlag;)Lnet/minecraft/world/item/SmithingTemplateItem;
+		ARG 0 name
+		ARG 1 requiredFeatures

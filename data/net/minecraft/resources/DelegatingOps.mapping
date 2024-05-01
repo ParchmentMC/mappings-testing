@@ -25,6 +25,8 @@ CLASS net/minecraft/resources/DelegatingOps
 		ARG 1 value
 	METHOD createLongList (Ljava/util/stream/LongStream;)Ljava/lang/Object;
 		ARG 1 input
+	METHOD createMap (Ljava/util/Map;)Ljava/lang/Object;
+		ARG 1 map
 	METHOD createMap (Ljava/util/stream/Stream;)Ljava/lang/Object;
 		ARG 1 map
 	METHOD createNumeric (Ljava/lang/Number;)Ljava/lang/Object;
@@ -70,6 +72,12 @@ CLASS net/minecraft/resources/DelegatingOps
 		ARG 1 map
 		ARG 2 key
 		ARG 3 value
+	METHOD mergeToMap (Ljava/lang/Object;Ljava/util/Map;)Lcom/mojang/serialization/DataResult;
+		ARG 1 map
+		ARG 2 values
+	METHOD mergeToPrimitive (Ljava/lang/Object;Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
+		ARG 1 prefix
+		ARG 2 value
 	METHOD remove (Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 		ARG 1 input
 		ARG 2 key

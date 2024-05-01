@@ -9,16 +9,14 @@ CLASS net/minecraft/client/gui/components/ChatComponent
 		ARG 1 minecraft
 	METHOD addMessage (Lnet/minecraft/network/chat/Component;)V
 		ARG 1 chatComponent
-	METHOD addMessage (Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/MessageSignature;ILnet/minecraft/client/GuiMessageTag;Z)V
-		ARG 1 chatComponent
-		ARG 2 headerSignature
-		ARG 3 addedTime
-		ARG 4 tag
-		ARG 5 onlyTrim
 	METHOD addMessage (Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/MessageSignature;Lnet/minecraft/client/GuiMessageTag;)V
 		ARG 1 chatComponent
 		ARG 2 headerSignature
 		ARG 3 tag
+	METHOD addMessageToDisplayQueue (Lnet/minecraft/client/GuiMessage;)V
+		ARG 1 message
+	METHOD addMessageToQueue (Lnet/minecraft/client/GuiMessage;)V
+		ARG 1 message
 	METHOD addRecentChat (Ljava/lang/String;)V
 		COMMENT Adds this string to the list of sent messages, for recall using the up/down arrow keys
 		ARG 1 message
@@ -68,19 +66,26 @@ CLASS net/minecraft/client/gui/components/ChatComponent
 		COMMENT Returns {@code true} if the chat GUI is open
 	METHOD lambda$processMessageDeletionQueue$0 (ILnet/minecraft/client/gui/components/ChatComponent$DelayedMessageDeletion;)Z
 		ARG 2 message
-	METHOD logChatMessage (Lnet/minecraft/network/chat/Component;Lnet/minecraft/client/GuiMessageTag;)V
-		ARG 1 chatComponent
-		ARG 2 tag
-	METHOD render (Lnet/minecraft/client/gui/GuiGraphics;III)V
+	METHOD logChatMessage (Lnet/minecraft/client/GuiMessage;)V
+		ARG 1 message
+	METHOD render (Lnet/minecraft/client/gui/GuiGraphics;IIIZ)V
 		ARG 1 guiGraphics
 		ARG 2 tickCount
 		ARG 3 mouseX
 		ARG 4 mouseY
+		ARG 5 focused
 	METHOD resetChatScroll ()V
 		COMMENT Resets the chat scroll (executed when the GUI is closed, among others)
+	METHOD restoreState (Lnet/minecraft/client/gui/components/ChatComponent$State;)V
+		ARG 1 state
 	METHOD screenToChatX (D)D
 		ARG 1 x
 	METHOD screenToChatY (D)D
 		ARG 1 y
 	METHOD scrollChat (I)V
 		ARG 1 posInc
+	CLASS State
+		METHOD <init> (Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
+			ARG 1 messages
+			ARG 2 history
+			ARG 3 delayedMessageDeletions

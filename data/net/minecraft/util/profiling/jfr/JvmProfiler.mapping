@@ -3,15 +3,25 @@ CLASS net/minecraft/util/profiling/jfr/JvmProfiler
 		ARG 1 chunkPos
 		ARG 2 level
 		ARG 3 name
-	METHOD onPacketReceived (Lnet/minecraft/network/ConnectionProtocol;ILjava/net/SocketAddress;I)V
+	METHOD onPacketReceived (Lnet/minecraft/network/ConnectionProtocol;Lnet/minecraft/network/protocol/PacketType;Ljava/net/SocketAddress;I)V
 		ARG 1 protocol
-		ARG 2 packetId
-		ARG 3 remoteAddress
+		ARG 2 packetType
+		ARG 3 address
+		ARG 4 size
+	METHOD onPacketSent (Lnet/minecraft/network/ConnectionProtocol;Lnet/minecraft/network/protocol/PacketType;Ljava/net/SocketAddress;I)V
+		ARG 1 protocol
+		ARG 2 packetType
+		ARG 3 address
+		ARG 4 size
+	METHOD onRegionFileRead (Lnet/minecraft/world/level/chunk/storage/RegionStorageInfo;Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/world/level/chunk/storage/RegionFileVersion;I)V
+		ARG 1 regionStorageInfo
+		ARG 2 chunkPos
+		ARG 3 version
 		ARG 4 bytes
-	METHOD onPacketSent (Lnet/minecraft/network/ConnectionProtocol;ILjava/net/SocketAddress;I)V
-		ARG 1 protocol
-		ARG 2 packetId
-		ARG 3 remoteAddress
+	METHOD onRegionFileWrite (Lnet/minecraft/world/level/chunk/storage/RegionStorageInfo;Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/world/level/chunk/storage/RegionFileVersion;I)V
+		ARG 1 regionStorageInfo
+		ARG 2 chunkPos
+		ARG 3 version
 		ARG 4 bytes
 	METHOD onServerTick (F)V
 		ARG 1 currentAverageTickTime

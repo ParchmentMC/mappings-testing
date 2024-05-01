@@ -1,8 +1,7 @@
 CLASS net/minecraft/world/item/enchantment/ProtectionEnchantment
-	METHOD <init> (Lnet/minecraft/world/item/enchantment/Enchantment$Rarity;Lnet/minecraft/world/item/enchantment/ProtectionEnchantment$Type;[Lnet/minecraft/world/entity/EquipmentSlot;)V
-		ARG 1 rarity
+	METHOD <init> (Lnet/minecraft/world/item/enchantment/Enchantment$EnchantmentDefinition;Lnet/minecraft/world/item/enchantment/ProtectionEnchantment$Type;)V
+		ARG 1 definition
 		ARG 2 type
-		ARG 3 applicableSlots
 	METHOD checkCompatibility (Lnet/minecraft/world/item/enchantment/Enchantment;)Z
 		COMMENT Determines if the enchantment passed can be applied together with this enchantment.
 		ARG 1 ench
@@ -17,14 +16,3 @@ CLASS net/minecraft/world/item/enchantment/ProtectionEnchantment
 		COMMENT Gets the amount of ticks an entity should be set fire, adjusted for fire protection.
 		ARG 0 livingEntity
 		ARG 1 level
-	METHOD getMaxCost (I)I
-		ARG 1 enchantmentLevel
-	METHOD getMaxLevel ()I
-		COMMENT Returns the maximum level that the enchantment can have.
-	METHOD getMinCost (I)I
-		COMMENT Returns the minimal value of enchantability needed on the enchantment level passed.
-		ARG 1 enchantmentLevel
-	CLASS Type
-		METHOD <init> (Ljava/lang/String;III)V
-			ARG 3 minCost
-			ARG 4 levelCost

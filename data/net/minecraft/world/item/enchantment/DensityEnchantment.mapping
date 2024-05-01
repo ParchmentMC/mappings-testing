@@ -1,0 +1,4 @@
+CLASS net/minecraft/world/item/enchantment/DensityEnchantment
+	METHOD calculateDamageAddition (IF)F
+		ARG 0 level
+		ARG 1 fallDistance

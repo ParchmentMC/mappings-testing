@@ -1,4 +1,6 @@
 CLASS net/minecraft/client/model/SkeletonModel
+	METHOD createDefaultSkeletonMesh (Lnet/minecraft/client/model/geom/builders/PartDefinition;)V
+		ARG 0 partDefinition
 	METHOD prepareMobModel (Lnet/minecraft/world/entity/Mob;FFF)V
 		ARG 1 entity
 		ARG 2 limbSwing

@@ -1,13 +1,19 @@
 CLASS net/minecraft/client/telemetry/TelemetryPropertyMap
 	METHOD <init> (Ljava/util/Map;)V
 		ARG 1 entries
-	METHOD createCodec (Ljava/util/List;)Lcom/mojang/serialization/Codec;
+	METHOD createCodec (Ljava/util/List;)Lcom/mojang/serialization/MapCodec;
 		ARG 0 properties
 	METHOD get (Lnet/minecraft/client/telemetry/TelemetryProperty;)Ljava/lang/Object;
 		ARG 1 key
 	CLASS 1
 		METHOD decode (Lcom/mojang/serialization/DynamicOps;Lcom/mojang/serialization/MapLike;)Lcom/mojang/serialization/DataResult;
 			ARG 1 ops
+			ARG 2 value
+		METHOD decodeProperty (Lcom/mojang/serialization/DataResult;Lcom/mojang/serialization/DynamicOps;Lcom/mojang/serialization/MapLike;Lnet/minecraft/client/telemetry/TelemetryProperty;)Lcom/mojang/serialization/DataResult;
+			ARG 1 result
+			ARG 2 ops
+			ARG 3 value
+			ARG 4 property
 		METHOD encode (Lnet/minecraft/client/telemetry/TelemetryPropertyMap;Lcom/mojang/serialization/DynamicOps;Lcom/mojang/serialization/RecordBuilder;)Lcom/mojang/serialization/RecordBuilder;
 			ARG 1 map
 			ARG 2 ops

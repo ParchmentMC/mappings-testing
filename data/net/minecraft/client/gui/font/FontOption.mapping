@@ -1,0 +1,10 @@
+CLASS net/minecraft/client/gui/font/FontOption
+	METHOD <init> (Ljava/lang/String;ILjava/lang/String;)V
+		ARG 3 name
+	CLASS Filter
+		METHOD <init> (Ljava/util/Map;)V
+			ARG 1 values
+		METHOD apply (Ljava/util/Set;)Z
+			ARG 1 options
+		METHOD merge (Lnet/minecraft/client/gui/font/FontOption$Filter;)Lnet/minecraft/client/gui/font/FontOption$Filter;
+			ARG 1 filter

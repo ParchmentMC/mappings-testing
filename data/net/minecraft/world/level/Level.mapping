@@ -64,14 +64,14 @@ CLASS net/minecraft/world/level/Level
 		COMMENT Sends a {@link net.minecraft.network.protocol.game.ClientboundEntityEventPacket} to all tracked players of that entity.
 		ARG 1 entity
 		ARG 2 state
-	METHOD createFireworks (DDDDDDLnet/minecraft/nbt/CompoundTag;)V
+	METHOD createFireworks (DDDDDDLjava/util/List;)V
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
-		ARG 7 motionX
-		ARG 9 motionY
-		ARG 11 motionZ
-		ARG 13 compound
+		ARG 7 xSpeed
+		ARG 9 ySpeed
+		ARG 11 zSpeed
+		ARG 13 explosions
 	METHOD destroyBlock (Lnet/minecraft/core/BlockPos;ZLnet/minecraft/world/entity/Entity;I)Z
 		ARG 1 pos
 		ARG 2 dropBlock
@@ -108,7 +108,7 @@ CLASS net/minecraft/world/level/Level
 		ARG 10 radius
 		ARG 11 fire
 		ARG 12 explosionInteraction
-	METHOD explode (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/damagesource/DamageSource;Lnet/minecraft/world/level/ExplosionDamageCalculator;DDDFZLnet/minecraft/world/level/Level$ExplosionInteraction;Lnet/minecraft/core/particles/ParticleOptions;Lnet/minecraft/core/particles/ParticleOptions;Lnet/minecraft/sounds/SoundEvent;)Lnet/minecraft/world/level/Explosion;
+	METHOD explode (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/damagesource/DamageSource;Lnet/minecraft/world/level/ExplosionDamageCalculator;DDDFZLnet/minecraft/world/level/Level$ExplosionInteraction;Lnet/minecraft/core/particles/ParticleOptions;Lnet/minecraft/core/particles/ParticleOptions;Lnet/minecraft/core/Holder;)Lnet/minecraft/world/level/Explosion;
 		ARG 1 source
 		ARG 2 damageSource
 		ARG 3 damageCalculator
@@ -121,7 +121,7 @@ CLASS net/minecraft/world/level/Level
 		ARG 13 smallExplosionParticles
 		ARG 14 largeExplosionParticles
 		ARG 15 explosionSound
-	METHOD explode (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/damagesource/DamageSource;Lnet/minecraft/world/level/ExplosionDamageCalculator;DDDFZLnet/minecraft/world/level/Level$ExplosionInteraction;ZLnet/minecraft/core/particles/ParticleOptions;Lnet/minecraft/core/particles/ParticleOptions;Lnet/minecraft/sounds/SoundEvent;)Lnet/minecraft/world/level/Explosion;
+	METHOD explode (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/damagesource/DamageSource;Lnet/minecraft/world/level/ExplosionDamageCalculator;DDDFZLnet/minecraft/world/level/Level$ExplosionInteraction;ZLnet/minecraft/core/particles/ParticleOptions;Lnet/minecraft/core/particles/ParticleOptions;Lnet/minecraft/core/Holder;)Lnet/minecraft/world/level/Explosion;
 		ARG 1 source
 		ARG 2 damageSource
 		ARG 3 damageCalculator
@@ -160,11 +160,6 @@ CLASS net/minecraft/world/level/Level
 	METHOD getChunk (II)Lnet/minecraft/world/level/chunk/LevelChunk;
 		ARG 1 chunkX
 		ARG 2 chunkZ
-	METHOD getChunk (IILnet/minecraft/world/level/chunk/ChunkStatus;Z)Lnet/minecraft/world/level/chunk/ChunkAccess;
-		ARG 1 x
-		ARG 2 z
-		ARG 3 requiredStatus
-		ARG 4 nonnull
 	METHOD getChunkAt (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/chunk/LevelChunk;
 		ARG 1 pos
 	METHOD getChunkForCollisions (II)Lnet/minecraft/world/level/BlockGetter;
@@ -203,8 +198,8 @@ CLASS net/minecraft/world/level/Level
 		ARG 3 z
 	METHOD getLevelData ()Lnet/minecraft/world/level/storage/LevelData;
 		COMMENT Returns the world's WorldInfo object
-	METHOD getMapData (Ljava/lang/String;)Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData;
-		ARG 1 mapName
+	METHOD getMapData (Lnet/minecraft/world/level/saveddata/maps/MapId;)Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData;
+		ARG 1 mapId
 	METHOD getRainLevel (F)F
 		COMMENT Returns rain strength.
 		ARG 1 delta
@@ -243,10 +238,6 @@ CLASS net/minecraft/world/level/Level
 		ARG 2 state
 	METHOD isThundering ()Z
 		COMMENT Returns {@code true} if the current thunder strength (weighted with the rain strength) is greater than 0.9
-	METHOD lambda$getEntities$1 (Lnet/minecraft/world/entity/Entity;Ljava/util/function/Predicate;Ljava/util/List;Lnet/minecraft/world/entity/Entity;)V
-		ARG 3 entity
-	METHOD lambda$getEntities$2 (Ljava/util/function/Predicate;Ljava/util/List;ILnet/minecraft/world/level/entity/EntityTypeTest;Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/util/AbortableIterationConsumer$Continuation;
-		ARG 4 entity
 	METHOD loadedAndEntityCanStandOn (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/Entity;)Z
 		ARG 1 pos
 		ARG 2 entity
@@ -402,9 +393,9 @@ CLASS net/minecraft/world/level/Level
 		ARG 1 blockPos
 		ARG 2 oldState
 		ARG 3 newState
-	METHOD setMapData (Ljava/lang/String;Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData;)V
-		ARG 1 mapName
-		ARG 2 data
+	METHOD setMapData (Lnet/minecraft/world/level/saveddata/maps/MapId;Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData;)V
+		ARG 1 mapId
+		ARG 2 mapData
 	METHOD setRainLevel (F)V
 		COMMENT Sets the strength of the rain.
 		ARG 1 strength

@@ -1,10 +1,4 @@
 CLASS net/minecraft/world/item/MapItem
-	METHOD appendHoverText (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V
-		COMMENT Allows items to add custom lines of information to the mouseover description.
-		ARG 1 stack
-		ARG 2 level
-		ARG 3 tooltip
-		ARG 4 flag
 	METHOD create (Lnet/minecraft/world/level/Level;IIBZZ)Lnet/minecraft/world/item/ItemStack;
 		ARG 0 level
 		ARG 1 levelX
@@ -12,16 +6,7 @@ CLASS net/minecraft/world/item/MapItem
 		ARG 3 scale
 		ARG 4 trackingPosition
 		ARG 5 unlimitedTracking
-	METHOD createAndStoreSavedData (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;IIIZZLnet/minecraft/resources/ResourceKey;)V
-		ARG 0 stack
-		ARG 1 level
-		ARG 2 x
-		ARG 3 z
-		ARG 4 scale
-		ARG 5 trackingPosition
-		ARG 6 unlimitedTracking
-		ARG 7 dimension
-	METHOD createNewSavedData (Lnet/minecraft/world/level/Level;IIIZZLnet/minecraft/resources/ResourceKey;)I
+	METHOD createNewSavedData (Lnet/minecraft/world/level/Level;IIIZZLnet/minecraft/resources/ResourceKey;)Lnet/minecraft/world/level/saveddata/maps/MapId;
 		ARG 0 level
 		ARG 1 x
 		ARG 2 z
@@ -29,24 +14,18 @@ CLASS net/minecraft/world/item/MapItem
 		ARG 4 trackingPosition
 		ARG 5 unlimitedTracking
 		ARG 6 dimension
-	METHOD getColor (Lnet/minecraft/world/item/ItemStack;)I
-		ARG 0 stack
 	METHOD getCorrectStateForFluidBlock (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
 		ARG 1 level
 		ARG 2 state
 		ARG 3 pos
-	METHOD getMapId (Lnet/minecraft/world/item/ItemStack;)Ljava/lang/Integer;
-		ARG 0 stack
-	METHOD getSavedData (Ljava/lang/Integer;Lnet/minecraft/world/level/Level;)Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData;
-		ARG 0 mapId
-		ARG 1 level
 	METHOD getSavedData (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;)Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData;
 		ARG 0 stack
 		ARG 1 level
-	METHOD getTooltipForId (I)Lnet/minecraft/network/chat/Component;
-		ARG 0 id
-	METHOD getTooltipForId (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/network/chat/Component;
-		ARG 0 stack
+	METHOD getSavedData (Lnet/minecraft/world/level/saveddata/maps/MapId;Lnet/minecraft/world/level/Level;)Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData;
+		ARG 0 mapId
+		ARG 1 level
+	METHOD getTooltipForId (Lnet/minecraft/world/level/saveddata/maps/MapId;)Lnet/minecraft/network/chat/Component;
+		ARG 0 mapId
 	METHOD getUpdatePacket (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;)Lnet/minecraft/network/protocol/Packet;
 		ARG 1 stack
 		ARG 2 level
@@ -65,18 +44,12 @@ CLASS net/minecraft/world/item/MapItem
 	METHOD lockMap (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/item/ItemStack;)V
 		ARG 0 level
 		ARG 1 stack
-	METHOD makeKey (I)Ljava/lang/String;
-		ARG 0 mapId
 	METHOD renderBiomePreviewMap (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/item/ItemStack;)V
 		ARG 0 serverLevel
 		ARG 1 stack
-	METHOD scaleMap (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;I)V
+	METHOD scaleMap (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;)V
 		ARG 0 stack
 		ARG 1 level
-		ARG 2 scale
-	METHOD storeMapData (Lnet/minecraft/world/item/ItemStack;I)V
-		ARG 0 stack
-		ARG 1 mapId
 	METHOD update (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData;)V
 		ARG 1 level
 		ARG 2 viewer

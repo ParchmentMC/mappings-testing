@@ -1,30 +1,28 @@
 CLASS net/minecraft/world/entity/ai/attributes/AttributeSupplier
 	METHOD <init> (Ljava/util/Map;)V
 		ARG 1 instances
-	METHOD createInstance (Ljava/util/function/Consumer;Lnet/minecraft/world/entity/ai/attributes/Attribute;)Lnet/minecraft/world/entity/ai/attributes/AttributeInstance;
-		ARG 1 onChangedCallback
+	METHOD createInstance (Ljava/util/function/Consumer;Lnet/minecraft/core/Holder;)Lnet/minecraft/world/entity/ai/attributes/AttributeInstance;
+		ARG 1 onDirty
 		ARG 2 attribute
-	METHOD getAttributeInstance (Lnet/minecraft/world/entity/ai/attributes/Attribute;)Lnet/minecraft/world/entity/ai/attributes/AttributeInstance;
+	METHOD getAttributeInstance (Lnet/minecraft/core/Holder;)Lnet/minecraft/world/entity/ai/attributes/AttributeInstance;
 		ARG 1 attribute
-	METHOD getBaseValue (Lnet/minecraft/world/entity/ai/attributes/Attribute;)D
+	METHOD getBaseValue (Lnet/minecraft/core/Holder;)D
 		ARG 1 attribute
-	METHOD getModifierValue (Lnet/minecraft/world/entity/ai/attributes/Attribute;Ljava/util/UUID;)D
+	METHOD getModifierValue (Lnet/minecraft/core/Holder;Ljava/util/UUID;)D
 		ARG 1 attribute
-		ARG 2 id
-	METHOD getValue (Lnet/minecraft/world/entity/ai/attributes/Attribute;)D
+		ARG 2 uuid
+	METHOD getValue (Lnet/minecraft/core/Holder;)D
 		ARG 1 attribute
-	METHOD hasAttribute (Lnet/minecraft/world/entity/ai/attributes/Attribute;)Z
+	METHOD hasAttribute (Lnet/minecraft/core/Holder;)Z
 		ARG 1 attribute
-	METHOD hasModifier (Lnet/minecraft/world/entity/ai/attributes/Attribute;Ljava/util/UUID;)Z
+	METHOD hasModifier (Lnet/minecraft/core/Holder;Ljava/util/UUID;)Z
 		ARG 1 attribute
-		ARG 2 id
+		ARG 2 uuid
 	CLASS Builder
-		METHOD add (Lnet/minecraft/world/entity/ai/attributes/Attribute;)Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier$Builder;
+		METHOD add (Lnet/minecraft/core/Holder;)Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier$Builder;
 			ARG 1 attribute
-		METHOD add (Lnet/minecraft/world/entity/ai/attributes/Attribute;D)Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier$Builder;
+		METHOD add (Lnet/minecraft/core/Holder;D)Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier$Builder;
 			ARG 1 attribute
-			ARG 2 value
-		METHOD create (Lnet/minecraft/world/entity/ai/attributes/Attribute;)Lnet/minecraft/world/entity/ai/attributes/AttributeInstance;
+			ARG 2 baseValue
+		METHOD create (Lnet/minecraft/core/Holder;)Lnet/minecraft/world/entity/ai/attributes/AttributeInstance;
 			ARG 1 attribute
-		METHOD lambda$create$0 (Lnet/minecraft/world/entity/ai/attributes/Attribute;Lnet/minecraft/world/entity/ai/attributes/AttributeInstance;)V
-			ARG 2 instance

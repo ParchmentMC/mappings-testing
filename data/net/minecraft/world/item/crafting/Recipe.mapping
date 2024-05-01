@@ -1,7 +1,7 @@
 CLASS net/minecraft/world/item/crafting/Recipe
-	METHOD assemble (Lnet/minecraft/world/Container;Lnet/minecraft/core/RegistryAccess;)Lnet/minecraft/world/item/ItemStack;
-		ARG 1 container
-		ARG 2 registryAccess
+	METHOD assemble (Lnet/minecraft/world/Container;Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/world/item/ItemStack;
+		ARG 1 craftingContainer
+		ARG 2 registries
 	METHOD canCraftInDimensions (II)Z
 		COMMENT Used to determine if this recipe can fit in a grid of the given width/height
 		ARG 1 width
@@ -10,8 +10,8 @@ CLASS net/minecraft/world/item/crafting/Recipe
 		COMMENT Recipes with equal group are combined into one button in the recipe book
 	METHOD getRemainingItems (Lnet/minecraft/world/Container;)Lnet/minecraft/core/NonNullList;
 		ARG 1 container
-	METHOD getResultItem (Lnet/minecraft/core/RegistryAccess;)Lnet/minecraft/world/item/ItemStack;
-		ARG 1 registryAccess
+	METHOD getResultItem (Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/world/item/ItemStack;
+		ARG 1 registries
 	METHOD isSpecial ()Z
 		COMMENT If true, this recipe does not appear in the recipe book and does not respect recipe unlocking (and the doLimitedCrafting gamerule)
 	METHOD lambda$isIncomplete$0 (Lnet/minecraft/world/item/crafting/Ingredient;)Z

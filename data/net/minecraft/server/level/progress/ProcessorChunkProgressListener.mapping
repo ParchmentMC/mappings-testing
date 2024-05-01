@@ -5,8 +5,5 @@ CLASS net/minecraft/server/level/progress/ProcessorChunkProgressListener
 	METHOD createStarted (Lnet/minecraft/server/level/progress/ChunkProgressListener;Ljava/util/concurrent/Executor;)Lnet/minecraft/server/level/progress/ProcessorChunkProgressListener;
 		ARG 0 delegate
 		ARG 1 dispatcher
-	METHOD onStatusChange (Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/world/level/chunk/ChunkStatus;)V
-		ARG 1 chunkPosition
-		ARG 2 newStatus
 	METHOD updateSpawnPos (Lnet/minecraft/world/level/ChunkPos;)V
 		ARG 1 center

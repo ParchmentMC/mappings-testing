@@ -1,7 +1,7 @@
 CLASS net/minecraft/client/renderer/item/ItemProperties
-	METHOD getProperty (Lnet/minecraft/world/item/Item;Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/item/ItemPropertyFunction;
-		ARG 0 item
-		ARG 1 name
+	METHOD getProperty (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/item/ItemPropertyFunction;
+		ARG 0 stack
+		ARG 1 location
 	METHOD lambda$register$2 (Lnet/minecraft/world/item/Item;)Ljava/util/Map;
 		ARG 0 k
 	METHOD lambda$static$0 (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/world/entity/LivingEntity;I)F

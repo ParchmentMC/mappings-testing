@@ -6,12 +6,25 @@ CLASS net/minecraft/util/ParticleUtils
 		ARG 1 pos
 		ARG 2 random
 		ARG 3 particle
+	METHOD spawnParticleInBlock (Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;ILnet/minecraft/core/particles/ParticleOptions;)V
+		ARG 0 level
+		ARG 1 pos
+		ARG 2 count
+		ARG 3 particle
 	METHOD spawnParticleOnFace (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;Lnet/minecraft/core/particles/ParticleOptions;Lnet/minecraft/world/phys/Vec3;D)V
 		ARG 0 level
 		ARG 1 pos
 		ARG 2 direction
 		ARG 3 particle
 		ARG 4 speed
+	METHOD spawnParticles (Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;IDDZLnet/minecraft/core/particles/ParticleOptions;)V
+		ARG 0 level
+		ARG 1 pos
+		ARG 2 count
+		ARG 3 xzSpread
+		ARG 5 ySpread
+		ARG 7 allowInAir
+		ARG 8 particle
 	METHOD spawnParticlesAlongAxis (Lnet/minecraft/core/Direction$Axis;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;DLnet/minecraft/core/particles/ParticleOptions;Lnet/minecraft/util/valueproviders/UniformInt;)V
 		ARG 0 axis
 		ARG 1 level
@@ -30,3 +43,7 @@ CLASS net/minecraft/util/ParticleUtils
 		ARG 1 pos
 		ARG 2 particle
 		ARG 3 count
+	METHOD spawnSmashAttackParticles (Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;I)V
+		ARG 0 level
+		ARG 1 pos
+		ARG 2 power

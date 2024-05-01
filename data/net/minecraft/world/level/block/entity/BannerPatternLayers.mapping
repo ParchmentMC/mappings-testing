@@ -1,0 +1,16 @@
+CLASS net/minecraft/world/level/block/entity/BannerPatternLayers
+	CLASS Layer
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instabce
+	CLASS Builder
+		METHOD add (Lnet/minecraft/core/Holder;Lnet/minecraft/world/item/DyeColor;)Lnet/minecraft/world/level/block/entity/BannerPatternLayers$Builder;
+			ARG 1 pattern
+			ARG 2 color
+		METHOD add (Lnet/minecraft/world/level/block/entity/BannerPatternLayers$Layer;)Lnet/minecraft/world/level/block/entity/BannerPatternLayers$Builder;
+			ARG 1 layer
+		METHOD addAll (Lnet/minecraft/world/level/block/entity/BannerPatternLayers;)Lnet/minecraft/world/level/block/entity/BannerPatternLayers$Builder;
+			ARG 1 layers
+		METHOD addIfRegistered (Lnet/minecraft/core/HolderGetter;Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/world/item/DyeColor;)Lnet/minecraft/world/level/block/entity/BannerPatternLayers$Builder;
+			ARG 1 patterns
+			ARG 2 patternKey
+			ARG 3 color

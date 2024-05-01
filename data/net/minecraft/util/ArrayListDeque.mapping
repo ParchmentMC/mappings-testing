@@ -4,8 +4,6 @@ CLASS net/minecraft/util/ArrayListDeque
 	METHOD add (ILjava/lang/Object;)V
 		ARG 1 index
 		ARG 2 element
-	METHOD addFirst (Ljava/lang/Object;)V
-		ARG 1 element
 	METHOD addLast (Ljava/lang/Object;)V
 		ARG 1 element
 	METHOD copyCount ([Ljava/lang/Object;I)V
@@ -19,13 +17,9 @@ CLASS net/minecraft/util/ArrayListDeque
 		ARG 1 index
 	METHOD getInner (I)Ljava/lang/Object;
 		ARG 1 index
-	METHOD offer (Ljava/lang/Object;)Z
-		ARG 1 element
 	METHOD offerFirst (Ljava/lang/Object;)Z
 		ARG 1 element
 	METHOD offerLast (Ljava/lang/Object;)Z
-		ARG 1 element
-	METHOD push (Ljava/lang/Object;)V
 		ARG 1 element
 	METHOD remove (I)Ljava/lang/Object;
 		ARG 1 index
@@ -45,3 +39,35 @@ CLASS net/minecraft/util/ArrayListDeque
 	METHOD verifyIndexInRange (II)V
 		ARG 0 index
 		ARG 1 size
+	CLASS ReversedView
+		METHOD <init> (Lnet/minecraft/util/ArrayListDeque;Lnet/minecraft/util/ArrayListDeque;)V
+			ARG 2 source
+		METHOD add (ILjava/lang/Object;)V
+			ARG 1 index
+			ARG 2 element
+		METHOD contains (Ljava/lang/Object;)Z
+			ARG 1 element
+		METHOD get (I)Ljava/lang/Object;
+			ARG 1 index
+		METHOD indexOf (Ljava/lang/Object;)I
+			ARG 1 element
+		METHOD lastIndexOf (Ljava/lang/Object;)I
+			ARG 1 element
+		METHOD offerFirst (Ljava/lang/Object;)Z
+			ARG 1 element
+		METHOD offerLast (Ljava/lang/Object;)Z
+			ARG 1 element
+		METHOD remove (I)Ljava/lang/Object;
+			ARG 1 index
+		METHOD removeFirstOccurrence (Ljava/lang/Object;)Z
+			ARG 1 element
+		METHOD removeLastOccurrence (Ljava/lang/Object;)Z
+			ARG 1 element
+		METHOD reverseIndex (I)I
+			ARG 1 index
+		METHOD set (ILjava/lang/Object;)Ljava/lang/Object;
+			ARG 1 index
+			ARG 2 element
+		METHOD subList (II)Ljava/util/List;
+			ARG 1 startIndex
+			ARG 2 endIndex

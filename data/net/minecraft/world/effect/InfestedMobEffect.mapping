@@ -1,0 +1,12 @@
+CLASS net/minecraft/world/effect/InfestedMobEffect
+	METHOD <init> (Lnet/minecraft/world/effect/MobEffectCategory;IFLjava/util/function/ToIntFunction;)V
+		ARG 1 category
+		ARG 2 color
+		ARG 3 chanceToSpawn
+		ARG 4 spawnedCount
+	METHOD spawnSilverfish (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;DDD)V
+		ARG 1 level
+		ARG 2 entity
+		ARG 3 x
+		ARG 5 y
+		ARG 7 z

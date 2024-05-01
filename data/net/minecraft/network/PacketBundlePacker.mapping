@@ -1,6 +1,8 @@
 CLASS net/minecraft/network/PacketBundlePacker
-	METHOD <init> (Lio/netty/util/AttributeKey;)V
-		ARG 1 bundleAttributeKey
+	METHOD <init> (Lnet/minecraft/network/protocol/BundlerInfo;)V
+		ARG 1 bundlerInfo
 	METHOD decode (Lio/netty/channel/ChannelHandlerContext;Lnet/minecraft/network/protocol/Packet;Ljava/util/List;)V
 		ARG 1 context
 		ARG 2 packet
+	METHOD verifyNonTerminalPacket (Lnet/minecraft/network/protocol/Packet;)V
+		ARG 0 packet

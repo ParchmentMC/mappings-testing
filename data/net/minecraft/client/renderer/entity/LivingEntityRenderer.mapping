@@ -43,12 +43,13 @@ CLASS net/minecraft/client/renderer/entity/LivingEntityRenderer
 		ARG 1 livingEntity
 		ARG 2 poseStack
 		ARG 3 partialTickTime
-	METHOD setupRotations (Lnet/minecraft/world/entity/LivingEntity;Lcom/mojang/blaze3d/vertex/PoseStack;FFF)V
-		ARG 1 entityLiving
+	METHOD setupRotations (Lnet/minecraft/world/entity/LivingEntity;Lcom/mojang/blaze3d/vertex/PoseStack;FFFF)V
+		ARG 1 entity
 		ARG 2 poseStack
-		ARG 3 ageInTicks
-		ARG 4 rotationYaw
-		ARG 5 partialTicks
+		ARG 3 bob
+		ARG 4 yBodyRot
+		ARG 5 partialTick
+		ARG 6 scale
 	METHOD shouldShowName (Lnet/minecraft/world/entity/LivingEntity;)Z
 		ARG 1 entity
 	METHOD sleepDirectionToRotation (Lnet/minecraft/core/Direction;)F

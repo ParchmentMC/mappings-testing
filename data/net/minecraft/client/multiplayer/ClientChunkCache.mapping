@@ -8,11 +8,6 @@ CLASS net/minecraft/client/multiplayer/ClientChunkCache
 		ARG 1 chunkPos
 	METHOD gatherStats ()Ljava/lang/String;
 		COMMENT Converts the instance data to a readable string.
-	METHOD getChunk (IILnet/minecraft/world/level/chunk/ChunkStatus;Z)Lnet/minecraft/world/level/chunk/LevelChunk;
-		ARG 1 chunkX
-		ARG 2 chunkZ
-		ARG 3 requiredStatus
-		ARG 4 load
 	METHOD isValidChunk (Lnet/minecraft/world/level/chunk/LevelChunk;II)Z
 		ARG 0 chunk
 		ARG 1 x

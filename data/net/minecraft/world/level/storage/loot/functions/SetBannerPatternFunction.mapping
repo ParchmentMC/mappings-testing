@@ -1,6 +1,6 @@
 CLASS net/minecraft/world/level/storage/loot/functions/SetBannerPatternFunction
 	COMMENT LootItemFunction that sets the banner patterns for a banner item. Optionally appends to any existing patterns.
-	METHOD <init> (Ljava/util/List;Ljava/util/List;Z)V
+	METHOD <init> (Ljava/util/List;Lnet/minecraft/world/level/block/entity/BannerPatternLayers;Z)V
 		ARG 1 conditions
 		ARG 2 patterns
 		ARG 3 append
@@ -10,8 +10,5 @@ CLASS net/minecraft/world/level/storage/loot/functions/SetBannerPatternFunction
 		METHOD <init> (Z)V
 			ARG 1 append
 		METHOD addPattern (Lnet/minecraft/core/Holder;Lnet/minecraft/world/item/DyeColor;)Lnet/minecraft/world/level/storage/loot/functions/SetBannerPatternFunction$Builder;
-			ARG 1 pattern
-			ARG 2 color
-		METHOD addPattern (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/world/item/DyeColor;)Lnet/minecraft/world/level/storage/loot/functions/SetBannerPatternFunction$Builder;
 			ARG 1 pattern
 			ARG 2 color

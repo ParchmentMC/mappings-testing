@@ -1,12 +1,25 @@
 CLASS net/minecraft/util/StringUtil
 	METHOD endsWithNewLine (Ljava/lang/String;)Z
 		ARG 0 string
+	METHOD filterText (Ljava/lang/String;)Ljava/lang/String;
+		ARG 0 text
+	METHOD filterText (Ljava/lang/String;Z)Ljava/lang/String;
+		ARG 0 text
+		ARG 1 allowLineBreaks
 	METHOD formatTickDuration (IF)Ljava/lang/String;
 		ARG 0 ticks
 		ARG 1 ticksPerSecond
+	METHOD isAllowedChatCharacter (C)Z
+		ARG 0 character
+	METHOD isBlank (Ljava/lang/String;)Z
+		ARG 0 string
 	METHOD isNullOrEmpty (Ljava/lang/String;)Z
 		COMMENT Returns a value indicating whether the given string is null or empty.
 		ARG 0 string
+	METHOD isValidPlayerName (Ljava/lang/String;)Z
+		ARG 0 playerName
+	METHOD isWhitespace (I)Z
+		ARG 0 character
 	METHOD lineCount (Ljava/lang/String;)I
 		ARG 0 string
 	METHOD stripColor (Ljava/lang/String;)Ljava/lang/String;

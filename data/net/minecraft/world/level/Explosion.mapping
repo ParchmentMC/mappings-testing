@@ -1,12 +1,12 @@
 CLASS net/minecraft/world/level/Explosion
-	METHOD <init> (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/Entity;DDDFLjava/util/List;Lnet/minecraft/world/level/Explosion$BlockInteraction;Lnet/minecraft/core/particles/ParticleOptions;Lnet/minecraft/core/particles/ParticleOptions;Lnet/minecraft/sounds/SoundEvent;)V
+	METHOD <init> (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/Entity;DDDFLjava/util/List;Lnet/minecraft/world/level/Explosion$BlockInteraction;Lnet/minecraft/core/particles/ParticleOptions;Lnet/minecraft/core/particles/ParticleOptions;Lnet/minecraft/core/Holder;)V
 		ARG 1 level
 		ARG 2 source
 		ARG 3 x
 		ARG 5 y
 		ARG 7 z
 		ARG 9 radius
-		ARG 10 positions
+		ARG 10 toBlow
 		ARG 11 blockInteraction
 		ARG 12 smallExplosionParticles
 		ARG 13 largeExplosionParticles
@@ -30,7 +30,7 @@ CLASS net/minecraft/world/level/Explosion
 		ARG 10 fire
 		ARG 11 blockInteraction
 		ARG 12 positions
-	METHOD <init> (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/damagesource/DamageSource;Lnet/minecraft/world/level/ExplosionDamageCalculator;DDDFZLnet/minecraft/world/level/Explosion$BlockInteraction;Lnet/minecraft/core/particles/ParticleOptions;Lnet/minecraft/core/particles/ParticleOptions;Lnet/minecraft/sounds/SoundEvent;)V
+	METHOD <init> (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/damagesource/DamageSource;Lnet/minecraft/world/level/ExplosionDamageCalculator;DDDFZLnet/minecraft/world/level/Explosion$BlockInteraction;Lnet/minecraft/core/particles/ParticleOptions;Lnet/minecraft/core/particles/ParticleOptions;Lnet/minecraft/core/Holder;)V
 		ARG 1 level
 		ARG 2 source
 		ARG 3 damageSource

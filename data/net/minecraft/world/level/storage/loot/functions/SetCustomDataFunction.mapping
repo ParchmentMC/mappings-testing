@@ -1,0 +1,6 @@
+CLASS net/minecraft/world/level/storage/loot/functions/SetCustomDataFunction
+	METHOD <init> (Ljava/util/List;Lnet/minecraft/nbt/CompoundTag;)V
+		ARG 1 conditions
+		ARG 2 tag
+	METHOD setCustomData (Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/level/storage/loot/functions/LootItemConditionalFunction$Builder;
+		ARG 0 tag

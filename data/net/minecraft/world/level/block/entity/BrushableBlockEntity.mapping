@@ -10,9 +10,9 @@ CLASS net/minecraft/world/level/block/entity/BrushableBlockEntity
 		ARG 1 player
 	METHOD dropContent (Lnet/minecraft/world/entity/player/Player;)V
 		ARG 1 player
-	METHOD setLootTable (Lnet/minecraft/resources/ResourceLocation;J)V
+	METHOD setLootTable (Lnet/minecraft/resources/ResourceKey;J)V
 		ARG 1 lootTable
-		ARG 2 lootTableSeed
+		ARG 2 seed
 	METHOD tryLoadLootTable (Lnet/minecraft/nbt/CompoundTag;)Z
 		ARG 1 tag
 	METHOD trySaveLootTable (Lnet/minecraft/nbt/CompoundTag;)Z

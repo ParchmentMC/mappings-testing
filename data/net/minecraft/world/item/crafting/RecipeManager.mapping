@@ -1,17 +1,23 @@
 CLASS net/minecraft/world/item/crafting/RecipeManager
+	METHOD <init> (Lnet/minecraft/core/HolderLookup$Provider;)V
+		ARG 1 registries
 	METHOD apply (Ljava/util/Map;Lnet/minecraft/server/packs/resources/ResourceManager;Lnet/minecraft/util/profiling/ProfilerFiller;)V
 		ARG 1 object
 		ARG 2 resourceManager
 		ARG 3 profiler
 	METHOD byKey (Lnet/minecraft/resources/ResourceLocation;)Ljava/util/Optional;
 		ARG 1 recipeId
-	METHOD byType (Lnet/minecraft/world/item/crafting/RecipeType;)Ljava/util/Map;
-		ARG 1 recipeType
+	METHOD byKeyTyped (Lnet/minecraft/world/item/crafting/RecipeType;Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/world/item/crafting/RecipeHolder;
+		ARG 1 type
+		ARG 2 name
+	METHOD byType (Lnet/minecraft/world/item/crafting/RecipeType;)Ljava/util/Collection;
+		ARG 1 type
 	METHOD createCheck (Lnet/minecraft/world/item/crafting/RecipeType;)Lnet/minecraft/world/item/crafting/RecipeManager$CachedCheck;
 		ARG 0 recipeType
-	METHOD fromJson (Lnet/minecraft/resources/ResourceLocation;Lcom/google/gson/JsonObject;)Lnet/minecraft/world/item/crafting/RecipeHolder;
+	METHOD fromJson (Lnet/minecraft/resources/ResourceLocation;Lcom/google/gson/JsonObject;Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/world/item/crafting/RecipeHolder;
 		ARG 0 recipeId
 		ARG 1 json
+		ARG 2 registries
 	METHOD getAllRecipesFor (Lnet/minecraft/world/item/crafting/RecipeType;)Ljava/util/List;
 		ARG 1 recipeType
 	METHOD getRecipeFor (Lnet/minecraft/world/item/crafting/RecipeType;Lnet/minecraft/world/Container;Lnet/minecraft/world/level/Level;)Ljava/util/Optional;
@@ -31,10 +37,6 @@ CLASS net/minecraft/world/item/crafting/RecipeManager
 		ARG 1 recipeType
 		ARG 2 inventory
 		ARG 3 level
-	METHOD lambda$apply$0 (Lnet/minecraft/world/item/crafting/RecipeType;)Lcom/google/common/collect/ImmutableMap$Builder;
-		ARG 0 type
-	METHOD lambda$apply$1 (Ljava/util/Map$Entry;)Ljava/util/Map;
-		ARG 0 entry
 	METHOD replaceRecipes (Ljava/lang/Iterable;)V
 		ARG 1 recipes
 	CLASS CachedCheck

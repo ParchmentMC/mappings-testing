@@ -4,7 +4,7 @@ CLASS net/minecraft/world/level/levelgen/DensityFunctions
 		ARG 1 argument2
 	METHOD blendDensity (Lnet/minecraft/world/level/levelgen/DensityFunction;)Lnet/minecraft/world/level/levelgen/DensityFunction;
 		ARG 0 input
-	METHOD bootstrap (Lnet/minecraft/core/Registry;)Lcom/mojang/serialization/Codec;
+	METHOD bootstrap (Lnet/minecraft/core/Registry;)Lcom/mojang/serialization/MapCodec;
 		ARG 0 registry
 	METHOD cache2d (Lnet/minecraft/world/level/levelgen/DensityFunction;)Lnet/minecraft/world/level/levelgen/DensityFunction;
 		ARG 0 wrapped
@@ -26,8 +26,6 @@ CLASS net/minecraft/world/level/levelgen/DensityFunctions
 		ARG 0 wrapped
 	METHOD lambda$doubleFunctionArgumentCodec$3 (Ljava/util/function/Function;Ljava/util/function/Function;Ljava/util/function/BiFunction;Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 3 instance
-	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/DensityFunction;)Lcom/mojang/serialization/Codec;
-		ARG 0 type
 	METHOD lerp (Lnet/minecraft/world/level/levelgen/DensityFunction;DLnet/minecraft/world/level/levelgen/DensityFunction;)Lnet/minecraft/world/level/levelgen/DensityFunction;
 		ARG 0 deltaFunction
 		ARG 1 min
@@ -84,7 +82,7 @@ CLASS net/minecraft/world/level/levelgen/DensityFunctions
 		ARG 3 maxExclusive
 		ARG 5 whenInRange
 		ARG 6 whenOutOfRange
-	METHOD register (Lnet/minecraft/core/Registry;Ljava/lang/String;Lnet/minecraft/util/KeyDispatchDataCodec;)Lcom/mojang/serialization/Codec;
+	METHOD register (Lnet/minecraft/core/Registry;Ljava/lang/String;Lnet/minecraft/util/KeyDispatchDataCodec;)Lcom/mojang/serialization/MapCodec;
 		ARG 0 registry
 		ARG 1 name
 		ARG 2 codec

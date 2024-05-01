@@ -28,8 +28,8 @@ CLASS net/minecraft/advancements/critereon/PlayerPredicate
 			ARG 1 type
 			ARG 2 value
 			ARG 3 range
-		METHOD createTypedCodec (Lnet/minecraft/stats/StatType;)Lcom/mojang/serialization/Codec;
-			ARG 0 type
+		METHOD createTypedCodec (Lnet/minecraft/stats/StatType;)Lcom/mojang/serialization/MapCodec;
+			ARG 0 statType
 		METHOD matches (Lnet/minecraft/stats/StatsCounter;)Z
 			ARG 1 statsCounter
 	CLASS AdvancementDonePredicate

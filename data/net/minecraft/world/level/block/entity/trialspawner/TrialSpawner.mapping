@@ -1,28 +1,42 @@
 CLASS net/minecraft/world/level/block/entity/trialspawner/TrialSpawner
-	METHOD <init> (Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawner$StateAccessor;Lnet/minecraft/world/level/block/entity/trialspawner/PlayerDetector;)V
+	METHOD <init> (Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawner$StateAccessor;Lnet/minecraft/world/level/block/entity/trialspawner/PlayerDetector;Lnet/minecraft/world/level/block/entity/trialspawner/PlayerDetector$EntitySelector;)V
 		ARG 1 stateAccessor
 		ARG 2 playerDetector
-	METHOD <init> (Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawnerConfig;Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawnerData;Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawner$StateAccessor;Lnet/minecraft/world/level/block/entity/trialspawner/PlayerDetector;)V
-		ARG 1 config
-		ARG 2 data
-		ARG 3 stateAccessor
-		ARG 4 playerDetector
-	METHOD addDetectPlayerParticles (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;I)V
+		ARG 3 entitySelector
+	METHOD <init> (Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawnerConfig;Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawnerConfig;Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawnerData;IILnet/minecraft/world/level/block/entity/trialspawner/TrialSpawner$StateAccessor;Lnet/minecraft/world/level/block/entity/trialspawner/PlayerDetector;Lnet/minecraft/world/level/block/entity/trialspawner/PlayerDetector$EntitySelector;)V
+		ARG 1 normalConfig
+		ARG 2 ominousConfig
+		ARG 3 data
+		ARG 4 targetCooldownLength
+		ARG 5 requiredPlayerRange
+		ARG 6 stateAccessor
+		ARG 7 playerDetector
+		ARG 8 entitySelector
+	METHOD addBecomeOminousParticles (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)V
 		ARG 0 level
 		ARG 1 pos
 		ARG 2 random
-		ARG 3 data
+	METHOD addDetectPlayerParticles (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;ILnet/minecraft/core/particles/ParticleOptions;)V
+		ARG 0 level
+		ARG 1 pos
+		ARG 2 random
+		ARG 3 type
+		ARG 4 particle
 	METHOD addEjectItemParticles (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)V
 		ARG 0 level
 		ARG 1 pos
 		ARG 2 random
-	METHOD addSpawnParticles (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)V
+	METHOD addSpawnParticles (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;Lnet/minecraft/core/particles/SimpleParticleType;)V
 		ARG 0 level
 		ARG 1 pos
 		ARG 2 random
+		ARG 3 particleType
+	METHOD applyOminous (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;)V
+		ARG 1 level
+		ARG 2 pos
 	METHOD canSpawnInLevel (Lnet/minecraft/world/level/Level;)Z
 		ARG 1 level
-	METHOD ejectReward (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/resources/ResourceLocation;)V
+	METHOD ejectReward (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/resources/ResourceKey;)V
 		ARG 1 level
 		ARG 2 pos
 		ARG 3 lootTable
@@ -30,6 +44,15 @@ CLASS net/minecraft/world/level/block/entity/trialspawner/TrialSpawner
 		ARG 0 level
 		ARG 1 spawnerPos
 		ARG 2 mobPos
+	METHOD lambda$codec$1 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 1 instance
+	METHOD lambda$spawnMob$2 (DDDLnet/minecraft/util/RandomSource;Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/entity/Entity;
+		ARG 7 entity
+	METHOD lambda$tickServer$3 (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Ljava/util/UUID;)Z
+		ARG 2 mob
+	METHOD removeOminous (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;)V
+		ARG 1 level
+		ARG 2 pos
 	METHOD setPlayerDetector (Lnet/minecraft/world/level/block/entity/trialspawner/PlayerDetector;)V
 		ARG 1 playerDetector
 	METHOD setState (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawnerState;)V
@@ -42,12 +65,19 @@ CLASS net/minecraft/world/level/block/entity/trialspawner/TrialSpawner
 	METHOD spawnMob (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;)Ljava/util/Optional;
 		ARG 1 level
 		ARG 2 pos
-	METHOD tickClient (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)V
+	METHOD tickClient (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Z)V
 		ARG 1 level
 		ARG 2 pos
-	METHOD tickServer (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;)V
+		ARG 3 isOminous
+	METHOD tickServer (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Z)V
 		ARG 1 level
 		ARG 2 pos
+		ARG 3 isOminous
+	CLASS FlameParticle
+		METHOD <init> (Ljava/lang/String;ILnet/minecraft/core/particles/SimpleParticleType;)V
+			ARG 3 particleType
+		METHOD decode (I)Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawner$FlameParticle;
+			ARG 0 id
 	CLASS StateAccessor
 		METHOD setState (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawnerState;)V
 			ARG 1 level

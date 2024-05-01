@@ -20,8 +20,8 @@ CLASS com/mojang/blaze3d/vertex/VertexConsumer
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
-	METHOD normal (Lorg/joml/Matrix3f;FFF)Lcom/mojang/blaze3d/vertex/VertexConsumer;
-		ARG 1 matrix
+	METHOD normal (Lcom/mojang/blaze3d/vertex/PoseStack$Pose;FFF)Lcom/mojang/blaze3d/vertex/VertexConsumer;
+		ARG 1 pose
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
@@ -30,24 +30,25 @@ CLASS com/mojang/blaze3d/vertex/VertexConsumer
 	METHOD overlayCoords (II)Lcom/mojang/blaze3d/vertex/VertexConsumer;
 		ARG 1 u
 		ARG 2 v
-	METHOD putBulkData (Lcom/mojang/blaze3d/vertex/PoseStack$Pose;Lnet/minecraft/client/renderer/block/model/BakedQuad;FFFII)V
-		ARG 1 poseEntry
+	METHOD putBulkData (Lcom/mojang/blaze3d/vertex/PoseStack$Pose;Lnet/minecraft/client/renderer/block/model/BakedQuad;FFFFII)V
+		ARG 1 pose
 		ARG 2 quad
 		ARG 3 red
 		ARG 4 green
 		ARG 5 blue
-		ARG 6 combinedLight
-		ARG 7 combinedOverlay
-	METHOD putBulkData (Lcom/mojang/blaze3d/vertex/PoseStack$Pose;Lnet/minecraft/client/renderer/block/model/BakedQuad;[FFFF[IIZ)V
-		ARG 1 poseEntry
+		ARG 6 alpha
+		ARG 7 packedLight
+		ARG 8 packedOverlay
+	METHOD putBulkData (Lcom/mojang/blaze3d/vertex/PoseStack$Pose;Lnet/minecraft/client/renderer/block/model/BakedQuad;[FFFFF[IIZ)V
+		ARG 1 pose
 		ARG 2 quad
-		ARG 3 colorMuls
+		ARG 3 brightness
 		ARG 4 red
 		ARG 5 green
 		ARG 6 blue
-		ARG 7 combinedLights
-		ARG 8 combinedOverlay
-		ARG 9 mulColor
+		ARG 7 alpha
+		ARG 8 lightmap
+		ARG 9 packedOverlay
 	METHOD uv (FF)Lcom/mojang/blaze3d/vertex/VertexConsumer;
 		ARG 1 u
 		ARG 2 v
@@ -75,6 +76,11 @@ CLASS com/mojang/blaze3d/vertex/VertexConsumer
 		ARG 12 normalX
 		ARG 13 normalY
 		ARG 14 normalZ
+	METHOD vertex (Lcom/mojang/blaze3d/vertex/PoseStack$Pose;FFF)Lcom/mojang/blaze3d/vertex/VertexConsumer;
+		ARG 1 pose
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
 	METHOD vertex (Lorg/joml/Matrix4f;FFF)Lcom/mojang/blaze3d/vertex/VertexConsumer;
 		ARG 1 matrix
 		ARG 2 x

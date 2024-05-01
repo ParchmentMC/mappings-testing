@@ -15,6 +15,3 @@ CLASS net/minecraft/world/item/InstrumentItem
 		ARG 0 stack
 		ARG 1 instrumentTag
 		ARG 2 random
-	METHOD setSoundVariantId (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/core/Holder;)V
-		ARG 0 stack
-		ARG 1 soundVariantId

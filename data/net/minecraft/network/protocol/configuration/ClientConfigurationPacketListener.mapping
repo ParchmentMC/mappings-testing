@@ -5,3 +5,7 @@ CLASS net/minecraft/network/protocol/configuration/ClientConfigurationPacketList
 		ARG 1 packet
 	METHOD handleRegistryData (Lnet/minecraft/network/protocol/configuration/ClientboundRegistryDataPacket;)V
 		ARG 1 packet
+	METHOD handleResetChat (Lnet/minecraft/network/protocol/configuration/ClientboundResetChatPacket;)V
+		ARG 1 packet
+	METHOD handleSelectKnownPacks (Lnet/minecraft/network/protocol/configuration/ClientboundSelectKnownPacks;)V
+		ARG 1 packet

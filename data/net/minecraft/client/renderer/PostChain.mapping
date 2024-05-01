@@ -1,13 +1,14 @@
 CLASS net/minecraft/client/renderer/PostChain
-	METHOD <init> (Lnet/minecraft/client/renderer/texture/TextureManager;Lnet/minecraft/server/packs/resources/ResourceManager;Lcom/mojang/blaze3d/pipeline/RenderTarget;Lnet/minecraft/resources/ResourceLocation;)V
+	METHOD <init> (Lnet/minecraft/client/renderer/texture/TextureManager;Lnet/minecraft/server/packs/resources/ResourceProvider;Lcom/mojang/blaze3d/pipeline/RenderTarget;Lnet/minecraft/resources/ResourceLocation;)V
 		ARG 1 textureManager
-		ARG 2 resourceManager
+		ARG 2 resourceProvider
 		ARG 3 screenTarget
-		ARG 4 name
-	METHOD addPass (Ljava/lang/String;Lcom/mojang/blaze3d/pipeline/RenderTarget;Lcom/mojang/blaze3d/pipeline/RenderTarget;)Lnet/minecraft/client/renderer/PostPass;
-		ARG 1 programName
-		ARG 2 framebuffer
-		ARG 3 framebufferOut
+		ARG 4 resourceLocation
+	METHOD addPass (Ljava/lang/String;Lcom/mojang/blaze3d/pipeline/RenderTarget;Lcom/mojang/blaze3d/pipeline/RenderTarget;Z)Lnet/minecraft/client/renderer/PostPass;
+		ARG 1 name
+		ARG 2 inTarget
+		ARG 3 outTarget
+		ARG 4 useLinearFilter
 	METHOD addTempTarget (Ljava/lang/String;II)V
 		ARG 1 name
 		ARG 2 width
@@ -31,3 +32,8 @@ CLASS net/minecraft/client/renderer/PostChain
 	METHOD resize (II)V
 		ARG 1 width
 		ARG 2 height
+	METHOD setFilterMode (I)V
+		ARG 1 filterMode
+	METHOD setUniform (Ljava/lang/String;F)V
+		ARG 1 name
+		ARG 2 backgroundBlurriness

@@ -1,0 +1,15 @@
+CLASS net/minecraft/client/gui/font/providers/FreeTypeUtil
+	METHOD assertError (ILjava/lang/String;)V
+		ARG 0 errorId
+		ARG 1 action
+	METHOD checkError (ILjava/lang/String;)Z
+		ARG 0 errorId
+		ARG 1 action
+	METHOD describeError (I)Ljava/lang/String;
+		ARG 0 errorId
+	METHOD setVector (Lorg/lwjgl/util/freetype/FT_Vector;FF)Lorg/lwjgl/util/freetype/FT_Vector;
+		ARG 0 vector
+		ARG 1 x
+		ARG 2 y
+	METHOD x (Lorg/lwjgl/util/freetype/FT_Vector;)F
+		ARG 0 vector

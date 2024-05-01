@@ -9,6 +9,10 @@ CLASS net/minecraft/world/level/block/entity/trialspawner/TrialSpawnerData
 		ARG 9 ejectingLootTable
 	METHOD countAdditionalPlayers (Lnet/minecraft/core/BlockPos;)I
 		ARG 1 pos
+	METHOD getDispensingItems (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawnerConfig;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/util/random/SimpleWeightedRandomList;
+		ARG 1 level
+		ARG 2 config
+		ARG 3 pos
 	METHOD getOrCreateDisplayEntity (Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawner;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawnerState;)Lnet/minecraft/world/entity/Entity;
 		ARG 1 spawner
 		ARG 2 level
@@ -21,28 +25,39 @@ CLASS net/minecraft/world/level/block/entity/trialspawner/TrialSpawnerData
 	METHOD hasFinishedSpawningAllMobs (Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawnerConfig;I)Z
 		ARG 1 config
 		ARG 2 players
+	METHOD hasMobToSpawn (Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawner;Lnet/minecraft/util/RandomSource;)Z
+		ARG 1 trialSpawner
+		ARG 2 random
 	METHOD isCooldownFinished (Lnet/minecraft/server/level/ServerLevel;)Z
 		ARG 1 level
-	METHOD isReadyToEjectItems (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawnerConfig;F)Z
+	METHOD isReadyToEjectItems (Lnet/minecraft/server/level/ServerLevel;FI)Z
 		ARG 1 level
-		ARG 2 config
-		ARG 3 timeBetweenEjections
-	METHOD isReadyToOpenShutter (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawnerConfig;F)Z
+		ARG 2 delay
+		ARG 3 targetCooldownLength
+	METHOD isReadyToOpenShutter (Lnet/minecraft/server/level/ServerLevel;FI)Z
 		ARG 1 level
-		ARG 2 config
-		ARG 3 delay
+		ARG 2 delay
+		ARG 3 targetCooldownLength
 	METHOD isReadyToSpawnNextMob (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawnerConfig;I)Z
 		ARG 1 level
 		ARG 2 config
 		ARG 3 players
+	METHOD lambda$resetAfterBecomingOminous$8 (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/Entity;)V
+		ARG 1 mob
+	METHOD lowResolutionPosition (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;)J
+		ARG 0 level
+		ARG 1 pos
+	METHOD resetAfterBecomingOminous (Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawner;Lnet/minecraft/server/level/ServerLevel;)V
+		ARG 1 spawner
+		ARG 2 level
 	METHOD setEntityId (Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawner;Lnet/minecraft/util/RandomSource;Lnet/minecraft/world/entity/EntityType;)V
 		ARG 1 spawner
 		ARG 2 random
 		ARG 3 entityType
-	METHOD setSpawnPotentialsFromConfig (Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawnerConfig;)V
-		ARG 1 config
-	METHOD tryDetectPlayers (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/entity/trialspawner/PlayerDetector;I)V
+	METHOD transformBadOmenIntoTrialOmen (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/effect/MobEffectInstance;)V
+		ARG 1 player
+		ARG 2 effectInstance
+	METHOD tryDetectPlayers (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawner;)V
 		ARG 1 level
 		ARG 2 pos
-		ARG 3 platerDetector
-		ARG 4 players
+		ARG 3 spawner

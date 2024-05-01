@@ -1,5 +1,5 @@
 CLASS net/minecraft/client/resources/MobEffectTextureManager
 	METHOD <init> (Lnet/minecraft/client/renderer/texture/TextureManager;)V
 		ARG 1 textureManager
-	METHOD get (Lnet/minecraft/world/effect/MobEffect;)Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;
+	METHOD get (Lnet/minecraft/core/Holder;)Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;
 		ARG 1 effect

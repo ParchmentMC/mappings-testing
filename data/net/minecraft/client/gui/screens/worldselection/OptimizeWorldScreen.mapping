@@ -1,11 +1,11 @@
 CLASS net/minecraft/client/gui/screens/worldselection/OptimizeWorldScreen
-	METHOD <init> (Lit/unimi/dsi/fastutil/booleans/BooleanConsumer;Lcom/mojang/datafixers/DataFixer;Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;Lnet/minecraft/world/level/LevelSettings;ZLnet/minecraft/core/Registry;)V
+	METHOD <init> (Lit/unimi/dsi/fastutil/booleans/BooleanConsumer;Lcom/mojang/datafixers/DataFixer;Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;Lnet/minecraft/world/level/LevelSettings;ZLnet/minecraft/core/RegistryAccess;)V
 		ARG 1 callback
 		ARG 2 dataFixer
 		ARG 3 levelStorage
 		ARG 4 levelSettings
 		ARG 5 eraseCache
-		ARG 6 dimensions
+		ARG 6 registryAccess
 	METHOD create (Lnet/minecraft/client/Minecraft;Lit/unimi/dsi/fastutil/booleans/BooleanConsumer;Lcom/mojang/datafixers/DataFixer;Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;Z)Lnet/minecraft/client/gui/screens/worldselection/OptimizeWorldScreen;
 		ARG 0 minecraft
 		ARG 1 callback
@@ -14,3 +14,5 @@ CLASS net/minecraft/client/gui/screens/worldselection/OptimizeWorldScreen
 		ARG 4 eraseCache
 	METHOD lambda$init$1 (Lnet/minecraft/client/gui/components/Button;)V
 		ARG 1 button
+	METHOD lambda$static$0 (Lit/unimi/dsi/fastutil/objects/Reference2IntOpenHashMap;)V
+		ARG 0 map

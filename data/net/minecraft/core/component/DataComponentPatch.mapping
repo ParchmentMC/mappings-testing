@@ -1,0 +1,24 @@
+CLASS net/minecraft/core/component/DataComponentPatch
+	METHOD <init> (Lit/unimi/dsi/fastutil/objects/Reference2ObjectMap;)V
+		ARG 1 map
+	METHOD equals (Ljava/lang/Object;)Z
+		ARG 1 other
+	METHOD forget (Ljava/util/function/Predicate;)Lnet/minecraft/core/component/DataComponentPatch;
+		ARG 1 predicate
+	METHOD get (Lnet/minecraft/core/component/DataComponentType;)Ljava/util/Optional;
+		ARG 1 component
+	METHOD toString (Lit/unimi/dsi/fastutil/objects/Reference2ObjectMap;)Ljava/lang/String;
+		ARG 0 map
+	CLASS 1
+		METHOD encodeComponent (Lnet/minecraft/network/RegistryFriendlyByteBuf;Lnet/minecraft/core/component/DataComponentType;Ljava/lang/Object;)V
+			ARG 0 buffer
+			ARG 1 component
+			ARG 2 value
+	CLASS Builder
+		METHOD remove (Lnet/minecraft/core/component/DataComponentType;)Lnet/minecraft/core/component/DataComponentPatch$Builder;
+			ARG 1 component
+		METHOD set (Lnet/minecraft/core/component/DataComponentType;Ljava/lang/Object;)Lnet/minecraft/core/component/DataComponentPatch$Builder;
+			ARG 1 component
+			ARG 2 value
+		METHOD set (Lnet/minecraft/core/component/TypedDataComponent;)Lnet/minecraft/core/component/DataComponentPatch$Builder;
+			ARG 1 component

@@ -1,0 +1,6 @@
+CLASS net/minecraft/network/RegistryFriendlyByteBuf
+	METHOD <init> (Lio/netty/buffer/ByteBuf;Lnet/minecraft/core/RegistryAccess;)V
+		ARG 1 source
+		ARG 2 registryAccess
+	METHOD decorator (Lnet/minecraft/core/RegistryAccess;)Ljava/util/function/Function;
+		ARG 0 registry

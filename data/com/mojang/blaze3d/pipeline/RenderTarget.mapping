@@ -39,3 +39,6 @@ CLASS com/mojang/blaze3d/pipeline/RenderTarget
 		ARG 4 alpha
 	METHOD setFilterMode (I)V
 		ARG 1 filterMode
+	METHOD setFilterMode (IZ)V
+		ARG 1 filterMode
+		ARG 2 force

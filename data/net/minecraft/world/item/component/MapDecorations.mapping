@@ -1,0 +1,7 @@
+CLASS net/minecraft/world/item/component/MapDecorations
+	METHOD withDecoration (Ljava/lang/String;Lnet/minecraft/world/item/component/MapDecorations$Entry;)Lnet/minecraft/world/item/component/MapDecorations;
+		ARG 1 type
+		ARG 2 entry
+	CLASS Entry
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance

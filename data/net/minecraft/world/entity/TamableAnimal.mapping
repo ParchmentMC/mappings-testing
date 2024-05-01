@@ -22,8 +22,9 @@ CLASS net/minecraft/world/entity/TamableAnimal
 		ARG 1 orderedToSit
 	METHOD setOwnerUUID (Ljava/util/UUID;)V
 		ARG 1 uuid
-	METHOD setTame (Z)V
-		ARG 1 tamed
+	METHOD setTame (ZZ)V
+		ARG 1 tame
+		ARG 2 applyTamingSideEffects
 	METHOD spawnTamingParticles (Z)V
 		COMMENT Play the taming effect, will either be hearts or smoke depending on status
 		ARG 1 tamed

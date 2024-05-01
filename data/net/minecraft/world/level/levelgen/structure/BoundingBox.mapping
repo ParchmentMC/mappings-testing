@@ -42,6 +42,10 @@ CLASS net/minecraft/world/level/levelgen/structure/BoundingBox
 	METHOD inflatedBy (I)Lnet/minecraft/world/level/levelgen/structure/BoundingBox;
 		COMMENT Expands this box by a fixed {@code value} in all directions.
 		ARG 1 value
+	METHOD inflatedBy (III)Lnet/minecraft/world/level/levelgen/structure/BoundingBox;
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
 	METHOD intersects (IIII)Z
 		COMMENT @return {@code true} if this bounding box intersects the horizontal x/z region described by the min and max parameters.
 		ARG 1 minX

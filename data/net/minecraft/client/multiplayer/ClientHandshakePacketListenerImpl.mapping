@@ -1,5 +1,5 @@
 CLASS net/minecraft/client/multiplayer/ClientHandshakePacketListenerImpl
-	METHOD <init> (Lnet/minecraft/network/Connection;Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/multiplayer/ServerData;Lnet/minecraft/client/gui/screens/Screen;ZLjava/time/Duration;Ljava/util/function/Consumer;)V
+	METHOD <init> (Lnet/minecraft/network/Connection;Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/multiplayer/ServerData;Lnet/minecraft/client/gui/screens/Screen;ZLjava/time/Duration;Ljava/util/function/Consumer;Lnet/minecraft/client/multiplayer/TransferState;)V
 		ARG 1 connection
 		ARG 2 minecraft
 		ARG 3 serverData
@@ -7,6 +7,7 @@ CLASS net/minecraft/client/multiplayer/ClientHandshakePacketListenerImpl
 		ARG 5 newWorld
 		ARG 6 worldLoadDuration
 		ARG 7 updateStatus
+		ARG 8 cookies
 	METHOD authenticateServer (Ljava/lang/String;)Lnet/minecraft/network/chat/Component;
 		ARG 1 serverHash
 	METHOD handleCompression (Lnet/minecraft/network/protocol/login/ClientboundLoginCompressionPacket;)V
@@ -24,6 +25,10 @@ CLASS net/minecraft/client/multiplayer/ClientHandshakePacketListenerImpl
 	METHOD onDisconnect (Lnet/minecraft/network/chat/Component;)V
 		COMMENT Invoked when disconnecting, the parameter is a ChatComponent describing the reason for termination
 		ARG 1 reason
+	METHOD setEncryption (Lnet/minecraft/network/protocol/login/ServerboundKeyPacket;Ljavax/crypto/Cipher;Ljavax/crypto/Cipher;)V
+		ARG 1 keyPacket
+		ARG 2 decryptingCypher
+		ARG 3 encryptingCypher
 	METHOD setMinigameName (Ljava/lang/String;)V
 		ARG 1 minigameName
 	METHOD switchState (Lnet/minecraft/client/multiplayer/ClientHandshakePacketListenerImpl$State;)V

@@ -17,5 +17,8 @@ CLASS net/minecraft/world/entity/SlotAccess
 		ARG 0 stack
 	METHOD lambda$forEquipmentSlot$1 (Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 0 stack
+	METHOD of (Ljava/util/function/Supplier;Ljava/util/function/Consumer;)Lnet/minecraft/world/entity/SlotAccess;
+		ARG 0 getter
+		ARG 1 setter
 	METHOD set (Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 1 carried

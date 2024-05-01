@@ -70,9 +70,6 @@ CLASS net/minecraft/nbt/NbtOps
 		ARG 2 removeKey
 	METHOD tryUnwrap (Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/nbt/Tag;
 		ARG 0 tag
-	CLASS 1
-		METHOD lambda$entries$0 (Lnet/minecraft/nbt/CompoundTag;Ljava/lang/String;)Lcom/mojang/datafixers/util/Pair;
-			ARG 2 key
 	CLASS ListCollector
 		METHOD accept (Lnet/minecraft/nbt/Tag;)Lnet/minecraft/nbt/NbtOps$ListCollector;
 			ARG 1 tag

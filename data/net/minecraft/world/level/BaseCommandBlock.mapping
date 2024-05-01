@@ -5,8 +5,6 @@ CLASS net/minecraft/world/level/BaseCommandBlock
 		COMMENT The command stored in the command block.
 	FIELD lastOutput Lnet/minecraft/network/chat/Component;
 		COMMENT The previously run command.
-	FIELD name Lnet/minecraft/network/chat/Component;
-		COMMENT The custom name of the command block. (defaults to "@")
 	FIELD successCount I
 		COMMENT The number of successful commands run. (used for redstone output)
 	METHOD getCommand ()Ljava/lang/String;
@@ -15,20 +13,21 @@ CLASS net/minecraft/world/level/BaseCommandBlock
 		COMMENT Returns the lastOutput.
 	METHOD getSuccessCount ()I
 		COMMENT Returns the {@code successCount} int.
-	METHOD load (Lnet/minecraft/nbt/CompoundTag;)V
-		COMMENT Reads NBT formatting and stored data into variables.
-		ARG 1 nbt
+	METHOD load (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/core/HolderLookup$Provider;)V
+		ARG 1 tag
+		ARG 2 levelRegistry
 	METHOD performCommand (Lnet/minecraft/world/level/Level;)Z
 		ARG 1 level
-	METHOD save (Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/nbt/CompoundTag;
-		ARG 1 compound
+	METHOD save (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/nbt/CompoundTag;
+		ARG 1 tag
+		ARG 2 levelRegistry
 	METHOD setCommand (Ljava/lang/String;)V
 		COMMENT Sets the command.
 		ARG 1 command
+	METHOD setCustomName (Lnet/minecraft/network/chat/Component;)V
+		ARG 1 customName
 	METHOD setLastOutput (Lnet/minecraft/network/chat/Component;)V
 		ARG 1 lastOutputMessage
-	METHOD setName (Lnet/minecraft/network/chat/Component;)V
-		ARG 1 name
 	METHOD setSuccessCount (I)V
 		ARG 1 successCount
 	METHOD setTrackOutput (Z)V

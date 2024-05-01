@@ -1,3 +1,5 @@
 CLASS net/minecraft/util/datafix/fixes/LegacyDragonFightFix
 	METHOD <init> (Lcom/mojang/datafixers/schemas/Schema;)V
 		ARG 1 outputSchema
+	METHOD fixDragonFight (Lcom/mojang/serialization/Dynamic;)Lcom/mojang/serialization/Dynamic;
+		ARG 0 data

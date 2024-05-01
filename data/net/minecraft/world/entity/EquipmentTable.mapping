@@ -1,0 +1,8 @@
+CLASS net/minecraft/world/entity/EquipmentTable
+	METHOD createForAllSlots (F)Ljava/util/Map;
+		ARG 0 dropChance
+	METHOD createForAllSlots (Ljava/util/List;F)Ljava/util/Map;
+		ARG 0 equipmentSlots
+		ARG 1 dropChance
+	METHOD lambda$static$2 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

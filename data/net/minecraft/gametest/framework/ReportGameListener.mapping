@@ -1,12 +1,12 @@
 CLASS net/minecraft/gametest/framework/ReportGameListener
-	METHOD <init> (Lnet/minecraft/gametest/framework/GameTestInfo;Lnet/minecraft/gametest/framework/GameTestTicker;Lnet/minecraft/core/BlockPos;)V
-		ARG 1 testInfo
-		ARG 2 testTicker
-		ARG 3 pos
 	METHOD createBook (Ljava/lang/String;ZLjava/lang/String;)Lnet/minecraft/world/item/ItemStack;
 		ARG 0 testName
 		ARG 1 required
 		ARG 2 message
+	METHOD handleRetry (Lnet/minecraft/gametest/framework/GameTestInfo;Lnet/minecraft/gametest/framework/GameTestRunner;Z)V
+		ARG 1 testInfo
+		ARG 2 runner
+		ARG 3 passed
 	METHOD lambda$createBook$0 (Ljava/lang/StringBuffer;Ljava/lang/String;)V
 		ARG 1 subName
 	METHOD lambda$say$1 (Lnet/minecraft/server/level/ServerPlayer;)Z

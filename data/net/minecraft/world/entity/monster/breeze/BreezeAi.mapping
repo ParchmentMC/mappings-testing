@@ -3,5 +3,9 @@ CLASS net/minecraft/world/entity/monster/breeze/BreezeAi
 		ARG 0 brain
 	METHOD initFightActivity (Lnet/minecraft/world/entity/ai/Brain;)V
 		ARG 0 brain
+	METHOD initIdleActivity (Lnet/minecraft/world/entity/ai/Brain;)V
+		ARG 0 brain
 	METHOD makeBrain (Lnet/minecraft/world/entity/ai/Brain;)Lnet/minecraft/world/entity/ai/Brain;
 		ARG 0 brain
+	METHOD updateActivity (Lnet/minecraft/world/entity/monster/breeze/Breeze;)V
+		ARG 0 breeze

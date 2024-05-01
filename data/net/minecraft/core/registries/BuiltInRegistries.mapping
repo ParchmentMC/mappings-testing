@@ -1,35 +1,15 @@
 CLASS net/minecraft/core/registries/BuiltInRegistries
-	METHOD internalRegister (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/core/WritableRegistry;Lnet/minecraft/core/registries/BuiltInRegistries$RegistryBootstrap;Lcom/mojang/serialization/Lifecycle;)Lnet/minecraft/core/WritableRegistry;
+	METHOD internalRegister (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/core/WritableRegistry;Lnet/minecraft/core/registries/BuiltInRegistries$RegistryBootstrap;)Lnet/minecraft/core/WritableRegistry;
 		ARG 0 key
 		ARG 1 registry
 		ARG 2 bootstrap
-		ARG 3 lifecycle
-	METHOD lambda$createContents$55 (Lnet/minecraft/resources/ResourceLocation;Ljava/util/function/Supplier;)V
-		ARG 0 path
-		ARG 1 loader
-	METHOD lambda$validate$56 (Lnet/minecraft/core/Registry;Lnet/minecraft/core/Registry;)V
-		ARG 1 value
-	METHOD registerDefaulted (Lnet/minecraft/resources/ResourceKey;Ljava/lang/String;Lcom/mojang/serialization/Lifecycle;Lnet/minecraft/core/registries/BuiltInRegistries$RegistryBootstrap;)Lnet/minecraft/core/DefaultedRegistry;
-		ARG 0 key
-		ARG 1 defaultKey
-		ARG 2 lifecycle
-		ARG 3 bootstrap
 	METHOD registerDefaulted (Lnet/minecraft/resources/ResourceKey;Ljava/lang/String;Lnet/minecraft/core/registries/BuiltInRegistries$RegistryBootstrap;)Lnet/minecraft/core/DefaultedRegistry;
 		ARG 0 key
 		ARG 1 defaultKey
 		ARG 2 bootstrap
-	METHOD registerDefaultedWithIntrusiveHolders (Lnet/minecraft/resources/ResourceKey;Ljava/lang/String;Lcom/mojang/serialization/Lifecycle;Lnet/minecraft/core/registries/BuiltInRegistries$RegistryBootstrap;)Lnet/minecraft/core/DefaultedRegistry;
-		ARG 0 key
-		ARG 1 defaultKey
-		ARG 2 lifecycle
-		ARG 3 bootstrap
 	METHOD registerDefaultedWithIntrusiveHolders (Lnet/minecraft/resources/ResourceKey;Ljava/lang/String;Lnet/minecraft/core/registries/BuiltInRegistries$RegistryBootstrap;)Lnet/minecraft/core/DefaultedRegistry;
 		ARG 0 key
 		ARG 1 defaultKey
-		ARG 2 bootstrap
-	METHOD registerSimple (Lnet/minecraft/resources/ResourceKey;Lcom/mojang/serialization/Lifecycle;Lnet/minecraft/core/registries/BuiltInRegistries$RegistryBootstrap;)Lnet/minecraft/core/Registry;
-		ARG 0 key
-		ARG 1 lifecycle
 		ARG 2 bootstrap
 	METHOD registerSimple (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/core/registries/BuiltInRegistries$RegistryBootstrap;)Lnet/minecraft/core/Registry;
 		ARG 0 key

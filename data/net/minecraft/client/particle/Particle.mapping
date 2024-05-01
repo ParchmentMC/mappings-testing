@@ -52,3 +52,8 @@ CLASS net/minecraft/client/particle/Particle
 	METHOD setSize (FF)V
 		ARG 1 width
 		ARG 2 height
+	CLASS LifetimeAlpha
+		METHOD currentAlphaForAge (IIF)F
+			ARG 1 age
+			ARG 2 lifetime
+			ARG 3 partialTick

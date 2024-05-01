@@ -1,0 +1,17 @@
+CLASS net/minecraft/client/multiplayer/RegistryDataCollector
+	METHOD appendContents (Lnet/minecraft/resources/ResourceKey;Ljava/util/List;)V
+		ARG 1 registryKey
+		ARG 2 registryEntries
+	METHOD appendTags (Ljava/util/Map;)V
+		ARG 1 tags
+	METHOD collectGameRegistries (Lnet/minecraft/server/packs/resources/ResourceProvider;Lnet/minecraft/core/RegistryAccess;Z)Lnet/minecraft/core/RegistryAccess$Frozen;
+		ARG 1 resourceProvider
+		ARG 2 registryAccess
+		ARG 3 isMemoryConnection
+	CLASS ContentsCollector
+		METHOD append (Lnet/minecraft/resources/ResourceKey;Ljava/util/List;)V
+			ARG 1 registryKey
+			ARG 2 entries
+		METHOD loadRegistries (Lnet/minecraft/server/packs/resources/ResourceProvider;Lnet/minecraft/core/RegistryAccess;)Lnet/minecraft/core/RegistryAccess;
+			ARG 1 resourceProvider
+			ARG 2 registryAccess

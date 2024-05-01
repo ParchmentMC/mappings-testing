@@ -4,10 +4,6 @@ CLASS net/minecraft/world/level/storage/loot/functions/SetEnchantmentsFunction
 		ARG 1 conditions
 		ARG 2 enchantments
 		ARG 3 add
-	METHOD updateEnchantment (Ljava/util/Map;Lnet/minecraft/world/item/enchantment/Enchantment;I)V
-		ARG 0 existingEnchantments
-		ARG 1 enchantment
-		ARG 2 level
 	CLASS Builder
 		METHOD <init> (Z)V
 			ARG 1 add

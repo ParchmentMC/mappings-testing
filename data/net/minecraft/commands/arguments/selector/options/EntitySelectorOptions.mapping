@@ -110,8 +110,6 @@ CLASS net/minecraft/commands/arguments/selector/options/EntitySelectorOptions
 		ARG 0 parser
 	METHOD lambda$bootStrap$60 (Lnet/minecraft/commands/arguments/selector/EntitySelectorParser;)Z
 		ARG 0 parser
-	METHOD lambda$bootStrap$61 (Lnet/minecraft/resources/ResourceLocation;ZLnet/minecraft/world/entity/Entity;)Z
-		ARG 2 entity
 	METHOD lambda$bootStrap$62 (Lnet/minecraft/commands/arguments/selector/EntitySelectorParser;)V
 		ARG 0 parser
 	METHOD lambda$bootStrap$63 (Lnet/minecraft/commands/arguments/selector/EntitySelectorParser;)Z

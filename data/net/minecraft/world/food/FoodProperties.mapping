@@ -1,16 +1,14 @@
 CLASS net/minecraft/world/food/FoodProperties
-	METHOD <init> (IFZZZLjava/util/List;)V
-		ARG 1 nutrition
-		ARG 2 saturationModifier
-		ARG 3 isMeat
-		ARG 4 canAlwaysEat
-		ARG 5 fastFood
-		ARG 6 effects
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	CLASS Builder
 		METHOD effect (Lnet/minecraft/world/effect/MobEffectInstance;F)Lnet/minecraft/world/food/FoodProperties$Builder;
 			ARG 1 effect
 			ARG 2 probability
 		METHOD nutrition (I)Lnet/minecraft/world/food/FoodProperties$Builder;
 			ARG 1 nutrition
-		METHOD saturationMod (F)Lnet/minecraft/world/food/FoodProperties$Builder;
+		METHOD saturationModifier (F)Lnet/minecraft/world/food/FoodProperties$Builder;
 			ARG 1 saturationModifier
+	CLASS PossibleEffect
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance

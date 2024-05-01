@@ -2,3 +2,6 @@ CLASS net/minecraft/client/gui/font/providers/GlyphProviderDefinition
 	CLASS Loader
 		METHOD load (Lnet/minecraft/server/packs/resources/ResourceManager;)Lcom/mojang/blaze3d/font/GlyphProvider;
 			ARG 1 resourceManager
+	CLASS Conditional
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance

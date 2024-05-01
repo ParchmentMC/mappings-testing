@@ -1,7 +1,7 @@
 CLASS net/minecraft/world/level/storage/loot/LootContext
 	COMMENT LootContext stores various context information for loot generation.
 	COMMENT This includes the Level as well as any known {@link LootContextParam}s.
-	METHOD <init> (Lnet/minecraft/world/level/storage/loot/LootParams;Lnet/minecraft/util/RandomSource;Lnet/minecraft/world/level/storage/loot/LootDataResolver;)V
+	METHOD <init> (Lnet/minecraft/world/level/storage/loot/LootParams;Lnet/minecraft/util/RandomSource;Lnet/minecraft/core/HolderGetter$Provider;)V
 		ARG 1 params
 		ARG 2 random
 		ARG 3 lootDataResolver

@@ -1,0 +1,23 @@
+CLASS net/minecraft/world/item/component/ItemAttributeModifiers
+	METHOD compute (DLnet/minecraft/world/entity/EquipmentSlot;)D
+		ARG 1 baseValue
+		ARG 3 equipmentSlot
+	METHOD forEach (Lnet/minecraft/world/entity/EquipmentSlot;Ljava/util/function/BiConsumer;)V
+		ARG 1 equipmentSlot
+		ARG 2 action
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
+	METHOD withModifierAdded (Lnet/minecraft/core/Holder;Lnet/minecraft/world/entity/ai/attributes/AttributeModifier;Lnet/minecraft/world/entity/EquipmentSlotGroup;)Lnet/minecraft/world/item/component/ItemAttributeModifiers;
+		ARG 1 attribute
+		ARG 2 modifier
+		ARG 3 slot
+	METHOD withTooltip (Z)Lnet/minecraft/world/item/component/ItemAttributeModifiers;
+		ARG 1 showInTooltip
+	CLASS Entry
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
+	CLASS Builder
+		METHOD add (Lnet/minecraft/core/Holder;Lnet/minecraft/world/entity/ai/attributes/AttributeModifier;Lnet/minecraft/world/entity/EquipmentSlotGroup;)Lnet/minecraft/world/item/component/ItemAttributeModifiers$Builder;
+			ARG 1 attribute
+			ARG 2 modifier
+			ARG 3 slot

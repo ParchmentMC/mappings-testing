@@ -1,11 +1,26 @@
 CLASS net/minecraft/client/gui/components/debugchart/AbstractDebugChart
-	METHOD <init> (Lnet/minecraft/client/gui/Font;Lnet/minecraft/util/SampleLogger;)V
+	METHOD <init> (Lnet/minecraft/client/gui/Font;Lnet/minecraft/util/debugchart/SampleStorage;)V
 		ARG 1 font
-		ARG 2 logger
+		ARG 2 sampleStorage
+	METHOD drawAdditionalDimensions (Lnet/minecraft/client/gui/GuiGraphics;III)V
+		ARG 1 guiGraphics
+		ARG 2 height
+		ARG 3 x
+		ARG 4 index
 	METHOD drawChart (Lnet/minecraft/client/gui/GuiGraphics;II)V
 		ARG 1 guiGraphics
 		ARG 2 x
 		ARG 3 width
+	METHOD drawDimensions (Lnet/minecraft/client/gui/GuiGraphics;III)V
+		ARG 1 guiGraphics
+		ARG 2 height
+		ARG 3 x
+		ARG 4 index
+	METHOD drawMainDimension (Lnet/minecraft/client/gui/GuiGraphics;III)V
+		ARG 1 guiGraphics
+		ARG 2 height
+		ARG 3 x
+		ARG 4 index
 	METHOD drawStringWithShade (Lnet/minecraft/client/gui/GuiGraphics;Ljava/lang/String;II)V
 		ARG 1 guiGraphics
 		ARG 2 text
@@ -23,6 +38,8 @@ CLASS net/minecraft/client/gui/components/debugchart/AbstractDebugChart
 		ARG 1 value
 	METHOD getSampleHeight (D)I
 		ARG 1 value
+	METHOD getValueForAggregation (I)J
+		ARG 1 index
 	METHOD getWidth (I)I
 		ARG 1 maxWidth
 	METHOD renderAdditionalLinesAndLabels (Lnet/minecraft/client/gui/GuiGraphics;III)V

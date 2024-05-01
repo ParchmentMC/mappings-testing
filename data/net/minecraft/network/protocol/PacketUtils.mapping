@@ -13,3 +13,11 @@ CLASS net/minecraft/network/protocol/PacketUtils
 		ARG 0 packet
 		ARG 1 processor
 		ARG 2 executor
+	METHOD fillCrashReport (Lnet/minecraft/CrashReport;Lnet/minecraft/network/PacketListener;Lnet/minecraft/network/protocol/Packet;)V
+		ARG 0 crashReport
+		ARG 1 packetListener
+		ARG 2 packet
+	METHOD makeReportedException (Ljava/lang/Exception;Lnet/minecraft/network/protocol/Packet;Lnet/minecraft/network/PacketListener;)Lnet/minecraft/ReportedException;
+		ARG 0 exception
+		ARG 1 packet
+		ARG 2 packetListener

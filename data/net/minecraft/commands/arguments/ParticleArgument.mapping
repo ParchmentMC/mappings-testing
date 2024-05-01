@@ -13,13 +13,13 @@ CLASS net/minecraft/commands/arguments/ParticleArgument
 		ARG 1 reader
 	METHOD particle (Lnet/minecraft/commands/CommandBuildContext;)Lnet/minecraft/commands/arguments/ParticleArgument;
 		ARG 0 buildContext
-	METHOD readParticle (Lcom/mojang/brigadier/StringReader;Lnet/minecraft/core/HolderLookup;)Lnet/minecraft/core/particles/ParticleOptions;
+	METHOD readParticle (Lcom/mojang/brigadier/StringReader;Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/core/particles/ParticleOptions;
 		ARG 0 reader
-		ARG 1 particleTypeLookup
-	METHOD readParticle (Lcom/mojang/brigadier/StringReader;Lnet/minecraft/core/particles/ParticleType;)Lnet/minecraft/core/particles/ParticleOptions;
-		COMMENT Deserializes a particle once its type is known.
+		ARG 1 registries
+	METHOD readParticle (Lcom/mojang/brigadier/StringReader;Lnet/minecraft/core/particles/ParticleType;Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/core/particles/ParticleOptions;
 		ARG 0 reader
-		ARG 1 type
+		ARG 1 particleType
+		ARG 2 registries
 	METHOD readParticleType (Lcom/mojang/brigadier/StringReader;Lnet/minecraft/core/HolderLookup;)Lnet/minecraft/core/particles/ParticleType;
 		ARG 0 reader
 		ARG 1 particleTypeLookup

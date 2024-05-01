@@ -1,0 +1,8 @@
+CLASS net/minecraft/world/level/chunk/storage/RecreatingChunkStorage
+	METHOD <init> (Lnet/minecraft/world/level/chunk/storage/RegionStorageInfo;Ljava/nio/file/Path;Lnet/minecraft/world/level/chunk/storage/RegionStorageInfo;Ljava/nio/file/Path;Lcom/mojang/datafixers/DataFixer;Z)V
+		ARG 1 info
+		ARG 2 folder
+		ARG 3 writeInfo
+		ARG 4 writeFolder
+		ARG 5 fixerUpper
+		ARG 6 sync
