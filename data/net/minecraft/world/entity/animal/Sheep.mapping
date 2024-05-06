@@ -32,6 +32,9 @@ CLASS net/minecraft/world/entity/animal/Sheep
 	METHOD makeContainer (Lnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/item/DyeColor;)Lnet/minecraft/world/inventory/CraftingContainer;
 		ARG 0 fatherColor
 		ARG 1 motherColor
+	METHOD makeCraftInput (Lnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/item/DyeColor;)Lnet/minecraft/world/item/crafting/CraftingInput;
+		ARG 0 color1
+		ARG 1 color2
 	METHOD mobInteract (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResult;
 		ARG 1 player
 		ARG 2 hand

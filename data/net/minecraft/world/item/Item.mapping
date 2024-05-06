@@ -20,6 +20,10 @@ CLASS net/minecraft/world/item/Item
 		ARG 1 stack
 		ARG 2 level
 		ARG 3 livingEntity
+	METHOD getAttackDamageBonus (Lnet/minecraft/world/entity/Entity;FLnet/minecraft/world/damagesource/DamageSource;)F
+		ARG 1 target
+		ARG 2 damage
+		ARG 3 damageSource
 	METHOD getAttackDamageBonus (Lnet/minecraft/world/entity/player/Player;F)F
 		ARG 1 player
 		ARG 2 baseAttackDamage
@@ -53,6 +57,9 @@ CLASS net/minecraft/world/item/Item
 	METHOD getUseDuration (Lnet/minecraft/world/item/ItemStack;)I
 		COMMENT How long it takes to use or consume an item
 		ARG 1 stack
+	METHOD getUseDuration (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/LivingEntity;)I
+		ARG 1 stack
+		ARG 2 entity
 	METHOD hasCraftingRemainingItem ()Z
 		COMMENT True if this Item has a container item (a.k.a. crafting result)
 	METHOD hurtEnemy (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/LivingEntity;)Z
@@ -127,6 +134,10 @@ CLASS net/minecraft/world/item/Item
 		ARG 2 slot
 		ARG 3 action
 		ARG 4 player
+	METHOD postHurtEnemy (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/LivingEntity;)V
+		ARG 1 stack
+		ARG 2 target
+		ARG 3 attacker
 	METHOD releaseUsing (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;I)V
 		COMMENT Called when the player stops using an Item (stops holding the right mouse button).
 		ARG 1 stack

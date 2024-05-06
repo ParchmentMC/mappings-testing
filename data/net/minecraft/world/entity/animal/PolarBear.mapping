@@ -30,15 +30,15 @@ CLASS net/minecraft/world/entity/animal/PolarBear
 		ARG 1 standing
 	METHOD tick ()V
 		COMMENT Called to update the entity's position/logic.
-	CLASS PolarBearMeleeAttackGoal
-		METHOD stop ()V
-			COMMENT Reset the task's internal state. Called when this task is interrupted by another one
+	CLASS PolarBearAttackPlayersGoal
+		METHOD canUse ()Z
+			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 	CLASS PolarBearHurtByTargetGoal
 		METHOD alertOther (Lnet/minecraft/world/entity/Mob;Lnet/minecraft/world/entity/LivingEntity;)V
 			ARG 1 mob
 			ARG 2 target
 		METHOD start ()V
 			COMMENT Execute a one shot task or start executing a continuous task
-	CLASS PolarBearAttackPlayersGoal
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
+	CLASS PolarBearMeleeAttackGoal
+		METHOD stop ()V
+			COMMENT Reset the task's internal state. Called when this task is interrupted by another one

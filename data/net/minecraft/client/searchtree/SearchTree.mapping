@@ -1,4 +1,7 @@
 CLASS net/minecraft/client/searchtree/SearchTree
+	METHOD plainText (Ljava/util/List;Ljava/util/function/Function;)Lnet/minecraft/client/searchtree/SearchTree;
+		ARG 0 contents
+		ARG 1 filter
 	METHOD search (Ljava/lang/String;)Ljava/util/List;
 		COMMENT Searches this search tree for the given text.
 		COMMENT <p>

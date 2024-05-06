@@ -1,0 +1,3 @@
+CLASS net/minecraft/data/loot/packs/VanillaEntityLoot
+	METHOD <init> (Lnet/minecraft/core/HolderLookup$Provider;)V
+		ARG 1 registries

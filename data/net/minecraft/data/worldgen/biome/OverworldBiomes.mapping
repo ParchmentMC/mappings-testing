@@ -95,6 +95,9 @@ CLASS net/minecraft/data/worldgen/biome/OverworldBiomes
 	METHOD lushCaves (Lnet/minecraft/core/HolderGetter;Lnet/minecraft/core/HolderGetter;)Lnet/minecraft/world/level/biome/Biome;
 		ARG 0 placedFeatures
 		ARG 1 worldCarvers
+	METHOD mangroveSwamp (Lnet/minecraft/core/HolderGetter;Lnet/minecraft/core/HolderGetter;)Lnet/minecraft/world/level/biome/Biome;
+		ARG 0 placedFeatures
+		ARG 1 worldCarvers
 	METHOD mangroveSwamp (Lnet/minecraft/core/HolderGetter;Lnet/minecraft/core/HolderGetter;Ljava/util/function/Consumer;)Lnet/minecraft/world/level/biome/Biome;
 		ARG 0 placedFeatures
 		ARG 1 worldCarvers
@@ -136,6 +139,9 @@ CLASS net/minecraft/data/worldgen/biome/OverworldBiomes
 		ARG 0 placedFeatures
 		ARG 1 worldCarvers
 	METHOD stonyPeaks (Lnet/minecraft/core/HolderGetter;Lnet/minecraft/core/HolderGetter;)Lnet/minecraft/world/level/biome/Biome;
+		ARG 0 placedFeatures
+		ARG 1 worldCarvers
+	METHOD swamp (Lnet/minecraft/core/HolderGetter;Lnet/minecraft/core/HolderGetter;)Lnet/minecraft/world/level/biome/Biome;
 		ARG 0 placedFeatures
 		ARG 1 worldCarvers
 	METHOD swamp (Lnet/minecraft/core/HolderGetter;Lnet/minecraft/core/HolderGetter;Ljava/util/function/Consumer;)Lnet/minecraft/world/level/biome/Biome;

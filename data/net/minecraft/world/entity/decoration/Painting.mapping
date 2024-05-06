@@ -23,6 +23,8 @@ CLASS net/minecraft/world/entity/decoration/Painting
 		ARG 5 z
 		ARG 7 yaw
 		ARG 8 pitch
+	METHOD offsetForPaintingSize (I)D
+		ARG 1 size
 	METHOD readAdditionalSaveData (Lnet/minecraft/nbt/CompoundTag;)V
 		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
 		ARG 1 compound

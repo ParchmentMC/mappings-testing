@@ -1,5 +1,12 @@
 CLASS net/minecraft/world/entity/decoration/PaintingVariants
 	METHOD bootstrap (Lnet/minecraft/core/Registry;)Lnet/minecraft/world/entity/decoration/PaintingVariant;
 		ARG 0 registry
+	METHOD bootstrap (Lnet/minecraft/data/worldgen/BootstrapContext;)V
+		ARG 0 context
 	METHOD create (Ljava/lang/String;)Lnet/minecraft/resources/ResourceKey;
 		ARG 0 name
+	METHOD register (Lnet/minecraft/data/worldgen/BootstrapContext;Lnet/minecraft/resources/ResourceKey;II)V
+		ARG 0 context
+		ARG 1 key
+		ARG 2 width
+		ARG 3 height

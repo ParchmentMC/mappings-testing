@@ -26,6 +26,16 @@ CLASS net/minecraft/world/item/ProjectileWeaponItem
 		ARG 0 stack
 	METHOD lambda$static$1 (Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 0 stack
+	METHOD shoot (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/item/ItemStack;Ljava/util/List;FFZLnet/minecraft/world/entity/LivingEntity;)V
+		ARG 1 level
+		ARG 2 shooter
+		ARG 3 hand
+		ARG 4 weapon
+		ARG 5 projectileItems
+		ARG 6 velocity
+		ARG 7 inaccuracy
+		ARG 8 isCrit
+		ARG 9 target
 	METHOD shoot (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/item/ItemStack;Ljava/util/List;FFZLnet/minecraft/world/entity/LivingEntity;)V
 		ARG 1 level
 		ARG 2 shooter

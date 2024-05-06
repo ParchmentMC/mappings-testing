@@ -1,0 +1,5 @@
+CLASS net/minecraft/world/item/enchantment/effects/SetBlockProperties
+	METHOD <init> (Lnet/minecraft/world/item/component/BlockItemStateProperties;)V
+		ARG 1 properties
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

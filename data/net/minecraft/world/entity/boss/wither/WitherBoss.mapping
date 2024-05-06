@@ -61,6 +61,8 @@ CLASS net/minecraft/world/entity/boss/wither/WitherBoss
 		ARG 1 compound
 	METHOD rotlerp (FFF)F
 		ARG 1 angle
+		ARG 2 targetAngle
+		ARG 3 max
 	METHOD setAlternativeTarget (II)V
 		COMMENT Updates the target entity ID
 		ARG 1 targetOffset

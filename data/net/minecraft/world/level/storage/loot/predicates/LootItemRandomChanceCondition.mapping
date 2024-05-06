@@ -2,7 +2,11 @@ CLASS net/minecraft/world/level/storage/loot/predicates/LootItemRandomChanceCond
 	COMMENT A LootItemCondition that succeeds with a given probability.
 	METHOD <init> (F)V
 		ARG 1 probability
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	METHOD randomChance (F)Lnet/minecraft/world/level/storage/loot/predicates/LootItemCondition$Builder;
-		ARG 0 probability
+		ARG 0 chance
+	METHOD randomChance (Lnet/minecraft/world/level/storage/loot/providers/number/NumberProvider;)Lnet/minecraft/world/level/storage/loot/predicates/LootItemCondition$Builder;
+		ARG 0 chance
 	METHOD test (Lnet/minecraft/world/level/storage/loot/LootContext;)Z
 		ARG 1 context

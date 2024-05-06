@@ -1,0 +1,35 @@
+CLASS net/minecraft/world/item/enchantment/effects/SpawnParticlesEffect
+	METHOD fixedVelocity (Lnet/minecraft/util/valueproviders/FloatProvider;)Lnet/minecraft/world/item/enchantment/effects/SpawnParticlesEffect$VelocitySource;
+		ARG 0 velocity
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
+	METHOD movementScaled (F)Lnet/minecraft/world/item/enchantment/effects/SpawnParticlesEffect$VelocitySource;
+		ARG 0 movementScale
+	METHOD offsetFromEntityPosition (F)Lnet/minecraft/world/item/enchantment/effects/SpawnParticlesEffect$PositionSource;
+		ARG 0 offset
+	CLASS PositionSource
+		METHOD getCoordinate (DFLnet/minecraft/util/RandomSource;)D
+			ARG 1 origin
+			ARG 3 scale
+			ARG 4 random
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
+	CLASS PositionSourceType
+		METHOD <init> (Ljava/lang/String;ILjava/lang/String;Lnet/minecraft/world/item/enchantment/effects/SpawnParticlesEffect$PositionSourceType$CoordinateSource;)V
+			ARG 3 id
+			ARG 4 source
+		METHOD getCoordinate (DFLnet/minecraft/util/RandomSource;)D
+			ARG 1 origin
+			ARG 3 scale
+			ARG 4 random
+		CLASS CoordinateSource
+			METHOD getCoordinate (DFLnet/minecraft/util/RandomSource;)D
+				ARG 1 origin
+				ARG 3 scale
+				ARG 4 random
+	CLASS VelocitySource
+		METHOD getVelocity (DLnet/minecraft/util/RandomSource;)D
+			ARG 1 scale
+			ARG 3 random
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance

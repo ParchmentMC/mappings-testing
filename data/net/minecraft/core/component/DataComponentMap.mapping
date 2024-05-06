@@ -13,6 +13,10 @@ CLASS net/minecraft/core/component/DataComponentMap
 		ARG 1 component
 	METHOD has (Lnet/minecraft/core/component/DataComponentType;)Z
 		ARG 1 component
+	METHOD makeCodec (Lcom/mojang/serialization/Codec;)Lcom/mojang/serialization/Codec;
+		ARG 0 codec
+	METHOD makeCodecFromMap (Lcom/mojang/serialization/Codec;)Lcom/mojang/serialization/Codec;
+		ARG 0 codec
 	CLASS Builder
 		METHOD addAll (Lnet/minecraft/core/component/DataComponentMap;)Lnet/minecraft/core/component/DataComponentMap$Builder;
 			ARG 1 components

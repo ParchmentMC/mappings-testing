@@ -187,6 +187,8 @@ CLASS net/minecraft/world/phys/AABB
 		ARG 1 pos
 	METHOD move (Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/world/phys/AABB;
 		ARG 1 vec
+	METHOD move (Lorg/joml/Vector3f;)Lnet/minecraft/world/phys/AABB;
+		ARG 1 vec
 	METHOD of (Lnet/minecraft/world/level/levelgen/structure/BoundingBox;)Lnet/minecraft/world/phys/AABB;
 		ARG 0 mutableBox
 	METHOD ofSize (Lnet/minecraft/world/phys/Vec3;DDD)Lnet/minecraft/world/phys/AABB;

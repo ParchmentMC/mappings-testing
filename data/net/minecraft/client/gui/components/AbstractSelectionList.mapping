@@ -108,6 +108,8 @@ CLASS net/minecraft/client/gui/components/AbstractSelectionList
 		ARG 1 entries
 	METHOD scroll (I)V
 		ARG 1 scroll
+	METHOD setClampedScrollAmount (D)V
+		ARG 1 scroll
 	METHOD setRenderHeader (ZI)V
 		ARG 1 renderHeader
 		ARG 2 headerHeight

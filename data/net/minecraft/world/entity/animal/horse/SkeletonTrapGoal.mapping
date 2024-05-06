@@ -10,5 +10,8 @@ CLASS net/minecraft/world/entity/animal/horse/SkeletonTrapGoal
 		ARG 2 horse
 	METHOD disenchant (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/ItemStack;
 		ARG 1 stack
+	METHOD enchant (Lnet/minecraft/world/entity/monster/Skeleton;Lnet/minecraft/world/entity/EquipmentSlot;)V
+		ARG 1 skeleton
+		ARG 2 slot
 	METHOD tick ()V
 		COMMENT Keep ticking a continuous task that has already been started

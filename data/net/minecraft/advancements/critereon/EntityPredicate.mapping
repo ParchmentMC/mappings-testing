@@ -38,6 +38,8 @@ CLASS net/minecraft/advancements/critereon/EntityPredicate
 			ARG 1 flags
 		METHOD located (Lnet/minecraft/advancements/critereon/LocationPredicate$Builder;)Lnet/minecraft/advancements/critereon/EntityPredicate$Builder;
 			ARG 1 location
+		METHOD moving (Lnet/minecraft/advancements/critereon/MovementPredicate;)Lnet/minecraft/advancements/critereon/EntityPredicate$Builder;
+			ARG 1 movement
 		METHOD nbt (Lnet/minecraft/advancements/critereon/NbtPredicate;)Lnet/minecraft/advancements/critereon/EntityPredicate$Builder;
 			ARG 1 nbt
 		METHOD of (Lnet/minecraft/tags/TagKey;)Lnet/minecraft/advancements/critereon/EntityPredicate$Builder;
@@ -46,6 +48,8 @@ CLASS net/minecraft/advancements/critereon/EntityPredicate
 			ARG 1 entityType
 		METHOD passenger (Lnet/minecraft/advancements/critereon/EntityPredicate$Builder;)Lnet/minecraft/advancements/critereon/EntityPredicate$Builder;
 			ARG 1 passenger
+		METHOD periodicTick (I)Lnet/minecraft/advancements/critereon/EntityPredicate$Builder;
+			ARG 1 periodicTick
 		METHOD slots (Lnet/minecraft/advancements/critereon/SlotsPredicate;)Lnet/minecraft/advancements/critereon/EntityPredicate$Builder;
 			ARG 1 slots
 		METHOD steppingOn (Lnet/minecraft/advancements/critereon/LocationPredicate$Builder;)Lnet/minecraft/advancements/critereon/EntityPredicate$Builder;

@@ -9,11 +9,24 @@ CLASS net/minecraft/client/renderer/ItemInHandRenderer
 		ARG 3 hand
 		ARG 4 stack
 		ARG 5 equippedProg
+	METHOD applyBrushTransform (Lcom/mojang/blaze3d/vertex/PoseStack;FLnet/minecraft/world/entity/HumanoidArm;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/player/Player;F)V
+		ARG 1 poseStack
+		ARG 2 partialTick
+		ARG 3 arm
+		ARG 4 stack
+		ARG 5 player
+		ARG 6 equippedProgress
 	METHOD applyEatTransform (Lcom/mojang/blaze3d/vertex/PoseStack;FLnet/minecraft/world/entity/HumanoidArm;Lnet/minecraft/world/item/ItemStack;)V
 		ARG 1 poseStack
 		ARG 2 partialTicks
 		ARG 3 hand
 		ARG 4 stack
+	METHOD applyEatTransform (Lcom/mojang/blaze3d/vertex/PoseStack;FLnet/minecraft/world/entity/HumanoidArm;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/player/Player;)V
+		ARG 1 poseStack
+		ARG 2 partialTick
+		ARG 3 arm
+		ARG 4 stack
+		ARG 5 player
 	METHOD applyItemArmAttackTransform (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/world/entity/HumanoidArm;F)V
 		ARG 1 poseStack
 		ARG 2 hand

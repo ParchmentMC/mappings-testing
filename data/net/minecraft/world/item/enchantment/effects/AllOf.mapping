@@ -1,0 +1,13 @@
+CLASS net/minecraft/world/item/enchantment/effects/AllOf
+	METHOD codec (Lcom/mojang/serialization/Codec;Ljava/util/function/Function;Ljava/util/function/Function;)Lcom/mojang/serialization/MapCodec;
+		ARG 0 codec
+		ARG 1 getter
+		ARG 2 factory
+	METHOD entityEffects ([Lnet/minecraft/world/item/enchantment/effects/EnchantmentEntityEffect;)Lnet/minecraft/world/item/enchantment/effects/AllOf$EntityEffects;
+		ARG 0 effects
+	METHOD lambda$codec$0 (Lcom/mojang/serialization/Codec;Ljava/util/function/Function;Ljava/util/function/Function;Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 3 instance
+	METHOD locationBasedEffects ([Lnet/minecraft/world/item/enchantment/effects/EnchantmentLocationBasedEffect;)Lnet/minecraft/world/item/enchantment/effects/AllOf$LocationBasedEffects;
+		ARG 0 effects
+	METHOD valueEffects ([Lnet/minecraft/world/item/enchantment/effects/EnchantmentValueEffect;)Lnet/minecraft/world/item/enchantment/effects/AllOf$ValueEffects;
+		ARG 0 effects

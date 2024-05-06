@@ -19,6 +19,8 @@ CLASS net/minecraft/advancements/critereon/LocationPredicate
 			ARG 1 biomes
 		METHOD setBlock (Lnet/minecraft/advancements/critereon/BlockPredicate$Builder;)Lnet/minecraft/advancements/critereon/LocationPredicate$Builder;
 			ARG 1 block
+		METHOD setCanSeeSky (Z)Lnet/minecraft/advancements/critereon/LocationPredicate$Builder;
+			ARG 1 canSeeSky
 		METHOD setDimension (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/advancements/critereon/LocationPredicate$Builder;
 			ARG 1 dimension
 		METHOD setFluid (Lnet/minecraft/advancements/critereon/FluidPredicate$Builder;)Lnet/minecraft/advancements/critereon/LocationPredicate$Builder;
@@ -36,6 +38,8 @@ CLASS net/minecraft/advancements/critereon/LocationPredicate
 		METHOD setZ (Lnet/minecraft/advancements/critereon/MinMaxBounds$Doubles;)Lnet/minecraft/advancements/critereon/LocationPredicate$Builder;
 			ARG 1 z
 	CLASS PositionPredicate
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
 		METHOD matches (DDD)Z
 			ARG 1 x
 			ARG 3 y

@@ -2,6 +2,9 @@ CLASS net/minecraft/client/gui/screens/controls/KeyBindsList
 	METHOD <init> (Lnet/minecraft/client/gui/screens/controls/KeyBindsScreen;Lnet/minecraft/client/Minecraft;)V
 		ARG 1 keyBindsScreen
 		ARG 2 minecraft
+	CLASS CategoryEntry
+		METHOD <init> (Lnet/minecraft/client/gui/screens/controls/KeyBindsList;Lnet/minecraft/network/chat/Component;)V
+			ARG 2 name
 	CLASS KeyEntry
 		FIELD key Lnet/minecraft/client/KeyMapping;
 			COMMENT The keybinding specified for this KeyEntry
@@ -12,6 +15,3 @@ CLASS net/minecraft/client/gui/screens/controls/KeyBindsList
 			ARG 3 name
 		METHOD lambda$new$0 (Lnet/minecraft/client/KeyMapping;Lnet/minecraft/client/gui/components/Button;)V
 			ARG 2 button
-	CLASS CategoryEntry
-		METHOD <init> (Lnet/minecraft/client/gui/screens/controls/KeyBindsList;Lnet/minecraft/network/chat/Component;)V
-			ARG 2 name

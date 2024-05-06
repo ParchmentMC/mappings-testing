@@ -1,4 +1,12 @@
 CLASS net/minecraft/world/item/enchantment/Enchantments
+	METHOD bootstrap (Lnet/minecraft/data/worldgen/BootstrapContext;)V
+		ARG 0 context
+	METHOD key (Ljava/lang/String;)Lnet/minecraft/resources/ResourceKey;
+		ARG 0 name
 	METHOD register (Ljava/lang/String;Lnet/minecraft/world/item/enchantment/Enchantment;)Lnet/minecraft/world/item/enchantment/Enchantment;
 		ARG 0 identifier
 		ARG 1 enchantment
+	METHOD register (Lnet/minecraft/data/worldgen/BootstrapContext;Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/world/item/enchantment/Enchantment$Builder;)V
+		ARG 0 context
+		ARG 1 key
+		ARG 2 builder

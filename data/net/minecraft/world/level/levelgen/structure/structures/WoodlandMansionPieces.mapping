@@ -5,33 +5,23 @@ CLASS net/minecraft/world/level/levelgen/structure/structures/WoodlandMansionPie
 		ARG 2 rotation
 		ARG 3 pieces
 		ARG 4 random
-	CLASS SimpleGrid
-		METHOD <init> (III)V
-			ARG 1 width
-			ARG 2 height
-			ARG 3 valueIfOutside
-		METHOD edgesTo (III)Z
-			ARG 1 x
-			ARG 2 y
-			ARG 3 expectedValue
-		METHOD get (II)I
-			ARG 1 x
-			ARG 2 y
-		METHOD set (III)V
-			ARG 1 x
-			ARG 2 y
-			ARG 3 value
-		METHOD set (IIIII)V
-			ARG 1 minX
-			ARG 2 minY
-			ARG 3 maxX
-			ARG 4 maxY
-			ARG 5 value
-		METHOD setif (IIII)V
-			ARG 1 x
-			ARG 2 y
-			ARG 3 oldValue
-			ARG 4 newValue
+	CLASS FloorRoomCollection
+		METHOD get1x1 (Lnet/minecraft/util/RandomSource;)Ljava/lang/String;
+			ARG 1 random
+		METHOD get1x1Secret (Lnet/minecraft/util/RandomSource;)Ljava/lang/String;
+			ARG 1 random
+		METHOD get1x2FrontEntrance (Lnet/minecraft/util/RandomSource;Z)Ljava/lang/String;
+			ARG 1 random
+			ARG 2 isStairs
+		METHOD get1x2Secret (Lnet/minecraft/util/RandomSource;)Ljava/lang/String;
+			ARG 1 random
+		METHOD get1x2SideEntrance (Lnet/minecraft/util/RandomSource;Z)Ljava/lang/String;
+			ARG 1 random
+			ARG 2 isStairs
+		METHOD get2x2 (Lnet/minecraft/util/RandomSource;)Ljava/lang/String;
+			ARG 1 random
+		METHOD get2x2Secret (Lnet/minecraft/util/RandomSource;)Ljava/lang/String;
+			ARG 1 random
 	CLASS MansionGrid
 		METHOD <init> (Lnet/minecraft/util/RandomSource;)V
 			ARG 1 random
@@ -124,23 +114,33 @@ CLASS net/minecraft/world/level/levelgen/structure/structures/WoodlandMansionPie
 		METHOD traverseWallPiece (Ljava/util/List;Lnet/minecraft/world/level/levelgen/structure/structures/WoodlandMansionPieces$PlacementData;)V
 			ARG 1 pieces
 			ARG 2 data
-	CLASS FloorRoomCollection
-		METHOD get1x1 (Lnet/minecraft/util/RandomSource;)Ljava/lang/String;
-			ARG 1 random
-		METHOD get1x1Secret (Lnet/minecraft/util/RandomSource;)Ljava/lang/String;
-			ARG 1 random
-		METHOD get1x2FrontEntrance (Lnet/minecraft/util/RandomSource;Z)Ljava/lang/String;
-			ARG 1 random
-			ARG 2 isStairs
-		METHOD get1x2Secret (Lnet/minecraft/util/RandomSource;)Ljava/lang/String;
-			ARG 1 random
-		METHOD get1x2SideEntrance (Lnet/minecraft/util/RandomSource;Z)Ljava/lang/String;
-			ARG 1 random
-			ARG 2 isStairs
-		METHOD get2x2 (Lnet/minecraft/util/RandomSource;)Ljava/lang/String;
-			ARG 1 random
-		METHOD get2x2Secret (Lnet/minecraft/util/RandomSource;)Ljava/lang/String;
-			ARG 1 random
+	CLASS SimpleGrid
+		METHOD <init> (III)V
+			ARG 1 width
+			ARG 2 height
+			ARG 3 valueIfOutside
+		METHOD edgesTo (III)Z
+			ARG 1 x
+			ARG 2 y
+			ARG 3 expectedValue
+		METHOD get (II)I
+			ARG 1 x
+			ARG 2 y
+		METHOD set (III)V
+			ARG 1 x
+			ARG 2 y
+			ARG 3 value
+		METHOD set (IIIII)V
+			ARG 1 minX
+			ARG 2 minY
+			ARG 3 maxX
+			ARG 4 maxY
+			ARG 5 value
+		METHOD setif (IIII)V
+			ARG 1 x
+			ARG 2 y
+			ARG 3 oldValue
+			ARG 4 newValue
 	CLASS WoodlandMansionPiece
 		METHOD <init> (Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplateManager;Ljava/lang/String;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Rotation;)V
 			ARG 1 structureTemplateManager

@@ -2,6 +2,9 @@ CLASS net/minecraft/commands/arguments/item/ItemInput
 	METHOD <init> (Lnet/minecraft/core/Holder;Lnet/minecraft/core/component/DataComponentMap;)V
 		ARG 1 item
 		ARG 2 components
+	METHOD <init> (Lnet/minecraft/core/Holder;Lnet/minecraft/core/component/DataComponentPatch;)V
+		ARG 1 item
+		ARG 2 components
 	METHOD createItemStack (IZ)Lnet/minecraft/world/item/ItemStack;
 		ARG 1 count
 		ARG 2 allowOversizedStacks

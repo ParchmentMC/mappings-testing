@@ -1,0 +1,5 @@
+CLASS net/minecraft/world/item/enchantment/EnchantedItemInUse
+	METHOD <init> (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/EquipmentSlot;Lnet/minecraft/world/entity/LivingEntity;)V
+		ARG 1 itemStack
+		ARG 2 inSlot
+		ARG 3 owner

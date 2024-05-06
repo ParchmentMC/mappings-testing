@@ -1,0 +1,9 @@
+CLASS net/minecraft/world/inventory/ArmorSlot
+	METHOD <init> (Lnet/minecraft/world/Container;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/EquipmentSlot;IIILnet/minecraft/resources/ResourceLocation;)V
+		ARG 1 container
+		ARG 2 owner
+		ARG 3 slot
+		ARG 4 slotIndex
+		ARG 5 x
+		ARG 6 y
+		ARG 7 emptyIcon

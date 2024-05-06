@@ -1,0 +1,7 @@
+CLASS net/minecraft/world/item/enchantment/effects/EnchantmentAttributeEffect
+	METHOD getModifier (I)Lnet/minecraft/world/entity/ai/attributes/AttributeModifier;
+		ARG 1 enchantmentLevel
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
+	METHOD makeAttributeMap (I)Lcom/google/common/collect/HashMultimap;
+		ARG 1 enchantmentLevel

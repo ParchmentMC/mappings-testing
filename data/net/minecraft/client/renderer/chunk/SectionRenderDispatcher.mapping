@@ -16,6 +16,12 @@ CLASS net/minecraft/client/renderer/chunk/SectionRenderDispatcher
 	METHOD uploadSectionLayer (Lcom/mojang/blaze3d/vertex/BufferBuilder$RenderedBuffer;Lcom/mojang/blaze3d/vertex/VertexBuffer;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 renderedBuffer
 		ARG 2 vertexBuffer
+	CLASS CompiledSection
+		METHOD facesCanSeeEachother (Lnet/minecraft/core/Direction;Lnet/minecraft/core/Direction;)Z
+			ARG 1 face1
+			ARG 2 face2
+		METHOD isEmpty (Lnet/minecraft/client/renderer/RenderType;)Z
+			ARG 1 renderType
 	CLASS RenderSection
 		METHOD <init> (Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher;IIII)V
 			ARG 2 index
@@ -85,9 +91,3 @@ CLASS net/minecraft/client/renderer/chunk/SectionRenderDispatcher
 			METHOD lambda$doTask$1 (Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$SectionTaskResult;Ljava/lang/Throwable;)Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$SectionTaskResult;
 				ARG 1 result
 				ARG 2 exception
-	CLASS CompiledSection
-		METHOD facesCanSeeEachother (Lnet/minecraft/core/Direction;Lnet/minecraft/core/Direction;)Z
-			ARG 1 face1
-			ARG 2 face2
-		METHOD isEmpty (Lnet/minecraft/client/renderer/RenderType;)Z
-			ARG 1 renderType

@@ -1,0 +1,7 @@
+CLASS net/minecraft/world/item/enchantment/effects/EnchantmentEntityEffect
+	METHOD apply (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/enchantment/EnchantedItemInUse;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/phys/Vec3;)V
+		ARG 1 level
+		ARG 2 enchantmentLevel
+		ARG 3 item
+		ARG 4 entity
+		ARG 5 origin

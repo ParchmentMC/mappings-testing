@@ -4,6 +4,9 @@ CLASS net/minecraft/world/item/enchantment/EnchantmentInstance
 		COMMENT The enchantment being represented.
 	FIELD level I
 		COMMENT The level of the enchantment.
+	METHOD <init> (Lnet/minecraft/core/Holder;I)V
+		ARG 1 enchantment
+		ARG 2 level
 	METHOD <init> (Lnet/minecraft/world/item/enchantment/Enchantment;I)V
 		ARG 1 enchantment
 		ARG 2 level

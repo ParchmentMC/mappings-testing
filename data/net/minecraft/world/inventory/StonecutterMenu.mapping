@@ -24,6 +24,8 @@ CLASS net/minecraft/world/inventory/StonecutterMenu
 		COMMENT Handles the given Button-click on the server, currently only used by enchanting. Name is for legacy.
 		ARG 1 player
 		ARG 2 id
+	METHOD createRecipeInput (Lnet/minecraft/world/Container;)Lnet/minecraft/world/item/crafting/SingleRecipeInput;
+		ARG 0 container
 	METHOD getSelectedRecipeIndex ()I
 		COMMENT Returns the index of the selected recipe.
 	METHOD isValidRecipeIndex (I)Z

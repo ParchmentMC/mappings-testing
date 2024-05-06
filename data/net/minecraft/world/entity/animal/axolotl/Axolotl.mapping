@@ -18,6 +18,18 @@ CLASS net/minecraft/world/entity/animal/axolotl/Axolotl
 		ARG 1 variant
 	METHOD useRareVariant (Lnet/minecraft/util/RandomSource;)Z
 		ARG 0 random
+	CLASS AxolotlGroupData
+		METHOD <init> ([Lnet/minecraft/world/entity/animal/axolotl/Axolotl$Variant;)V
+			ARG 1 types
+		METHOD getVariant (Lnet/minecraft/util/RandomSource;)Lnet/minecraft/world/entity/animal/axolotl/Axolotl$Variant;
+			ARG 1 random
+	CLASS AxolotlLookControl
+		METHOD <init> (Lnet/minecraft/world/entity/animal/axolotl/Axolotl;Lnet/minecraft/world/entity/animal/axolotl/Axolotl;I)V
+			ARG 2 axolotl
+			ARG 3 maxYRotFromCenter
+	CLASS AxolotlMoveControl
+		METHOD <init> (Lnet/minecraft/world/entity/animal/axolotl/Axolotl;)V
+			ARG 1 axolotl
 	CLASS Variant
 		METHOD <init> (Ljava/lang/String;IILjava/lang/String;Z)V
 			ARG 3 id
@@ -32,15 +44,3 @@ CLASS net/minecraft/world/entity/animal/axolotl/Axolotl
 		METHOD getSpawnVariant (Lnet/minecraft/util/RandomSource;Z)Lnet/minecraft/world/entity/animal/axolotl/Axolotl$Variant;
 			ARG 0 random
 			ARG 1 common
-	CLASS AxolotlGroupData
-		METHOD <init> ([Lnet/minecraft/world/entity/animal/axolotl/Axolotl$Variant;)V
-			ARG 1 types
-		METHOD getVariant (Lnet/minecraft/util/RandomSource;)Lnet/minecraft/world/entity/animal/axolotl/Axolotl$Variant;
-			ARG 1 random
-	CLASS AxolotlLookControl
-		METHOD <init> (Lnet/minecraft/world/entity/animal/axolotl/Axolotl;Lnet/minecraft/world/entity/animal/axolotl/Axolotl;I)V
-			ARG 2 axolotl
-			ARG 3 maxYRotFromCenter
-	CLASS AxolotlMoveControl
-		METHOD <init> (Lnet/minecraft/world/entity/animal/axolotl/Axolotl;)V
-			ARG 1 axolotl

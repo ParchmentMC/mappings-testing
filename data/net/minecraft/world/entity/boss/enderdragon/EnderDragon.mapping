@@ -58,6 +58,9 @@ CLASS net/minecraft/world/entity/boss/enderdragon/EnderDragon
 	METHOD knockBack (Ljava/util/List;)V
 		COMMENT Pushes all entities inside the list away from the enderdragon.
 		ARG 1 entities
+	METHOD knockBack (Lnet/minecraft/server/level/ServerLevel;Ljava/util/List;)V
+		ARG 1 level
+		ARG 2 targets
 	METHOD onCrystalDestroyed (Lnet/minecraft/world/entity/boss/enderdragon/EndCrystal;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/damagesource/DamageSource;)V
 		ARG 1 crystal
 		ARG 2 pos

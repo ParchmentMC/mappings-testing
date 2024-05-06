@@ -1,0 +1,13 @@
+CLASS com/mojang/realmsclient/gui/screens/RealmsPopups
+	METHOD infoPopupScreen (Lnet/minecraft/client/gui/screens/Screen;Lnet/minecraft/network/chat/Component;Ljava/util/function/Consumer;)Lnet/minecraft/client/gui/components/PopupScreen;
+		ARG 0 backgroundScreen
+		ARG 1 message
+		ARG 2 onContinue
+	METHOD warningAcknowledgePopupScreen (Lnet/minecraft/client/gui/screens/Screen;Lnet/minecraft/network/chat/Component;Ljava/util/function/Consumer;)Lnet/minecraft/client/gui/components/PopupScreen;
+		ARG 0 backgroundScreen
+		ARG 1 message
+		ARG 2 onContinue
+	METHOD warningPopupScreen (Lnet/minecraft/client/gui/screens/Screen;Lnet/minecraft/network/chat/Component;Ljava/util/function/Consumer;)Lnet/minecraft/client/gui/components/PopupScreen;
+		ARG 0 backgroundScreen
+		ARG 1 message
+		ARG 2 onContinue

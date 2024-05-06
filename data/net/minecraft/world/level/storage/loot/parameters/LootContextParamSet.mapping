@@ -16,6 +16,9 @@ CLASS net/minecraft/world/level/storage/loot/parameters/LootContextParamSet
 		ARG 1 param
 	METHOD lambda$toString$0 (Lnet/minecraft/world/level/storage/loot/parameters/LootContextParam;)Ljava/lang/String;
 		ARG 1 parameter
+	METHOD validateUser (Lnet/minecraft/util/ProblemReporter;Lnet/minecraft/world/level/storage/loot/LootContextUser;)V
+		ARG 1 problemReporter
+		ARG 2 lootContextUser
 	METHOD validateUser (Lnet/minecraft/world/level/storage/loot/ValidationContext;Lnet/minecraft/world/level/storage/loot/LootContextUser;)V
 		COMMENT Validate that all parameters referenced by the given LootContextUser are present in this set.
 		ARG 1 validationContext

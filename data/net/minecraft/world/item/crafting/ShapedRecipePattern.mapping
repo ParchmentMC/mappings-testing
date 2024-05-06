@@ -1,4 +1,9 @@
 CLASS net/minecraft/world/item/crafting/ShapedRecipePattern
+	METHOD <init> (IILnet/minecraft/core/NonNullList;Ljava/util/Optional;)V
+		ARG 1 width
+		ARG 2 height
+		ARG 3 ingredients
+		ARG 4 data
 	METHOD firstNonSpace (Ljava/lang/String;)I
 		ARG 0 row
 	METHOD fromNetwork (Lnet/minecraft/network/RegistryFriendlyByteBuf;)Lnet/minecraft/world/item/crafting/ShapedRecipePattern;
@@ -12,6 +17,11 @@ CLASS net/minecraft/world/item/crafting/ShapedRecipePattern
 		ARG 2 startX
 		ARG 3 startY
 		ARG 4 reverse
+	METHOD matches (Lnet/minecraft/world/item/crafting/CraftingInput;)Z
+		ARG 1 input
+	METHOD matches (Lnet/minecraft/world/item/crafting/CraftingInput;Z)Z
+		ARG 1 input
+		ARG 2 symmetrical
 	METHOD of (Ljava/util/Map;Ljava/util/List;)Lnet/minecraft/world/item/crafting/ShapedRecipePattern;
 		ARG 0 key
 		ARG 1 pattern
@@ -24,3 +34,6 @@ CLASS net/minecraft/world/item/crafting/ShapedRecipePattern
 		ARG 1 buffer
 	METHOD unpack (Lnet/minecraft/world/item/crafting/ShapedRecipePattern$Data;)Lcom/mojang/serialization/DataResult;
 		ARG 0 data
+	CLASS Data
+		METHOD lambda$static$10 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance

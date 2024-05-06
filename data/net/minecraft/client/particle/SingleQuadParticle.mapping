@@ -5,6 +5,28 @@ CLASS net/minecraft/client/particle/SingleQuadParticle
 		ARG 1 buffer
 		ARG 2 renderInfo
 		ARG 3 partialTicks
+	METHOD renderRotatedQuad (Lcom/mojang/blaze3d/vertex/VertexConsumer;Lnet/minecraft/client/Camera;Lorg/joml/Quaternionf;F)V
+		ARG 1 buffer
+		ARG 2 camera
+		ARG 3 quaternion
+		ARG 4 partialTicks
+	METHOD renderRotatedQuad (Lcom/mojang/blaze3d/vertex/VertexConsumer;Lorg/joml/Quaternionf;FFFF)V
+		ARG 1 buffer
+		ARG 2 quaternion
+		ARG 3 x
+		ARG 4 y
+		ARG 5 z
+		ARG 6 partialTicks
+	METHOD renderVertex (Lcom/mojang/blaze3d/vertex/VertexConsumer;Lorg/joml/Quaternionf;FFFFFFFFI)V
+		ARG 1 buffer
+		ARG 2 quaternion
+		ARG 3 x
+		ARG 4 y
+		ARG 5 z
+		ARG 8 quadSize
+		ARG 9 u
+		ARG 10 v
+		ARG 11 packedLight
 	METHOD scale (F)Lnet/minecraft/client/particle/Particle;
 		ARG 1 scale
 	CLASS FacingCameraMode

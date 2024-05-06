@@ -2,3 +2,5 @@ CLASS net/minecraft/world/entity/decoration/PaintingVariant
 	METHOD <init> (II)V
 		ARG 1 width
 		ARG 2 height
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

@@ -3,6 +3,13 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 		COMMENT The descriptionId for the enchantment. Commonly used to create localization keys.
 	METHOD <init> (Lnet/minecraft/world/item/enchantment/Enchantment$EnchantmentDefinition;)V
 		ARG 1 definition
+	METHOD applyEffects (Ljava/util/List;Lnet/minecraft/world/level/storage/loot/LootContext;Ljava/util/function/Consumer;)V
+		ARG 0 effects
+		ARG 1 context
+		ARG 2 applier
+	METHOD areCompatible (Lnet/minecraft/core/Holder;Lnet/minecraft/core/Holder;)Z
+		ARG 0 first
+		ARG 1 second
 	METHOD byId (I)Lnet/minecraft/world/item/enchantment/Enchantment;
 		COMMENT Gets an {@code Enchantment} from the registry using its internal numeric Id.
 		ARG 0 id
@@ -18,6 +25,28 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 			COMMENT The other enchantment to test compatibility with.
 	METHOD constantCost (I)Lnet/minecraft/world/item/enchantment/Enchantment$Cost;
 		ARG 0 cost
+	METHOD damageContext (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/entity/Entity;Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/world/level/storage/loot/LootContext;
+		ARG 0 level
+		ARG 1 enchantmentLevel
+		ARG 2 entity
+		ARG 3 damageSource
+	METHOD definition (Lnet/minecraft/core/HolderSet;IILnet/minecraft/world/item/enchantment/Enchantment$Cost;Lnet/minecraft/world/item/enchantment/Enchantment$Cost;I[Lnet/minecraft/world/entity/EquipmentSlotGroup;)Lnet/minecraft/world/item/enchantment/Enchantment$EnchantmentDefinition;
+		ARG 0 supportedItems
+		ARG 1 weight
+		ARG 2 maxLevel
+		ARG 3 minCost
+		ARG 4 maxCost
+		ARG 5 anvilCost
+		ARG 6 slots
+	METHOD definition (Lnet/minecraft/core/HolderSet;Lnet/minecraft/core/HolderSet;IILnet/minecraft/world/item/enchantment/Enchantment$Cost;Lnet/minecraft/world/item/enchantment/Enchantment$Cost;I[Lnet/minecraft/world/entity/EquipmentSlotGroup;)Lnet/minecraft/world/item/enchantment/Enchantment$EnchantmentDefinition;
+		ARG 0 supportedItems
+		ARG 1 primaryItems
+		ARG 2 weight
+		ARG 3 maxLevel
+		ARG 4 minCost
+		ARG 5 maxCost
+		ARG 6 anvilCost
+		ARG 7 slots
 	METHOD definition (Lnet/minecraft/tags/TagKey;IILnet/minecraft/world/item/enchantment/Enchantment$Cost;Lnet/minecraft/world/item/enchantment/Enchantment$Cost;ILnet/minecraft/world/flag/FeatureFlagSet;[Lnet/minecraft/world/entity/EquipmentSlot;)Lnet/minecraft/world/item/enchantment/Enchantment$EnchantmentDefinition;
 		ARG 0 supportedItems
 		ARG 1 weight
@@ -44,6 +73,13 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 		ARG 5 maxCost
 		ARG 6 anvilCost
 		ARG 7 slots
+	METHOD doPostAttack (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/enchantment/EnchantedItemInUse;Lnet/minecraft/world/item/enchantment/EnchantmentTarget;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/damagesource/DamageSource;)V
+		ARG 1 level
+		ARG 2 enchantmentLevel
+		ARG 3 item
+		ARG 4 target
+		ARG 5 entity
+		ARG 6 damageSource
 	METHOD doPostAttack (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/Entity;I)V
 		COMMENT A hook that is called every time an entity with this enchantment attacks another entity.
 		ARG 1 attacker
@@ -52,6 +88,13 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 			COMMENT The entity being attacked.
 		ARG 3 level
 			COMMENT The level of the enchantment.
+	METHOD doPostAttack (Lnet/minecraft/world/item/enchantment/TargetedConditionalEffect;Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/enchantment/EnchantedItemInUse;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/damagesource/DamageSource;)V
+		ARG 0 effect
+		ARG 1 level
+		ARG 2 enchantmentLevel
+		ARG 3 item
+		ARG 4 entity
+		ARG 5 damageSource
 	METHOD doPostHurt (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/Entity;I)V
 		COMMENT A hook that is called every time an entity with this enchantment is attacked by another entity.
 		ARG 1 target
@@ -67,6 +110,13 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 	METHOD dynamicCost (II)Lnet/minecraft/world/item/enchantment/Enchantment$Cost;
 		ARG 0 base
 		ARG 1 perLevel
+	METHOD enchantment (Lnet/minecraft/world/item/enchantment/Enchantment$EnchantmentDefinition;)Lnet/minecraft/world/item/enchantment/Enchantment$Builder;
+		ARG 0 definition
+	METHOD entityContext (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/entity/Entity;Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/world/level/storage/loot/LootContext;
+		ARG 0 level
+		ARG 1 enchantmentLevel
+		ARG 2 entity
+		ARG 3 origin
 	METHOD getDamageBonus (ILnet/minecraft/world/entity/EntityType;)F
 		ARG 1 level
 		ARG 2 creatureType
@@ -78,11 +128,16 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 			COMMENT The source of the damage.
 	METHOD getDescriptionId ()Ljava/lang/String;
 		COMMENT Gets the description Id of the enchantment. This is commonly used to create localization keys.
+	METHOD getEffects (Lnet/minecraft/core/component/DataComponentType;)Ljava/util/List;
+		ARG 1 component
 	METHOD getFullname (I)Lnet/minecraft/network/chat/Component;
 		COMMENT Gets the name of the enchantment with the level appended to the end. The game will attempt to convert the letter to roman numerals.
 		COMMENT @return The name of the enchantment with the level appended to the end.
 		ARG 1 level
 			COMMENT The level of the enchantment.
+	METHOD getFullname (Lnet/minecraft/core/Holder;I)Lnet/minecraft/network/chat/Component;
+		ARG 0 enchantment
+		ARG 1 level
 	METHOD getMaxCost (I)I
 		ARG 1 level
 	METHOD getMaxLevel ()I
@@ -109,14 +164,226 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 	METHOD isDiscoverable ()Z
 		COMMENT Checks if the enchantment can be discovered by game mechanics which pull random enchantments from the enchantment registry.
 		COMMENT @return Whether the enchantment can be discovered.
+	METHOD isImmuneToDamage (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/entity/Entity;Lnet/minecraft/world/damagesource/DamageSource;)Z
+		ARG 1 level
+		ARG 2 enchantmentLevel
+		ARG 3 entity
+		ARG 4 damageSource
 	METHOD isPrimaryItem (Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 1 stack
+	METHOD isSupportedItem (Lnet/minecraft/world/item/ItemStack;)Z
+		ARG 1 item
 	METHOD isTradeable ()Z
 		COMMENT Checks if the enchantment can be traded by NPCs like villagers.
 		COMMENT @return Whether this enchantment can be traded.
 	METHOD isTreasureOnly ()Z
 		COMMENT Checks if the enchantment should be considered a treasure enchantment. These enchantments can not be obtained using the enchantment table. The mending enchantment is an example of a treasure enchantment.
 		COMMENT @return Whether the enchantment is a treasure enchantment.
+	METHOD itemContext (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/level/storage/loot/LootContext;
+		ARG 0 level
+		ARG 1 enchantmentLevel
+		ARG 2 tool
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
+	METHOD locationContext (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/entity/Entity;Z)Lnet/minecraft/world/level/storage/loot/LootContext;
+		ARG 0 level
+		ARG 1 enchantmentLevel
+		ARG 2 entity
+		ARG 3 enchantmentActive
+	METHOD matchingSlot (Lnet/minecraft/world/entity/EquipmentSlot;)Z
+		ARG 1 slot
+	METHOD modifyAmmoCount (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/ItemStack;Lorg/apache/commons/lang3/mutable/MutableFloat;)V
+		ARG 1 level
+		ARG 2 enchantmentLevel
+		ARG 3 tool
+		ARG 4 ammoCount
+	METHOD modifyArmorEffectivness (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/damagesource/DamageSource;Lorg/apache/commons/lang3/mutable/MutableFloat;)V
+		ARG 1 level
+		ARG 2 enchantmentLevel
+		ARG 3 tool
+		ARG 4 entity
+		ARG 5 damageSource
+		ARG 6 armorEffectiveness
+	METHOD modifyBlockExperience (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/ItemStack;Lorg/apache/commons/lang3/mutable/MutableFloat;)V
+		ARG 1 level
+		ARG 2 enchantmentLevel
+		ARG 3 tool
+		ARG 4 blockExperience
+	METHOD modifyCrossbowChargeTime (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/ItemStack;Lorg/apache/commons/lang3/mutable/MutableFloat;)V
+		ARG 1 level
+		ARG 2 enchantmentLevel
+		ARG 3 tool
+		ARG 4 crossbowChargeTime
+	METHOD modifyDamage (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/damagesource/DamageSource;Lorg/apache/commons/lang3/mutable/MutableFloat;)V
+		ARG 1 level
+		ARG 2 enchantmentLevel
+		ARG 3 tool
+		ARG 4 entity
+		ARG 5 damageSource
+		ARG 6 damage
+	METHOD modifyDamageFilteredValue (Lnet/minecraft/core/component/DataComponentType;Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/damagesource/DamageSource;Lorg/apache/commons/lang3/mutable/MutableFloat;)V
+		ARG 1 componentType
+		ARG 2 level
+		ARG 3 enchantmentLevel
+		ARG 4 tool
+		ARG 5 entity
+		ARG 6 damageSource
+		ARG 7 value
+	METHOD modifyDamageProtection (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/damagesource/DamageSource;Lorg/apache/commons/lang3/mutable/MutableFloat;)V
+		ARG 1 level
+		ARG 2 enchantmentLevel
+		ARG 3 stack
+		ARG 4 entity
+		ARG 5 damageSource
+		ARG 6 damageProtection
+	METHOD modifyDurabilityChange (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/ItemStack;Lorg/apache/commons/lang3/mutable/MutableFloat;)V
+		ARG 1 level
+		ARG 2 enchantmentLevel
+		ARG 3 tool
+		ARG 4 durabilityChange
+	METHOD modifyDurabilityToRepairFromXp (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/ItemStack;Lorg/apache/commons/lang3/mutable/MutableFloat;)V
+		ARG 1 level
+		ARG 2 enchantmentLevel
+		ARG 3 tool
+		ARG 4 durabilityToRepairFromXp
+	METHOD modifyEntityFilteredValue (Lnet/minecraft/core/component/DataComponentType;Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/Entity;Lorg/apache/commons/lang3/mutable/MutableFloat;)V
+		ARG 1 componentType
+		ARG 2 level
+		ARG 3 enchantmentLevel
+		ARG 4 tool
+		ARG 5 entity
+	METHOD modifyFallBasedDamage (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/damagesource/DamageSource;Lorg/apache/commons/lang3/mutable/MutableFloat;)V
+		ARG 1 level
+		ARG 2 enchantmentLevel
+		ARG 3 tool
+		ARG 4 entity
+		ARG 5 damageSource
+		ARG 6 fallBasedDamage
+	METHOD modifyFishingLuckBonus (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/Entity;Lorg/apache/commons/lang3/mutable/MutableFloat;)V
+		ARG 1 level
+		ARG 2 enchantmentLevel
+		ARG 3 tool
+		ARG 4 entity
+		ARG 5 fishingLuckBonus
+	METHOD modifyFishingTimeReduction (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/Entity;Lorg/apache/commons/lang3/mutable/MutableFloat;)V
+		ARG 1 level
+		ARG 2 enchantmentLevel
+		ARG 3 tool
+		ARG 4 entity
+		ARG 5 fishingTimeReduction
+	METHOD modifyItemFilteredCount (Lnet/minecraft/core/component/DataComponentType;Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/ItemStack;Lorg/apache/commons/lang3/mutable/MutableFloat;)V
+		ARG 1 componentType
+		ARG 2 level
+		ARG 3 enchantmentLevel
+		ARG 4 tool
+		ARG 5 value
+	METHOD modifyKnockback (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/damagesource/DamageSource;Lorg/apache/commons/lang3/mutable/MutableFloat;)V
+		ARG 1 level
+		ARG 2 enchantmentLevel
+		ARG 3 tool
+		ARG 4 entity
+		ARG 5 damageSource
+		ARG 6 knockback
+	METHOD modifyMobExperience (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/Entity;Lorg/apache/commons/lang3/mutable/MutableFloat;)V
+		ARG 1 level
+		ARG 2 enchantmentLevel
+		ARG 3 tool
+		ARG 4 entity
+		ARG 5 mobExperience
+	METHOD modifyPiercingCount (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/ItemStack;Lorg/apache/commons/lang3/mutable/MutableFloat;)V
+		ARG 1 level
+		ARG 2 enchantmentLevel
+		ARG 3 tool
+		ARG 4 piercingCount
+	METHOD modifyProjectileCount (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/Entity;Lorg/apache/commons/lang3/mutable/MutableFloat;)V
+		ARG 1 level
+		ARG 2 enchantmentLevel
+		ARG 3 tool
+		ARG 4 entity
+		ARG 5 projectileCount
+	METHOD modifyProjectileSpread (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/Entity;Lorg/apache/commons/lang3/mutable/MutableFloat;)V
+		ARG 1 level
+		ARG 2 enchantmentLevel
+		ARG 3 tool
+		ARG 4 entity
+		ARG 5 projectileSpread
+	METHOD modifyTridentReturnToOwnerAcceleration (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/Entity;Lorg/apache/commons/lang3/mutable/MutableFloat;)V
+		ARG 1 level
+		ARG 2 enchantmentLevel
+		ARG 3 tool
+		ARG 4 entity
+		ARG 5 tridentReturnToOwnerAcceleration
+	METHOD modifyTridentSpinAttackStrength (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/Entity;Lorg/apache/commons/lang3/mutable/MutableFloat;)V
+		ARG 1 level
+		ARG 2 enchantmentLevel
+		ARG 3 tool
+		ARG 4 entity
+		ARG 5 tridentSpinAttackStrength
+	METHOD onHitBlock (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/enchantment/EnchantedItemInUse;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/phys/Vec3;)V
+		ARG 1 level
+		ARG 2 enchantmentLevel
+		ARG 3 item
+		ARG 4 entity
+		ARG 5 origin
+	METHOD onProjectileSpawned (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/enchantment/EnchantedItemInUse;Lnet/minecraft/world/entity/Entity;)V
+		ARG 1 level
+		ARG 2 enchantmentLevel
+		ARG 3 item
+		ARG 4 entity
+	METHOD runLocationChangedEffects (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/enchantment/EnchantedItemInUse;Lnet/minecraft/world/entity/LivingEntity;)V
+		ARG 1 level
+		ARG 2 enchantmentLevel
+		ARG 3 item
+		ARG 4 entity
+	METHOD stopLocationBasedEffects (ILnet/minecraft/world/item/enchantment/EnchantedItemInUse;Lnet/minecraft/world/entity/LivingEntity;)V
+		ARG 1 enchantmentLevel
+		ARG 2 item
+		ARG 3 entity
+	METHOD tick (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/enchantment/EnchantedItemInUse;Lnet/minecraft/world/entity/Entity;)V
+		ARG 1 level
+		ARG 2 enchantmentLevel
+		ARG 3 item
+		ARG 4 entity
+	CLASS Builder
+		METHOD <init> (Lnet/minecraft/world/item/enchantment/Enchantment$EnchantmentDefinition;)V
+			ARG 1 definition
+		METHOD build (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/world/item/enchantment/Enchantment;
+			ARG 1 location
+		METHOD exclusiveWith (Lnet/minecraft/core/HolderSet;)Lnet/minecraft/world/item/enchantment/Enchantment$Builder;
+			ARG 1 exclusiveSet
+		METHOD getEffectsList (Lnet/minecraft/core/component/DataComponentType;)Ljava/util/List;
+			ARG 1 componentType
+		METHOD withEffect (Lnet/minecraft/core/component/DataComponentType;)Lnet/minecraft/world/item/enchantment/Enchantment$Builder;
+			ARG 1 componentType
+		METHOD withEffect (Lnet/minecraft/core/component/DataComponentType;Ljava/lang/Object;)Lnet/minecraft/world/item/enchantment/Enchantment$Builder;
+			ARG 1 componentType
+			ARG 2 effect
+		METHOD withEffect (Lnet/minecraft/core/component/DataComponentType;Ljava/lang/Object;Lnet/minecraft/world/level/storage/loot/predicates/LootItemCondition$Builder;)Lnet/minecraft/world/item/enchantment/Enchantment$Builder;
+			ARG 1 componentType
+			ARG 2 effect
+			ARG 3 requirements
+		METHOD withEffect (Lnet/minecraft/core/component/DataComponentType;Lnet/minecraft/world/item/enchantment/EnchantmentTarget;Lnet/minecraft/world/item/enchantment/EnchantmentTarget;Ljava/lang/Object;)Lnet/minecraft/world/item/enchantment/Enchantment$Builder;
+			ARG 1 componentType
+			ARG 2 enchanted
+			ARG 3 affected
+			ARG 4 effect
+		METHOD withEffect (Lnet/minecraft/core/component/DataComponentType;Lnet/minecraft/world/item/enchantment/EnchantmentTarget;Lnet/minecraft/world/item/enchantment/EnchantmentTarget;Ljava/lang/Object;Lnet/minecraft/world/level/storage/loot/predicates/LootItemCondition$Builder;)Lnet/minecraft/world/item/enchantment/Enchantment$Builder;
+			ARG 1 componentType
+			ARG 2 enchanted
+			ARG 3 affected
+			ARG 4 effect
+			ARG 5 requirements
+		METHOD withEffect (Lnet/minecraft/core/component/DataComponentType;Lnet/minecraft/world/item/enchantment/effects/EnchantmentAttributeEffect;)Lnet/minecraft/world/item/enchantment/Enchantment$Builder;
+			ARG 1 componentType
+			ARG 2 effect
+		METHOD withSpecialEffect (Lnet/minecraft/core/component/DataComponentType;Ljava/lang/Object;)Lnet/minecraft/world/item/enchantment/Enchantment$Builder;
+			ARG 1 component
+			ARG 2 value
 	CLASS Cost
 		METHOD calculate (I)I
 			ARG 1 level
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
+	CLASS EnchantmentDefinition
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance

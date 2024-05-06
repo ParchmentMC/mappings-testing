@@ -1,0 +1,17 @@
+CLASS net/minecraft/world/level/storage/loot/functions/EnchantedCountIncreaseFunction
+	METHOD <init> (Ljava/util/List;Lnet/minecraft/core/Holder;Lnet/minecraft/world/level/storage/loot/providers/number/NumberProvider;I)V
+		ARG 1 conditions
+		ARG 2 enchantment
+		ARG 3 value
+		ARG 4 limit
+	METHOD lambda$static$3 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
+	METHOD lootingMultiplier (Lnet/minecraft/core/HolderLookup$Provider;Lnet/minecraft/world/level/storage/loot/providers/number/NumberProvider;)Lnet/minecraft/world/level/storage/loot/functions/EnchantedCountIncreaseFunction$Builder;
+		ARG 0 registries
+		ARG 1 count
+	CLASS Builder
+		METHOD <init> (Lnet/minecraft/core/Holder;Lnet/minecraft/world/level/storage/loot/providers/number/NumberProvider;)V
+			ARG 1 enchantment
+			ARG 2 count
+		METHOD setLimit (I)Lnet/minecraft/world/level/storage/loot/functions/EnchantedCountIncreaseFunction$Builder;
+			ARG 1 limit

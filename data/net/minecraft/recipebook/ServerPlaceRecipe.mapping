@@ -17,6 +17,10 @@ CLASS net/minecraft/recipebook/ServerPlaceRecipe
 	METHOD moveItemToGrid (Lnet/minecraft/world/inventory/Slot;Lnet/minecraft/world/item/ItemStack;)V
 		ARG 1 slotToFill
 		ARG 2 ingredient
+	METHOD moveItemToGrid (Lnet/minecraft/world/inventory/Slot;Lnet/minecraft/world/item/ItemStack;I)I
+		ARG 1 slot
+		ARG 2 stack
+		ARG 3 maxAmount
 	METHOD recipeClicked (Lnet/minecraft/server/level/ServerPlayer;Lnet/minecraft/world/item/crafting/RecipeHolder;Z)V
 		ARG 1 player
 		ARG 2 recipe

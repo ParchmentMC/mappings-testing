@@ -1,0 +1,9 @@
+CLASS net/minecraft/client/gui/screens/options/OnlineOptionsScreen
+	METHOD <init> (Lnet/minecraft/client/gui/screens/Screen;Lnet/minecraft/client/Options;)V
+		ARG 1 lastScreen
+		ARG 2 options
+	METHOD lambda$options$2 (Lnet/minecraft/client/multiplayer/ClientLevel;)Lnet/minecraft/client/OptionInstance;
+		ARG 0 level
+	METHOD options (Lnet/minecraft/client/Options;Lnet/minecraft/client/Minecraft;)[Lnet/minecraft/client/OptionInstance;
+		ARG 1 options
+		ARG 2 minecraft

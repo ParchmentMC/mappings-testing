@@ -1,0 +1,16 @@
+CLASS net/minecraft/client/multiplayer/SessionSearchTrees
+	METHOD getTooltipLines (Ljava/util/stream/Stream;Lnet/minecraft/world/item/Item$TooltipContext;Lnet/minecraft/world/item/TooltipFlag;)Ljava/util/stream/Stream;
+		ARG 0 items
+		ARG 1 context
+		ARG 2 tooltipFlag
+	METHOD register (Lnet/minecraft/client/multiplayer/SessionSearchTrees$Key;Ljava/lang/Runnable;)V
+		ARG 1 key
+		ARG 2 reloader
+	METHOD updateCreativeTags (Ljava/util/List;)V
+		ARG 1 items
+	METHOD updateCreativeTooltips (Lnet/minecraft/core/HolderLookup$Provider;Ljava/util/List;)V
+		ARG 1 registries
+		ARG 2 items
+	METHOD updateRecipes (Lnet/minecraft/client/ClientRecipeBook;Lnet/minecraft/core/RegistryAccess$Frozen;)V
+		ARG 1 recipeBook
+		ARG 2 registries

@@ -51,13 +51,16 @@ CLASS net/minecraft/resources/RegistryDataLoader
 		METHOD loadFromResources (Lnet/minecraft/server/packs/resources/ResourceManager;Lnet/minecraft/resources/RegistryOps$RegistryInfoLookup;)V
 			ARG 1 resouceManager
 			ARG 2 registryInfoLookup
+	CLASS LoadingFunction
+		METHOD apply (Lnet/minecraft/resources/RegistryDataLoader$Loader;Lnet/minecraft/resources/RegistryOps$RegistryInfoLookup;)V
+			ARG 1 loader
+			ARG 2 registryInfoLookup
 	CLASS RegistryData
+		METHOD <init> (Lnet/minecraft/resources/ResourceKey;Lcom/mojang/serialization/Codec;)V
+			ARG 1 key
+			ARG 2 elementCodec
 		METHOD create (Lcom/mojang/serialization/Lifecycle;Ljava/util/Map;)Lnet/minecraft/resources/RegistryDataLoader$Loader;
 			ARG 1 registryLifecycle
 			ARG 2 loadingErrors
 		METHOD runWithArguments (Ljava/util/function/BiConsumer;)V
 			ARG 1 runner
-	CLASS LoadingFunction
-		METHOD apply (Lnet/minecraft/resources/RegistryDataLoader$Loader;Lnet/minecraft/resources/RegistryOps$RegistryInfoLookup;)V
-			ARG 1 loader
-			ARG 2 registryInfoLookup

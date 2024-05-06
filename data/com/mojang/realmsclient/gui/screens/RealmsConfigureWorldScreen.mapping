@@ -25,12 +25,16 @@ CLASS com/mojang/realmsclient/gui/screens/RealmsConfigureWorldScreen
 		ARG 5 mouseY
 	METHOD fetchServerData (J)V
 		ARG 1 serverId
+	METHOD frame (I)I
+		ARG 1 index
 	METHOD hide (Lnet/minecraft/client/gui/components/Button;)V
 		ARG 1 button
 	METHOD joinRealm (Lcom/mojang/realmsclient/dto/RealmsServer;)V
 		ARG 1 server
 	METHOD leftButton (I)I
 		ARG 1 index
+	METHOD openTheWorld (Z)V
+		ARG 1 join
 	METHOD openTheWorld (ZLnet/minecraft/client/gui/screens/Screen;)V
 		ARG 1 join
 		ARG 2 lastScreen

@@ -1,0 +1,7 @@
+CLASS net/minecraft/world/entity/decoration/BlockAttachedEntity
+	METHOD <init> (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)V
+		ARG 1 entityType
+		ARG 2 level
+		ARG 3 pos
+	METHOD dropItem (Lnet/minecraft/world/entity/Entity;)V
+		ARG 1 entity

@@ -426,3 +426,6 @@ CLASS net/minecraft/world/level/Level
 		ARG 2 block
 	METHOD updateSkyBrightness ()V
 		COMMENT Called on the construction of the {@code Level} class to set up the initial skylight values.
+	CLASS ExplosionInteraction
+		METHOD <init> (Ljava/lang/String;ILjava/lang/String;)V
+			ARG 3 id

@@ -1,0 +1,10 @@
+CLASS net/minecraft/world/item/enchantment/ConditionalEffect
+	METHOD codec (Lcom/mojang/serialization/Codec;Lnet/minecraft/world/level/storage/loot/parameters/LootContextParamSet;)Lcom/mojang/serialization/Codec;
+		ARG 0 codec
+		ARG 1 params
+	METHOD conditionCodec (Lnet/minecraft/world/level/storage/loot/parameters/LootContextParamSet;)Lcom/mojang/serialization/Codec;
+		ARG 0 params
+	METHOD lambda$codec$4 (Lcom/mojang/serialization/Codec;Lnet/minecraft/world/level/storage/loot/parameters/LootContextParamSet;Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 2 instance
+	METHOD matches (Lnet/minecraft/world/level/storage/loot/LootContext;)Z
+		ARG 1 context

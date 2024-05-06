@@ -4,6 +4,10 @@ CLASS net/minecraft/client/gui/components/OptionsList
 		ARG 2 width
 		ARG 3 height
 		ARG 4 screen
+	METHOD <init> (Lnet/minecraft/client/Minecraft;ILnet/minecraft/client/gui/screens/options/OptionsSubScreen;)V
+		ARG 1 minecraft
+		ARG 2 width
+		ARG 3 screen
 	METHOD addBig (Lnet/minecraft/client/OptionInstance;)V
 		ARG 1 option
 	METHOD addSmall (Ljava/util/List;)V
@@ -33,11 +37,23 @@ CLASS net/minecraft/client/gui/components/OptionsList
 		METHOD <init> (Ljava/util/Map;Lnet/minecraft/client/gui/screens/OptionsSubScreen;)V
 			ARG 1 options
 			ARG 2 screen
+		METHOD <init> (Ljava/util/Map;Lnet/minecraft/client/gui/screens/options/OptionsSubScreen;)V
+			ARG 1 options
+			ARG 2 screen
 		METHOD big (Lnet/minecraft/client/Options;Lnet/minecraft/client/OptionInstance;Lnet/minecraft/client/gui/screens/OptionsSubScreen;)Lnet/minecraft/client/gui/components/OptionsList$OptionEntry;
 			ARG 0 options
 			ARG 1 option
 			ARG 2 screen
+		METHOD big (Lnet/minecraft/client/Options;Lnet/minecraft/client/OptionInstance;Lnet/minecraft/client/gui/screens/options/OptionsSubScreen;)Lnet/minecraft/client/gui/components/OptionsList$OptionEntry;
+			ARG 0 options
+			ARG 1 option
+			ARG 2 screen
 		METHOD small (Lnet/minecraft/client/Options;Lnet/minecraft/client/OptionInstance;Lnet/minecraft/client/OptionInstance;Lnet/minecraft/client/gui/screens/OptionsSubScreen;)Lnet/minecraft/client/gui/components/OptionsList$OptionEntry;
+			ARG 0 options
+			ARG 1 leftOption
+			ARG 2 rightOption
+			ARG 3 screen
+		METHOD small (Lnet/minecraft/client/Options;Lnet/minecraft/client/OptionInstance;Lnet/minecraft/client/OptionInstance;Lnet/minecraft/client/gui/screens/options/OptionsSubScreen;)Lnet/minecraft/client/gui/components/OptionsList$OptionEntry;
 			ARG 0 options
 			ARG 1 leftOption
 			ARG 2 rightOption

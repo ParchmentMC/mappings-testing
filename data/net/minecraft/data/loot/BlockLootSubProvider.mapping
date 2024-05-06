@@ -6,6 +6,15 @@ CLASS net/minecraft/data/loot/BlockLootSubProvider
 		ARG 1 explosionResistant
 		ARG 2 enabledFeatures
 		ARG 3 map
+	METHOD <init> (Ljava/util/Set;Lnet/minecraft/world/flag/FeatureFlagSet;Ljava/util/Map;Lnet/minecraft/core/HolderLookup$Provider;)V
+		ARG 1 explosionResistant
+		ARG 2 enabledFeatures
+		ARG 3 map
+		ARG 4 registries
+	METHOD <init> (Ljava/util/Set;Lnet/minecraft/world/flag/FeatureFlagSet;Lnet/minecraft/core/HolderLookup$Provider;)V
+		ARG 1 explosionResistant
+		ARG 2 enabledFeatures
+		ARG 3 registries
 	METHOD add (Lnet/minecraft/world/level/block/Block;Ljava/util/function/Function;)V
 		ARG 1 block
 		ARG 2 factory
@@ -27,15 +36,15 @@ CLASS net/minecraft/data/loot/BlockLootSubProvider
 	METHOD createBannerDrop (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
 		ARG 1 block
 	METHOD createBeeHiveDrop (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
-		ARG 0 block
+		ARG 1 block
 	METHOD createBeeNestDrop (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
-		ARG 0 block
+		ARG 1 block
 	METHOD createCandleCakeDrops (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
 		ARG 0 candleCakeBlock
 	METHOD createCandleDrops (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
 		ARG 1 candleBlock
 	METHOD createCaveVinesDrop (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
-		ARG 0 block
+		ARG 1 block
 	METHOD createCopperOreDrops (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
 		ARG 1 block
 	METHOD createCropDrops (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/item/Item;Lnet/minecraft/world/item/Item;Lnet/minecraft/world/level/storage/loot/predicates/LootItemCondition$Builder;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
@@ -48,7 +57,7 @@ CLASS net/minecraft/data/loot/BlockLootSubProvider
 	METHOD createDoorTable (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
 		ARG 1 doorBlock
 	METHOD createDoublePlantShearsDrop (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
-		ARG 0 sheared
+		ARG 1 sheared
 	METHOD createDoublePlantWithSeedDrops (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
 		ARG 1 block
 		ARG 2 sheared
@@ -94,8 +103,8 @@ CLASS net/minecraft/data/loot/BlockLootSubProvider
 	METHOD createShearsDispatchTable (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/storage/loot/entries/LootPoolEntryContainer$Builder;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
 		COMMENT If the block is mined with Shears, drops 1 {@code block}.
 		COMMENT Otherwise, drops loot specified by {@code builder}.
-		ARG 0 block
-		ARG 1 builder
+		ARG 1 block
+		ARG 2 builder
 	METHOD createShearsOnlyDrop (Lnet/minecraft/world/level/ItemLike;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
 		ARG 0 item
 	METHOD createShulkerBoxDrop (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
@@ -103,15 +112,15 @@ CLASS net/minecraft/data/loot/BlockLootSubProvider
 	METHOD createSilkTouchDispatchTable (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/storage/loot/entries/LootPoolEntryContainer$Builder;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
 		COMMENT If the block is mined with Silk Touch, drops 1 {@code block}.
 		COMMENT Otherwise, drops loot specified by {@code builder}.
-		ARG 0 block
-		ARG 1 builder
+		ARG 1 block
+		ARG 2 builder
 	METHOD createSilkTouchOnlyTable (Lnet/minecraft/world/level/ItemLike;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
-		ARG 0 item
+		ARG 1 item
 	METHOD createSilkTouchOrShearsDispatchTable (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/storage/loot/entries/LootPoolEntryContainer$Builder;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
 		COMMENT If the block is mined either with Silk Touch or Shears, drops 1 {@code block}.
 		COMMENT Otherwise, drops loot specified by {@code builder}.
-		ARG 0 block
-		ARG 1 builder
+		ARG 1 block
+		ARG 2 builder
 	METHOD createSingleItemTable (Lnet/minecraft/world/level/ItemLike;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
 		ARG 1 item
 	METHOD createSingleItemTable (Lnet/minecraft/world/level/ItemLike;Lnet/minecraft/world/level/storage/loot/providers/number/NumberProvider;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;

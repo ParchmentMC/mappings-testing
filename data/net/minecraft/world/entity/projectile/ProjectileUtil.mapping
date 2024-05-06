@@ -47,6 +47,11 @@ CLASS net/minecraft/world/entity/projectile/ProjectileUtil
 		ARG 0 shooter
 		ARG 1 arrowStack
 		ARG 2 velocity
+	METHOD getMobArrow (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;FLnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/entity/projectile/AbstractArrow;
+		ARG 0 shooter
+		ARG 1 arrow
+		ARG 2 velocity
+		ARG 3 weapon
 	METHOD getWeaponHoldingHand (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/Item;)Lnet/minecraft/world/InteractionHand;
 		ARG 0 shooter
 		ARG 1 weapon

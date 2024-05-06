@@ -1,0 +1,3 @@
+CLASS net/minecraft/world/item/enchantment/providers/TradeRebalanceEnchantmentProviders
+	METHOD bootstrap (Lnet/minecraft/data/worldgen/BootstrapContext;)V
+		ARG 0 context

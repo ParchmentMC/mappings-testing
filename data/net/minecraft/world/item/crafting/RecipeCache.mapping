@@ -4,9 +4,15 @@ CLASS net/minecraft/world/item/crafting/RecipeCache
 	METHOD compute (Lnet/minecraft/world/inventory/CraftingContainer;Lnet/minecraft/world/level/Level;)Ljava/util/Optional;
 		ARG 1 container
 		ARG 2 level
+	METHOD compute (Lnet/minecraft/world/item/crafting/CraftingInput;Lnet/minecraft/world/level/Level;)Ljava/util/Optional;
+		ARG 1 input
+		ARG 2 level
 	METHOD get (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/inventory/CraftingContainer;)Ljava/util/Optional;
 		ARG 1 level
 		ARG 2 container
+	METHOD get (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/item/crafting/CraftingInput;)Ljava/util/Optional;
+		ARG 1 level
+		ARG 2 input
 	METHOD insert (Ljava/util/List;Lnet/minecraft/world/item/crafting/RecipeHolder;)V
 		ARG 1 items
 		ARG 2 recipe

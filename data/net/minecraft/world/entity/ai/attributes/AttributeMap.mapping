@@ -1,8 +1,10 @@
 CLASS net/minecraft/world/entity/ai/attributes/AttributeMap
 	METHOD <init> (Lnet/minecraft/world/entity/ai/attributes/AttributeSupplier;)V
 		ARG 1 supplier
+	METHOD addTransientAttributeModifiers (Lcom/google/common/collect/Multimap;)V
+		ARG 1 modifiers
 	METHOD assignValues (Lnet/minecraft/world/entity/ai/attributes/AttributeMap;)V
-		ARG 1 manager
+		ARG 1 values
 	METHOD getBaseValue (Lnet/minecraft/core/Holder;)D
 		ARG 1 attribute
 	METHOD getInstance (Lnet/minecraft/core/Holder;)Lnet/minecraft/world/entity/ai/attributes/AttributeInstance;
@@ -23,3 +25,5 @@ CLASS net/minecraft/world/entity/ai/attributes/AttributeMap
 		ARG 1 nbt
 	METHOD onAttributeModified (Lnet/minecraft/world/entity/ai/attributes/AttributeInstance;)V
 		ARG 1 instance
+	METHOD removeAttributeModifiers (Lcom/google/common/collect/Multimap;)V
+		ARG 1 modifiers

@@ -8,8 +8,12 @@ CLASS net/minecraft/advancements/critereon/EntityFlagsPredicate
 			ARG 1 isCrouching
 		METHOD setIsBaby (Ljava/lang/Boolean;)Lnet/minecraft/advancements/critereon/EntityFlagsPredicate$Builder;
 			ARG 1 isBaby
+		METHOD setIsFlying (Ljava/lang/Boolean;)Lnet/minecraft/advancements/critereon/EntityFlagsPredicate$Builder;
+			ARG 1 isFlying
 		METHOD setOnFire (Ljava/lang/Boolean;)Lnet/minecraft/advancements/critereon/EntityFlagsPredicate$Builder;
 			ARG 1 onFire
+		METHOD setOnGround (Ljava/lang/Boolean;)Lnet/minecraft/advancements/critereon/EntityFlagsPredicate$Builder;
+			ARG 1 onGround
 		METHOD setSprinting (Ljava/lang/Boolean;)Lnet/minecraft/advancements/critereon/EntityFlagsPredicate$Builder;
 			ARG 1 isSprinting
 		METHOD setSwimming (Ljava/lang/Boolean;)Lnet/minecraft/advancements/critereon/EntityFlagsPredicate$Builder;

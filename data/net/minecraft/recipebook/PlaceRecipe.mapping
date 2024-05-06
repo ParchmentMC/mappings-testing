@@ -1,4 +1,10 @@
 CLASS net/minecraft/recipebook/PlaceRecipe
+	METHOD addItemToSlot (Ljava/lang/Object;IIII)V
+		ARG 1 item
+		ARG 2 slot
+		ARG 3 maxAmount
+		ARG 4 x
+		ARG 5 y
 	METHOD addItemToSlot (Ljava/util/Iterator;IIII)V
 		ARG 1 ingredients
 		ARG 2 slot

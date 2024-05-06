@@ -61,6 +61,11 @@ CLASS net/minecraft/world/entity/Mob
 		ARG 1 random
 		ARG 2 chanceMultiplier
 		ARG 3 slot
+	METHOD enchantSpawnedEquipment (Lnet/minecraft/world/entity/EquipmentSlot;Lnet/minecraft/util/RandomSource;FF)V
+		ARG 1 slot
+		ARG 2 random
+		ARG 3 chance
+		ARG 4 chanceMultiplier
 	METHOD enchantSpawnedWeapon (Lnet/minecraft/util/RandomSource;F)V
 		ARG 1 random
 		ARG 2 chanceMultiplier

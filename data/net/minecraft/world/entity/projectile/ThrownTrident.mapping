@@ -17,6 +17,8 @@ CLASS net/minecraft/world/entity/projectile/ThrownTrident
 		ARG 2 endVec
 	METHOD getDefaultHitGroundSoundEvent ()Lnet/minecraft/sounds/SoundEvent;
 		COMMENT The sound made when an entity is hit by this projectile
+	METHOD getLoyaltyFromItem (Lnet/minecraft/world/item/ItemStack;)B
+		ARG 1 stack
 	METHOD onHitEntity (Lnet/minecraft/world/phys/EntityHitResult;)V
 		COMMENT Called when the arrow hits an entity
 		ARG 1 result

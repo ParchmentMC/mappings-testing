@@ -1,0 +1,6 @@
+CLASS net/minecraft/world/level/SimpleExplosionDamageCalculator
+	METHOD <init> (ZZLjava/util/Optional;Ljava/util/Optional;)V
+		ARG 1 explodesBlocks
+		ARG 2 damagesEntities
+		ARG 3 knockbackMultiplier
+		ARG 4 immuneBlocks

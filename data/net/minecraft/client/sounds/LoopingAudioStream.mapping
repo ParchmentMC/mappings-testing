@@ -15,10 +15,6 @@ CLASS net/minecraft/client/sounds/LoopingAudioStream
 		COMMENT @throws IOException if an I/O error occurs while reading the audio data
 		ARG 1 size
 			COMMENT the maximum number of bytes to read
-	CLASS NoCloseBuffer
-		COMMENT A {@linkplain FilterInputStream} that does not close the underlying {@linkplain InputStream}.
-		METHOD <init> (Ljava/io/InputStream;)V
-			ARG 1 inputStream
 	CLASS AudioStreamProvider
 		COMMENT A functional interface for providing an {@linkplain AudioStream} from an {@linkplain InputStream}.
 		METHOD create (Ljava/io/InputStream;)Lnet/minecraft/client/sounds/AudioStream;
@@ -27,3 +23,7 @@ CLASS net/minecraft/client/sounds/LoopingAudioStream
 			COMMENT @throws IOException if an I/O error occurs while creating the {@linkplain AudioStream}
 			ARG 1 inputStream
 				COMMENT the input stream to create the {@linkplain AudioStream} from
+	CLASS NoCloseBuffer
+		COMMENT A {@linkplain FilterInputStream} that does not close the underlying {@linkplain InputStream}.
+		METHOD <init> (Ljava/io/InputStream;)V
+			ARG 1 inputStream

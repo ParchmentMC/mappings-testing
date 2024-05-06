@@ -1,6 +1,9 @@
 CLASS net/minecraft/world/entity/projectile/Projectile
 	METHOD addAdditionalSaveData (Lnet/minecraft/nbt/CompoundTag;)V
 		ARG 1 compound
+	METHOD calculateHorizontalHurtKnockbackDirection (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/damagesource/DamageSource;)Lit/unimi/dsi/fastutil/doubles/DoubleDoubleImmutablePair;
+		ARG 1 entity
+		ARG 2 damageSource
 	METHOD canHitEntity (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 1 target
 	METHOD deflect (Lnet/minecraft/world/entity/projectile/ProjectileDeflection;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/Entity;Z)V
