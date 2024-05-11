@@ -16,6 +16,8 @@ CLASS net/minecraft/world/entity/ai/attributes/Attribute
 	METHOD getDescriptionId ()Ljava/lang/String;
 		COMMENT Gets the description Id of the attribute. This is most commonly used as a localization key.
 		COMMENT @return The description Id of the attribute.
+	METHOD getStyle (Z)Lnet/minecraft/ChatFormatting;
+		ARG 1 isPositive
 	METHOD isClientSyncable ()Z
 		COMMENT Checks if the attribute value should be kept in sync on the client.
 		COMMENT @return Whether the attribute value should be kept in sync on the client.
@@ -24,8 +26,13 @@ CLASS net/minecraft/world/entity/ai/attributes/Attribute
 		COMMENT @return The sanitized attribute value.
 		ARG 1 value
 			COMMENT The value of the attribute to sanitize.
+	METHOD setSentiment (Lnet/minecraft/world/entity/ai/attributes/Attribute$Sentiment;)Lnet/minecraft/world/entity/ai/attributes/Attribute;
+		ARG 1 sentiment
 	METHOD setSyncable (Z)Lnet/minecraft/world/entity/ai/attributes/Attribute;
 		COMMENT Sets whether the attribute value should be synced to the client.
 		COMMENT @return The same attribute instance being modified.
 		ARG 1 watch
 			COMMENT Whether the attribute value should be kept in sync.
+	CLASS Sentiment
+		METHOD getStyle (Z)Lnet/minecraft/ChatFormatting;
+			ARG 1 isPositive

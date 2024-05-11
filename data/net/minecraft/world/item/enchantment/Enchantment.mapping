@@ -214,6 +214,10 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 		ARG 2 enchantmentLevel
 		ARG 3 tool
 		ARG 4 crossbowChargeTime
+	METHOD modifyCrossbowChargeTime (Lnet/minecraft/util/RandomSource;ILorg/apache/commons/lang3/mutable/MutableFloat;)V
+		ARG 1 random
+		ARG 2 enchantmentLevel
+		ARG 3 value
 	METHOD modifyDamage (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/damagesource/DamageSource;Lorg/apache/commons/lang3/mutable/MutableFloat;)V
 		ARG 1 level
 		ARG 2 enchantmentLevel
@@ -319,6 +323,15 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 		ARG 3 tool
 		ARG 4 entity
 		ARG 5 tridentSpinAttackStrength
+	METHOD modifyTridentSpinAttackStrength (Lnet/minecraft/util/RandomSource;ILorg/apache/commons/lang3/mutable/MutableFloat;)V
+		ARG 1 random
+		ARG 2 enchantmentLevel
+		ARG 3 value
+	METHOD modifyUnfilteredValue (Lnet/minecraft/core/component/DataComponentType;Lnet/minecraft/util/RandomSource;ILorg/apache/commons/lang3/mutable/MutableFloat;)V
+		ARG 1 componentType
+		ARG 2 random
+		ARG 3 enchantmentLevel
+		ARG 4 value
 	METHOD onHitBlock (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/enchantment/EnchantedItemInUse;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/phys/Vec3;)V
 		ARG 1 level
 		ARG 2 enchantmentLevel

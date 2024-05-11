@@ -45,6 +45,8 @@ CLASS net/minecraft/world/level/storage/loot/LootContext
 			ARG 1 sequence
 		METHOD withOptionalRandomSeed (J)Lnet/minecraft/world/level/storage/loot/LootContext$Builder;
 			ARG 1 seed
+		METHOD withOptionalRandomSource (Lnet/minecraft/util/RandomSource;)Lnet/minecraft/world/level/storage/loot/LootContext$Builder;
+			ARG 1 random
 	CLASS EntityTarget
 		COMMENT Represents a type of entity that can be looked up in a {@link LootContext} using a {@link LootContextParam}.
 		FIELD DIRECT_KILLER Lnet/minecraft/world/level/storage/loot/LootContext$EntityTarget;

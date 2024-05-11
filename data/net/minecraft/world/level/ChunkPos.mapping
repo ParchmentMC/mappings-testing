@@ -31,6 +31,9 @@ CLASS net/minecraft/world/level/ChunkPos
 		ARG 1 x
 	METHOD getBlockZ (I)I
 		ARG 1 z
+	METHOD getChessboardDistance (II)I
+		ARG 1 x
+		ARG 2 z
 	METHOD getChessboardDistance (Lnet/minecraft/world/level/ChunkPos;)I
 		ARG 1 chunkPos
 	METHOD getMaxBlockX ()I

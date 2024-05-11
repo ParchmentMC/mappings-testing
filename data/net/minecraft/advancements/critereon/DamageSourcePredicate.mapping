@@ -11,6 +11,8 @@ CLASS net/minecraft/advancements/critereon/DamageSourcePredicate
 	CLASS Builder
 		METHOD direct (Lnet/minecraft/advancements/critereon/EntityPredicate$Builder;)Lnet/minecraft/advancements/critereon/DamageSourcePredicate$Builder;
 			ARG 1 directEntity
+		METHOD isDirect (Z)Lnet/minecraft/advancements/critereon/DamageSourcePredicate$Builder;
+			ARG 1 isDirect
 		METHOD source (Lnet/minecraft/advancements/critereon/EntityPredicate$Builder;)Lnet/minecraft/advancements/critereon/DamageSourcePredicate$Builder;
 			ARG 1 sourceEntity
 		METHOD tag (Lnet/minecraft/advancements/critereon/TagPredicate;)Lnet/minecraft/advancements/critereon/DamageSourcePredicate$Builder;

@@ -5,6 +5,10 @@ CLASS net/minecraft/world/entity/projectile/WitherSkull
 		ARG 3 offsetX
 		ARG 5 offsetY
 		ARG 7 offsetZ
+	METHOD <init> (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/phys/Vec3;)V
+		ARG 1 level
+		ARG 2 owner
+		ARG 3 movement
 	METHOD getBlockExplosionResistance (Lnet/minecraft/world/level/Explosion;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/material/FluidState;F)F
 		COMMENT Explosion resistance of a block relative to this entity
 		ARG 1 explosion

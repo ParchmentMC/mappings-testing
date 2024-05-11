@@ -65,6 +65,12 @@ CLASS net/minecraft/world/level/block/LecternBlock
 		ARG 2 pos
 		ARG 3 state
 		ARG 4 stack
+	METHOD placeBook (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/item/ItemStack;)V
+		ARG 0 entity
+		ARG 1 level
+		ARG 2 pos
+		ARG 3 state
+		ARG 4 stack
 	METHOD popBook (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)V
 		ARG 1 state
 		ARG 2 level
@@ -83,6 +89,12 @@ CLASS net/minecraft/world/level/block/LecternBlock
 		ARG 1 pos
 		ARG 2 state
 	METHOD tryPlaceBook (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/item/ItemStack;)Z
+		ARG 0 entity
+		ARG 1 level
+		ARG 2 pos
+		ARG 3 state
+		ARG 4 stack
+	METHOD tryPlaceBook (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 0 entity
 		ARG 1 level
 		ARG 2 pos

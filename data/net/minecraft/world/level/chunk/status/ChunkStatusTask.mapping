@@ -1,0 +1,6 @@
+CLASS net/minecraft/world/level/chunk/status/ChunkStatusTask
+	METHOD doWork (Lnet/minecraft/world/level/chunk/status/WorldGenContext;Lnet/minecraft/world/level/chunk/status/ChunkStep;Lnet/minecraft/util/StaticCache2D;Lnet/minecraft/world/level/chunk/ChunkAccess;)Ljava/util/concurrent/CompletableFuture;
+		ARG 1 worldGenContext
+		ARG 2 step
+		ARG 3 cache
+		ARG 4 chunk

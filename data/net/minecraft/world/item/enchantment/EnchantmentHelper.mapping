@@ -154,6 +154,8 @@ CLASS net/minecraft/world/item/enchantment/EnchantmentHelper
 		ARG 0 level
 		ARG 1 stack
 		ARG 2 entity
+	METHOD getTridentSpinAttackStrength (Lnet/minecraft/world/entity/LivingEntity;)F
+		ARG 0 entity
 	METHOD has (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/core/component/DataComponentType;)Z
 		ARG 0 stack
 		ARG 1 componentType
@@ -199,6 +201,9 @@ CLASS net/minecraft/world/item/enchantment/EnchantmentHelper
 		ARG 1 stack
 		ARG 2 entity
 		ARG 3 crossbowChargeTime
+	METHOD modifyCrossbowChargingTime (Lnet/minecraft/world/entity/LivingEntity;F)F
+		ARG 0 entity
+		ARG 1 crossbowChargeTime
 	METHOD modifyDamage (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/damagesource/DamageSource;F)F
 		ARG 0 level
 		ARG 1 tool

@@ -182,6 +182,8 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 1 locked
 	METHOD setEnforceWhitelist (Z)V
 		ARG 1 whitelistEnabled
+	METHOD setFatalException (Ljava/lang/RuntimeException;)V
+		ARG 0 fatalException
 	METHOD setFlightAllowed (Z)V
 		ARG 1 allow
 	METHOD setId (Ljava/lang/String;)V

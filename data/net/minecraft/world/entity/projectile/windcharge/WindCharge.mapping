@@ -13,3 +13,9 @@ CLASS net/minecraft/world/entity/projectile/windcharge/WindCharge
 		ARG 8 offsetX
 		ARG 10 offsetY
 		ARG 12 offsetZ
+	METHOD <init> (Lnet/minecraft/world/level/Level;DDDLnet/minecraft/world/phys/Vec3;)V
+		ARG 1 level
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 movement

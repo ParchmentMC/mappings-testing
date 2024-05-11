@@ -1,0 +1,12 @@
+CLASS net/minecraft/server/level/GeneratingChunkMap
+	METHOD acquireGeneration (J)Lnet/minecraft/server/level/GenerationChunkHolder;
+		ARG 1 chunkPos
+	METHOD applyStep (Lnet/minecraft/server/level/GenerationChunkHolder;Lnet/minecraft/world/level/chunk/status/ChunkStep;Lnet/minecraft/util/StaticCache2D;)Ljava/util/concurrent/CompletableFuture;
+		ARG 1 chunk
+		ARG 2 step
+		ARG 3 cache
+	METHOD releaseGeneration (Lnet/minecraft/server/level/GenerationChunkHolder;)V
+		ARG 1 chunk
+	METHOD scheduleGenerationTask (Lnet/minecraft/world/level/chunk/status/ChunkStatus;Lnet/minecraft/world/level/ChunkPos;)Lnet/minecraft/server/level/ChunkGenerationTask;
+		ARG 1 targetStatus
+		ARG 2 pos

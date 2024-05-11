@@ -10,3 +10,5 @@ CLASS net/minecraft/util/datafix/DataFixers
 		ARG 0 renameMap
 	METHOD createRenamerNoNamespace (Ljava/util/Map;)Ljava/util/function/UnaryOperator;
 		ARG 0 renameMap
+	METHOD optimize (Ljava/util/Set;)Ljava/util/concurrent/CompletableFuture;
+		ARG 0 references

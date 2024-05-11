@@ -25,6 +25,15 @@ CLASS net/minecraft/server/level/ChunkTaskPriorityQueueSorter
 	METHOD message (Lnet/minecraft/server/level/ChunkHolder;Ljava/util/function/Function;)Lnet/minecraft/server/level/ChunkTaskPriorityQueueSorter$Message;
 		ARG 0 chunkHolder
 		ARG 1 task
+	METHOD message (Lnet/minecraft/server/level/GenerationChunkHolder;Ljava/lang/Runnable;)Lnet/minecraft/server/level/ChunkTaskPriorityQueueSorter$Message;
+		ARG 0 chunk
+		ARG 1 task
+	METHOD message (Lnet/minecraft/server/level/GenerationChunkHolder;Ljava/util/function/Function;)Lnet/minecraft/server/level/ChunkTaskPriorityQueueSorter$Message;
+		ARG 0 chunk
+		ARG 1 task
+	METHOD pollTask (Lnet/minecraft/server/level/ChunkTaskPriorityQueue;Lnet/minecraft/util/thread/ProcessorHandle;)V
+		ARG 1 queue
+		ARG 2 processor
 	METHOD release (Ljava/lang/Runnable;JZ)Lnet/minecraft/server/level/ChunkTaskPriorityQueueSorter$Release;
 		ARG 0 task
 		ARG 1 pos
@@ -32,11 +41,13 @@ CLASS net/minecraft/server/level/ChunkTaskPriorityQueueSorter
 	METHOD release (Lnet/minecraft/util/thread/ProcessorHandle;JLjava/lang/Runnable;Z)V
 		ARG 1 processor
 		ARG 2 chunkPos
-		ARG 5 fullClear
+		ARG 4 task
+		ARG 5 clearQueue
 	METHOD submit (Lnet/minecraft/util/thread/ProcessorHandle;Ljava/util/function/Function;JLjava/util/function/IntSupplier;Z)V
 		ARG 1 processor
 		ARG 2 task
 		ARG 3 chunkPos
+		ARG 5 level
 	CLASS Message
 		METHOD <init> (Ljava/util/function/Function;JLjava/util/function/IntSupplier;)V
 			ARG 1 task

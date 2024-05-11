@@ -1,4 +1,7 @@
 CLASS net/minecraft/network/protocol/game/ClientboundProjectilePowerPacket
+	METHOD <init> (ID)V
+		ARG 1 id
+		ARG 2 accelerationPower
 	METHOD <init> (IDDD)V
 		ARG 1 id
 		ARG 2 xPower

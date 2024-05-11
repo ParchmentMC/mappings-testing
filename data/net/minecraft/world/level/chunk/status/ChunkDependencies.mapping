@@ -1,0 +1,7 @@
+CLASS net/minecraft/world/level/chunk/status/ChunkDependencies
+	METHOD <init> (Lcom/google/common/collect/ImmutableList;)V
+		ARG 1 dependencyByRadius
+	METHOD get (I)Lnet/minecraft/world/level/chunk/status/ChunkStatus;
+		ARG 1 radius
+	METHOD getRadiusOf (Lnet/minecraft/world/level/chunk/status/ChunkStatus;)I
+		ARG 1 status

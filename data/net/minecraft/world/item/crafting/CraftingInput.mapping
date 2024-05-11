@@ -12,3 +12,7 @@ CLASS net/minecraft/world/item/crafting/CraftingInput
 		ARG 0 width
 		ARG 1 height
 		ARG 2 items
+	METHOD ofPositioned (IILjava/util/List;)Lnet/minecraft/world/item/crafting/CraftingInput$Positioned;
+		ARG 0 width
+		ARG 1 height
+		ARG 2 items

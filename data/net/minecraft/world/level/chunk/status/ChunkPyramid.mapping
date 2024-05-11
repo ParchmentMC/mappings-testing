@@ -1,0 +1,7 @@
+CLASS net/minecraft/world/level/chunk/status/ChunkPyramid
+	METHOD getStepTo (Lnet/minecraft/world/level/chunk/status/ChunkStatus;)Lnet/minecraft/world/level/chunk/status/ChunkStep;
+		ARG 1 status
+	CLASS Builder
+		METHOD step (Lnet/minecraft/world/level/chunk/status/ChunkStatus;Ljava/util/function/UnaryOperator;)Lnet/minecraft/world/level/chunk/status/ChunkPyramid$Builder;
+			ARG 1 status
+			ARG 2 task

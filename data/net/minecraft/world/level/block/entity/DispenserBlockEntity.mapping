@@ -11,5 +11,7 @@ CLASS net/minecraft/world/level/block/entity/DispenserBlockEntity
 		ARG 2 player
 	METHOD getRandomSlot (Lnet/minecraft/util/RandomSource;)I
 		ARG 1 random
+	METHOD insertItem (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/ItemStack;
+		ARG 1 stack
 	METHOD setItems (Lnet/minecraft/core/NonNullList;)V
 		ARG 1 items

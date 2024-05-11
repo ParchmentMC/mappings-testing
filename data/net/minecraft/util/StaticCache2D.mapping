@@ -1,0 +1,27 @@
+CLASS net/minecraft/util/StaticCache2D
+	METHOD <init> (IIIILnet/minecraft/util/StaticCache2D$Initializer;)V
+		ARG 1 minX
+		ARG 2 minZ
+		ARG 3 sizeX
+		ARG 4 sizeZ
+		ARG 5 initializer
+	METHOD contains (II)Z
+		ARG 1 x
+		ARG 2 z
+	METHOD create (IIILnet/minecraft/util/StaticCache2D$Initializer;)Lnet/minecraft/util/StaticCache2D;
+		ARG 0 centerX
+		ARG 1 centerZ
+		ARG 2 size
+		ARG 3 initializer
+	METHOD forEach (Ljava/util/function/Consumer;)V
+		ARG 1 action
+	METHOD get (II)Ljava/lang/Object;
+		ARG 1 x
+		ARG 2 z
+	METHOD getIndex (II)I
+		ARG 1 x
+		ARG 2 z
+	CLASS Initializer
+		METHOD get (II)Ljava/lang/Object;
+			ARG 1 x
+			ARG 2 z

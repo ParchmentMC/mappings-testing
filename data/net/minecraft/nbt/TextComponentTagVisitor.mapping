@@ -5,6 +5,9 @@ CLASS net/minecraft/nbt/TextComponentTagVisitor
 		ARG 1 indentation
 		ARG 2 indentDepth
 		ARG 3 depth
+	METHOD appendSubTag (Lnet/minecraft/nbt/Tag;Z)V
+		ARG 1 tag
+		ARG 2 indent
 	METHOD buildSubTag (Lnet/minecraft/nbt/Tag;Z)Lnet/minecraft/network/chat/Component;
 		ARG 1 tag
 		ARG 2 indent

@@ -1,6 +1,10 @@
 CLASS net/minecraft/world/item/enchantment/effects/EnchantmentValueEffect
 	METHOD bootstrap (Lnet/minecraft/core/Registry;)Lcom/mojang/serialization/MapCodec;
 		ARG 0 registry
+	METHOD process (ILnet/minecraft/util/RandomSource;F)F
+		ARG 1 enchantmentLevel
+		ARG 2 random
+		ARG 3 value
 	METHOD process (Lnet/minecraft/world/item/ItemStack;ILnet/minecraft/util/RandomSource;F)F
 		ARG 1 stack
 		ARG 2 enchantmentLevel

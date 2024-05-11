@@ -107,6 +107,10 @@ CLASS net/minecraft/world/entity/LivingEntity
 	METHOD eat (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/ItemStack;
 		ARG 1 level
 		ARG 2 food
+	METHOD eat (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/food/FoodProperties;)Lnet/minecraft/world/item/ItemStack;
+		ARG 1 level
+		ARG 2 food
+		ARG 3 foodProperties
 	METHOD entityEventForEquipmentBreak (Lnet/minecraft/world/entity/EquipmentSlot;)B
 		ARG 0 slot
 	METHOD equipmentHasChanged (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Z

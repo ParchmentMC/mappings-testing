@@ -7,6 +7,10 @@ CLASS net/minecraft/world/level/chunk/status/ChunkStatus
 		ARG 5 chunkType
 		ARG 6 generationTask
 		ARG 7 loadingTask
+	METHOD <init> (Lnet/minecraft/world/level/chunk/status/ChunkStatus;Ljava/util/EnumSet;Lnet/minecraft/world/level/chunk/status/ChunkType;)V
+		ARG 1 parent
+		ARG 2 heightmapsAfter
+		ARG 3 chunkType
 	METHOD byName (Ljava/lang/String;)Lnet/minecraft/world/level/chunk/status/ChunkStatus;
 		ARG 0 name
 	METHOD generate (Lnet/minecraft/world/level/chunk/status/WorldGenContext;Ljava/util/concurrent/Executor;Lnet/minecraft/world/level/chunk/status/ToFullChunk;Ljava/util/List;)Ljava/util/concurrent/CompletableFuture;
@@ -18,12 +22,21 @@ CLASS net/minecraft/world/level/chunk/status/ChunkStatus
 		ARG 0 chunkStatus
 	METHOD getStatusAroundFullChunk (I)Lnet/minecraft/world/level/chunk/status/ChunkStatus;
 		ARG 0 distance
+	METHOD isAfter (Lnet/minecraft/world/level/chunk/status/ChunkStatus;)Z
+		ARG 1 chunkStatus
+	METHOD isBefore (Lnet/minecraft/world/level/chunk/status/ChunkStatus;)Z
+		ARG 1 chunkStatus
 	METHOD isOrAfter (Lnet/minecraft/world/level/chunk/status/ChunkStatus;)Z
+		ARG 1 chunkStatus
+	METHOD isOrBefore (Lnet/minecraft/world/level/chunk/status/ChunkStatus;)Z
 		ARG 1 chunkStatus
 	METHOD load (Lnet/minecraft/world/level/chunk/status/WorldGenContext;Lnet/minecraft/world/level/chunk/status/ToFullChunk;Lnet/minecraft/world/level/chunk/ChunkAccess;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 context
 		ARG 2 toFullChunk
 		ARG 3 loadingChunk
+	METHOD max (Lnet/minecraft/world/level/chunk/status/ChunkStatus;Lnet/minecraft/world/level/chunk/status/ChunkStatus;)Lnet/minecraft/world/level/chunk/status/ChunkStatus;
+		ARG 0 first
+		ARG 1 second
 	METHOD register (Ljava/lang/String;Lnet/minecraft/world/level/chunk/status/ChunkStatus;IZLjava/util/EnumSet;Lnet/minecraft/world/level/chunk/status/ChunkType;Lnet/minecraft/world/level/chunk/status/ChunkStatus$GenerationTask;Lnet/minecraft/world/level/chunk/status/ChunkStatus$LoadingTask;)Lnet/minecraft/world/level/chunk/status/ChunkStatus;
 		ARG 0 key
 		ARG 1 parent
@@ -33,6 +46,11 @@ CLASS net/minecraft/world/level/chunk/status/ChunkStatus
 		ARG 5 chunkType
 		ARG 6 generationTask
 		ARG 7 loadingTask
+	METHOD register (Ljava/lang/String;Lnet/minecraft/world/level/chunk/status/ChunkStatus;Ljava/util/EnumSet;Lnet/minecraft/world/level/chunk/status/ChunkType;)Lnet/minecraft/world/level/chunk/status/ChunkStatus;
+		ARG 0 name
+		ARG 1 parent
+		ARG 2 heightmapsAfter
+		ARG 3 chunkType
 	CLASS GenerationTask
 		METHOD doWork (Lnet/minecraft/world/level/chunk/status/WorldGenContext;Lnet/minecraft/world/level/chunk/status/ChunkStatus;Ljava/util/concurrent/Executor;Lnet/minecraft/world/level/chunk/status/ToFullChunk;Ljava/util/List;Lnet/minecraft/world/level/chunk/ChunkAccess;)Ljava/util/concurrent/CompletableFuture;
 			ARG 1 context

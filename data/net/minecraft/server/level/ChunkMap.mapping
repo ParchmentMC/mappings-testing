@@ -137,6 +137,8 @@ CLASS net/minecraft/server/level/ChunkMap
 		ARG 1 entity
 	METHOD resendBiomesForChunks (Ljava/util/List;)V
 		ARG 1 chunks
+	METHOD runGenerationTask (Lnet/minecraft/server/level/ChunkGenerationTask;)V
+		ARG 1 task
 	METHOD save (Lnet/minecraft/world/level/chunk/ChunkAccess;)Z
 		ARG 1 chunk
 	METHOD saveAllChunks (Z)V

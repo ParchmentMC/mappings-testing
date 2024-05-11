@@ -8,7 +8,11 @@ CLASS net/minecraft/client/gui/components/SubtitleOverlay
 			ARG 1 text
 			ARG 2 range
 			ARG 3 location
+		METHOD getClosest (Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/client/gui/components/SubtitleOverlay$SoundPlayedAt;
+			ARG 1 location
 		METHOD isAudibleFrom (Lnet/minecraft/world/phys/Vec3;)Z
 			ARG 1 location
+		METHOD purgeOldInstances (D)V
+			ARG 1 displayTime
 		METHOD refresh (Lnet/minecraft/world/phys/Vec3;)V
 			ARG 1 location

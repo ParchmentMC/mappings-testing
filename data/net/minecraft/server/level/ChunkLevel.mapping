@@ -7,6 +7,11 @@ CLASS net/minecraft/server/level/ChunkLevel
 		ARG 0 level
 	METHOD generationStatus (I)Lnet/minecraft/world/level/chunk/status/ChunkStatus;
 		ARG 0 level
+	METHOD getStatusAroundFullChunk (I)Lnet/minecraft/world/level/chunk/status/ChunkStatus;
+		ARG 0 distance
+	METHOD getStatusAroundFullChunk (ILnet/minecraft/world/level/chunk/status/ChunkStatus;)Lnet/minecraft/world/level/chunk/status/ChunkStatus;
+		ARG 0 distance
+		ARG 1 chunkStatus
 	METHOD isBlockTicking (I)Z
 		ARG 0 level
 	METHOD isEntityTicking (I)Z

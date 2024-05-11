@@ -35,6 +35,9 @@ CLASS net/minecraft/world/level/storage/loot/LootTable
 	METHOD getRandomItems (Lnet/minecraft/world/level/storage/loot/LootParams;Ljava/util/function/Consumer;)V
 		ARG 1 params
 		ARG 2 output
+	METHOD getRandomItems (Lnet/minecraft/world/level/storage/loot/LootParams;Lnet/minecraft/util/RandomSource;)Lit/unimi/dsi/fastutil/objects/ObjectArrayList;
+		ARG 1 params
+		ARG 2 random
 	METHOD getRandomItemsRaw (Lnet/minecraft/world/level/storage/loot/LootContext;Ljava/util/function/Consumer;)V
 		COMMENT Generate items to the given Consumer, ignoring maximum stack size.
 		ARG 1 context
@@ -42,6 +45,8 @@ CLASS net/minecraft/world/level/storage/loot/LootTable
 	METHOD getRandomItemsRaw (Lnet/minecraft/world/level/storage/loot/LootParams;Ljava/util/function/Consumer;)V
 		ARG 1 params
 		ARG 2 output
+	METHOD lambda$static$4 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	METHOD shuffleAndSplitItems (Lit/unimi/dsi/fastutil/objects/ObjectArrayList;ILnet/minecraft/util/RandomSource;)V
 		COMMENT Shuffles items by changing their order and splitting stacks
 		ARG 1 stacks

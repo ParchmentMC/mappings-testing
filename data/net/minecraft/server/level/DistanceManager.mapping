@@ -60,7 +60,7 @@ CLASS net/minecraft/server/level/DistanceManager
 		ARG 3 level
 		ARG 4 value
 	METHOD runAllUpdates (Lnet/minecraft/server/level/ChunkMap;)Z
-		ARG 1 chunkManager
+		ARG 1 chunkMap
 	METHOD updateChunkForced (Lnet/minecraft/world/level/ChunkPos;Z)V
 		ARG 1 pos
 		ARG 2 add

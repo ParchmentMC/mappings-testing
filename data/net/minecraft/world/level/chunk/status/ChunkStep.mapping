@@ -1,0 +1,25 @@
+CLASS net/minecraft/world/level/chunk/status/ChunkStep
+	METHOD apply (Lnet/minecraft/world/level/chunk/status/WorldGenContext;Lnet/minecraft/util/StaticCache2D;Lnet/minecraft/world/level/chunk/ChunkAccess;)Ljava/util/concurrent/CompletableFuture;
+		ARG 1 worldGenContext
+		ARG 2 cache
+		ARG 3 chunk
+	METHOD completeChunkGeneration (Lnet/minecraft/world/level/chunk/ChunkAccess;Lnet/minecraft/util/profiling/jfr/callback/ProfiledDuration;)Lnet/minecraft/world/level/chunk/ChunkAccess;
+		ARG 1 chunk
+		ARG 2 duration
+	METHOD getAccumulatedRadiusOf (Lnet/minecraft/world/level/chunk/status/ChunkStatus;)I
+		ARG 1 status
+	CLASS Builder
+		METHOD <init> (Lnet/minecraft/world/level/chunk/status/ChunkStatus;)V
+			ARG 1 status
+		METHOD <init> (Lnet/minecraft/world/level/chunk/status/ChunkStatus;Lnet/minecraft/world/level/chunk/status/ChunkStep;)V
+			ARG 1 status
+			ARG 2 parent
+		METHOD addRequirement (Lnet/minecraft/world/level/chunk/status/ChunkStatus;I)Lnet/minecraft/world/level/chunk/status/ChunkStep$Builder;
+			ARG 1 status
+			ARG 2 radius
+		METHOD blockStateWriteRadius (I)Lnet/minecraft/world/level/chunk/status/ChunkStep$Builder;
+			ARG 1 blockStateWriteRadius
+		METHOD getRadiusOfParent (Lnet/minecraft/world/level/chunk/status/ChunkStatus;)I
+			ARG 1 status
+		METHOD setTask (Lnet/minecraft/world/level/chunk/status/ChunkStatusTask;)Lnet/minecraft/world/level/chunk/status/ChunkStep$Builder;
+			ARG 1 task

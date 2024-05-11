@@ -136,6 +136,8 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 category
 	METHOD findDimensionEntryPoint (Lnet/minecraft/server/level/ServerLevel;)Lnet/minecraft/world/level/portal/PortalInfo;
 		ARG 1 destination
+	METHOD fudgePositionAfterSizeChange (Lnet/minecraft/world/entity/EntityDimensions;)Z
+		ARG 1 dimensions
 	METHOD gameEvent (Lnet/minecraft/core/Holder;)V
 		ARG 1 gameEvent
 	METHOD gameEvent (Lnet/minecraft/core/Holder;Lnet/minecraft/world/entity/Entity;)V
@@ -499,6 +501,8 @@ CLASS net/minecraft/world/entity/Entity
 	METHOD push (Lnet/minecraft/world/entity/Entity;)V
 		COMMENT Applies a velocity to the entities, to push them away from each other.
 		ARG 1 entity
+	METHOD push (Lnet/minecraft/world/phys/Vec3;)V
+		ARG 1 vector
 	METHOD readAdditionalSaveData (Lnet/minecraft/nbt/CompoundTag;)V
 		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
 		ARG 1 compound

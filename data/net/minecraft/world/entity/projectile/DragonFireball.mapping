@@ -5,6 +5,10 @@ CLASS net/minecraft/world/entity/projectile/DragonFireball
 		ARG 3 offsetX
 		ARG 5 offsetY
 		ARG 7 offsetZ
+	METHOD <init> (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/phys/Vec3;)V
+		ARG 1 level
+		ARG 2 owner
+		ARG 3 movement
 	METHOD hurt (Lnet/minecraft/world/damagesource/DamageSource;F)Z
 		COMMENT Called when the entity is attacked.
 		ARG 1 source

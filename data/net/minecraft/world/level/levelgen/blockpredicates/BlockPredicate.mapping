@@ -51,6 +51,8 @@ CLASS net/minecraft/world/level/levelgen/blockpredicates/BlockPredicate
 		ARG 0 offset
 	METHOD solid (Lnet/minecraft/core/Vec3i;)Lnet/minecraft/world/level/levelgen/blockpredicates/BlockPredicate;
 		ARG 0 offset
+	METHOD unobstructed (Lnet/minecraft/core/Vec3i;)Lnet/minecraft/world/level/levelgen/blockpredicates/BlockPredicate;
+		ARG 0 offset
 	METHOD wouldSurvive (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/Vec3i;)Lnet/minecraft/world/level/levelgen/blockpredicates/BlockPredicate;
 		ARG 0 state
 		ARG 1 offset

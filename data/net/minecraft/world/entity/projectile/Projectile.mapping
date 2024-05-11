@@ -10,6 +10,7 @@ CLASS net/minecraft/world/entity/projectile/Projectile
 		ARG 1 deflection
 		ARG 2 entity
 		ARG 3 owner
+		ARG 4 deflectedByPlayer
 	METHOD getMovementToShoot (DDDFF)Lnet/minecraft/world/phys/Vec3;
 		ARG 1 x
 		ARG 3 y
@@ -32,6 +33,7 @@ CLASS net/minecraft/world/entity/projectile/Projectile
 		ARG 1 level
 	METHOD onDeflection (Lnet/minecraft/world/entity/Entity;Z)V
 		ARG 1 entity
+		ARG 2 deflectedByPlayer
 	METHOD onHit (Lnet/minecraft/world/phys/HitResult;)V
 		COMMENT Called when this EntityFireball hits a block or entity.
 		ARG 1 result

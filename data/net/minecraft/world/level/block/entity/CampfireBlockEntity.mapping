@@ -25,3 +25,7 @@ CLASS net/minecraft/world/level/block/entity/CampfireBlockEntity
 		ARG 1 entity
 		ARG 2 stack
 		ARG 3 cookTime
+	METHOD placeFood (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;I)Z
+		ARG 1 entity
+		ARG 2 food
+		ARG 3 cookTime
