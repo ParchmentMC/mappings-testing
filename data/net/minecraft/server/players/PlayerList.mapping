@@ -100,11 +100,20 @@ CLASS net/minecraft/server/players/PlayerList
 	METHOD respawn (Lnet/minecraft/server/level/ServerPlayer;Z)Lnet/minecraft/server/level/ServerPlayer;
 		ARG 1 player
 		ARG 2 keepEverything
+	METHOD respawn (Lnet/minecraft/server/level/ServerPlayer;ZLnet/minecraft/world/entity/Entity$RemovalReason;)Lnet/minecraft/server/level/ServerPlayer;
+		ARG 1 player
+		ARG 2 keepInventory
+		ARG 3 reason
 	METHOD save (Lnet/minecraft/server/level/ServerPlayer;)V
 		COMMENT Also stores the NBTTags if this is an IntegratedPlayerList.
 		ARG 1 player
 	METHOD saveAll ()V
 		COMMENT Saves all of the players' current states.
+	METHOD sendActiveEffects (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/server/network/ServerGamePacketListenerImpl;)V
+		ARG 1 entity
+		ARG 2 connection
+	METHOD sendActivePlayerEffects (Lnet/minecraft/server/level/ServerPlayer;)V
+		ARG 1 player
 	METHOD sendAllPlayerInfo (Lnet/minecraft/server/level/ServerPlayer;)V
 		COMMENT Sends the players inventory to himself.
 		ARG 1 player

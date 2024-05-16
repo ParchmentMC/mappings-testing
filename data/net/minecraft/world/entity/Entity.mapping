@@ -13,6 +13,9 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 5 z
 		ARG 7 yRot
 		ARG 8 xRot
+	METHOD absRotateTo (FF)V
+		ARG 1 yRot
+		ARG 2 xRot
 	METHOD addAdditionalSaveData (Lnet/minecraft/nbt/CompoundTag;)V
 		ARG 1 compound
 	METHOD addDeltaMovement (Lnet/minecraft/world/phys/Vec3;)V
@@ -55,6 +58,8 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 3 source
 	METHOD changeDimension (Lnet/minecraft/server/level/ServerLevel;)Lnet/minecraft/world/entity/Entity;
 		ARG 1 destination
+	METHOD changeDimension (Lnet/minecraft/world/entity/Entity$DimensionTransitionSupplier;)Lnet/minecraft/world/entity/Entity;
+		ARG 1 transitionSupplier
 	METHOD checkDespawn ()V
 		COMMENT Makes the entity despawn if requirements are reached
 	METHOD checkFallDamage (DZLnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)V
@@ -136,6 +141,8 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 category
 	METHOD findDimensionEntryPoint (Lnet/minecraft/server/level/ServerLevel;)Lnet/minecraft/world/level/portal/PortalInfo;
 		ARG 1 destination
+	METHOD findOrCreateDimensionEntryPoint (Lnet/minecraft/server/level/ServerLevel;)Lnet/minecraft/world/level/portal/DimensionTransition;
+		ARG 1 level
 	METHOD fudgePositionAfterSizeChange (Lnet/minecraft/world/entity/EntityDimensions;)Z
 		ARG 1 dimensions
 	METHOD gameEvent (Lnet/minecraft/core/Holder;)V
@@ -574,6 +581,9 @@ CLASS net/minecraft/world/entity/Entity
 	METHOD setOnGround (Z)V
 		ARG 1 onGround
 	METHOD setOnGroundWithKnownMovement (ZLnet/minecraft/world/phys/Vec3;)V
+		ARG 1 onGround
+		ARG 2 movement
+	METHOD setOnGroundWithMovement (ZLnet/minecraft/world/phys/Vec3;)V
 		ARG 1 onGround
 		ARG 2 movement
 	METHOD setPortalCooldown (I)V

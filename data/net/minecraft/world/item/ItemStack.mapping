@@ -68,6 +68,9 @@ CLASS net/minecraft/world/item/ItemStack
 	METHOD forEachModifier (Lnet/minecraft/world/entity/EquipmentSlot;Ljava/util/function/BiConsumer;)V
 		ARG 1 equipmentSLot
 		ARG 2 action
+	METHOD forEachModifier (Lnet/minecraft/world/entity/EquipmentSlotGroup;Ljava/util/function/BiConsumer;)V
+		ARG 1 slotGroup
+		ARG 2 action
 	METHOD getDestroySpeed (Lnet/minecraft/world/level/block/state/BlockState;)F
 		ARG 1 state
 	METHOD getDisplayName ()Lnet/minecraft/network/chat/Component;
@@ -95,6 +98,11 @@ CLASS net/minecraft/world/item/ItemStack
 	METHOD hashStackList (Ljava/util/List;)I
 		ARG 0 list
 	METHOD hurtAndBreak (ILnet/minecraft/server/level/ServerLevel;Lnet/minecraft/server/level/ServerPlayer;Ljava/lang/Runnable;)V
+		ARG 1 damage
+		ARG 2 level
+		ARG 3 player
+		ARG 4 onBreak
+	METHOD hurtAndBreak (ILnet/minecraft/server/level/ServerLevel;Lnet/minecraft/server/level/ServerPlayer;Ljava/util/function/Consumer;)V
 		ARG 1 damage
 		ARG 2 level
 		ARG 3 player
@@ -272,3 +280,5 @@ CLASS net/minecraft/world/item/ItemStack
 		ARG 0 components
 	METHOD validateStrict (Lnet/minecraft/world/item/ItemStack;)Lcom/mojang/serialization/DataResult;
 		ARG 0 stack
+	METHOD validatedStreamCodec (Lnet/minecraft/network/codec/StreamCodec;)Lnet/minecraft/network/codec/StreamCodec;
+		ARG 0 codec

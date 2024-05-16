@@ -22,6 +22,8 @@ CLASS net/minecraft/world/level/chunk/storage/ChunkStorage
 		ARG 1 generator
 	METHOD read (Lnet/minecraft/world/level/ChunkPos;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 chunkPos
+	METHOD removeDatafixingContext (Lnet/minecraft/nbt/CompoundTag;)V
+		ARG 0 tag
 	METHOD upgradeChunkTag (Lnet/minecraft/resources/ResourceKey;Ljava/util/function/Supplier;Lnet/minecraft/nbt/CompoundTag;Ljava/util/Optional;)Lnet/minecraft/nbt/CompoundTag;
 		ARG 1 levelKey
 		ARG 2 storage

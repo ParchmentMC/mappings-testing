@@ -1,0 +1,22 @@
+CLASS net/minecraft/client/DeltaTracker
+	METHOD getGameTimeDeltaPartialTick (Z)F
+		ARG 1 $$0
+	CLASS DefaultValue
+		METHOD <init> (F)V
+			ARG 1 value
+	CLASS Timer
+		METHOD <init> (FJLit/unimi/dsi/fastutil/floats/FloatUnaryOperator;)V
+			ARG 1 ticksPerSecond
+			ARG 2 time
+			ARG 4 targetMsptProvider
+		METHOD advanceGameTime (J)I
+			ARG 1 time
+		METHOD advanceRealTime (J)V
+			ARG 1 time
+		METHOD advanceTime (JZ)I
+			ARG 1 time
+			ARG 3 advanceGameTime
+		METHOD updateFrozenState (Z)V
+			ARG 1 frozen
+		METHOD updatePauseState (Z)V
+			ARG 1 paused

@@ -61,14 +61,29 @@ CLASS net/minecraft/world/entity/Mob
 		ARG 1 random
 		ARG 2 chanceMultiplier
 		ARG 3 slot
+	METHOD enchantSpawnedArmor (Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/util/RandomSource;Lnet/minecraft/world/entity/EquipmentSlot;Lnet/minecraft/world/DifficultyInstance;)V
+		ARG 1 level
+		ARG 2 random
+		ARG 3 slot
+		ARG 4 difficulty
 	METHOD enchantSpawnedEquipment (Lnet/minecraft/world/entity/EquipmentSlot;Lnet/minecraft/util/RandomSource;FF)V
 		ARG 1 slot
 		ARG 2 random
 		ARG 3 chance
 		ARG 4 chanceMultiplier
+	METHOD enchantSpawnedEquipment (Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/world/entity/EquipmentSlot;Lnet/minecraft/util/RandomSource;FLnet/minecraft/world/DifficultyInstance;)V
+		ARG 1 level
+		ARG 2 slot
+		ARG 3 random
+		ARG 4 enchantChance
+		ARG 5 difficulty
 	METHOD enchantSpawnedWeapon (Lnet/minecraft/util/RandomSource;F)V
 		ARG 1 random
 		ARG 2 chanceMultiplier
+	METHOD enchantSpawnedWeapon (Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/util/RandomSource;Lnet/minecraft/world/DifficultyInstance;)V
+		ARG 1 level
+		ARG 2 random
+		ARG 3 difficulty
 	METHOD equip (Lnet/minecraft/resources/ResourceKey;Ljava/util/Map;)V
 		ARG 1 equipmentLootTable
 		ARG 2 slotDropChances
@@ -142,6 +157,10 @@ CLASS net/minecraft/world/entity/Mob
 	METHOD populateDefaultEquipmentEnchantments (Lnet/minecraft/util/RandomSource;Lnet/minecraft/world/DifficultyInstance;)V
 		ARG 1 random
 		ARG 2 difficulty
+	METHOD populateDefaultEquipmentEnchantments (Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/util/RandomSource;Lnet/minecraft/world/DifficultyInstance;)V
+		ARG 1 level
+		ARG 2 random
+		ARG 3 difficulty
 	METHOD populateDefaultEquipmentSlots (Lnet/minecraft/util/RandomSource;Lnet/minecraft/world/DifficultyInstance;)V
 		ARG 1 random
 		ARG 2 difficulty

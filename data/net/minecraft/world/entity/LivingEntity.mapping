@@ -90,8 +90,15 @@ CLASS net/minecraft/world/entity/LivingEntity
 		ARG 1 entity
 	METHOD doesEmitEquipEvent (Lnet/minecraft/world/entity/EquipmentSlot;)Z
 		ARG 1 slot
+	METHOD dropAllDeathLoot (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/damagesource/DamageSource;)V
+		ARG 1 level
+		ARG 2 damageSource
 	METHOD dropAllDeathLoot (Lnet/minecraft/world/damagesource/DamageSource;)V
 		ARG 1 damageSource
+	METHOD dropCustomDeathLoot (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/damagesource/DamageSource;Z)V
+		ARG 1 level
+		ARG 2 damageSource
+		ARG 3 recentlyHit
 	METHOD dropCustomDeathLoot (Lnet/minecraft/world/damagesource/DamageSource;IZ)V
 		ARG 1 damageSource
 		ARG 2 looting
@@ -166,6 +173,7 @@ CLASS net/minecraft/world/entity/LivingEntity
 		ARG 0 index
 	METHOD getEquipmentSlotForItem (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/entity/EquipmentSlot;
 		ARG 0 item
+		ARG 1 stack
 	METHOD getExperienceReward (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/Entity;)I
 		ARG 1 level
 		ARG 2 killer
@@ -312,6 +320,9 @@ CLASS net/minecraft/world/entity/LivingEntity
 		ARG 1 attribute
 	METHOD onChangedBlock (Lnet/minecraft/core/BlockPos;)V
 		ARG 1 pos
+	METHOD onChangedBlock (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;)V
+		ARG 1 level
+		ARG 2 pos
 	METHOD onClimbable ()Z
 		COMMENT Returns {@code true} if this entity should move as if it were on a ladder (either because it's actually on a ladder, or for AI reasons)
 	METHOD onEffectAdded (Lnet/minecraft/world/effect/MobEffectInstance;Lnet/minecraft/world/entity/Entity;)V
@@ -329,6 +340,9 @@ CLASS net/minecraft/world/entity/LivingEntity
 		ARG 1 slot
 		ARG 2 oldItem
 		ARG 3 newItem
+	METHOD onEquippedItemBroken (Lnet/minecraft/world/item/Item;Lnet/minecraft/world/entity/EquipmentSlot;)V
+		ARG 1 item
+		ARG 2 slot
 	METHOD onItemPickup (Lnet/minecraft/world/entity/item/ItemEntity;)V
 		ARG 1 itemEntity
 	METHOD onLeaveCombat ()V

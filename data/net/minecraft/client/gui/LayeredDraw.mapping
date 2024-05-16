@@ -7,10 +7,19 @@ CLASS net/minecraft/client/gui/LayeredDraw
 	METHOD render (Lnet/minecraft/client/gui/GuiGraphics;F)V
 		ARG 1 guiGraphics
 		ARG 2 partialTick
+	METHOD render (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/DeltaTracker;)V
+		ARG 1 guiGraphics
+		ARG 2 deltaTracker
 	METHOD renderInner (Lnet/minecraft/client/gui/GuiGraphics;F)V
 		ARG 1 guiGraphics
 		ARG 2 partialTick
+	METHOD renderInner (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/DeltaTracker;)V
+		ARG 1 guiGraphics
+		ARG 2 deltaTracker
 	CLASS Layer
 		METHOD render (Lnet/minecraft/client/gui/GuiGraphics;F)V
 			ARG 1 guiGraphics
 			ARG 2 partialTick
+		METHOD render (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/DeltaTracker;)V
+			ARG 1 guiGraphics
+			ARG 2 deltaTracker

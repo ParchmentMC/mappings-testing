@@ -1,0 +1,5 @@
+CLASS net/minecraft/world/level/levelgen/structure/pools/DimensionPadding
+	METHOD <init> (I)V
+		ARG 1 padding
+	METHOD lambda$static$2 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

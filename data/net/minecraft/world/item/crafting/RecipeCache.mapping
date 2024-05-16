@@ -16,6 +16,9 @@ CLASS net/minecraft/world/item/crafting/RecipeCache
 	METHOD insert (Ljava/util/List;Lnet/minecraft/world/item/crafting/RecipeHolder;)V
 		ARG 1 items
 		ARG 2 recipe
+	METHOD insert (Lnet/minecraft/world/item/crafting/CraftingInput;Lnet/minecraft/world/item/crafting/RecipeHolder;)V
+		ARG 1 input
+		ARG 2 recipe
 	METHOD moveEntryToFront (I)V
 		ARG 1 index
 	METHOD validateRecipeManager (Lnet/minecraft/world/level/Level;)V
@@ -23,3 +26,5 @@ CLASS net/minecraft/world/item/crafting/RecipeCache
 	CLASS Entry
 		METHOD matches (Ljava/util/List;)Z
 			ARG 1 key
+		METHOD matches (Lnet/minecraft/world/item/crafting/CraftingInput;)Z
+			ARG 1 input

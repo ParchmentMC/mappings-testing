@@ -174,6 +174,9 @@ CLASS net/minecraft/client/renderer/GameRenderer
 		ARG 1 partialTicks
 		ARG 2 nanoTime
 		ARG 4 renderLevel
+	METHOD render (Lnet/minecraft/client/DeltaTracker;Z)V
+		ARG 1 deltaTracker
+		ARG 2 renderLevel
 	METHOD renderConfusionOverlay (Lnet/minecraft/client/gui/GuiGraphics;F)V
 		ARG 1 guiGraphics
 		ARG 2 scalar

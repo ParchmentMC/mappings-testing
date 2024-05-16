@@ -7,8 +7,17 @@ CLASS net/minecraft/world/effect/OozingMobEffect
 		ARG 0 maxEntityCramming
 		ARG 1 nearbySlimes
 		ARG 2 spawnedCount
+	METHOD numberOfSlimesToSpawn (ILnet/minecraft/world/effect/OozingMobEffect$NearbySlimes;I)I
+		ARG 0 maxEntityCramming
+		ARG 1 nearbySlimes
+		ARG 2 spawnCount
 	METHOD spawnSlimeOffspring (Lnet/minecraft/world/level/Level;DDD)V
 		ARG 1 level
 		ARG 2 x
 		ARG 4 y
 		ARG 6 z
+	CLASS NearbySlimes
+		METHOD closeTo (Lnet/minecraft/world/entity/LivingEntity;)Lnet/minecraft/world/effect/OozingMobEffect$NearbySlimes;
+			ARG 0 entity
+		METHOD count (I)I
+			ARG 1 maxEntityCramming

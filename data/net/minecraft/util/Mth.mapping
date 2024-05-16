@@ -154,6 +154,11 @@ CLASS net/minecraft/util/Mth
 		ARG 2 z
 	METHOD getSeed (Lnet/minecraft/core/Vec3i;)J
 		ARG 0 pos
+	METHOD hsvToArgb (FFFI)I
+		ARG 0 hue
+		ARG 1 saturation
+		ARG 2 value
+		ARG 3 alpha
 	METHOD hsvToRgb (FFF)I
 		ARG 0 hue
 		ARG 1 saturation

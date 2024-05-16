@@ -9,5 +9,7 @@ CLASS net/minecraft/world/level/levelgen/PositionalRandomFactory
 		ARG 1 name
 	METHOD fromHashOf (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/util/RandomSource;
 		ARG 1 name
+	METHOD fromSeed (J)Lnet/minecraft/util/RandomSource;
+		ARG 1 seed
 	METHOD parityConfigString (Ljava/lang/StringBuilder;)V
 		ARG 1 builder

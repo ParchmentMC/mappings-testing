@@ -5,6 +5,9 @@ CLASS net/minecraft/world/item/component/ItemAttributeModifiers
 	METHOD forEach (Lnet/minecraft/world/entity/EquipmentSlot;Ljava/util/function/BiConsumer;)V
 		ARG 1 equipmentSlot
 		ARG 2 action
+	METHOD forEach (Lnet/minecraft/world/entity/EquipmentSlotGroup;Ljava/util/function/BiConsumer;)V
+		ARG 1 slotGroup
+		ARG 2 action
 	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 0 instance
 	METHOD withModifierAdded (Lnet/minecraft/core/Holder;Lnet/minecraft/world/entity/ai/attributes/AttributeModifier;Lnet/minecraft/world/entity/EquipmentSlotGroup;)Lnet/minecraft/world/item/component/ItemAttributeModifiers;

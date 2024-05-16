@@ -38,6 +38,8 @@ CLASS net/minecraft/advancements/critereon/EntityPredicate
 			ARG 1 flags
 		METHOD located (Lnet/minecraft/advancements/critereon/LocationPredicate$Builder;)Lnet/minecraft/advancements/critereon/EntityPredicate$Builder;
 			ARG 1 location
+		METHOD movementAffectedBy (Lnet/minecraft/advancements/critereon/LocationPredicate$Builder;)Lnet/minecraft/advancements/critereon/EntityPredicate$Builder;
+			ARG 1 movementAffectedBy
 		METHOD moving (Lnet/minecraft/advancements/critereon/MovementPredicate;)Lnet/minecraft/advancements/critereon/EntityPredicate$Builder;
 			ARG 1 movement
 		METHOD nbt (Lnet/minecraft/advancements/critereon/NbtPredicate;)Lnet/minecraft/advancements/critereon/EntityPredicate$Builder;
@@ -62,3 +64,6 @@ CLASS net/minecraft/advancements/critereon/EntityPredicate
 			ARG 1 team
 		METHOD vehicle (Lnet/minecraft/advancements/critereon/EntityPredicate$Builder;)Lnet/minecraft/advancements/critereon/EntityPredicate$Builder;
 			ARG 1 vehicle
+	CLASS LocationWrapper
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance

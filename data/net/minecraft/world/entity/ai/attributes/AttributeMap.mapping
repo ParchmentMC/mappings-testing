@@ -3,6 +3,10 @@ CLASS net/minecraft/world/entity/ai/attributes/AttributeMap
 		ARG 1 supplier
 	METHOD addTransientAttributeModifiers (Lcom/google/common/collect/Multimap;)V
 		ARG 1 modifiers
+	METHOD assignAllValues (Lnet/minecraft/world/entity/ai/attributes/AttributeMap;)V
+		ARG 1 map
+	METHOD assignBaseValues (Lnet/minecraft/world/entity/ai/attributes/AttributeMap;)V
+		ARG 1 map
 	METHOD assignValues (Lnet/minecraft/world/entity/ai/attributes/AttributeMap;)V
 		ARG 1 values
 	METHOD getBaseValue (Lnet/minecraft/core/Holder;)D

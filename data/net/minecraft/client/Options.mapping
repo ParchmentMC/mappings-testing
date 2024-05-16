@@ -15,6 +15,9 @@ CLASS net/minecraft/client/Options
 	METHOD genericValueLabel (Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/Component;)Lnet/minecraft/network/chat/Component;
 		ARG 0 text
 		ARG 1 value
+	METHOD genericValueOrOffLabel (Lnet/minecraft/network/chat/Component;I)Lnet/minecraft/network/chat/Component;
+		ARG 0 text
+		ARG 1 value
 	METHOD getBackgroundColor (F)I
 		ARG 1 opacity
 	METHOD getBackgroundColor (I)I

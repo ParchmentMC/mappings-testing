@@ -104,6 +104,10 @@ CLASS net/minecraft/world/entity/player/Player
 		ARG 1 state
 	METHOD getDimensionChangingDelay ()I
 		COMMENT Return the amount of cooldown before this entity can use a portal again.
+	METHOD getEnchantedDamage (Lnet/minecraft/world/entity/Entity;FLnet/minecraft/world/damagesource/DamageSource;)F
+		ARG 1 entity
+		ARG 2 damage
+		ARG 3 damageSource
 	METHOD getEnderChestInventory ()Lnet/minecraft/world/inventory/PlayerEnderChestContainer;
 		COMMENT Returns the InventoryEnderChest of this player.
 	METHOD getFoodData ()Lnet/minecraft/world/food/FoodData;
