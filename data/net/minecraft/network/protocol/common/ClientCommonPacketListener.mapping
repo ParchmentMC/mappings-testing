@@ -1,6 +1,8 @@
 CLASS net/minecraft/network/protocol/common/ClientCommonPacketListener
 	METHOD handleCustomPayload (Lnet/minecraft/network/protocol/common/ClientboundCustomPayloadPacket;)V
 		ARG 1 packet
+	METHOD handleCustomReportDetails (Lnet/minecraft/network/protocol/common/ClientboundCustomReportDetailsPacket;)V
+		ARG 1 packet
 	METHOD handleDisconnect (Lnet/minecraft/network/protocol/common/ClientboundDisconnectPacket;)V
 		ARG 1 packet
 	METHOD handleKeepAlive (Lnet/minecraft/network/protocol/common/ClientboundKeepAlivePacket;)V
@@ -10,6 +12,8 @@ CLASS net/minecraft/network/protocol/common/ClientCommonPacketListener
 	METHOD handleResourcePackPop (Lnet/minecraft/network/protocol/common/ClientboundResourcePackPopPacket;)V
 		ARG 1 packet
 	METHOD handleResourcePackPush (Lnet/minecraft/network/protocol/common/ClientboundResourcePackPushPacket;)V
+		ARG 1 packet
+	METHOD handleServerLinks (Lnet/minecraft/network/protocol/common/ClientboundServerLinksPacket;)V
 		ARG 1 packet
 	METHOD handleStoreCookie (Lnet/minecraft/network/protocol/common/ClientboundStoreCookiePacket;)V
 		ARG 1 packet

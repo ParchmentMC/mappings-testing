@@ -4,6 +4,10 @@ CLASS net/minecraft/data/PackOutput
 	METHOD createPathProvider (Lnet/minecraft/data/PackOutput$Target;Ljava/lang/String;)Lnet/minecraft/data/PackOutput$PathProvider;
 		ARG 1 target
 		ARG 2 kind
+	METHOD createRegistryElementsPathProvider (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/data/PackOutput$PathProvider;
+		ARG 1 registryKey
+	METHOD createRegistryTagsPathProvider (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/data/PackOutput$PathProvider;
+		ARG 1 registryKey
 	METHOD getOutputFolder (Lnet/minecraft/data/PackOutput$Target;)Ljava/nio/file/Path;
 		ARG 1 target
 	CLASS PathProvider

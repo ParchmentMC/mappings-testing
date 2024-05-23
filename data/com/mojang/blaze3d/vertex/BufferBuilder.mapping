@@ -1,9 +1,15 @@
 CLASS com/mojang/blaze3d/vertex/BufferBuilder
 	METHOD <init> (I)V
 		ARG 1 capacity
+	METHOD <init> (Lcom/mojang/blaze3d/vertex/ByteBufferBuilder;Lcom/mojang/blaze3d/vertex/VertexFormat$Mode;Lcom/mojang/blaze3d/vertex/VertexFormat;)V
+		ARG 1 buffer
+		ARG 2 mode
+		ARG 3 format
 	METHOD begin (Lcom/mojang/blaze3d/vertex/VertexFormat$Mode;Lcom/mojang/blaze3d/vertex/VertexFormat;)V
 		ARG 1 mode
 		ARG 2 format
+	METHOD beginElement (Lcom/mojang/blaze3d/vertex/VertexFormatElement;)J
+		ARG 1 element
 	METHOD bufferSlice (II)Ljava/nio/ByteBuffer;
 		ARG 1 startPointer
 		ARG 2 endPointer
@@ -12,6 +18,14 @@ CLASS com/mojang/blaze3d/vertex/BufferBuilder
 	METHOD intConsumer (ILcom/mojang/blaze3d/vertex/VertexFormat$IndexType;)Lit/unimi/dsi/fastutil/ints/IntConsumer;
 		ARG 1 nextElementByte
 		ARG 2 indexType
+	METHOD normalIntValue (F)B
+		ARG 0 value
+	METHOD putPackedUv (JI)V
+		ARG 0 pointer
+		ARG 2 packedUv
+	METHOD putRgba (JI)V
+		ARG 0 pointer
+		ARG 2 color
 	METHOD putSortedQuadIndices (Lcom/mojang/blaze3d/vertex/VertexFormat$IndexType;)V
 		ARG 1 indexType
 	METHOD restoreSortState (Lcom/mojang/blaze3d/vertex/BufferBuilder$SortState;)V
@@ -20,6 +34,10 @@ CLASS com/mojang/blaze3d/vertex/BufferBuilder
 		ARG 1 quadSorting
 	METHOD switchFormat (Lcom/mojang/blaze3d/vertex/VertexFormat;)V
 		ARG 1 format
+	METHOD uvShort (SSLcom/mojang/blaze3d/vertex/VertexFormatElement;)Lcom/mojang/blaze3d/vertex/VertexConsumer;
+		ARG 1 u
+		ARG 2 v
+		ARG 3 element
 	CLASS DrawState
 		METHOD <init> (Lcom/mojang/blaze3d/vertex/VertexFormat;IILcom/mojang/blaze3d/vertex/VertexFormat$Mode;Lcom/mojang/blaze3d/vertex/VertexFormat$IndexType;ZZ)V
 			ARG 1 format

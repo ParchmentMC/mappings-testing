@@ -169,6 +169,8 @@ CLASS net/minecraft/world/item/Item
 			ARG 1 maxDamage
 		METHOD food (Lnet/minecraft/world/food/FoodProperties;)Lnet/minecraft/world/item/Item$Properties;
 			ARG 1 food
+		METHOD jukeboxPlayable (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/world/item/Item$Properties;
+			ARG 1 song
 		METHOD rarity (Lnet/minecraft/world/item/Rarity;)Lnet/minecraft/world/item/Item$Properties;
 			ARG 1 rarity
 		METHOD requiredFeatures ([Lnet/minecraft/world/flag/FeatureFlag;)Lnet/minecraft/world/item/Item$Properties;

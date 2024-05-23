@@ -13,6 +13,11 @@ CLASS net/minecraft/world/effect/MobEffect
 		ARG 2 id
 		ARG 3 amount
 		ARG 5 operation
+	METHOD addAttributeModifier (Lnet/minecraft/core/Holder;Lnet/minecraft/resources/ResourceLocation;DLnet/minecraft/world/entity/ai/attributes/AttributeModifier$Operation;)Lnet/minecraft/world/effect/MobEffect;
+		ARG 1 attribute
+		ARG 2 id
+		ARG 3 amount
+		ARG 5 operation
 	METHOD addAttributeModifiers (Lnet/minecraft/world/entity/ai/attributes/AttributeMap;I)V
 		ARG 1 attributeMap
 		ARG 2 amplifier
@@ -65,6 +70,8 @@ CLASS net/minecraft/world/effect/MobEffect
 	METHOD withSoundOnAdded (Lnet/minecraft/sounds/SoundEvent;)Lnet/minecraft/world/effect/MobEffect;
 		ARG 1 sound
 	CLASS AttributeTemplate
+		METHOD create (I)Lnet/minecraft/world/entity/ai/attributes/AttributeModifier;
+			ARG 1 level
 		METHOD create (Ljava/lang/String;I)Lnet/minecraft/world/entity/ai/attributes/AttributeModifier;
 			ARG 1 description
 			ARG 2 amplifier

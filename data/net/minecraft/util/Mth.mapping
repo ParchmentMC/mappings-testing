@@ -195,6 +195,10 @@ CLASS net/minecraft/util/Mth
 		ARG 0 xDistance
 		ARG 2 yDistance
 		ARG 4 zDistance
+	METHOD lengthSquared (FFF)F
+		ARG 0 xDistance
+		ARG 1 yDistance
+		ARG 2 zDistance
 	METHOD lerp (DDD)D
 		COMMENT Method for linear interpolation of doubles
 		ARG 0 delta

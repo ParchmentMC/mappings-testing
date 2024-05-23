@@ -15,6 +15,10 @@ CLASS net/minecraft/world/item/CreativeModeTabs
 		ARG 2 items
 		ARG 3 tabVisibility
 		ARG 4 requiredFeatures
+	METHOD generateEnchantmentBookTypesAllLevels (Lnet/minecraft/world/item/CreativeModeTab$Output;Lnet/minecraft/core/HolderLookup;Lnet/minecraft/world/item/CreativeModeTab$TabVisibility;)V
+		ARG 0 output
+		ARG 1 enchantments
+		ARG 2 tabVisibility
 	METHOD generateEnchantmentBookTypesOnlyMaxLevel (Lnet/minecraft/world/item/CreativeModeTab$Output;Lnet/minecraft/core/HolderLookup;Ljava/util/Set;Lnet/minecraft/world/item/CreativeModeTab$TabVisibility;)V
 		ARG 0 output
 		ARG 1 enchantments
@@ -26,6 +30,10 @@ CLASS net/minecraft/world/item/CreativeModeTabs
 		ARG 2 items
 		ARG 3 tabVisibility
 		ARG 4 requiredFeatures
+	METHOD generateEnchantmentBookTypesOnlyMaxLevel (Lnet/minecraft/world/item/CreativeModeTab$Output;Lnet/minecraft/core/HolderLookup;Lnet/minecraft/world/item/CreativeModeTab$TabVisibility;)V
+		ARG 0 output
+		ARG 1 enchantments
+		ARG 2 tabVisibility
 	METHOD generateFireworksAllDurations (Lnet/minecraft/world/item/CreativeModeTab$Output;Lnet/minecraft/world/item/CreativeModeTab$TabVisibility;)V
 		ARG 0 output
 		ARG 1 tabVisibility

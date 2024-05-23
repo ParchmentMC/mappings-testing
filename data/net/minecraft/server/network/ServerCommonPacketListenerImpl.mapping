@@ -7,6 +7,8 @@ CLASS net/minecraft/server/network/ServerCommonPacketListenerImpl
 		ARG 1 time
 	METHOD createCookie (Lnet/minecraft/server/level/ClientInformation;)Lnet/minecraft/server/network/CommonListenerCookie;
 		ARG 1 clientInformation
+	METHOD disconnect (Lnet/minecraft/network/DisconnectionDetails;)V
+		ARG 1 disconnectionDetails
 	METHOD disconnect (Lnet/minecraft/network/chat/Component;)V
 		ARG 1 reason
 	METHOD send (Lnet/minecraft/network/protocol/Packet;)V

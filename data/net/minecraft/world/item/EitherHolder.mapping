@@ -1,0 +1,17 @@
+CLASS net/minecraft/world/item/EitherHolder
+	METHOD <init> (Lnet/minecraft/core/Holder;)V
+		ARG 1 holder
+	METHOD <init> (Lnet/minecraft/resources/ResourceKey;)V
+		ARG 1 key
+	METHOD codec (Lnet/minecraft/resources/ResourceKey;Lcom/mojang/serialization/Codec;)Lcom/mojang/serialization/Codec;
+		ARG 0 registryKey
+		ARG 1 codec
+	METHOD fromEither (Lcom/mojang/datafixers/util/Either;)Lnet/minecraft/world/item/EitherHolder;
+		ARG 0 either
+	METHOD streamCodec (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/network/codec/StreamCodec;)Lnet/minecraft/network/codec/StreamCodec;
+		ARG 0 registryKey
+		ARG 1 streamCodec
+	METHOD unwrap (Lnet/minecraft/core/HolderLookup$Provider;)Ljava/util/Optional;
+		ARG 1 registries
+	METHOD unwrap (Lnet/minecraft/core/Registry;)Ljava/util/Optional;
+		ARG 1 registry

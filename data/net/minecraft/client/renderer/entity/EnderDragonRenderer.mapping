@@ -16,21 +16,27 @@ CLASS net/minecraft/client/renderer/entity/EnderDragonRenderer
 		ARG 3 partialTick
 		ARG 4 tickCount
 		ARG 5 poseStack
-		ARG 6 buffer
+		ARG 6 bufferSource
 		ARG 7 packedLight
 	METHOD vertex01 (Lcom/mojang/blaze3d/vertex/VertexConsumer;Lorg/joml/Matrix4f;I)V
-		ARG 0 consumer
+		ARG 0 buffer
 		ARG 1 matrix
 		ARG 2 alpha
 	METHOD vertex2 (Lcom/mojang/blaze3d/vertex/VertexConsumer;Lorg/joml/Matrix4f;FF)V
-		ARG 0 consumer
+		ARG 0 buffer
 		ARG 1 matrix
+		ARG 2 y
+		ARG 3 scale
 	METHOD vertex3 (Lcom/mojang/blaze3d/vertex/VertexConsumer;Lorg/joml/Matrix4f;FF)V
-		ARG 0 consumer
+		ARG 0 buffer
 		ARG 1 matrix
+		ARG 2 y
+		ARG 3 scale
 	METHOD vertex4 (Lcom/mojang/blaze3d/vertex/VertexConsumer;Lorg/joml/Matrix4f;FF)V
-		ARG 0 consumer
+		ARG 0 buffer
 		ARG 1 matrix
+		ARG 2 y
+		ARG 3 scale
 	CLASS DragonModel
 		METHOD <init> (Lnet/minecraft/client/model/geom/ModelPart;)V
 			ARG 1 root
@@ -40,6 +46,19 @@ CLASS net/minecraft/client/renderer/entity/EnderDragonRenderer
 			ARG 3 limbSwingAmount
 			ARG 4 partialTick
 		METHOD renderSide (Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;IIFLnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/model/geom/ModelPart;F)V
+			ARG 1 poseStack
+			ARG 2 buffer
+			ARG 3 packedLight
+			ARG 4 packedOverlay
+			ARG 6 wing
+			ARG 7 frontLeg
+			ARG 8 frontLegTip
+			ARG 9 frontFoot
+			ARG 10 rearLeg
+			ARG 11 rearLegTip
+			ARG 12 rearFoot
+			ARG 13 alpha
+		METHOD renderSide (Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;IIFLnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/client/model/geom/ModelPart;I)V
 			ARG 1 poseStack
 			ARG 2 buffer
 			ARG 3 packedLight

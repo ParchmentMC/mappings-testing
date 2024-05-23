@@ -5,10 +5,14 @@ CLASS net/minecraft/world/entity/animal/Sheep
 		ARG 1 compound
 	METHOD ate ()V
 		COMMENT This function applies the benefits of growing back wool and faster growing up to the acting entity. (This function is used in the AIEatGrass)
+	METHOD createSheepColor (Lnet/minecraft/world/item/DyeColor;)I
+		ARG 0 dyeColor
 	METHOD createSheepColor (Lnet/minecraft/world/item/DyeColor;)[F
 		ARG 0 dyeColor
 	METHOD getColor ()Lnet/minecraft/world/item/DyeColor;
 		COMMENT Gets the wool color of this sheep.
+	METHOD getColor (Lnet/minecraft/world/item/DyeColor;)I
+		ARG 0 dyeColor
 	METHOD getColorArray (Lnet/minecraft/world/item/DyeColor;)[F
 		ARG 0 dyeColor
 	METHOD getHeadEatAngleScale (F)F

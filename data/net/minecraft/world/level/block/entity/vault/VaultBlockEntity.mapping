@@ -79,6 +79,11 @@ CLASS net/minecraft/world/level/block/entity/vault/VaultBlockEntity
 			ARG 0 level
 			ARG 1 serverData
 			ARG 2 pos
+		METHOD playInsertFailSound (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/block/entity/vault/VaultServerData;Lnet/minecraft/core/BlockPos;Lnet/minecraft/sounds/SoundEvent;)V
+			ARG 0 level
+			ARG 1 serverData
+			ARG 2 pos
+			ARG 3 sound
 		METHOD resolveItemsToEject (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/block/entity/vault/VaultConfig;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;)Ljava/util/List;
 			ARG 0 level
 			ARG 1 config

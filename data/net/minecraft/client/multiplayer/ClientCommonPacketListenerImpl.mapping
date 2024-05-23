@@ -9,6 +9,8 @@ CLASS net/minecraft/client/multiplayer/ClientCommonPacketListenerImpl
 		ARG 3 hash
 		ARG 4 required
 		ARG 5 prompt
+	METHOD createDisconnectScreen (Lnet/minecraft/network/DisconnectionDetails;)Lnet/minecraft/client/gui/screens/Screen;
+		ARG 1 details
 	METHOD createDisconnectScreen (Lnet/minecraft/network/chat/Component;)Lnet/minecraft/client/gui/screens/Screen;
 		ARG 1 reason
 	METHOD handleCustomPayload (Lnet/minecraft/network/protocol/common/custom/CustomPacketPayload;)V
@@ -26,6 +28,9 @@ CLASS net/minecraft/client/multiplayer/ClientCommonPacketListenerImpl
 		ARG 1 packet
 		ARG 2 sendCondition
 		ARG 3 expirationTime
+	METHOD storeDisconnectionReport (Lnet/minecraft/network/protocol/Packet;Ljava/lang/Throwable;)Ljava/util/Optional;
+		ARG 1 packet
+		ARG 2 error
 	CLASS PackConfirmScreen
 		METHOD <init> (Lnet/minecraft/client/multiplayer/ClientCommonPacketListenerImpl;Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/gui/screens/Screen;Ljava/util/List;ZLnet/minecraft/network/chat/Component;)V
 			ARG 2 minecraft

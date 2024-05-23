@@ -1,9 +1,17 @@
 CLASS net/minecraft/network/PacketListener
 	COMMENT Describes how packets are handled. There are various implementations of this class for each possible protocol (e.g. PLAY, CLIENTBOUND; PLAY, SERVERBOUND; etc.)
+	METHOD createDisconnectionInfo (Lnet/minecraft/network/chat/Component;Ljava/lang/Throwable;)Lnet/minecraft/network/DisconnectionDetails;
+		ARG 1 reason
+		ARG 2 error
 	METHOD fillCrashReport (Lnet/minecraft/CrashReport;)V
 		ARG 1 crashReport
+	METHOD fillListenerSpecificCrashDetails (Lnet/minecraft/CrashReport;Lnet/minecraft/CrashReportCategory;)V
+		ARG 1 crashReport
+		ARG 2 category
 	METHOD fillListenerSpecificCrashDetails (Lnet/minecraft/CrashReportCategory;)V
 		ARG 1 crashReportCategory
+	METHOD onDisconnect (Lnet/minecraft/network/DisconnectionDetails;)V
+		ARG 1 details
 	METHOD onDisconnect (Lnet/minecraft/network/chat/Component;)V
 		COMMENT Invoked when disconnecting, the parameter is a Component describing the reason for termination
 		ARG 1 reason

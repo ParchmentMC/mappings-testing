@@ -4,6 +4,13 @@ CLASS net/minecraft/client/renderer/chunk/SectionRenderDispatcher
 		ARG 2 renderer
 		ARG 3 executor
 		ARG 4 renderBuffers
+	METHOD <init> (Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/client/renderer/LevelRenderer;Ljava/util/concurrent/Executor;Lnet/minecraft/client/renderer/RenderBuffers;Lnet/minecraft/client/renderer/block/BlockRenderDispatcher;Lnet/minecraft/client/renderer/blockentity/BlockEntityRenderDispatcher;)V
+		ARG 1 level
+		ARG 2 renderer
+		ARG 3 executor
+		ARG 4 buffers
+		ARG 5 blockRenderer
+		ARG 6 blockEntityRenderer
 	METHOD rebuildSectionSync (Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$RenderSection;Lnet/minecraft/client/renderer/chunk/RenderRegionCache;)V
 		ARG 1 section
 		ARG 2 regionCache
@@ -13,8 +20,14 @@ CLASS net/minecraft/client/renderer/chunk/SectionRenderDispatcher
 		ARG 1 camera
 	METHOD setLevel (Lnet/minecraft/client/multiplayer/ClientLevel;)V
 		ARG 1 level
+	METHOD uploadSectionIndexBuffer (Lcom/mojang/blaze3d/vertex/ByteBufferBuilder$Result;Lcom/mojang/blaze3d/vertex/VertexBuffer;)Ljava/util/concurrent/CompletableFuture;
+		ARG 1 result
+		ARG 2 vertexBuffer
 	METHOD uploadSectionLayer (Lcom/mojang/blaze3d/vertex/BufferBuilder$RenderedBuffer;Lcom/mojang/blaze3d/vertex/VertexBuffer;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 renderedBuffer
+		ARG 2 vertexBuffer
+	METHOD uploadSectionLayer (Lcom/mojang/blaze3d/vertex/MeshData;Lcom/mojang/blaze3d/vertex/VertexBuffer;)Ljava/util/concurrent/CompletableFuture;
+		ARG 1 meshData
 		ARG 2 vertexBuffer
 	CLASS CompiledSection
 		METHOD facesCanSeeEachother (Lnet/minecraft/core/Direction;Lnet/minecraft/core/Direction;)Z
@@ -50,6 +63,8 @@ CLASS net/minecraft/client/renderer/chunk/SectionRenderDispatcher
 		METHOD resortTransparency (Lnet/minecraft/client/renderer/RenderType;Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher;)Z
 			ARG 1 renderType
 			ARG 2 sectionRenderDispatcher
+		METHOD setCompiled (Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$CompiledSection;)V
+			ARG 1 compiled
 		METHOD setDirty (Z)V
 			ARG 1 playerChanged
 		METHOD setOrigin (III)V
@@ -60,6 +75,7 @@ CLASS net/minecraft/client/renderer/chunk/SectionRenderDispatcher
 			ARG 1 blockEntities
 		CLASS CompileTask
 			METHOD <init> (Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$RenderSection;DZ)V
+				ARG 1 renderSection
 				ARG 2 distAtCreation
 				ARG 4 isHighPriority
 			METHOD compareTo (Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$RenderSection$CompileTask;)I

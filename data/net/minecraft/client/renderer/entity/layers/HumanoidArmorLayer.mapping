@@ -19,14 +19,14 @@ CLASS net/minecraft/client/renderer/entity/layers/HumanoidArmorLayer
 		ARG 10 headPitch
 	METHOD renderArmorPiece (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/EquipmentSlot;ILnet/minecraft/client/model/HumanoidModel;)V
 		ARG 1 poseStack
-		ARG 2 buffer
+		ARG 2 bufferSource
 		ARG 3 livingEntity
 		ARG 4 slot
 		ARG 5 packedLight
 		ARG 6 model
 	METHOD renderGlint (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;ILnet/minecraft/client/model/HumanoidModel;)V
 		ARG 1 poseStack
-		ARG 2 buffer
+		ARG 2 bufferSource
 		ARG 3 packedLight
 		ARG 4 model
 	METHOD renderModel (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;ILnet/minecraft/client/model/HumanoidModel;FFFLnet/minecraft/resources/ResourceLocation;)V
@@ -38,10 +38,17 @@ CLASS net/minecraft/client/renderer/entity/layers/HumanoidArmorLayer
 		ARG 6 green
 		ARG 7 blue
 		ARG 8 texture
+	METHOD renderModel (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;ILnet/minecraft/client/model/HumanoidModel;ILnet/minecraft/resources/ResourceLocation;)V
+		ARG 1 poseStack
+		ARG 2 bufferSource
+		ARG 3 packedLight
+		ARG 4 model
+		ARG 5 dyeColor
+		ARG 6 textureLocation
 	METHOD renderTrim (Lnet/minecraft/core/Holder;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;ILnet/minecraft/world/item/armortrim/ArmorTrim;Lnet/minecraft/client/model/HumanoidModel;Z)V
 		ARG 1 armorMaterial
 		ARG 2 poseStack
-		ARG 3 buffer
+		ARG 3 bufferSource
 		ARG 4 packedLight
 		ARG 5 trim
 		ARG 6 model

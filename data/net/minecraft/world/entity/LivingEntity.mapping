@@ -481,6 +481,8 @@ CLASS net/minecraft/world/entity/LivingEntity
 	METHOD triggerItemUseEffects (Lnet/minecraft/world/item/ItemStack;I)V
 		ARG 1 stack
 		ARG 2 amount
+	METHOD triggerOnDeathMobEffects (Lnet/minecraft/world/entity/Entity$RemovalReason;)V
+		ARG 1 removalReason
 	METHOD updateFallFlying ()V
 		COMMENT Called each tick. Updates state for the elytra.
 	METHOD updateInvisibilityStatus ()V

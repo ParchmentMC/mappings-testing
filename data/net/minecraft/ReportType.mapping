@@ -1,0 +1,4 @@
+CLASS net/minecraft/ReportType
+	METHOD appendHeader (Ljava/lang/StringBuilder;Ljava/util/List;)V
+		ARG 1 builder
+		ARG 2 links

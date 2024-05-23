@@ -14,6 +14,8 @@ CLASS net/minecraft/util/FastColor
 			ARG 1 blue
 			ARG 2 green
 			ARG 3 red
+		METHOD fromArgb32 (I)I
+			ARG 0 color
 		METHOD green (I)I
 			ARG 0 packedColor
 		METHOD opaque (I)I
@@ -25,6 +27,9 @@ CLASS net/minecraft/util/FastColor
 	CLASS ARGB32
 		METHOD alpha (I)I
 			ARG 0 packedColor
+		METHOD average (II)I
+			ARG 0 color1
+			ARG 1 color2
 		METHOD blue (I)I
 			ARG 0 packedColor
 		METHOD color (II)I

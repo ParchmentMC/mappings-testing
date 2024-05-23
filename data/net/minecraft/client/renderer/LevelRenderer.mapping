@@ -117,8 +117,17 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 4 y
 		ARG 6 z
 		ARG 8 cloudColor
+	METHOD buildClouds (Lcom/mojang/blaze3d/vertex/Tesselator;DDDLnet/minecraft/world/phys/Vec3;)Lcom/mojang/blaze3d/vertex/MeshData;
+		ARG 1 tesselator
+		ARG 2 x
+		ARG 4 y
+		ARG 6 z
+		ARG 8 cloudColor
 	METHOD buildSkyDisc (Lcom/mojang/blaze3d/vertex/BufferBuilder;F)Lcom/mojang/blaze3d/vertex/BufferBuilder$RenderedBuffer;
 		ARG 0 builder
+		ARG 1 y
+	METHOD buildSkyDisc (Lcom/mojang/blaze3d/vertex/Tesselator;F)Lcom/mojang/blaze3d/vertex/MeshData;
+		ARG 0 tesselator
 		ARG 1 y
 	METHOD calculateParticleLevel (Z)Lnet/minecraft/client/ParticleStatus;
 		COMMENT Calculates the level of particles to use based on the {@linkplain net.minecraft.client.Options#particles particles option} and the specified {@code decreased} parameter. This leads to randomly generating more or less particles than the set option.
@@ -145,6 +154,8 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 1 camera
 	METHOD drawStars (Lcom/mojang/blaze3d/vertex/BufferBuilder;)Lcom/mojang/blaze3d/vertex/BufferBuilder$RenderedBuffer;
 		ARG 1 builder
+	METHOD drawStars (Lcom/mojang/blaze3d/vertex/Tesselator;)Lcom/mojang/blaze3d/vertex/MeshData;
+		ARG 1 tesselator
 	METHOD getEntityStatistics ()Ljava/lang/String;
 		COMMENT @return entity rendering statistics to display on the {@linkplain net.minecraft.client.gui.components.DebugScreenOverlay debug overlay}
 	METHOD getLightColor (Lnet/minecraft/world/level/BlockAndTintGetter;Lnet/minecraft/core/BlockPos;)I
@@ -191,6 +202,9 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 1 chunkPos
 	METHOD onResourceManagerReload (Lnet/minecraft/server/packs/resources/ResourceManager;)V
 		ARG 1 resourceManager
+	METHOD playJukeboxSong (Lnet/minecraft/core/Holder;Lnet/minecraft/core/BlockPos;)V
+		ARG 1 song
+		ARG 2 pos
 	METHOD playStreamingMusic (Lnet/minecraft/sounds/SoundEvent;Lnet/minecraft/core/BlockPos;)V
 		ARG 1 soundEvent
 		ARG 2 pos
@@ -390,6 +404,10 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 2 pos
 		ARG 3 random
 		ARG 4 particleType
+	METHOD stopJukeboxSong (Lnet/minecraft/core/BlockPos;)V
+		ARG 1 pos
+	METHOD stopJukeboxSongAndNotifyNearby (Lnet/minecraft/core/BlockPos;)V
+		ARG 1 pos
 	METHOD tickRain (Lnet/minecraft/client/Camera;)V
 		ARG 1 camera
 	METHOD updateGlobalBlockEntities (Ljava/util/Collection;Ljava/util/Collection;)V

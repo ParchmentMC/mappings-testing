@@ -1,3 +1,7 @@
 CLASS com/mojang/realmsclient/dto/RealmsServerPlayerLists
+	METHOD getProfileResultsFor (J)Ljava/util/List;
+		ARG 1 index
 	METHOD parse (Ljava/lang/String;)Lcom/mojang/realmsclient/dto/RealmsServerPlayerLists;
+		ARG 0 json
+	METHOD parsePlayers (Lcom/google/gson/JsonArray;)Ljava/util/List;
 		ARG 0 json

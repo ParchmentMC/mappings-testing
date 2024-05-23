@@ -1,3 +1,6 @@
 CLASS net/minecraft/client/renderer/entity/layers/BreezeWindLayer
+	METHOD <init> (Lnet/minecraft/client/renderer/entity/EntityRendererProvider$Context;Lnet/minecraft/client/renderer/entity/RenderLayerParent;)V
+		ARG 1 context
+		ARG 2 renderer
 	METHOD xOffset (F)F
 		ARG 1 tickCount

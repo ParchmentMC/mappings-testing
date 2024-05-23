@@ -5,26 +5,30 @@ CLASS net/minecraft/client/renderer/entity/ItemRenderer
 		ARG 3 modelManager
 		ARG 4 itemColors
 		ARG 5 blockEntityRenderer
+	METHOD getArmorFoilBuffer (Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/renderer/RenderType;Z)Lcom/mojang/blaze3d/vertex/VertexConsumer;
+		ARG 0 bufferSource
+		ARG 1 renderType
+		ARG 2 hasFoil
 	METHOD getArmorFoilBuffer (Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/renderer/RenderType;ZZ)Lcom/mojang/blaze3d/vertex/VertexConsumer;
 		ARG 0 buffer
 		ARG 1 renderType
 		ARG 2 noEntity
 		ARG 3 withGlint
 	METHOD getCompassFoilBuffer (Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/renderer/RenderType;Lcom/mojang/blaze3d/vertex/PoseStack$Pose;)Lcom/mojang/blaze3d/vertex/VertexConsumer;
-		ARG 0 buffer
+		ARG 0 bufferSource
 		ARG 1 renderType
-		ARG 2 matrixEntry
+		ARG 2 pose
 	METHOD getCompassFoilBufferDirect (Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/renderer/RenderType;Lcom/mojang/blaze3d/vertex/PoseStack$Pose;)Lcom/mojang/blaze3d/vertex/VertexConsumer;
 		ARG 0 buffer
 		ARG 1 renderType
 		ARG 2 matrixEntry
 	METHOD getFoilBuffer (Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/renderer/RenderType;ZZ)Lcom/mojang/blaze3d/vertex/VertexConsumer;
-		ARG 0 buffer
+		ARG 0 bufferSource
 		ARG 1 renderType
 		ARG 2 isItem
 		ARG 3 glint
 	METHOD getFoilBufferDirect (Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/renderer/RenderType;ZZ)Lcom/mojang/blaze3d/vertex/VertexConsumer;
-		ARG 0 buffer
+		ARG 0 bufferSource
 		ARG 1 renderType
 		ARG 2 noEntity
 		ARG 3 withGlint
@@ -42,7 +46,7 @@ CLASS net/minecraft/client/renderer/entity/ItemRenderer
 		ARG 2 displayContext
 		ARG 3 leftHand
 		ARG 4 poseStack
-		ARG 5 buffer
+		ARG 5 bufferSource
 		ARG 6 combinedLight
 		ARG 7 combinedOverlay
 		ARG 8 model
@@ -66,7 +70,7 @@ CLASS net/minecraft/client/renderer/entity/ItemRenderer
 		ARG 3 diplayContext
 		ARG 4 leftHand
 		ARG 5 poseStack
-		ARG 6 buffer
+		ARG 6 bufferSource
 		ARG 7 level
 		ARG 8 combinedLight
 		ARG 9 combinedOverlay
@@ -77,6 +81,6 @@ CLASS net/minecraft/client/renderer/entity/ItemRenderer
 		ARG 3 combinedLight
 		ARG 4 combinedOverlay
 		ARG 5 poseStack
-		ARG 6 buffer
+		ARG 6 bufferSource
 		ARG 7 level
 		ARG 8 seed

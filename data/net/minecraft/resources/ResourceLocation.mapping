@@ -24,6 +24,9 @@ CLASS net/minecraft/resources/ResourceLocation
 	METHOD assertValidPath (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 		ARG 0 namespace
 		ARG 1 path
+	METHOD bySeparator (Ljava/lang/String;C)Lnet/minecraft/resources/ResourceLocation;
+		ARG 0 location
+		ARG 1 seperator
 	METHOD compareTo (Lnet/minecraft/resources/ResourceLocation;)I
 		ARG 1 other
 	METHOD decompose (Ljava/lang/String;C)[Ljava/lang/String;
@@ -31,6 +34,9 @@ CLASS net/minecraft/resources/ResourceLocation
 		ARG 1 separator
 	METHOD equals (Ljava/lang/Object;)Z
 		ARG 1 other
+	METHOD fromNamespaceAndPath (Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/resources/ResourceLocation;
+		ARG 0 namespace
+		ARG 1 path
 	METHOD isAllowedInResourceLocation (C)Z
 		ARG 0 character
 	METHOD isValidNamespace (Ljava/lang/String;)Z
@@ -58,6 +64,8 @@ CLASS net/minecraft/resources/ResourceLocation
 			COMMENT the location string to parse as a {@code ResourceLocation}
 		ARG 1 separator
 			COMMENT the separator to separate the namespace and path by. This should not be any of these characters: {@code [a-z0-9/._-]}.
+	METHOD parse (Ljava/lang/String;)Lnet/minecraft/resources/ResourceLocation;
+		ARG 0 location
 	METHOD read (Lcom/mojang/brigadier/StringReader;)Lnet/minecraft/resources/ResourceLocation;
 		ARG 0 reader
 	METHOD read (Ljava/lang/String;)Lcom/mojang/serialization/DataResult;
@@ -87,6 +95,8 @@ CLASS net/minecraft/resources/ResourceLocation
 		ARG 0 namespaceChar
 	METHOD validPathChar (C)Z
 		ARG 0 pathChar
+	METHOD withDefaultNamespace (Ljava/lang/String;)Lnet/minecraft/resources/ResourceLocation;
+		ARG 0 location
 	METHOD withPath (Ljava/lang/String;)Lnet/minecraft/resources/ResourceLocation;
 		ARG 1 path
 	METHOD withPath (Ljava/util/function/UnaryOperator;)Lnet/minecraft/resources/ResourceLocation;

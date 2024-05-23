@@ -1,0 +1,17 @@
+CLASS net/minecraft/util/datafix/fixes/AttributeModifierIdFix
+	METHOD <init> (Lcom/mojang/datafixers/schemas/Schema;)V
+		ARG 1 outputSchema
+	METHOD convertModifierForEntity (Lcom/mojang/serialization/Dynamic;)Lcom/mojang/serialization/Dynamic;
+		ARG 0 modifier
+	METHOD fixAttribute (Lcom/mojang/serialization/Dynamic;)Lcom/mojang/serialization/Dynamic;
+		ARG 0 tag
+	METHOD fixEntity (Lcom/mojang/datafixers/Typed;)Lcom/mojang/datafixers/Typed;
+		ARG 0 entity
+	METHOD fixItemStackComponents (Lcom/mojang/serialization/Dynamic;)Lcom/mojang/serialization/Dynamic;
+		ARG 0 tag
+	METHOD fixModifiers (Ljava/util/stream/Stream;)Ljava/util/stream/Stream;
+		ARG 0 modifiers
+	METHOD fixModifiersTypeWrapper (Ljava/util/stream/Stream;)Ljava/util/stream/Stream;
+		ARG 0 modifiers
+	METHOD uuidFromIntArray ([I)Ljava/util/UUID;
+		ARG 0 intArray

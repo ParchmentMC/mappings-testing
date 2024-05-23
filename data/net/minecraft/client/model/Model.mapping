@@ -1,6 +1,11 @@
 CLASS net/minecraft/client/model/Model
 	METHOD <init> (Ljava/util/function/Function;)V
 		ARG 1 renderType
+	METHOD renderToBuffer (Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;II)V
+		ARG 1 poseStack
+		ARG 2 vertexConsumer
+		ARG 3 packedLight
+		ARG 4 packedOverlay
 	METHOD renderToBuffer (Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;IIFFFF)V
 		ARG 1 poseStack
 		ARG 2 buffer
@@ -10,5 +15,11 @@ CLASS net/minecraft/client/model/Model
 		ARG 6 green
 		ARG 7 blue
 		ARG 8 alpha
+	METHOD renderToBuffer (Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;III)V
+		ARG 1 poseStack
+		ARG 2 buffer
+		ARG 3 packedLight
+		ARG 4 packedOverlay
+		ARG 5 color
 	METHOD renderType (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;
 		ARG 1 location

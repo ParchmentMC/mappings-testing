@@ -60,6 +60,8 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 destination
 	METHOD changeDimension (Lnet/minecraft/world/entity/Entity$DimensionTransitionSupplier;)Lnet/minecraft/world/entity/Entity;
 		ARG 1 transitionSupplier
+	METHOD changeDimension (Lnet/minecraft/world/level/portal/DimensionTransition;)Lnet/minecraft/world/entity/Entity;
+		ARG 1 transition
 	METHOD checkDespawn ()V
 		COMMENT Makes the entity despawn if requirements are reached
 	METHOD checkFallDamage (DZLnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)V
@@ -551,6 +553,9 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 compound
 	METHOD setAirSupply (I)V
 		ARG 1 air
+	METHOD setAsInsidePortal (Lnet/minecraft/world/level/block/Portal;Lnet/minecraft/core/BlockPos;)V
+		ARG 1 portal
+		ARG 2 pos
 	METHOD setBoundingBox (Lnet/minecraft/world/phys/AABB;)V
 		ARG 1 bb
 	METHOD setCustomName (Lnet/minecraft/network/chat/Component;)V

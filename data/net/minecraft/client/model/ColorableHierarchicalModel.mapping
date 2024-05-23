@@ -3,3 +3,5 @@ CLASS net/minecraft/client/model/ColorableHierarchicalModel
 		ARG 1 r
 		ARG 2 g
 		ARG 3 b
+	METHOD setColor (I)V
+		ARG 1 color

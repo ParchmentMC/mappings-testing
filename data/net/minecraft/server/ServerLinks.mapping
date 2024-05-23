@@ -1,0 +1,16 @@
+CLASS net/minecraft/server/ServerLinks
+	METHOD findKnownType (Lnet/minecraft/server/ServerLinks$KnownLinkType;)Ljava/util/Optional;
+		ARG 1 type
+	CLASS Entry
+		METHOD custom (Lnet/minecraft/network/chat/Component;Ljava/lang/String;)Lnet/minecraft/server/ServerLinks$Entry;
+			ARG 0 type
+			ARG 1 url
+		METHOD knownType (Lnet/minecraft/server/ServerLinks$KnownLinkType;Ljava/lang/String;)Lnet/minecraft/server/ServerLinks$Entry;
+			ARG 0 type
+			ARG 1 url
+	CLASS KnownLinkType
+		METHOD <init> (Ljava/lang/String;IILjava/lang/String;)V
+			ARG 3 id
+			ARG 4 name
+		METHOD create (Ljava/lang/String;)Lnet/minecraft/server/ServerLinks$Entry;
+			ARG 1 name

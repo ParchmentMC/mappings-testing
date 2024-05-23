@@ -1,0 +1,17 @@
+CLASS net/minecraft/world/entity/PortalProcessor
+	METHOD <init> (Lnet/minecraft/world/level/block/Portal;Lnet/minecraft/core/BlockPos;)V
+		ARG 1 portal
+		ARG 2 entryPosition
+	METHOD getPortalDestination (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/level/portal/DimensionTransition;
+		ARG 1 level
+		ARG 2 entity
+	METHOD isSamePortal (Lnet/minecraft/world/level/block/Portal;)Z
+		ARG 1 portal
+	METHOD processPortalTeleportation (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/Entity;Z)Z
+		ARG 1 level
+		ARG 2 entity
+		ARG 3 canChangeDimensions
+	METHOD setAsInsidePortalThisTick (Z)V
+		ARG 1 insidePortalThisTick
+	METHOD updateEntryPosition (Lnet/minecraft/core/BlockPos;)V
+		ARG 1 entryPosition

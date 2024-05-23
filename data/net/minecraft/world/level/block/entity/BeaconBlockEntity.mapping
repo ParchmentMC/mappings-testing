@@ -49,6 +49,8 @@ CLASS net/minecraft/world/level/block/entity/BeaconBlockEntity
 	CLASS BeaconBeamSection
 		FIELD color [F
 			COMMENT The colors of this section of a beacon beam, in RGB float format.
+		METHOD <init> (I)V
+			ARG 1 color
 		METHOD <init> ([F)V
 			ARG 1 color
 		METHOD getColor ()[F

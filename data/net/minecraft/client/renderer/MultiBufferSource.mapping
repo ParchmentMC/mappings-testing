@@ -3,15 +3,26 @@ CLASS net/minecraft/client/renderer/MultiBufferSource
 		ARG 1 renderType
 	METHOD immediate (Lcom/mojang/blaze3d/vertex/BufferBuilder;)Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;
 		ARG 0 builder
+	METHOD immediate (Lcom/mojang/blaze3d/vertex/ByteBufferBuilder;)Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;
+		ARG 0 sharedBuffer
 	METHOD immediateWithBuffers (Ljava/util/Map;Lcom/mojang/blaze3d/vertex/BufferBuilder;)Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;
 		ARG 0 mapBuilders
 		ARG 1 builder
+	METHOD immediateWithBuffers (Ljava/util/Map;Lcom/mojang/blaze3d/vertex/ByteBufferBuilder;)Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;
+		ARG 0 sharedBuffer
+		ARG 1 fixedBuffers
 	CLASS BufferSource
 		METHOD <init> (Lcom/mojang/blaze3d/vertex/BufferBuilder;Ljava/util/Map;)V
 			ARG 1 builder
 			ARG 2 fixedBuffers
+		METHOD <init> (Lcom/mojang/blaze3d/vertex/ByteBufferBuilder;Ljava/util/Map;)V
+			ARG 1 sharedBuffer
+			ARG 2 fixedBuffers
 		METHOD endBatch (Lnet/minecraft/client/renderer/RenderType;)V
 			ARG 1 renderType
+		METHOD endBatch (Lnet/minecraft/client/renderer/RenderType;Lcom/mojang/blaze3d/vertex/BufferBuilder;)V
+			ARG 1 renderType
+			ARG 2 builder
 		METHOD getBuilderRaw (Lnet/minecraft/client/renderer/RenderType;)Lcom/mojang/blaze3d/vertex/BufferBuilder;
 			ARG 1 renderType
 		METHOD lambda$endBatch$0 (Lnet/minecraft/client/renderer/RenderType;)V

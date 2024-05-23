@@ -5,6 +5,8 @@ CLASS net/minecraft/world/entity/TamableAnimal
 		ARG 1 target
 	METHOD canBeLeashed (Lnet/minecraft/world/entity/player/Player;)Z
 		ARG 1 player
+	METHOD canTeleportTo (Lnet/minecraft/core/BlockPos;)Z
+		ARG 1 pos
 	METHOD die (Lnet/minecraft/world/damagesource/DamageSource;)V
 		COMMENT Called when the mob's health reaches 0.
 		ARG 1 cause
@@ -13,6 +15,10 @@ CLASS net/minecraft/world/entity/TamableAnimal
 		ARG 1 entity
 	METHOD isOwnedBy (Lnet/minecraft/world/entity/LivingEntity;)Z
 		ARG 1 entity
+	METHOD maybeTeleportTo (III)Z
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
 	METHOD readAdditionalSaveData (Lnet/minecraft/nbt/CompoundTag;)V
 		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
 		ARG 1 compound
@@ -30,6 +36,14 @@ CLASS net/minecraft/world/entity/TamableAnimal
 		ARG 1 tamed
 	METHOD tame (Lnet/minecraft/world/entity/player/Player;)V
 		ARG 1 player
+	METHOD teleportToAroundBlockPos (Lnet/minecraft/core/BlockPos;)V
+		ARG 1 pos
 	METHOD wantsToAttack (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/LivingEntity;)Z
 		ARG 1 target
 		ARG 2 owner
+	CLASS TamableAnimalPanicGoal
+		METHOD <init> (Lnet/minecraft/world/entity/TamableAnimal;D)V
+			ARG 2 speedModifier
+		METHOD <init> (Lnet/minecraft/world/entity/TamableAnimal;DLnet/minecraft/tags/TagKey;)V
+			ARG 2 speedModifier
+			ARG 4 panicCausingDamageTypes

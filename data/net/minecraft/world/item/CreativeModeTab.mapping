@@ -13,6 +13,8 @@ CLASS net/minecraft/world/item/CreativeModeTab
 		ARG 1 column
 	METHOD contains (Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 1 stack
+	METHOD createTextureLocation (Ljava/lang/String;)Lnet/minecraft/resources/ResourceLocation;
+		ARG 0 name
 	METHOD setSearchTreeBuilder (Ljava/util/function/Consumer;)V
 		ARG 1 searchTreeBuilder
 	CLASS Builder
@@ -21,6 +23,8 @@ CLASS net/minecraft/world/item/CreativeModeTab
 			ARG 2 column
 		METHOD backgroundSuffix (Ljava/lang/String;)Lnet/minecraft/world/item/CreativeModeTab$Builder;
 			ARG 1 backgroundSuffix
+		METHOD backgroundTexture (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/world/item/CreativeModeTab$Builder;
+			ARG 1 backgroundTexture
 		METHOD displayItems (Lnet/minecraft/world/item/CreativeModeTab$DisplayItemsGenerator;)Lnet/minecraft/world/item/CreativeModeTab$Builder;
 			ARG 1 displayItemsGenerator
 		METHOD icon (Ljava/util/function/Supplier;)Lnet/minecraft/world/item/CreativeModeTab$Builder;

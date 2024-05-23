@@ -16,6 +16,9 @@ CLASS net/minecraft/world/entity/ai/attributes/AttributeMap
 	METHOD getModifierValue (Lnet/minecraft/core/Holder;Ljava/util/UUID;)D
 		ARG 1 attribute
 		ARG 2 uuid
+	METHOD getModifierValue (Lnet/minecraft/core/Holder;Lnet/minecraft/resources/ResourceLocation;)D
+		ARG 1 attribute
+		ARG 2 id
 	METHOD getValue (Lnet/minecraft/core/Holder;)D
 		ARG 1 attribute
 	METHOD hasAttribute (Lnet/minecraft/core/Holder;)Z
@@ -23,6 +26,9 @@ CLASS net/minecraft/world/entity/ai/attributes/AttributeMap
 	METHOD hasModifier (Lnet/minecraft/core/Holder;Ljava/util/UUID;)Z
 		ARG 1 attribute
 		ARG 2 uuid
+	METHOD hasModifier (Lnet/minecraft/core/Holder;Lnet/minecraft/resources/ResourceLocation;)Z
+		ARG 1 attribute
+		ARG 2 id
 	METHOD lambda$getSyncableAttributes$0 (Lnet/minecraft/world/entity/ai/attributes/AttributeInstance;)Z
 		ARG 0 instance
 	METHOD load (Lnet/minecraft/nbt/ListTag;)V

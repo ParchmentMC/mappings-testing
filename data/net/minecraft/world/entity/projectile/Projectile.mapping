@@ -11,6 +11,11 @@ CLASS net/minecraft/world/entity/projectile/Projectile
 		ARG 2 entity
 		ARG 3 owner
 		ARG 4 deflectedByPlayer
+	METHOD deflect (Lnet/minecraft/world/entity/projectile/ProjectileDeflection;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/Entity;Z)Z
+		ARG 1 deflection
+		ARG 2 entity
+		ARG 3 owner
+		ARG 4 deflectedByPlayer
 	METHOD getMovementToShoot (DDDFF)Lnet/minecraft/world/phys/Vec3;
 		ARG 1 x
 		ARG 3 y

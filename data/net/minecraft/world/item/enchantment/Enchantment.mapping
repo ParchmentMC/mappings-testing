@@ -10,6 +10,12 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 	METHOD areCompatible (Lnet/minecraft/core/Holder;Lnet/minecraft/core/Holder;)Z
 		ARG 0 first
 		ARG 1 second
+	METHOD blockHitContext (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/entity/Entity;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/storage/loot/LootContext;
+		ARG 0 level
+		ARG 1 enchantmentLevel
+		ARG 2 entity
+		ARG 3 origin
+		ARG 4 state
 	METHOD byId (I)Lnet/minecraft/world/item/enchantment/Enchantment;
 		COMMENT Gets an {@code Enchantment} from the registry using its internal numeric Id.
 		ARG 0 id
@@ -338,6 +344,13 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 		ARG 3 item
 		ARG 4 entity
 		ARG 5 origin
+	METHOD onHitBlock (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/enchantment/EnchantedItemInUse;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/level/block/state/BlockState;)V
+		ARG 1 level
+		ARG 2 enchantmentLevel
+		ARG 3 item
+		ARG 4 entity
+		ARG 5 pos
+		ARG 6 state
 	METHOD onProjectileSpawned (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/enchantment/EnchantedItemInUse;Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 level
 		ARG 2 enchantmentLevel

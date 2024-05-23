@@ -11,6 +11,12 @@ CLASS net/minecraft/client/model/geom/ModelPart
 		ARG 6 green
 		ARG 7 blue
 		ARG 8 alpha
+	METHOD compile (Lcom/mojang/blaze3d/vertex/PoseStack$Pose;Lcom/mojang/blaze3d/vertex/VertexConsumer;III)V
+		ARG 1 pose
+		ARG 2 buffer
+		ARG 3 packedLight
+		ARG 4 packedOverlay
+		ARG 5 color
 	METHOD copyFrom (Lnet/minecraft/client/model/geom/ModelPart;)V
 		ARG 1 modelPart
 	METHOD getChild (Ljava/lang/String;)Lnet/minecraft/client/model/geom/ModelPart;
@@ -44,6 +50,12 @@ CLASS net/minecraft/client/model/geom/ModelPart
 		ARG 6 green
 		ARG 7 blue
 		ARG 8 alpha
+	METHOD render (Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;III)V
+		ARG 1 poseStack
+		ARG 2 buffer
+		ARG 3 packedLight
+		ARG 4 packedOverlay
+		ARG 5 color
 	METHOD setInitialPose (Lnet/minecraft/client/model/geom/PartPose;)V
 		ARG 1 initialPose
 	METHOD setPos (FFF)V
@@ -89,6 +101,12 @@ CLASS net/minecraft/client/model/geom/ModelPart
 			ARG 6 green
 			ARG 7 blue
 			ARG 8 alpha
+		METHOD compile (Lcom/mojang/blaze3d/vertex/PoseStack$Pose;Lcom/mojang/blaze3d/vertex/VertexConsumer;III)V
+			ARG 1 pose
+			ARG 2 buffer
+			ARG 3 packedLight
+			ARG 4 packedOverlay
+			ARG 5 color
 	CLASS Polygon
 		METHOD <init> ([Lnet/minecraft/client/model/geom/ModelPart$Vertex;FFFFFFZLnet/minecraft/core/Direction;)V
 			ARG 1 vertices

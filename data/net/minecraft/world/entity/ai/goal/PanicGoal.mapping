@@ -2,6 +2,14 @@ CLASS net/minecraft/world/entity/ai/goal/PanicGoal
 	METHOD <init> (Lnet/minecraft/world/entity/PathfinderMob;D)V
 		ARG 1 mob
 		ARG 2 speedModifier
+	METHOD <init> (Lnet/minecraft/world/entity/PathfinderMob;DLjava/util/function/Function;)V
+		ARG 1 mob
+		ARG 2 speedModifier
+		ARG 4 panicCausingDamageTypes
+	METHOD <init> (Lnet/minecraft/world/entity/PathfinderMob;DLnet/minecraft/tags/TagKey;)V
+		ARG 1 mob
+		ARG 2 speedModifier
+		ARG 4 panicCausingDamageTypes
 	METHOD canContinueToUse ()Z
 		COMMENT Returns whether an in-progress EntityAIBase should continue executing
 	METHOD canUse ()Z

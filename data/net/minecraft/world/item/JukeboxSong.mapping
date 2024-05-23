@@ -1,0 +1,8 @@
+CLASS net/minecraft/world/item/JukeboxSong
+	METHOD fromStack (Lnet/minecraft/core/HolderLookup$Provider;Lnet/minecraft/world/item/ItemStack;)Ljava/util/Optional;
+		ARG 0 registries
+		ARG 1 stack
+	METHOD hasFinished (J)Z
+		ARG 1 ticksSinceSongStarted
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

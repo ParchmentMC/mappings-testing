@@ -44,6 +44,8 @@ CLASS net/minecraft/world/level/chunk/ChunkAccess
 		ARG 1 type
 	METHOD incrementInhabitedTime (J)V
 		ARG 1 amount
+	METHOD isSectionEmpty (I)Z
+		ARG 1 y
 	METHOD isYSpaceEmpty (II)Z
 		ARG 1 startY
 		ARG 2 endY

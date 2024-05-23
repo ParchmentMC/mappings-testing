@@ -25,7 +25,7 @@ CLASS net/minecraft/client/renderer/entity/EntityRenderer
 		ARG 2 entityYaw
 		ARG 3 partialTick
 		ARG 4 poseStack
-		ARG 5 buffer
+		ARG 5 bufferSource
 		ARG 6 packedLight
 	METHOD renderNameTag (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/network/chat/Component;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IF)V
 		ARG 1 entity

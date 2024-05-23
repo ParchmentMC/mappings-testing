@@ -11,10 +11,20 @@ CLASS com/mojang/blaze3d/vertex/VertexBuffer
 		ARG 3 shader
 	METHOD upload (Lcom/mojang/blaze3d/vertex/BufferBuilder$RenderedBuffer;)V
 		ARG 1 buffer
+	METHOD upload (Lcom/mojang/blaze3d/vertex/MeshData;)V
+		ARG 1 meshData
 	METHOD uploadIndexBuffer (Lcom/mojang/blaze3d/vertex/BufferBuilder$DrawState;Ljava/nio/ByteBuffer;)Lcom/mojang/blaze3d/systems/RenderSystem$AutoStorageIndexBuffer;
 		ARG 1 drawState
 		ARG 2 buffer
+	METHOD uploadIndexBuffer (Lcom/mojang/blaze3d/vertex/ByteBufferBuilder$Result;)V
+		ARG 1 result
+	METHOD uploadIndexBuffer (Lcom/mojang/blaze3d/vertex/MeshData$DrawState;Ljava/nio/ByteBuffer;)Lcom/mojang/blaze3d/systems/RenderSystem$AutoStorageIndexBuffer;
+		ARG 1 drawState
+		ARG 2 buffer
 	METHOD uploadVertexBuffer (Lcom/mojang/blaze3d/vertex/BufferBuilder$DrawState;Ljava/nio/ByteBuffer;)Lcom/mojang/blaze3d/vertex/VertexFormat;
+		ARG 1 drawState
+		ARG 2 buffer
+	METHOD uploadVertexBuffer (Lcom/mojang/blaze3d/vertex/MeshData$DrawState;Ljava/nio/ByteBuffer;)Lcom/mojang/blaze3d/vertex/VertexFormat;
 		ARG 1 drawState
 		ARG 2 buffer
 	CLASS Usage

@@ -1,0 +1,11 @@
+CLASS net/minecraft/world/item/JukeboxSongs
+	METHOD bootstrap (Lnet/minecraft/data/worldgen/BootstrapContext;)V
+		ARG 0 context
+	METHOD create (Ljava/lang/String;)Lnet/minecraft/resources/ResourceKey;
+		ARG 0 name
+	METHOD register (Lnet/minecraft/data/worldgen/BootstrapContext;Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/core/Holder$Reference;II)V
+		ARG 0 context
+		ARG 1 key
+		ARG 2 soundEvent
+		ARG 3 lengthInSeconds
+		ARG 4 comparatorOutput

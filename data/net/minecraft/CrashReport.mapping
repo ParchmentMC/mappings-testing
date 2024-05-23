@@ -24,6 +24,11 @@ CLASS net/minecraft/CrashReport
 		COMMENT Gets the stack trace of the Throwable that caused this crash report, or if that fails, the cause {@code .toString()}.
 	METHOD getFriendlyReport ()Ljava/lang/String;
 		COMMENT Gets the complete report with headers, stack trace, and different sections as a string.
+	METHOD getFriendlyReport (Lnet/minecraft/ReportType;)Ljava/lang/String;
+		ARG 1 type
+	METHOD getFriendlyReport (Lnet/minecraft/ReportType;Ljava/util/List;)Ljava/lang/String;
+		ARG 1 type
+		ARG 2 links
 	METHOD getSaveFile ()Ljava/io/File;
 		COMMENT Gets the file this crash report is saved into.
 	METHOD getTitle ()Ljava/lang/String;
@@ -31,3 +36,10 @@ CLASS net/minecraft/CrashReport
 	METHOD saveToFile (Ljava/io/File;)Z
 		COMMENT Saves this CrashReport to the given file and returns a value indicating whether we were successful at doing so.
 		ARG 1 toFile
+	METHOD saveToFile (Ljava/nio/file/Path;Lnet/minecraft/ReportType;)Z
+		ARG 1 path
+		ARG 2 type
+	METHOD saveToFile (Ljava/nio/file/Path;Lnet/minecraft/ReportType;Ljava/util/List;)Z
+		ARG 1 path
+		ARG 2 type
+		ARG 3 links

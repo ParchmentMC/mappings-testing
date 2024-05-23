@@ -13,6 +13,23 @@ CLASS net/minecraft/client/renderer/blockentity/BeaconRenderer
 		ARG 8 z
 		ARG 9 u
 		ARG 10 v
+	METHOD addVertex (Lcom/mojang/blaze3d/vertex/PoseStack$Pose;Lcom/mojang/blaze3d/vertex/VertexConsumer;IIFFFF)V
+		ARG 0 pose
+		ARG 1 consumer
+		ARG 2 color
+		ARG 3 y
+		ARG 4 x
+		ARG 5 z
+		ARG 6 u
+		ARG 7 v
+	METHOD renderBeaconBeam (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;FJIII)V
+		ARG 0 poseStack
+		ARG 1 bufferSource
+		ARG 2 partialTick
+		ARG 3 gameTime
+		ARG 5 yOffset
+		ARG 6 height
+		ARG 7 color
 	METHOD renderBeaconBeam (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;FJII[F)V
 		ARG 0 poseStack
 		ARG 1 bufferSource
@@ -21,6 +38,18 @@ CLASS net/minecraft/client/renderer/blockentity/BeaconRenderer
 		ARG 5 yOffset
 		ARG 6 height
 		ARG 7 colors
+	METHOD renderBeaconBeam (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/resources/ResourceLocation;FFJIIIFF)V
+		ARG 0 poseStack
+		ARG 1 bufferSource
+		ARG 2 beamLocation
+		ARG 3 partialTick
+		ARG 4 textureScale
+		ARG 5 gameTime
+		ARG 7 yOffset
+		ARG 8 height
+		ARG 9 color
+		ARG 10 beamRadius
+		ARG 11 glowRadius
 	METHOD renderBeaconBeam (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/resources/ResourceLocation;FFJII[FFF)V
 		ARG 0 poseStack
 		ARG 1 bufferSource
@@ -54,6 +83,24 @@ CLASS net/minecraft/client/renderer/blockentity/BeaconRenderer
 		ARG 17 maxU
 		ARG 18 minV
 		ARG 19 maxV
+	METHOD renderPart (Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;IIIFFFFFFFFFFFF)V
+		ARG 0 poseStack
+		ARG 1 consumer
+		ARG 2 color
+		ARG 3 minY
+		ARG 4 maxY
+		ARG 5 x1
+		ARG 6 z1
+		ARG 7 x2
+		ARG 8 z2
+		ARG 9 x3
+		ARG 10 z3
+		ARG 11 x4
+		ARG 12 z4
+		ARG 13 minU
+		ARG 14 maxU
+		ARG 15 minV
+		ARG 16 maxV
 	METHOD renderQuad (Lcom/mojang/blaze3d/vertex/PoseStack$Pose;Lcom/mojang/blaze3d/vertex/VertexConsumer;FFFFIIFFFFFFFF)V
 		ARG 0 pose
 		ARG 1 consumer
@@ -71,3 +118,17 @@ CLASS net/minecraft/client/renderer/blockentity/BeaconRenderer
 		ARG 13 maxU
 		ARG 14 minV
 		ARG 15 maxV
+	METHOD renderQuad (Lcom/mojang/blaze3d/vertex/PoseStack$Pose;Lcom/mojang/blaze3d/vertex/VertexConsumer;IIIFFFFFFFF)V
+		ARG 0 pose
+		ARG 1 consumer
+		ARG 2 color
+		ARG 3 minY
+		ARG 4 maxY
+		ARG 5 minX
+		ARG 6 minZ
+		ARG 7 maxX
+		ARG 8 maxZ
+		ARG 9 minU
+		ARG 10 maxU
+		ARG 11 minV
+		ARG 12 maxV

@@ -1,4 +1,32 @@
 CLASS com/mojang/blaze3d/vertex/VertexConsumer
+	METHOD addVertex (FFF)Lcom/mojang/blaze3d/vertex/VertexConsumer;
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD addVertex (FFFIFFIIFFF)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+		ARG 4 color
+		ARG 5 u
+		ARG 6 v
+		ARG 7 packedOverlay
+		ARG 8 packedLight
+		ARG 9 normalX
+		ARG 10 normalY
+		ARG 11 normalZ
+	METHOD addVertex (Lcom/mojang/blaze3d/vertex/PoseStack$Pose;FFF)Lcom/mojang/blaze3d/vertex/VertexConsumer;
+		ARG 1 pose
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD addVertex (Lorg/joml/Matrix4f;FFF)Lcom/mojang/blaze3d/vertex/VertexConsumer;
+		ARG 1 pose
+		ARG 2 x
+		ARG 3 y
+		ARG 4 z
+	METHOD addVertex (Lorg/joml/Vector3f;)Lcom/mojang/blaze3d/vertex/VertexConsumer;
+		ARG 1 pos
 	METHOD color (FFFF)Lcom/mojang/blaze3d/vertex/VertexConsumer;
 		ARG 1 red
 		ARG 2 green
@@ -49,6 +77,42 @@ CLASS com/mojang/blaze3d/vertex/VertexConsumer
 		ARG 7 alpha
 		ARG 8 lightmap
 		ARG 9 packedOverlay
+	METHOD setColor (FFFF)Lcom/mojang/blaze3d/vertex/VertexConsumer;
+		ARG 1 red
+		ARG 2 green
+		ARG 3 blue
+		ARG 4 alpha
+	METHOD setColor (I)Lcom/mojang/blaze3d/vertex/VertexConsumer;
+		ARG 1 color
+	METHOD setColor (IIII)Lcom/mojang/blaze3d/vertex/VertexConsumer;
+		ARG 1 red
+		ARG 2 green
+		ARG 3 blue
+		ARG 4 alpha
+	METHOD setLight (I)Lcom/mojang/blaze3d/vertex/VertexConsumer;
+		ARG 1 packedLight
+	METHOD setNormal (FFF)Lcom/mojang/blaze3d/vertex/VertexConsumer;
+		ARG 1 normalX
+		ARG 2 normalY
+		ARG 3 normalZ
+	METHOD setNormal (Lcom/mojang/blaze3d/vertex/PoseStack$Pose;FFF)Lcom/mojang/blaze3d/vertex/VertexConsumer;
+		ARG 1 pose
+		ARG 2 normalX
+		ARG 3 normalY
+		ARG 4 normalZ
+	METHOD setOverlay (I)Lcom/mojang/blaze3d/vertex/VertexConsumer;
+		ARG 1 packedOverlay
+	METHOD setUv (FF)Lcom/mojang/blaze3d/vertex/VertexConsumer;
+		ARG 1 u
+		ARG 2 v
+	METHOD setUv1 (II)Lcom/mojang/blaze3d/vertex/VertexConsumer;
+		ARG 1 u
+		ARG 2 v
+	METHOD setUv2 (II)Lcom/mojang/blaze3d/vertex/VertexConsumer;
+		ARG 1 u
+		ARG 2 v
+	METHOD setWhiteAlpha (I)Lcom/mojang/blaze3d/vertex/VertexConsumer;
+		ARG 1 alpha
 	METHOD uv (FF)Lcom/mojang/blaze3d/vertex/VertexConsumer;
 		ARG 1 u
 		ARG 2 v

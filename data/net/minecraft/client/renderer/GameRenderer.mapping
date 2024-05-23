@@ -184,6 +184,9 @@ CLASS net/minecraft/client/renderer/GameRenderer
 		ARG 1 widthsp
 		ARG 2 heightScaled
 		ARG 3 partialTicks
+	METHOD renderItemActivationAnimation (Lnet/minecraft/client/gui/GuiGraphics;F)V
+		ARG 1 guiGraphics
+		ARG 2 partialTick
 	METHOD renderItemInHand (Lnet/minecraft/client/Camera;FLorg/joml/Matrix4f;)V
 		ARG 1 camera
 		ARG 2 partialTick
@@ -191,6 +194,8 @@ CLASS net/minecraft/client/renderer/GameRenderer
 	METHOD renderLevel (FJ)V
 		ARG 1 partialTick
 		ARG 2 nanoTime
+	METHOD renderLevel (Lnet/minecraft/client/DeltaTracker;)V
+		ARG 1 deltaTracker
 	METHOD renderZoomed (FFF)V
 		ARG 1 zoom
 		ARG 2 zoomX

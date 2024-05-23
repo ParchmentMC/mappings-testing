@@ -1,0 +1,10 @@
+CLASS net/minecraft/world/item/JukeboxPlayable
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
+	METHOD tryInsertIntoJukebox (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/player/Player;)Lnet/minecraft/world/ItemInteractionResult;
+		ARG 0 level
+		ARG 1 pos
+		ARG 2 stack
+		ARG 3 player
+	METHOD withTooltip (Z)Lnet/minecraft/world/item/JukeboxPlayable;
+		ARG 1 showInTooltip
