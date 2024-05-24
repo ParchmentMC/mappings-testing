@@ -81,6 +81,19 @@ CLASS net/minecraft/client/gui/Gui
 			COMMENT the health of the mount entity.
 	METHOD isShowingChatDisabledByPlayer ()Z
 		COMMENT {@return {@code true} if the chat disabled message is being shown, {@code false} otherwise}
+	METHOD lambda$displayScoreboardSidebar$6 (Lnet/minecraft/world/scores/PlayerScoreEntry;)Z
+		ARG 0 entry
+	METHOD lambda$displayScoreboardSidebar$7 (Lnet/minecraft/world/scores/Scoreboard;Lnet/minecraft/network/chat/numbers/NumberFormat;Lnet/minecraft/world/scores/PlayerScoreEntry;)Lnet/minecraft/client/gui/Gui$1DisplayEntry;
+		ARG 3 scoreEntry
+	METHOD lambda$new$0 (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/DeltaTracker;)V
+		ARG 1 guiGraphics
+		ARG 2 deltaTracker
+	METHOD lambda$new$1 (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/DeltaTracker;)V
+		ARG 1 guiGraphics
+		ARG 2 deltaTracker
+	METHOD lambda$new$2 (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/DeltaTracker;)V
+		ARG 1 guiGraphics
+		ARG 2 deltaTracker
 	METHOD onDisconnected ()V
 		COMMENT Called when the player is disconnected from the server.
 		COMMENT Resets various UI elements and clears messages.
@@ -121,6 +134,9 @@ CLASS net/minecraft/client/gui/Gui
 	METHOD renderDemoOverlay (Lnet/minecraft/client/gui/GuiGraphics;F)V
 		ARG 1 guiGraphics
 		ARG 2 partialTick
+	METHOD renderDemoOverlay (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/DeltaTracker;)V
+		ARG 1 guiGraphics
+		ARG 2 deltaTracker
 	METHOD renderEffects (Lnet/minecraft/client/gui/GuiGraphics;F)V
 		ARG 1 guiGraphics
 		ARG 2 partialTick

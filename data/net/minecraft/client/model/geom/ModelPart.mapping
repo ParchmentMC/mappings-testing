@@ -38,7 +38,7 @@ CLASS net/minecraft/client/model/geom/ModelPart
 		ARG 1 offset
 	METHOD render (Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;II)V
 		ARG 1 poseStack
-		ARG 2 vertexConsumer
+		ARG 2 buffer
 		ARG 3 packedLight
 		ARG 4 packedOverlay
 	METHOD render (Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;IIFFFF)V

@@ -14,6 +14,8 @@ CLASS net/minecraft/world/entity/raid/Raider
 		COMMENT Called when the entity is attacked.
 		ARG 1 source
 		ARG 2 amount
+	METHOD lambda$static$0 (Lnet/minecraft/world/entity/item/ItemEntity;)Z
+		ARG 0 item
 	METHOD pickUpItem (Lnet/minecraft/world/entity/item/ItemEntity;)V
 		COMMENT Tests if this entity should pick up a weapon or an armor piece. Entity drops current weapon or armor if the new one is better.
 		ARG 1 itemEntity

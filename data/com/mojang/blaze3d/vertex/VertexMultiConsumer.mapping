@@ -14,7 +14,9 @@ CLASS com/mojang/blaze3d/vertex/VertexMultiConsumer
 		METHOD <init> ([Lcom/mojang/blaze3d/vertex/VertexConsumer;)V
 			ARG 1 delegates
 		METHOD forEach (Ljava/util/function/Consumer;)V
-			ARG 1 consumer
+			ARG 1 action
+		METHOD lambda$addVertex$0 (FFFLcom/mojang/blaze3d/vertex/VertexConsumer;)V
+			ARG 3 consumer
 		METHOD lambda$color$1 (IIIILcom/mojang/blaze3d/vertex/VertexConsumer;)V
 			ARG 4 consumer
 		METHOD lambda$defaultColor$7 (IIIILcom/mojang/blaze3d/vertex/VertexConsumer;)V
@@ -22,6 +24,14 @@ CLASS com/mojang/blaze3d/vertex/VertexMultiConsumer
 		METHOD lambda$normal$5 (FFFLcom/mojang/blaze3d/vertex/VertexConsumer;)V
 			ARG 3 consumer
 		METHOD lambda$overlayCoords$3 (IILcom/mojang/blaze3d/vertex/VertexConsumer;)V
+			ARG 2 consumer
+		METHOD lambda$setColor$1 (IIIILcom/mojang/blaze3d/vertex/VertexConsumer;)V
+			ARG 4 consumer
+		METHOD lambda$setUv$2 (FFLcom/mojang/blaze3d/vertex/VertexConsumer;)V
+			ARG 2 consumer
+		METHOD lambda$setUv1$3 (IILcom/mojang/blaze3d/vertex/VertexConsumer;)V
+			ARG 2 consumer
+		METHOD lambda$setUv2$4 (IILcom/mojang/blaze3d/vertex/VertexConsumer;)V
 			ARG 2 consumer
 		METHOD lambda$uv$2 (FFLcom/mojang/blaze3d/vertex/VertexConsumer;)V
 			ARG 2 consumer

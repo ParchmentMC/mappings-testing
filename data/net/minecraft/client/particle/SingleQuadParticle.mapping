@@ -23,6 +23,8 @@ CLASS net/minecraft/client/particle/SingleQuadParticle
 		ARG 3 x
 		ARG 4 y
 		ARG 5 z
+		ARG 6 xOffset
+		ARG 7 yOffset
 		ARG 8 quadSize
 		ARG 9 u
 		ARG 10 v
@@ -30,6 +32,14 @@ CLASS net/minecraft/client/particle/SingleQuadParticle
 	METHOD scale (F)Lnet/minecraft/client/particle/Particle;
 		ARG 1 scale
 	CLASS FacingCameraMode
+		METHOD lambda$static$0 (Lorg/joml/Quaternionf;Lnet/minecraft/client/Camera;F)V
+			ARG 0 quaternion
+			ARG 1 camera
+			ARG 2 partialTick
+		METHOD lambda$static$1 (Lorg/joml/Quaternionf;Lnet/minecraft/client/Camera;F)V
+			ARG 0 quaternion
+			ARG 1 camera
+			ARG 2 partialTick
 		METHOD setRotation (Lorg/joml/Quaternionf;Lnet/minecraft/client/Camera;F)V
 			ARG 1 quaternion
 			ARG 2 camera

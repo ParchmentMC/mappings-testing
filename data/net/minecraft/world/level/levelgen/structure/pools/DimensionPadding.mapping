@@ -1,5 +1,13 @@
 CLASS net/minecraft/world/level/levelgen/structure/pools/DimensionPadding
 	METHOD <init> (I)V
 		ARG 1 padding
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/structure/pools/DimensionPadding;)Ljava/lang/Integer;
+		ARG 0 padding
+	METHOD lambda$static$1 (Lnet/minecraft/world/level/levelgen/structure/pools/DimensionPadding;)Ljava/lang/Integer;
+		ARG 0 padding
 	METHOD lambda$static$2 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 0 instance
+	METHOD lambda$static$3 (Lcom/mojang/datafixers/util/Either;)Lnet/minecraft/world/level/levelgen/structure/pools/DimensionPadding;
+		ARG 0 either
+	METHOD lambda$static$4 (Lnet/minecraft/world/level/levelgen/structure/pools/DimensionPadding;)Lcom/mojang/datafixers/util/Either;
+		ARG 0 padding

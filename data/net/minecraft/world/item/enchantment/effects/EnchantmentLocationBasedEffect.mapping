@@ -7,6 +7,7 @@ CLASS net/minecraft/world/item/enchantment/effects/EnchantmentLocationBasedEffec
 		ARG 3 item
 		ARG 4 entity
 		ARG 5 pos
+		ARG 6 applyTransientEffects
 	METHOD onDeactivated (Lnet/minecraft/world/item/enchantment/EnchantedItemInUse;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/phys/Vec3;I)V
 		ARG 1 item
 		ARG 2 entity
