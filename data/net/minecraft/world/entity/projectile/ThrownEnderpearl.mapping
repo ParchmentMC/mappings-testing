@@ -4,6 +4,9 @@ CLASS net/minecraft/world/entity/projectile/ThrownEnderpearl
 		ARG 2 shooter
 	METHOD changeDimension (Lnet/minecraft/server/level/ServerLevel;)Lnet/minecraft/world/entity/Entity;
 		ARG 1 server
+	METHOD isAllowedToTeleportOwner (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/level/Level;)Z
+		ARG 0 entity
+		ARG 1 level
 	METHOD onHit (Lnet/minecraft/world/phys/HitResult;)V
 		COMMENT Called when this EntityFireball hits a block or entity.
 		ARG 1 result

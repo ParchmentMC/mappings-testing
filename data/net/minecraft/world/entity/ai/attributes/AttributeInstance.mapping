@@ -31,6 +31,8 @@ CLASS net/minecraft/world/entity/ai/attributes/AttributeInstance
 		ARG 1 identifier
 	METHOD removeModifier (Lnet/minecraft/resources/ResourceLocation;)V
 		ARG 1 id
+	METHOD removeModifier (Lnet/minecraft/resources/ResourceLocation;)Z
+		ARG 1 id
 	METHOD removeModifier (Lnet/minecraft/world/entity/ai/attributes/AttributeModifier;)V
 		ARG 1 modifier
 	METHOD removePermanentModifier (Ljava/util/UUID;)Z

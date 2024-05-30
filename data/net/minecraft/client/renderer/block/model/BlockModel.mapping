@@ -14,6 +14,18 @@ CLASS net/minecraft/client/renderer/block/model/BlockModel
 		ARG 4 state
 		ARG 5 location
 		ARG 6 guiLight3d
+	METHOD bake (Lnet/minecraft/client/resources/model/ModelBaker;Lnet/minecraft/client/renderer/block/model/BlockModel;Ljava/util/function/Function;Lnet/minecraft/client/resources/model/ModelState;Z)Lnet/minecraft/client/resources/model/BakedModel;
+		ARG 1 baker
+		ARG 2 model
+		ARG 3 spriteGetter
+		ARG 4 state
+		ARG 5 guiLight3d
+	METHOD bakeFace (Lnet/minecraft/client/renderer/block/model/BlockElement;Lnet/minecraft/client/renderer/block/model/BlockElementFace;Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;Lnet/minecraft/core/Direction;Lnet/minecraft/client/resources/model/ModelState;)Lnet/minecraft/client/renderer/block/model/BakedQuad;
+		ARG 0 element
+		ARG 1 face
+		ARG 2 sprite
+		ARG 3 facing
+		ARG 4 state
 	METHOD bakeFace (Lnet/minecraft/client/renderer/block/model/BlockElement;Lnet/minecraft/client/renderer/block/model/BlockElementFace;Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;Lnet/minecraft/core/Direction;Lnet/minecraft/client/resources/model/ModelState;Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/block/model/BakedQuad;
 		ARG 0 part
 		ARG 1 partFace

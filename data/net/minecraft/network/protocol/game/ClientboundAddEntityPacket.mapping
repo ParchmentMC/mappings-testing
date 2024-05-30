@@ -22,6 +22,13 @@ CLASS net/minecraft/network/protocol/game/ClientboundAddEntityPacket
 		ARG 1 entity
 		ARG 2 data
 		ARG 3 pos
+	METHOD <init> (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/server/level/ServerEntity;)V
+		ARG 1 entity
+		ARG 2 serverEntity
+	METHOD <init> (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/server/level/ServerEntity;I)V
+		ARG 1 entity
+		ARG 2 serverEntity
+		ARG 3 data
 	METHOD handle (Lnet/minecraft/network/protocol/game/ClientGamePacketListener;)V
 		COMMENT Passes this Packet on to the NetHandler for processing.
 		ARG 1 handler

@@ -49,6 +49,12 @@ CLASS net/minecraft/world/level/chunk/storage/ChunkSerializer
 		ARG 1 poiManager
 		ARG 2 pos
 		ARG 3 tag
+	METHOD read (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/ai/village/poi/PoiManager;Lnet/minecraft/world/level/chunk/storage/RegionStorageInfo;Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/level/chunk/ProtoChunk;
+		ARG 0 level
+		ARG 1 poiManager
+		ARG 2 regionStorageInfo
+		ARG 3 pos
+		ARG 4 tag
 	METHOD saveTicks (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/world/level/chunk/ChunkAccess$TicksToSave;)V
 		ARG 0 level
 		ARG 1 tag

@@ -4,6 +4,11 @@ CLASS net/minecraft/client/gui/screens/NoticeWithLinkScreen
 		ARG 2 message
 		ARG 3 url
 		ARG 4 onClose
+	METHOD <init> (Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/Component;Ljava/net/URI;Ljava/lang/Runnable;)V
+		ARG 1 title
+		ARG 2 message
+		ARG 3 uri
+		ARG 4 onClose
 	METHOD createPackSymlinkWarningScreen (Ljava/lang/Runnable;)Lnet/minecraft/client/gui/screens/Screen;
 		ARG 0 onClose
 	METHOD createWorldSymlinkWarningScreen (Ljava/lang/Runnable;)Lnet/minecraft/client/gui/screens/Screen;

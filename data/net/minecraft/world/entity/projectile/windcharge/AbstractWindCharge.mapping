@@ -6,3 +6,5 @@ CLASS net/minecraft/world/entity/projectile/windcharge/AbstractWindCharge
 		ARG 4 x
 		ARG 6 y
 		ARG 8 z
+	METHOD explode (Lnet/minecraft/world/phys/Vec3;)V
+		ARG 1 pos

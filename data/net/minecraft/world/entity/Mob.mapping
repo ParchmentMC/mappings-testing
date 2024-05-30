@@ -57,6 +57,8 @@ CLASS net/minecraft/world/entity/Mob
 		COMMENT Removes the leash from this entity
 		ARG 1 broadcastPacket
 		ARG 2 dropLeash
+	METHOD dropPreservedEquipment (Ljava/util/function/Predicate;)Ljava/util/Set;
+		ARG 1 predicate
 	METHOD enchantSpawnedArmor (Lnet/minecraft/util/RandomSource;FLnet/minecraft/world/entity/EquipmentSlot;)V
 		ARG 1 random
 		ARG 2 chanceMultiplier

@@ -10,12 +10,19 @@ CLASS net/minecraft/network/protocol/ProtocolInfoBuilder
 	METHOD buildPacketCodec (Ljava/util/function/Function;Ljava/util/List;)Lnet/minecraft/network/codec/StreamCodec;
 		ARG 1 bufferFactory
 		ARG 2 codecs
+	METHOD clientboundProtocol (Lnet/minecraft/network/ConnectionProtocol;Ljava/util/function/Consumer;)Lnet/minecraft/network/ProtocolInfo$Unbound;
+		ARG 0 protocol
+		ARG 1 setup
 	METHOD clientboundProtocol (Lnet/minecraft/network/ConnectionProtocol;Ljava/util/function/Consumer;)Lnet/minecraft/network/ProtocolInfo;
 		ARG 0 protocol
 		ARG 1 builder
 	METHOD clientboundProtocolUnbound (Lnet/minecraft/network/ConnectionProtocol;Ljava/util/function/Consumer;)Lnet/minecraft/network/ProtocolInfo$Unbound;
 		ARG 0 protocol
 		ARG 1 builder
+	METHOD protocol (Lnet/minecraft/network/ConnectionProtocol;Lnet/minecraft/network/protocol/PacketFlow;Ljava/util/function/Consumer;)Lnet/minecraft/network/ProtocolInfo$Unbound;
+		ARG 0 protocol
+		ARG 1 flow
+		ARG 2 setup
 	METHOD protocol (Lnet/minecraft/network/ConnectionProtocol;Lnet/minecraft/network/protocol/PacketFlow;Ljava/util/function/Consumer;)Lnet/minecraft/network/ProtocolInfo;
 		ARG 0 protocol
 		ARG 1 flow
@@ -23,6 +30,9 @@ CLASS net/minecraft/network/protocol/ProtocolInfoBuilder
 		ARG 0 protocol
 		ARG 1 flow
 		ARG 2 builder
+	METHOD serverboundProtocol (Lnet/minecraft/network/ConnectionProtocol;Ljava/util/function/Consumer;)Lnet/minecraft/network/ProtocolInfo$Unbound;
+		ARG 0 protocol
+		ARG 1 setup
 	METHOD serverboundProtocol (Lnet/minecraft/network/ConnectionProtocol;Ljava/util/function/Consumer;)Lnet/minecraft/network/ProtocolInfo;
 		ARG 0 protocol
 		ARG 1 builder

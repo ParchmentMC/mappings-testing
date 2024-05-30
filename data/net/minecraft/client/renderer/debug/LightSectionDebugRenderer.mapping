@@ -16,7 +16,7 @@ CLASS net/minecraft/client/renderer/debug/LightSectionDebugRenderer
 		ARG 13 z
 	METHOD renderEdge (Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;DDDIIIIIILorg/joml/Vector4f;)V
 		ARG 0 poseStack
-		ARG 1 vertexConsumer
+		ARG 1 buffer
 		ARG 2 camX
 		ARG 4 camY
 		ARG 6 camZ
@@ -31,14 +31,14 @@ CLASS net/minecraft/client/renderer/debug/LightSectionDebugRenderer
 		ARG 0 poseStack
 		ARG 1 shape
 		ARG 2 pos
-		ARG 3 buffer
+		ARG 3 bufferSource
 		ARG 4 camX
 		ARG 6 camY
 		ARG 8 camZ
 		ARG 10 color
 	METHOD renderFace (Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;Lnet/minecraft/core/Direction;DDDIIILorg/joml/Vector4f;)V
 		ARG 0 poseStack
-		ARG 1 vertexConsumer
+		ARG 1 buffer
 		ARG 2 face
 		ARG 3 camX
 		ARG 5 camY
@@ -51,7 +51,7 @@ CLASS net/minecraft/client/renderer/debug/LightSectionDebugRenderer
 		ARG 0 poseStack
 		ARG 1 shape
 		ARG 2 pos
-		ARG 3 vertexConsumer
+		ARG 3 buffer
 		ARG 4 camX
 		ARG 6 camY
 		ARG 8 camZ

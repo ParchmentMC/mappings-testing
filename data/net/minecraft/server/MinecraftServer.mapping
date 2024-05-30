@@ -226,6 +226,10 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 2 onMetricsRecordingFinished
 	METHOD stopServer ()V
 		COMMENT Saves all necessary data as preparation for stopping the server.
+	METHOD storeChunkIoError (Lnet/minecraft/CrashReport;Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/world/level/chunk/storage/RegionStorageInfo;)V
+		ARG 1 crashReport
+		ARG 2 chunkPos
+		ARG 3 regionStorageInfo
 	METHOD subscribeToDebugSample (Lnet/minecraft/server/level/ServerPlayer;Lnet/minecraft/util/debugchart/RemoteDebugSampleType;)V
 		ARG 1 player
 		ARG 2 sampleType

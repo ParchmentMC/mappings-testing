@@ -20,6 +20,9 @@ CLASS com/mojang/blaze3d/vertex/VertexConsumer
 		ARG 2 x
 		ARG 3 y
 		ARG 4 z
+	METHOD addVertex (Lcom/mojang/blaze3d/vertex/PoseStack$Pose;Lorg/joml/Vector3f;)Lcom/mojang/blaze3d/vertex/VertexConsumer;
+		ARG 1 pose
+		ARG 2 pos
 	METHOD addVertex (Lorg/joml/Matrix4f;FFF)Lcom/mojang/blaze3d/vertex/VertexConsumer;
 		ARG 1 pose
 		ARG 2 x

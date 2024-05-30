@@ -13,6 +13,12 @@ CLASS net/minecraft/world/level/chunk/storage/EntityStorage
 		ARG 1 exception
 	METHOD readChunkPos (Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/level/ChunkPos;
 		ARG 0 tag
+	METHOD reportLoadFailureIfPresent (Ljava/util/concurrent/CompletableFuture;Lnet/minecraft/world/level/ChunkPos;)V
+		ARG 1 future
+		ARG 2 pos
+	METHOD reportSaveFailureIfPresent (Ljava/util/concurrent/CompletableFuture;Lnet/minecraft/world/level/ChunkPos;)V
+		ARG 1 future
+		ARG 2 pos
 	METHOD writeChunkPos (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/world/level/ChunkPos;)V
 		ARG 0 tag
 		ARG 1 pos

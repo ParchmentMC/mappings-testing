@@ -50,6 +50,8 @@ CLASS net/minecraft/network/chat/Component
 		ARG 2 args
 	METHOD translationArg (Lcom/mojang/brigadier/Message;)Lnet/minecraft/network/chat/Component;
 		ARG 0 message
+	METHOD translationArg (Ljava/net/URI;)Lnet/minecraft/network/chat/Component;
+		ARG 0 uri
 	METHOD translationArg (Ljava/util/Date;)Lnet/minecraft/network/chat/Component;
 		ARG 0 date
 	METHOD translationArg (Ljava/util/UUID;)Lnet/minecraft/network/chat/Component;

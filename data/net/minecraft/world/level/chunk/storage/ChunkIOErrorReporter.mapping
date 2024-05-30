@@ -1,0 +1,16 @@
+CLASS net/minecraft/world/level/chunk/storage/ChunkIOErrorReporter
+	METHOD createMisplacedChunkReport (Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/world/level/ChunkPos;)Lnet/minecraft/ReportedException;
+		ARG 0 pos
+		ARG 1 expectedPos
+	METHOD reportChunkLoadFailure (Ljava/lang/Throwable;Lnet/minecraft/world/level/chunk/storage/RegionStorageInfo;Lnet/minecraft/world/level/ChunkPos;)V
+		ARG 1 throwable
+		ARG 2 regionStorageInfo
+		ARG 3 chunkPos
+	METHOD reportChunkSaveFailure (Ljava/lang/Throwable;Lnet/minecraft/world/level/chunk/storage/RegionStorageInfo;Lnet/minecraft/world/level/ChunkPos;)V
+		ARG 1 throwable
+		ARG 2 regionStorageInfo
+		ARG 3 chunkPos
+	METHOD reportMisplacedChunk (Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/world/level/chunk/storage/RegionStorageInfo;)V
+		ARG 1 pos
+		ARG 2 expectedPos
+		ARG 3 regionStorageInfo

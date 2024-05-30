@@ -118,6 +118,8 @@ CLASS net/minecraft/client/gui/screens/Screen
 		ARG 1 narrationElementOutput
 	METHOD updateNarrationState (Lnet/minecraft/client/gui/narration/NarrationElementOutput;)V
 		ARG 1 output
+	METHOD updateNarratorStatus (Z)V
+		ARG 1 narratorEnabled
 	METHOD wrapScreenError (Ljava/lang/Runnable;Ljava/lang/String;Ljava/lang/String;)V
 		ARG 0 action
 		ARG 1 errorDesc

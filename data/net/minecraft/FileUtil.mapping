@@ -17,9 +17,14 @@ CLASS net/minecraft/FileUtil
 		ARG 0 path
 	METHOD isPathPortable (Ljava/nio/file/Path;)Z
 		ARG 0 path
+	METHOD isValidStrictPathSegment (Ljava/lang/String;)Z
+		ARG 0 segment
 	METHOD normalizeResourcePath (Ljava/lang/String;)Ljava/lang/String;
 		ARG 0 path
 	METHOD resolvePath (Ljava/nio/file/Path;Ljava/util/List;)Ljava/nio/file/Path;
 		ARG 0 path
+		ARG 1 subdirectories
+	METHOD sanitizeName (Ljava/lang/String;)Ljava/lang/String;
+		ARG 0 name
 	METHOD validatePath ([Ljava/lang/String;)V
 		ARG 0 elements

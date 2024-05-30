@@ -3,6 +3,11 @@ CLASS net/minecraft/world/level/levelgen/structure/pools/SinglePoolElement
 		ARG 1 template
 		ARG 2 processors
 		ARG 3 projection
+	METHOD <init> (Lcom/mojang/datafixers/util/Either;Lnet/minecraft/core/Holder;Lnet/minecraft/world/level/levelgen/structure/pools/StructureTemplatePool$Projection;Ljava/util/Optional;)V
+		ARG 1 template
+		ARG 2 processors
+		ARG 3 projection
+		ARG 4 overrideLiquidSettings
 	METHOD encodeTemplate (Lcom/mojang/datafixers/util/Either;Lcom/mojang/serialization/DynamicOps;Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
 		ARG 0 template
 		ARG 1 ops
@@ -12,6 +17,11 @@ CLASS net/minecraft/world/level/levelgen/structure/pools/SinglePoolElement
 		ARG 2 pos
 		ARG 3 rotation
 		ARG 4 relativePosition
+	METHOD getSettings (Lnet/minecraft/world/level/block/Rotation;Lnet/minecraft/world/level/levelgen/structure/BoundingBox;Lnet/minecraft/world/level/levelgen/structure/templatesystem/LiquidSettings;Z)Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings;
+		ARG 1 rotation
+		ARG 2 boundingBox
+		ARG 3 liquidSettings
+		ARG 4 offset
 	METHOD getSettings (Lnet/minecraft/world/level/block/Rotation;Lnet/minecraft/world/level/levelgen/structure/BoundingBox;Z)Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings;
 		ARG 1 rotation
 		ARG 2 boundingBox

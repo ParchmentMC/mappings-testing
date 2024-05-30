@@ -29,6 +29,9 @@ CLASS net/minecraft/resources/ResourceLocation
 		ARG 1 seperator
 	METHOD compareTo (Lnet/minecraft/resources/ResourceLocation;)I
 		ARG 1 other
+	METHOD createUntrusted (Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/resources/ResourceLocation;
+		ARG 0 namespace
+		ARG 1 path
 	METHOD decompose (Ljava/lang/String;C)[Ljava/lang/String;
 		ARG 0 location
 		ARG 1 separator
@@ -82,6 +85,9 @@ CLASS net/minecraft/resources/ResourceLocation
 	METHOD tryBuild (Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/resources/ResourceLocation;
 		ARG 0 namespace
 		ARG 1 path
+	METHOD tryBySeparator (Ljava/lang/String;C)Lnet/minecraft/resources/ResourceLocation;
+		ARG 0 location
+		ARG 1 seperator
 	METHOD tryParse (Ljava/lang/String;)Lnet/minecraft/resources/ResourceLocation;
 		COMMENT Attempts to parse the specified {@code location} as a {@code ResourceLocation} by splitting it into a
 		COMMENT namespace and path by a colon.

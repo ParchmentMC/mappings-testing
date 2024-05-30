@@ -99,7 +99,7 @@ CLASS net/minecraft/client/renderer/debug/DebugRenderer
 	CLASS SimpleDebugRenderer
 		METHOD render (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;DDD)V
 			ARG 1 poseStack
-			ARG 2 buffer
+			ARG 2 bufferSource
 			ARG 3 camX
 			ARG 5 camY
 			ARG 7 camZ

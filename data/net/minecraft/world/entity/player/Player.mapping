@@ -177,6 +177,8 @@ CLASS net/minecraft/world/entity/player/Player
 		COMMENT Causes this entity to do an upwards motion (jumping).
 	METHOD lambda$playShoulderEntityAmbientSound$0 (Lnet/minecraft/world/entity/EntityType;)Z
 		ARG 0 entityType
+	METHOD lambda$readAdditionalSaveData$2 (Lnet/minecraft/world/phys/Vec3;)V
+		ARG 1 currentImpulseImpactPos
 	METHOD magicCrit (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 entityHit
 	METHOD makeStuckInBlock (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/phys/Vec3;)V
@@ -252,6 +254,8 @@ CLASS net/minecraft/world/entity/player/Player
 		ARG 6 canRestock
 	METHOD setEntityOnShoulder (Lnet/minecraft/nbt/CompoundTag;)Z
 		ARG 1 entityCompound
+	METHOD setIgnoreFallDamageFromCurrentImpulse (Z)V
+		ARG 1 ignoreFallDamageFromCurrentImpulse
 	METHOD setItemSlot (Lnet/minecraft/world/entity/EquipmentSlot;Lnet/minecraft/world/item/ItemStack;)V
 		ARG 1 slot
 		ARG 2 stack

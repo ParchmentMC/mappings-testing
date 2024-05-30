@@ -5,6 +5,9 @@ CLASS net/minecraft/world/item/enchantment/LevelBasedValue
 		ARG 1 level
 	METHOD constant (F)Lnet/minecraft/world/item/enchantment/LevelBasedValue$Constant;
 		ARG 0 value
+	METHOD lookup (Ljava/util/List;Lnet/minecraft/world/item/enchantment/LevelBasedValue;)Lnet/minecraft/world/item/enchantment/LevelBasedValue$Lookup;
+		ARG 0 values
+		ARG 1 fallback
 	METHOD perLevel (F)Lnet/minecraft/world/item/enchantment/LevelBasedValue$Linear;
 		ARG 0 perLevel
 	METHOD perLevel (FF)Lnet/minecraft/world/item/enchantment/LevelBasedValue$Linear;
@@ -23,5 +26,8 @@ CLASS net/minecraft/world/item/enchantment/LevelBasedValue
 		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 			ARG 0 instance
 	CLASS Linear
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
+	CLASS Lookup
 		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 			ARG 0 instance

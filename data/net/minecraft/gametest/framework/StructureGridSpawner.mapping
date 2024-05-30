@@ -2,3 +2,7 @@ CLASS net/minecraft/gametest/framework/StructureGridSpawner
 	METHOD <init> (Lnet/minecraft/core/BlockPos;I)V
 		ARG 1 firstTestNorthWestCorner
 		ARG 2 testsPerRow
+	METHOD <init> (Lnet/minecraft/core/BlockPos;IZ)V
+		ARG 1 northTestNorthWestCorner
+		ARG 2 testsPerRow
+		ARG 3 clearOnBatch

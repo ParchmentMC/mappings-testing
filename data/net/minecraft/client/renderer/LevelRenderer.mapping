@@ -236,6 +236,20 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 8 partialTick
 		ARG 9 poseStack
 		ARG 10 bufferSource
+	METHOD renderFace (Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;Lnet/minecraft/core/Direction;FFFFFFFFFF)V
+		ARG 0 poseStack
+		ARG 1 buffer
+		ARG 2 face
+		ARG 3 x1
+		ARG 4 y1
+		ARG 5 z1
+		ARG 6 x2
+		ARG 7 y2
+		ARG 8 z2
+		ARG 9 red
+		ARG 10 green
+		ARG 11 blue
+		ARG 12 alpha
 	METHOD renderHitOutline (Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;Lnet/minecraft/world/entity/Entity;DDDLnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 poseStack
 		ARG 2 consumer

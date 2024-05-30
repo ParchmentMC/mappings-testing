@@ -8,6 +8,8 @@ CLASS net/minecraft/server/dedicated/DedicatedServer
 		ARG 6 fixerUpper
 		ARG 7 services
 		ARG 8 progressListenerFactory
+	METHOD createServerLinks (Lnet/minecraft/server/dedicated/DedicatedServerSettings;)Lnet/minecraft/server/ServerLinks;
+		ARG 0 settings
 	METHOD getCompressionThreshold ()I
 		COMMENT The compression threshold. If the packet is larger than the specified amount of bytes, it will be compressed
 	METHOD getPluginNames ()Ljava/lang/String;
@@ -43,6 +45,8 @@ CLASS net/minecraft/server/dedicated/DedicatedServer
 		ARG 2 properties
 	METHOD onServerExit ()V
 		COMMENT Directly calls System.exit(0), instantly killing the program.
+	METHOD parseBugReportLink (Lnet/minecraft/server/dedicated/DedicatedServerProperties;)Ljava/util/Optional;
+		ARG 0 properties
 	METHOD runCommand (Ljava/lang/String;)Ljava/lang/String;
 		COMMENT Handle a command received by an RCon instance
 		ARG 1 command

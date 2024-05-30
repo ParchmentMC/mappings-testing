@@ -5,6 +5,13 @@ CLASS net/minecraft/world/level/chunk/storage/SectionStorage
 		ARG 3 factory
 		ARG 4 registryAccess
 		ARG 5 levelHeightAccessor
+	METHOD <init> (Lnet/minecraft/world/level/chunk/storage/SimpleRegionStorage;Ljava/util/function/Function;Ljava/util/function/Function;Lnet/minecraft/core/RegistryAccess;Lnet/minecraft/world/level/chunk/storage/ChunkIOErrorReporter;Lnet/minecraft/world/level/LevelHeightAccessor;)V
+		ARG 1 simpleRegionStorage
+		ARG 2 codec
+		ARG 3 factory
+		ARG 4 registryAccess
+		ARG 5 errorReporter
+		ARG 6 levelHeightAccessor
 	METHOD flush (Lnet/minecraft/world/level/ChunkPos;)V
 		ARG 1 chunkPos
 	METHOD get (J)Ljava/util/Optional;

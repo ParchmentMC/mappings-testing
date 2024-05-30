@@ -18,6 +18,8 @@ CLASS net/minecraft/world/level/levelgen/structure/templatesystem/StructurePlace
 		ARG 1 keepLiquids
 	METHOD setKnownShape (Z)Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings;
 		ARG 1 knownShape
+	METHOD setLiquidSettings (Lnet/minecraft/world/level/levelgen/structure/templatesystem/LiquidSettings;)Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings;
+		ARG 1 liquidSettings
 	METHOD setMirror (Lnet/minecraft/world/level/block/Mirror;)Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings;
 		ARG 1 mirror
 	METHOD setRandom (Lnet/minecraft/util/RandomSource;)Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings;

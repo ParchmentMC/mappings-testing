@@ -3,6 +3,8 @@ CLASS net/minecraft/gametest/framework/ReportGameListener
 		ARG 0 testName
 		ARG 1 required
 		ARG 2 message
+	METHOD getBeaconPos (Lnet/minecraft/gametest/framework/GameTestInfo;)Lnet/minecraft/core/BlockPos;
+		ARG 0 testInfo
 	METHOD handleRetry (Lnet/minecraft/gametest/framework/GameTestInfo;Lnet/minecraft/gametest/framework/GameTestRunner;Z)V
 		ARG 1 testInfo
 		ARG 2 runner
@@ -33,6 +35,9 @@ CLASS net/minecraft/gametest/framework/ReportGameListener
 	METHOD spawnLectern (Lnet/minecraft/gametest/framework/GameTestInfo;Ljava/lang/String;)V
 		ARG 0 testInfo
 		ARG 1 message
+	METHOD updateBeaconGlass (Lnet/minecraft/gametest/framework/GameTestInfo;Lnet/minecraft/world/level/block/Block;)V
+		ARG 0 testInfo
+		ARG 1 newBlock
 	METHOD visualizeFailedTest (Lnet/minecraft/gametest/framework/GameTestInfo;Ljava/lang/Throwable;)V
 		ARG 0 testInfo
 		ARG 1 error

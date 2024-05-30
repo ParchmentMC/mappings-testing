@@ -95,6 +95,9 @@ CLASS net/minecraft/server/level/ServerPlayer
 		ARG 4 keepInventory
 	METHOD findRespawnPositionAndUseSpawnBlock (Z)Lnet/minecraft/world/level/portal/DimensionTransition;
 		ARG 1 keepInventory
+	METHOD findRespawnPositionAndUseSpawnBlock (ZLnet/minecraft/world/level/portal/DimensionTransition$PostDimensionTransition;)Lnet/minecraft/world/level/portal/DimensionTransition;
+		ARG 1 keepInventory
+		ARG 2 postDimensionTransition
 	METHOD fudgeSpawnLocation (Lnet/minecraft/server/level/ServerLevel;)V
 		ARG 1 level
 	METHOD getCoprime (I)I

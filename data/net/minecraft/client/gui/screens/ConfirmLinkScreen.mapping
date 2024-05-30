@@ -8,11 +8,23 @@ CLASS net/minecraft/client/gui/screens/ConfirmLinkScreen
 		ARG 2 title
 		ARG 3 url
 		ARG 4 trusted
+	METHOD <init> (Lit/unimi/dsi/fastutil/booleans/BooleanConsumer;Lnet/minecraft/network/chat/Component;Ljava/net/URI;Z)V
+		ARG 1 callback
+		ARG 2 title
+		ARG 3 uri
+		ARG 4 trusted
 	METHOD <init> (Lit/unimi/dsi/fastutil/booleans/BooleanConsumer;Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/Component;Ljava/lang/String;Lnet/minecraft/network/chat/Component;Z)V
 		ARG 1 callback
 		ARG 2 title
 		ARG 3 message
 		ARG 4 url
+		ARG 5 noButton
+		ARG 6 trusted
+	METHOD <init> (Lit/unimi/dsi/fastutil/booleans/BooleanConsumer;Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/Component;Ljava/net/URI;Lnet/minecraft/network/chat/Component;Z)V
+		ARG 1 callback
+		ARG 2 title
+		ARG 3 message
+		ARG 4 uri
 		ARG 5 noButton
 		ARG 6 trusted
 	METHOD confirmLink (Lnet/minecraft/client/gui/screens/Screen;Ljava/lang/String;)Lnet/minecraft/client/gui/components/Button$OnPress;
@@ -22,12 +34,26 @@ CLASS net/minecraft/client/gui/screens/ConfirmLinkScreen
 		ARG 0 lastScreen
 		ARG 1 url
 		ARG 2 trusted
+	METHOD confirmLink (Lnet/minecraft/client/gui/screens/Screen;Ljava/net/URI;)Lnet/minecraft/client/gui/components/Button$OnPress;
+		ARG 0 lastScreen
+		ARG 1 uri
+	METHOD confirmLink (Lnet/minecraft/client/gui/screens/Screen;Ljava/net/URI;Z)Lnet/minecraft/client/gui/components/Button$OnPress;
+		ARG 0 lastScreen
+		ARG 1 uri
+		ARG 2 trusted
 	METHOD confirmLinkNow (Lnet/minecraft/client/gui/screens/Screen;Ljava/lang/String;)V
 		ARG 0 lastScreen
 		ARG 1 url
 	METHOD confirmLinkNow (Lnet/minecraft/client/gui/screens/Screen;Ljava/lang/String;Z)V
 		ARG 0 lastScreen
 		ARG 1 url
+		ARG 2 trusted
+	METHOD confirmLinkNow (Lnet/minecraft/client/gui/screens/Screen;Ljava/net/URI;)V
+		ARG 0 lastScreen
+		ARG 1 uri
+	METHOD confirmLinkNow (Lnet/minecraft/client/gui/screens/Screen;Ljava/net/URI;Z)V
+		ARG 0 lastScreen
+		ARG 1 uri
 		ARG 2 trusted
 	METHOD confirmMessage (Z)Lnet/minecraft/network/chat/MutableComponent;
 		ARG 0 trusted

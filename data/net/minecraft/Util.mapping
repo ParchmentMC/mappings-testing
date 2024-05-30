@@ -128,6 +128,8 @@ CLASS net/minecraft/Util
 	METHOD onThreadException (Ljava/lang/Thread;Ljava/lang/Throwable;)V
 		ARG 0 thread
 		ARG 1 throwable
+	METHOD parseAndValidateUntrustedUri (Ljava/lang/String;)Ljava/net/URI;
+		ARG 0 uri
 	METHOD pauseInIde (Ljava/lang/Throwable;)Ljava/lang/Throwable;
 		ARG 0 throwable
 	METHOD prefix (Ljava/lang/String;Ljava/util/function/Consumer;)Ljava/util/function/Consumer;
@@ -208,10 +210,14 @@ CLASS net/minecraft/Util
 	CLASS OS
 		METHOD <init> (Ljava/lang/String;ILjava/lang/String;)V
 			ARG 3 telemetryName
+		METHOD getOpenUriArguments (Ljava/net/URI;)[Ljava/lang/String;
+			ARG 1 uri
 		METHOD getOpenUrlArguments (Ljava/net/URL;)[Ljava/lang/String;
 			ARG 1 url
 		METHOD openFile (Ljava/io/File;)V
 			ARG 1 file
+		METHOD openPath (Ljava/nio/file/Path;)V
+			ARG 1 path
 		METHOD openUri (Ljava/lang/String;)V
 			ARG 1 uri
 		METHOD openUri (Ljava/net/URI;)V

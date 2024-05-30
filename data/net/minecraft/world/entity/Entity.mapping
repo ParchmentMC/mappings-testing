@@ -24,6 +24,9 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 passenger
 	METHOD addTag (Ljava/lang/String;)Z
 		ARG 1 tag
+	METHOD adjustSpawnLocation (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/core/BlockPos;
+		ARG 1 level
+		ARG 2 pos
 	METHOD animateHurt (F)V
 		ARG 1 yaw
 	METHOD applyPistonMovementRestriction (Lnet/minecraft/core/Direction$Axis;D)D
@@ -152,6 +155,8 @@ CLASS net/minecraft/world/entity/Entity
 	METHOD gameEvent (Lnet/minecraft/core/Holder;Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 gameEvent
 		ARG 2 entity
+	METHOD getAddEntityPacket (Lnet/minecraft/server/level/ServerEntity;)Lnet/minecraft/network/protocol/Packet;
+		ARG 1 entity
 	METHOD getBlockExplosionResistance (Lnet/minecraft/world/level/Explosion;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/material/FluidState;F)F
 		COMMENT Explosion resistance of a block relative to this entity
 		ARG 1 explosion
@@ -224,6 +229,8 @@ CLASS net/minecraft/world/entity/Entity
 		COMMENT Return the amount of time this entity should stay in a portal before being transported.
 	METHOD getPosition (F)Lnet/minecraft/world/phys/Vec3;
 		ARG 1 partialTicks
+	METHOD getPreciseBodyRotation (F)F
+		ARG 1 partialTick
 	METHOD getPrimaryStepSoundBlockPos (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/core/BlockPos;
 		ARG 1 pos
 	METHOD getRandomX (D)D
@@ -374,8 +381,12 @@ CLASS net/minecraft/world/entity/Entity
 	METHOD killedEntity (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LivingEntity;)Z
 		ARG 1 level
 		ARG 2 entity
+	METHOD lambda$countPlayerPassengers$13 (Lnet/minecraft/world/entity/Entity;)Z
+		ARG 0 entity
 	METHOD lambda$move$0 (Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 0 loadedState
+	METHOD lambda$teleportPassengers$11 (Lnet/minecraft/world/entity/Entity;)V
+		ARG 0 entity
 	METHOD lavaHurt ()V
 		COMMENT Called whenever the entity is walking inside of lava.
 	METHOD lerpHeadTo (FI)V
@@ -445,6 +456,10 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 3 xRot
 	METHOD moveTo (Lnet/minecraft/world/phys/Vec3;)V
 		ARG 1 vec
+	METHOD moveTo (Lnet/minecraft/world/phys/Vec3;FF)V
+		ARG 1 pos
+		ARG 2 yRot
+		ARG 3 xRot
 	METHOD moveTowardsClosestSpace (DDD)V
 		ARG 1 x
 		ARG 3 y
@@ -476,6 +491,8 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 hitDistance
 		ARG 3 partialTicks
 		ARG 4 hitFluids
+	METHOD placePortalTicket (Lnet/minecraft/core/BlockPos;)V
+		ARG 1 pos
 	METHOD playCombinationStepSounds (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 primaryState
 		ARG 2 secondaryState
