@@ -18,6 +18,10 @@ CLASS net/minecraft/client/renderer/entity/EnderDragonRenderer
 		ARG 5 poseStack
 		ARG 6 bufferSource
 		ARG 7 packedLight
+	METHOD renderRays (Lcom/mojang/blaze3d/vertex/PoseStack;FLcom/mojang/blaze3d/vertex/VertexConsumer;)V
+		ARG 0 poseStack
+		ARG 1 dragonDeathCompletion
+		ARG 2 buffer
 	METHOD vertex01 (Lcom/mojang/blaze3d/vertex/VertexConsumer;Lorg/joml/Matrix4f;I)V
 		ARG 0 buffer
 		ARG 1 matrix
@@ -63,6 +67,7 @@ CLASS net/minecraft/client/renderer/entity/EnderDragonRenderer
 			ARG 2 buffer
 			ARG 3 packedLight
 			ARG 4 packedOverlay
+			ARG 5 rotation
 			ARG 6 wing
 			ARG 7 frontLeg
 			ARG 8 frontLegTip

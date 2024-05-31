@@ -7,6 +7,10 @@ CLASS net/minecraft/world/level/border/WorldBorder
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
+	METHOD clampToBounds (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/core/BlockPos;
+		ARG 1 pos
+	METHOD clampToBounds (Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/core/BlockPos;
+		ARG 1 pos
 	METHOD getDistanceToBorder (DD)D
 		ARG 1 x
 		ARG 3 z
@@ -22,12 +26,19 @@ CLASS net/minecraft/world/level/border/WorldBorder
 		ARG 1 x
 		ARG 3 z
 		ARG 5 offset
+	METHOD isWithinBounds (DDDD)Z
+		ARG 1 x1
+		ARG 3 z1
+		ARG 5 x2
+		ARG 7 z2
 	METHOD isWithinBounds (Lnet/minecraft/core/BlockPos;)Z
 		ARG 1 pos
 	METHOD isWithinBounds (Lnet/minecraft/world/level/ChunkPos;)Z
 		ARG 1 chunkPos
 	METHOD isWithinBounds (Lnet/minecraft/world/phys/AABB;)Z
 		ARG 1 box
+	METHOD isWithinBounds (Lnet/minecraft/world/phys/Vec3;)Z
+		ARG 1 pos
 	METHOD lerpSizeBetween (DDJ)V
 		ARG 1 oldSize
 		ARG 3 newSize

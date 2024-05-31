@@ -51,10 +51,15 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 passenger
 	METHOD canChangeDimensions ()Z
 		COMMENT Returns false if this Entity can't move between dimensions. True if it can.
+	METHOD canChangeDimensions (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/level/Level;)Z
+		ARG 1 oldLevel
+		ARG 2 newLevel
 	METHOD canCollideWith (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 1 entity
 	METHOD canRide (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 1 vehicle
+	METHOD canUsePortal (Z)Z
+		ARG 1 allowPassengers
 	METHOD causeFallDamage (FFLnet/minecraft/world/damagesource/DamageSource;)Z
 		ARG 1 fallDistance
 		ARG 2 multiplier

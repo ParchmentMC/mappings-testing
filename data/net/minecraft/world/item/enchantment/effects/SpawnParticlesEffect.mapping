@@ -8,21 +8,38 @@ CLASS net/minecraft/world/item/enchantment/effects/SpawnParticlesEffect
 	METHOD offsetFromEntityPosition (F)Lnet/minecraft/world/item/enchantment/effects/SpawnParticlesEffect$PositionSource;
 		ARG 0 offset
 	CLASS PositionSource
+		METHOD getCoordinate (DDFLnet/minecraft/util/RandomSource;)D
+			ARG 1 position
+			ARG 3 center
+			ARG 5 size
+			ARG 6 random
 		METHOD getCoordinate (DFLnet/minecraft/util/RandomSource;)D
 			ARG 1 origin
 			ARG 3 scale
 			ARG 4 random
 		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 			ARG 0 instance
+		METHOD lambda$static$2 (Lnet/minecraft/world/item/enchantment/effects/SpawnParticlesEffect$PositionSource;)Lcom/mojang/serialization/DataResult;
+			ARG 0 sourceType
 	CLASS PositionSourceType
 		METHOD <init> (Ljava/lang/String;ILjava/lang/String;Lnet/minecraft/world/item/enchantment/effects/SpawnParticlesEffect$PositionSourceType$CoordinateSource;)V
 			ARG 3 id
 			ARG 4 source
+		METHOD getCoordinate (DDFLnet/minecraft/util/RandomSource;)D
+			ARG 1 position
+			ARG 3 center
+			ARG 5 size
+			ARG 6 random
 		METHOD getCoordinate (DFLnet/minecraft/util/RandomSource;)D
 			ARG 1 origin
 			ARG 3 scale
 			ARG 4 random
 		CLASS CoordinateSource
+			METHOD getCoordinate (DDFLnet/minecraft/util/RandomSource;)D
+				ARG 1 position
+				ARG 3 center
+				ARG 5 size
+				ARG 6 random
 			METHOD getCoordinate (DFLnet/minecraft/util/RandomSource;)D
 				ARG 1 origin
 				ARG 3 scale

@@ -31,6 +31,8 @@ CLASS net/minecraft/world/level/portal/DimensionTransition
 		ARG 0 entity
 	METHOD playNetherSound (Lnet/minecraft/world/entity/Entity;)V
 		ARG 0 entity
+	METHOD playPortalSound (Lnet/minecraft/world/entity/Entity;)V
+		ARG 0 entity
 	CLASS PostDimensionTransition
 		METHOD onTransition (Lnet/minecraft/world/entity/Entity;)V
 			ARG 1 entity

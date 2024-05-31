@@ -24,6 +24,7 @@ CLASS net/minecraft/network/Connection
 	METHOD configureSerialization (Lio/netty/channel/ChannelPipeline;Lnet/minecraft/network/protocol/PacketFlow;ZLnet/minecraft/network/BandwidthDebugMonitor;)V
 		ARG 0 pipeline
 		ARG 1 flow
+		ARG 2 memoryOnly
 		ARG 3 bandwithDebugMonitor
 	METHOD connect (Ljava/net/InetSocketAddress;ZLnet/minecraft/network/Connection;)Lio/netty/channel/ChannelFuture;
 		ARG 0 address
@@ -40,6 +41,9 @@ CLASS net/minecraft/network/Connection
 		ARG 2 sampleLogger
 	METHOD createFrameDecoder (Lnet/minecraft/network/BandwidthDebugMonitor;Z)Lio/netty/channel/ChannelInboundHandler;
 		ARG 0 bandwithDebugMonitor
+		ARG 1 memoryOnly
+	METHOD createFrameEncoder (Z)Lio/netty/channel/ChannelOutboundHandler;
+		ARG 0 memoryOnly
 	METHOD disconnect (Lnet/minecraft/network/DisconnectionDetails;)V
 		ARG 1 disconnectionDetails
 	METHOD disconnect (Lnet/minecraft/network/chat/Component;)V

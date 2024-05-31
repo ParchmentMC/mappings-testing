@@ -14,6 +14,8 @@ CLASS net/minecraft/client/multiplayer/chat/report/Report
 			ARG 2 limits
 		METHOD build (Lnet/minecraft/client/multiplayer/chat/report/ReportingContext;)Lcom/mojang/datafixers/util/Either;
 			ARG 1 reportingContext
+		METHOD setAttested (Z)V
+			ARG 1 attested
 		METHOD setComments (Ljava/lang/String;)V
 			ARG 1 comments
 		METHOD setReason (Lnet/minecraft/client/multiplayer/chat/report/ReportReason;)V
