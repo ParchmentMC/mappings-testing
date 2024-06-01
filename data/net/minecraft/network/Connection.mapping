@@ -82,23 +82,23 @@ CLASS net/minecraft/network/Connection
 		ARG 2 port
 		ARG 3 serverboundProtocol
 		ARG 4 clientboundProtocol
-		ARG 5 disconnectListener
+		ARG 5 packetListener
 		ARG 6 intention
 	METHOD initiateServerboundPlayConnection (Ljava/lang/String;ILnet/minecraft/network/ProtocolInfo;Lnet/minecraft/network/ProtocolInfo;Lnet/minecraft/network/ClientboundPacketListener;Z)V
 		ARG 1 hostName
 		ARG 2 port
 		ARG 3 serverboundProtocol
 		ARG 4 clientbountProtocol
-		ARG 5 disconnectListener
+		ARG 5 packetListener
 		ARG 6 isTransfer
 	METHOD initiateServerboundPlayConnection (Ljava/lang/String;ILnet/minecraft/network/protocol/login/ClientLoginPacketListener;)V
 		ARG 1 hostName
 		ARG 2 port
-		ARG 3 disconnectListener
+		ARG 3 packetListener
 	METHOD initiateServerboundStatusConnection (Ljava/lang/String;ILnet/minecraft/network/protocol/status/ClientStatusPacketListener;)V
 		ARG 1 hostName
 		ARG 2 port
-		ARG 3 disconnectListener
+		ARG 3 packetListener
 	METHOD isConnected ()Z
 		COMMENT Returns {@code true} if this {@code Connection} has an active channel, {@code false} otherwise.
 	METHOD isConnecting ()Z
