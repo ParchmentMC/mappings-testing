@@ -196,14 +196,14 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 2 pos
 	METHOD prepareCullFrustum (Lnet/minecraft/world/phys/Vec3;Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;)V
 		ARG 1 cameraPosition
-		ARG 2 projectionMatrix
-		ARG 3 frustrumMatrix
+		ARG 2 frustumMatrix
+		ARG 3 projectionMatrix
 	METHOD removeProgress (Lnet/minecraft/server/level/BlockDestructionProgress;)V
 		ARG 1 progress
 	METHOD renderClouds (Lcom/mojang/blaze3d/vertex/PoseStack;Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;FDDD)V
 		ARG 1 poseStack
-		ARG 2 projectionMatrix
-		ARG 3 frustrumMatrix
+		ARG 2 frustumMatrix
+		ARG 3 projectionMatrix
 		ARG 4 partialTick
 		ARG 5 camX
 		ARG 7 camY
@@ -238,8 +238,8 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 5 camera
 		ARG 6 gameRenderer
 		ARG 7 lightTexture
-		ARG 8 projectionMatrix
-		ARG 9 frustrumMatrix
+		ARG 8 frustumMatrix
+		ARG 9 projectionMatrix
 	METHOD renderLineBox (Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;DDDDDDFFFF)V
 		ARG 0 poseStack
 		ARG 1 consumer
@@ -294,8 +294,8 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 2 x
 		ARG 4 y
 		ARG 6 z
-		ARG 8 projectionMatrix
-		ARG 9 frustrumMatrix
+		ARG 8 frustrumMatrix
+		ARG 9 projectionMatrix
 	METHOD renderShape (Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;Lnet/minecraft/world/phys/shapes/VoxelShape;DDDFFFF)V
 		ARG 0 poseStack
 		ARG 1 consumer
@@ -308,8 +308,8 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 11 blue
 		ARG 12 alpha
 	METHOD renderSky (Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;FLnet/minecraft/client/Camera;ZLjava/lang/Runnable;)V
-		ARG 1 projectionMatrix
-		ARG 2 frustrumMatrix
+		ARG 1 frustumMatrix
+		ARG 2 projectionMatrix
 		ARG 3 partialTick
 		ARG 4 camera
 		ARG 5 isFoggy
