@@ -12,7 +12,7 @@ CLASS net/minecraft/client/renderer/debug/DebugRenderer
 		ARG 7 camZ
 	METHOD renderFilledBox (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;DDDDDDFFFF)V
 		ARG 0 poseStack
-		ARG 1 buffer
+		ARG 1 bufferSource
 		ARG 2 minX
 		ARG 4 minY
 		ARG 6 minZ
@@ -25,7 +25,7 @@ CLASS net/minecraft/client/renderer/debug/DebugRenderer
 		ARG 17 alpha
 	METHOD renderFilledBox (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/core/BlockPos;FFFFF)V
 		ARG 0 poseStack
-		ARG 1 buffer
+		ARG 1 bufferSource
 		ARG 2 pos
 		ARG 3 scale
 		ARG 4 red
@@ -34,7 +34,7 @@ CLASS net/minecraft/client/renderer/debug/DebugRenderer
 		ARG 7 alpha
 	METHOD renderFilledBox (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;FFFF)V
 		ARG 0 poseStack
-		ARG 1 buffer
+		ARG 1 bufferSource
 		ARG 2 startPos
 		ARG 3 endPos
 		ARG 4 red
@@ -43,7 +43,7 @@ CLASS net/minecraft/client/renderer/debug/DebugRenderer
 		ARG 7 alpha
 	METHOD renderFilledBox (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/world/phys/AABB;FFFF)V
 		ARG 0 poseStack
-		ARG 1 buffer
+		ARG 1 bufferSource
 		ARG 2 boundingBox
 		ARG 3 red
 		ARG 4 green
@@ -51,7 +51,7 @@ CLASS net/minecraft/client/renderer/debug/DebugRenderer
 		ARG 6 alpha
 	METHOD renderFilledUnitCube (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/core/BlockPos;FFFF)V
 		ARG 0 poseStack
-		ARG 1 buffer
+		ARG 1 bufferSource
 		ARG 2 pos
 		ARG 3 red
 		ARG 4 green
@@ -59,7 +59,7 @@ CLASS net/minecraft/client/renderer/debug/DebugRenderer
 		ARG 6 alpha
 	METHOD renderFloatingText (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Ljava/lang/String;DDDI)V
 		ARG 0 poseStack
-		ARG 1 buffer
+		ARG 1 bufferSource
 		ARG 2 text
 		ARG 3 x
 		ARG 5 y
@@ -67,7 +67,7 @@ CLASS net/minecraft/client/renderer/debug/DebugRenderer
 		ARG 9 color
 	METHOD renderFloatingText (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Ljava/lang/String;DDDIF)V
 		ARG 0 poseStack
-		ARG 1 buffer
+		ARG 1 bufferSource
 		ARG 2 text
 		ARG 3 x
 		ARG 5 y
@@ -76,7 +76,7 @@ CLASS net/minecraft/client/renderer/debug/DebugRenderer
 		ARG 10 scale
 	METHOD renderFloatingText (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Ljava/lang/String;DDDIFZFZ)V
 		ARG 0 poseStack
-		ARG 1 buffer
+		ARG 1 bufferSource
 		ARG 2 text
 		ARG 3 x
 		ARG 5 y
@@ -86,7 +86,7 @@ CLASS net/minecraft/client/renderer/debug/DebugRenderer
 		ARG 13 transparent
 	METHOD renderFloatingText (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Ljava/lang/String;IIII)V
 		ARG 0 poseStack
-		ARG 1 buffer
+		ARG 1 bufferSource
 		ARG 2 text
 		ARG 3 x
 		ARG 4 y

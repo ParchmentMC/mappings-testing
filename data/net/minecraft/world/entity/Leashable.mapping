@@ -8,9 +8,16 @@ CLASS net/minecraft/world/entity/Leashable
 	METHOD dropLeash (ZZ)V
 		ARG 1 broadcastPacket
 		ARG 2 dropItem
+	METHOD elasticRangeLeashBehaviour (Lnet/minecraft/world/entity/Entity;F)V
+		ARG 1 leashHolder
+		ARG 2 distance
 	METHOD getLeashHolder (Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/entity/Entity;
 		ARG 0 entity
 	METHOD handleLeashAtDistance (Lnet/minecraft/world/entity/Entity;F)Z
+		ARG 1 leashHolder
+		ARG 2 distance
+	METHOD legacyElasticRangeLeashBehaviour (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/Entity;F)V
+		ARG 0 entity
 		ARG 1 leashHolder
 		ARG 2 distance
 	METHOD readLeashData (Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/entity/Leashable$LeashData;

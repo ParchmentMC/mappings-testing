@@ -16,6 +16,8 @@ CLASS net/minecraft/world/entity/decoration/ItemFrame
 	METHOD dropItem (Lnet/minecraft/world/entity/Entity;Z)V
 		ARG 1 entity
 		ARG 2 dropSelf
+	METHOD getFramedMapId (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/level/saveddata/maps/MapId;
+		ARG 1 stack
 	METHOD getRotation ()I
 		COMMENT Return the rotation of the item currently on this frame.
 	METHOD hurt (Lnet/minecraft/world/damagesource/DamageSource;F)Z

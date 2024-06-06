@@ -17,6 +17,8 @@ CLASS net/minecraft/world/item/TridentItem
 		ARG 1 stack
 		ARG 2 target
 		ARG 3 attacker
+	METHOD isTooDamagedToUse (Lnet/minecraft/world/item/ItemStack;)Z
+		ARG 0 stack
 	METHOD releaseUsing (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;I)V
 		COMMENT Called when the player stops using an Item (stops holding the right mouse button).
 		ARG 1 stack

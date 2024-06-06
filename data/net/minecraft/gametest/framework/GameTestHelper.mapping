@@ -106,6 +106,10 @@ CLASS net/minecraft/gametest/framework/GameTestHelper
 		ARG 2 x
 		ARG 4 y
 		ARG 6 z
+	METHOD assertEntityPosition (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/phys/AABB;Ljava/lang/String;)V
+		ARG 1 entity
+		ARG 2 box
+		ARG 3 exceptionMessage
 	METHOD assertEntityPresent (Lnet/minecraft/world/entity/EntityType;)V
 		ARG 1 type
 	METHOD assertEntityPresent (Lnet/minecraft/world/entity/EntityType;III)V

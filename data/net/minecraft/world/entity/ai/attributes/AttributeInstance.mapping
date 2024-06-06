@@ -6,6 +6,8 @@ CLASS net/minecraft/world/entity/ai/attributes/AttributeInstance
 		ARG 2 onDirty
 	METHOD addModifier (Lnet/minecraft/world/entity/ai/attributes/AttributeModifier;)V
 		ARG 1 modifier
+	METHOD addOrReplacePermanentModifier (Lnet/minecraft/world/entity/ai/attributes/AttributeModifier;)V
+		ARG 1 modifier
 	METHOD addOrUpdateTransientModifier (Lnet/minecraft/world/entity/ai/attributes/AttributeModifier;)V
 		ARG 1 modifier
 	METHOD addPermanentModifier (Lnet/minecraft/world/entity/ai/attributes/AttributeModifier;)V

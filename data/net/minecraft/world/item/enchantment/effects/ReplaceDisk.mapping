@@ -1,0 +1,7 @@
+CLASS net/minecraft/world/item/enchantment/effects/ReplaceDisk
+	METHOD lambda$apply$1 (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/levelgen/blockpredicates/BlockPredicate;)Ljava/lang/Boolean;
+		ARG 2 predicate
+	METHOD lambda$apply$2 (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Holder;)V
+		ARG 3 event
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
