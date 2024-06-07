@@ -20,5 +20,7 @@ CLASS net/minecraft/world/entity/item/PrimedTnt
 		ARG 1 blockState
 	METHOD setFuse (I)V
 		ARG 1 life
+	METHOD setUsedPortal (Z)V
+		ARG 1 usedPortal
 	METHOD tick ()V
 		COMMENT Called to update the entity's position/logic.
