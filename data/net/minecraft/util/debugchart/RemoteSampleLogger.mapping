@@ -1,0 +1,10 @@
+CLASS net/minecraft/util/debugchart/RemoteSampleLogger
+	METHOD <init> (ILnet/minecraft/util/debugchart/DebugSampleSubscriptionTracker;Lnet/minecraft/util/debugchart/RemoteDebugSampleType;)V
+		ARG 1 size
+		ARG 2 subscriptionTracker
+		ARG 3 sampleType
+	METHOD <init> (ILnet/minecraft/util/debugchart/DebugSampleSubscriptionTracker;Lnet/minecraft/util/debugchart/RemoteDebugSampleType;[J)V
+		ARG 1 size
+		ARG 2 subscriptionTracker
+		ARG 3 sampleType
+		ARG 4 defaults

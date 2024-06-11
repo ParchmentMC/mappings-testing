@@ -18,6 +18,8 @@ CLASS net/minecraft/world/entity/player/Inventory
 		ARG 1 stackPredicate
 		ARG 2 maxCount
 		ARG 3 inventory
+	METHOD contains (Ljava/util/function/Predicate;)Z
+		ARG 1 predicate
 	METHOD contains (Lnet/minecraft/tags/TagKey;)Z
 		ARG 1 tag
 	METHOD contains (Lnet/minecraft/world/item/ItemStack;)Z
@@ -54,14 +56,8 @@ CLASS net/minecraft/world/entity/player/Inventory
 	METHOD hasRemainingSpaceForItem (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 1 destination
 		ARG 2 origin
-	METHOD hurtArmor (Lnet/minecraft/world/damagesource/DamageSource;F[I)V
-		ARG 1 source
-		ARG 2 damage
-		ARG 3 armorPieces
 	METHOD isHotbarSlot (I)Z
 		ARG 0 index
-	METHOD lambda$hurtArmor$1 (ILnet/minecraft/world/entity/player/Player;)V
-		ARG 1 entity
 	METHOD load (Lnet/minecraft/nbt/ListTag;)V
 		COMMENT Reads from the given tag list and fills the slots in the inventory with the correct items.
 		ARG 1 listTag

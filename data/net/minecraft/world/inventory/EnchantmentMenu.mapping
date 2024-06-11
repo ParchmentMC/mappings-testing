@@ -10,10 +10,11 @@ CLASS net/minecraft/world/inventory/EnchantmentMenu
 		COMMENT Handles the given Button-click on the server, currently only used by enchanting. Name is for legacy.
 		ARG 1 player
 		ARG 2 id
-	METHOD getEnchantmentList (Lnet/minecraft/world/item/ItemStack;II)Ljava/util/List;
-		ARG 1 stack
-		ARG 2 enchantSlot
-		ARG 3 level
+	METHOD getEnchantmentList (Lnet/minecraft/world/flag/FeatureFlagSet;Lnet/minecraft/world/item/ItemStack;II)Ljava/util/List;
+		ARG 1 enabledFeatures
+		ARG 2 stack
+		ARG 3 enchantSlot
+		ARG 4 level
 	METHOD lambda$clickMenuButton$1 (Lnet/minecraft/world/item/ItemStack;ILnet/minecraft/world/entity/player/Player;ILnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)V
 		ARG 6 level
 		ARG 7 blockPos

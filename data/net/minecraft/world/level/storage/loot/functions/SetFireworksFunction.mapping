@@ -1,0 +1,9 @@
+CLASS net/minecraft/world/level/storage/loot/functions/SetFireworksFunction
+	METHOD <init> (Ljava/util/List;Ljava/util/Optional;Ljava/util/Optional;)V
+		ARG 1 conditions
+		ARG 2 explosions
+		ARG 3 flightDuration
+	METHOD apply (Lnet/minecraft/world/item/component/Fireworks;)Lnet/minecraft/world/item/component/Fireworks;
+		ARG 1 fireworks
+	METHOD lambda$static$2 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

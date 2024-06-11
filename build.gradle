@@ -33,7 +33,7 @@ writtenbooks {
 }
 
 compass {
-    version = '1.20.4'
+    version = '1.20.6'
 }
 
 repositories {
@@ -49,8 +49,9 @@ repositories {
         name = 'QuiltMC <333'
         url = 'https://maven.quiltmc.org/repository/release/'
     }
+    // remove when ASM 9.8 is released
     maven {
-        name = "ASM snapshots for Enigma"
+        name = 'OW2 Snapshots for Enigma'
         url = "https://repository.ow2.org/nexus/content/repositories/snapshots/"
     }
     mavenLocal()

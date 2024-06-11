@@ -46,6 +46,9 @@ CLASS net/minecraft/world/damagesource/DamageSources
 		ARG 1 damageTypeKey
 		ARG 2 causingEntity
 		ARG 3 directEntity
+	METHOD spit (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/LivingEntity;)Lnet/minecraft/world/damagesource/DamageSource;
+		ARG 1 spit
+		ARG 2 thrower
 	METHOD sting (Lnet/minecraft/world/entity/LivingEntity;)Lnet/minecraft/world/damagesource/DamageSource;
 		ARG 1 entity
 	METHOD thorns (Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/damagesource/DamageSource;
@@ -55,6 +58,9 @@ CLASS net/minecraft/world/damagesource/DamageSources
 		ARG 2 directEntity
 	METHOD trident (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/damagesource/DamageSource;
 		ARG 1 trident
+		ARG 2 thrower
+	METHOD windCharge (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/LivingEntity;)Lnet/minecraft/world/damagesource/DamageSource;
+		ARG 1 windCharge
 		ARG 2 thrower
 	METHOD witherSkull (Lnet/minecraft/world/entity/projectile/WitherSkull;Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/damagesource/DamageSource;
 		ARG 1 witherSkull

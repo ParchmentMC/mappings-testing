@@ -1,0 +1,4 @@
+CLASS net/minecraft/client/renderer/entity/BreezeRenderer
+	METHOD enable (Lnet/minecraft/client/model/BreezeModel;[Lnet/minecraft/client/model/geom/ModelPart;)Lnet/minecraft/client/model/BreezeModel;
+		ARG 0 model
+		ARG 1 parts

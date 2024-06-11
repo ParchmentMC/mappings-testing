@@ -7,12 +7,6 @@ CLASS net/minecraft/world/entity/animal/TropicalFish
 		ARG 2 spawnType
 		ARG 3 pos
 		ARG 4 random
-	METHOD finalizeSpawn (Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/world/DifficultyInstance;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/world/entity/SpawnGroupData;Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/entity/SpawnGroupData;
-		ARG 1 level
-		ARG 2 difficulty
-		ARG 3 reason
-		ARG 4 spawnData
-		ARG 5 dataTag
 	METHOD getBaseColor (I)Lnet/minecraft/world/item/DyeColor;
 		ARG 0 variantId
 	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
@@ -44,6 +38,9 @@ CLASS net/minecraft/world/entity/animal/TropicalFish
 			ARG 5 id
 		METHOD byId (I)Lnet/minecraft/world/entity/animal/TropicalFish$Pattern;
 			ARG 0 packedId
+	CLASS Variant
+		METHOD <init> (I)V
+			ARG 1 id
 	CLASS TropicalFishGroupData
 		METHOD <init> (Lnet/minecraft/world/entity/animal/TropicalFish;Lnet/minecraft/world/entity/animal/TropicalFish$Variant;)V
 			ARG 1 leader

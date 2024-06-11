@@ -10,8 +10,8 @@ CLASS net/minecraft/client/gui/screens/ChatScreen
 	METHOD getComponentStyleAt (DD)Lnet/minecraft/network/chat/Style;
 		ARG 1 mouseX
 		ARG 3 mouseY
-	METHOD handleChatInput (Ljava/lang/String;Z)Z
-		ARG 1 input
+	METHOD handleChatInput (Ljava/lang/String;Z)V
+		ARG 1 message
 		ARG 2 addToRecentChat
 	METHOD insertText (Ljava/lang/String;Z)V
 		ARG 1 text

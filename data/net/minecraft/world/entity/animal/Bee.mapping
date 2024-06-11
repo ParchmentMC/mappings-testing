@@ -25,9 +25,6 @@ CLASS net/minecraft/world/entity/animal/Bee
 		ARG 1 partialTick
 	METHOD getSoundVolume ()F
 		COMMENT Returns the volume for the sounds this mob makes.
-	METHOD getStandingEyeHeight (Lnet/minecraft/world/entity/Pose;Lnet/minecraft/world/entity/EntityDimensions;)F
-		ARG 1 pose
-		ARG 2 size
 	METHOD getWalkTargetValue (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/LevelReader;)F
 		ARG 1 pos
 		ARG 2 level
@@ -59,6 +56,8 @@ CLASS net/minecraft/world/entity/animal/Bee
 		ARG 1 hasNectar
 	METHOD setHasStung (Z)V
 		ARG 1 hasStung
+	METHOD setHivePos (Lnet/minecraft/core/BlockPos;)V
+		ARG 1 hivePos
 	METHOD setPersistentAngerTarget (Ljava/util/UUID;)V
 		ARG 1 target
 	METHOD setRemainingPersistentAngerTime (I)V

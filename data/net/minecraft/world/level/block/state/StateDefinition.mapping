@@ -34,7 +34,7 @@ CLASS net/minecraft/world/level/block/state/StateDefinition
 		METHOD validateProperty (Lnet/minecraft/world/level/block/state/properties/Property;)V
 			ARG 1 property
 	CLASS Factory
-		METHOD create (Ljava/lang/Object;Lcom/google/common/collect/ImmutableMap;Lcom/mojang/serialization/MapCodec;)Ljava/lang/Object;
-			ARG 1 property
-			ARG 2 propToValueMap
-			ARG 3 propCodec
+		METHOD create (Ljava/lang/Object;Lit/unimi/dsi/fastutil/objects/Reference2ObjectArrayMap;Lcom/mojang/serialization/MapCodec;)Ljava/lang/Object;
+			ARG 1 owner
+			ARG 2 values
+			ARG 3 propertiesCodec

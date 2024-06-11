@@ -1,4 +1,7 @@
 CLASS net/minecraft/world/food/FoodData
+	METHOD add (IF)V
+		ARG 1 foodLevel
+		ARG 2 saturationLevel
 	METHOD addAdditionalSaveData (Lnet/minecraft/nbt/CompoundTag;)V
 		COMMENT Writes the food data for the player.
 		ARG 1 compoundTag
@@ -9,9 +12,8 @@ CLASS net/minecraft/world/food/FoodData
 		COMMENT Add food stats.
 		ARG 1 foodLevelModifier
 		ARG 2 saturationLevelModifier
-	METHOD eat (Lnet/minecraft/world/item/Item;Lnet/minecraft/world/item/ItemStack;)V
-		ARG 1 item
-		ARG 2 stack
+	METHOD eat (Lnet/minecraft/world/item/ItemStack;)V
+		ARG 1 stack
 	METHOD getFoodLevel ()I
 		COMMENT Get the player's food level.
 	METHOD getSaturationLevel ()F

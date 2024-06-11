@@ -14,6 +14,9 @@ CLASS net/minecraft/data/advancements/packs/VanillaHusbandryAdvancements
 		ARG 0 builder
 	METHOD addLeashedFrogVariants (Lnet/minecraft/advancements/Advancement$Builder;)Lnet/minecraft/advancements/Advancement$Builder;
 		ARG 0 builder
+	METHOD addTamedWolfVariants (Lnet/minecraft/advancements/Advancement$Builder;Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/advancements/Advancement$Builder;
+		ARG 0 builder
+		ARG 1 registries
 	METHOD createBreedAllAnimalsAdvancement (Lnet/minecraft/advancements/AdvancementHolder;Ljava/util/function/Consumer;Ljava/util/stream/Stream;Ljava/util/stream/Stream;)Lnet/minecraft/advancements/AdvancementHolder;
 		ARG 0 parent
 		ARG 1 writer

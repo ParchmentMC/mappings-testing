@@ -7,3 +7,6 @@ CLASS net/minecraft/gametest/framework/TestFunctionArgument
 		ARG 2 builder
 	METHOD parse (Lcom/mojang/brigadier/StringReader;)Lnet/minecraft/gametest/framework/TestFunction;
 		ARG 1 reader
+	METHOD suggestTestFunction (Lcom/mojang/brigadier/context/CommandContext;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;
+		ARG 0 context
+		ARG 1 builder

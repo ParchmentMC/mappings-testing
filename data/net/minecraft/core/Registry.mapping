@@ -15,6 +15,8 @@ CLASS net/minecraft/core/Registry
 		ARG 1 id
 	METHOD getHolder (Lnet/minecraft/resources/ResourceKey;)Ljava/util/Optional;
 		ARG 1 key
+	METHOD getHolder (Lnet/minecraft/resources/ResourceLocation;)Ljava/util/Optional;
+		ARG 1 location
 	METHOD getHolderOrThrow (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/core/Holder$Reference;
 		ARG 1 key
 	METHOD getKey (Ljava/lang/Object;)Lnet/minecraft/resources/ResourceLocation;
@@ -30,6 +32,9 @@ CLASS net/minecraft/core/Registry
 		ARG 1 key
 	METHOD getRandom (Lnet/minecraft/util/RandomSource;)Ljava/util/Optional;
 		ARG 1 random
+	METHOD getRandomElementOf (Lnet/minecraft/tags/TagKey;Lnet/minecraft/util/RandomSource;)Ljava/util/Optional;
+		ARG 1 key
+		ARG 2 random
 	METHOD getResourceKey (Ljava/lang/Object;)Ljava/util/Optional;
 		ARG 1 value
 	METHOD getTag (Lnet/minecraft/tags/TagKey;)Ljava/util/Optional;
@@ -40,20 +45,6 @@ CLASS net/minecraft/core/Registry
 		COMMENT @return all keys in this registry
 	METHOD keys (Lcom/mojang/serialization/DynamicOps;)Ljava/util/stream/Stream;
 		ARG 1 ops
-	METHOD lambda$byNameCodec$2 (Lnet/minecraft/resources/ResourceLocation;)Lcom/mojang/serialization/DataResult;
-		ARG 1 path
-	METHOD lambda$byNameCodec$5 (Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
-		ARG 1 value
-	METHOD lambda$byNameCodec$6 (Ljava/lang/Object;)I
-		ARG 1 value
-	METHOD lambda$holderByNameCodec$13 (Lnet/minecraft/core/Holder;)Lcom/mojang/serialization/Lifecycle;
-		ARG 1 holder
-	METHOD lambda$holderByNameCodec$9 (Lnet/minecraft/resources/ResourceLocation;)Lcom/mojang/serialization/DataResult;
-		ARG 1 path
-	METHOD lambda$keys$15 (Lcom/mojang/serialization/DynamicOps;Lnet/minecraft/resources/ResourceLocation;)Ljava/lang/Object;
-		ARG 1 path
-	METHOD lifecycle (Ljava/lang/Object;)Lcom/mojang/serialization/Lifecycle;
-		ARG 1 value
 	METHOD register (Lnet/minecraft/core/Registry;Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
 		ARG 0 registry
 		ARG 1 name
@@ -74,6 +65,10 @@ CLASS net/minecraft/core/Registry
 		ARG 0 registry
 		ARG 1 name
 		ARG 2 value
+	METHOD registrationInfo (Lnet/minecraft/resources/ResourceKey;)Ljava/util/Optional;
+		ARG 1 key
+	METHOD safeCastToReference (Lnet/minecraft/core/Holder;)Lcom/mojang/serialization/DataResult;
+		ARG 1 value
 	METHOD wrapAsHolder (Ljava/lang/Object;)Lnet/minecraft/core/Holder;
 		ARG 1 value
 	CLASS 1

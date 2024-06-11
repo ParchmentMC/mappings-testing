@@ -9,5 +9,9 @@ CLASS net/minecraft/util/datafix/ComponentDataFixUtils
 	METHOD createTranslatableComponent (Lcom/mojang/serialization/DynamicOps;Ljava/lang/String;)Lcom/mojang/serialization/Dynamic;
 		ARG 0 ops
 		ARG 1 translationKey
+	METHOD extractTranslationString (Ljava/lang/String;)Ljava/util/Optional;
+		ARG 0 data
+	METHOD rewriteFromLenient (Lcom/mojang/serialization/Dynamic;)Lcom/mojang/serialization/Dynamic;
+		ARG 0 dynamic
 	METHOD wrapLiteralStringAsComponent (Lcom/mojang/serialization/Dynamic;)Lcom/mojang/serialization/Dynamic;
 		ARG 0 dynamic

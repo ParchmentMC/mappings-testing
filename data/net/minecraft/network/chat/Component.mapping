@@ -64,22 +64,27 @@ CLASS net/minecraft/network/chat/Component
 		ARG 1 acceptor
 		ARG 2 style
 	CLASS Serializer
-		METHOD deserialize (Lcom/google/gson/JsonElement;)Lnet/minecraft/network/chat/MutableComponent;
+		METHOD deserialize (Lcom/google/gson/JsonElement;Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/network/chat/MutableComponent;
 			ARG 0 json
-		METHOD fromJson (Lcom/google/gson/JsonElement;)Lnet/minecraft/network/chat/MutableComponent;
+			ARG 1 provider
+		METHOD fromJson (Lcom/google/gson/JsonElement;Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/network/chat/MutableComponent;
 			ARG 0 json
-		METHOD fromJson (Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+			ARG 1 registries
+		METHOD fromJson (Ljava/lang/String;Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/network/chat/MutableComponent;
 			ARG 0 json
-		METHOD fromJsonLenient (Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
+			ARG 1 registries
+		METHOD fromJsonLenient (Ljava/lang/String;Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/network/chat/MutableComponent;
 			ARG 0 json
-		METHOD serialize (Lnet/minecraft/network/chat/Component;)Lcom/google/gson/JsonElement;
-			ARG 0 input
-		METHOD toJson (Lnet/minecraft/network/chat/Component;)Ljava/lang/String;
-			COMMENT Serializes a component into JSON.
+			ARG 1 registries
+		METHOD serialize (Lnet/minecraft/network/chat/Component;Lnet/minecraft/core/HolderLookup$Provider;)Lcom/google/gson/JsonElement;
 			ARG 0 component
-		METHOD toJsonTree (Lnet/minecraft/network/chat/Component;)Lcom/google/gson/JsonElement;
+			ARG 1 provider
+		METHOD toJson (Lnet/minecraft/network/chat/Component;Lnet/minecraft/core/HolderLookup$Provider;)Ljava/lang/String;
 			ARG 0 component
+			ARG 1 registries
 	CLASS SerializerAdapter
+		METHOD <init> (Lnet/minecraft/core/HolderLookup$Provider;)V
+			ARG 1 registries
 		METHOD deserialize (Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Lnet/minecraft/network/chat/MutableComponent;
 			ARG 1 json
 			ARG 2 typeOfT

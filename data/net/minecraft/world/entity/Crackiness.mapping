@@ -1,0 +1,12 @@
+CLASS net/minecraft/world/entity/Crackiness
+	METHOD <init> (FFF)V
+		ARG 1 fractionLow
+		ARG 2 fractionMedium
+		ARG 3 fractionHigh
+	METHOD byDamage (II)Lnet/minecraft/world/entity/Crackiness$Level;
+		ARG 1 damage
+		ARG 2 durability
+	METHOD byDamage (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/entity/Crackiness$Level;
+		ARG 1 stack
+	METHOD byFraction (F)Lnet/minecraft/world/entity/Crackiness$Level;
+		ARG 1 fraction

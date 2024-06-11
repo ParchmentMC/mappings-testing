@@ -78,8 +78,9 @@ CLASS net/minecraft/server/commands/BossBarCommands
 		ARG 1 builder
 	METHOD listBars (Lnet/minecraft/commands/CommandSourceStack;)I
 		ARG 0 source
-	METHOD register (Lcom/mojang/brigadier/CommandDispatcher;)V
+	METHOD register (Lcom/mojang/brigadier/CommandDispatcher;Lnet/minecraft/commands/CommandBuildContext;)V
 		ARG 0 dispatcher
+		ARG 1 context
 	METHOD removeBar (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/server/bossevents/CustomBossEvent;)I
 		ARG 0 source
 		ARG 1 bossbar

@@ -1,5 +1,5 @@
 CLASS net/minecraft/world/entity/ai/goal/TemptGoal
-	METHOD <init> (Lnet/minecraft/world/entity/PathfinderMob;DLnet/minecraft/world/item/crafting/Ingredient;Z)V
+	METHOD <init> (Lnet/minecraft/world/entity/PathfinderMob;DLjava/util/function/Predicate;Z)V
 		ARG 1 mob
 		ARG 2 speedModifier
 		ARG 4 items

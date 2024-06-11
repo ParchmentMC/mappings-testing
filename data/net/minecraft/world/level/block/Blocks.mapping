@@ -14,19 +14,11 @@ CLASS net/minecraft/world/level/block/Blocks
 		ARG 0 mapColor
 	METHOD flowerPot (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 potted
-	METHOD lambda$log$3 (Lnet/minecraft/world/level/material/MapColor;Lnet/minecraft/world/level/material/MapColor;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/material/MapColor;
-		ARG 2 state
-	METHOD lambda$pistonBase$6 (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Z
-		ARG 0 state
-		ARG 1 level
-		ARG 2 pos
 	METHOD lambda$static$10 (Lnet/minecraft/world/level/block/state/BlockState;)I
 		ARG 0 state
 	METHOD lambda$static$11 (Lnet/minecraft/world/level/block/state/BlockState;)I
 		ARG 0 state
 	METHOD lambda$static$12 (Lnet/minecraft/world/level/block/state/BlockState;)I
-		ARG 0 state
-	METHOD lambda$static$16 (Lnet/minecraft/world/level/block/state/BlockState;)I
 		ARG 0 state
 	METHOD lambda$static$17 (Lnet/minecraft/world/level/block/state/BlockState;)I
 		ARG 0 state
@@ -50,10 +42,6 @@ CLASS net/minecraft/world/level/block/Blocks
 		ARG 0 state
 	METHOD lambda$static$31 (Lnet/minecraft/world/level/block/state/BlockState;)I
 		ARG 0 state
-	METHOD lambda$static$33 (Lnet/minecraft/world/level/block/state/BlockState;)I
-		ARG 0 state
-	METHOD lambda$static$35 (Lnet/minecraft/world/level/block/state/BlockState;)I
-		ARG 0 state
 	METHOD lambda$static$37 (Lnet/minecraft/world/level/block/state/BlockState;)I
 		ARG 0 state
 	METHOD lambda$static$39 (Lnet/minecraft/world/level/block/state/BlockState;)I
@@ -72,15 +60,11 @@ CLASS net/minecraft/world/level/block/Blocks
 		ARG 0 state
 	METHOD lambda$static$46 (Lnet/minecraft/world/level/block/state/BlockState;)I
 		ARG 0 state
-	METHOD lambda$static$48 (Lnet/minecraft/world/level/block/state/BlockState;)I
-		ARG 0 state
 	METHOD lambda$static$49 (Lnet/minecraft/world/level/block/state/BlockState;)I
 		ARG 0 state
 	METHOD lambda$static$50 (Lnet/minecraft/world/level/block/state/BlockState;)I
 		ARG 0 state
 	METHOD lambda$static$52 (Lnet/minecraft/world/level/block/state/BlockState;)I
-		ARG 0 state
-	METHOD lambda$static$7 (Lnet/minecraft/world/level/block/state/BlockState;)I
 		ARG 0 state
 	METHOD lambda$static$8 (Lnet/minecraft/world/level/block/state/BlockState;)I
 		ARG 0 state
@@ -130,5 +114,7 @@ CLASS net/minecraft/world/level/block/Blocks
 		ARG 0 color
 	METHOD stair (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 baseBlock
+	METHOD waterloggedMapColor (Lnet/minecraft/world/level/material/MapColor;)Ljava/util/function/Function;
+		ARG 0 unwaterloggedMapColor
 	METHOD woodenButton (Lnet/minecraft/world/level/block/state/properties/BlockSetType;)Lnet/minecraft/world/level/block/Block;
 		ARG 0 type

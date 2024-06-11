@@ -1,10 +1,10 @@
 CLASS net/minecraft/world/item/armortrim/TrimPatterns
-	METHOD bootstrap (Lnet/minecraft/data/worldgen/BootstapContext;)V
+	METHOD bootstrap (Lnet/minecraft/data/worldgen/BootstrapContext;)V
 		ARG 0 context
-	METHOD getFromTemplate (Lnet/minecraft/core/RegistryAccess;Lnet/minecraft/world/item/ItemStack;)Ljava/util/Optional;
-		ARG 0 registry
+	METHOD getFromTemplate (Lnet/minecraft/core/HolderLookup$Provider;Lnet/minecraft/world/item/ItemStack;)Ljava/util/Optional;
+		ARG 0 registries
 		ARG 1 template
-	METHOD register (Lnet/minecraft/data/worldgen/BootstapContext;Lnet/minecraft/world/item/Item;Lnet/minecraft/resources/ResourceKey;)V
+	METHOD register (Lnet/minecraft/data/worldgen/BootstrapContext;Lnet/minecraft/world/item/Item;Lnet/minecraft/resources/ResourceKey;)V
 		ARG 0 context
 		ARG 1 templateItem
 		ARG 2 trimPatternKey

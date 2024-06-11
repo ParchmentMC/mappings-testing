@@ -6,8 +6,8 @@ CLASS net/minecraft/world/level/storage/loot/entries/CompositeEntryBase
 		ARG 2 conditions
 	METHOD compose (Ljava/util/List;)Lnet/minecraft/world/level/storage/loot/entries/ComposableEntryContainer;
 		ARG 1 children
-	METHOD createCodec (Lnet/minecraft/world/level/storage/loot/entries/CompositeEntryBase$CompositeEntryConstructor;)Lcom/mojang/serialization/Codec;
-		ARG 0 constructor
+	METHOD createCodec (Lnet/minecraft/world/level/storage/loot/entries/CompositeEntryBase$CompositeEntryConstructor;)Lcom/mojang/serialization/MapCodec;
+		ARG 0 factory
 	CLASS CompositeEntryConstructor
 		METHOD create (Ljava/util/List;Ljava/util/List;)Lnet/minecraft/world/level/storage/loot/entries/CompositeEntryBase;
 			ARG 1 children

@@ -1,0 +1,6 @@
+CLASS net/minecraft/util/datafix/ExtraDataFixUtils
+	METHOD cast (Lcom/mojang/datafixers/types/Type;Lcom/mojang/datafixers/Typed;)Lcom/mojang/datafixers/Typed;
+		ARG 0 type
+		ARG 1 data
+	METHOD fixBlockPos (Lcom/mojang/serialization/Dynamic;)Lcom/mojang/serialization/Dynamic;
+		ARG 0 data

@@ -1,0 +1,3 @@
+CLASS net/minecraft/client/multiplayer/KnownPacksManager
+	METHOD trySelectingPacks (Ljava/util/List;)Ljava/util/List;
+		ARG 1 packs

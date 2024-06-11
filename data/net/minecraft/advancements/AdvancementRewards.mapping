@@ -7,8 +7,8 @@ CLASS net/minecraft/advancements/AdvancementRewards
 		METHOD addExperience (I)Lnet/minecraft/advancements/AdvancementRewards$Builder;
 			COMMENT Adds the given amount of experience. (Not a direct setter)
 			ARG 1 experience
-		METHOD addLootTable (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/advancements/AdvancementRewards$Builder;
-			ARG 1 lootTableId
+		METHOD addLootTable (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/advancements/AdvancementRewards$Builder;
+			ARG 1 lootTable
 		METHOD addRecipe (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/advancements/AdvancementRewards$Builder;
 			COMMENT Adds the given recipe to the rewards.
 			ARG 1 recipeId
@@ -17,8 +17,8 @@ CLASS net/minecraft/advancements/AdvancementRewards
 			ARG 0 experience
 		METHOD function (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/advancements/AdvancementRewards$Builder;
 			ARG 0 functionId
-		METHOD loot (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/advancements/AdvancementRewards$Builder;
-			ARG 0 lootTableId
+		METHOD loot (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/advancements/AdvancementRewards$Builder;
+			ARG 0 lootTable
 		METHOD recipe (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/advancements/AdvancementRewards$Builder;
 			COMMENT Creates a new builder with the given recipe as a reward.
 			ARG 0 recipeId

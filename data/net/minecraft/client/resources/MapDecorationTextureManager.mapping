@@ -1,0 +1,5 @@
+CLASS net/minecraft/client/resources/MapDecorationTextureManager
+	METHOD <init> (Lnet/minecraft/client/renderer/texture/TextureManager;)V
+		ARG 1 textureManager
+	METHOD get (Lnet/minecraft/world/level/saveddata/maps/MapDecoration;)Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;
+		ARG 1 mapDecoration

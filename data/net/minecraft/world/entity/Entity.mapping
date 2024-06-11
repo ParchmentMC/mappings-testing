@@ -90,6 +90,10 @@ CLASS net/minecraft/world/entity/Entity
 	METHOD copyPosition (Lnet/minecraft/world/entity/Entity;)V
 		COMMENT Sets this entity's location and angles to the location and angles of the passed in entity.
 		ARG 1 entity
+	METHOD defineSynchedData (Lnet/minecraft/network/syncher/SynchedEntityData$Builder;)V
+		ARG 1 builder
+	METHOD deflection (Lnet/minecraft/world/entity/projectile/Projectile;)Lnet/minecraft/world/entity/projectile/ProjectileDeflection;
+		ARG 1 projectile
 	METHOD dismountTo (DDD)V
 		ARG 1 x
 		ARG 3 y
@@ -122,10 +126,10 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 category
 	METHOD findDimensionEntryPoint (Lnet/minecraft/server/level/ServerLevel;)Lnet/minecraft/world/level/portal/PortalInfo;
 		ARG 1 destination
-	METHOD gameEvent (Lnet/minecraft/world/level/gameevent/GameEvent;)V
-		ARG 1 event
-	METHOD gameEvent (Lnet/minecraft/world/level/gameevent/GameEvent;Lnet/minecraft/world/entity/Entity;)V
-		ARG 1 event
+	METHOD gameEvent (Lnet/minecraft/core/Holder;)V
+		ARG 1 gameEvent
+	METHOD gameEvent (Lnet/minecraft/core/Holder;Lnet/minecraft/world/entity/Entity;)V
+		ARG 1 gameEvent
 		ARG 2 entity
 	METHOD getBlockExplosionResistance (Lnet/minecraft/world/level/Explosion;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/material/FluidState;F)F
 		COMMENT Explosion resistance of a block relative to this entity
@@ -143,6 +147,10 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 4 yRot
 	METHOD getCommandSenderWorld ()Lnet/minecraft/world/level/Level;
 		COMMENT Get the world, if available. <b>{@code null} is not allowed!</b> If you are not an entity in the world, return the overworld
+	METHOD getDefaultPassengerAttachmentPoint (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/EntityAttachments;)Lnet/minecraft/world/phys/Vec3;
+		ARG 0 vehicle
+		ARG 1 passenger
+		ARG 2 attachments
 	METHOD getDimensionChangingDelay ()I
 		COMMENT Return the amount of cooldown before this entity can use a portal again.
 	METHOD getDimensions (Lnet/minecraft/world/entity/Pose;)Lnet/minecraft/world/entity/EntityDimensions;
@@ -161,9 +169,6 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 4 worldBorder
 	METHOD getEyeHeight (Lnet/minecraft/world/entity/Pose;)F
 		ARG 1 pose
-	METHOD getEyeHeight (Lnet/minecraft/world/entity/Pose;Lnet/minecraft/world/entity/EntityDimensions;)F
-		ARG 1 pose
-		ARG 2 dimensions
 	METHOD getEyePosition (F)Lnet/minecraft/world/phys/Vec3;
 		ARG 1 partialTicks
 	METHOD getFluidHeight (Lnet/minecraft/tags/TagKey;)D
@@ -184,14 +189,14 @@ CLASS net/minecraft/world/entity/Entity
 		COMMENT The maximum height from where the entity is allowed to jump (used in pathfinder)
 	METHOD getMotionDirection ()Lnet/minecraft/core/Direction;
 		COMMENT Gets the horizontal facing direction of this Entity, adjusted to take specially-treated entity types into account.
-	METHOD getMyRidingOffset (Lnet/minecraft/world/entity/Entity;)F
-		ARG 1 entity
 	METHOD getOnPos (F)Lnet/minecraft/core/BlockPos;
 		ARG 1 yOffset
-	METHOD getPassengerAttachmentPoint (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/EntityDimensions;F)Lorg/joml/Vector3f;
+	METHOD getPassengerAttachmentPoint (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/EntityDimensions;F)Lnet/minecraft/world/phys/Vec3;
 		ARG 1 entity
 		ARG 2 dimensions
-		ARG 3 scale
+		ARG 3 partialTick
+	METHOD getPassengerClosestTo (Lnet/minecraft/world/phys/Vec3;)Ljava/util/Optional;
+		ARG 1 pos
 	METHOD getPassengerRidingPosition (Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/phys/Vec3;
 		ARG 1 entity
 	METHOD getPortalWaitTime ()I
@@ -224,6 +229,8 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 partialTicks
 	METHOD getVehicle ()Lnet/minecraft/world/entity/Entity;
 		COMMENT Get entity this is riding
+	METHOD getVehicleAttachmentPoint (Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/phys/Vec3;
+		ARG 1 entity
 	METHOD getViewVector (F)Lnet/minecraft/world/phys/Vec3;
 		COMMENT Gets the interpolated look vector.
 		ARG 1 partialTicks
@@ -261,6 +268,10 @@ CLASS net/minecraft/world/entity/Entity
 		COMMENT Called when the entity is attacked.
 		ARG 1 source
 		ARG 2 amount
+	METHOD igniteForSeconds (I)V
+		ARG 1 seconds
+	METHOD igniteForTicks (I)V
+		ARG 1 ticks
 	METHOD ignoreExplosion (Lnet/minecraft/world/level/Explosion;)Z
 		ARG 1 explosion
 	METHOD interact (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResult;
@@ -423,6 +434,8 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 numbers
 	METHOD onAboveBubbleCol (Z)V
 		ARG 1 downwards
+	METHOD onExplosionHit (Lnet/minecraft/world/entity/Entity;)V
+		ARG 1 entity
 	METHOD onInsideBlock (Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 state
 	METHOD onInsideBubbleColumn (Z)V
@@ -494,8 +507,6 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 entity
 	METHOD rideTick ()V
 		COMMENT Handles updating while riding another entity
-	METHOD ridingOffset (Lnet/minecraft/world/entity/Entity;)F
-		ARG 1 entity
 	METHOD rotate (Lnet/minecraft/world/level/block/Rotation;)F
 		COMMENT Transforms the entity's current yaw with the given Rotation and returns it. This does not have a side-effect.
 		ARG 1 transformRotation
@@ -540,13 +551,8 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 isInvulnerable
 	METHOD setIsInPowderSnow (Z)V
 		ARG 1 isInPowderSnow
-	METHOD setItemSlot (Lnet/minecraft/world/entity/EquipmentSlot;Lnet/minecraft/world/item/ItemStack;)V
-		ARG 1 slot
-		ARG 2 stack
 	METHOD setLevel (Lnet/minecraft/world/level/Level;)V
 		ARG 1 level
-	METHOD setMaxUpStep (F)V
-		ARG 1 maxUpStep
 	METHOD setNoGravity (Z)V
 		ARG 1 noGravity
 	METHOD setOnGround (Z)V
@@ -576,9 +582,6 @@ CLASS net/minecraft/world/entity/Entity
 		COMMENT Sets the rotation of the entity.
 		ARG 1 yRot
 		ARG 2 xRot
-	METHOD setSecondsOnFire (I)V
-		COMMENT Sets entity to burn for x amount of seconds, cannot lower amount of existing fire.
-		ARG 1 seconds
 	METHOD setSharedFlag (IZ)V
 		COMMENT Enable or disable an entity flag, see {@link #getEntityFlag} to read the known flags.
 		ARG 1 flag
@@ -697,6 +700,7 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 2 state
 		ARG 3 playStepSound
 		ARG 4 broadcastGameEvent
+		ARG 5 entityPos
 	METHOD walkingStepSound (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 pos
 		ARG 2 state

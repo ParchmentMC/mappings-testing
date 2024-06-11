@@ -3,3 +3,5 @@ CLASS net/minecraft/network/protocol/game/ClientboundHurtAnimationPacket
 		ARG 1 buffer
 	METHOD <init> (Lnet/minecraft/world/entity/LivingEntity;)V
 		ARG 1 entity
+	METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
+		ARG 1 buffer

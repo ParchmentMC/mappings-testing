@@ -1,0 +1,3 @@
+CLASS net/minecraft/core/particles/ScalableParticleOptionsBase
+	METHOD <init> (F)V
+		ARG 1 scale

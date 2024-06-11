@@ -1,7 +1,13 @@
 CLASS net/minecraft/gametest/framework/GameTestListener
-	METHOD testFailed (Lnet/minecraft/gametest/framework/GameTestInfo;)V
-		ARG 1 testInfo
-	METHOD testPassed (Lnet/minecraft/gametest/framework/GameTestInfo;)V
-		ARG 1 testInfo
+	METHOD testAddedForRerun (Lnet/minecraft/gametest/framework/GameTestInfo;Lnet/minecraft/gametest/framework/GameTestInfo;Lnet/minecraft/gametest/framework/GameTestRunner;)V
+		ARG 1 oldTest
+		ARG 2 newTest
+		ARG 3 runner
+	METHOD testFailed (Lnet/minecraft/gametest/framework/GameTestInfo;Lnet/minecraft/gametest/framework/GameTestRunner;)V
+		ARG 1 test
+		ARG 2 runner
+	METHOD testPassed (Lnet/minecraft/gametest/framework/GameTestInfo;Lnet/minecraft/gametest/framework/GameTestRunner;)V
+		ARG 1 test
+		ARG 2 runner
 	METHOD testStructureLoaded (Lnet/minecraft/gametest/framework/GameTestInfo;)V
 		ARG 1 testInfo

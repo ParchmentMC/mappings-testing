@@ -1,13 +1,16 @@
 CLASS net/minecraft/world/level/chunk/storage/ChunkStorage
-	METHOD <init> (Ljava/nio/file/Path;Lcom/mojang/datafixers/DataFixer;Z)V
-		ARG 1 regionFolder
-		ARG 2 fixerUpper
-		ARG 3 sync
+	METHOD <init> (Lnet/minecraft/world/level/chunk/storage/RegionStorageInfo;Ljava/nio/file/Path;Lcom/mojang/datafixers/DataFixer;Z)V
+		ARG 1 info
+		ARG 2 folder
+		ARG 3 fixerUpper
+		ARG 4 sync
 	METHOD getLegacyStructureHandler (Lnet/minecraft/resources/ResourceKey;Ljava/util/function/Supplier;)Lnet/minecraft/world/level/levelgen/structure/LegacyStructureDataHandler;
 		ARG 1 level
 		ARG 2 storage
 	METHOD getVersion (Lnet/minecraft/nbt/CompoundTag;)I
 		ARG 0 chunkData
+	METHOD handleLegacyStructureIndex (Lnet/minecraft/world/level/ChunkPos;)V
+		ARG 1 chunkPos
 	METHOD injectDatafixingContext (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/resources/ResourceKey;Ljava/util/Optional;)V
 		ARG 0 chunkData
 		ARG 1 levelKey
@@ -24,6 +27,6 @@ CLASS net/minecraft/world/level/chunk/storage/ChunkStorage
 		ARG 2 storage
 		ARG 3 chunkData
 		ARG 4 chunkGeneratorKey
-	METHOD write (Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/nbt/CompoundTag;)V
+	METHOD write (Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/nbt/CompoundTag;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 chunkPos
-		ARG 2 chunkData
+		ARG 2 data

@@ -4,21 +4,15 @@ CLASS net/minecraft/network/syncher/SynchedEntityData
 	COMMENT
 	COMMENT Use {@link #defineId} to register a piece of data for your entity class.
 	COMMENT Use {@link #define} during {@link Entity#defineSynchedData} to set the default value for a given parameter.
-	METHOD <init> (Lnet/minecraft/world/entity/Entity;)V
+	METHOD <init> (Lnet/minecraft/network/syncher/SyncedDataHolder;[Lnet/minecraft/network/syncher/SynchedEntityData$DataItem;)V
 		ARG 1 entity
+		ARG 2 itemsById
 	METHOD assignValue (Lnet/minecraft/network/syncher/SynchedEntityData$DataItem;Lnet/minecraft/network/syncher/SynchedEntityData$DataValue;)V
 		ARG 1 target
 		ARG 2 entry
 	METHOD assignValues (Ljava/util/List;)V
 		COMMENT Updates the data using the given entries. Used on the client when the update packet is received.
 		ARG 1 entries
-	METHOD createDataItem (Lnet/minecraft/network/syncher/EntityDataAccessor;Ljava/lang/Object;)V
-		ARG 1 key
-		ARG 2 value
-	METHOD define (Lnet/minecraft/network/syncher/EntityDataAccessor;Ljava/lang/Object;)V
-		COMMENT Set the default value for a data parameter. Call this during {@link Entity#defineSynchedData}.
-		ARG 1 key
-		ARG 2 value
 	METHOD defineId (Ljava/lang/Class;Lnet/minecraft/network/syncher/EntityDataSerializer;)Lnet/minecraft/network/syncher/EntityDataAccessor;
 		COMMENT Register a piece of data to be kept in sync for an entity class.
 		COMMENT This method must be called during a static initializer of an entity class and the first parameter of this method must be that entity class.
@@ -28,8 +22,6 @@ CLASS net/minecraft/network/syncher/SynchedEntityData
 		COMMENT Get the value of the given key for this entity.
 		ARG 1 key
 	METHOD getItem (Lnet/minecraft/network/syncher/EntityDataAccessor;)Lnet/minecraft/network/syncher/SynchedEntityData$DataItem;
-		ARG 1 key
-	METHOD hasItem (Lnet/minecraft/network/syncher/EntityDataAccessor;)Z
 		ARG 1 key
 	METHOD isDirty ()Z
 		COMMENT Whether any keys have changed since the last synchronization packet to the client.
@@ -43,6 +35,12 @@ CLASS net/minecraft/network/syncher/SynchedEntityData
 		ARG 1 key
 		ARG 2 value
 		ARG 3 force
+	CLASS Builder
+		METHOD <init> (Lnet/minecraft/network/syncher/SyncedDataHolder;)V
+			ARG 1 entity
+		METHOD define (Lnet/minecraft/network/syncher/EntityDataAccessor;Ljava/lang/Object;)Lnet/minecraft/network/syncher/SynchedEntityData$Builder;
+			ARG 1 accessor
+			ARG 2 value
 	CLASS DataItem
 		METHOD <init> (Lnet/minecraft/network/syncher/EntityDataAccessor;Ljava/lang/Object;)V
 			ARG 1 accessor
@@ -55,12 +53,12 @@ CLASS net/minecraft/network/syncher/SynchedEntityData
 		METHOD create (Lnet/minecraft/network/syncher/EntityDataAccessor;Ljava/lang/Object;)Lnet/minecraft/network/syncher/SynchedEntityData$DataValue;
 			ARG 0 dataAccessor
 			ARG 1 value
-		METHOD read (Lnet/minecraft/network/FriendlyByteBuf;I)Lnet/minecraft/network/syncher/SynchedEntityData$DataValue;
+		METHOD read (Lnet/minecraft/network/RegistryFriendlyByteBuf;I)Lnet/minecraft/network/syncher/SynchedEntityData$DataValue;
 			ARG 0 buffer
 			ARG 1 id
-		METHOD read (Lnet/minecraft/network/FriendlyByteBuf;ILnet/minecraft/network/syncher/EntityDataSerializer;)Lnet/minecraft/network/syncher/SynchedEntityData$DataValue;
+		METHOD read (Lnet/minecraft/network/RegistryFriendlyByteBuf;ILnet/minecraft/network/syncher/EntityDataSerializer;)Lnet/minecraft/network/syncher/SynchedEntityData$DataValue;
 			ARG 0 buffer
 			ARG 1 id
 			ARG 2 serializer
-		METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
+		METHOD write (Lnet/minecraft/network/RegistryFriendlyByteBuf;)V
 			ARG 1 buffer

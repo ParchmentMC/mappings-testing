@@ -11,9 +11,10 @@ CLASS net/minecraft/client/multiplayer/ServerStatusPinger
 		ARG 1 resolvedServerAddress
 		ARG 2 serverAddress
 		ARG 3 serverData
-	METHOD pingServer (Lnet/minecraft/client/multiplayer/ServerData;Ljava/lang/Runnable;)V
-		ARG 1 server
+	METHOD pingServer (Lnet/minecraft/client/multiplayer/ServerData;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
+		ARG 1 serverData
 		ARG 2 serverListUpdater
+		ARG 3 stateUpdater
 	CLASS 1
 		METHOD lambda$handleStatusResponse$0 (Lnet/minecraft/client/multiplayer/ServerData;Lnet/minecraft/network/protocol/status/ServerStatus$Version;)V
 			ARG 1 version

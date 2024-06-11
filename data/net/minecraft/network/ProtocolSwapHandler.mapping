@@ -1,4 +1,7 @@
 CLASS net/minecraft/network/ProtocolSwapHandler
-	METHOD swapProtocolIfNeeded (Lio/netty/util/Attribute;Lnet/minecraft/network/protocol/Packet;)V
-		ARG 0 attribute
+	METHOD handleInboundTerminalPacket (Lio/netty/channel/ChannelHandlerContext;Lnet/minecraft/network/protocol/Packet;)V
+		ARG 0 context
+		ARG 1 packet
+	METHOD handleOutboundTerminalPacket (Lio/netty/channel/ChannelHandlerContext;Lnet/minecraft/network/protocol/Packet;)V
+		ARG 0 context
 		ARG 1 packet

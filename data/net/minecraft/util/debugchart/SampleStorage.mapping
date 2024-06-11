@@ -1,0 +1,6 @@
+CLASS net/minecraft/util/debugchart/SampleStorage
+	METHOD get (I)J
+		ARG 1 index
+	METHOD get (II)J
+		ARG 1 index
+		ARG 2 dimension

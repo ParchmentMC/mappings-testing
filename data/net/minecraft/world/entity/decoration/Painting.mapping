@@ -16,8 +16,6 @@ CLASS net/minecraft/world/entity/decoration/Painting
 	METHOD dropItem (Lnet/minecraft/world/entity/Entity;)V
 		COMMENT Called when this entity is broken. Entity parameter may be null.
 		ARG 1 brokenEntity
-	METHOD loadVariant (Lnet/minecraft/nbt/CompoundTag;)Ljava/util/Optional;
-		ARG 0 tag
 	METHOD moveTo (DDDFF)V
 		COMMENT Sets the location and rotation of the entity in the world.
 		ARG 1 x

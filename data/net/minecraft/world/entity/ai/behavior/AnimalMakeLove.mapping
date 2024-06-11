@@ -1,7 +1,10 @@
 CLASS net/minecraft/world/entity/ai/behavior/AnimalMakeLove
-	METHOD <init> (Lnet/minecraft/world/entity/EntityType;F)V
+	METHOD <init> (Lnet/minecraft/world/entity/EntityType;)V
+		ARG 1 partnerType
+	METHOD <init> (Lnet/minecraft/world/entity/EntityType;FI)V
 		ARG 1 partnerType
 		ARG 2 speedModifier
+		ARG 3 closeEnoughDistance
 	METHOD canStillUse (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/animal/Animal;J)Z
 		ARG 1 level
 		ARG 2 entity

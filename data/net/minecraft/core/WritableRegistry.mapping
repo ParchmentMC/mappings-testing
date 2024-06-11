@@ -1,5 +1,5 @@
 CLASS net/minecraft/core/WritableRegistry
-	METHOD register (Lnet/minecraft/resources/ResourceKey;Ljava/lang/Object;Lcom/mojang/serialization/Lifecycle;)Lnet/minecraft/core/Holder$Reference;
+	METHOD register (Lnet/minecraft/resources/ResourceKey;Ljava/lang/Object;Lnet/minecraft/core/RegistrationInfo;)Lnet/minecraft/core/Holder$Reference;
 		ARG 1 key
 		ARG 2 value
-		ARG 3 lifecycle
+		ARG 3 registrationInfo

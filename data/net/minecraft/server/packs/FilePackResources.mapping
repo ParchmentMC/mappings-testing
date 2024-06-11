@@ -1,9 +1,8 @@
 CLASS net/minecraft/server/packs/FilePackResources
-	METHOD <init> (Ljava/lang/String;Lnet/minecraft/server/packs/FilePackResources$SharedZipFileAccess;ZLjava/lang/String;)V
-		ARG 1 name
+	METHOD <init> (Lnet/minecraft/server/packs/PackLocationInfo;Lnet/minecraft/server/packs/FilePackResources$SharedZipFileAccess;Ljava/lang/String;)V
+		ARG 1 location
 		ARG 2 zipFileAccess
-		ARG 3 isBuiltin
-		ARG 4 prefix
+		ARG 3 prefix
 	METHOD addPrefix (Ljava/lang/String;)Ljava/lang/String;
 		ARG 1 resourcePath
 	METHOD extractNamespace (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -20,9 +19,7 @@ CLASS net/minecraft/server/packs/FilePackResources
 		METHOD <init> (Ljava/io/File;)V
 			ARG 1 file
 	CLASS FileResourcesSupplier
-		METHOD <init> (Ljava/io/File;Z)V
+		METHOD <init> (Ljava/io/File;)V
 			ARG 1 content
-			ARG 2 isBuiltin
-		METHOD <init> (Ljava/nio/file/Path;Z)V
+		METHOD <init> (Ljava/nio/file/Path;)V
 			ARG 1 content
-			ARG 2 isBuiltin

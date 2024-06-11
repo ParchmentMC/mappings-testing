@@ -5,6 +5,8 @@ CLASS net/minecraft/core/Holder
 		ARG 0 value
 	METHOD is (Ljava/util/function/Predicate;)Z
 		ARG 1 predicate
+	METHOD is (Lnet/minecraft/core/Holder;)Z
+		ARG 1 holder
 	METHOD is (Lnet/minecraft/resources/ResourceKey;)Z
 		ARG 1 resourceKey
 	METHOD is (Lnet/minecraft/resources/ResourceLocation;)Z

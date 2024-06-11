@@ -6,9 +6,6 @@ CLASS net/minecraft/network/chat/SignedMessageChain
 		ARG 1 publicKey
 	METHOD encoder (Lnet/minecraft/util/Signer;)Lnet/minecraft/network/chat/SignedMessageChain$Encoder;
 		ARG 1 signer
-	METHOD lambda$decoder$2 (Lnet/minecraft/world/entity/player/ProfilePublicKey;Lnet/minecraft/util/SignatureValidator;Lnet/minecraft/network/chat/MessageSignature;Lnet/minecraft/network/chat/SignedMessageBody;)Lnet/minecraft/network/chat/PlayerChatMessage;
-		ARG 3 signature
-		ARG 4 body
 	METHOD lambda$encoder$0 (Lnet/minecraft/network/chat/SignedMessageLink;Lnet/minecraft/network/chat/SignedMessageBody;Lnet/minecraft/util/SignatureUpdater$Output;)V
 		ARG 2 output
 	METHOD lambda$encoder$1 (Lnet/minecraft/util/Signer;Lnet/minecraft/network/chat/SignedMessageBody;)Lnet/minecraft/network/chat/MessageSignature;
@@ -28,7 +25,3 @@ CLASS net/minecraft/network/chat/SignedMessageChain
 			ARG 0 body
 		METHOD pack (Lnet/minecraft/network/chat/SignedMessageBody;)Lnet/minecraft/network/chat/MessageSignature;
 			ARG 1 body
-	CLASS DecodeException
-		METHOD <init> (Lnet/minecraft/network/chat/Component;Z)V
-			ARG 1 component
-			ARG 2 shouldDisconnect

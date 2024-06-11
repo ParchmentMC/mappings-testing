@@ -5,3 +5,5 @@ CLASS net/minecraft/network/protocol/game/ClientboundRemoveEntitiesPacket
 		ARG 1 buffer
 	METHOD <init> ([I)V
 		ARG 1 entityIds
+	METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
+		ARG 1 buffer

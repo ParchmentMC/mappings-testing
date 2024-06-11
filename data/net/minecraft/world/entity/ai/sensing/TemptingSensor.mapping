@@ -1,5 +1,5 @@
 CLASS net/minecraft/world/entity/ai/sensing/TemptingSensor
-	METHOD <init> (Lnet/minecraft/world/item/crafting/Ingredient;)V
+	METHOD <init> (Ljava/util/function/Predicate;)V
 		ARG 1 temptations
 	METHOD isTemptation (Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 1 stack

@@ -1,15 +1,15 @@
 CLASS net/minecraft/server/commands/ItemCommands
-	METHOD applyModifier (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/world/level/storage/loot/functions/LootItemFunction;Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/ItemStack;
+	METHOD applyModifier (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/core/Holder;Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/ItemStack;
 		ARG 0 source
 		ARG 1 modifier
-		ARG 2 item
+		ARG 2 stack
 	METHOD blockToBlock (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/core/BlockPos;ILnet/minecraft/core/BlockPos;I)I
 		ARG 0 source
 		ARG 1 sourcePos
 		ARG 2 sourceSlot
 		ARG 3 pos
 		ARG 4 slot
-	METHOD blockToBlock (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/core/BlockPos;ILnet/minecraft/core/BlockPos;ILnet/minecraft/world/level/storage/loot/functions/LootItemFunction;)I
+	METHOD blockToBlock (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/core/BlockPos;ILnet/minecraft/core/BlockPos;ILnet/minecraft/core/Holder;)I
 		ARG 0 source
 		ARG 1 sourcePos
 		ARG 2 sourceSlot
@@ -22,7 +22,7 @@ CLASS net/minecraft/server/commands/ItemCommands
 		ARG 2 sourceSlot
 		ARG 3 targets
 		ARG 4 slot
-	METHOD blockToEntities (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/core/BlockPos;ILjava/util/Collection;ILnet/minecraft/world/level/storage/loot/functions/LootItemFunction;)I
+	METHOD blockToEntities (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/core/BlockPos;ILjava/util/Collection;ILnet/minecraft/core/Holder;)I
 		ARG 0 source
 		ARG 1 pos
 		ARG 2 sourceSlot
@@ -35,7 +35,7 @@ CLASS net/minecraft/server/commands/ItemCommands
 		ARG 2 sourceSlot
 		ARG 3 pos
 		ARG 4 slot
-	METHOD entityToBlock (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/world/entity/Entity;ILnet/minecraft/core/BlockPos;ILnet/minecraft/world/level/storage/loot/functions/LootItemFunction;)I
+	METHOD entityToBlock (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/world/entity/Entity;ILnet/minecraft/core/BlockPos;ILnet/minecraft/core/Holder;)I
 		ARG 0 source
 		ARG 1 sourceEntity
 		ARG 2 sourceSlot
@@ -48,7 +48,7 @@ CLASS net/minecraft/server/commands/ItemCommands
 		ARG 2 sourceSlot
 		ARG 3 targets
 		ARG 4 slot
-	METHOD entityToEntities (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/world/entity/Entity;ILjava/util/Collection;ILnet/minecraft/world/level/storage/loot/functions/LootItemFunction;)I
+	METHOD entityToEntities (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/world/entity/Entity;ILjava/util/Collection;ILnet/minecraft/core/Holder;)I
 		ARG 0 source
 		ARG 1 sourceEntity
 		ARG 2 sourceSlot
@@ -116,16 +116,16 @@ CLASS net/minecraft/server/commands/ItemCommands
 	METHOD lambda$static$6 (Lcom/mojang/brigadier/context/CommandContext;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;
 		ARG 0 context
 		ARG 1 builder
-	METHOD modifyBlockItem (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/core/BlockPos;ILnet/minecraft/world/level/storage/loot/functions/LootItemFunction;)I
+	METHOD modifyBlockItem (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/core/BlockPos;ILnet/minecraft/core/Holder;)I
 		ARG 0 source
 		ARG 1 pos
 		ARG 2 slot
 		ARG 3 modifier
-	METHOD modifyEntityItem (Lnet/minecraft/commands/CommandSourceStack;Ljava/util/Collection;ILnet/minecraft/world/level/storage/loot/functions/LootItemFunction;)I
+	METHOD modifyEntityItem (Lnet/minecraft/commands/CommandSourceStack;Ljava/util/Collection;ILnet/minecraft/core/Holder;)I
 		ARG 0 source
 		ARG 1 targets
-		ARG 2 slot
-		ARG 3 modifier
+		ARG 2 sourceSlot
+		ARG 3 modifer
 	METHOD register (Lcom/mojang/brigadier/CommandDispatcher;Lnet/minecraft/commands/CommandBuildContext;)V
 		ARG 0 dispatcher
 		ARG 1 context

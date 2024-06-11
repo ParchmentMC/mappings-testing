@@ -1,0 +1,3 @@
+CLASS net/minecraft/world/ItemInteractionResult
+	METHOD sidedSuccess (Z)Lnet/minecraft/world/ItemInteractionResult;
+		ARG 0 clientSide

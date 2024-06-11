@@ -1,3 +1,5 @@
 CLASS net/minecraft/client/gui/font/providers/TrueTypeGlyphProviderDefinition
+	METHOD lambda$static$1 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	METHOD load (Lnet/minecraft/server/packs/resources/ResourceManager;)Lcom/mojang/blaze3d/font/GlyphProvider;
 		ARG 1 resourceManager

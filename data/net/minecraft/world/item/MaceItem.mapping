@@ -1,0 +1,14 @@
+CLASS net/minecraft/world/item/MaceItem
+	METHOD canSmashAttack (Lnet/minecraft/world/entity/player/Player;)Z
+		ARG 0 player
+	METHOD getKnockbackPower (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/phys/Vec3;)D
+		ARG 0 player
+		ARG 1 entity
+		ARG 2 entityPos
+	METHOD knockback (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/entity/Entity;)V
+		ARG 0 level
+		ARG 1 player
+		ARG 2 entity
+	METHOD knockbackPredicate (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/entity/Entity;)Ljava/util/function/Predicate;
+		ARG 0 player
+		ARG 1 entity

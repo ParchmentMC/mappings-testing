@@ -1,0 +1,13 @@
+CLASS net/minecraft/world/entity/EquipmentSlotGroup
+	METHOD <init> (Ljava/lang/String;IILjava/lang/String;Ljava/util/function/Predicate;)V
+		ARG 3 id
+		ARG 4 key
+		ARG 5 predicate
+	METHOD <init> (Ljava/lang/String;IILjava/lang/String;Lnet/minecraft/world/entity/EquipmentSlot;)V
+		ARG 3 id
+		ARG 4 key
+		ARG 5 slot
+	METHOD bySlot (Lnet/minecraft/world/entity/EquipmentSlot;)Lnet/minecraft/world/entity/EquipmentSlotGroup;
+		ARG 0 slot
+	METHOD test (Lnet/minecraft/world/entity/EquipmentSlot;)Z
+		ARG 1 slot

@@ -6,7 +6,7 @@ CLASS net/minecraft/world/entity/ai/navigation/PathNavigation
 	METHOD <init> (Lnet/minecraft/world/entity/Mob;Lnet/minecraft/world/level/Level;)V
 		ARG 1 mob
 		ARG 2 level
-	METHOD canCutCorner (Lnet/minecraft/world/level/pathfinder/BlockPathTypes;)Z
+	METHOD canCutCorner (Lnet/minecraft/world/level/pathfinder/PathType;)Z
 		ARG 1 pathType
 	METHOD canMoveDirectly (Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;)Z
 		COMMENT Checks if the specified entity can safely walk to the specified location.
@@ -75,6 +75,12 @@ CLASS net/minecraft/world/entity/ai/navigation/PathNavigation
 		ARG 3 y
 		ARG 5 z
 		ARG 7 speed
+	METHOD moveTo (DDDID)Z
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+		ARG 7 accuracy
+		ARG 8 speed
 	METHOD moveTo (Lnet/minecraft/world/entity/Entity;D)Z
 		COMMENT Try to find and set a path to EntityLiving. Returns {@code true} if successful.
 		ARG 1 entity

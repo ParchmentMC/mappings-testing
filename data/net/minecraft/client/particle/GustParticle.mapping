@@ -8,3 +8,6 @@ CLASS net/minecraft/client/particle/GustParticle
 	CLASS Provider
 		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
 			ARG 1 sprites
+	CLASS SmallProvider
+		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
+			ARG 1 sprites

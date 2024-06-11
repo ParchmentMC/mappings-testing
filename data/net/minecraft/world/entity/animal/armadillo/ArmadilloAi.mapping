@@ -1,0 +1,14 @@
+CLASS net/minecraft/world/entity/animal/armadillo/ArmadilloAi
+	METHOD initCoreActivity (Lnet/minecraft/world/entity/ai/Brain;)V
+		ARG 0 brain
+	METHOD initIdleActivity (Lnet/minecraft/world/entity/ai/Brain;)V
+		ARG 0 brain
+	METHOD initScaredActivity (Lnet/minecraft/world/entity/ai/Brain;)V
+		ARG 0 brain
+	METHOD makeBrain (Lnet/minecraft/world/entity/ai/Brain;)Lnet/minecraft/world/entity/ai/Brain;
+		ARG 0 brain
+	METHOD updateActivity (Lnet/minecraft/world/entity/animal/armadillo/Armadillo;)V
+		ARG 0 armadillo
+	CLASS ArmadilloBallUp
+		METHOD pickNextPeekTimer (Lnet/minecraft/world/entity/animal/armadillo/Armadillo;)I
+			ARG 1 armadillo

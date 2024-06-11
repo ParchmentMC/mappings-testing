@@ -1,8 +1,9 @@
 CLASS net/minecraft/gametest/framework/GameTestInfo
-	METHOD <init> (Lnet/minecraft/gametest/framework/TestFunction;Lnet/minecraft/world/level/block/Rotation;Lnet/minecraft/server/level/ServerLevel;)V
-		ARG 1 function
+	METHOD <init> (Lnet/minecraft/gametest/framework/TestFunction;Lnet/minecraft/world/level/block/Rotation;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/gametest/framework/RetryOptions;)V
+		ARG 1 testFunction
 		ARG 2 rotation
-		ARG 3 serverLevel
+		ARG 3 level
+		ARG 4 retryOptions
 	METHOD addListener (Lnet/minecraft/gametest/framework/GameTestListener;)V
 		ARG 1 listener
 	METHOD fail (Ljava/lang/Throwable;)V
@@ -11,20 +12,16 @@ CLASS net/minecraft/gametest/framework/GameTestInfo
 		ARG 1 listener
 	METHOD lambda$succeed$6 (Lnet/minecraft/world/entity/Entity;)V
 		ARG 0 entity
-	METHOD lambda$tick$1 (Lnet/minecraft/gametest/framework/GameTestListener;)V
-		ARG 1 listener
-	METHOD lambda$tick$2 (Lnet/minecraft/gametest/framework/GameTestListener;)V
-		ARG 1 listener
 	METHOD lambda$tickInternal$3 (Lnet/minecraft/gametest/framework/GameTestSequence;)V
 		ARG 1 sequence
 	METHOD lambda$tickInternal$4 (Lnet/minecraft/gametest/framework/GameTestSequence;)V
 		ARG 1 sequence
-	METHOD prepareTestStructure (Lnet/minecraft/core/BlockPos;)V
-		ARG 1 blockPos
-	METHOD setRerunUntilFailed (Z)V
-		ARG 1 rerunUntilFailed
 	METHOD setRunAtTickTime (JLjava/lang/Runnable;)V
 		ARG 1 tickTime
 		ARG 3 task
 	METHOD setStructureBlockPos (Lnet/minecraft/core/BlockPos;)V
 		ARG 1 pos
+	METHOD startExecution (I)Lnet/minecraft/gametest/framework/GameTestInfo;
+		ARG 1 delay
+	METHOD tick (Lnet/minecraft/gametest/framework/GameTestRunner;)V
+		ARG 1 runner

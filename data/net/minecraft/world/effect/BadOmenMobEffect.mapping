@@ -1,0 +1,4 @@
+CLASS net/minecraft/world/effect/BadOmenMobEffect
+	METHOD legacyApplyEffectTick (Lnet/minecraft/server/level/ServerPlayer;Lnet/minecraft/server/level/ServerLevel;)Z
+		ARG 1 player
+		ARG 2 level

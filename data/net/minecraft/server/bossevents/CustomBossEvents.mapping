@@ -4,11 +4,14 @@ CLASS net/minecraft/server/bossevents/CustomBossEvents
 		ARG 2 name
 	METHOD get (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/server/bossevents/CustomBossEvent;
 		ARG 1 id
-	METHOD load (Lnet/minecraft/nbt/CompoundTag;)V
+	METHOD load (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/core/HolderLookup$Provider;)V
 		ARG 1 tag
+		ARG 2 levelRegistry
 	METHOD onPlayerConnect (Lnet/minecraft/server/level/ServerPlayer;)V
 		ARG 1 player
 	METHOD onPlayerDisconnect (Lnet/minecraft/server/level/ServerPlayer;)V
 		ARG 1 player
 	METHOD remove (Lnet/minecraft/server/bossevents/CustomBossEvent;)V
 		ARG 1 bossbar
+	METHOD save (Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/nbt/CompoundTag;
+		ARG 1 levelRegistry

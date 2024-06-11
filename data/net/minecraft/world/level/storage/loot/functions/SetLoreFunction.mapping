@@ -1,21 +1,21 @@
 CLASS net/minecraft/world/level/storage/loot/functions/SetLoreFunction
 	COMMENT LootItemFunction that sets a stack's lore tag, optionally replacing any previously present lore.
 	COMMENT The Components for the lore tag are optionally resolved relative to a given {@link LootContext.EntityTarget} for entity-sensitive component data such as scoreboard scores.
-	METHOD <init> (Ljava/util/List;ZLjava/util/List;Ljava/util/Optional;)V
+	METHOD <init> (Ljava/util/List;Ljava/util/List;Lnet/minecraft/world/level/storage/loot/functions/ListOperation;Ljava/util/Optional;)V
 		ARG 1 conditions
-		ARG 2 replace
-		ARG 3 lore
+		ARG 2 lore
+		ARG 3 mode
 		ARG 4 resolutionContext
-	METHOD getLoreTag (Lnet/minecraft/world/item/ItemStack;Z)Lnet/minecraft/nbt/ListTag;
-		ARG 1 stack
-		ARG 2 createIfMissing
 	METHOD run (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/storage/loot/LootContext;)Lnet/minecraft/world/item/ItemStack;
 		ARG 1 stack
+		ARG 2 context
+	METHOD updateLore (Lnet/minecraft/world/item/component/ItemLore;Lnet/minecraft/world/level/storage/loot/LootContext;)Ljava/util/List;
+		ARG 1 itemLore
 		ARG 2 context
 	CLASS Builder
 		METHOD addLine (Lnet/minecraft/network/chat/Component;)Lnet/minecraft/world/level/storage/loot/functions/SetLoreFunction$Builder;
 			ARG 1 line
-		METHOD setReplace (Z)Lnet/minecraft/world/level/storage/loot/functions/SetLoreFunction$Builder;
-			ARG 1 replace
+		METHOD setMode (Lnet/minecraft/world/level/storage/loot/functions/ListOperation;)Lnet/minecraft/world/level/storage/loot/functions/SetLoreFunction$Builder;
+			ARG 1 mode
 		METHOD setResolutionContext (Lnet/minecraft/world/level/storage/loot/LootContext$EntityTarget;)Lnet/minecraft/world/level/storage/loot/functions/SetLoreFunction$Builder;
 			ARG 1 resolutionContext

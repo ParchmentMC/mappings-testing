@@ -1,0 +1,5 @@
+CLASS net/minecraft/util/datafix/fixes/RemoveEmptyItemInBrushableBlockFix
+	METHOD <init> (Lcom/mojang/datafixers/schemas/Schema;)V
+		ARG 1 outputSchema
+	METHOD isEmptyStack (Lcom/mojang/serialization/Dynamic;)Z
+		ARG 0 tag

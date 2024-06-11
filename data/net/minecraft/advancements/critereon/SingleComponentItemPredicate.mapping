@@ -1,0 +1,4 @@
+CLASS net/minecraft/advancements/critereon/SingleComponentItemPredicate
+	METHOD matches (Lnet/minecraft/world/item/ItemStack;Ljava/lang/Object;)Z
+		ARG 1 stack
+		ARG 2 value

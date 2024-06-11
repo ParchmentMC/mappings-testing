@@ -1,0 +1,6 @@
+CLASS net/minecraft/util/profiling/jfr/event/ChunkRegionIoEvent
+	METHOD <init> (Lnet/minecraft/world/level/chunk/storage/RegionStorageInfo;Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/world/level/chunk/storage/RegionFileVersion;I)V
+		ARG 1 regionStorageInfo
+		ARG 2 chunkPos
+		ARG 3 version
+		ARG 4 bytes

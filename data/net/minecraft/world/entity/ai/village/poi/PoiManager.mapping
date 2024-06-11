@@ -1,10 +1,11 @@
 CLASS net/minecraft/world/entity/ai/village/poi/PoiManager
-	METHOD <init> (Ljava/nio/file/Path;Lcom/mojang/datafixers/DataFixer;ZLnet/minecraft/core/RegistryAccess;Lnet/minecraft/world/level/LevelHeightAccessor;)V
-		ARG 1 folder
-		ARG 2 fixerUpper
-		ARG 3 sync
-		ARG 4 registryAccess
-		ARG 5 levelHeightAccessor
+	METHOD <init> (Lnet/minecraft/world/level/chunk/storage/RegionStorageInfo;Ljava/nio/file/Path;Lcom/mojang/datafixers/DataFixer;ZLnet/minecraft/core/RegistryAccess;Lnet/minecraft/world/level/LevelHeightAccessor;)V
+		ARG 1 info
+		ARG 2 folder
+		ARG 3 fixerUpper
+		ARG 4 sync
+		ARG 5 registryAccess
+		ARG 6 levelHeightAccessor
 	METHOD add (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Holder;)V
 		ARG 1 pos
 		ARG 2 type

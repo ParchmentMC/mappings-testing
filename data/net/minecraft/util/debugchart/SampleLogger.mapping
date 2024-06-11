@@ -1,0 +1,8 @@
+CLASS net/minecraft/util/debugchart/SampleLogger
+	METHOD logFullSample ([J)V
+		ARG 1 sample
+	METHOD logPartialSample (JI)V
+		ARG 1 value
+		ARG 3 index
+	METHOD logSample (J)V
+		ARG 1 value

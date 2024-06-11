@@ -7,12 +7,6 @@ CLASS net/minecraft/client/gui/screens/worldselection/WorldOpenFlows
 		ARG 2 customized
 		ARG 3 loadLevel
 		ARG 4 onCancel
-	METHOD checkForBackupAndLoad (Ljava/lang/String;Ljava/lang/Runnable;)V
-		ARG 1 levelName
-		ARG 2 callback
-	METHOD checkForBackupAndLoad (Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;Ljava/lang/Runnable;)V
-		ARG 1 levelStorage
-		ARG 2 callback
 	METHOD confirmWorldCreation (Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/gui/screens/worldselection/CreateWorldScreen;Lcom/mojang/serialization/Lifecycle;Ljava/lang/Runnable;Z)V
 		ARG 0 minecraft
 		ARG 1 screen
@@ -35,12 +29,6 @@ CLASS net/minecraft/client/gui/screens/worldselection/WorldOpenFlows
 	METHOD loadBundledResourcePack (Lnet/minecraft/client/resources/server/DownloadedPackSource;Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 packSource
 		ARG 2 level
-	METHOD loadLevel (Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;Lcom/mojang/serialization/Dynamic;ZZLjava/lang/Runnable;)V
-		ARG 1 levelStorage
-		ARG 2 dynamic
-		ARG 3 safeMode
-		ARG 4 checkForBackup
-		ARG 5 callback
 	METHOD loadWorldDataBlocking (Lnet/minecraft/server/WorldLoader$PackConfig;Lnet/minecraft/server/WorldLoader$WorldDataSupplier;Lnet/minecraft/server/WorldLoader$ResultFactory;)Ljava/lang/Object;
 		ARG 1 packConfig
 		ARG 2 worldDataSupplier
@@ -49,5 +37,41 @@ CLASS net/minecraft/client/gui/screens/worldselection/WorldOpenFlows
 		ARG 1 dynamic
 		ARG 2 safeMode
 		ARG 3 packRepository
+	METHOD openWorld (Ljava/lang/String;Ljava/lang/Runnable;)V
+		ARG 1 worldName
+		ARG 2 onFail
+	METHOD openWorldCheckDiskSpace (Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;Lnet/minecraft/server/WorldStem;Lnet/minecraft/client/resources/server/DownloadedPackSource;Lnet/minecraft/server/packs/repository/PackRepository;Ljava/lang/Runnable;)V
+		ARG 1 levelStorage
+		ARG 2 worldStem
+		ARG 3 packSource
+		ARG 4 packRepository
+		ARG 5 onFail
+	METHOD openWorldCheckVersionCompatibility (Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;Lnet/minecraft/world/level/storage/LevelSummary;Lcom/mojang/serialization/Dynamic;Ljava/lang/Runnable;)V
+		ARG 1 levelStorage
+		ARG 2 levelSummary
+		ARG 3 levelData
+		ARG 4 onFail
+	METHOD openWorldCheckWorldStemCompatibility (Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;Lnet/minecraft/server/WorldStem;Lnet/minecraft/server/packs/repository/PackRepository;Ljava/lang/Runnable;)V
+		ARG 1 levelStorage
+		ARG 2 worldStem
+		ARG 3 packRepository
+		ARG 4 onFail
+	METHOD openWorldDoLoad (Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;Lnet/minecraft/server/WorldStem;Lnet/minecraft/server/packs/repository/PackRepository;)V
+		ARG 1 levelStorage
+		ARG 2 worldStem
+		ARG 3 packRepository
+	METHOD openWorldLoadBundledResourcePack (Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;Lnet/minecraft/server/WorldStem;Lnet/minecraft/server/packs/repository/PackRepository;Ljava/lang/Runnable;)V
+		ARG 1 levelStorage
+		ARG 2 worldStem
+		ARG 3 packRepository
+		ARG 4 onFail
+	METHOD openWorldLoadLevelData (Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;Ljava/lang/Runnable;)V
+		ARG 1 levelStorage
+		ARG 2 onFail
+	METHOD openWorldLoadLevelStem (Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;Lcom/mojang/serialization/Dynamic;ZLjava/lang/Runnable;)V
+		ARG 1 levelStorage
+		ARG 2 levelData
+		ARG 3 safeMode
+		ARG 4 onFail
 	METHOD recreateWorldData (Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;)Lcom/mojang/datafixers/util/Pair;
 		ARG 1 levelStorage

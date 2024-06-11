@@ -1,5 +1,5 @@
 CLASS net/minecraft/client/gui/components/SpriteIconButton
-	METHOD <init> (IILnet/minecraft/network/chat/Component;IILnet/minecraft/resources/ResourceLocation;Lnet/minecraft/client/gui/components/Button$OnPress;)V
+	METHOD <init> (IILnet/minecraft/network/chat/Component;IILnet/minecraft/resources/ResourceLocation;Lnet/minecraft/client/gui/components/Button$OnPress;Lnet/minecraft/client/gui/components/Button$CreateNarration;)V
 		ARG 1 width
 		ARG 2 height
 		ARG 3 message
@@ -7,6 +7,7 @@ CLASS net/minecraft/client/gui/components/SpriteIconButton
 		ARG 5 spriteHeight
 		ARG 6 sprite
 		ARG 7 onPress
+		ARG 8 createNarration
 	METHOD builder (Lnet/minecraft/network/chat/Component;Lnet/minecraft/client/gui/components/Button$OnPress;Z)Lnet/minecraft/client/gui/components/SpriteIconButton$Builder;
 		ARG 0 message
 		ARG 1 onPress
@@ -16,6 +17,8 @@ CLASS net/minecraft/client/gui/components/SpriteIconButton
 			ARG 1 message
 			ARG 2 onPress
 			ARG 3 iconOnly
+		METHOD narration (Lnet/minecraft/client/gui/components/Button$CreateNarration;)Lnet/minecraft/client/gui/components/SpriteIconButton$Builder;
+			ARG 1 narration
 		METHOD size (II)Lnet/minecraft/client/gui/components/SpriteIconButton$Builder;
 			ARG 1 width
 			ARG 2 height

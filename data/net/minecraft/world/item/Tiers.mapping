@@ -1,6 +1,6 @@
 CLASS net/minecraft/world/item/Tiers
-	METHOD <init> (Ljava/lang/String;IIIFFILjava/util/function/Supplier;)V
-		ARG 3 level
+	METHOD <init> (Ljava/lang/String;ILnet/minecraft/tags/TagKey;IFFILjava/util/function/Supplier;)V
+		ARG 3 incorrectBlockForDrops
 		ARG 4 uses
 		ARG 5 speed
 		ARG 6 damage

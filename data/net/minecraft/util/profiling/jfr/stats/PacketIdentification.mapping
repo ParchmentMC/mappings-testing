@@ -1,0 +1,3 @@
+CLASS net/minecraft/util/profiling/jfr/stats/PacketIdentification
+	METHOD from (Ljdk/jfr/consumer/RecordedEvent;)Lnet/minecraft/util/profiling/jfr/stats/PacketIdentification;
+		ARG 0 event

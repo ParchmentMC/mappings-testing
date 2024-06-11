@@ -1,0 +1,3 @@
+CLASS net/minecraft/world/entity/monster/Bogged
+	METHOD setSheared (Z)V
+		ARG 1 sheared

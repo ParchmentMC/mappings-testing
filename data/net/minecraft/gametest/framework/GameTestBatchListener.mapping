@@ -1,0 +1,5 @@
+CLASS net/minecraft/gametest/framework/GameTestBatchListener
+	METHOD testBatchFinished (Lnet/minecraft/gametest/framework/GameTestBatch;)V
+		ARG 1 batch
+	METHOD testBatchStarting (Lnet/minecraft/gametest/framework/GameTestBatch;)V
+		ARG 1 batch

@@ -1,0 +1,7 @@
+CLASS net/minecraft/util/datafix/fixes/ChestedHorsesInventoryZeroIndexingFix
+	METHOD <init> (Lcom/mojang/datafixers/schemas/Schema;)V
+		ARG 1 outputSchema
+	METHOD horseLikeInventoryIndexingFixer (Lcom/mojang/datafixers/OpticFinder;Lcom/mojang/datafixers/types/Type;Ljava/lang/String;)Lcom/mojang/datafixers/TypeRewriteRule;
+		ARG 1 opticFinder
+		ARG 2 type
+		ARG 3 entityId

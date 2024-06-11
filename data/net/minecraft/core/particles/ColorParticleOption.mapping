@@ -1,0 +1,16 @@
+CLASS net/minecraft/core/particles/ColorParticleOption
+	METHOD <init> (Lnet/minecraft/core/particles/ParticleType;I)V
+		ARG 1 type
+		ARG 2 color
+	METHOD codec (Lnet/minecraft/core/particles/ParticleType;)Lcom/mojang/serialization/MapCodec;
+		ARG 0 particleType
+	METHOD create (Lnet/minecraft/core/particles/ParticleType;FFF)Lnet/minecraft/core/particles/ColorParticleOption;
+		ARG 0 type
+		ARG 1 red
+		ARG 2 green
+		ARG 3 blue
+	METHOD create (Lnet/minecraft/core/particles/ParticleType;I)Lnet/minecraft/core/particles/ColorParticleOption;
+		ARG 0 type
+		ARG 1 color
+	METHOD streamCodec (Lnet/minecraft/core/particles/ParticleType;)Lnet/minecraft/network/codec/StreamCodec;
+		ARG 0 type

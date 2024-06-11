@@ -3,7 +3,3 @@ CLASS net/minecraft/util/datafix/fixes/EntityPaintingFieldsRenameFix
 		ARG 1 outputSchema
 	METHOD fixTag (Lcom/mojang/serialization/Dynamic;)Lcom/mojang/serialization/Dynamic;
 		ARG 1 tag
-	METHOD renameField (Lcom/mojang/serialization/Dynamic;Ljava/lang/String;Ljava/lang/String;)Lcom/mojang/serialization/Dynamic;
-		ARG 1 dynamic
-		ARG 2 oldName
-		ARG 3 newName

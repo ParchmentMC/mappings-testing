@@ -19,6 +19,3 @@ CLASS net/minecraft/world/item/crafting/SingleItemRecipe
 	CLASS Serializer
 		METHOD <init> (Lnet/minecraft/world/item/crafting/SingleItemRecipe$Factory;)V
 			ARG 1 factory
-		METHOD toNetwork (Lnet/minecraft/network/FriendlyByteBuf;Lnet/minecraft/world/item/crafting/SingleItemRecipe;)V
-			ARG 1 buffer
-			ARG 2 recipe

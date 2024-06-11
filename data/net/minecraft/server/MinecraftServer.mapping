@@ -10,11 +10,16 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 8 progressListenerFactory
 	METHOD addTickable (Ljava/lang/Runnable;)V
 		ARG 1 tickable
-	METHOD configurePackRepository (Lnet/minecraft/server/packs/repository/PackRepository;Lnet/minecraft/world/level/DataPackConfig;ZLnet/minecraft/world/flag/FeatureFlagSet;)Lnet/minecraft/world/level/WorldDataConfiguration;
+	METHOD configurePackRepository (Lnet/minecraft/server/packs/repository/PackRepository;Lnet/minecraft/world/level/WorldDataConfiguration;ZZ)Lnet/minecraft/world/level/WorldDataConfiguration;
 		ARG 0 packRepository
-		ARG 1 dataPackConfig
-		ARG 2 safeMode
-		ARG 3 enabledFeatures
+		ARG 1 initialDataConfig
+		ARG 2 initMode
+		ARG 3 safeMode
+	METHOD configureRepositoryWithSelection (Lnet/minecraft/server/packs/repository/PackRepository;Ljava/util/Collection;Lnet/minecraft/world/flag/FeatureFlagSet;Z)Lnet/minecraft/world/level/WorldDataConfiguration;
+		ARG 0 packRepository
+		ARG 1 selectedPacks
+		ARG 2 enabledFeatures
+		ARG 3 safeMode
 	METHOD constructOrExtractCrashReport (Ljava/lang/Throwable;)Lnet/minecraft/CrashReport;
 		ARG 0 cause
 	METHOD createGameModeForPlayer (Lnet/minecraft/server/level/ServerPlayer;)Lnet/minecraft/server/level/ServerPlayerGameMode;
@@ -37,6 +42,9 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 1 path
 	METHOD dumpThreads (Ljava/nio/file/Path;)V
 		ARG 1 path
+	METHOD enableForcedFeaturePacks (Lnet/minecraft/server/packs/repository/PackRepository;Lnet/minecraft/world/flag/FeatureFlagSet;)V
+		ARG 0 packRepository
+		ARG 1 enabledFeatures
 	METHOD fillServerSystemReport (Lnet/minecraft/SystemReport;)Lnet/minecraft/SystemReport;
 		ARG 1 report
 	METHOD fillSystemReport (Lnet/minecraft/SystemReport;)Lnet/minecraft/SystemReport;
@@ -65,8 +73,9 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 1 profile
 	METHOD getScaledTrackingDistance (I)I
 		ARG 1 trackingDistance
-	METHOD getSelectedPacks (Lnet/minecraft/server/packs/repository/PackRepository;)Lnet/minecraft/world/level/DataPackConfig;
+	METHOD getSelectedPacks (Lnet/minecraft/server/packs/repository/PackRepository;Z)Lnet/minecraft/world/level/DataPackConfig;
 		ARG 0 packRepository
+		ARG 1 safeMode
 	METHOD getServerVersion ()Ljava/lang/String;
 		COMMENT Returns the server's Minecraft version as string.
 	METHOD getSpawnProtectionRadius ()I
@@ -98,10 +107,6 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 3 player
 	METHOD kickUnlistedPlayers (Lnet/minecraft/commands/CommandSourceStack;)V
 		ARG 1 commandSource
-	METHOD lambda$dumpNativeModules$29 (Lnet/minecraft/util/NativeModuleLister$NativeModuleInfo;)Ljava/lang/String;
-		ARG 0 moduleInfo
-	METHOD lambda$getSelectedPacks$28 (Ljava/util/Collection;Ljava/lang/String;)Z
-		ARG 1 id
 	METHOD lambda$loadStatusIcon$10 (Ljava/nio/file/Path;)Z
 		ARG 0 path
 	METHOD lambda$loadStatusIcon$11 (Ljava/nio/file/Path;)Z
@@ -112,14 +117,6 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 1 results
 	METHOD lambda$new$1 (Ljava/nio/file/Path;)V
 		ARG 0 path
-	METHOD lambda$reloadResources$24 (Lnet/minecraft/server/packs/resources/CloseableResourceManager;Lnet/minecraft/server/ReloadableServerResources;Ljava/lang/Throwable;)V
-		ARG 2 exception
-	METHOD lambda$reloadResources$25 (Lnet/minecraft/server/packs/resources/CloseableResourceManager;Lnet/minecraft/server/ReloadableServerResources;)Lnet/minecraft/server/MinecraftServer$ReloadableResources;
-		ARG 1 resources
-	METHOD lambda$reloadResources$26 (Lnet/minecraft/core/RegistryAccess$Frozen;Lcom/google/common/collect/ImmutableList;)Ljava/util/concurrent/CompletionStage;
-		ARG 2 resources
-	METHOD lambda$reloadResources$27 (Ljava/util/Collection;Lnet/minecraft/server/MinecraftServer$ReloadableResources;)V
-		ARG 2 resources
 	METHOD lambda$setInitialSpawn$4 (Lnet/minecraft/core/Registry;)Ljava/util/Optional;
 		ARG 0 registry
 	METHOD lambda$setInitialSpawn$5 (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/server/level/ServerChunkCache;Lnet/minecraft/world/level/storage/ServerLevelData;Lnet/minecraft/core/Holder$Reference;)V
@@ -129,8 +126,6 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 1 exception
 	METHOD lambda$startMetricsRecordingTick$31 (Ljava/nio/file/Path;)V
 		ARG 1 path
-	METHOD lambda$startRecordingMetrics$32 (Ljava/util/function/Consumer;Lnet/minecraft/util/profiling/ProfileResults;)V
-		ARG 2 results
 	METHOD lambda$stopServer$6 (Lnet/minecraft/server/level/ServerLevel;)Z
 		ARG 0 level
 	METHOD lambda$tickChildren$14 (Lnet/minecraft/server/level/ServerPlayer;)V
@@ -139,8 +134,8 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 1 content
 		ARG 2 boundChatType
 		ARG 3 header
-	METHOD logTickTime (J)V
-		ARG 1 tickTime
+	METHOD logTickMethodTime (J)V
+		ARG 1 startTime
 	METHOD onServerCrash (Lnet/minecraft/CrashReport;)V
 		COMMENT Called on exit from the main run() loop.
 		ARG 1 report
@@ -151,13 +146,17 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 1 listener
 	METHOD publishServer (Lnet/minecraft/world/level/GameType;ZI)Z
 		ARG 1 gameMode
-		ARG 2 cheats
+		ARG 2 commands
 		ARG 3 port
 	METHOD readScoreboard (Lnet/minecraft/world/level/storage/DimensionDataStorage;)V
 		ARG 1 dataStorage
 	METHOD reloadResources (Ljava/util/Collection;)Ljava/util/concurrent/CompletableFuture;
 		COMMENT Replaces currently selected list of datapacks, reloads them, and sends new data to players.
 		ARG 1 selectedIds
+	METHOD reportChunkLoadFailure (Lnet/minecraft/world/level/ChunkPos;)V
+		ARG 1 chunkPos
+	METHOD reportChunkSaveFailure (Lnet/minecraft/world/level/ChunkPos;)V
+		ARG 1 chunkPos
 	METHOD saveAllChunks (ZZZ)Z
 		ARG 1 suppressLog
 		ARG 2 flush
@@ -221,6 +220,9 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 2 onMetricsRecordingFinished
 	METHOD stopServer ()V
 		COMMENT Saves all necessary data as preparation for stopping the server.
+	METHOD subscribeToDebugSample (Lnet/minecraft/server/level/ServerPlayer;Lnet/minecraft/util/debugchart/RemoteDebugSampleType;)V
+		ARG 1 player
+		ARG 2 sampleType
 	METHOD synchronizeTime (Lnet/minecraft/server/level/ServerLevel;)V
 		ARG 1 level
 	METHOD tickChildren (Ljava/util/function/BooleanSupplier;)V

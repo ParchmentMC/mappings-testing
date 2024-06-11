@@ -1,5 +1,5 @@
 CLASS net/minecraft/network/protocol/game/CommonPlayerSpawnInfo
-	METHOD <init> (Lnet/minecraft/network/FriendlyByteBuf;)V
+	METHOD <init> (Lnet/minecraft/network/RegistryFriendlyByteBuf;)V
 		ARG 1 buffer
-	METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
+	METHOD write (Lnet/minecraft/network/RegistryFriendlyByteBuf;)V
 		ARG 1 buffer

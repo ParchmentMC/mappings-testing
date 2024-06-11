@@ -2,46 +2,11 @@ CLASS net/minecraft/core/dispenser/DispenseItemBehavior
 	METHOD dispense (Lnet/minecraft/core/dispenser/BlockSource;Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/ItemStack;
 		ARG 1 blockSource
 		ARG 2 item
-	METHOD getEntityPokingOutOfBlockPos (Lnet/minecraft/core/dispenser/BlockSource;Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/core/Direction;)Lnet/minecraft/world/phys/Vec3;
-		ARG 0 blockSource
-		ARG 1 entity
-		ARG 2 direction
 	METHOD lambda$static$0 (Lnet/minecraft/core/dispenser/BlockSource;Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/ItemStack;
 		ARG 0 blockSource
 		ARG 1 item
-	CLASS 4
-		METHOD lambda$getProjectile$0 (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/projectile/ThrownEgg;)V
-			ARG 1 entity
-	CLASS 5
-		METHOD lambda$getProjectile$0 (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/projectile/Snowball;)V
-			ARG 1 entity
-	CLASS 6
-		METHOD lambda$getProjectile$0 (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/projectile/ThrownExperienceBottle;)V
-			ARG 1 entity
-	CLASS 7
-		CLASS 1
-			METHOD lambda$getProjectile$0 (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/projectile/ThrownPotion;)V
-				ARG 1 entity
-	CLASS 8
-		CLASS 1
-			METHOD lambda$getProjectile$0 (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/projectile/ThrownPotion;)V
-				ARG 1 entity
-	CLASS 11
-		METHOD lambda$execute$0 (Lnet/minecraft/world/entity/LivingEntity;)Z
-			ARG 0 entity
-	CLASS 12
-		METHOD lambda$execute$0 (Lnet/minecraft/world/entity/animal/horse/AbstractHorse;)Z
-			ARG 0 entity
-	CLASS 13
-		METHOD lambda$execute$0 (Lnet/minecraft/world/entity/animal/horse/AbstractChestedHorse;)Z
-			ARG 0 entity
-	CLASS 15
-		METHOD lambda$execute$0 (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/projectile/SmallFireball;)V
-			ARG 1 entity
-	CLASS 24
-		METHOD lambda$execute$0 (Lnet/minecraft/world/level/block/state/BlockBehaviour$BlockStateBase;)Z
-			ARG 0 hive
+	CLASS 14
 		METHOD takeLiquid (Lnet/minecraft/core/dispenser/BlockSource;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/ItemStack;
-			ARG 1 blockSource
-			ARG 2 oldItem
-			ARG 3 newItem
+			ARG 1 source
+			ARG 2 emptyItem
+			ARG 3 fullItem

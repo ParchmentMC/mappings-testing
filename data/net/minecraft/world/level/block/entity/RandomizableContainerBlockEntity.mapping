@@ -9,7 +9,3 @@ CLASS net/minecraft/world/level/block/entity/RandomizableContainerBlockEntity
 	METHOD setItem (ILnet/minecraft/world/item/ItemStack;)V
 		ARG 1 index
 		ARG 2 stack
-	METHOD setItems (Lnet/minecraft/core/NonNullList;)V
-		ARG 1 itemStacks
-	METHOD stillValid (Lnet/minecraft/world/entity/player/Player;)Z
-		ARG 1 player

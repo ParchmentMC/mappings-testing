@@ -31,7 +31,7 @@ CLASS net/minecraft/world/level/chunk/ProtoChunk
 		ARG 2 carvingMask
 	METHOD setLightEngine (Lnet/minecraft/world/level/lighting/LevelLightEngine;)V
 		ARG 1 lightEngine
-	METHOD setStatus (Lnet/minecraft/world/level/chunk/ChunkStatus;)V
+	METHOD setStatus (Lnet/minecraft/world/level/chunk/status/ChunkStatus;)V
 		ARG 1 status
 	METHOD unpackOffsetCoordinates (SILnet/minecraft/world/level/ChunkPos;)Lnet/minecraft/core/BlockPos;
 		ARG 0 packedPos

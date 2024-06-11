@@ -10,7 +10,7 @@ CLASS net/minecraft/network/protocol/game/ClientboundLevelParticlesPacket
 		ARG 11 zDist
 		ARG 12 maxSpeed
 		ARG 13 count
-	METHOD <init> (Lnet/minecraft/network/FriendlyByteBuf;)V
+	METHOD <init> (Lnet/minecraft/network/RegistryFriendlyByteBuf;)V
 		ARG 1 buffer
 	METHOD getCount ()I
 		COMMENT Gets the amount of particles to spawn
@@ -31,9 +31,5 @@ CLASS net/minecraft/network/protocol/game/ClientboundLevelParticlesPacket
 	METHOD handle (Lnet/minecraft/network/protocol/game/ClientGamePacketListener;)V
 		COMMENT Passes this Packet on to the NetHandler for processing.
 		ARG 1 handler
-	METHOD readParticle (Lnet/minecraft/network/FriendlyByteBuf;Lnet/minecraft/core/particles/ParticleType;)Lnet/minecraft/core/particles/ParticleOptions;
-		ARG 1 buffer
-		ARG 2 particleType
-	METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
-		COMMENT Writes the raw packet data to the data stream.
+	METHOD write (Lnet/minecraft/network/RegistryFriendlyByteBuf;)V
 		ARG 1 buffer

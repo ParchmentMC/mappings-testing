@@ -1,0 +1,5 @@
+CLASS net/minecraft/world/level/block/EnchantingTableBlock
+	METHOD isValidBookShelf (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;)Z
+		ARG 0 level
+		ARG 1 enchantingTablePos
+		ARG 2 bookshelfPos

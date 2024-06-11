@@ -1,0 +1,3 @@
+CLASS net/minecraft/util/datafix/fixes/References
+	METHOD reference (Ljava/lang/String;)Lcom/mojang/datafixers/DSL$TypeReference;
+		ARG 0 name

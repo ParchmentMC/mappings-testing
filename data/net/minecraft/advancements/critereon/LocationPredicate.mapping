@@ -6,26 +6,17 @@ CLASS net/minecraft/advancements/critereon/LocationPredicate
 		ARG 2 x
 		ARG 4 y
 		ARG 6 z
-	METHOD of (Ljava/util/Optional;Ljava/util/Optional;Ljava/util/Optional;Ljava/util/Optional;Ljava/util/Optional;Ljava/util/Optional;Ljava/util/Optional;Ljava/util/Optional;)Ljava/util/Optional;
-		ARG 0 postition
-		ARG 1 biome
-		ARG 2 structure
-		ARG 3 dimension
-		ARG 4 smokey
-		ARG 5 light
-		ARG 6 block
-		ARG 7 fluid
 	CLASS Builder
 		METHOD atYLocation (Lnet/minecraft/advancements/critereon/MinMaxBounds$Doubles;)Lnet/minecraft/advancements/critereon/LocationPredicate$Builder;
 			ARG 0 y
-		METHOD inBiome (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/advancements/critereon/LocationPredicate$Builder;
+		METHOD inBiome (Lnet/minecraft/core/Holder;)Lnet/minecraft/advancements/critereon/LocationPredicate$Builder;
 			ARG 0 biome
 		METHOD inDimension (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/advancements/critereon/LocationPredicate$Builder;
 			ARG 0 dimension
-		METHOD inStructure (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/advancements/critereon/LocationPredicate$Builder;
-			ARG 0 stucture
-		METHOD setBiome (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/advancements/critereon/LocationPredicate$Builder;
-			ARG 1 biome
+		METHOD inStructure (Lnet/minecraft/core/Holder;)Lnet/minecraft/advancements/critereon/LocationPredicate$Builder;
+			ARG 0 structure
+		METHOD setBiomes (Lnet/minecraft/core/HolderSet;)Lnet/minecraft/advancements/critereon/LocationPredicate$Builder;
+			ARG 1 biomes
 		METHOD setBlock (Lnet/minecraft/advancements/critereon/BlockPredicate$Builder;)Lnet/minecraft/advancements/critereon/LocationPredicate$Builder;
 			ARG 1 block
 		METHOD setDimension (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/advancements/critereon/LocationPredicate$Builder;
@@ -36,8 +27,8 @@ CLASS net/minecraft/advancements/critereon/LocationPredicate
 			ARG 1 light
 		METHOD setSmokey (Z)Lnet/minecraft/advancements/critereon/LocationPredicate$Builder;
 			ARG 1 smokey
-		METHOD setStructure (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/advancements/critereon/LocationPredicate$Builder;
-			ARG 1 structure
+		METHOD setStructures (Lnet/minecraft/core/HolderSet;)Lnet/minecraft/advancements/critereon/LocationPredicate$Builder;
+			ARG 1 structures
 		METHOD setX (Lnet/minecraft/advancements/critereon/MinMaxBounds$Doubles;)Lnet/minecraft/advancements/critereon/LocationPredicate$Builder;
 			ARG 1 x
 		METHOD setY (Lnet/minecraft/advancements/critereon/MinMaxBounds$Doubles;)Lnet/minecraft/advancements/critereon/LocationPredicate$Builder;

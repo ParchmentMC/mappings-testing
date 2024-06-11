@@ -9,23 +9,25 @@ CLASS net/minecraft/world/level/block/entity/SkullBlockEntity
 		ARG 3 blockEntity
 	METHOD fetchGameProfile (Ljava/lang/String;)Ljava/util/concurrent/CompletableFuture;
 		ARG 0 profileName
+	METHOD fetchGameProfile (Ljava/util/UUID;)Ljava/util/concurrent/CompletableFuture;
+		ARG 0 profileUuid
+	METHOD fetchProfileById (Ljava/util/UUID;Lnet/minecraft/server/Services;Ljava/util/function/BooleanSupplier;)Ljava/util/concurrent/CompletableFuture;
+		ARG 0 id
+		ARG 1 services
+		ARG 2 cacheUninitialized
+	METHOD fetchProfileByName (Ljava/lang/String;Lnet/minecraft/server/Services;)Ljava/util/concurrent/CompletableFuture;
+		ARG 0 name
+		ARG 1 services
 	METHOD getAnimation (F)F
 		ARG 1 partialTick
-	METHOD getOrResolveGameProfile (Lnet/minecraft/nbt/CompoundTag;)Lcom/mojang/authlib/GameProfile;
-		ARG 0 tag
-	METHOD hasTextures (Lcom/mojang/authlib/GameProfile;)Z
-		ARG 0 profile
-	METHOD loadProfile (Ljava/lang/String;Lnet/minecraft/server/Services;Ljava/util/function/BooleanSupplier;)Ljava/util/concurrent/CompletableFuture;
-		ARG 0 profileName
-		ARG 1 services
-		ARG 2 hasCache
-	METHOD resolveGameProfile (Lnet/minecraft/nbt/CompoundTag;)V
-		ARG 0 tag
-	METHOD resolveGameProfile (Lnet/minecraft/nbt/CompoundTag;Ljava/lang/String;)V
-		ARG 0 tag
-		ARG 1 profileName
-	METHOD setOwner (Lcom/mojang/authlib/GameProfile;)V
+	METHOD setOwner (Lnet/minecraft/world/item/component/ResolvableProfile;)V
 		ARG 1 owner
 	METHOD setup (Lnet/minecraft/server/Services;Ljava/util/concurrent/Executor;)V
 		ARG 0 services
 		ARG 1 mainThreadExecutor
+	CLASS 1
+		METHOD load (Ljava/lang/String;)Ljava/util/concurrent/CompletableFuture;
+			ARG 1 username
+	CLASS 2
+		METHOD load (Ljava/util/UUID;)Ljava/util/concurrent/CompletableFuture;
+			ARG 1 id

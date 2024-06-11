@@ -1,6 +1,4 @@
 CLASS net/minecraft/world/level/block/entity/BannerBlockEntity
-	FIELD itemPatterns Lnet/minecraft/nbt/ListTag;
-		COMMENT A list of all the banner patterns.
 	FIELD patterns Ljava/util/List;
 		COMMENT A list of all patterns stored on this banner.
 	METHOD <init> (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
@@ -10,23 +8,6 @@ CLASS net/minecraft/world/level/block/entity/BannerBlockEntity
 		ARG 1 pos
 		ARG 2 blockState
 		ARG 3 baseColor
-	METHOD createPatterns (Lnet/minecraft/world/item/DyeColor;Lnet/minecraft/nbt/ListTag;)Ljava/util/List;
-		ARG 0 color
-		ARG 1 listTag
-	METHOD fromItem (Lnet/minecraft/world/item/ItemStack;)V
-		ARG 1 item
 	METHOD fromItem (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/DyeColor;)V
 		ARG 1 stack
 		ARG 2 color
-	METHOD getItemPatterns (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/nbt/ListTag;
-		ARG 0 stack
-	METHOD getPatternCount (Lnet/minecraft/world/item/ItemStack;)I
-		COMMENT @return the amount of patterns stored in the given ItemStack. Defaults to zero if none are stored.
-		ARG 0 stack
-	METHOD getPatterns ()Ljava/util/List;
-		COMMENT @return the patterns for this banner.
-	METHOD removeLastPattern (Lnet/minecraft/world/item/ItemStack;)V
-		COMMENT Removes all banner data from the given ItemStack.
-		ARG 0 stack
-	METHOD setCustomName (Lnet/minecraft/network/chat/Component;)V
-		ARG 1 name

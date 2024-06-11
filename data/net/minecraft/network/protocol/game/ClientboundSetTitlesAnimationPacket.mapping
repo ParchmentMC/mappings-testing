@@ -5,3 +5,5 @@ CLASS net/minecraft/network/protocol/game/ClientboundSetTitlesAnimationPacket
 		ARG 3 fadeOut
 	METHOD <init> (Lnet/minecraft/network/FriendlyByteBuf;)V
 		ARG 1 buffer
+	METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
+		ARG 1 buffer

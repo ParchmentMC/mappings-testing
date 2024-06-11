@@ -1,6 +1,6 @@
 CLASS net/minecraft/world/level/storage/loot/BuiltInLootTables
 	COMMENT Stores IDs for built in loot tables, i.e. loot tables which are not based directly on a block or entity ID.
-	METHOD register (Ljava/lang/String;)Lnet/minecraft/resources/ResourceLocation;
-		ARG 0 id
-	METHOD register (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/resources/ResourceLocation;
-		ARG 0 id
+	METHOD register (Ljava/lang/String;)Lnet/minecraft/resources/ResourceKey;
+		ARG 0 name
+	METHOD register (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/resources/ResourceKey;
+		ARG 0 name

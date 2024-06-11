@@ -1,9 +1,23 @@
 CLASS net/minecraft/Util
+	METHOD allOf (Ljava/util/List;)Ljava/util/function/Predicate;
+		ARG 0 predicates
+	METHOD anyOf (Ljava/util/List;)Ljava/util/function/Predicate;
+		ARG 0 predicates
 	METHOD blockUntilDone (Ljava/util/function/Function;)Ljava/util/concurrent/CompletableFuture;
 		ARG 0 task
 	METHOD blockUntilDone (Ljava/util/function/Function;Ljava/util/function/Predicate;)Ljava/lang/Object;
 		ARG 0 task
 		ARG 1 donePredicate
+	METHOD copyAndAdd (Ljava/lang/Object;Ljava/util/List;)Ljava/util/List;
+		ARG 0 value
+		ARG 1 list
+	METHOD copyAndAdd (Ljava/util/List;Ljava/lang/Object;)Ljava/util/List;
+		ARG 0 list
+		ARG 1 value
+	METHOD copyAndPut (Ljava/util/Map;Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
+		ARG 0 map
+		ARG 1 key
+		ARG 2 value
 	METHOD copyBetweenDirs (Ljava/nio/file/Path;Ljava/nio/file/Path;Ljava/nio/file/Path;)V
 		ARG 0 fromDirectory
 		ARG 1 toDirectory
@@ -51,12 +65,6 @@ CLASS net/minecraft/Util
 	METHOD fixedSize (Ljava/util/stream/LongStream;I)Lcom/mojang/serialization/DataResult;
 		ARG 0 stream
 		ARG 1 expectedSize
-	METHOD getOrThrow (Lcom/mojang/serialization/DataResult;Ljava/util/function/Function;)Ljava/lang/Object;
-		ARG 0 dataResult
-		ARG 1 exceptionGetter
-	METHOD getPartialOrThrow (Lcom/mojang/serialization/DataResult;Ljava/util/function/Function;)Ljava/lang/Object;
-		ARG 0 dataResult
-		ARG 1 exceptionGetter
 	METHOD getPropertyName (Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Object;)Ljava/lang/String;
 		ARG 0 property
 		ARG 1 value
@@ -72,14 +80,13 @@ CLASS net/minecraft/Util
 	METHOD getRandomSafe (Ljava/util/List;Lnet/minecraft/util/RandomSource;)Ljava/util/Optional;
 		ARG 0 selections
 		ARG 1 random
+	METHOD getRegisteredName (Lnet/minecraft/core/Registry;Ljava/lang/Object;)Ljava/lang/String;
+		ARG 0 registry
+		ARG 1 value
 	METHOD ifElse (Ljava/util/Optional;Ljava/util/function/Consumer;Ljava/lang/Runnable;)Ljava/util/Optional;
 		ARG 0 opt
 		ARG 1 consumer
 		ARG 2 orElse
-	METHOD isBlank (Ljava/lang/String;)Z
-		ARG 0 string
-	METHOD isWhitespace (I)Z
-		ARG 0 character
 	METHOD lastOf (Ljava/util/List;)Ljava/lang/Object;
 		ARG 0 list
 	METHOD logAndPauseIfInIde (Ljava/lang/String;)V
@@ -128,6 +135,7 @@ CLASS net/minecraft/Util
 	METHOD readTypedOrThrow (Lcom/mojang/datafixers/types/Type;Lcom/mojang/serialization/Dynamic;Z)Lcom/mojang/datafixers/Typed;
 		ARG 0 type
 		ARG 1 data
+		ARG 2 partial
 	METHOD runWithRetries (ILjava/lang/String;[Ljava/util/function/BooleanSupplier;)Z
 		ARG 0 maxTries
 		ARG 1 actionName

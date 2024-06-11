@@ -1,3 +1,0 @@
-CLASS net/minecraft/world/level/block/DropperBlock
-	METHOD getDispenseMethod (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/core/dispenser/DispenseItemBehavior;
-		ARG 1 stack

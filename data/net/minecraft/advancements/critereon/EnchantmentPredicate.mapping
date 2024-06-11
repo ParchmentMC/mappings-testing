@@ -2,7 +2,7 @@ CLASS net/minecraft/advancements/critereon/EnchantmentPredicate
 	METHOD <init> (Lnet/minecraft/world/item/enchantment/Enchantment;Lnet/minecraft/advancements/critereon/MinMaxBounds$Ints;)V
 		ARG 1 enchantment
 		ARG 2 level
-	METHOD containedIn (Ljava/util/Map;)Z
+	METHOD containedIn (Lnet/minecraft/world/item/enchantment/ItemEnchantments;)Z
 		ARG 1 enchantments
 	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 0 instance

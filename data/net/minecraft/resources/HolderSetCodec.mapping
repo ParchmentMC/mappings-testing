@@ -30,3 +30,6 @@ CLASS net/minecraft/resources/HolderSetCodec
 		ARG 0 either
 	METHOD lambda$homogenousList$2 (Ljava/util/List;)Lcom/mojang/datafixers/util/Either;
 		ARG 0 holderCodec
+	METHOD lookupTag (Lnet/minecraft/core/HolderGetter;Lnet/minecraft/tags/TagKey;)Lcom/mojang/serialization/DataResult;
+		ARG 0 input
+		ARG 1 tagKey

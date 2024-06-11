@@ -8,9 +8,9 @@ CLASS net/minecraft/advancements/critereon/MobEffectsPredicate
 	METHOD matches (Lnet/minecraft/world/entity/LivingEntity;)Z
 		ARG 1 entity
 	CLASS Builder
-		METHOD and (Lnet/minecraft/world/effect/MobEffect;)Lnet/minecraft/advancements/critereon/MobEffectsPredicate$Builder;
+		METHOD and (Lnet/minecraft/core/Holder;)Lnet/minecraft/advancements/critereon/MobEffectsPredicate$Builder;
 			ARG 1 effect
-		METHOD and (Lnet/minecraft/world/effect/MobEffect;Lnet/minecraft/advancements/critereon/MobEffectsPredicate$MobEffectInstancePredicate;)Lnet/minecraft/advancements/critereon/MobEffectsPredicate$Builder;
+		METHOD and (Lnet/minecraft/core/Holder;Lnet/minecraft/advancements/critereon/MobEffectsPredicate$MobEffectInstancePredicate;)Lnet/minecraft/advancements/critereon/MobEffectsPredicate$Builder;
 			ARG 1 effect
 			ARG 2 predicate
 	CLASS MobEffectInstancePredicate

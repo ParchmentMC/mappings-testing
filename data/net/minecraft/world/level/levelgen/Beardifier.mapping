@@ -19,10 +19,10 @@ CLASS net/minecraft/world/level/levelgen/Beardifier
 		ARG 1 y
 		ARG 2 z
 		ARG 3 height
-	METHOD getBuryContribution (III)D
+	METHOD getBuryContribution (DDD)D
 		ARG 0 x
-		ARG 1 y
-		ARG 2 z
+		ARG 2 y
+		ARG 4 z
 	METHOD isInKernelRange (I)Z
 		ARG 0 value
 	METHOD lambda$static$0 ([F)V

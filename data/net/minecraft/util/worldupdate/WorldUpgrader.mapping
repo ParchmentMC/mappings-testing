@@ -1,10 +1,49 @@
 CLASS net/minecraft/util/worldupdate/WorldUpgrader
-	METHOD <init> (Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;Lcom/mojang/datafixers/DataFixer;Lnet/minecraft/core/Registry;Z)V
-		ARG 1 levelStoarge
+	METHOD <init> (Lnet/minecraft/world/level/storage/LevelStorageSource$LevelStorageAccess;Lcom/mojang/datafixers/DataFixer;Lnet/minecraft/core/RegistryAccess;ZZ)V
+		ARG 1 levelStorage
 		ARG 2 dataFixer
-		ARG 3 dimensions
+		ARG 3 registryAccess
 		ARG 4 eraseCache
+		ARG 5 recreateRegionFiles
 	METHOD dimensionProgress (Lnet/minecraft/resources/ResourceKey;)F
 		ARG 1 level
-	METHOD getAllChunkPos (Lnet/minecraft/resources/ResourceKey;)Ljava/util/List;
-		ARG 1 level
+	METHOD resolveRecreateDirectory (Ljava/nio/file/Path;)Ljava/nio/file/Path;
+		ARG 0 path
+	CLASS AbstractUpgrader
+		METHOD <init> (Lnet/minecraft/util/worldupdate/WorldUpgrader;Lnet/minecraft/util/datafix/DataFixTypes;Ljava/lang/String;Ljava/lang/String;Lnet/minecraft/network/chat/MutableComponent;Lnet/minecraft/network/chat/MutableComponent;)V
+			ARG 2 dataFixType
+			ARG 3 type
+			ARG 4 folderName
+			ARG 5 upgradingStatus
+			ARG 6 finishedStatus
+		METHOD createStorage (Lnet/minecraft/world/level/chunk/storage/RegionStorageInfo;Ljava/nio/file/Path;)Ljava/lang/AutoCloseable;
+			ARG 1 regionStorageInfo
+			ARG 2 path
+		METHOD getAllChunkPositions (Lnet/minecraft/world/level/chunk/storage/RegionStorageInfo;Ljava/nio/file/Path;)Ljava/util/List;
+			ARG 0 regionStorageInfo
+			ARG 1 path
+		METHOD getFilesToProcess (Lnet/minecraft/world/level/chunk/storage/RegionStorageInfo;Ljava/nio/file/Path;)Ljava/util/ListIterator;
+			ARG 1 regionStorageInfo
+			ARG 2 path
+		METHOD lambda$getAllChunkPositions$1 (Ljava/io/File;Ljava/lang/String;)Z
+			ARG 0 directory
+			ARG 1 filename
+		METHOD onFileFinished (Lnet/minecraft/world/level/chunk/storage/RegionFile;)V
+			ARG 1 regionFile
+		METHOD processOnePosition (Lnet/minecraft/resources/ResourceKey;Ljava/lang/AutoCloseable;Lnet/minecraft/world/level/ChunkPos;)Z
+			ARG 1 dimesion
+			ARG 2 storage
+			ARG 3 chunkPos
+		METHOD tryProcessOnePosition (Ljava/lang/AutoCloseable;Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/resources/ResourceKey;)Z
+			ARG 1 chunkStorage
+			ARG 2 chunkPos
+			ARG 3 dimension
+	CLASS SimpleRegionStorageUpgrader
+		METHOD <init> (Lnet/minecraft/util/worldupdate/WorldUpgrader;Lnet/minecraft/util/datafix/DataFixTypes;Ljava/lang/String;Lnet/minecraft/network/chat/MutableComponent;Lnet/minecraft/network/chat/MutableComponent;)V
+			ARG 2 dataFixType
+			ARG 3 type
+			ARG 4 upgradingStatus
+			ARG 5 finishedStatus
+		METHOD upgradeTag (Lnet/minecraft/world/level/chunk/storage/SimpleRegionStorage;Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/nbt/CompoundTag;
+			ARG 1 regionStorage
+			ARG 2 chunkTag

@@ -61,13 +61,12 @@ CLASS net/minecraft/nbt/NbtUtils
 	METHOD prettyPrint (Lnet/minecraft/nbt/Tag;Z)Ljava/lang/String;
 		ARG 0 tag
 		ARG 1 prettyPrintArray
-	METHOD readBlockPos (Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/core/BlockPos;
+	METHOD readBlockPos (Lnet/minecraft/nbt/CompoundTag;Ljava/lang/String;)Ljava/util/Optional;
 		ARG 0 tag
+		ARG 1 key
 	METHOD readBlockState (Lnet/minecraft/core/HolderGetter;Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/level/block/state/BlockState;
 		ARG 0 blockGetter
 		ARG 1 tag
-	METHOD readGameProfile (Lnet/minecraft/nbt/CompoundTag;)Lcom/mojang/authlib/GameProfile;
-		ARG 0 tag
 	METHOD setValueHelper (Lnet/minecraft/world/level/block/state/StateHolder;Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/String;Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/level/block/state/StateHolder;
 		ARG 0 stateHolder
 		ARG 1 property
@@ -84,13 +83,9 @@ CLASS net/minecraft/nbt/NbtUtils
 		ARG 0 blockStateText
 	METHOD unpackStructureTemplate (Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/nbt/CompoundTag;
 		ARG 0 tag
-	METHOD writeBlockPos (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/nbt/CompoundTag;
+	METHOD writeBlockPos (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/nbt/Tag;
 		ARG 0 pos
 	METHOD writeBlockState (Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/nbt/CompoundTag;
 		ARG 0 state
 	METHOD writeFluidState (Lnet/minecraft/world/level/material/FluidState;)Lnet/minecraft/nbt/CompoundTag;
 		ARG 0 state
-	METHOD writeGameProfile (Lnet/minecraft/nbt/CompoundTag;Lcom/mojang/authlib/GameProfile;)Lnet/minecraft/nbt/CompoundTag;
-		COMMENT Writes a {@code profile} to the given {@code tag}.
-		ARG 0 tag
-		ARG 1 profile

@@ -1,3 +1,4 @@
 CLASS net/minecraft/client/gui/screens/ReceivingLevelScreen
-	METHOD <init> (Ljava/util/function/BooleanSupplier;)V
+	METHOD <init> (Ljava/util/function/BooleanSupplier;Lnet/minecraft/client/gui/screens/ReceivingLevelScreen$Reason;)V
 		ARG 1 levelReceived
+		ARG 2 reason

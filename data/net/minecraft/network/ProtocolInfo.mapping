@@ -1,0 +1,4 @@
+CLASS net/minecraft/network/ProtocolInfo
+	CLASS Unbound
+		METHOD bind (Ljava/util/function/Function;)Lnet/minecraft/network/ProtocolInfo;
+			ARG 1 bufferFactory

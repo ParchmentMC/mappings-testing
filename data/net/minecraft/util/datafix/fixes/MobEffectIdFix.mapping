@@ -14,19 +14,6 @@ CLASS net/minecraft/util/datafix/fixes/MobEffectIdFix
 		ARG 1 key
 	METHOD lambda$static$0 (Lit/unimi/dsi/fastutil/ints/Int2ObjectOpenHashMap;)V
 		ARG 0 map
-	METHOD renameField (Lcom/mojang/serialization/Dynamic;Ljava/lang/String;Ljava/lang/String;)Lcom/mojang/serialization/Dynamic;
-		ARG 0 dynamic
-		ARG 1 oldName
-		ARG 2 newName
-	METHOD replaceField (Lcom/mojang/serialization/Dynamic;Ljava/lang/String;Ljava/lang/String;Ljava/util/Optional;)Lcom/mojang/serialization/Dynamic;
-		ARG 0 dynamic
-		ARG 1 oldName
-		ARG 2 newName
-		ARG 3 value
-	METHOD setFieldIfPresent (Lcom/mojang/serialization/Dynamic;Ljava/lang/String;Ljava/util/Optional;)Lcom/mojang/serialization/Dynamic;
-		ARG 0 dynamic
-		ARG 1 field
-		ARG 2 value
 	METHOD updateLivingEntityTag (Lcom/mojang/serialization/Dynamic;)Lcom/mojang/serialization/Dynamic;
 		ARG 0 livingEntityTag
 	METHOD updateMobEffectIdField (Lcom/mojang/serialization/Dynamic;Ljava/lang/String;Lcom/mojang/serialization/Dynamic;Ljava/lang/String;)Lcom/mojang/serialization/Dynamic;

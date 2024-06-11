@@ -1,5 +1,5 @@
 CLASS net/minecraft/world/entity/EntityType
-	METHOD <init> (Lnet/minecraft/world/entity/EntityType$EntityFactory;Lnet/minecraft/world/entity/MobCategory;ZZZZLcom/google/common/collect/ImmutableSet;Lnet/minecraft/world/entity/EntityDimensions;IILnet/minecraft/world/flag/FeatureFlagSet;)V
+	METHOD <init> (Lnet/minecraft/world/entity/EntityType$EntityFactory;Lnet/minecraft/world/entity/MobCategory;ZZZZLcom/google/common/collect/ImmutableSet;Lnet/minecraft/world/entity/EntityDimensions;FIILnet/minecraft/world/flag/FeatureFlagSet;)V
 		ARG 1 factory
 		ARG 2 category
 		ARG 3 serialize
@@ -8,9 +8,10 @@ CLASS net/minecraft/world/entity/EntityType
 		ARG 6 canSpawnFarFromPlayer
 		ARG 7 immuneTo
 		ARG 8 dimensions
-		ARG 9 clientTrackingRange
-		ARG 10 updateInterval
-		ARG 11 requiredFeatures
+		ARG 9 spawnDimensionsScale
+		ARG 10 clientTrackingRange
+		ARG 11 updateInterval
+		ARG 12 requiredFeatures
 	METHOD appendCustomEntityStackConfig (Ljava/util/function/Consumer;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/player/Player;)Ljava/util/function/Consumer;
 		ARG 0 consumer
 		ARG 1 level
@@ -32,26 +33,25 @@ CLASS net/minecraft/world/entity/EntityType
 	METHOD create (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/world/level/Level;)Ljava/util/Optional;
 		ARG 0 tag
 		ARG 1 level
-	METHOD create (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/nbt/CompoundTag;Ljava/util/function/Consumer;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/MobSpawnType;ZZ)Lnet/minecraft/world/entity/Entity;
+	METHOD create (Lnet/minecraft/server/level/ServerLevel;Ljava/util/function/Consumer;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/MobSpawnType;ZZ)Lnet/minecraft/world/entity/Entity;
 		ARG 1 level
-		ARG 2 nbt
-		ARG 3 consumer
-		ARG 4 pos
-		ARG 5 spawnType
-		ARG 6 shouldOffsetY
-		ARG 7 shouldOffsetYMore
+		ARG 2 consumer
+		ARG 3 pos
+		ARG 4 spawnType
+		ARG 5 shouldOffsetY
+		ARG 6 shouldOffsetYMore
 	METHOD create (Lnet/minecraft/world/level/Level;)Lnet/minecraft/world/entity/Entity;
 		ARG 1 level
 	METHOD createDefaultStackConfig (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/player/Player;)Ljava/util/function/Consumer;
 		ARG 0 serverLevel
 		ARG 1 stack
 		ARG 2 player
-	METHOD getAABB (DDD)Lnet/minecraft/world/phys/AABB;
+	METHOD getKey (Lnet/minecraft/world/entity/EntityType;)Lnet/minecraft/resources/ResourceLocation;
+		ARG 0 entityType
+	METHOD getSpawnAABB (DDD)Lnet/minecraft/world/phys/AABB;
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
-	METHOD getKey (Lnet/minecraft/world/entity/EntityType;)Lnet/minecraft/resources/ResourceLocation;
-		ARG 0 entityType
 	METHOD getYOffset (Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;ZLnet/minecraft/world/phys/AABB;)D
 		ARG 0 level
 		ARG 1 pos
@@ -64,8 +64,6 @@ CLASS net/minecraft/world/entity/EntityType
 		ARG 1 tag
 	METHOD isBlockDangerous (Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 1 state
-	METHOD lambda$appendCustomEntityStackConfig$3 (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/world/entity/Entity;)V
-		ARG 3 spawnedEntity
 	METHOD lambda$create$4 (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/EntityType;)Lnet/minecraft/world/entity/Entity;
 		ARG 1 entityType
 	METHOD lambda$create$5 (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/world/entity/Entity;)V
@@ -83,18 +81,17 @@ CLASS net/minecraft/world/entity/EntityType
 	METHOD register (Ljava/lang/String;Lnet/minecraft/world/entity/EntityType$Builder;)Lnet/minecraft/world/entity/EntityType;
 		ARG 0 key
 		ARG 1 builder
+	METHOD spawn (Lnet/minecraft/server/level/ServerLevel;Ljava/util/function/Consumer;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/MobSpawnType;ZZ)Lnet/minecraft/world/entity/Entity;
+		ARG 1 level
+		ARG 2 consumer
+		ARG 3 pos
+		ARG 4 spawnType
+		ARG 5 shouldOffsetY
+		ARG 6 shouldOffsetYMore
 	METHOD spawn (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/MobSpawnType;)Lnet/minecraft/world/entity/Entity;
 		ARG 1 level
 		ARG 2 pos
 		ARG 3 spawnType
-	METHOD spawn (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/nbt/CompoundTag;Ljava/util/function/Consumer;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/MobSpawnType;ZZ)Lnet/minecraft/world/entity/Entity;
-		ARG 1 level
-		ARG 2 compound
-		ARG 3 consumer
-		ARG 4 pos
-		ARG 5 spawnType
-		ARG 6 shouldOffsetY
-		ARG 7 shouldOffsetYMore
 	METHOD spawn (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/MobSpawnType;ZZ)Lnet/minecraft/world/entity/Entity;
 		ARG 1 serverLevel
 		ARG 2 stack
@@ -103,11 +100,11 @@ CLASS net/minecraft/world/entity/EntityType
 		ARG 5 spawnType
 		ARG 6 shouldOffsetY
 		ARG 7 shouldOffsetYMore
-	METHOD updateCustomEntityTag (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/nbt/CompoundTag;)V
+	METHOD updateCustomEntityTag (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/item/component/CustomData;)V
 		ARG 0 level
 		ARG 1 player
-		ARG 2 spawnedEntity
-		ARG 3 itemNBT
+		ARG 2 entity
+		ARG 3 customData
 	CLASS 1
 		METHOD tryAdvance (Ljava/util/function/Consumer;)Z
 			ARG 1 consumer
@@ -115,27 +112,49 @@ CLASS net/minecraft/world/entity/EntityType
 		METHOD <init> (Lnet/minecraft/world/entity/EntityType$EntityFactory;Lnet/minecraft/world/entity/MobCategory;)V
 			ARG 1 factory
 			ARG 2 category
+		METHOD attach (Lnet/minecraft/world/entity/EntityAttachment;FFF)Lnet/minecraft/world/entity/EntityType$Builder;
+			ARG 1 attachment
+			ARG 2 x
+			ARG 3 y
+			ARG 4 z
+		METHOD attach (Lnet/minecraft/world/entity/EntityAttachment;Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/world/entity/EntityType$Builder;
+			ARG 1 attachment
+			ARG 2 pos
 		METHOD build (Ljava/lang/String;)Lnet/minecraft/world/entity/EntityType;
 			ARG 1 key
 		METHOD clientTrackingRange (I)Lnet/minecraft/world/entity/EntityType$Builder;
 			ARG 1 clientTrackingRange
 		METHOD createNothing (Lnet/minecraft/world/entity/MobCategory;)Lnet/minecraft/world/entity/EntityType$Builder;
 			ARG 0 category
+		METHOD eyeHeight (F)Lnet/minecraft/world/entity/EntityType$Builder;
+			ARG 1 eyeHeight
 		METHOD immuneTo ([Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/entity/EntityType$Builder;
 			ARG 1 blocks
 		METHOD lambda$createNothing$0 (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/Level;)Lnet/minecraft/world/entity/Entity;
 			ARG 0 entityType
 			ARG 1 level
+		METHOD nameTagOffset (F)Lnet/minecraft/world/entity/EntityType$Builder;
+			ARG 1 nameTagOffset
 		METHOD of (Lnet/minecraft/world/entity/EntityType$EntityFactory;Lnet/minecraft/world/entity/MobCategory;)Lnet/minecraft/world/entity/EntityType$Builder;
 			ARG 0 factory
 			ARG 1 category
+		METHOD passengerAttachments ([F)Lnet/minecraft/world/entity/EntityType$Builder;
+			ARG 1 attachPoints
+		METHOD passengerAttachments ([Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/world/entity/EntityType$Builder;
+			ARG 1 attachPoints
 		METHOD requiredFeatures ([Lnet/minecraft/world/flag/FeatureFlag;)Lnet/minecraft/world/entity/EntityType$Builder;
 			ARG 1 requiredFeatures
+		METHOD ridingOffset (F)Lnet/minecraft/world/entity/EntityType$Builder;
+			ARG 1 ridingOffset
 		METHOD sized (FF)Lnet/minecraft/world/entity/EntityType$Builder;
 			ARG 1 width
 			ARG 2 height
+		METHOD spawnDimensionsScale (F)Lnet/minecraft/world/entity/EntityType$Builder;
+			ARG 1 spawnDimensionsScale
 		METHOD updateInterval (I)Lnet/minecraft/world/entity/EntityType$Builder;
 			ARG 1 updateInterval
+		METHOD vehicleAttachment (Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/world/entity/EntityType$Builder;
+			ARG 1 attachPoint
 	CLASS EntityFactory
 		METHOD create (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/Level;)Lnet/minecraft/world/entity/Entity;
 			ARG 1 entityType

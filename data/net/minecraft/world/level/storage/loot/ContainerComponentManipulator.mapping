@@ -1,0 +1,16 @@
+CLASS net/minecraft/world/level/storage/loot/ContainerComponentManipulator
+	METHOD getContents (Ljava/lang/Object;)Ljava/util/stream/Stream;
+		ARG 1 contents
+	METHOD modifyItems (Lnet/minecraft/world/item/ItemStack;Ljava/util/function/UnaryOperator;)V
+		ARG 1 stack
+		ARG 2 modifier
+	METHOD setContents (Ljava/lang/Object;Ljava/util/stream/Stream;)Ljava/lang/Object;
+		ARG 1 contents
+		ARG 2 items
+	METHOD setContents (Lnet/minecraft/world/item/ItemStack;Ljava/lang/Object;Ljava/util/stream/Stream;)V
+		ARG 1 stack
+		ARG 2 contents
+		ARG 3 items
+	METHOD setContents (Lnet/minecraft/world/item/ItemStack;Ljava/util/stream/Stream;)V
+		ARG 1 stack
+		ARG 2 items

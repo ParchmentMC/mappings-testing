@@ -29,3 +29,5 @@ CLASS net/minecraft/core/HolderSet
 	CLASS Direct
 		METHOD <init> (Ljava/util/List;)V
 			ARG 1 contents
+		METHOD equals (Ljava/lang/Object;)Z
+			ARG 1 other

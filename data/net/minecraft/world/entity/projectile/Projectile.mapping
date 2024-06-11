@@ -3,6 +3,18 @@ CLASS net/minecraft/world/entity/projectile/Projectile
 		ARG 1 compound
 	METHOD canHitEntity (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 1 target
+	METHOD deflect (Lnet/minecraft/world/entity/projectile/ProjectileDeflection;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/Entity;Z)V
+		ARG 1 deflection
+		ARG 2 entity
+		ARG 3 owner
+	METHOD getMovementToShoot (DDDFF)Lnet/minecraft/world/phys/Vec3;
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+		ARG 7 velocity
+		ARG 8 inaccuracy
+	METHOD hitTargetOrDeflectSelf (Lnet/minecraft/world/phys/HitResult;)Lnet/minecraft/world/entity/projectile/ProjectileDeflection;
+		ARG 1 hitResult
 	METHOD lambda$checkLeftOwner$0 (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 0 entity
 	METHOD lerpMotion (DDD)V
@@ -15,6 +27,8 @@ CLASS net/minecraft/world/entity/projectile/Projectile
 		ARG 1 targetRotation
 	METHOD mayBreak (Lnet/minecraft/world/level/Level;)Z
 		ARG 1 level
+	METHOD onDeflection (Lnet/minecraft/world/entity/Entity;Z)V
+		ARG 1 entity
 	METHOD onHit (Lnet/minecraft/world/phys/HitResult;)V
 		COMMENT Called when this EntityFireball hits a block or entity.
 		ARG 1 result

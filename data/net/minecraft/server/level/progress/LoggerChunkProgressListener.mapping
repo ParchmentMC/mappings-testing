@@ -1,8 +1,9 @@
 CLASS net/minecraft/server/level/progress/LoggerChunkProgressListener
 	METHOD <init> (I)V
-		ARG 1 radius
-	METHOD onStatusChange (Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/world/level/chunk/ChunkStatus;)V
-		ARG 1 chunkPosition
-		ARG 2 newStatus
+		ARG 1 maxCount
+	METHOD create (I)Lnet/minecraft/server/level/progress/LoggerChunkProgressListener;
+		ARG 0 radius
+	METHOD createFromGameruleRadius (I)Lnet/minecraft/server/level/progress/LoggerChunkProgressListener;
+		ARG 0 radius
 	METHOD updateSpawnPos (Lnet/minecraft/world/level/ChunkPos;)V
 		ARG 1 center

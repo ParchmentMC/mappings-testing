@@ -1,6 +1,6 @@
 CLASS net/minecraft/world/level/chunk/storage/ChunkSerializer
-	METHOD getChunkTypeFromTag (Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/level/chunk/ChunkStatus$ChunkType;
-		ARG 0 chunkNBT
+	METHOD getChunkTypeFromTag (Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/level/chunk/status/ChunkType;
+		ARG 0 tag
 	METHOD getListOfCompoundsOrNull (Lnet/minecraft/nbt/CompoundTag;Ljava/lang/String;)Lnet/minecraft/nbt/ListTag;
 		ARG 0 tag
 		ARG 1 key
@@ -64,3 +64,6 @@ CLASS net/minecraft/world/level/chunk/storage/ChunkSerializer
 	METHOD write (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/chunk/ChunkAccess;)Lnet/minecraft/nbt/CompoundTag;
 		ARG 0 level
 		ARG 1 chunk
+	CLASS ChunkReadException
+		METHOD <init> (Ljava/lang/String;)V
+			ARG 1 message

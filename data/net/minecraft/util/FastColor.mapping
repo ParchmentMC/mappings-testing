@@ -1,4 +1,6 @@
 CLASS net/minecraft/util/FastColor
+	METHOD as8BitChannel (F)I
+		ARG 0 value
 	CLASS ABGR32
 		METHOD alpha (I)I
 			ARG 0 packedColor
@@ -25,7 +27,19 @@ CLASS net/minecraft/util/FastColor
 			ARG 0 packedColor
 		METHOD blue (I)I
 			ARG 0 packedColor
+		METHOD color (II)I
+			ARG 0 alpha
+			ARG 1 color
+		METHOD color (III)I
+			ARG 0 red
+			ARG 1 green
+			ARG 2 blue
 		METHOD color (IIII)I
+			ARG 0 alpha
+			ARG 1 red
+			ARG 2 green
+			ARG 3 blue
+		METHOD colorFromFloat (FFFF)I
 			ARG 0 alpha
 			ARG 1 red
 			ARG 2 green
@@ -39,5 +53,7 @@ CLASS net/minecraft/util/FastColor
 		METHOD multiply (II)I
 			ARG 0 packedColourOne
 			ARG 1 packedColorTwo
+		METHOD opaque (I)I
+			ARG 0 color
 		METHOD red (I)I
 			ARG 0 packedColor

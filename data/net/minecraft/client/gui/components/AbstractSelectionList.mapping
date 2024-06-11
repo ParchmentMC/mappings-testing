@@ -88,11 +88,15 @@ CLASS net/minecraft/client/gui/components/AbstractSelectionList
 		ARG 7 top
 		ARG 8 width
 		ARG 9 height
-	METHOD renderList (Lnet/minecraft/client/gui/GuiGraphics;IIF)V
+	METHOD renderListBackground (Lnet/minecraft/client/gui/GuiGraphics;)V
+		ARG 1 guiGraphics
+	METHOD renderListItems (Lnet/minecraft/client/gui/GuiGraphics;IIF)V
 		ARG 1 guiGraphics
 		ARG 2 mouseX
 		ARG 3 mouseY
 		ARG 4 partialTick
+	METHOD renderListSeparators (Lnet/minecraft/client/gui/GuiGraphics;)V
+		ARG 1 guiGraphics
 	METHOD renderSelection (Lnet/minecraft/client/gui/GuiGraphics;IIIII)V
 		ARG 1 guiGraphics
 		ARG 2 top
@@ -104,8 +108,6 @@ CLASS net/minecraft/client/gui/components/AbstractSelectionList
 		ARG 1 entries
 	METHOD scroll (I)V
 		ARG 1 scroll
-	METHOD setRenderBackground (Z)V
-		ARG 1 renderBackground
 	METHOD setRenderHeader (ZI)V
 		ARG 1 renderHeader
 		ARG 2 headerHeight
@@ -117,6 +119,13 @@ CLASS net/minecraft/client/gui/components/AbstractSelectionList
 		ARG 1 mouseX
 		ARG 3 mouseY
 		ARG 5 button
+	METHOD updateSize (ILnet/minecraft/client/gui/layouts/HeaderAndFooterLayout;)V
+		ARG 1 width
+		ARG 2 layout
+	METHOD updateSizeAndPosition (III)V
+		ARG 1 width
+		ARG 2 height
+		ARG 3 y
 	CLASS Entry
 		METHOD isMouseOver (DD)Z
 			ARG 1 mouseX

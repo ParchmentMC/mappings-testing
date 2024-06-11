@@ -3,3 +3,5 @@ CLASS net/minecraft/network/protocol/game/ClientboundTickingStatePacket
 		ARG 1 buffer
 	METHOD from (Lnet/minecraft/world/TickRateManager;)Lnet/minecraft/network/protocol/game/ClientboundTickingStatePacket;
 		ARG 0 tickRateManager
+	METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
+		ARG 1 buffer

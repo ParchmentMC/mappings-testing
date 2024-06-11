@@ -1,4 +1,6 @@
 CLASS net/minecraft/world/level/levelgen/WorldDimensions
+	METHOD <init> (Lnet/minecraft/core/Registry;)V
+		ARG 1 stemRegistry
 	METHOD bake (Lnet/minecraft/core/Registry;)Lnet/minecraft/world/level/levelgen/WorldDimensions$Complete;
 		ARG 1 stemRegistry
 	METHOD checkStability (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/world/level/dimension/LevelStem;)Lcom/mojang/serialization/Lifecycle;
@@ -22,11 +24,11 @@ CLASS net/minecraft/world/level/levelgen/WorldDimensions
 		ARG 2 chunkGenerator
 	METHOD specialWorldProperty (Lnet/minecraft/core/Registry;)Lnet/minecraft/world/level/storage/PrimaryLevelData$SpecialWorldProperty;
 		ARG 0 stemRegistry
-	METHOD withOverworld (Lnet/minecraft/core/Registry;Lnet/minecraft/core/Holder;Lnet/minecraft/world/level/chunk/ChunkGenerator;)Lnet/minecraft/core/Registry;
-		ARG 0 stemRegistry
+	METHOD withOverworld (Ljava/util/Map;Lnet/minecraft/core/Holder;Lnet/minecraft/world/level/chunk/ChunkGenerator;)Ljava/util/Map;
+		ARG 0 stemMap
 		ARG 1 dimensionType
 		ARG 2 chunkGenerator
-	METHOD withOverworld (Lnet/minecraft/core/Registry;Lnet/minecraft/core/Registry;Lnet/minecraft/world/level/chunk/ChunkGenerator;)Lnet/minecraft/core/Registry;
+	METHOD withOverworld (Lnet/minecraft/core/Registry;Ljava/util/Map;Lnet/minecraft/world/level/chunk/ChunkGenerator;)Ljava/util/Map;
 		ARG 0 dimensionTypeRegistry
-		ARG 1 stemRegistry
+		ARG 1 stemMap
 		ARG 2 chunkGenerator

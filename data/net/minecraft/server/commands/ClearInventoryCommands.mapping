@@ -4,6 +4,10 @@ CLASS net/minecraft/server/commands/ClearInventoryCommands
 		ARG 1 targetPlayers
 		ARG 2 itemPredicate
 		ARG 3 maxCount
+	METHOD clearUnlimited (Lnet/minecraft/commands/CommandSourceStack;Ljava/util/Collection;Ljava/util/function/Predicate;)I
+		ARG 0 source
+		ARG 1 targets
+		ARG 2 filter
 	METHOD lambda$register$2 (Lnet/minecraft/commands/CommandSourceStack;)Z
 		ARG 0 source
 	METHOD lambda$register$3 (Lnet/minecraft/world/item/ItemStack;)Z

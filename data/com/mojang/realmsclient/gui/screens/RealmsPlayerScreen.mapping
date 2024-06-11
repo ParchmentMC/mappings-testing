@@ -2,21 +2,14 @@ CLASS com/mojang/realmsclient/gui/screens/RealmsPlayerScreen
 	METHOD <init> (Lcom/mojang/realmsclient/gui/screens/RealmsConfigureWorldScreen;Lcom/mojang/realmsclient/dto/RealmsServer;)V
 		ARG 1 lastScreen
 		ARG 2 serverData
-	METHOD deop (I)V
-		ARG 1 index
-	METHOD op (I)V
-		ARG 1 index
-	METHOD shouldRemoveAndOpdeopButtonBeVisible (I)Z
-		ARG 1 playerIndex
-	METHOD uninvite (I)V
-		ARG 1 index
-	METHOD updateOps (Lcom/mojang/realmsclient/dto/Ops;)V
-		ARG 1 ops
 	CLASS Entry
 		METHOD <init> (Lcom/mojang/realmsclient/gui/screens/RealmsPlayerScreen;Lcom/mojang/realmsclient/dto/PlayerInfo;)V
 			ARG 2 playerInfo
-	CLASS InvitedObjectSelectionList
-		METHOD addEntry (Lcom/mojang/realmsclient/dto/PlayerInfo;)V
-			ARG 1 playerInfo
-		METHOD selectInviteListItem (I)V
+		METHOD deop (I)V
 			ARG 1 index
+		METHOD op (I)V
+			ARG 1 index
+		METHOD uninvite (I)V
+			ARG 1 index
+		METHOD updateOps (Lcom/mojang/realmsclient/dto/Ops;)V
+			ARG 1 ops

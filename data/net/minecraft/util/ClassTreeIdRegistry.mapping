@@ -1,0 +1,7 @@
+CLASS net/minecraft/util/ClassTreeIdRegistry
+	METHOD define (Ljava/lang/Class;)I
+		ARG 1 clazz
+	METHOD getCount (Ljava/lang/Class;)I
+		ARG 1 clazz
+	METHOD getLastIdFor (Ljava/lang/Class;)I
+		ARG 1 clazz

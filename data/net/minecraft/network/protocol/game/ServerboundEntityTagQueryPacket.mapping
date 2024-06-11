@@ -1,0 +1,8 @@
+CLASS net/minecraft/network/protocol/game/ServerboundEntityTagQueryPacket
+	METHOD <init> (II)V
+		ARG 1 transactionId
+		ARG 2 entityId
+	METHOD <init> (Lnet/minecraft/network/FriendlyByteBuf;)V
+		ARG 1 buffer
+	METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
+		ARG 1 buffer

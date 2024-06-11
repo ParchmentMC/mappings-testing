@@ -32,8 +32,6 @@ CLASS net/minecraft/SharedConstants
 		COMMENT @see <a href="https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file">Microsoft Corporation, "Naming Files, Paths, and Namespaces", &sect; Naming Conventions</a>
 	FIELD MAX_CHAT_LENGTH I
 		COMMENT The maximum length of a chat message that can be typed by a player.
-	FIELD MAX_COMMAND_LENGTH I
-		COMMENT The maximum length of a command that can be typed in a command block by a player.
 	FIELD RELEASE_NETWORK_PROTOCOL_VERSION I
 		COMMENT The numeric format number for the networking protocol used by the release target of this game version.
 		COMMENT
@@ -86,17 +84,6 @@ CLASS net/minecraft/SharedConstants
 		COMMENT @deprecated Use {@link #getCurrentVersion()} and {@link com.mojang.bridge.game.GameVersion#getWorldVersion()} instead.
 	METHOD debugVoidTerrain (Lnet/minecraft/world/level/ChunkPos;)Z
 		ARG 0 chunkPos
-	METHOD filterText (Ljava/lang/String;)Ljava/lang/String;
-		COMMENT Filters the string, keeping only characters for which {@link #isAllowedCharacter(char)} returns {@code true}.
-		COMMENT
-		COMMENT <p>Note that this method strips line breaks, as {@link #isAllowedCharacter(char)} returns {@code false} for those.</p>
-		COMMENT
-		COMMENT @return a filtered version of the input string
-		ARG 0 input
-			COMMENT the input string
-	METHOD filterText (Ljava/lang/String;Z)Ljava/lang/String;
-		ARG 0 input
-		ARG 1 allowLineBreaks
 	METHOD getCurrentVersion ()Lnet/minecraft/WorldVersion;
 		COMMENT {@return the {@link WorldVersion world version}}
 		COMMENT
@@ -105,9 +92,6 @@ CLASS net/minecraft/SharedConstants
 		COMMENT {@return the networking protocol version in use by this game version}
 		COMMENT
 		COMMENT <p>For releases, this will be equivalent to {@link #RELEASE_NETWORK_PROTOCOL_VERSION}. For snapshot versions, this will be the combination (bitwise OR) of {@link #SNAPSHOT_NETWORK_PROTOCOL_VERSION} and the bit marked by {@link #SNAPSHOT_PROTOCOL_BIT}.</p>
-	METHOD isAllowedChatCharacter (C)Z
-		COMMENT Checks if the given character is allowed to be put into chat.
-		ARG 0 character
 	METHOD setVersion (Lnet/minecraft/WorldVersion;)V
 		COMMENT Sets the world version, failing if a different world version is already present.
 		COMMENT

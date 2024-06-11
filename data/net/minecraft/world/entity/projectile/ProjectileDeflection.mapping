@@ -1,0 +1,9 @@
+CLASS net/minecraft/world/entity/projectile/ProjectileDeflection
+	METHOD deflect (Lnet/minecraft/world/entity/projectile/Projectile;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/util/RandomSource;)V
+		ARG 1 projectile
+		ARG 2 entity
+		ARG 3 random
+	METHOD lambda$static$1 (Lnet/minecraft/world/entity/projectile/Projectile;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/util/RandomSource;)V
+		ARG 0 projectile
+		ARG 1 entity
+		ARG 2 random

@@ -1,0 +1,15 @@
+CLASS net/minecraft/world/level/saveddata/maps/MapDecorationTypes
+	METHOD bootstrap (Lnet/minecraft/core/Registry;)Lnet/minecraft/core/Holder;
+		ARG 0 registry
+	METHOD register (Ljava/lang/String;Ljava/lang/String;ZIZZ)Lnet/minecraft/core/Holder;
+		ARG 0 name
+		ARG 1 assetId
+		ARG 2 showOnItemFrame
+		ARG 3 mapColor
+		ARG 4 explorationMapElement
+		ARG 5 trackCount
+	METHOD register (Ljava/lang/String;Ljava/lang/String;ZZ)Lnet/minecraft/core/Holder;
+		ARG 0 name
+		ARG 1 assetId
+		ARG 2 showOnItemFrame
+		ARG 3 trackCount

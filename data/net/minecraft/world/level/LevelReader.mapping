@@ -14,15 +14,15 @@ CLASS net/minecraft/world/level/LevelReader
 	METHOD getChunk (II)Lnet/minecraft/world/level/chunk/ChunkAccess;
 		ARG 1 chunkX
 		ARG 2 chunkZ
-	METHOD getChunk (IILnet/minecraft/world/level/chunk/ChunkStatus;)Lnet/minecraft/world/level/chunk/ChunkAccess;
+	METHOD getChunk (IILnet/minecraft/world/level/chunk/status/ChunkStatus;)Lnet/minecraft/world/level/chunk/ChunkAccess;
 		ARG 1 chunkX
 		ARG 2 chunkZ
-		ARG 3 requiredStatus
-	METHOD getChunk (IILnet/minecraft/world/level/chunk/ChunkStatus;Z)Lnet/minecraft/world/level/chunk/ChunkAccess;
+		ARG 3 chunkStatus
+	METHOD getChunk (IILnet/minecraft/world/level/chunk/status/ChunkStatus;Z)Lnet/minecraft/world/level/chunk/ChunkAccess;
 		ARG 1 x
 		ARG 2 z
-		ARG 3 requiredStatus
-		ARG 4 nonnull
+		ARG 3 chunkStatus
+		ARG 4 requireChunk
 	METHOD getChunk (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/chunk/ChunkAccess;
 		ARG 1 pos
 	METHOD getChunkForCollisions (II)Lnet/minecraft/world/level/BlockGetter;

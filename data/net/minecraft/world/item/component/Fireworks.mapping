@@ -1,0 +1,6 @@
+CLASS net/minecraft/world/item/component/Fireworks
+	METHOD <init> (ILjava/util/List;)V
+		ARG 1 flightDuration
+		ARG 2 explosions
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

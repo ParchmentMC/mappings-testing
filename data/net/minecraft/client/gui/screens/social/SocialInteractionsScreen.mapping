@@ -1,4 +1,6 @@
 CLASS net/minecraft/client/gui/screens/social/SocialInteractionsScreen
+	METHOD <init> (Lnet/minecraft/client/gui/screens/Screen;)V
+		ARG 1 lastScreen
 	METHOD checkSearchStringUpdate (Ljava/lang/String;)V
 		ARG 1 newText
 	METHOD keyPressed (III)Z

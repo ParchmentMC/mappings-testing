@@ -16,5 +16,3 @@ CLASS net/minecraft/world/entity/ai/attributes/AttributeModifier
 		METHOD <init> (Ljava/lang/String;ILjava/lang/String;I)V
 			ARG 3 name
 			ARG 4 value
-		METHOD fromValue (I)Lnet/minecraft/world/entity/ai/attributes/AttributeModifier$Operation;
-			ARG 0 id

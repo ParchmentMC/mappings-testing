@@ -1,3 +1,5 @@
 CLASS net/minecraft/network/protocol/configuration/ServerConfigurationPacketListener
 	METHOD handleConfigurationFinished (Lnet/minecraft/network/protocol/configuration/ServerboundFinishConfigurationPacket;)V
 		ARG 1 packet
+	METHOD handleSelectKnownPacks (Lnet/minecraft/network/protocol/configuration/ServerboundSelectKnownPacks;)V
+		ARG 1 packet
