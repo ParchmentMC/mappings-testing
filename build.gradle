@@ -54,7 +54,6 @@ repositories {
         name = 'OW2 Snapshots for Enigma'
         url = "https://repository.ow2.org/nexus/content/repositories/snapshots/"
     }
-    mavenLocal()
 }
 
 configurations {
