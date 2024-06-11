@@ -35,6 +35,11 @@ CLASS net/minecraft/world/level/levelgen/structure/pools/JigsawPlacement
 		ARG 3 rotation
 		ARG 4 structureTemplateManager
 		ARG 5 random
+	CLASS PieceState
+		METHOD <init> (Lnet/minecraft/world/level/levelgen/structure/PoolElementStructurePiece;Lorg/apache/commons/lang3/mutable/MutableObject;I)V
+			ARG 1 piece
+			ARG 2 free
+			ARG 3 depth
 	CLASS Placer
 		METHOD <init> (Lnet/minecraft/core/Registry;ILnet/minecraft/world/level/chunk/ChunkGenerator;Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplateManager;Ljava/util/List;Lnet/minecraft/util/RandomSource;)V
 			ARG 1 pools
@@ -54,8 +59,3 @@ CLASS net/minecraft/world/level/levelgen/structure/pools/JigsawPlacement
 			ARG 5 level
 			ARG 6 randomState
 			ARG 7 poolAliasLookup
-	CLASS PieceState
-		METHOD <init> (Lnet/minecraft/world/level/levelgen/structure/PoolElementStructurePiece;Lorg/apache/commons/lang3/mutable/MutableObject;I)V
-			ARG 1 piece
-			ARG 2 free
-			ARG 3 depth

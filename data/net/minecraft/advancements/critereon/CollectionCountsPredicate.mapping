@@ -5,9 +5,6 @@ CLASS net/minecraft/advancements/critereon/CollectionCountsPredicate
 		ARG 0 entries
 	METHOD of ([Lnet/minecraft/advancements/critereon/CollectionCountsPredicate$Entry;)Lnet/minecraft/advancements/critereon/CollectionCountsPredicate;
 		ARG 0 entries
-	CLASS Zero
-		METHOD test (Ljava/lang/Iterable;)Z
-			ARG 1 collection
 	CLASS Entry
 		METHOD codec (Lcom/mojang/serialization/Codec;)Lcom/mojang/serialization/Codec;
 			ARG 0 testCodec
@@ -15,9 +12,12 @@ CLASS net/minecraft/advancements/critereon/CollectionCountsPredicate
 			ARG 1 instance
 		METHOD test (Ljava/lang/Iterable;)Z
 			ARG 1 collection
+	CLASS Multiple
+		METHOD test (Ljava/lang/Iterable;)Z
+			ARG 1 collection
 	CLASS Single
 		METHOD test (Ljava/lang/Iterable;)Z
 			ARG 1 collection
-	CLASS Multiple
+	CLASS Zero
 		METHOD test (Ljava/lang/Iterable;)Z
 			ARG 1 collection

@@ -51,30 +51,30 @@ CLASS net/minecraft/core/RegistrySetBuilder
 		METHOD lambda$reportUnclaimedRegisteredValues$2 (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/core/RegistrySetBuilder$RegisteredValue;)V
 			ARG 1 resourceKey
 			ARG 2 registeredValue
+	CLASS EmptyTagLookup
+		METHOD <init> (Lnet/minecraft/core/HolderOwner;)V
+			ARG 1 owner
+	CLASS EmptyTagLookupWrapper
+		METHOD <init> (Lnet/minecraft/core/HolderOwner;Lnet/minecraft/core/HolderLookup$RegistryLookup;)V
+			ARG 1 owner
+			ARG 2 parent
 	CLASS LazyHolder
 		METHOD <init> (Lnet/minecraft/core/HolderOwner;Lnet/minecraft/resources/ResourceKey;)V
 			ARG 1 owner
 			ARG 2 key
+	CLASS RegistryBootstrap
+		METHOD run (Lnet/minecraft/data/worldgen/BootstrapContext;)V
+			ARG 1 context
+	CLASS RegistryContents
+		METHOD buildAsLookup (Lnet/minecraft/core/RegistrySetBuilder$UniversalOwner;)Lnet/minecraft/core/HolderLookup$RegistryLookup;
+			ARG 1 owner
 	CLASS RegistryStub
 		METHOD apply (Lnet/minecraft/core/RegistrySetBuilder$BuildState;)V
 			ARG 1 state
 		METHOD collectRegisteredValues (Lnet/minecraft/core/RegistrySetBuilder$BuildState;)Lnet/minecraft/core/RegistrySetBuilder$RegistryContents;
 			ARG 1 buildState
-	CLASS EmptyTagLookup
-		METHOD <init> (Lnet/minecraft/core/HolderOwner;)V
-			ARG 1 owner
 	CLASS UniversalLookup
 		METHOD getOrCreate (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/core/Holder$Reference;
 			ARG 1 key
 		METHOD lambda$getOrCreate$0 (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/core/Holder$Reference;
 			ARG 1 resourceKey
-	CLASS RegistryContents
-		METHOD buildAsLookup (Lnet/minecraft/core/RegistrySetBuilder$UniversalOwner;)Lnet/minecraft/core/HolderLookup$RegistryLookup;
-			ARG 1 owner
-	CLASS RegistryBootstrap
-		METHOD run (Lnet/minecraft/data/worldgen/BootstrapContext;)V
-			ARG 1 context
-	CLASS EmptyTagLookupWrapper
-		METHOD <init> (Lnet/minecraft/core/HolderOwner;Lnet/minecraft/core/HolderLookup$RegistryLookup;)V
-			ARG 1 owner
-			ARG 2 parent

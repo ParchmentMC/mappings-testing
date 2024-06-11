@@ -138,11 +138,11 @@ CLASS net/minecraft/commands/arguments/selector/options/EntitySelectorOptions
 	METHOD suggestNames (Lnet/minecraft/commands/arguments/selector/EntitySelectorParser;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)V
 		ARG 0 parser
 		ARG 1 builder
+	CLASS Modifier
+		METHOD handle (Lnet/minecraft/commands/arguments/selector/EntitySelectorParser;)V
+			ARG 1 parser
 	CLASS Option
 		METHOD <init> (Lnet/minecraft/commands/arguments/selector/options/EntitySelectorOptions$Modifier;Ljava/util/function/Predicate;Lnet/minecraft/network/chat/Component;)V
 			ARG 1 modifier
 			ARG 2 canUse
 			ARG 3 description
-	CLASS Modifier
-		METHOD handle (Lnet/minecraft/commands/arguments/selector/EntitySelectorParser;)V
-			ARG 1 parser

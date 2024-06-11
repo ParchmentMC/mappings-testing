@@ -45,10 +45,6 @@ CLASS net/minecraft/world/entity/monster/Zombie
 		ARG 1 conversionTime
 	METHOD tick ()V
 		COMMENT Called to update the entity's position/logic.
-	CLASS ZombieGroupData
-		METHOD <init> (ZZ)V
-			ARG 1 isBaby
-			ARG 2 canSpawnJockey
 	CLASS ZombieAttackTurtleEggGoal
 		METHOD <init> (Lnet/minecraft/world/entity/monster/Zombie;Lnet/minecraft/world/entity/PathfinderMob;DI)V
 			ARG 2 mob
@@ -60,3 +56,7 @@ CLASS net/minecraft/world/entity/monster/Zombie
 		METHOD playDestroyProgressSound (Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;)V
 			ARG 1 level
 			ARG 2 pos
+	CLASS ZombieGroupData
+		METHOD <init> (ZZ)V
+			ARG 1 isBaby
+			ARG 2 canSpawnJockey

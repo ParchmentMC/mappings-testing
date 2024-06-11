@@ -27,12 +27,12 @@ CLASS net/minecraft/commands/arguments/ResourceOrIdArgument
 		ARG 1 reader
 	METHOD parseInlineOrId (Lcom/mojang/brigadier/StringReader;)Lnet/minecraft/nbt/Tag;
 		ARG 0 reader
-	CLASS LootTableArgument
-		METHOD <init> (Lnet/minecraft/commands/CommandBuildContext;)V
-			ARG 1 context
 	CLASS LootModifierArgument
 		METHOD <init> (Lnet/minecraft/commands/CommandBuildContext;)V
 			ARG 1 context
 	CLASS LootPredicateArgument
+		METHOD <init> (Lnet/minecraft/commands/CommandBuildContext;)V
+			ARG 1 context
+	CLASS LootTableArgument
 		METHOD <init> (Lnet/minecraft/commands/CommandBuildContext;)V
 			ARG 1 context

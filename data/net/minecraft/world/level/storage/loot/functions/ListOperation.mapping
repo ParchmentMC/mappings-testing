@@ -8,11 +8,12 @@ CLASS net/minecraft/world/level/storage/loot/functions/ListOperation
 		ARG 3 maxSize
 	METHOD codec (I)Lcom/mojang/serialization/MapCodec;
 		ARG 0 maxSize
-	CLASS Type
-		METHOD <init> (Ljava/lang/String;ILjava/lang/String;Lcom/mojang/serialization/MapCodec;)V
-			ARG 3 id
-			ARG 4 mapCodec
 	CLASS Insert
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
+	CLASS ReplaceSection
+		METHOD <init> (I)V
+			ARG 1 offset
 		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 			ARG 0 instance
 	CLASS StandAlone
@@ -23,8 +24,7 @@ CLASS net/minecraft/world/level/storage/loot/functions/ListOperation
 			ARG 1 maxSize
 		METHOD lambda$codec$2 (Lcom/mojang/serialization/Codec;ILcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 			ARG 2 instance
-	CLASS ReplaceSection
-		METHOD <init> (I)V
-			ARG 1 offset
-		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
-			ARG 0 instance
+	CLASS Type
+		METHOD <init> (Ljava/lang/String;ILjava/lang/String;Lcom/mojang/serialization/MapCodec;)V
+			ARG 3 id
+			ARG 4 mapCodec

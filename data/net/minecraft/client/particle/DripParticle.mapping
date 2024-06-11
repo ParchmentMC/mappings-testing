@@ -160,14 +160,6 @@ CLASS net/minecraft/client/particle/DripParticle
 		ARG 12 zSpeed
 	METHOD getLightColor (F)I
 		ARG 1 partialTick
-	CLASS FallingParticle
-		METHOD <init> (Lnet/minecraft/client/multiplayer/ClientLevel;DDDLnet/minecraft/world/level/material/Fluid;I)V
-			ARG 1 level
-			ARG 2 x
-			ARG 4 y
-			ARG 6 z
-			ARG 8 type
-			ARG 9 lifetime
 	CLASS DripHangParticle
 		METHOD <init> (Lnet/minecraft/client/multiplayer/ClientLevel;DDDLnet/minecraft/world/level/material/Fluid;Lnet/minecraft/core/particles/ParticleOptions;)V
 			ARG 1 level
@@ -184,3 +176,11 @@ CLASS net/minecraft/client/particle/DripParticle
 			ARG 6 z
 			ARG 8 type
 			ARG 9 landParticle
+	CLASS FallingParticle
+		METHOD <init> (Lnet/minecraft/client/multiplayer/ClientLevel;DDDLnet/minecraft/world/level/material/Fluid;I)V
+			ARG 1 level
+			ARG 2 x
+			ARG 4 y
+			ARG 6 z
+			ARG 8 type
+			ARG 9 lifetime

@@ -17,6 +17,13 @@ CLASS net/minecraft/world/entity/animal/sniffer/SnifferAi
 		METHOD <init> (II)V
 			ARG 1 minDuration
 			ARG 2 maxDuration
+	CLASS FeelingHappy
+		METHOD <init> (II)V
+			ARG 1 minDuration
+			ARG 2 maxDuration
+	CLASS FinishedDigging
+		METHOD <init> (I)V
+			ARG 1 duration
 	CLASS Scenting
 		METHOD <init> (II)V
 			ARG 1 minDuration
@@ -25,10 +32,3 @@ CLASS net/minecraft/world/entity/animal/sniffer/SnifferAi
 		METHOD <init> (II)V
 			ARG 1 minDuration
 			ARG 2 maxDuration
-	CLASS FeelingHappy
-		METHOD <init> (II)V
-			ARG 1 minDuration
-			ARG 2 maxDuration
-	CLASS FinishedDigging
-		METHOD <init> (I)V
-			ARG 1 duration

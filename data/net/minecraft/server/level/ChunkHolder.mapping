@@ -73,11 +73,11 @@ CLASS net/minecraft/server/level/ChunkHolder
 			ARG 1 thread
 			ARG 2 future
 			ARG 3 source
+	CLASS LevelChangeListener
+		METHOD onLevelChange (Lnet/minecraft/world/level/ChunkPos;Ljava/util/function/IntSupplier;ILjava/util/function/IntConsumer;)V
+			ARG 1 chunkPos
 	CLASS PlayerProvider
 		METHOD getPlayers (Lnet/minecraft/world/level/ChunkPos;Z)Ljava/util/List;
 			COMMENT Returns the players tracking the given chunk.
 			ARG 1 pos
 			ARG 2 boundaryOnly
-	CLASS LevelChangeListener
-		METHOD onLevelChange (Lnet/minecraft/world/level/ChunkPos;Ljava/util/function/IntSupplier;ILjava/util/function/IntConsumer;)V
-			ARG 1 chunkPos

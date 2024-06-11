@@ -11,11 +11,12 @@ CLASS net/minecraft/world/level/levelgen/DensityFunction
 		ARG 0 holder
 	METHOD mapAll (Lnet/minecraft/world/level/levelgen/DensityFunction$Visitor;)Lnet/minecraft/world/level/levelgen/DensityFunction;
 		ARG 1 visitor
-	CLASS Visitor
-		METHOD apply (Lnet/minecraft/world/level/levelgen/DensityFunction;)Lnet/minecraft/world/level/levelgen/DensityFunction;
-			ARG 1 densityFunction
-		METHOD visitNoise (Lnet/minecraft/world/level/levelgen/DensityFunction$NoiseHolder;)Lnet/minecraft/world/level/levelgen/DensityFunction$NoiseHolder;
-			ARG 1 noiseHolder
+	CLASS ContextProvider
+		METHOD fillAllDirectly ([DLnet/minecraft/world/level/levelgen/DensityFunction;)V
+			ARG 1 values
+			ARG 2 function
+		METHOD forIndex (I)Lnet/minecraft/world/level/levelgen/DensityFunction$FunctionContext;
+			ARG 1 arrayIndex
 	CLASS NoiseHolder
 		METHOD <init> (Lnet/minecraft/core/Holder;)V
 			ARG 1 noiseData
@@ -23,9 +24,8 @@ CLASS net/minecraft/world/level/levelgen/DensityFunction
 			ARG 1 x
 			ARG 3 y
 			ARG 5 z
-	CLASS ContextProvider
-		METHOD fillAllDirectly ([DLnet/minecraft/world/level/levelgen/DensityFunction;)V
-			ARG 1 values
-			ARG 2 function
-		METHOD forIndex (I)Lnet/minecraft/world/level/levelgen/DensityFunction$FunctionContext;
-			ARG 1 arrayIndex
+	CLASS Visitor
+		METHOD apply (Lnet/minecraft/world/level/levelgen/DensityFunction;)Lnet/minecraft/world/level/levelgen/DensityFunction;
+			ARG 1 densityFunction
+		METHOD visitNoise (Lnet/minecraft/world/level/levelgen/DensityFunction$NoiseHolder;)Lnet/minecraft/world/level/levelgen/DensityFunction$NoiseHolder;
+			ARG 1 noiseHolder
