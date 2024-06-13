@@ -38,5 +38,5 @@ CLASS net/minecraft/server/level/ChunkTrackingView
 		ARG 1 viewDistance
 	CLASS Positioned
 		METHOD squareIntersects (Lnet/minecraft/server/level/ChunkTrackingView$Positioned;)Z
-			COMMENT Determines if another {@link ChunkTrackingView}'s bounds are within or equal to its own
+			COMMENT Determines if another {@link ChunkTrackingView}'s bounds intersects with its own
 			ARG 1 other
