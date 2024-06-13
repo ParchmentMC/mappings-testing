@@ -1,6 +1,4 @@
 CLASS net/minecraft/world/entity/monster/Illusioner
-	METHOD applyRaidBuffs (IZ)V
-		ARG 1 wave
 	METHOD getBoundingBoxForCulling ()Lnet/minecraft/world/phys/AABB;
 		COMMENT Gets the bounding box of this Entity, adjusted to take auxiliary entities into account (e.g. the tile contained by a minecart, such as a command block).
 	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
@@ -11,11 +9,11 @@ CLASS net/minecraft/world/entity/monster/Illusioner
 		COMMENT Attack the specified entity using a ranged attack.
 		ARG 1 target
 		ARG 2 distanceFactor
+	CLASS IllusionerMirrorSpellGoal
+		METHOD canUse ()Z
+			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 	CLASS IllusionerBlindnessSpellGoal
 		METHOD canUse ()Z
 			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 		METHOD start ()V
 			COMMENT Execute a one shot task or start executing a continuous task
-	CLASS IllusionerMirrorSpellGoal
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.

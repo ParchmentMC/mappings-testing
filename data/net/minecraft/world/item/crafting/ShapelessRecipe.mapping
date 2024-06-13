@@ -10,10 +10,6 @@ CLASS net/minecraft/world/item/crafting/ShapelessRecipe
 		ARG 2 height
 	METHOD getGroup ()Ljava/lang/String;
 		COMMENT Recipes with equal group are combined into one button in the recipe book
-	METHOD matches (Lnet/minecraft/world/inventory/CraftingContainer;Lnet/minecraft/world/level/Level;)Z
-		COMMENT Used to check if a recipe matches current crafting inventory
-		ARG 1 inv
-		ARG 2 level
 	CLASS Serializer
 		METHOD fromNetwork (Lnet/minecraft/network/RegistryFriendlyByteBuf;)Lnet/minecraft/world/item/crafting/ShapelessRecipe;
 			ARG 0 buffer

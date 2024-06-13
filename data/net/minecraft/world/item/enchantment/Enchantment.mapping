@@ -1,8 +1,4 @@
 CLASS net/minecraft/world/item/enchantment/Enchantment
-	FIELD descriptionId Ljava/lang/String;
-		COMMENT The descriptionId for the enchantment. Commonly used to create localization keys.
-	METHOD <init> (Lnet/minecraft/world/item/enchantment/Enchantment$EnchantmentDefinition;)V
-		ARG 1 definition
 	METHOD applyEffects (Ljava/util/List;Lnet/minecraft/world/level/storage/loot/LootContext;Ljava/util/function/Consumer;)V
 		ARG 0 effects
 		ARG 1 context
@@ -16,19 +12,10 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 		ARG 2 entity
 		ARG 3 origin
 		ARG 4 state
-	METHOD byId (I)Lnet/minecraft/world/item/enchantment/Enchantment;
-		COMMENT Gets an {@code Enchantment} from the registry using its internal numeric Id.
-		ARG 0 id
-			COMMENT The internal numeric id of the enchantment.
 	METHOD canEnchant (Lnet/minecraft/world/item/ItemStack;)Z
 		COMMENT Checks if the enchantment can be applied to a given ItemStack.
 		ARG 1 stack
 			COMMENT The ItemStack to test.
-	METHOD checkCompatibility (Lnet/minecraft/world/item/enchantment/Enchantment;)Z
-		COMMENT Checks if the enchantment can be applied with another enchantment. Being incompatible will prevent the two enchantments from being applied to the same item.
-		COMMENT @return Whether the two enchantments are compatible.
-		ARG 1 other
-			COMMENT The other enchantment to test compatibility with.
 	METHOD constantCost (I)Lnet/minecraft/world/item/enchantment/Enchantment$Cost;
 		ARG 0 cost
 	METHOD damageContext (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/entity/Entity;Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/world/level/storage/loot/LootContext;
@@ -53,32 +40,6 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 		ARG 5 maxCost
 		ARG 6 anvilCost
 		ARG 7 slots
-	METHOD definition (Lnet/minecraft/tags/TagKey;IILnet/minecraft/world/item/enchantment/Enchantment$Cost;Lnet/minecraft/world/item/enchantment/Enchantment$Cost;ILnet/minecraft/world/flag/FeatureFlagSet;[Lnet/minecraft/world/entity/EquipmentSlot;)Lnet/minecraft/world/item/enchantment/Enchantment$EnchantmentDefinition;
-		ARG 0 supportedItems
-		ARG 1 weight
-		ARG 2 maxLevel
-		ARG 3 minCost
-		ARG 4 maxCost
-		ARG 5 anvilCost
-		ARG 6 requiredFeatures
-		ARG 7 slots
-	METHOD definition (Lnet/minecraft/tags/TagKey;IILnet/minecraft/world/item/enchantment/Enchantment$Cost;Lnet/minecraft/world/item/enchantment/Enchantment$Cost;I[Lnet/minecraft/world/entity/EquipmentSlot;)Lnet/minecraft/world/item/enchantment/Enchantment$EnchantmentDefinition;
-		ARG 0 supportedItems
-		ARG 1 weight
-		ARG 2 maxLevel
-		ARG 3 minCost
-		ARG 4 maxCost
-		ARG 5 anvilCost
-		ARG 6 slots
-	METHOD definition (Lnet/minecraft/tags/TagKey;Lnet/minecraft/tags/TagKey;IILnet/minecraft/world/item/enchantment/Enchantment$Cost;Lnet/minecraft/world/item/enchantment/Enchantment$Cost;I[Lnet/minecraft/world/entity/EquipmentSlot;)Lnet/minecraft/world/item/enchantment/Enchantment$EnchantmentDefinition;
-		ARG 0 supportedItems
-		ARG 1 primaryItems
-		ARG 2 weight
-		ARG 3 maxLevel
-		ARG 4 minCost
-		ARG 5 maxCost
-		ARG 6 anvilCost
-		ARG 7 slots
 	METHOD doPostAttack (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/enchantment/EnchantedItemInUse;Lnet/minecraft/world/item/enchantment/EnchantmentTarget;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/damagesource/DamageSource;)V
 		ARG 1 level
 		ARG 2 enchantmentLevel
@@ -86,14 +47,6 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 		ARG 4 target
 		ARG 5 entity
 		ARG 6 damageSource
-	METHOD doPostAttack (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/Entity;I)V
-		COMMENT A hook that is called every time an entity with this enchantment attacks another entity.
-		ARG 1 attacker
-			COMMENT The user of the enchantment.
-		ARG 2 target
-			COMMENT The entity being attacked.
-		ARG 3 level
-			COMMENT The level of the enchantment.
 	METHOD doPostAttack (Lnet/minecraft/world/item/enchantment/TargetedConditionalEffect;Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/enchantment/EnchantedItemInUse;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/damagesource/DamageSource;)V
 		ARG 0 effect
 		ARG 1 level
@@ -101,18 +54,6 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 		ARG 3 item
 		ARG 4 entity
 		ARG 5 damageSource
-	METHOD doPostHurt (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/Entity;I)V
-		COMMENT A hook that is called every time an entity with this enchantment is attacked by another entity.
-		ARG 1 target
-			COMMENT The target with the enchantment.
-		ARG 2 attacker
-			COMMENT The entity that attacked the target.
-		ARG 3 level
-			COMMENT The level of the enchantment.
-	METHOD doPostItemStackHurt (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/Entity;I)V
-		ARG 1 attacker
-		ARG 2 target
-		ARG 3 level
 	METHOD dynamicCost (II)Lnet/minecraft/world/item/enchantment/Enchantment$Cost;
 		ARG 0 base
 		ARG 1 perLevel
@@ -123,24 +64,8 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 		ARG 1 enchantmentLevel
 		ARG 2 entity
 		ARG 3 origin
-	METHOD getDamageBonus (ILnet/minecraft/world/entity/EntityType;)F
-		ARG 1 level
-		ARG 2 creatureType
-	METHOD getDamageProtection (ILnet/minecraft/world/damagesource/DamageSource;)I
-		COMMENT Calculates the amount of additional damage protection to provide when a user is damaged.
-		ARG 1 level
-			COMMENT The level of the enchantment being used.
-		ARG 2 source
-			COMMENT The source of the damage.
-	METHOD getDescriptionId ()Ljava/lang/String;
-		COMMENT Gets the description Id of the enchantment. This is commonly used to create localization keys.
 	METHOD getEffects (Lnet/minecraft/core/component/DataComponentType;)Ljava/util/List;
 		ARG 1 component
-	METHOD getFullname (I)Lnet/minecraft/network/chat/Component;
-		COMMENT Gets the name of the enchantment with the level appended to the end. The game will attempt to convert the letter to roman numerals.
-		COMMENT @return The name of the enchantment with the level appended to the end.
-		ARG 1 level
-			COMMENT The level of the enchantment.
 	METHOD getFullname (Lnet/minecraft/core/Holder;I)Lnet/minecraft/network/chat/Component;
 		ARG 0 enchantment
 		ARG 1 level
@@ -153,23 +78,10 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 		ARG 1 level
 	METHOD getMinLevel ()I
 		COMMENT Gets the minimum level of the enchantment under normal circumstances such as the enchanting table. This limit is not strictly enforced and may be ignored through custom item NBT or other customizations.
-	METHOD getOrCreateDescriptionId ()Ljava/lang/String;
-		COMMENT Lazily initializes a {@code descriptionId} for an enchantment using the enchantment's registry name.
 	METHOD getSlotItems (Lnet/minecraft/world/entity/LivingEntity;)Ljava/util/Map;
 		COMMENT Creates a new map containing all items equipped by an entity in {@linkplain #slots slots that the enchantment cares about}. These items are not tested for having the enchantment.
 		ARG 1 entity
 			COMMENT The entity to collect equipment for.
-	METHOD isCompatibleWith (Lnet/minecraft/world/item/enchantment/Enchantment;)Z
-		COMMENT Checks if the enchantment is compatible with another enchantment.
-		COMMENT @return Whether both enchantments agree that they are compatible with each other.
-		ARG 1 other
-			COMMENT The other enchantment to test compatibility with.
-	METHOD isCurse ()Z
-		COMMENT Checks if the enchantment is considered a curse. These enchantments are treated as debuffs and can not be removed from items under normal circumstances.
-		COMMENT @return Whether the enchantment is a curse.
-	METHOD isDiscoverable ()Z
-		COMMENT Checks if the enchantment can be discovered by game mechanics which pull random enchantments from the enchantment registry.
-		COMMENT @return Whether the enchantment can be discovered.
 	METHOD isImmuneToDamage (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/entity/Entity;Lnet/minecraft/world/damagesource/DamageSource;)Z
 		ARG 1 level
 		ARG 2 enchantmentLevel
@@ -179,12 +91,6 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 		ARG 1 stack
 	METHOD isSupportedItem (Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 1 item
-	METHOD isTradeable ()Z
-		COMMENT Checks if the enchantment can be traded by NPCs like villagers.
-		COMMENT @return Whether this enchantment can be traded.
-	METHOD isTreasureOnly ()Z
-		COMMENT Checks if the enchantment should be considered a treasure enchantment. These enchantments can not be obtained using the enchantment table. The mending enchantment is an example of a treasure enchantment.
-		COMMENT @return Whether the enchantment is a treasure enchantment.
 	METHOD itemContext (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/level/storage/loot/LootContext;
 		ARG 0 level
 		ARG 1 enchantmentLevel
@@ -215,11 +121,6 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 		ARG 2 enchantmentLevel
 		ARG 3 tool
 		ARG 4 blockExperience
-	METHOD modifyCrossbowChargeTime (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/ItemStack;Lorg/apache/commons/lang3/mutable/MutableFloat;)V
-		ARG 1 level
-		ARG 2 enchantmentLevel
-		ARG 3 tool
-		ARG 4 crossbowChargeTime
 	METHOD modifyCrossbowChargeTime (Lnet/minecraft/util/RandomSource;ILorg/apache/commons/lang3/mutable/MutableFloat;)V
 		ARG 1 random
 		ARG 2 enchantmentLevel
@@ -323,12 +224,6 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 		ARG 3 tool
 		ARG 4 entity
 		ARG 5 tridentReturnToOwnerAcceleration
-	METHOD modifyTridentSpinAttackStrength (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/Entity;Lorg/apache/commons/lang3/mutable/MutableFloat;)V
-		ARG 1 level
-		ARG 2 enchantmentLevel
-		ARG 3 tool
-		ARG 4 entity
-		ARG 5 tridentSpinAttackStrength
 	METHOD modifyTridentSpinAttackStrength (Lnet/minecraft/util/RandomSource;ILorg/apache/commons/lang3/mutable/MutableFloat;)V
 		ARG 1 random
 		ARG 2 enchantmentLevel
@@ -338,12 +233,6 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 		ARG 2 random
 		ARG 3 enchantmentLevel
 		ARG 4 value
-	METHOD onHitBlock (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/enchantment/EnchantedItemInUse;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/phys/Vec3;)V
-		ARG 1 level
-		ARG 2 enchantmentLevel
-		ARG 3 item
-		ARG 4 entity
-		ARG 5 origin
 	METHOD onHitBlock (Lnet/minecraft/server/level/ServerLevel;ILnet/minecraft/world/item/enchantment/EnchantedItemInUse;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 level
 		ARG 2 enchantmentLevel
@@ -370,6 +259,11 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 		ARG 2 enchantmentLevel
 		ARG 3 item
 		ARG 4 entity
+	CLASS Cost
+		METHOD calculate (I)I
+			ARG 1 level
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
 	CLASS Builder
 		METHOD <init> (Lnet/minecraft/world/item/enchantment/Enchantment$EnchantmentDefinition;)V
 			ARG 1 definition
@@ -405,11 +299,6 @@ CLASS net/minecraft/world/item/enchantment/Enchantment
 		METHOD withSpecialEffect (Lnet/minecraft/core/component/DataComponentType;Ljava/lang/Object;)Lnet/minecraft/world/item/enchantment/Enchantment$Builder;
 			ARG 1 component
 			ARG 2 value
-	CLASS Cost
-		METHOD calculate (I)I
-			ARG 1 level
-		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
-			ARG 0 instance
 	CLASS EnchantmentDefinition
 		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 			ARG 0 instance

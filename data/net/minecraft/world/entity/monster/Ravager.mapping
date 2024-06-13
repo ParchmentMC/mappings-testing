@@ -1,8 +1,6 @@
 CLASS net/minecraft/world/entity/monster/Ravager
 	METHOD addAdditionalSaveData (Lnet/minecraft/nbt/CompoundTag;)V
 		ARG 1 compound
-	METHOD applyRaidBuffs (IZ)V
-		ARG 1 wave
 	METHOD blockedByShield (Lnet/minecraft/world/entity/LivingEntity;)V
 		ARG 1 entity
 	METHOD checkSpawnObstruction (Lnet/minecraft/world/level/LevelReader;)Z

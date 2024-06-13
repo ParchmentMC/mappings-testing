@@ -20,9 +20,6 @@ CLASS net/minecraft/network/chat/ChatTypeDecoration
 			ARG 3 id
 			ARG 4 name
 			ARG 5 selector
-		METHOD <init> (Ljava/lang/String;ILjava/lang/String;Lnet/minecraft/network/chat/ChatTypeDecoration$Parameter$Selector;)V
-			ARG 3 name
-			ARG 4 selector
 		METHOD lambda$static$0 (Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/ChatType$Bound;)Lnet/minecraft/network/chat/Component;
 			ARG 0 content
 			ARG 1 boundChatType

@@ -6,9 +6,6 @@ CLASS net/minecraft/client/renderer/entity/BoatRenderer
 		ARG 1 context
 		ARG 2 type
 		ARG 3 chestBoat
-	METHOD getTextureLocation (Lnet/minecraft/world/entity/vehicle/Boat$Type;Z)Ljava/lang/String;
-		ARG 0 type
-		ARG 1 chestBoat
 	METHOD getTextureLocation (Lnet/minecraft/world/entity/vehicle/Boat$Type;Z)Lnet/minecraft/resources/ResourceLocation;
 		ARG 0 type
 		ARG 1 chestBoat

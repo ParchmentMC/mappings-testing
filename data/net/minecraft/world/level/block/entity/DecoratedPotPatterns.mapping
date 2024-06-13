@@ -1,16 +1,10 @@
 CLASS net/minecraft/world/level/block/entity/DecoratedPotPatterns
-	METHOD bootstrap (Lnet/minecraft/core/Registry;)Ljava/lang/String;
-		ARG 0 registry
 	METHOD bootstrap (Lnet/minecraft/core/Registry;)Lnet/minecraft/world/level/block/entity/DecoratedPotPattern;
 		ARG 0 registry
 	METHOD create (Ljava/lang/String;)Lnet/minecraft/resources/ResourceKey;
 		ARG 0 name
 	METHOD getPatternFromItem (Lnet/minecraft/world/item/Item;)Lnet/minecraft/resources/ResourceKey;
 		ARG 0 item
-	METHOD getResourceKey (Lnet/minecraft/world/item/Item;)Lnet/minecraft/resources/ResourceKey;
-		ARG 0 item
-	METHOD location (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/resources/ResourceLocation;
-		ARG 0 key
 	METHOD register (Lnet/minecraft/core/Registry;Lnet/minecraft/resources/ResourceKey;Ljava/lang/String;)Lnet/minecraft/world/level/block/entity/DecoratedPotPattern;
 		ARG 0 registry
 		ARG 1 key

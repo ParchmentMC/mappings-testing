@@ -3,7 +3,3 @@ CLASS net/minecraft/world/item/crafting/SuspiciousStewRecipe
 		COMMENT Used to determine if this recipe can fit in a grid of the given width/height
 		ARG 1 width
 		ARG 2 height
-	METHOD matches (Lnet/minecraft/world/inventory/CraftingContainer;Lnet/minecraft/world/level/Level;)Z
-		COMMENT Used to check if a recipe matches current crafting inventory
-		ARG 1 inv
-		ARG 2 level

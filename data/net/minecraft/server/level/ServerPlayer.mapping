@@ -37,8 +37,6 @@ CLASS net/minecraft/server/level/ServerPlayer
 		ARG 1 gameType
 	METHOD canHarmPlayer (Lnet/minecraft/world/entity/player/Player;)Z
 		ARG 1 other
-	METHOD changeDimension (Lnet/minecraft/server/level/ServerLevel;)Lnet/minecraft/world/entity/Entity;
-		ARG 1 server
 	METHOD checkFallDamage (DZLnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)V
 		ARG 1 y
 		ARG 3 onGround
@@ -60,9 +58,6 @@ CLASS net/minecraft/server/level/ServerPlayer
 		ARG 1 player
 	METHOD createCommonSpawnInfo (Lnet/minecraft/server/level/ServerLevel;)Lnet/minecraft/network/protocol/game/CommonPlayerSpawnInfo;
 		ARG 1 level
-	METHOD createEndPlatform (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;)V
-		ARG 1 level
-		ARG 2 pos
 	METHOD crit (Lnet/minecraft/world/entity/Entity;)V
 		COMMENT Called when the entity is dealt a critical hit.
 		ARG 1 entityHit
@@ -93,13 +88,9 @@ CLASS net/minecraft/server/level/ServerPlayer
 		ARG 2 angle
 		ARG 3 forced
 		ARG 4 keepInventory
-	METHOD findRespawnPositionAndUseSpawnBlock (Z)Lnet/minecraft/world/level/portal/DimensionTransition;
-		ARG 1 keepInventory
 	METHOD findRespawnPositionAndUseSpawnBlock (ZLnet/minecraft/world/level/portal/DimensionTransition$PostDimensionTransition;)Lnet/minecraft/world/level/portal/DimensionTransition;
 		ARG 1 keepInventory
 		ARG 2 postDimensionTransition
-	METHOD fudgeSpawnLocation (Lnet/minecraft/server/level/ServerLevel;)V
-		ARG 1 level
 	METHOD getCoprime (I)I
 		ARG 1 spawnArea
 	METHOD getIpAddress ()Ljava/lang/String;
@@ -149,8 +140,6 @@ CLASS net/minecraft/server/level/ServerPlayer
 		ARG 5 z
 	METHOD nextContainerCounter ()V
 		COMMENT Gets the next window id to use.
-	METHOD onChangedBlock (Lnet/minecraft/core/BlockPos;)V
-		ARG 1 pos
 	METHOD onEffectRemoved (Lnet/minecraft/world/effect/MobEffectInstance;)V
 		ARG 1 effect
 	METHOD onEnchantmentPerformed (Lnet/minecraft/world/item/ItemStack;I)V

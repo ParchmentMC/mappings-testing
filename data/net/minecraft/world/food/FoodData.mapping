@@ -14,8 +14,6 @@ CLASS net/minecraft/world/food/FoodData
 		ARG 2 saturationLevelModifier
 	METHOD eat (Lnet/minecraft/world/food/FoodProperties;)V
 		ARG 1 foodProperties
-	METHOD eat (Lnet/minecraft/world/item/ItemStack;)V
-		ARG 1 stack
 	METHOD getFoodLevel ()I
 		COMMENT Get the player's food level.
 	METHOD getSaturationLevel ()F

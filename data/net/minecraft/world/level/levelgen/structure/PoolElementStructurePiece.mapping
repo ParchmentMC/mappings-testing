@@ -2,13 +2,6 @@ CLASS net/minecraft/world/level/levelgen/structure/PoolElementStructurePiece
 	METHOD <init> (Lnet/minecraft/world/level/levelgen/structure/pieces/StructurePieceSerializationContext;Lnet/minecraft/nbt/CompoundTag;)V
 		ARG 1 context
 		ARG 2 tag
-	METHOD <init> (Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplateManager;Lnet/minecraft/world/level/levelgen/structure/pools/StructurePoolElement;Lnet/minecraft/core/BlockPos;ILnet/minecraft/world/level/block/Rotation;Lnet/minecraft/world/level/levelgen/structure/BoundingBox;)V
-		ARG 1 structureTemplateManager
-		ARG 2 element
-		ARG 3 position
-		ARG 4 groundLevelDelta
-		ARG 5 rotation
-		ARG 6 box
 	METHOD <init> (Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplateManager;Lnet/minecraft/world/level/levelgen/structure/pools/StructurePoolElement;Lnet/minecraft/core/BlockPos;ILnet/minecraft/world/level/block/Rotation;Lnet/minecraft/world/level/levelgen/structure/BoundingBox;Lnet/minecraft/world/level/levelgen/structure/templatesystem/LiquidSettings;)V
 		ARG 1 structureTemplateManager
 		ARG 2 element

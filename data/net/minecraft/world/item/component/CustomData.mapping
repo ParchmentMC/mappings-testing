@@ -30,9 +30,6 @@ CLASS net/minecraft/world/item/component/CustomData
 		ARG 1 ops
 		ARG 2 encoder
 		ARG 3 value
-	METHOD update (Lcom/mojang/serialization/MapEncoder;Ljava/lang/Object;)Lcom/mojang/serialization/DataResult;
-		ARG 1 encoder
-		ARG 2 value
 	METHOD update (Ljava/util/function/Consumer;)Lnet/minecraft/world/item/component/CustomData;
 		ARG 1 updater
 	METHOD update (Lnet/minecraft/core/component/DataComponentType;Lnet/minecraft/world/item/ItemStack;Ljava/util/function/Consumer;)V

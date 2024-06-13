@@ -3,10 +3,6 @@ CLASS net/minecraft/world/effect/OozingMobEffect
 		ARG 1 category
 		ARG 2 color
 		ARG 3 spawnedCount
-	METHOD numberOfSlimesToSpawn (III)I
-		ARG 0 maxEntityCramming
-		ARG 1 nearbySlimes
-		ARG 2 spawnedCount
 	METHOD numberOfSlimesToSpawn (ILnet/minecraft/world/effect/OozingMobEffect$NearbySlimes;I)I
 		ARG 0 maxEntityCramming
 		ARG 1 nearbySlimes

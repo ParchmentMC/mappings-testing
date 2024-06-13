@@ -1,4 +1,0 @@
-CLASS net/minecraft/world/item/enchantment/BreachEnchantment
-	METHOD calculateArmorBreach (FF)F
-		ARG 0 enchantmentLevel
-		ARG 1 armorProtection

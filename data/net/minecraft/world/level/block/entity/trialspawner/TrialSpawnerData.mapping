@@ -45,8 +45,6 @@ CLASS net/minecraft/world/level/block/entity/trialspawner/TrialSpawnerData
 		ARG 1 level
 		ARG 2 config
 		ARG 3 players
-	METHOD lambda$resetAfterBecomingOminous$8 (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/Entity;)V
-		ARG 1 mob
 	METHOD lambda$static$7 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 0 instance
 	METHOD lowResolutionPosition (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;)J
@@ -61,9 +59,6 @@ CLASS net/minecraft/world/level/block/entity/trialspawner/TrialSpawnerData
 		ARG 3 entityType
 	METHOD transformBadOmenIntoTrialOmen (Lnet/minecraft/world/entity/player/Player;)V
 		ARG 0 player
-	METHOD transformBadOmenIntoTrialOmen (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/effect/MobEffectInstance;)V
-		ARG 1 player
-		ARG 2 effectInstance
 	METHOD tryDetectPlayers (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawner;)V
 		ARG 1 level
 		ARG 2 pos

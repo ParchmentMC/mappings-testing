@@ -9,8 +9,6 @@ CLASS net/minecraft/world/entity/animal/Ocelot
 		ARG 4 random
 	METHOD checkSpawnObstruction (Lnet/minecraft/world/level/LevelReader;)Z
 		ARG 1 level
-	METHOD doHurtTarget (Lnet/minecraft/world/entity/Entity;)Z
-		ARG 1 entity
 	METHOD getAmbientSoundInterval ()I
 		COMMENT Get number of ticks, at least during which the living entity will be silent.
 	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
@@ -30,6 +28,12 @@ CLASS net/minecraft/world/entity/animal/Ocelot
 		ARG 1 trusting
 	METHOD spawnTrustingParticles (Z)V
 		ARG 1 isTrusted
+	CLASS OcelotTemptGoal
+		METHOD <init> (Lnet/minecraft/world/entity/animal/Ocelot;DLjava/util/function/Predicate;Z)V
+			ARG 1 ocelot
+			ARG 2 speedModifier
+			ARG 4 items
+			ARG 5 canScare
 	CLASS OcelotAvoidEntityGoal
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Ocelot;Ljava/lang/Class;FDD)V
 			ARG 1 ocelot
@@ -41,9 +45,3 @@ CLASS net/minecraft/world/entity/animal/Ocelot
 			COMMENT Returns whether an in-progress EntityAIBase should continue executing
 		METHOD canUse ()Z
 			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-	CLASS OcelotTemptGoal
-		METHOD <init> (Lnet/minecraft/world/entity/animal/Ocelot;DLjava/util/function/Predicate;Z)V
-			ARG 1 ocelot
-			ARG 2 speedModifier
-			ARG 4 items
-			ARG 5 canScare

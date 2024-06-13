@@ -81,8 +81,6 @@ CLASS net/minecraft/world/entity/animal/horse/AbstractHorse
 		ARG 1 addedTemper
 	METHOD onClimbable ()Z
 		COMMENT Returns {@code true} if this entity should move as if it were on a ladder (either because it's actually on a ladder, or for AI reasons)
-	METHOD onLeashDistance (F)V
-		ARG 1 distance
 	METHOD onPlayerJump (I)V
 		ARG 1 jumpPower
 	METHOD playGallopSound (Lnet/minecraft/world/level/block/SoundType;)V

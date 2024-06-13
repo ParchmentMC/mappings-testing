@@ -20,14 +20,14 @@ CLASS net/minecraft/core/HolderSet
 		ARG 1 index
 	METHOD getRandomElement (Lnet/minecraft/util/RandomSource;)Ljava/util/Optional;
 		ARG 1 random
-	CLASS Direct
-		METHOD <init> (Ljava/util/List;)V
-			ARG 1 contents
-		METHOD equals (Ljava/lang/Object;)Z
-			ARG 1 other
 	CLASS Named
 		METHOD <init> (Lnet/minecraft/core/HolderOwner;Lnet/minecraft/tags/TagKey;)V
 			ARG 1 owner
 			ARG 2 key
 		METHOD bind (Ljava/util/List;)V
 			ARG 1 contents
+	CLASS Direct
+		METHOD <init> (Ljava/util/List;)V
+			ARG 1 contents
+		METHOD equals (Ljava/lang/Object;)Z
+			ARG 1 other

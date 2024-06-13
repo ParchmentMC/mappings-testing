@@ -1,3 +1,0 @@
-CLASS net/minecraft/world/entity/ambient/AmbientCreature
-	METHOD canBeLeashed (Lnet/minecraft/world/entity/player/Player;)Z
-		ARG 1 player

@@ -11,22 +11,15 @@ CLASS net/minecraft/world/entity/decoration/ArmorStand
 	METHOD brokenByAnything (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/damagesource/DamageSource;)V
 		ARG 1 level
 		ARG 2 damageSource
-	METHOD brokenByAnything (Lnet/minecraft/world/damagesource/DamageSource;)V
-		ARG 1 damageSource
 	METHOD brokenByPlayer (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/damagesource/DamageSource;)V
 		ARG 1 level
 		ARG 2 damageSource
-	METHOD brokenByPlayer (Lnet/minecraft/world/damagesource/DamageSource;)V
-		ARG 1 damageSource
 	METHOD canTakeItem (Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 1 itemstack
 	METHOD causeDamage (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/damagesource/DamageSource;F)V
 		ARG 1 level
 		ARG 2 damageSource
 		ARG 3 damageAmount
-	METHOD causeDamage (Lnet/minecraft/world/damagesource/DamageSource;F)V
-		ARG 1 damageSource
-		ARG 2 amount
 	METHOD doPush (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 entity
 	METHOD getClickedSlot (Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/world/entity/EquipmentSlot;

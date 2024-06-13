@@ -6,8 +6,6 @@ CLASS net/minecraft/world/item/enchantment/ItemEnchantments
 		ARG 1 other
 	METHOD getLevel (Lnet/minecraft/core/Holder;)I
 		ARG 1 enchantment
-	METHOD getLevel (Lnet/minecraft/world/item/enchantment/Enchantment;)I
-		ARG 1 enchantment
 	METHOD getTagOrEmpty (Lnet/minecraft/core/HolderLookup$Provider;Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/tags/TagKey;)Lnet/minecraft/core/HolderSet;
 		ARG 0 registries
 		ARG 1 registryKey
@@ -21,19 +19,11 @@ CLASS net/minecraft/world/item/enchantment/ItemEnchantments
 			ARG 1 enchantments
 		METHOD getLevel (Lnet/minecraft/core/Holder;)I
 			ARG 1 enchantment
-		METHOD getLevel (Lnet/minecraft/world/item/enchantment/Enchantment;)I
-			ARG 1 enchantment
 		METHOD removeIf (Ljava/util/function/Predicate;)V
 			ARG 1 predicate
 		METHOD set (Lnet/minecraft/core/Holder;I)V
 			ARG 1 enchantment
 			ARG 2 level
-		METHOD set (Lnet/minecraft/world/item/enchantment/Enchantment;I)V
-			ARG 1 enchantment
-			ARG 2 level
 		METHOD upgrade (Lnet/minecraft/core/Holder;I)V
-			ARG 1 enchantment
-			ARG 2 level
-		METHOD upgrade (Lnet/minecraft/world/item/enchantment/Enchantment;I)V
 			ARG 1 enchantment
 			ARG 2 level

@@ -3,8 +3,6 @@ CLASS net/minecraft/world/entity/monster/hoglin/Hoglin
 		ARG 1 compound
 	METHOD blockedByShield (Lnet/minecraft/world/entity/LivingEntity;)V
 		ARG 1 entity
-	METHOD canBeLeashed (Lnet/minecraft/world/entity/player/Player;)Z
-		ARG 1 player
 	METHOD checkHoglinSpawnRules (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z
 		ARG 0 hoglin
 		ARG 1 level

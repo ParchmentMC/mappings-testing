@@ -31,8 +31,6 @@ CLASS net/minecraft/world/entity/LivingEntity
 	METHOD breakItem (Lnet/minecraft/world/item/ItemStack;)V
 		COMMENT Renders broken item particles using the given ItemStack
 		ARG 1 stack
-	METHOD broadcastBreakEvent (Lnet/minecraft/world/entity/EquipmentSlot;)V
-		ARG 1 slot
 	METHOD calculateEntityAnimation (Z)V
 		ARG 1 includeHeight
 	METHOD calculateFallDamage (FF)I
@@ -93,19 +91,10 @@ CLASS net/minecraft/world/entity/LivingEntity
 	METHOD dropAllDeathLoot (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/damagesource/DamageSource;)V
 		ARG 1 level
 		ARG 2 damageSource
-	METHOD dropAllDeathLoot (Lnet/minecraft/world/damagesource/DamageSource;)V
-		ARG 1 damageSource
 	METHOD dropCustomDeathLoot (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/damagesource/DamageSource;Z)V
 		ARG 1 level
 		ARG 2 damageSource
 		ARG 3 recentlyHit
-	METHOD dropCustomDeathLoot (Lnet/minecraft/world/damagesource/DamageSource;IZ)V
-		ARG 1 damageSource
-		ARG 2 looting
-		ARG 3 hitByPlayer
-	METHOD dropCustomDeathLoot (Lnet/minecraft/world/damagesource/DamageSource;Z)V
-		ARG 1 damageSource
-		ARG 2 canDropEquipment
 	METHOD dropExperience (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 entity
 	METHOD dropFromLootTable (Lnet/minecraft/world/damagesource/DamageSource;Z)V
@@ -172,7 +161,6 @@ CLASS net/minecraft/world/entity/LivingEntity
 	METHOD getEquipmentSlot (I)Lnet/minecraft/world/entity/EquipmentSlot;
 		ARG 0 index
 	METHOD getEquipmentSlotForItem (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/entity/EquipmentSlot;
-		ARG 0 item
 		ARG 1 stack
 	METHOD getExperienceReward (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/Entity;)I
 		ARG 1 level
@@ -318,8 +306,6 @@ CLASS net/minecraft/world/entity/LivingEntity
 		ARG 1 sound
 	METHOD onAttributeUpdated (Lnet/minecraft/core/Holder;)V
 		ARG 1 attribute
-	METHOD onChangedBlock (Lnet/minecraft/core/BlockPos;)V
-		ARG 1 pos
 	METHOD onChangedBlock (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;)V
 		ARG 1 level
 		ARG 2 pos
@@ -440,8 +426,6 @@ CLASS net/minecraft/world/entity/LivingEntity
 		COMMENT Entity won't drop experience points if this returns false
 	METHOD shouldDropLoot ()Z
 		COMMENT Entity won't drop items if this returns false
-	METHOD shouldRemoveSoulSpeed (Lnet/minecraft/world/level/block/state/BlockState;)Z
-		ARG 1 state
 	METHOD spawnItemParticles (Lnet/minecraft/world/item/ItemStack;I)V
 		ARG 1 stack
 		ARG 2 amount

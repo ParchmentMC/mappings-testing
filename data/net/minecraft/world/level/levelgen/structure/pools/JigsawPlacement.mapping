@@ -1,16 +1,4 @@
 CLASS net/minecraft/world/level/levelgen/structure/pools/JigsawPlacement
-	METHOD addPieces (Lnet/minecraft/world/level/levelgen/RandomState;IZLnet/minecraft/world/level/chunk/ChunkGenerator;Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplateManager;Lnet/minecraft/world/level/LevelHeightAccessor;Lnet/minecraft/util/RandomSource;Lnet/minecraft/core/Registry;Lnet/minecraft/world/level/levelgen/structure/PoolElementStructurePiece;Ljava/util/List;Lnet/minecraft/world/phys/shapes/VoxelShape;Lnet/minecraft/world/level/levelgen/structure/pools/alias/PoolAliasLookup;)V
-		ARG 0 randomState
-		ARG 1 maxDepth
-		ARG 2 useExpansionHack
-		ARG 3 chunkGenerator
-		ARG 4 structureTemplateManager
-		ARG 5 level
-		ARG 6 random
-		ARG 7 pools
-		ARG 9 pieces
-		ARG 10 free
-		ARG 11 aliasLookup
 	METHOD addPieces (Lnet/minecraft/world/level/levelgen/RandomState;IZLnet/minecraft/world/level/chunk/ChunkGenerator;Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplateManager;Lnet/minecraft/world/level/LevelHeightAccessor;Lnet/minecraft/util/RandomSource;Lnet/minecraft/core/Registry;Lnet/minecraft/world/level/levelgen/structure/PoolElementStructurePiece;Ljava/util/List;Lnet/minecraft/world/phys/shapes/VoxelShape;Lnet/minecraft/world/level/levelgen/structure/pools/alias/PoolAliasLookup;Lnet/minecraft/world/level/levelgen/structure/templatesystem/LiquidSettings;)V
 		ARG 0 randomState
 		ARG 1 maxDepth
@@ -25,38 +13,6 @@ CLASS net/minecraft/world/level/levelgen/structure/pools/JigsawPlacement
 		ARG 10 free
 		ARG 11 aliasLookup
 		ARG 12 liquidSettings
-	METHOD addPieces (Lnet/minecraft/world/level/levelgen/structure/Structure$GenerationContext;Lnet/minecraft/core/Holder;Ljava/util/Optional;ILnet/minecraft/core/BlockPos;ZLjava/util/Optional;ILnet/minecraft/world/level/levelgen/structure/pools/alias/PoolAliasLookup;)Ljava/util/Optional;
-		ARG 0 context
-		ARG 1 startPool
-		ARG 2 startJigsawName
-		ARG 3 maxDepth
-		ARG 4 pos
-		ARG 5 useExpansionHack
-		ARG 6 projectStartToHeightmap
-		ARG 7 maxDistanceFromCenter
-		ARG 8 aliasLookup
-	METHOD addPieces (Lnet/minecraft/world/level/levelgen/structure/Structure$GenerationContext;Lnet/minecraft/core/Holder;Ljava/util/Optional;ILnet/minecraft/core/BlockPos;ZLjava/util/Optional;ILnet/minecraft/world/level/levelgen/structure/pools/alias/PoolAliasLookup;I)Ljava/util/Optional;
-		ARG 0 context
-		ARG 1 startPool
-		ARG 2 startJigsawName
-		ARG 3 maxDepth
-		ARG 4 pos
-		ARG 5 useExpansionHack
-		ARG 6 projectStartToHeightmap
-		ARG 7 maxDistanceFromCenter
-		ARG 8 aliasLookup
-		ARG 9 dimensionPadding
-	METHOD addPieces (Lnet/minecraft/world/level/levelgen/structure/Structure$GenerationContext;Lnet/minecraft/core/Holder;Ljava/util/Optional;ILnet/minecraft/core/BlockPos;ZLjava/util/Optional;ILnet/minecraft/world/level/levelgen/structure/pools/alias/PoolAliasLookup;Lnet/minecraft/world/level/levelgen/structure/pools/DimensionPadding;)Ljava/util/Optional;
-		ARG 0 generationContext
-		ARG 1 startPool
-		ARG 2 startJigsawName
-		ARG 3 maxDepth
-		ARG 4 pos
-		ARG 5 useExpansionHack
-		ARG 6 projectStartToHeightmap
-		ARG 7 maxDistanceFromCenter
-		ARG 8 aliasLookup
-		ARG 9 dimensionPadding
 	METHOD addPieces (Lnet/minecraft/world/level/levelgen/structure/Structure$GenerationContext;Lnet/minecraft/core/Holder;Ljava/util/Optional;ILnet/minecraft/core/BlockPos;ZLjava/util/Optional;ILnet/minecraft/world/level/levelgen/structure/pools/alias/PoolAliasLookup;Lnet/minecraft/world/level/levelgen/structure/pools/DimensionPadding;Lnet/minecraft/world/level/levelgen/structure/templatesystem/LiquidSettings;)Ljava/util/Optional;
 		ARG 0 context
 		ARG 1 startPool
@@ -83,11 +39,6 @@ CLASS net/minecraft/world/level/levelgen/structure/pools/JigsawPlacement
 		ARG 3 rotation
 		ARG 4 structureTemplateManager
 		ARG 5 random
-	CLASS PieceState
-		METHOD <init> (Lnet/minecraft/world/level/levelgen/structure/PoolElementStructurePiece;Lorg/apache/commons/lang3/mutable/MutableObject;I)V
-			ARG 1 piece
-			ARG 2 free
-			ARG 3 depth
 	CLASS Placer
 		METHOD <init> (Lnet/minecraft/core/Registry;ILnet/minecraft/world/level/chunk/ChunkGenerator;Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplateManager;Ljava/util/List;Lnet/minecraft/util/RandomSource;)V
 			ARG 1 pools
@@ -99,14 +50,6 @@ CLASS net/minecraft/world/level/levelgen/structure/pools/JigsawPlacement
 		METHOD readPoolKey (Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate$StructureBlockInfo;Lnet/minecraft/world/level/levelgen/structure/pools/alias/PoolAliasLookup;)Lnet/minecraft/resources/ResourceKey;
 			ARG 0 blockInfo
 			ARG 1 aliasLookup
-		METHOD tryPlacingChildren (Lnet/minecraft/world/level/levelgen/structure/PoolElementStructurePiece;Lorg/apache/commons/lang3/mutable/MutableObject;IZLnet/minecraft/world/level/LevelHeightAccessor;Lnet/minecraft/world/level/levelgen/RandomState;Lnet/minecraft/world/level/levelgen/structure/pools/alias/PoolAliasLookup;)V
-			ARG 1 piece
-			ARG 2 free
-			ARG 3 depth
-			ARG 4 useExpansionHack
-			ARG 5 level
-			ARG 6 randomState
-			ARG 7 poolAliasLookup
 		METHOD tryPlacingChildren (Lnet/minecraft/world/level/levelgen/structure/PoolElementStructurePiece;Lorg/apache/commons/lang3/mutable/MutableObject;IZLnet/minecraft/world/level/LevelHeightAccessor;Lnet/minecraft/world/level/levelgen/RandomState;Lnet/minecraft/world/level/levelgen/structure/pools/alias/PoolAliasLookup;Lnet/minecraft/world/level/levelgen/structure/templatesystem/LiquidSettings;)V
 			ARG 1 piece
 			ARG 2 free
@@ -116,3 +59,8 @@ CLASS net/minecraft/world/level/levelgen/structure/pools/JigsawPlacement
 			ARG 6 random
 			ARG 7 poolAliasLookup
 			ARG 8 liquidSettings
+	CLASS PieceState
+		METHOD <init> (Lnet/minecraft/world/level/levelgen/structure/PoolElementStructurePiece;Lorg/apache/commons/lang3/mutable/MutableObject;I)V
+			ARG 1 piece
+			ARG 2 free
+			ARG 3 depth

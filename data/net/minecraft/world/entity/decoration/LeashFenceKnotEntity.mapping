@@ -20,9 +20,6 @@ CLASS net/minecraft/world/entity/decoration/LeashFenceKnotEntity
 		ARG 1 compound
 	METHOD recalculateBoundingBox ()V
 		COMMENT Updates the entity bounding box based on current facing
-	METHOD setDirection (Lnet/minecraft/core/Direction;)V
-		COMMENT Updates facing and bounding box based on it
-		ARG 1 facingDirection
 	METHOD shouldRenderAtSqrDistance (D)Z
 		COMMENT Checks if the entity is in range to render.
 		ARG 1 distance

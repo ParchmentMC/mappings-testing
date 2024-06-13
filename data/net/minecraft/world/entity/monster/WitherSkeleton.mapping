@@ -3,13 +3,5 @@ CLASS net/minecraft/world/entity/monster/WitherSkeleton
 		ARG 1 potioneffect
 	METHOD doHurtTarget (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 1 entity
-	METHOD dropCustomDeathLoot (Lnet/minecraft/world/damagesource/DamageSource;IZ)V
-		ARG 1 source
-		ARG 2 looting
-		ARG 3 recentlyHit
-	METHOD getArrow (Lnet/minecraft/world/item/ItemStack;F)Lnet/minecraft/world/entity/projectile/AbstractArrow;
-		COMMENT Fires an arrow
-		ARG 1 arrowStack
-		ARG 2 distanceFactor
 	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
 		ARG 1 damageSource

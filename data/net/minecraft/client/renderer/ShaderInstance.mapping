@@ -9,8 +9,6 @@ CLASS net/minecraft/client/renderer/ShaderInstance
 		ARG 2 name
 	METHOD getUniform (Ljava/lang/String;)Lcom/mojang/blaze3d/shaders/Uniform;
 		ARG 1 name
-	METHOD parseBlendNode (Lcom/google/gson/JsonObject;)Lcom/mojang/blaze3d/shaders/BlendMode;
-		ARG 0 json
 	METHOD parseSamplerNode (Lcom/google/gson/JsonElement;)V
 		ARG 1 json
 	METHOD parseUniformNode (Lcom/google/gson/JsonElement;)V

@@ -8,9 +8,6 @@ CLASS net/minecraft/world/entity/ai/attributes/AttributeSupplier
 		ARG 1 attribute
 	METHOD getBaseValue (Lnet/minecraft/core/Holder;)D
 		ARG 1 attribute
-	METHOD getModifierValue (Lnet/minecraft/core/Holder;Ljava/util/UUID;)D
-		ARG 1 attribute
-		ARG 2 uuid
 	METHOD getModifierValue (Lnet/minecraft/core/Holder;Lnet/minecraft/resources/ResourceLocation;)D
 		ARG 1 attribute
 		ARG 2 id
@@ -18,9 +15,6 @@ CLASS net/minecraft/world/entity/ai/attributes/AttributeSupplier
 		ARG 1 attribute
 	METHOD hasAttribute (Lnet/minecraft/core/Holder;)Z
 		ARG 1 attribute
-	METHOD hasModifier (Lnet/minecraft/core/Holder;Ljava/util/UUID;)Z
-		ARG 1 attribute
-		ARG 2 uuid
 	METHOD hasModifier (Lnet/minecraft/core/Holder;Lnet/minecraft/resources/ResourceLocation;)Z
 		ARG 1 attribute
 		ARG 2 id

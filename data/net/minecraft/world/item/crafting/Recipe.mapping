@@ -1,7 +1,4 @@
 CLASS net/minecraft/world/item/crafting/Recipe
-	METHOD assemble (Lnet/minecraft/world/Container;Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/world/item/ItemStack;
-		ARG 1 craftingContainer
-		ARG 2 registries
 	METHOD assemble (Lnet/minecraft/world/item/crafting/RecipeInput;Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/world/item/ItemStack;
 		ARG 1 input
 		ARG 2 registries
@@ -11,8 +8,6 @@ CLASS net/minecraft/world/item/crafting/Recipe
 		ARG 2 height
 	METHOD getGroup ()Ljava/lang/String;
 		COMMENT Recipes with equal group are combined into one button in the recipe book
-	METHOD getRemainingItems (Lnet/minecraft/world/Container;)Lnet/minecraft/core/NonNullList;
-		ARG 1 container
 	METHOD getRemainingItems (Lnet/minecraft/world/item/crafting/RecipeInput;)Lnet/minecraft/core/NonNullList;
 		ARG 1 input
 	METHOD getResultItem (Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/world/item/ItemStack;
@@ -21,10 +16,6 @@ CLASS net/minecraft/world/item/crafting/Recipe
 		COMMENT If true, this recipe does not appear in the recipe book and does not respect recipe unlocking (and the doLimitedCrafting gamerule)
 	METHOD lambda$isIncomplete$0 (Lnet/minecraft/world/item/crafting/Ingredient;)Z
 		ARG 0 ingredient
-	METHOD matches (Lnet/minecraft/world/Container;Lnet/minecraft/world/level/Level;)Z
-		COMMENT Used to check if a recipe matches current crafting inventory
-		ARG 1 container
-		ARG 2 level
 	METHOD matches (Lnet/minecraft/world/item/crafting/RecipeInput;Lnet/minecraft/world/level/Level;)Z
 		ARG 1 input
 		ARG 2 level

@@ -30,8 +30,5 @@ CLASS net/minecraft/world/entity/decoration/Painting
 		ARG 1 compound
 	METHOD setVariant (Lnet/minecraft/core/Holder;)V
 		ARG 1 variant
-	METHOD storeVariant (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/core/Holder;)V
-		ARG 0 tag
-		ARG 1 variant
 	METHOD variantArea (Lnet/minecraft/core/Holder;)I
 		ARG 0 variant

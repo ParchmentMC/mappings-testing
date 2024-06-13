@@ -9,7 +9,3 @@ CLASS net/minecraft/world/entity/PathfinderMob
 		ARG 2 level
 	METHOD isPathFinding ()Z
 		COMMENT Returns whether the entity got a {@link net.minecraft.world.level.pathfinder.Path}.
-	METHOD onLeashDistance (F)V
-		ARG 1 distance
-	METHOD tickLeash ()V
-		COMMENT Applies logic related to leashes, for example dragging the entity or breaking the leash.

@@ -9,19 +9,10 @@ CLASS net/minecraft/client/renderer/entity/ItemRenderer
 		ARG 0 bufferSource
 		ARG 1 renderType
 		ARG 2 hasFoil
-	METHOD getArmorFoilBuffer (Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/renderer/RenderType;ZZ)Lcom/mojang/blaze3d/vertex/VertexConsumer;
-		ARG 0 buffer
-		ARG 1 renderType
-		ARG 2 noEntity
-		ARG 3 withGlint
 	METHOD getCompassFoilBuffer (Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/renderer/RenderType;Lcom/mojang/blaze3d/vertex/PoseStack$Pose;)Lcom/mojang/blaze3d/vertex/VertexConsumer;
 		ARG 0 bufferSource
 		ARG 1 renderType
 		ARG 2 pose
-	METHOD getCompassFoilBufferDirect (Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/renderer/RenderType;Lcom/mojang/blaze3d/vertex/PoseStack$Pose;)Lcom/mojang/blaze3d/vertex/VertexConsumer;
-		ARG 0 buffer
-		ARG 1 renderType
-		ARG 2 matrixEntry
 	METHOD getFoilBuffer (Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/renderer/RenderType;ZZ)Lcom/mojang/blaze3d/vertex/VertexConsumer;
 		ARG 0 bufferSource
 		ARG 1 renderType

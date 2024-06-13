@@ -1,3 +1,0 @@
-CLASS net/minecraft/world/level/chunk/status/ToFullChunk
-	METHOD apply (Lnet/minecraft/world/level/chunk/ChunkAccess;)Ljava/util/concurrent/CompletableFuture;
-		ARG 1 chunk

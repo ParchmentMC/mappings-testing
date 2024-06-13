@@ -1,4 +1,0 @@
-CLASS net/minecraft/world/item/enchantment/WindBurstEnchantment
-	CLASS WindBurstEnchantmentDamageCalculator
-		METHOD <init> (F)V
-			ARG 1 knockbackPower

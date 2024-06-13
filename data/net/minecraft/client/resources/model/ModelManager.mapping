@@ -18,12 +18,6 @@ CLASS net/minecraft/client/resources/model/ModelManager
 		ARG 0 loadedBlockStates
 	METHOD lambda$loadBlockStates$14 (Ljava/util/concurrent/Executor;Ljava/util/Map;)Ljava/util/concurrent/CompletionStage;
 		ARG 1 blockStateResources
-	METHOD lambda$loadModels$15 (Ljava/util/Map;Lcom/google/common/collect/Multimap;Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/client/resources/model/Material;)Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;
-		ARG 2 path
-		ARG 3 material
-	METHOD lambda$loadModels$17 (Lnet/minecraft/resources/ResourceLocation;Ljava/util/Collection;)V
-		ARG 0 path
-		ARG 1 material
 	METHOD lambda$loadModels$18 (Ljava/util/Map;Lnet/minecraft/client/resources/model/BakedModel;Ljava/util/Map;Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 3 possibleState
 	METHOD lambda$reload$0 (Lnet/minecraft/util/profiling/ProfilerFiller;Ljava/util/Map;Ljava/util/Map;)Lnet/minecraft/client/resources/model/ModelBakery;

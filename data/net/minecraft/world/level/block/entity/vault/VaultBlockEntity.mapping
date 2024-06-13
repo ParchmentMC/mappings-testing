@@ -75,10 +75,6 @@ CLASS net/minecraft/world/level/block/entity/vault/VaultBlockEntity
 		METHOD isValidToInsert (Lnet/minecraft/world/level/block/entity/vault/VaultConfig;Lnet/minecraft/world/item/ItemStack;)Z
 			ARG 0 config
 			ARG 1 stack
-		METHOD playInsertFailSound (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/block/entity/vault/VaultServerData;Lnet/minecraft/core/BlockPos;)V
-			ARG 0 level
-			ARG 1 serverData
-			ARG 2 pos
 		METHOD playInsertFailSound (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/block/entity/vault/VaultServerData;Lnet/minecraft/core/BlockPos;Lnet/minecraft/sounds/SoundEvent;)V
 			ARG 0 level
 			ARG 1 serverData

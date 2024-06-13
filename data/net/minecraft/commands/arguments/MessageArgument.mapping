@@ -19,6 +19,14 @@ CLASS net/minecraft/commands/arguments/MessageArgument
 		ARG 0 callback
 		ARG 1 source
 		ARG 2 message
+	CLASS Part
+		METHOD <init> (IILnet/minecraft/commands/arguments/selector/EntitySelector;)V
+			ARG 1 start
+			ARG 2 end
+			ARG 3 selector
+		METHOD toComponent (Lnet/minecraft/commands/CommandSourceStack;)Lnet/minecraft/network/chat/Component;
+			COMMENT Runs the selector and returns the component produced by it. This method does not actually appear to ever return null.
+			ARG 1 source
 	CLASS Message
 		METHOD <init> (Ljava/lang/String;[Lnet/minecraft/commands/arguments/MessageArgument$Part;)V
 			ARG 1 text
@@ -33,11 +41,3 @@ CLASS net/minecraft/commands/arguments/MessageArgument
 			COMMENT Converts this message into a text component, replacing any selectors in the text with the actual evaluated selector.
 			ARG 1 source
 			ARG 2 allowSelectors
-	CLASS Part
-		METHOD <init> (IILnet/minecraft/commands/arguments/selector/EntitySelector;)V
-			ARG 1 start
-			ARG 2 end
-			ARG 3 selector
-		METHOD toComponent (Lnet/minecraft/commands/CommandSourceStack;)Lnet/minecraft/network/chat/Component;
-			COMMENT Runs the selector and returns the component produced by it. This method does not actually appear to ever return null.
-			ARG 1 source

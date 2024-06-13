@@ -4,6 +4,3 @@ CLASS net/minecraft/server/network/ServerStatusPacketListenerImpl
 		ARG 2 connection
 	METHOD handleStatusRequest (Lnet/minecraft/network/protocol/status/ServerboundStatusRequestPacket;)V
 		ARG 1 packet
-	METHOD onDisconnect (Lnet/minecraft/network/chat/Component;)V
-		COMMENT Invoked when disconnecting, the parameter is a ChatComponent describing the reason for termination
-		ARG 1 reason

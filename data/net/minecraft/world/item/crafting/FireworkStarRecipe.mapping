@@ -5,7 +5,3 @@ CLASS net/minecraft/world/item/crafting/FireworkStarRecipe
 		ARG 2 height
 	METHOD lambda$static$0 (Ljava/util/HashMap;)V
 		ARG 0 shapeMap
-	METHOD matches (Lnet/minecraft/world/inventory/CraftingContainer;Lnet/minecraft/world/level/Level;)Z
-		COMMENT Used to check if a recipe matches current crafting inventory
-		ARG 1 inv
-		ARG 2 level

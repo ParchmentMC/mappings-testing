@@ -24,16 +24,12 @@ CLASS net/minecraft/world/level/levelgen/structure/pools/StructurePoolElement
 		ARG 6 box
 	METHOD lambda$empty$0 (Lnet/minecraft/world/level/levelgen/structure/pools/StructureTemplatePool$Projection;)Lnet/minecraft/world/level/levelgen/structure/pools/EmptyPoolElement;
 		ARG 0 projection
-	METHOD lambda$feature$5 (Lnet/minecraft/core/Holder;Lnet/minecraft/world/level/levelgen/structure/pools/StructureTemplatePool$Projection;)Lnet/minecraft/world/level/levelgen/structure/pools/FeaturePoolElement;
-		ARG 1 projection
 	METHOD lambda$feature$7 (Lnet/minecraft/core/Holder;Lnet/minecraft/world/level/levelgen/structure/pools/StructureTemplatePool$Projection;)Lnet/minecraft/world/level/levelgen/structure/pools/FeaturePoolElement;
 		ARG 1 projection
 	METHOD lambda$legacy$1 (Ljava/lang/String;Lnet/minecraft/world/level/levelgen/structure/pools/StructureTemplatePool$Projection;)Lnet/minecraft/world/level/levelgen/structure/pools/LegacySinglePoolElement;
 		ARG 1 projection
 	METHOD lambda$legacy$2 (Ljava/lang/String;Lnet/minecraft/core/Holder;Lnet/minecraft/world/level/levelgen/structure/pools/StructureTemplatePool$Projection;)Lnet/minecraft/world/level/levelgen/structure/pools/LegacySinglePoolElement;
 		ARG 2 projection
-	METHOD lambda$list$7 (Ljava/util/List;Lnet/minecraft/world/level/levelgen/structure/pools/StructureTemplatePool$Projection;)Lnet/minecraft/world/level/levelgen/structure/pools/ListPoolElement;
-		ARG 1 projection
 	METHOD lambda$list$9 (Ljava/util/List;Lnet/minecraft/world/level/levelgen/structure/pools/StructureTemplatePool$Projection;)Lnet/minecraft/world/level/levelgen/structure/pools/ListPoolElement;
 		ARG 1 projection
 	METHOD lambda$single$3 (Ljava/lang/String;Lnet/minecraft/world/level/levelgen/structure/pools/StructureTemplatePool$Projection;)Lnet/minecraft/world/level/levelgen/structure/pools/SinglePoolElement;
@@ -63,17 +59,6 @@ CLASS net/minecraft/world/level/levelgen/structure/pools/StructurePoolElement
 		ARG 9 random
 		ARG 10 liquidSettings
 		ARG 11 keepJigsaws
-	METHOD place (Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplateManager;Lnet/minecraft/world/level/WorldGenLevel;Lnet/minecraft/world/level/StructureManager;Lnet/minecraft/world/level/chunk/ChunkGenerator;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Rotation;Lnet/minecraft/world/level/levelgen/structure/BoundingBox;Lnet/minecraft/util/RandomSource;Z)Z
-		ARG 1 structureTemplateManager
-		ARG 2 level
-		ARG 3 structureManager
-		ARG 4 generator
-		ARG 5 offset
-		ARG 6 pos
-		ARG 7 rotation
-		ARG 8 box
-		ARG 9 random
-		ARG 10 keepJigsaws
 	METHOD setProjection (Lnet/minecraft/world/level/levelgen/structure/pools/StructureTemplatePool$Projection;)Lnet/minecraft/world/level/levelgen/structure/pools/StructurePoolElement;
 		ARG 1 projection
 	METHOD single (Ljava/lang/String;)Ljava/util/function/Function;

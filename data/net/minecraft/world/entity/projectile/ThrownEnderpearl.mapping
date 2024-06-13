@@ -2,8 +2,6 @@ CLASS net/minecraft/world/entity/projectile/ThrownEnderpearl
 	METHOD <init> (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;)V
 		ARG 1 level
 		ARG 2 shooter
-	METHOD changeDimension (Lnet/minecraft/server/level/ServerLevel;)Lnet/minecraft/world/entity/Entity;
-		ARG 1 server
 	METHOD isAllowedToTeleportOwner (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/level/Level;)Z
 		ARG 0 entity
 		ARG 1 level

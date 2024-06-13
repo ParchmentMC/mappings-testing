@@ -5,10 +5,6 @@ CLASS net/minecraft/data/models/blockstates/Condition
 		ARG 0 conditions
 	METHOD validate (Lnet/minecraft/world/level/block/state/StateDefinition;)V
 		ARG 1 stateDefinition
-	CLASS CompositeCondition
-		METHOD <init> (Lnet/minecraft/data/models/blockstates/Condition$Operation;Ljava/util/List;)V
-			ARG 1 operation
-			ARG 2 subconditions
 	CLASS Operation
 		METHOD <init> (Ljava/lang/String;ILjava/lang/String;)V
 			ARG 3 id
@@ -37,3 +33,7 @@ CLASS net/minecraft/data/models/blockstates/Condition
 			ARG 1 property
 			ARG 2 firstValue
 			ARG 3 additionalValues
+	CLASS CompositeCondition
+		METHOD <init> (Lnet/minecraft/data/models/blockstates/Condition$Operation;Ljava/util/List;)V
+			ARG 1 operation
+			ARG 2 subconditions

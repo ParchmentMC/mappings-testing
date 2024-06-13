@@ -1,11 +1,4 @@
 CLASS net/minecraft/world/entity/projectile/AbstractArrow
-	METHOD <init> (Lnet/minecraft/world/entity/EntityType;DDDLnet/minecraft/world/level/Level;Lnet/minecraft/world/item/ItemStack;)V
-		ARG 1 entityType
-		ARG 2 x
-		ARG 4 y
-		ARG 6 z
-		ARG 8 level
-		ARG 9 pickupItemStack
 	METHOD <init> (Lnet/minecraft/world/entity/EntityType;DDDLnet/minecraft/world/level/Level;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)V
 		ARG 1 entityType
 		ARG 2 x
@@ -14,26 +7,12 @@ CLASS net/minecraft/world/entity/projectile/AbstractArrow
 		ARG 8 level
 		ARG 9 pickupItemStack
 		ARG 10 firedFromWeapon
-	METHOD <init> (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/item/ItemStack;)V
-		ARG 1 entityType
-		ARG 2 owner
-		ARG 3 level
-		ARG 4 pickupItemStack
 	METHOD <init> (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)V
 		ARG 1 entityType
 		ARG 2 owner
 		ARG 3 level
 		ARG 4 pickupItemStack
 		ARG 5 firedFromWeapon
-	METHOD <init> (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/item/ItemStack;)V
-		ARG 1 entityType
-		ARG 2 level
-		ARG 3 pickupItemStack
-	METHOD <init> (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)V
-		ARG 1 entityType
-		ARG 2 level
-		ARG 3 pickupItemStack
-		ARG 4 firedFromWeapon
 	METHOD addAdditionalSaveData (Lnet/minecraft/nbt/CompoundTag;)V
 		ARG 1 compound
 	METHOD doKnockback (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/damagesource/DamageSource;)V
@@ -81,15 +60,9 @@ CLASS net/minecraft/world/entity/projectile/AbstractArrow
 	METHOD setCritArrow (Z)V
 		COMMENT Whether the arrow has a stream of critical hit particles flying behind it.
 		ARG 1 critArrow
-	METHOD setEnchantmentEffectsFromEntity (Lnet/minecraft/world/entity/LivingEntity;F)V
-		ARG 1 shooter
-		ARG 2 velocity
 	METHOD setFlag (IZ)V
 		ARG 1 id
 		ARG 2 value
-	METHOD setKnockback (I)V
-		COMMENT Sets the amount of knockback the arrow applies when it hits a mob.
-		ARG 1 knockback
 	METHOD setNoPhysics (Z)V
 		COMMENT Sets if this arrow can noClip
 		ARG 1 noPhysics
@@ -99,9 +72,6 @@ CLASS net/minecraft/world/entity/projectile/AbstractArrow
 		ARG 1 pickupItemStack
 	METHOD setPierceLevel (B)V
 		ARG 1 pierceLevel
-	METHOD setShotFromCrossbow (Z)V
-		COMMENT Sets data about if this arrow entity was shot from a crossbow
-		ARG 1 shotFromCrossbow
 	METHOD setSoundEvent (Lnet/minecraft/sounds/SoundEvent;)V
 		ARG 1 soundEvent
 	METHOD shoot (DDDFF)V

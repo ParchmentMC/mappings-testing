@@ -5,8 +5,6 @@ CLASS net/minecraft/data/loot/packs/VanillaBlockLoot
 		ARG 1 block
 	METHOD lambda$generate$0 (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
 		ARG 1 block
-	METHOD lambda$generate$1 (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
-		ARG 1 stone
 	METHOD lambda$generate$10 (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
 		ARG 1 coral
 	METHOD lambda$generate$100 (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
@@ -29,10 +27,6 @@ CLASS net/minecraft/data/loot/packs/VanillaBlockLoot
 		ARG 1 composter
 	METHOD lambda$generate$11 (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
 		ARG 1 nylium
-	METHOD lambda$generate$110 (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
-		ARG 0 caveVines
-	METHOD lambda$generate$111 (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
-		ARG 0 caveVinesPlant
 	METHOD lambda$generate$12 (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
 		ARG 1 nylium
 	METHOD lambda$generate$13 (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
@@ -43,14 +37,6 @@ CLASS net/minecraft/data/loot/packs/VanillaBlockLoot
 		ARG 1 enderChest
 	METHOD lambda$generate$16 (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
 		ARG 1 snow
-	METHOD lambda$generate$17 (Lnet/minecraft/data/loot/packs/VanillaBlockLoot;Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
-		ARG 1 slab
-	METHOD lambda$generate$18 (Lnet/minecraft/data/loot/packs/VanillaBlockLoot;Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
-		ARG 1 slab
-	METHOD lambda$generate$19 (Lnet/minecraft/data/loot/packs/VanillaBlockLoot;Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
-		ARG 1 slab
-	METHOD lambda$generate$2 (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
-		ARG 1 deepslate
 	METHOD lambda$generate$20 (Lnet/minecraft/data/loot/packs/VanillaBlockLoot;Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
 		ARG 1 slab
 	METHOD lambda$generate$21 (Lnet/minecraft/data/loot/packs/VanillaBlockLoot;Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
@@ -71,8 +57,6 @@ CLASS net/minecraft/data/loot/packs/VanillaBlockLoot
 		ARG 1 slab
 	METHOD lambda$generate$29 (Lnet/minecraft/data/loot/packs/VanillaBlockLoot;Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
 		ARG 1 slab
-	METHOD lambda$generate$3 (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
-		ARG 1 grass
 	METHOD lambda$generate$30 (Lnet/minecraft/data/loot/packs/VanillaBlockLoot;Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
 		ARG 1 slab
 	METHOD lambda$generate$31 (Lnet/minecraft/data/loot/packs/VanillaBlockLoot;Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
@@ -195,30 +179,8 @@ CLASS net/minecraft/data/loot/packs/VanillaBlockLoot
 		ARG 1 door
 	METHOD lambda$generate$85 (Lnet/minecraft/data/loot/packs/VanillaBlockLoot;Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
 		ARG 1 door
-	METHOD lambda$generate$86 (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
-		ARG 1 bed
-	METHOD lambda$generate$87 (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
-		ARG 1 bed
-	METHOD lambda$generate$88 (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
-		ARG 1 bed
-	METHOD lambda$generate$89 (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
-		ARG 1 bed
 	METHOD lambda$generate$9 (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
 		ARG 1 coral
-	METHOD lambda$generate$90 (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
-		ARG 1 bed
-	METHOD lambda$generate$91 (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
-		ARG 1 bed
-	METHOD lambda$generate$92 (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
-		ARG 1 bed
-	METHOD lambda$generate$93 (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
-		ARG 1 bed
-	METHOD lambda$generate$94 (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
-		ARG 1 bed
-	METHOD lambda$generate$95 (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
-		ARG 1 bed
-	METHOD lambda$generate$96 (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
-		ARG 1 bed
 	METHOD lambda$generate$97 (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;
 		ARG 1 bed
 	METHOD lambda$generate$98 (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/LootTable$Builder;

@@ -1,19 +1,13 @@
 CLASS net/minecraft/world/entity/animal/Sheep
-	FIELD COLORARRAY_BY_COLOR Ljava/util/Map;
-		COMMENT Map from EnumDyeColor to RGB values for passage to GlStateManager.color()
 	METHOD addAdditionalSaveData (Lnet/minecraft/nbt/CompoundTag;)V
 		ARG 1 compound
 	METHOD ate ()V
 		COMMENT This function applies the benefits of growing back wool and faster growing up to the acting entity. (This function is used in the AIEatGrass)
 	METHOD createSheepColor (Lnet/minecraft/world/item/DyeColor;)I
 		ARG 0 dyeColor
-	METHOD createSheepColor (Lnet/minecraft/world/item/DyeColor;)[F
-		ARG 0 dyeColor
 	METHOD getColor ()Lnet/minecraft/world/item/DyeColor;
 		COMMENT Gets the wool color of this sheep.
 	METHOD getColor (Lnet/minecraft/world/item/DyeColor;)I
-		ARG 0 dyeColor
-	METHOD getColorArray (Lnet/minecraft/world/item/DyeColor;)[F
 		ARG 0 dyeColor
 	METHOD getHeadEatAngleScale (F)F
 		ARG 1 partialTick
@@ -33,9 +27,6 @@ CLASS net/minecraft/world/entity/animal/Sheep
 		ARG 0 map
 	METHOD lambda$static$1 (Lnet/minecraft/world/item/DyeColor;)Lnet/minecraft/world/item/DyeColor;
 		ARG 0 color
-	METHOD makeContainer (Lnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/item/DyeColor;)Lnet/minecraft/world/inventory/CraftingContainer;
-		ARG 0 fatherColor
-		ARG 1 motherColor
 	METHOD makeCraftInput (Lnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/item/DyeColor;)Lnet/minecraft/world/item/crafting/CraftingInput;
 		ARG 0 color1
 		ARG 1 color2

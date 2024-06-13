@@ -14,16 +14,6 @@ CLASS net/minecraft/client/renderer/block/model/FaceBakery
 		ARG 6 transform
 		ARG 7 rotation
 		ARG 8 shade
-	METHOD bakeQuad (Lorg/joml/Vector3f;Lorg/joml/Vector3f;Lnet/minecraft/client/renderer/block/model/BlockElementFace;Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;Lnet/minecraft/core/Direction;Lnet/minecraft/client/resources/model/ModelState;Lnet/minecraft/client/renderer/block/model/BlockElementRotation;ZLnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/block/model/BakedQuad;
-		ARG 1 posFrom
-		ARG 2 posTo
-		ARG 3 face
-		ARG 4 sprite
-		ARG 5 facing
-		ARG 6 transform
-		ARG 7 partRotation
-		ARG 8 shade
-		ARG 9 modelLocation
 	METHOD bakeVertex ([IILnet/minecraft/core/Direction;Lnet/minecraft/client/renderer/block/model/BlockFaceUV;[FLnet/minecraft/client/renderer/texture/TextureAtlasSprite;Lcom/mojang/math/Transformation;Lnet/minecraft/client/renderer/block/model/BlockElementRotation;Z)V
 		ARG 1 vertexData
 		ARG 2 vertexIndex
@@ -57,11 +47,6 @@ CLASS net/minecraft/client/renderer/block/model/FaceBakery
 		ARG 0 uv
 		ARG 1 facing
 		ARG 2 rotation
-	METHOD recomputeUVs (Lnet/minecraft/client/renderer/block/model/BlockFaceUV;Lnet/minecraft/core/Direction;Lcom/mojang/math/Transformation;Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/block/model/BlockFaceUV;
-		ARG 0 uv
-		ARG 1 facing
-		ARG 2 modelRotation
-		ARG 3 modelLocation
 	METHOD rotateVertexBy (Lorg/joml/Vector3f;Lorg/joml/Vector3f;Lorg/joml/Matrix4f;Lorg/joml/Vector3f;)V
 		ARG 1 pos
 		ARG 2 origin

@@ -19,10 +19,6 @@ CLASS net/minecraft/commands/arguments/item/ItemParser
 	METHOD parse (Lcom/mojang/brigadier/StringReader;Lnet/minecraft/commands/arguments/item/ItemParser$Visitor;)V
 		ARG 1 reader
 		ARG 2 visitor
-	METHOD validateComponents (Lcom/mojang/brigadier/StringReader;Lnet/minecraft/core/Holder;Lnet/minecraft/core/component/DataComponentMap;)V
-		ARG 0 reader
-		ARG 1 item
-		ARG 2 components
 	METHOD validateComponents (Lcom/mojang/brigadier/StringReader;Lnet/minecraft/core/Holder;Lnet/minecraft/core/component/DataComponentPatch;)V
 		ARG 0 reader
 		ARG 1 item
@@ -42,8 +38,6 @@ CLASS net/minecraft/commands/arguments/item/ItemParser
 		METHOD suggestComponent (Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;Ljava/lang/String;)Ljava/util/concurrent/CompletableFuture;
 			ARG 1 builder
 			ARG 2 suffix
-		METHOD suggestComponentAssignment (Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;
-			ARG 1 builder
 		METHOD suggestComponentAssignmentOrRemoval (Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;
 			ARG 1 builder
 		METHOD suggestItem (Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;
@@ -52,10 +46,6 @@ CLASS net/minecraft/commands/arguments/item/ItemParser
 			ARG 1 builder
 		METHOD suggestStartComponents (Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;
 			ARG 1 builder
-	CLASS SuggestionsVisitor
-		METHOD resolveSuggestions (Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;Lcom/mojang/brigadier/StringReader;)Ljava/util/concurrent/CompletableFuture;
-			ARG 1 builder
-			ARG 2 reader
 	CLASS Visitor
 		METHOD visitComponent (Lnet/minecraft/core/component/DataComponentType;Ljava/lang/Object;)V
 			ARG 1 componentType
@@ -66,3 +56,7 @@ CLASS net/minecraft/commands/arguments/item/ItemParser
 			ARG 1 componentType
 		METHOD visitSuggestions (Ljava/util/function/Function;)V
 			ARG 1 suggestions
+	CLASS SuggestionsVisitor
+		METHOD resolveSuggestions (Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;Lcom/mojang/brigadier/StringReader;)Ljava/util/concurrent/CompletableFuture;
+			ARG 1 builder
+			ARG 2 reader

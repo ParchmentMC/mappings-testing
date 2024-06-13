@@ -5,19 +5,11 @@ CLASS net/minecraft/world/item/CrossbowItem
 		COMMENT Set to {@code true} when the crossbow is 20% charged.
 	METHOD getAllSupportedProjectiles ()Ljava/util/function/Predicate;
 		COMMENT Get the predicate to match ammunition when searching the player's inventory, not their main/offhand
-	METHOD getChargeDuration (Lnet/minecraft/world/entity/LivingEntity;)I
-		ARG 0 entity
-	METHOD getChargeDuration (Lnet/minecraft/world/item/ItemStack;)I
-		COMMENT The time the crossbow must be used to reload it
-		ARG 0 crossbowStack
 	METHOD getChargeDuration (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/LivingEntity;)I
 		ARG 0 stack
 		ARG 1 shooter
 	METHOD getChargingSounds (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/CrossbowItem$ChargingSounds;
 		ARG 1 stack
-	METHOD getPowerForTime (ILnet/minecraft/world/item/ItemStack;)F
-		ARG 0 useTime
-		ARG 1 crossbowStack
 	METHOD getPowerForTime (ILnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/LivingEntity;)F
 		ARG 0 timeLeft
 		ARG 1 stack
@@ -34,13 +26,8 @@ CLASS net/minecraft/world/item/CrossbowItem
 	METHOD getShotPitch (Lnet/minecraft/util/RandomSource;I)F
 		ARG 0 random
 		ARG 1 index
-	METHOD getStartSound (I)Lnet/minecraft/sounds/SoundEvent;
-		ARG 1 enchantmentLevel
 	METHOD getUseAnimation (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/UseAnim;
 		COMMENT Returns the action that specifies what animation to play when the item is being used.
-		ARG 1 stack
-	METHOD getUseDuration (Lnet/minecraft/world/item/ItemStack;)I
-		COMMENT How long it takes to use or consume an item
 		ARG 1 stack
 	METHOD isCharged (Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 0 crossbowStack

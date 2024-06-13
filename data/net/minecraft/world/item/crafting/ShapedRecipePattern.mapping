@@ -10,13 +10,6 @@ CLASS net/minecraft/world/item/crafting/ShapedRecipePattern
 		ARG 0 buffer
 	METHOD lastNonSpace (Ljava/lang/String;)I
 		ARG 0 row
-	METHOD matches (Lnet/minecraft/world/inventory/CraftingContainer;)Z
-		ARG 1 container
-	METHOD matches (Lnet/minecraft/world/inventory/CraftingContainer;IIZ)Z
-		ARG 1 container
-		ARG 2 startX
-		ARG 3 startY
-		ARG 4 reverse
 	METHOD matches (Lnet/minecraft/world/item/crafting/CraftingInput;)Z
 		ARG 1 input
 	METHOD matches (Lnet/minecraft/world/item/crafting/CraftingInput;Z)Z

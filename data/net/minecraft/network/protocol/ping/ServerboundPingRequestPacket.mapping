@@ -3,9 +3,5 @@ CLASS net/minecraft/network/protocol/ping/ServerboundPingRequestPacket
 		ARG 1 time
 	METHOD <init> (Lio/netty/buffer/ByteBuf;)V
 		ARG 1 buffer
-	METHOD <init> (Lnet/minecraft/network/FriendlyByteBuf;)V
-		ARG 1 buffer
 	METHOD write (Lio/netty/buffer/ByteBuf;)V
-		ARG 1 buffer
-	METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
 		ARG 1 buffer

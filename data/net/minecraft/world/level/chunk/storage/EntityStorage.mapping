@@ -9,8 +9,6 @@ CLASS net/minecraft/world/level/chunk/storage/EntityStorage
 		ARG 2 entitiesTag
 	METHOD lambda$storeEntities$1 (Lnet/minecraft/nbt/ListTag;Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 entity
-	METHOD lambda$storeEntities$2 (Lnet/minecraft/world/level/ChunkPos;Ljava/lang/Throwable;)Ljava/lang/Void;
-		ARG 1 exception
 	METHOD readChunkPos (Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/level/ChunkPos;
 		ARG 0 tag
 	METHOD reportLoadFailureIfPresent (Ljava/util/concurrent/CompletableFuture;Lnet/minecraft/world/level/ChunkPos;)V

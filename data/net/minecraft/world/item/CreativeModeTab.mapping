@@ -15,40 +15,6 @@ CLASS net/minecraft/world/item/CreativeModeTab
 		ARG 1 stack
 	METHOD createTextureLocation (Ljava/lang/String;)Lnet/minecraft/resources/ResourceLocation;
 		ARG 0 name
-	METHOD setSearchTreeBuilder (Ljava/util/function/Consumer;)V
-		ARG 1 searchTreeBuilder
-	CLASS Builder
-		METHOD <init> (Lnet/minecraft/world/item/CreativeModeTab$Row;I)V
-			ARG 1 row
-			ARG 2 column
-		METHOD backgroundSuffix (Ljava/lang/String;)Lnet/minecraft/world/item/CreativeModeTab$Builder;
-			ARG 1 backgroundSuffix
-		METHOD backgroundTexture (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/world/item/CreativeModeTab$Builder;
-			ARG 1 backgroundTexture
-		METHOD displayItems (Lnet/minecraft/world/item/CreativeModeTab$DisplayItemsGenerator;)Lnet/minecraft/world/item/CreativeModeTab$Builder;
-			ARG 1 displayItemsGenerator
-		METHOD icon (Ljava/util/function/Supplier;)Lnet/minecraft/world/item/CreativeModeTab$Builder;
-			ARG 1 icon
-		METHOD lambda$static$0 (Lnet/minecraft/world/item/CreativeModeTab$ItemDisplayParameters;Lnet/minecraft/world/item/CreativeModeTab$Output;)V
-			ARG 0 parameters
-			ARG 1 output
-		METHOD title (Lnet/minecraft/network/chat/Component;)Lnet/minecraft/world/item/CreativeModeTab$Builder;
-			ARG 1 title
-		METHOD type (Lnet/minecraft/world/item/CreativeModeTab$Type;)Lnet/minecraft/world/item/CreativeModeTab$Builder;
-			ARG 1 type
-	CLASS DisplayItemsGenerator
-		METHOD accept (Lnet/minecraft/world/item/CreativeModeTab$ItemDisplayParameters;Lnet/minecraft/world/item/CreativeModeTab$Output;)V
-			ARG 1 parameters
-			ARG 2 output
-	CLASS ItemDisplayBuilder
-		METHOD <init> (Lnet/minecraft/world/item/CreativeModeTab;Lnet/minecraft/world/flag/FeatureFlagSet;)V
-			ARG 1 tab
-			ARG 2 featureFlagSet
-	CLASS ItemDisplayParameters
-		METHOD needsUpdate (Lnet/minecraft/world/flag/FeatureFlagSet;ZLnet/minecraft/core/HolderLookup$Provider;)Z
-			ARG 1 enabledFeatures
-			ARG 2 hasPermissions
-			ARG 3 holders
 	CLASS Output
 		METHOD accept (Lnet/minecraft/world/item/ItemStack;)V
 			ARG 1 stack
@@ -67,3 +33,33 @@ CLASS net/minecraft/world/item/CreativeModeTab
 			ARG 2 tabVisibility
 		METHOD lambda$acceptAll$0 (Lnet/minecraft/world/item/CreativeModeTab$TabVisibility;Lnet/minecraft/world/item/ItemStack;)V
 			ARG 2 stack
+	CLASS Builder
+		METHOD <init> (Lnet/minecraft/world/item/CreativeModeTab$Row;I)V
+			ARG 1 row
+			ARG 2 column
+		METHOD backgroundTexture (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/world/item/CreativeModeTab$Builder;
+			ARG 1 backgroundTexture
+		METHOD displayItems (Lnet/minecraft/world/item/CreativeModeTab$DisplayItemsGenerator;)Lnet/minecraft/world/item/CreativeModeTab$Builder;
+			ARG 1 displayItemsGenerator
+		METHOD icon (Ljava/util/function/Supplier;)Lnet/minecraft/world/item/CreativeModeTab$Builder;
+			ARG 1 icon
+		METHOD lambda$static$0 (Lnet/minecraft/world/item/CreativeModeTab$ItemDisplayParameters;Lnet/minecraft/world/item/CreativeModeTab$Output;)V
+			ARG 0 parameters
+			ARG 1 output
+		METHOD title (Lnet/minecraft/network/chat/Component;)Lnet/minecraft/world/item/CreativeModeTab$Builder;
+			ARG 1 title
+		METHOD type (Lnet/minecraft/world/item/CreativeModeTab$Type;)Lnet/minecraft/world/item/CreativeModeTab$Builder;
+			ARG 1 type
+	CLASS ItemDisplayBuilder
+		METHOD <init> (Lnet/minecraft/world/item/CreativeModeTab;Lnet/minecraft/world/flag/FeatureFlagSet;)V
+			ARG 1 tab
+			ARG 2 featureFlagSet
+	CLASS DisplayItemsGenerator
+		METHOD accept (Lnet/minecraft/world/item/CreativeModeTab$ItemDisplayParameters;Lnet/minecraft/world/item/CreativeModeTab$Output;)V
+			ARG 1 parameters
+			ARG 2 output
+	CLASS ItemDisplayParameters
+		METHOD needsUpdate (Lnet/minecraft/world/flag/FeatureFlagSet;ZLnet/minecraft/core/HolderLookup$Provider;)Z
+			ARG 1 enabledFeatures
+			ARG 2 hasPermissions
+			ARG 3 holders

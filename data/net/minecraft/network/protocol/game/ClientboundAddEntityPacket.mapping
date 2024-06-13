@@ -13,11 +13,6 @@ CLASS net/minecraft/network/protocol/game/ClientboundAddEntityPacket
 		ARG 14 yHeadRot
 	METHOD <init> (Lnet/minecraft/network/RegistryFriendlyByteBuf;)V
 		ARG 1 buffer
-	METHOD <init> (Lnet/minecraft/world/entity/Entity;)V
-		ARG 1 entity
-	METHOD <init> (Lnet/minecraft/world/entity/Entity;I)V
-		ARG 1 entity
-		ARG 2 data
 	METHOD <init> (Lnet/minecraft/world/entity/Entity;ILnet/minecraft/core/BlockPos;)V
 		ARG 1 entity
 		ARG 2 data

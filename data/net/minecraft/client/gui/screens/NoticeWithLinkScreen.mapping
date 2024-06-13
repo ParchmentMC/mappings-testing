@@ -1,9 +1,4 @@
 CLASS net/minecraft/client/gui/screens/NoticeWithLinkScreen
-	METHOD <init> (Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/Component;Ljava/lang/String;Ljava/lang/Runnable;)V
-		ARG 1 title
-		ARG 2 message
-		ARG 3 url
-		ARG 4 onClose
 	METHOD <init> (Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/Component;Ljava/net/URI;Ljava/lang/Runnable;)V
 		ARG 1 title
 		ARG 2 message

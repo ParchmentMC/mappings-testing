@@ -1,11 +1,4 @@
 CLASS net/minecraft/world/entity/projectile/LargeFireball
-	METHOD <init> (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;DDDI)V
-		ARG 1 level
-		ARG 2 shooter
-		ARG 3 offsetX
-		ARG 5 offsetY
-		ARG 7 offsetZ
-		ARG 9 explosionPower
 	METHOD <init> (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/phys/Vec3;I)V
 		ARG 1 level
 		ARG 2 owner

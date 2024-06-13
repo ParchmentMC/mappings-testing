@@ -15,21 +15,3 @@ CLASS net/minecraft/world/level/portal/PortalForcer
 		ARG 1 exitPos
 		ARG 2 isNether
 		ARG 3 worldBorder
-	METHOD findPortalAround (Lnet/minecraft/core/BlockPos;ZLnet/minecraft/world/level/border/WorldBorder;)Ljava/util/Optional;
-		ARG 1 pos
-		ARG 2 isNether
-		ARG 3 worldBorder
-	METHOD lambda$findPortalAround$0 (Lnet/minecraft/core/Holder;)Z
-		ARG 0 poiType
-	METHOD lambda$findPortalAround$1 (Lnet/minecraft/world/level/border/WorldBorder;Lnet/minecraft/world/entity/ai/village/poi/PoiRecord;)Z
-		ARG 1 poiRecord
-	METHOD lambda$findPortalAround$2 (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/ai/village/poi/PoiRecord;)D
-		ARG 1 poiRecord
-	METHOD lambda$findPortalAround$3 (Lnet/minecraft/world/entity/ai/village/poi/PoiRecord;)I
-		ARG 0 poiRecord
-	METHOD lambda$findPortalAround$4 (Lnet/minecraft/world/entity/ai/village/poi/PoiRecord;)Z
-		ARG 1 poiRecord
-	METHOD lambda$findPortalAround$5 (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)Z
-		ARG 2 possibleBlockPos
-	METHOD lambda$findPortalAround$6 (Lnet/minecraft/world/entity/ai/village/poi/PoiRecord;)Lnet/minecraft/BlockUtil$FoundRectangle;
-		ARG 1 poiRecord

@@ -20,15 +20,6 @@ CLASS net/minecraft/world/item/crafting/RecipeManager
 		ARG 2 registries
 	METHOD getAllRecipesFor (Lnet/minecraft/world/item/crafting/RecipeType;)Ljava/util/List;
 		ARG 1 recipeType
-	METHOD getRecipeFor (Lnet/minecraft/world/item/crafting/RecipeType;Lnet/minecraft/world/Container;Lnet/minecraft/world/level/Level;)Ljava/util/Optional;
-		ARG 1 recipeType
-		ARG 2 inventory
-		ARG 3 level
-	METHOD getRecipeFor (Lnet/minecraft/world/item/crafting/RecipeType;Lnet/minecraft/world/Container;Lnet/minecraft/world/level/Level;Lnet/minecraft/resources/ResourceLocation;)Ljava/util/Optional;
-		ARG 1 recipeType
-		ARG 2 inventory
-		ARG 3 level
-		ARG 4 lastRecipe
 	METHOD getRecipeFor (Lnet/minecraft/world/item/crafting/RecipeType;Lnet/minecraft/world/item/crafting/RecipeInput;Lnet/minecraft/world/level/Level;)Ljava/util/Optional;
 		ARG 1 recipeType
 		ARG 2 input
@@ -43,17 +34,9 @@ CLASS net/minecraft/world/item/crafting/RecipeManager
 		ARG 2 input
 		ARG 3 level
 		ARG 4 lastRecipe
-	METHOD getRecipesFor (Lnet/minecraft/world/item/crafting/RecipeType;Lnet/minecraft/world/Container;Lnet/minecraft/world/level/Level;)Ljava/util/List;
-		ARG 1 recipeType
-		ARG 2 inventory
-		ARG 3 level
 	METHOD getRecipesFor (Lnet/minecraft/world/item/crafting/RecipeType;Lnet/minecraft/world/item/crafting/RecipeInput;Lnet/minecraft/world/level/Level;)Ljava/util/List;
 		ARG 1 recipeType
 		ARG 2 input
-		ARG 3 level
-	METHOD getRemainingItemsFor (Lnet/minecraft/world/item/crafting/RecipeType;Lnet/minecraft/world/Container;Lnet/minecraft/world/level/Level;)Lnet/minecraft/core/NonNullList;
-		ARG 1 recipeType
-		ARG 2 inventory
 		ARG 3 level
 	METHOD getRemainingItemsFor (Lnet/minecraft/world/item/crafting/RecipeType;Lnet/minecraft/world/item/crafting/RecipeInput;Lnet/minecraft/world/level/Level;)Lnet/minecraft/core/NonNullList;
 		ARG 1 recipeType
@@ -62,9 +45,6 @@ CLASS net/minecraft/world/item/crafting/RecipeManager
 	METHOD replaceRecipes (Ljava/lang/Iterable;)V
 		ARG 1 recipes
 	CLASS CachedCheck
-		METHOD getRecipeFor (Lnet/minecraft/world/Container;Lnet/minecraft/world/level/Level;)Ljava/util/Optional;
-			ARG 1 container
-			ARG 2 level
 		METHOD getRecipeFor (Lnet/minecraft/world/item/crafting/RecipeInput;Lnet/minecraft/world/level/Level;)Ljava/util/Optional;
 			ARG 1 input
 			ARG 2 level

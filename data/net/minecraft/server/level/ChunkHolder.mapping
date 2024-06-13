@@ -12,9 +12,6 @@ CLASS net/minecraft/server/level/ChunkHolder
 		ARG 4 lightEngine
 		ARG 5 onLevelChange
 		ARG 6 playerProvider
-	METHOD addSaveDependency (Ljava/lang/String;Ljava/util/concurrent/CompletableFuture;)V
-		ARG 1 source
-		ARG 2 future
 	METHOD addSendDependency (Ljava/util/concurrent/CompletableFuture;)V
 		ARG 1 dependency
 	METHOD blockChanged (Lnet/minecraft/core/BlockPos;)V
@@ -36,20 +33,6 @@ CLASS net/minecraft/server/level/ChunkHolder
 	METHOD demoteFullChunk (Lnet/minecraft/server/level/ChunkMap;Lnet/minecraft/server/level/FullChunkStatus;)V
 		ARG 1 chunkMap
 		ARG 2 fullChunkStatus
-	METHOD getFutureIfPresent (Lnet/minecraft/world/level/chunk/status/ChunkStatus;)Ljava/util/concurrent/CompletableFuture;
-		ARG 1 chunkStatus
-	METHOD getFutureIfPresentUnchecked (Lnet/minecraft/world/level/chunk/status/ChunkStatus;)Ljava/util/concurrent/CompletableFuture;
-		ARG 1 chunkStatus
-	METHOD getOrScheduleFuture (Lnet/minecraft/world/level/chunk/status/ChunkStatus;Lnet/minecraft/server/level/ChunkMap;)Ljava/util/concurrent/CompletableFuture;
-		ARG 1 chunkStatus
-		ARG 2 chunkMap
-	METHOD lambda$broadcast$1 (Lnet/minecraft/network/protocol/Packet;Lnet/minecraft/server/level/ServerPlayer;)V
-		ARG 1 serverPlayer
-	METHOD lambda$broadcastChanges$0 (Ljava/util/List;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
-		ARG 3 blockPos
-		ARG 4 blockState
-	METHOD replaceProtoChunk (Lnet/minecraft/world/level/chunk/ImposterProtoChunk;)V
-		ARG 1 imposter
 	METHOD scheduleFullChunkPromotion (Lnet/minecraft/server/level/ChunkMap;Ljava/util/concurrent/CompletableFuture;Ljava/util/concurrent/Executor;Lnet/minecraft/server/level/FullChunkStatus;)V
 		ARG 1 chunkMap
 		ARG 2 future
@@ -62,25 +45,17 @@ CLASS net/minecraft/server/level/ChunkHolder
 		ARG 1 queueLevel
 	METHOD setTicketLevel (I)V
 		ARG 1 level
-	METHOD updateChunkToSave (Ljava/util/concurrent/CompletableFuture;Ljava/lang/String;)V
-		ARG 1 feature
-		ARG 2 source
 	METHOD updateFutures (Lnet/minecraft/server/level/ChunkMap;Ljava/util/concurrent/Executor;)V
 		ARG 1 chunkMap
 		ARG 2 executor
-	CLASS ChunkSaveDebug
-		METHOD <init> (Ljava/lang/Thread;Ljava/util/concurrent/CompletableFuture;Ljava/lang/String;)V
-			ARG 1 thread
-			ARG 2 future
-			ARG 3 source
+	CLASS PlayerProvider
+		METHOD getPlayers (Lnet/minecraft/world/level/ChunkPos;Z)Ljava/util/List;
+			COMMENT Returns the players tracking the given chunk.
+			ARG 1 pos
+			ARG 2 boundaryOnly
 	CLASS LevelChangeListener
 		METHOD onLevelChange (Lnet/minecraft/world/level/ChunkPos;Ljava/util/function/IntSupplier;ILjava/util/function/IntConsumer;)V
 			ARG 1 chunkPos
 			ARG 2 queueLevelGetter
 			ARG 3 ticketLevel
 			ARG 4 queueLevelSetter
-	CLASS PlayerProvider
-		METHOD getPlayers (Lnet/minecraft/world/level/ChunkPos;Z)Ljava/util/List;
-			COMMENT Returns the players tracking the given chunk.
-			ARG 1 pos
-			ARG 2 boundaryOnly

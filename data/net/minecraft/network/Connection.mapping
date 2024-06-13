@@ -3,8 +3,6 @@ CLASS net/minecraft/network/Connection
 		COMMENT The address of the remote party
 	FIELD channel Lio/netty/channel/Channel;
 		COMMENT The active channel
-	FIELD disconnectedReason Lnet/minecraft/network/chat/Component;
-		COMMENT A Component indicating why the network has shutdown.
 	FIELD packetListener Lnet/minecraft/network/PacketListener;
 		COMMENT The PacketListener instance responsible for processing received packets
 	METHOD <init> (Lnet/minecraft/network/protocol/PacketFlow;)V
@@ -65,8 +63,6 @@ CLASS net/minecraft/network/Connection
 	METHOD genericsFtw (Lnet/minecraft/network/protocol/Packet;Lnet/minecraft/network/PacketListener;)V
 		ARG 0 packet
 		ARG 1 listener
-	METHOD getDisconnectedReason ()Lnet/minecraft/network/chat/Component;
-		COMMENT If this channel is closed, returns the exit message, null otherwise.
 	METHOD getLoggableAddress (Z)Ljava/lang/String;
 		ARG 1 logIps
 	METHOD getPacketListener ()Lnet/minecraft/network/PacketListener;

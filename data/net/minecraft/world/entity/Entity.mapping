@@ -49,8 +49,6 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 2 yRot
 	METHOD canAddPassenger (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 1 passenger
-	METHOD canChangeDimensions ()Z
-		COMMENT Returns false if this Entity can't move between dimensions. True if it can.
 	METHOD canChangeDimensions (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/level/Level;)Z
 		ARG 1 oldLevel
 		ARG 2 newLevel
@@ -64,10 +62,6 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 fallDistance
 		ARG 2 multiplier
 		ARG 3 source
-	METHOD changeDimension (Lnet/minecraft/server/level/ServerLevel;)Lnet/minecraft/world/entity/Entity;
-		ARG 1 destination
-	METHOD changeDimension (Lnet/minecraft/world/entity/Entity$DimensionTransitionSupplier;)Lnet/minecraft/world/entity/Entity;
-		ARG 1 transitionSupplier
 	METHOD changeDimension (Lnet/minecraft/world/level/portal/DimensionTransition;)Lnet/minecraft/world/entity/Entity;
 		ARG 1 transition
 	METHOD checkDespawn ()V
@@ -138,9 +132,6 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 entity
 	METHOD distanceToSqr (Lnet/minecraft/world/phys/Vec3;)D
 		ARG 1 vec
-	METHOD doEnchantDamageEffects (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/Entity;)V
-		ARG 1 attacker
-		ARG 2 target
 	METHOD doWaterSplashEffect ()V
 		COMMENT Plays the {@link #getSplashSound() splash sound}, and the {@link ParticleType#WATER_BUBBLE} and {@link ParticleType#WATER_SPLASH} particles.
 	METHOD ejectPassengers ()V
@@ -149,10 +140,6 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 object
 	METHOD fillCrashReportCategory (Lnet/minecraft/CrashReportCategory;)V
 		ARG 1 category
-	METHOD findDimensionEntryPoint (Lnet/minecraft/server/level/ServerLevel;)Lnet/minecraft/world/level/portal/PortalInfo;
-		ARG 1 destination
-	METHOD findOrCreateDimensionEntryPoint (Lnet/minecraft/server/level/ServerLevel;)Lnet/minecraft/world/level/portal/DimensionTransition;
-		ARG 1 level
 	METHOD fudgePositionAfterSizeChange (Lnet/minecraft/world/entity/EntityDimensions;)Z
 		ARG 1 dimensions
 	METHOD gameEvent (Lnet/minecraft/core/Holder;)V
@@ -192,12 +179,6 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 passenger
 	METHOD getEncodeId ()Ljava/lang/String;
 		COMMENT Returns the string that identifies this Entity's class
-	METHOD getExitPortal (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;ZLnet/minecraft/world/level/border/WorldBorder;)Ljava/util/Optional;
-		ARG 1 destination
-		ARG 2 findFrom
-			COMMENT Position where searching starts from
-		ARG 3 isToNether
-		ARG 4 worldBorder
 	METHOD getEyeHeight (Lnet/minecraft/world/entity/Pose;)F
 		ARG 1 pose
 	METHOD getEyePosition (F)Lnet/minecraft/world/phys/Vec3;
@@ -226,12 +207,8 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 entity
 		ARG 2 dimensions
 		ARG 3 partialTick
-	METHOD getPassengerClosestTo (Lnet/minecraft/world/phys/Vec3;)Ljava/util/Optional;
-		ARG 1 pos
 	METHOD getPassengerRidingPosition (Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/phys/Vec3;
 		ARG 1 entity
-	METHOD getPortalWaitTime ()I
-		COMMENT Return the amount of time this entity should stay in a portal before being transported.
 	METHOD getPosition (F)Lnet/minecraft/world/phys/Vec3;
 		ARG 1 partialTicks
 	METHOD getPreciseBodyRotation (F)F
@@ -284,9 +261,6 @@ CLASS net/minecraft/world/entity/Entity
 	METHOD handleEntityEvent (B)V
 		COMMENT Handles an entity event received from a {@link net.minecraft.network.protocol.game.ClientboundEntityEventPacket}.
 		ARG 1 id
-	METHOD handleInsidePortal (Lnet/minecraft/core/BlockPos;)V
-		COMMENT Marks the entity as being inside a portal, activating teleportation logic in onEntityUpdate() in the following tick(s).
-		ARG 1 pos
 	METHOD hasIndirectPassenger (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 1 entity
 	METHOD hasPassenger (Ljava/util/function/Predicate;)Z
@@ -302,8 +276,6 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 source
 		ARG 2 amount
 	METHOD igniteForSeconds (F)V
-		ARG 1 seconds
-	METHOD igniteForSeconds (I)V
 		ARG 1 seconds
 	METHOD igniteForTicks (I)V
 		ARG 1 ticks
@@ -607,9 +579,6 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 noGravity
 	METHOD setOnGround (Z)V
 		ARG 1 onGround
-	METHOD setOnGroundWithKnownMovement (ZLnet/minecraft/world/phys/Vec3;)V
-		ARG 1 onGround
-		ARG 2 movement
 	METHOD setOnGroundWithMovement (ZLnet/minecraft/world/phys/Vec3;)V
 		ARG 1 onGround
 		ARG 2 movement
@@ -730,11 +699,6 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 8 relativeMovements
 		ARG 9 yRot
 		ARG 10 xRot
-	METHOD teleportToWithTicket (DDD)V
-		COMMENT Teleports the entity, forcing the destination to stay loaded for a short time
-		ARG 1 x
-		ARG 3 y
-		ARG 5 z
 	METHOD thunderHit (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LightningBolt;)V
 		ARG 1 level
 		ARG 2 lightning
@@ -763,11 +727,11 @@ CLASS net/minecraft/world/entity/Entity
 			ARG 2 x
 			ARG 4 y
 			ARG 6 z
-	CLASS MovementEmission
-		METHOD <init> (Ljava/lang/String;IZZ)V
-			ARG 3 sounds
-			ARG 4 events
 	CLASS RemovalReason
 		METHOD <init> (Ljava/lang/String;IZZ)V
 			ARG 3 destroy
 			ARG 4 save
+	CLASS MovementEmission
+		METHOD <init> (Ljava/lang/String;IZZ)V
+			ARG 3 sounds
+			ARG 4 events

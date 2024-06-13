@@ -166,15 +166,6 @@ CLASS net/minecraft/server/commands/data/DataCommands
 		ARG 0 source
 		ARG 1 start
 		ARG 2 end
-	CLASS DataManipulator
-		METHOD modify (Lcom/mojang/brigadier/context/CommandContext;Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/commands/arguments/NbtPathArgument$NbtPath;Ljava/util/List;)I
-			ARG 1 context
-			ARG 2 nbt
-			ARG 3 nbtPath
-			ARG 4 tags
-	CLASS DataManipulatorDecorator
-		METHOD create (Lnet/minecraft/server/commands/data/DataCommands$DataManipulator;)Lcom/mojang/brigadier/builder/ArgumentBuilder;
-			ARG 1 dataManipulator
 	CLASS DataProvider
 		METHOD access (Lcom/mojang/brigadier/context/CommandContext;)Lnet/minecraft/server/commands/data/DataAccessor;
 			COMMENT Creates an accessor based on the command context. This should only refer to arguments registered in {@link createArgument}.
@@ -183,6 +174,15 @@ CLASS net/minecraft/server/commands/data/DataCommands
 			COMMENT Creates an argument used for accessing data related to this type of thing, including a literal to distinguish from other types.
 			ARG 1 builder
 			ARG 2 action
+	CLASS DataManipulator
+		METHOD modify (Lcom/mojang/brigadier/context/CommandContext;Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/commands/arguments/NbtPathArgument$NbtPath;Ljava/util/List;)I
+			ARG 1 context
+			ARG 2 nbt
+			ARG 3 nbtPath
+			ARG 4 tags
 	CLASS StringProcessor
 		METHOD process (Ljava/lang/String;)Ljava/lang/String;
 			ARG 1 input
+	CLASS DataManipulatorDecorator
+		METHOD create (Lnet/minecraft/server/commands/data/DataCommands$DataManipulator;)Lcom/mojang/brigadier/builder/ArgumentBuilder;
+			ARG 1 dataManipulator

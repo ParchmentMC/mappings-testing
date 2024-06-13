@@ -16,10 +16,6 @@ CLASS net/minecraft/world/entity/monster/piglin/Piglin
 		ARG 2 spawnType
 		ARG 3 pos
 		ARG 4 random
-	METHOD dropCustomDeathLoot (Lnet/minecraft/world/damagesource/DamageSource;IZ)V
-		ARG 1 source
-		ARG 2 looting
-		ARG 3 recentlyHit
 	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
 		ARG 1 damageSource
 	METHOD getTopPassenger (Lnet/minecraft/world/entity/Entity;I)Lnet/minecraft/world/entity/Entity;

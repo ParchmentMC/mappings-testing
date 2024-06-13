@@ -1,15 +1,6 @@
 CLASS net/minecraft/world/level/block/NetherPortalBlock
 	METHOD createBlockStateDefinition (Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V
 		ARG 1 builder
-	METHOD createDimensionTransition (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/BlockUtil$FoundRectangle;Lnet/minecraft/core/Direction$Axis;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/phys/Vec3;FF)Lnet/minecraft/world/level/portal/DimensionTransition;
-		ARG 0 level
-		ARG 1 rectangle
-		ARG 2 axis
-		ARG 3 offset
-		ARG 4 entity
-		ARG 5 deltaMovement
-		ARG 6 yRot
-		ARG 7 xRot
 	METHOD createDimensionTransition (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/BlockUtil$FoundRectangle;Lnet/minecraft/core/Direction$Axis;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/phys/Vec3;FFLnet/minecraft/world/level/portal/DimensionTransition$PostDimensionTransition;)Lnet/minecraft/world/level/portal/DimensionTransition;
 		ARG 0 level
 		ARG 1 rectangle
@@ -25,11 +16,6 @@ CLASS net/minecraft/world/level/block/NetherPortalBlock
 		ARG 2 level
 		ARG 3 pos
 		ARG 4 entity
-	METHOD getDimensionTransitionFromExit (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/core/BlockPos;Lnet/minecraft/BlockUtil$FoundRectangle;Lnet/minecraft/server/level/ServerLevel;)Lnet/minecraft/world/level/portal/DimensionTransition;
-		ARG 0 entity
-		ARG 1 pos
-		ARG 2 rectangle
-		ARG 3 level
 	METHOD getDimensionTransitionFromExit (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/core/BlockPos;Lnet/minecraft/BlockUtil$FoundRectangle;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/portal/DimensionTransition$PostDimensionTransition;)Lnet/minecraft/world/level/portal/DimensionTransition;
 		ARG 0 entity
 		ARG 1 pos

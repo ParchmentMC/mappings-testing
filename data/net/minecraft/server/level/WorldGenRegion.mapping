@@ -1,9 +1,4 @@
 CLASS net/minecraft/server/level/WorldGenRegion
-	METHOD <init> (Lnet/minecraft/server/level/ServerLevel;Ljava/util/List;Lnet/minecraft/world/level/chunk/status/ChunkStatus;I)V
-		ARG 1 level
-		ARG 2 cache
-		ARG 3 generatingStatus
-		ARG 4 writeRadiusCutoff
 	METHOD <init> (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/util/StaticCache2D;Lnet/minecraft/world/level/chunk/status/ChunkStep;Lnet/minecraft/world/level/chunk/ChunkAccess;)V
 		ARG 1 level
 		ARG 2 cache

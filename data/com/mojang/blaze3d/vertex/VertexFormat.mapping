@@ -1,6 +1,4 @@
 CLASS com/mojang/blaze3d/vertex/VertexFormat
-	METHOD <init> (Lcom/google/common/collect/ImmutableMap;)V
-		ARG 1 elementMapping
 	METHOD <init> (Ljava/util/List;Ljava/util/List;Lit/unimi/dsi/fastutil/ints/IntList;I)V
 		ARG 1 elements
 		ARG 2 names
@@ -14,6 +12,14 @@ CLASS com/mojang/blaze3d/vertex/VertexFormat
 		ARG 1 element
 	METHOD getOffset (Lcom/mojang/blaze3d/vertex/VertexFormatElement;)I
 		ARG 1 element
+	CLASS Mode
+		METHOD <init> (Ljava/lang/String;IIIIZ)V
+			ARG 3 asGLMode
+			ARG 4 primitiveLength
+			ARG 5 primitiveStride
+			ARG 6 connectedPrimitives
+		METHOD indexCount (I)I
+			ARG 1 vertices
 	CLASS Builder
 		METHOD add (Ljava/lang/String;Lcom/mojang/blaze3d/vertex/VertexFormatElement;)Lcom/mojang/blaze3d/vertex/VertexFormat$Builder;
 			ARG 1 name
@@ -26,11 +32,3 @@ CLASS com/mojang/blaze3d/vertex/VertexFormat
 			ARG 4 bytes
 		METHOD least (I)Lcom/mojang/blaze3d/vertex/VertexFormat$IndexType;
 			ARG 0 indexCount
-	CLASS Mode
-		METHOD <init> (Ljava/lang/String;IIIIZ)V
-			ARG 3 asGLMode
-			ARG 4 primitiveLength
-			ARG 5 primitiveStride
-			ARG 6 connectedPrimitives
-		METHOD indexCount (I)I
-			ARG 1 vertices

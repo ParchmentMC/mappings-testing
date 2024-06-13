@@ -97,9 +97,6 @@ CLASS net/minecraft/server/players/PlayerList
 		ARG 1 player
 	METHOD removeAll ()V
 		COMMENT Kicks everyone with "Server closed" as reason.
-	METHOD respawn (Lnet/minecraft/server/level/ServerPlayer;Z)Lnet/minecraft/server/level/ServerPlayer;
-		ARG 1 player
-		ARG 2 keepEverything
 	METHOD respawn (Lnet/minecraft/server/level/ServerPlayer;ZLnet/minecraft/world/entity/Entity$RemovalReason;)Lnet/minecraft/server/level/ServerPlayer;
 		ARG 1 player
 		ARG 2 keepInventory

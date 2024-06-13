@@ -41,6 +41,13 @@ CLASS net/minecraft/world/entity/monster/Slime
 		ARG 2 resetHealth
 	METHOD tick ()V
 		COMMENT Called to update the entity's position/logic.
+	CLASS SlimeFloatGoal
+		METHOD <init> (Lnet/minecraft/world/entity/monster/Slime;)V
+			ARG 1 slime
+		METHOD canUse ()Z
+			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
+		METHOD tick ()V
+			COMMENT Keep ticking a continuous task that has already been started
 	CLASS SlimeAttackGoal
 		METHOD <init> (Lnet/minecraft/world/entity/monster/Slime;)V
 			ARG 1 slime
@@ -52,20 +59,6 @@ CLASS net/minecraft/world/entity/monster/Slime
 			COMMENT Execute a one shot task or start executing a continuous task
 		METHOD tick ()V
 			COMMENT Keep ticking a continuous task that has already been started
-	CLASS SlimeFloatGoal
-		METHOD <init> (Lnet/minecraft/world/entity/monster/Slime;)V
-			ARG 1 slime
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-		METHOD tick ()V
-			COMMENT Keep ticking a continuous task that has already been started
-	CLASS SlimeKeepOnJumpingGoal
-		METHOD <init> (Lnet/minecraft/world/entity/monster/Slime;)V
-			ARG 1 slime
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-		METHOD tick ()V
-			COMMENT Keep ticking a continuous task that has already been started
 	CLASS SlimeMoveControl
 		METHOD <init> (Lnet/minecraft/world/entity/monster/Slime;)V
 			ARG 1 slime
@@ -74,6 +67,13 @@ CLASS net/minecraft/world/entity/monster/Slime
 			ARG 2 aggressive
 		METHOD setWantedMovement (D)V
 			ARG 1 speed
+	CLASS SlimeKeepOnJumpingGoal
+		METHOD <init> (Lnet/minecraft/world/entity/monster/Slime;)V
+			ARG 1 slime
+		METHOD canUse ()Z
+			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
+		METHOD tick ()V
+			COMMENT Keep ticking a continuous task that has already been started
 	CLASS SlimeRandomDirectionGoal
 		METHOD <init> (Lnet/minecraft/world/entity/monster/Slime;)V
 			ARG 1 slime

@@ -8,11 +8,6 @@ CLASS net/minecraft/world/entity/animal/horse/SkeletonTrapGoal
 	METHOD createSkeleton (Lnet/minecraft/world/DifficultyInstance;Lnet/minecraft/world/entity/animal/horse/AbstractHorse;)Lnet/minecraft/world/entity/monster/Skeleton;
 		ARG 1 difficulty
 		ARG 2 horse
-	METHOD disenchant (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/ItemStack;
-		ARG 1 stack
-	METHOD enchant (Lnet/minecraft/world/entity/monster/Skeleton;Lnet/minecraft/world/entity/EquipmentSlot;)V
-		ARG 1 skeleton
-		ARG 2 slot
 	METHOD enchant (Lnet/minecraft/world/entity/monster/Skeleton;Lnet/minecraft/world/entity/EquipmentSlot;Lnet/minecraft/world/DifficultyInstance;)V
 		ARG 1 skeleton
 		ARG 2 slot

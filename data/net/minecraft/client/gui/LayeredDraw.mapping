@@ -4,22 +4,13 @@ CLASS net/minecraft/client/gui/LayeredDraw
 	METHOD add (Lnet/minecraft/client/gui/LayeredDraw;Ljava/util/function/BooleanSupplier;)Lnet/minecraft/client/gui/LayeredDraw;
 		ARG 1 layeredDraw
 		ARG 2 renderInner
-	METHOD render (Lnet/minecraft/client/gui/GuiGraphics;F)V
-		ARG 1 guiGraphics
-		ARG 2 partialTick
 	METHOD render (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/DeltaTracker;)V
 		ARG 1 guiGraphics
 		ARG 2 deltaTracker
-	METHOD renderInner (Lnet/minecraft/client/gui/GuiGraphics;F)V
-		ARG 1 guiGraphics
-		ARG 2 partialTick
 	METHOD renderInner (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/DeltaTracker;)V
 		ARG 1 guiGraphics
 		ARG 2 deltaTracker
 	CLASS Layer
-		METHOD render (Lnet/minecraft/client/gui/GuiGraphics;F)V
-			ARG 1 guiGraphics
-			ARG 2 partialTick
 		METHOD render (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/DeltaTracker;)V
 			ARG 1 guiGraphics
 			ARG 2 deltaTracker

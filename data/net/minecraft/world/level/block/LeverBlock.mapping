@@ -34,10 +34,6 @@ CLASS net/minecraft/world/level/block/LeverBlock
 		ARG 1 level
 		ARG 2 pos
 		ARG 3 state
-	METHOD pull (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
-		ARG 1 state
-		ARG 2 level
-		ARG 3 pos
 	METHOD pull (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;)V
 		ARG 1 state
 		ARG 2 level

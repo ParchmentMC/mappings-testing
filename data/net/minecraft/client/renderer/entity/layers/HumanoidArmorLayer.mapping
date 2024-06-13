@@ -29,15 +29,6 @@ CLASS net/minecraft/client/renderer/entity/layers/HumanoidArmorLayer
 		ARG 2 bufferSource
 		ARG 3 packedLight
 		ARG 4 model
-	METHOD renderModel (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;ILnet/minecraft/client/model/HumanoidModel;FFFLnet/minecraft/resources/ResourceLocation;)V
-		ARG 1 poseStack
-		ARG 2 buffer
-		ARG 3 packedLight
-		ARG 4 armorItem
-		ARG 5 red
-		ARG 6 green
-		ARG 7 blue
-		ARG 8 texture
 	METHOD renderModel (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;ILnet/minecraft/client/model/HumanoidModel;ILnet/minecraft/resources/ResourceLocation;)V
 		ARG 1 poseStack
 		ARG 2 bufferSource

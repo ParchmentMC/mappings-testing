@@ -15,16 +15,16 @@ CLASS net/minecraft/network/UnconfiguredPipelineHandler
 			ARG 1 context
 			ARG 2 message
 			ARG 3 promise
-	CLASS InboundConfigurationTask
-		METHOD andThen (Lnet/minecraft/network/UnconfiguredPipelineHandler$InboundConfigurationTask;)Lnet/minecraft/network/UnconfiguredPipelineHandler$InboundConfigurationTask;
-			ARG 1 task
-		METHOD run (Lio/netty/channel/ChannelHandlerContext;)V
-			ARG 1 context
 	CLASS Outbound
 		METHOD write (Lio/netty/channel/ChannelHandlerContext;Ljava/lang/Object;Lio/netty/channel/ChannelPromise;)V
 			ARG 1 context
 			ARG 2 message
 			ARG 3 promise
+	CLASS InboundConfigurationTask
+		METHOD andThen (Lnet/minecraft/network/UnconfiguredPipelineHandler$InboundConfigurationTask;)Lnet/minecraft/network/UnconfiguredPipelineHandler$InboundConfigurationTask;
+			ARG 1 task
+		METHOD run (Lio/netty/channel/ChannelHandlerContext;)V
+			ARG 1 context
 	CLASS OutboundConfigurationTask
 		METHOD andThen (Lnet/minecraft/network/UnconfiguredPipelineHandler$OutboundConfigurationTask;)Lnet/minecraft/network/UnconfiguredPipelineHandler$OutboundConfigurationTask;
 			ARG 1 task

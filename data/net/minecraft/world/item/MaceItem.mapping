@@ -1,8 +1,6 @@
 CLASS net/minecraft/world/item/MaceItem
 	METHOD canSmashAttack (Lnet/minecraft/world/entity/LivingEntity;)Z
 		ARG 0 entity
-	METHOD canSmashAttack (Lnet/minecraft/world/entity/player/Player;)Z
-		ARG 0 player
 	METHOD getKnockbackPower (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/phys/Vec3;)D
 		ARG 0 player
 		ARG 1 entity

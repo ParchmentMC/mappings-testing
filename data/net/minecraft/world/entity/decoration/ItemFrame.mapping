@@ -44,8 +44,6 @@ CLASS net/minecraft/world/entity/decoration/ItemFrame
 	METHOD readAdditionalSaveData (Lnet/minecraft/nbt/CompoundTag;)V
 		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
 		ARG 1 compound
-	METHOD recalculateBoundingBox ()V
-		COMMENT Updates the entity bounding box based on current facing
 	METHOD removeFramedMap (Lnet/minecraft/world/item/ItemStack;)V
 		COMMENT Removes the dot representing this frame's position from the map when the item frame is broken.
 		ARG 1 stack

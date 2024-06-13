@@ -51,9 +51,6 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 1 systemReport
 	METHOD getCompressionThreshold ()I
 		COMMENT The compression threshold. If the packet is larger than the specified amount of bytes, it will be compressed
-	METHOD getFile (Ljava/lang/String;)Ljava/io/File;
-		COMMENT Returns a File object from the specified string.
-		ARG 1 fileName
 	METHOD getFile (Ljava/lang/String;)Ljava/nio/file/Path;
 		ARG 1 path
 	METHOD getKeyPair ()Ljava/security/KeyPair;
@@ -111,11 +108,7 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 3 player
 	METHOD kickUnlistedPlayers (Lnet/minecraft/commands/CommandSourceStack;)V
 		ARG 1 commandSource
-	METHOD lambda$loadStatusIcon$10 (Ljava/nio/file/Path;)Z
-		ARG 0 path
 	METHOD lambda$loadStatusIcon$11 (Ljava/nio/file/Path;)Z
-		ARG 0 path
-	METHOD lambda$loadStatusIcon$13 (Ljava/nio/file/Path;)Ljava/util/Optional;
 		ARG 0 path
 	METHOD lambda$new$0 (Lnet/minecraft/util/profiling/ProfileResults;)V
 		ARG 1 results
@@ -128,12 +121,8 @@ CLASS net/minecraft/server/MinecraftServer
 	METHOD lambda$spin$3 (Ljava/lang/Thread;Ljava/lang/Throwable;)V
 		ARG 0 thread
 		ARG 1 exception
-	METHOD lambda$startMetricsRecordingTick$31 (Ljava/nio/file/Path;)V
-		ARG 1 path
 	METHOD lambda$stopServer$6 (Lnet/minecraft/server/level/ServerLevel;)Z
 		ARG 0 level
-	METHOD lambda$tickChildren$14 (Lnet/minecraft/server/level/ServerPlayer;)V
-		ARG 0 player
 	METHOD logChatMessage (Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/ChatType$Bound;Ljava/lang/String;)V
 		ARG 1 content
 		ARG 2 boundChatType
@@ -157,10 +146,6 @@ CLASS net/minecraft/server/MinecraftServer
 	METHOD reloadResources (Ljava/util/Collection;)Ljava/util/concurrent/CompletableFuture;
 		COMMENT Replaces currently selected list of datapacks, reloads them, and sends new data to players.
 		ARG 1 selectedIds
-	METHOD reportChunkLoadFailure (Lnet/minecraft/world/level/ChunkPos;)V
-		ARG 1 chunkPos
-	METHOD reportChunkSaveFailure (Lnet/minecraft/world/level/ChunkPos;)V
-		ARG 1 chunkPos
 	METHOD saveAllChunks (ZZZ)Z
 		ARG 1 suppressLog
 		ARG 2 flush

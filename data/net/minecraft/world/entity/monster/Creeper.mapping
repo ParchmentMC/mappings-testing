@@ -7,10 +7,6 @@ CLASS net/minecraft/world/entity/monster/Creeper
 		COMMENT Does not test if this creeper is charged, the caller must do that. However, does test the doMobLoot gamerule.
 	METHOD doHurtTarget (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 1 entity
-	METHOD dropCustomDeathLoot (Lnet/minecraft/world/damagesource/DamageSource;IZ)V
-		ARG 1 source
-		ARG 2 looting
-		ARG 3 recentlyHit
 	METHOD explodeCreeper ()V
 		COMMENT Creates an explosion as determined by this creeper's power and explosion radius.
 	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;

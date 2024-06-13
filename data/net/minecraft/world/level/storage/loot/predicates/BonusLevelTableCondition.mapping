@@ -5,9 +5,6 @@ CLASS net/minecraft/world/level/storage/loot/predicates/BonusLevelTableCondition
 	METHOD bonusLevelFlatChance (Lnet/minecraft/core/Holder;[F)Lnet/minecraft/world/level/storage/loot/predicates/LootItemCondition$Builder;
 		ARG 0 enchantment
 		ARG 1 values
-	METHOD bonusLevelFlatChance (Lnet/minecraft/world/item/enchantment/Enchantment;[F)Lnet/minecraft/world/level/storage/loot/predicates/LootItemCondition$Builder;
-		ARG 0 enchantment
-		ARG 1 chances
 	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 0 instance
 	METHOD test (Lnet/minecraft/world/level/storage/loot/LootContext;)Z

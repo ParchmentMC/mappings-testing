@@ -20,10 +20,6 @@ CLASS net/minecraft/world/item/crafting/ShapedRecipe
 		ARG 0 ingredient
 	METHOD lambda$isIncomplete$1 (Lnet/minecraft/world/item/crafting/Ingredient;)Z
 		ARG 0 filteredIngredients
-	METHOD matches (Lnet/minecraft/world/inventory/CraftingContainer;Lnet/minecraft/world/level/Level;)Z
-		COMMENT Used to check if a recipe matches current crafting inventory
-		ARG 1 inv
-		ARG 2 level
 	CLASS Serializer
 		METHOD fromNetwork (Lnet/minecraft/network/RegistryFriendlyByteBuf;)Lnet/minecraft/world/item/crafting/ShapedRecipe;
 			ARG 0 buffer

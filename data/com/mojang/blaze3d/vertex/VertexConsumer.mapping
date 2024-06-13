@@ -30,37 +30,6 @@ CLASS com/mojang/blaze3d/vertex/VertexConsumer
 		ARG 4 z
 	METHOD addVertex (Lorg/joml/Vector3f;)Lcom/mojang/blaze3d/vertex/VertexConsumer;
 		ARG 1 pos
-	METHOD color (FFFF)Lcom/mojang/blaze3d/vertex/VertexConsumer;
-		ARG 1 red
-		ARG 2 green
-		ARG 3 blue
-		ARG 4 alpha
-	METHOD color (I)Lcom/mojang/blaze3d/vertex/VertexConsumer;
-		ARG 1 colorARGB
-	METHOD color (IIII)Lcom/mojang/blaze3d/vertex/VertexConsumer;
-		ARG 1 red
-		ARG 2 green
-		ARG 3 blue
-		ARG 4 alpha
-	METHOD defaultColor (IIII)V
-		ARG 1 defaultR
-		ARG 2 defaultG
-		ARG 3 defaultB
-		ARG 4 defaultA
-	METHOD normal (FFF)Lcom/mojang/blaze3d/vertex/VertexConsumer;
-		ARG 1 x
-		ARG 2 y
-		ARG 3 z
-	METHOD normal (Lcom/mojang/blaze3d/vertex/PoseStack$Pose;FFF)Lcom/mojang/blaze3d/vertex/VertexConsumer;
-		ARG 1 pose
-		ARG 2 x
-		ARG 3 y
-		ARG 4 z
-	METHOD overlayCoords (I)Lcom/mojang/blaze3d/vertex/VertexConsumer;
-		ARG 1 overlayUV
-	METHOD overlayCoords (II)Lcom/mojang/blaze3d/vertex/VertexConsumer;
-		ARG 1 u
-		ARG 2 v
 	METHOD putBulkData (Lcom/mojang/blaze3d/vertex/PoseStack$Pose;Lnet/minecraft/client/renderer/block/model/BakedQuad;FFFFII)V
 		ARG 1 pose
 		ARG 2 quad
@@ -116,40 +85,3 @@ CLASS com/mojang/blaze3d/vertex/VertexConsumer
 		ARG 2 v
 	METHOD setWhiteAlpha (I)Lcom/mojang/blaze3d/vertex/VertexConsumer;
 		ARG 1 alpha
-	METHOD uv (FF)Lcom/mojang/blaze3d/vertex/VertexConsumer;
-		ARG 1 u
-		ARG 2 v
-	METHOD uv2 (I)Lcom/mojang/blaze3d/vertex/VertexConsumer;
-		ARG 1 lightmapUV
-	METHOD uv2 (II)Lcom/mojang/blaze3d/vertex/VertexConsumer;
-		ARG 1 u
-		ARG 2 v
-	METHOD vertex (DDD)Lcom/mojang/blaze3d/vertex/VertexConsumer;
-		ARG 1 x
-		ARG 3 y
-		ARG 5 z
-	METHOD vertex (FFFFFFFFFIIFFF)V
-		ARG 1 x
-		ARG 2 y
-		ARG 3 z
-		ARG 4 red
-		ARG 5 green
-		ARG 6 blue
-		ARG 7 alpha
-		ARG 8 texU
-		ARG 9 texV
-		ARG 10 overlayUV
-		ARG 11 lightmapUV
-		ARG 12 normalX
-		ARG 13 normalY
-		ARG 14 normalZ
-	METHOD vertex (Lcom/mojang/blaze3d/vertex/PoseStack$Pose;FFF)Lcom/mojang/blaze3d/vertex/VertexConsumer;
-		ARG 1 pose
-		ARG 2 x
-		ARG 3 y
-		ARG 4 z
-	METHOD vertex (Lorg/joml/Matrix4f;FFF)Lcom/mojang/blaze3d/vertex/VertexConsumer;
-		ARG 1 matrix
-		ARG 2 x
-		ARG 3 y
-		ARG 4 z

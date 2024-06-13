@@ -7,8 +7,6 @@ CLASS net/minecraft/server/ServerAdvancementManager
 		ARG 3 profiler
 	METHOD get (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/advancements/AdvancementHolder;
 		ARG 1 location
-	METHOD lambda$validate$1 (Ljava/util/Map$Entry;)Ljava/lang/String;
-		ARG 0 entry
 	METHOD validate (Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/advancements/Advancement;)V
 		ARG 1 location
 		ARG 2 advancement

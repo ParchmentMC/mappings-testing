@@ -1,6 +1,4 @@
 CLASS net/minecraft/world/entity/monster/Witch
-	METHOD applyRaidBuffs (IZ)V
-		ARG 1 wave
 	METHOD getDamageAfterMagicAbsorb (Lnet/minecraft/world/damagesource/DamageSource;F)F
 		COMMENT Reduces damage, depending on potions
 		ARG 1 source

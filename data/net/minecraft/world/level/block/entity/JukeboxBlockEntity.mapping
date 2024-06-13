@@ -4,27 +4,8 @@ CLASS net/minecraft/world/level/block/entity/JukeboxBlockEntity
 		ARG 2 blockState
 	METHOD notifyItemChangedInJukebox (Z)V
 		ARG 1 hasRecord
-	METHOD playRecordTick (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/entity/JukeboxBlockEntity;)V
-		ARG 0 level
-		ARG 1 pos
-		ARG 2 state
-		ARG 3 jukebox
-	METHOD setHasRecordBlockState (Lnet/minecraft/world/entity/Entity;Z)V
-		ARG 1 entity
-		ARG 2 hasRecord
-	METHOD setRecordWithoutPlaying (Lnet/minecraft/world/item/ItemStack;)V
-		ARG 1 stack
 	METHOD setSongItemWithoutPlaying (Lnet/minecraft/world/item/ItemStack;)V
 		ARG 1 stack
-	METHOD shouldRecordStopPlaying (Lnet/minecraft/world/item/RecordItem;)Z
-		ARG 1 record
-	METHOD spawnMusicParticles (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)V
-		ARG 1 level
-		ARG 2 pos
-	METHOD tick (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
-		ARG 1 level
-		ARG 2 pos
-		ARG 3 state
 	METHOD tick (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/entity/JukeboxBlockEntity;)V
 		ARG 0 level
 		ARG 1 pos

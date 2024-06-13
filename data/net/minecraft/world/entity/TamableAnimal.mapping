@@ -3,8 +3,6 @@ CLASS net/minecraft/world/entity/TamableAnimal
 		ARG 1 compound
 	METHOD canAttack (Lnet/minecraft/world/entity/LivingEntity;)Z
 		ARG 1 target
-	METHOD canBeLeashed (Lnet/minecraft/world/entity/player/Player;)Z
-		ARG 1 player
 	METHOD canTeleportTo (Lnet/minecraft/core/BlockPos;)Z
 		ARG 1 pos
 	METHOD die (Lnet/minecraft/world/damagesource/DamageSource;)V

@@ -111,21 +111,12 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 3 oldState
 		ARG 4 newState
 		ARG 5 flags
-	METHOD buildClouds (Lcom/mojang/blaze3d/vertex/BufferBuilder;DDDLnet/minecraft/world/phys/Vec3;)Lcom/mojang/blaze3d/vertex/BufferBuilder$RenderedBuffer;
-		ARG 1 builder
-		ARG 2 x
-		ARG 4 y
-		ARG 6 z
-		ARG 8 cloudColor
 	METHOD buildClouds (Lcom/mojang/blaze3d/vertex/Tesselator;DDDLnet/minecraft/world/phys/Vec3;)Lcom/mojang/blaze3d/vertex/MeshData;
 		ARG 1 tesselator
 		ARG 2 x
 		ARG 4 y
 		ARG 6 z
 		ARG 8 cloudColor
-	METHOD buildSkyDisc (Lcom/mojang/blaze3d/vertex/BufferBuilder;F)Lcom/mojang/blaze3d/vertex/BufferBuilder$RenderedBuffer;
-		ARG 0 builder
-		ARG 1 y
 	METHOD buildSkyDisc (Lcom/mojang/blaze3d/vertex/Tesselator;F)Lcom/mojang/blaze3d/vertex/MeshData;
 		ARG 0 tesselator
 		ARG 1 y
@@ -152,8 +143,6 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 3 progress
 	METHOD doesMobEffectBlockSky (Lnet/minecraft/client/Camera;)Z
 		ARG 1 camera
-	METHOD drawStars (Lcom/mojang/blaze3d/vertex/BufferBuilder;)Lcom/mojang/blaze3d/vertex/BufferBuilder$RenderedBuffer;
-		ARG 1 builder
 	METHOD drawStars (Lcom/mojang/blaze3d/vertex/Tesselator;)Lcom/mojang/blaze3d/vertex/MeshData;
 		ARG 1 tesselator
 	METHOD getEntityStatistics ()Ljava/lang/String;
@@ -204,9 +193,6 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 1 resourceManager
 	METHOD playJukeboxSong (Lnet/minecraft/core/Holder;Lnet/minecraft/core/BlockPos;)V
 		ARG 1 song
-		ARG 2 pos
-	METHOD playStreamingMusic (Lnet/minecraft/sounds/SoundEvent;Lnet/minecraft/core/BlockPos;)V
-		ARG 1 soundEvent
 		ARG 2 pos
 	METHOD prepareCullFrustum (Lnet/minecraft/world/phys/Vec3;Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;)V
 		ARG 1 cameraPosition
@@ -259,15 +245,6 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 8 camZ
 		ARG 10 pos
 		ARG 11 state
-	METHOD renderLevel (FJZLnet/minecraft/client/Camera;Lnet/minecraft/client/renderer/GameRenderer;Lnet/minecraft/client/renderer/LightTexture;Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;)V
-		ARG 1 partialTick
-		ARG 2 nanoTime
-		ARG 4 renderBlockOutline
-		ARG 5 camera
-		ARG 6 gameRenderer
-		ARG 7 lightTexture
-		ARG 8 projectionMatrix
-		ARG 9 frustrumMatrix
 	METHOD renderLevel (Lnet/minecraft/client/DeltaTracker;ZLnet/minecraft/client/Camera;Lnet/minecraft/client/renderer/GameRenderer;Lnet/minecraft/client/renderer/LightTexture;Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;)V
 		ARG 1 deltaTracker
 		ARG 2 renderBlockOutline

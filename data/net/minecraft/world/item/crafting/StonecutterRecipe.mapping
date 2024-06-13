@@ -3,7 +3,3 @@ CLASS net/minecraft/world/item/crafting/StonecutterRecipe
 		ARG 1 group
 		ARG 2 ingredient
 		ARG 3 result
-	METHOD matches (Lnet/minecraft/world/Container;Lnet/minecraft/world/level/Level;)Z
-		COMMENT Used to check if a recipe matches current crafting inventory
-		ARG 1 inv
-		ARG 2 level

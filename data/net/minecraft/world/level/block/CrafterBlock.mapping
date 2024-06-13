@@ -10,9 +10,6 @@ CLASS net/minecraft/world/level/block/CrafterBlock
 		ARG 4 stack
 		ARG 5 state
 		ARG 6 recipe
-	METHOD getPotentialResults (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/inventory/CraftingContainer;)Ljava/util/Optional;
-		ARG 0 level
-		ARG 1 container
 	METHOD getPotentialResults (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/item/crafting/CraftingInput;)Ljava/util/Optional;
 		ARG 0 level
 		ARG 1 input

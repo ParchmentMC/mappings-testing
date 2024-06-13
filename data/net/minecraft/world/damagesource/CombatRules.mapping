@@ -1,9 +1,4 @@
 CLASS net/minecraft/world/damagesource/CombatRules
-	METHOD getDamageAfterAbsorb (FLnet/minecraft/world/damagesource/DamageSource;FF)F
-		ARG 0 damage
-		ARG 1 source
-		ARG 2 armor
-		ARG 3 armorToughness
 	METHOD getDamageAfterAbsorb (Lnet/minecraft/world/entity/LivingEntity;FLnet/minecraft/world/damagesource/DamageSource;FF)F
 		ARG 0 entity
 		ARG 1 damage

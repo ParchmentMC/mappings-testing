@@ -5,40 +5,16 @@ CLASS net/minecraft/world/entity/decoration/HangingEntity
 		ARG 1 entityType
 		ARG 2 level
 		ARG 3 pos
-	METHOD addAdditionalSaveData (Lnet/minecraft/nbt/CompoundTag;)V
-		ARG 1 compound
 	METHOD calculateBoundingBox (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)Lnet/minecraft/world/phys/AABB;
 		ARG 1 pos
 		ARG 2 direction
-	METHOD dropItem (Lnet/minecraft/world/entity/Entity;)V
-		COMMENT Called when this entity is broken. Entity parameter may be null.
-		ARG 1 brokenEntity
 	METHOD getDirection ()Lnet/minecraft/core/Direction;
 		COMMENT Gets the horizontal facing direction of this Entity.
-	METHOD hurt (Lnet/minecraft/world/damagesource/DamageSource;F)Z
-		COMMENT Called when the entity is attacked.
-		ARG 1 source
-		ARG 2 amount
-	METHOD isPickable ()Z
-		COMMENT Returns {@code true} if other Entities should be prevented from moving through this Entity.
 	METHOD lambda$static$0 (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 0 entity
 	METHOD mirror (Lnet/minecraft/world/level/block/Mirror;)F
 		COMMENT Transforms the entity's current yaw with the given Mirror and returns it. This does not have a side-effect.
 		ARG 1 transformMirror
-	METHOD move (Lnet/minecraft/world/entity/MoverType;Lnet/minecraft/world/phys/Vec3;)V
-		ARG 1 type
-		ARG 2 pos
-	METHOD offs (I)D
-		ARG 1 offset
-	METHOD push (DDD)V
-		COMMENT Adds to the current velocity of the entity, and sets {@link #isAirBorne} to true.
-		ARG 1 x
-		ARG 3 y
-		ARG 5 z
-	METHOD readAdditionalSaveData (Lnet/minecraft/nbt/CompoundTag;)V
-		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
-		ARG 1 compound
 	METHOD recalculateBoundingBox ()V
 		COMMENT Updates the entity bounding box based on current facing
 	METHOD rotate (Lnet/minecraft/world/level/block/Rotation;)F
@@ -47,22 +23,9 @@ CLASS net/minecraft/world/entity/decoration/HangingEntity
 	METHOD setDirection (Lnet/minecraft/core/Direction;)V
 		COMMENT Updates facing and bounding box based on it
 		ARG 1 facingDirection
-	METHOD setPos (DDD)V
-		COMMENT Sets the x,y,z of the entity from the given parameters. Also seems to set up a bounding box.
-		ARG 1 x
-		ARG 3 y
-		ARG 5 z
-	METHOD skipAttackInteraction (Lnet/minecraft/world/entity/Entity;)Z
-		COMMENT Called when a player attacks an entity. If this returns true the attack will not happen.
-		ARG 1 entity
 	METHOD spawnAtLocation (Lnet/minecraft/world/item/ItemStack;F)Lnet/minecraft/world/entity/item/ItemEntity;
 		COMMENT Drops an item at the position of the entity.
 		ARG 1 stack
 		ARG 2 offsetY
 	METHOD survives ()Z
 		COMMENT Checks to make sure the {@code HangingEntity} can be placed there.
-	METHOD thunderHit (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LightningBolt;)V
-		ARG 1 level
-		ARG 2 lightning
-	METHOD tick ()V
-		COMMENT Called to update the entity's position/logic.

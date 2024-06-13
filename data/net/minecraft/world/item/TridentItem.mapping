@@ -9,9 +9,6 @@ CLASS net/minecraft/world/item/TridentItem
 	METHOD getUseAnimation (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/UseAnim;
 		COMMENT Returns the action that specifies what animation to play when the item is being used.
 		ARG 1 stack
-	METHOD getUseDuration (Lnet/minecraft/world/item/ItemStack;)I
-		COMMENT How long it takes to use or consume an item
-		ARG 1 stack
 	METHOD hurtEnemy (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/LivingEntity;)Z
 		COMMENT Current implementations of this method in child classes do not use the entry argument beside ev. They just raise the damage on the stack.
 		ARG 1 stack

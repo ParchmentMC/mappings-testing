@@ -1,3 +1,0 @@
-CLASS net/minecraft/client/searchtree/RefreshableSearchTree
-	METHOD lambda$empty$0 (Ljava/lang/String;)Ljava/util/List;
-		ARG 0 contents

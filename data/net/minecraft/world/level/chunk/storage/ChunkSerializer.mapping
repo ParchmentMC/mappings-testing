@@ -44,11 +44,6 @@ CLASS net/minecraft/world/level/chunk/storage/ChunkSerializer
 	METHOD postLoadChunk (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/level/chunk/LevelChunk$PostLoadProcessor;
 		ARG 0 level
 		ARG 1 tag
-	METHOD read (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/ai/village/poi/PoiManager;Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/level/chunk/ProtoChunk;
-		ARG 0 level
-		ARG 1 poiManager
-		ARG 2 pos
-		ARG 3 tag
 	METHOD read (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/ai/village/poi/PoiManager;Lnet/minecraft/world/level/chunk/storage/RegionStorageInfo;Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/level/chunk/ProtoChunk;
 		ARG 0 level
 		ARG 1 poiManager

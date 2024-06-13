@@ -1,8 +1,6 @@
 CLASS net/minecraft/network/protocol/game/ClientboundAddExperienceOrbPacket
 	METHOD <init> (Lnet/minecraft/network/FriendlyByteBuf;)V
 		ARG 1 buffer
-	METHOD <init> (Lnet/minecraft/world/entity/ExperienceOrb;)V
-		ARG 1 orbEntity
 	METHOD <init> (Lnet/minecraft/world/entity/ExperienceOrb;Lnet/minecraft/server/level/ServerEntity;)V
 		ARG 1 orb
 		ARG 2 entity

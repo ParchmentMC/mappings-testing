@@ -1,4 +1,0 @@
-CLASS net/minecraft/world/item/enchantment/UntouchingEnchantment
-	METHOD checkCompatibility (Lnet/minecraft/world/item/enchantment/Enchantment;)Z
-		COMMENT Determines if the enchantment passed can be applied together with this enchantment.
-		ARG 1 ench

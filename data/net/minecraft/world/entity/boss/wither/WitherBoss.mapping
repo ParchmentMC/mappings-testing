@@ -3,18 +3,12 @@ CLASS net/minecraft/world/entity/boss/wither/WitherBoss
 		ARG 1 compound
 	METHOD canBeAffected (Lnet/minecraft/world/effect/MobEffectInstance;)Z
 		ARG 1 potioneffect
-	METHOD canChangeDimensions ()Z
-		COMMENT Returns false if this Entity can't move between dimensions. True if it can.
 	METHOD canDestroy (Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 0 state
 	METHOD canRide (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 1 entity
 	METHOD checkDespawn ()V
 		COMMENT Makes the entity despawn if requirements are reached
-	METHOD dropCustomDeathLoot (Lnet/minecraft/world/damagesource/DamageSource;IZ)V
-		ARG 1 source
-		ARG 2 looting
-		ARG 3 recentlyHit
 	METHOD getAlternativeTarget (I)I
 		COMMENT Returns the target entity ID if present, or -1 if not
 		ARG 1 head

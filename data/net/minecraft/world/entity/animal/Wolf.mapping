@@ -3,8 +3,6 @@ CLASS net/minecraft/world/entity/animal/Wolf
 		ARG 1 compound
 	METHOD canArmorAbsorb (Lnet/minecraft/world/damagesource/DamageSource;)Z
 		ARG 1 damageSource
-	METHOD canBeLeashed (Lnet/minecraft/world/entity/player/Player;)Z
-		ARG 1 player
 	METHOD canMate (Lnet/minecraft/world/entity/animal/Animal;)Z
 		COMMENT Returns {@code true} if the mob is currently able to mate with the specified mob.
 		ARG 1 otherAnimal
@@ -17,8 +15,6 @@ CLASS net/minecraft/world/entity/animal/Wolf
 	METHOD die (Lnet/minecraft/world/damagesource/DamageSource;)V
 		COMMENT Called when the mob's health reaches 0.
 		ARG 1 cause
-	METHOD doHurtTarget (Lnet/minecraft/world/entity/Entity;)Z
-		ARG 1 entity
 	METHOD getBodyRollAngle (FF)F
 		ARG 1 partialTicks
 		ARG 2 offset
@@ -70,6 +66,9 @@ CLASS net/minecraft/world/entity/animal/Wolf
 	METHOD wantsToAttack (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/LivingEntity;)Z
 		ARG 1 target
 		ARG 2 owner
+	CLASS WolfPackData
+		METHOD <init> (Lnet/minecraft/core/Holder;)V
+			ARG 1 type
 	CLASS WolfAvoidEntityGoal
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Wolf;Lnet/minecraft/world/entity/animal/Wolf;Ljava/lang/Class;FDD)V
 			ARG 2 wolf
@@ -85,9 +84,3 @@ CLASS net/minecraft/world/entity/animal/Wolf
 			COMMENT Execute a one shot task or start executing a continuous task
 		METHOD tick ()V
 			COMMENT Keep ticking a continuous task that has already been started
-	CLASS WolfPackData
-		METHOD <init> (Lnet/minecraft/core/Holder;)V
-			ARG 1 type
-	CLASS WolfPanicGoal
-		METHOD <init> (Lnet/minecraft/world/entity/animal/Wolf;D)V
-			ARG 2 speedModifier

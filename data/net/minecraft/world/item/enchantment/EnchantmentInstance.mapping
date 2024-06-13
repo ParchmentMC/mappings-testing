@@ -7,6 +7,3 @@ CLASS net/minecraft/world/item/enchantment/EnchantmentInstance
 	METHOD <init> (Lnet/minecraft/core/Holder;I)V
 		ARG 1 enchantment
 		ARG 2 level
-	METHOD <init> (Lnet/minecraft/world/item/enchantment/Enchantment;I)V
-		ARG 1 enchantment
-		ARG 2 level

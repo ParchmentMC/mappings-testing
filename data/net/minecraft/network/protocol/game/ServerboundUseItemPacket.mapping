@@ -1,9 +1,6 @@
 CLASS net/minecraft/network/protocol/game/ServerboundUseItemPacket
 	METHOD <init> (Lnet/minecraft/network/FriendlyByteBuf;)V
 		ARG 1 buffer
-	METHOD <init> (Lnet/minecraft/world/InteractionHand;I)V
-		ARG 1 hand
-		ARG 2 sequence
 	METHOD <init> (Lnet/minecraft/world/InteractionHand;IFF)V
 		ARG 1 hand
 		ARG 2 sequence

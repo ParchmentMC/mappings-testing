@@ -4,8 +4,6 @@ CLASS net/minecraft/util/datafix/fixes/FixProjectileStoredItem
 	METHOD castUnchecked (Lcom/mojang/datafixers/Typed;Lcom/mojang/datafixers/types/Type;)Lcom/mojang/datafixers/Typed;
 		ARG 0 typed
 		ARG 1 newType
-	METHOD chainAllFilters ([Ljava/util/function/Function;)Ljava/util/function/Function;
-		ARG 1 filters
 	METHOD createItemStack (Lcom/mojang/serialization/Dynamic;Ljava/lang/String;)Lcom/mojang/serialization/Dynamic;
 		ARG 0 dynamic
 		ARG 1 itemId

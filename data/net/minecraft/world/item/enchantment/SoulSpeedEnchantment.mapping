@@ -1,5 +1,0 @@
-CLASS net/minecraft/world/item/enchantment/SoulSpeedEnchantment
-	METHOD isDiscoverable ()Z
-		COMMENT Checks if the enchantment can be applied to loot table drops.
-	METHOD isTradeable ()Z
-		COMMENT Checks if the enchantment can be sold by villagers in their trades.

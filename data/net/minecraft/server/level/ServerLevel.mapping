@@ -12,10 +12,6 @@ CLASS net/minecraft/server/level/ServerLevel
 		ARG 11 customSpawners
 		ARG 12 tickTime
 		ARG 13 randomSequences
-	METHOD addDuringCommandTeleport (Lnet/minecraft/server/level/ServerPlayer;)V
-		ARG 1 player
-	METHOD addDuringPortalTeleport (Lnet/minecraft/server/level/ServerPlayer;)V
-		ARG 1 player
 	METHOD addDuringTeleport (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 entity
 	METHOD addEntity (Lnet/minecraft/world/entity/Entity;)Z
@@ -152,8 +148,6 @@ CLASS net/minecraft/server/level/ServerLevel
 		ARG 2 type
 		ARG 3 pos
 		ARG 4 data
-	METHOD makeObsidianPlatform (Lnet/minecraft/server/level/ServerLevel;)V
-		ARG 0 serverLevel
 	METHOD mayInteract (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/core/BlockPos;)Z
 		ARG 1 player
 		ARG 2 pos

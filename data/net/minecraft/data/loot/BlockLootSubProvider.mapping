@@ -1,11 +1,4 @@
 CLASS net/minecraft/data/loot/BlockLootSubProvider
-	METHOD <init> (Ljava/util/Set;Lnet/minecraft/world/flag/FeatureFlagSet;)V
-		ARG 1 explosionResistant
-		ARG 2 enabledFeatures
-	METHOD <init> (Ljava/util/Set;Lnet/minecraft/world/flag/FeatureFlagSet;Ljava/util/Map;)V
-		ARG 1 explosionResistant
-		ARG 2 enabledFeatures
-		ARG 3 map
 	METHOD <init> (Ljava/util/Set;Lnet/minecraft/world/flag/FeatureFlagSet;Ljava/util/Map;Lnet/minecraft/core/HolderLookup$Provider;)V
 		ARG 1 explosionResistant
 		ARG 2 enabledFeatures

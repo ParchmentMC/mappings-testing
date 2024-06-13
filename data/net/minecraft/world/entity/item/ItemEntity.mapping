@@ -21,8 +21,6 @@ CLASS net/minecraft/world/entity/item/ItemEntity
 	METHOD areMergable (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 0 destinationStack
 		ARG 1 originStack
-	METHOD changeDimension (Lnet/minecraft/server/level/ServerLevel;)Lnet/minecraft/world/entity/Entity;
-		ARG 1 server
 	METHOD getItem ()Lnet/minecraft/world/item/ItemStack;
 		COMMENT Gets the item that this entity represents.
 	METHOD getSpin (F)F

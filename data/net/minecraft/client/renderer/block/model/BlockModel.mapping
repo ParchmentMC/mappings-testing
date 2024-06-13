@@ -7,13 +7,6 @@ CLASS net/minecraft/client/renderer/block/model/BlockModel
 		ARG 5 guiLight
 		ARG 6 transforms
 		ARG 7 overrides
-	METHOD bake (Lnet/minecraft/client/resources/model/ModelBaker;Lnet/minecraft/client/renderer/block/model/BlockModel;Ljava/util/function/Function;Lnet/minecraft/client/resources/model/ModelState;Lnet/minecraft/resources/ResourceLocation;Z)Lnet/minecraft/client/resources/model/BakedModel;
-		ARG 1 baker
-		ARG 2 model
-		ARG 3 spriteGetter
-		ARG 4 state
-		ARG 5 location
-		ARG 6 guiLight3d
 	METHOD bake (Lnet/minecraft/client/resources/model/ModelBaker;Lnet/minecraft/client/renderer/block/model/BlockModel;Ljava/util/function/Function;Lnet/minecraft/client/resources/model/ModelState;Z)Lnet/minecraft/client/resources/model/BakedModel;
 		ARG 1 baker
 		ARG 2 model
@@ -26,13 +19,6 @@ CLASS net/minecraft/client/renderer/block/model/BlockModel
 		ARG 2 sprite
 		ARG 3 facing
 		ARG 4 state
-	METHOD bakeFace (Lnet/minecraft/client/renderer/block/model/BlockElement;Lnet/minecraft/client/renderer/block/model/BlockElementFace;Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;Lnet/minecraft/core/Direction;Lnet/minecraft/client/resources/model/ModelState;Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/block/model/BakedQuad;
-		ARG 0 part
-		ARG 1 partFace
-		ARG 2 sprite
-		ARG 3 direction
-		ARG 4 transform
-		ARG 5 location
 	METHOD findTextureEntry (Ljava/lang/String;)Lcom/mojang/datafixers/util/Either;
 		ARG 1 name
 	METHOD fromStream (Ljava/io/Reader;)Lnet/minecraft/client/renderer/block/model/BlockModel;
@@ -52,6 +38,11 @@ CLASS net/minecraft/client/renderer/block/model/BlockModel
 		ARG 0 str
 	METHOD lambda$resolveParents$0 (Ljava/util/function/Function;Lnet/minecraft/client/renderer/block/model/ItemOverride;)V
 		ARG 2 override
+	CLASS GuiLight
+		METHOD <init> (Ljava/lang/String;ILjava/lang/String;)V
+			ARG 3 name
+		METHOD getByName (Ljava/lang/String;)Lnet/minecraft/client/renderer/block/model/BlockModel$GuiLight;
+			ARG 0 name
 	CLASS Deserializer
 		METHOD deserialize (Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Lnet/minecraft/client/renderer/block/model/BlockModel;
 			ARG 1 json
@@ -72,11 +63,6 @@ CLASS net/minecraft/client/renderer/block/model/BlockModel
 		METHOD parseTextureLocationOrReference (Lnet/minecraft/resources/ResourceLocation;Ljava/lang/String;)Lcom/mojang/datafixers/util/Either;
 			ARG 0 location
 			ARG 1 name
-	CLASS GuiLight
-		METHOD <init> (Ljava/lang/String;ILjava/lang/String;)V
-			ARG 3 name
-		METHOD getByName (Ljava/lang/String;)Lnet/minecraft/client/renderer/block/model/BlockModel$GuiLight;
-			ARG 0 name
 	CLASS LoopException
 		METHOD <init> (Ljava/lang/String;)V
 			ARG 1 message

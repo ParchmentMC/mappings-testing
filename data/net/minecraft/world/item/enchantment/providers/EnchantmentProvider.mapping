@@ -4,9 +4,3 @@ CLASS net/minecraft/world/item/enchantment/providers/EnchantmentProvider
 		ARG 2 enchantments
 		ARG 3 random
 		ARG 4 difficulty
-	METHOD enchant (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/enchantment/ItemEnchantments$Mutable;Lnet/minecraft/util/RandomSource;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)V
-		ARG 1 stack
-		ARG 2 enchants
-		ARG 3 random
-		ARG 4 level
-		ARG 5 pos

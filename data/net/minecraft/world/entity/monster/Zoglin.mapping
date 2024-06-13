@@ -3,8 +3,6 @@ CLASS net/minecraft/world/entity/monster/Zoglin
 		ARG 1 compound
 	METHOD blockedByShield (Lnet/minecraft/world/entity/LivingEntity;)V
 		ARG 1 entity
-	METHOD canBeLeashed (Lnet/minecraft/world/entity/player/Player;)Z
-		ARG 1 player
 	METHOD doHurtTarget (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 1 entity
 	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;

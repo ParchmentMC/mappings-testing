@@ -66,8 +66,6 @@ CLASS net/minecraft/client/Options
 		ARG 0 value
 	METHOD lambda$new$23 (Ljava/lang/Double;)V
 		ARG 0 value
-	METHOD lambda$new$24 (Ljava/lang/Double;)V
-		ARG 0 value
 	METHOD lambda$new$25 (Ljava/lang/Double;)V
 		ARG 0 value
 	METHOD lambda$new$5 (Lnet/minecraft/network/chat/Component;Ljava/lang/Integer;)Lnet/minecraft/network/chat/Component;

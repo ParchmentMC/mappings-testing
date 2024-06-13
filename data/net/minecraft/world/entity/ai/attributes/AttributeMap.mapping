@@ -7,15 +7,10 @@ CLASS net/minecraft/world/entity/ai/attributes/AttributeMap
 		ARG 1 map
 	METHOD assignBaseValues (Lnet/minecraft/world/entity/ai/attributes/AttributeMap;)V
 		ARG 1 map
-	METHOD assignValues (Lnet/minecraft/world/entity/ai/attributes/AttributeMap;)V
-		ARG 1 values
 	METHOD getBaseValue (Lnet/minecraft/core/Holder;)D
 		ARG 1 attribute
 	METHOD getInstance (Lnet/minecraft/core/Holder;)Lnet/minecraft/world/entity/ai/attributes/AttributeInstance;
 		ARG 1 attribute
-	METHOD getModifierValue (Lnet/minecraft/core/Holder;Ljava/util/UUID;)D
-		ARG 1 attribute
-		ARG 2 uuid
 	METHOD getModifierValue (Lnet/minecraft/core/Holder;Lnet/minecraft/resources/ResourceLocation;)D
 		ARG 1 attribute
 		ARG 2 id
@@ -23,9 +18,6 @@ CLASS net/minecraft/world/entity/ai/attributes/AttributeMap
 		ARG 1 attribute
 	METHOD hasAttribute (Lnet/minecraft/core/Holder;)Z
 		ARG 1 attribute
-	METHOD hasModifier (Lnet/minecraft/core/Holder;Ljava/util/UUID;)Z
-		ARG 1 attribute
-		ARG 2 uuid
 	METHOD hasModifier (Lnet/minecraft/core/Holder;Lnet/minecraft/resources/ResourceLocation;)Z
 		ARG 1 attribute
 		ARG 2 id

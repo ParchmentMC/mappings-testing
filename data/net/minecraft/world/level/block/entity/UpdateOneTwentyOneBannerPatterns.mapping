@@ -1,3 +1,0 @@
-CLASS net/minecraft/world/level/block/entity/UpdateOneTwentyOneBannerPatterns
-	METHOD bootstrap (Lnet/minecraft/data/worldgen/BootstrapContext;)V
-		ARG 0 context

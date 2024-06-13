@@ -12,38 +12,6 @@ CLASS net/minecraft/world/level/levelgen/structure/structures/JigsawStructure
 		ARG 4 startHeight
 		ARG 5 useExpansionHack
 		ARG 6 projectStartToHeightmap
-	METHOD <init> (Lnet/minecraft/world/level/levelgen/structure/Structure$StructureSettings;Lnet/minecraft/core/Holder;Ljava/util/Optional;ILnet/minecraft/world/level/levelgen/heightproviders/HeightProvider;ZLjava/util/Optional;ILjava/util/List;)V
-		ARG 1 settings
-		ARG 2 startPool
-		ARG 3 startJigsawName
-		ARG 4 maxDepth
-		ARG 5 startHeight
-		ARG 6 useExpansionHack
-		ARG 7 projectStartToHeightmap
-		ARG 8 maxDistanceFromCenter
-		ARG 9 poolAliases
-	METHOD <init> (Lnet/minecraft/world/level/levelgen/structure/Structure$StructureSettings;Lnet/minecraft/core/Holder;Ljava/util/Optional;ILnet/minecraft/world/level/levelgen/heightproviders/HeightProvider;ZLjava/util/Optional;ILjava/util/List;I)V
-		ARG 1 settings
-		ARG 2 startPool
-		ARG 3 startJigsawName
-		ARG 4 maxDepth
-		ARG 5 startHeight
-		ARG 6 useExpansionHack
-		ARG 7 projectStartToHeightmap
-		ARG 8 maxDistanceFromCenter
-		ARG 9 poolAliases
-		ARG 10 dimensionPadding
-	METHOD <init> (Lnet/minecraft/world/level/levelgen/structure/Structure$StructureSettings;Lnet/minecraft/core/Holder;Ljava/util/Optional;ILnet/minecraft/world/level/levelgen/heightproviders/HeightProvider;ZLjava/util/Optional;ILjava/util/List;Lnet/minecraft/world/level/levelgen/structure/pools/DimensionPadding;)V
-		ARG 1 settings
-		ARG 2 startPool
-		ARG 3 startJigsawName
-		ARG 4 maxDepth
-		ARG 5 strtHeight
-		ARG 6 useExpansionHack
-		ARG 7 project_start_to_heightmap
-		ARG 8 maxDistanceFromCenter
-		ARG 9 poolAliases
-		ARG 10 dimensionPadding
 	METHOD <init> (Lnet/minecraft/world/level/levelgen/structure/Structure$StructureSettings;Lnet/minecraft/core/Holder;Ljava/util/Optional;ILnet/minecraft/world/level/levelgen/heightproviders/HeightProvider;ZLjava/util/Optional;ILjava/util/List;Lnet/minecraft/world/level/levelgen/structure/pools/DimensionPadding;Lnet/minecraft/world/level/levelgen/structure/templatesystem/LiquidSettings;)V
 		ARG 1 settings
 		ARG 2 startPool
@@ -57,8 +25,6 @@ CLASS net/minecraft/world/level/levelgen/structure/structures/JigsawStructure
 		ARG 10 dimensionPadding
 		ARG 11 liquidSettings
 	METHOD lambda$static$10 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
-		ARG 0 instance
-	METHOD lambda$static$9 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 0 instance
 	METHOD verifyRange (Lnet/minecraft/world/level/levelgen/structure/structures/JigsawStructure;)Lcom/mojang/serialization/DataResult;
 		ARG 0 structure
