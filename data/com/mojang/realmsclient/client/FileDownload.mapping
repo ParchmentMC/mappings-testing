@@ -15,13 +15,6 @@ CLASS com/mojang/realmsclient/client/FileDownload
 		ARG 1 worldName
 		ARG 2 tempFile
 		ARG 3 levelStorageSource
-	CLASS DownloadCountingOutputStream
-		METHOD <init> (Ljava/io/OutputStream;)V
-			ARG 1 out
-		METHOD afterWrite (I)V
-			ARG 1 bytesWritten
-		METHOD setListener (Ljava/awt/event/ActionListener;)V
-			ARG 1 listener
 	CLASS ProgressListener
 		METHOD <init> (Lcom/mojang/realmsclient/client/FileDownload;Ljava/lang/String;Ljava/io/File;Lnet/minecraft/world/level/storage/LevelStorageSource;Lcom/mojang/realmsclient/gui/screens/RealmsDownloadLatestWorldScreen$DownloadStatus;)V
 			ARG 2 worldName
@@ -30,6 +23,13 @@ CLASS com/mojang/realmsclient/client/FileDownload
 			ARG 5 downloadStatus
 		METHOD actionPerformed (Ljava/awt/event/ActionEvent;)V
 			ARG 1 action
+	CLASS DownloadCountingOutputStream
+		METHOD <init> (Ljava/io/OutputStream;)V
+			ARG 1 out
+		METHOD afterWrite (I)V
+			ARG 1 bytesWritten
+		METHOD setListener (Ljava/awt/event/ActionListener;)V
+			ARG 1 listener
 	CLASS ResourcePackProgressListener
 		METHOD <init> (Lcom/mojang/realmsclient/client/FileDownload;Ljava/io/File;Lcom/mojang/realmsclient/gui/screens/RealmsDownloadLatestWorldScreen$DownloadStatus;Lcom/mojang/realmsclient/dto/WorldDownload;)V
 			ARG 2 tempFile

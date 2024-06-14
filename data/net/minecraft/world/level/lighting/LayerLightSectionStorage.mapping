@@ -59,6 +59,9 @@ CLASS net/minecraft/world/level/lighting/LayerLightSectionStorage
 	METHOD updateSectionStatus (JZ)V
 		ARG 1 sectionPos
 		ARG 3 isEmpty
+	CLASS SectionType
+		METHOD <init> (Ljava/lang/String;ILjava/lang/String;)V
+			ARG 3 display
 	CLASS SectionState
 		METHOD hasData (B)Z
 			ARG 0 sectionState
@@ -72,6 +75,3 @@ CLASS net/minecraft/world/level/lighting/LayerLightSectionStorage
 			ARG 1 neighborCount
 		METHOD type (B)Lnet/minecraft/world/level/lighting/LayerLightSectionStorage$SectionType;
 			ARG 0 sectionState
-	CLASS SectionType
-		METHOD <init> (Ljava/lang/String;ILjava/lang/String;)V
-			ARG 3 display

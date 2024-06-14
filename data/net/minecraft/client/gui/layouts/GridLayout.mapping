@@ -44,14 +44,6 @@ CLASS net/minecraft/client/gui/layouts/GridLayout
 		ARG 1 rowSpacing
 	METHOD spacing (I)Lnet/minecraft/client/gui/layouts/GridLayout;
 		ARG 1 spacing
-	CLASS CellInhabitant
-		METHOD <init> (Lnet/minecraft/client/gui/layouts/LayoutElement;IIIILnet/minecraft/client/gui/layouts/LayoutSettings;)V
-			ARG 1 child
-			ARG 2 row
-			ARG 3 column
-			ARG 4 occupiedRows
-			ARG 5 occupiedColumns
-			ARG 6 layoutSettings
 	CLASS RowHelper
 		METHOD <init> (Lnet/minecraft/client/gui/layouts/GridLayout;I)V
 			ARG 2 columns
@@ -67,3 +59,11 @@ CLASS net/minecraft/client/gui/layouts/GridLayout
 		METHOD addChild (Lnet/minecraft/client/gui/layouts/LayoutElement;Lnet/minecraft/client/gui/layouts/LayoutSettings;)Lnet/minecraft/client/gui/layouts/LayoutElement;
 			ARG 1 child
 			ARG 2 layoutSettings
+	CLASS CellInhabitant
+		METHOD <init> (Lnet/minecraft/client/gui/layouts/LayoutElement;IIIILnet/minecraft/client/gui/layouts/LayoutSettings;)V
+			ARG 1 child
+			ARG 2 row
+			ARG 3 column
+			ARG 4 occupiedRows
+			ARG 5 occupiedColumns
+			ARG 6 layoutSettings

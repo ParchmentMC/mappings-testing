@@ -8,16 +8,6 @@ CLASS com/mojang/realmsclient/gui/task/DataFetcher
 		ARG 2 updater
 		ARG 3 period
 		ARG 4 repeatStrategy
-	CLASS SubscribedTask
-		METHOD <init> (Lcom/mojang/realmsclient/gui/task/DataFetcher;Lcom/mojang/realmsclient/gui/task/DataFetcher$Task;Ljava/util/function/Consumer;)V
-			ARG 2 task
-			ARG 3 output
-		METHOD update (J)V
-			ARG 1 time
-	CLASS Subscription
-		METHOD subscribe (Lcom/mojang/realmsclient/gui/task/DataFetcher$Task;Ljava/util/function/Consumer;)V
-			ARG 1 task
-			ARG 2 output
 	CLASS Task
 		METHOD <init> (Lcom/mojang/realmsclient/gui/task/DataFetcher;Ljava/lang/String;Ljava/util/concurrent/Callable;JLcom/mojang/realmsclient/gui/task/RepeatedDelayStrategy;)V
 			ARG 2 id
@@ -25,4 +15,14 @@ CLASS com/mojang/realmsclient/gui/task/DataFetcher
 			ARG 4 period
 			ARG 6 repeatStrategy
 		METHOD updateIfNeeded (J)V
+			ARG 1 time
+	CLASS Subscription
+		METHOD subscribe (Lcom/mojang/realmsclient/gui/task/DataFetcher$Task;Ljava/util/function/Consumer;)V
+			ARG 1 task
+			ARG 2 output
+	CLASS SubscribedTask
+		METHOD <init> (Lcom/mojang/realmsclient/gui/task/DataFetcher;Lcom/mojang/realmsclient/gui/task/DataFetcher$Task;Ljava/util/function/Consumer;)V
+			ARG 2 task
+			ARG 3 output
+		METHOD update (J)V
 			ARG 1 time

@@ -24,6 +24,16 @@ CLASS net/minecraft/world/entity/monster/Vex
 		ARG 2 value
 	METHOD tick ()V
 		COMMENT Called to update the entity's position/logic.
+	CLASS VexMoveControl
+		METHOD <init> (Lnet/minecraft/world/entity/monster/Vex;Lnet/minecraft/world/entity/monster/Vex;)V
+			ARG 2 vex
+	CLASS VexRandomMoveGoal
+		METHOD canContinueToUse ()Z
+			COMMENT Returns whether an in-progress EntityAIBase should continue executing
+		METHOD canUse ()Z
+			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
+		METHOD tick ()V
+			COMMENT Keep ticking a continuous task that has already been started
 	CLASS VexChargeAttackGoal
 		METHOD canContinueToUse ()Z
 			COMMENT Returns whether an in-progress EntityAIBase should continue executing
@@ -42,13 +52,3 @@ CLASS net/minecraft/world/entity/monster/Vex
 			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 		METHOD start ()V
 			COMMENT Execute a one shot task or start executing a continuous task
-	CLASS VexMoveControl
-		METHOD <init> (Lnet/minecraft/world/entity/monster/Vex;Lnet/minecraft/world/entity/monster/Vex;)V
-			ARG 2 vex
-	CLASS VexRandomMoveGoal
-		METHOD canContinueToUse ()Z
-			COMMENT Returns whether an in-progress EntityAIBase should continue executing
-		METHOD canUse ()Z
-			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-		METHOD tick ()V
-			COMMENT Keep ticking a continuous task that has already been started

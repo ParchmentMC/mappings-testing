@@ -20,12 +20,12 @@ CLASS net/minecraft/world/level/storage/LevelSummary
 			ARG 3 shouldBackup
 			ARG 4 severe
 			ARG 5 translationKey
+	CLASS SymlinkLevelSummary
+		METHOD <init> (Ljava/lang/String;Ljava/nio/file/Path;)V
+			ARG 1 levelId
+			ARG 2 icon
 	CLASS CorruptedLevelSummary
 		METHOD <init> (Ljava/lang/String;Ljava/nio/file/Path;J)V
 			ARG 1 levelId
 			ARG 2 icon
 			ARG 3 lastPlayed
-	CLASS SymlinkLevelSummary
-		METHOD <init> (Ljava/lang/String;Ljava/nio/file/Path;)V
-			ARG 1 levelId
-			ARG 2 icon

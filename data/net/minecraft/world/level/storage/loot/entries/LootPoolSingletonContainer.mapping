@@ -25,13 +25,13 @@ CLASS net/minecraft/world/level/storage/loot/entries/LootPoolSingletonContainer
 			ARG 1 quality
 		METHOD setWeight (I)Lnet/minecraft/world/level/storage/loot/entries/LootPoolSingletonContainer$Builder;
 			ARG 1 weight
-	CLASS DummyBuilder
-		METHOD <init> (Lnet/minecraft/world/level/storage/loot/entries/LootPoolSingletonContainer$EntryConstructor;)V
-			ARG 1 constructor
 	CLASS EntryBase
 		METHOD getWeight (F)I
 			COMMENT Gets the effective weight based on the loot entry's weight and quality multiplied by looter's luck.
 			ARG 1 luck
+	CLASS DummyBuilder
+		METHOD <init> (Lnet/minecraft/world/level/storage/loot/entries/LootPoolSingletonContainer$EntryConstructor;)V
+			ARG 1 constructor
 	CLASS EntryConstructor
 		METHOD build (IILjava/util/List;Ljava/util/List;)Lnet/minecraft/world/level/storage/loot/entries/LootPoolSingletonContainer;
 			ARG 1 weight

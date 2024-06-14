@@ -44,6 +44,14 @@ CLASS net/minecraft/util/datafix/fixes/ChunkPalettedStorageFix
 		ARG 1 id
 		ARG 2 skullType
 		ARG 3 suffix
+	CLASS Section
+		METHOD <init> (Lcom/mojang/serialization/Dynamic;)V
+			ARG 1 section
+		METHOD getBlock (I)Lcom/mojang/serialization/Dynamic;
+			ARG 1 id
+		METHOD setBlock (ILcom/mojang/serialization/Dynamic;)V
+			ARG 1 index
+			ARG 2 dynamic
 	CLASS DataLayer
 		METHOD <init> ([B)V
 			ARG 1 data
@@ -54,14 +62,6 @@ CLASS net/minecraft/util/datafix/fixes/ChunkPalettedStorageFix
 		CLASS AxisDirection
 			METHOD <init> (Ljava/lang/String;II)V
 				ARG 3 step
-	CLASS Section
-		METHOD <init> (Lcom/mojang/serialization/Dynamic;)V
-			ARG 1 section
-		METHOD getBlock (I)Lcom/mojang/serialization/Dynamic;
-			ARG 1 id
-		METHOD setBlock (ILcom/mojang/serialization/Dynamic;)V
-			ARG 1 index
-			ARG 2 dynamic
 	CLASS UpgradeChunk
 		METHOD <init> (Lcom/mojang/serialization/Dynamic;)V
 			ARG 1 level
