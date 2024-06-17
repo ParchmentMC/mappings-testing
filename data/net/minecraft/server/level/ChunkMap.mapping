@@ -74,10 +74,12 @@ CLASS net/minecraft/server/level/ChunkMap
 	METHOD isChunkDataValid (Lnet/minecraft/nbt/CompoundTag;)Z
 		ARG 0 tag
 	METHOD isChunkOnTrackedBorder (Lnet/minecraft/server/level/ServerPlayer;II)Z
+		COMMENT Checks if a chunk is on the edge of the player's view distance.
 		ARG 1 player
 		ARG 2 x
 		ARG 3 z
 	METHOD isChunkTracked (Lnet/minecraft/server/level/ServerPlayer;II)Z
+		COMMENT Checks if a chunk is within a player's view distance.
 		ARG 1 player
 		ARG 2 x
 		ARG 3 z

@@ -8,7 +8,7 @@ CLASS net/minecraft/world/level/block/Block
 	METHOD appendHoverText (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/Item$TooltipContext;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V
 		ARG 1 stack
 		ARG 2 context
-		ARG 3 tootipComponents
+		ARG 3 tooltipComponents
 		ARG 4 tooltipFlag
 	METHOD box (DDDDDD)Lnet/minecraft/world/phys/shapes/VoxelShape;
 		ARG 0 x1

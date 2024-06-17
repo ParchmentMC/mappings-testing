@@ -5,14 +5,15 @@ CLASS net/minecraft/server/level/ChunkTrackingView
 	METHOD contains (IIZ)Z
 		ARG 1 x
 		ARG 2 z
-		ARG 3 searchAllChunks
+		ARG 3 includeOuterChunksAdjacentToViewBorder
 	METHOD contains (Lnet/minecraft/world/level/ChunkPos;)Z
 		ARG 1 chunkPos
 	METHOD difference (Lnet/minecraft/server/level/ChunkTrackingView;Lnet/minecraft/server/level/ChunkTrackingView;Ljava/util/function/Consumer;Ljava/util/function/Consumer;)V
+		COMMENT Calculates the chunks that the player needs to drop in the {@code oldChunkTrackingView} and the chunks that need to be sent for the {@code newChunkTrackingView}. The chunks that overlap in both views can be kept.
 		ARG 0 oldChunkTrackingView
 		ARG 1 newChunkTrackingView
-		ARG 2 chunkDropper
-		ARG 3 chunkMarker
+		ARG 2 chunkMarker
+		ARG 3 chunkDropper
 	METHOD forEach (Ljava/util/function/Consumer;)V
 		ARG 1 action
 	METHOD isInViewDistance (II)Z
@@ -25,15 +26,17 @@ CLASS net/minecraft/server/level/ChunkTrackingView
 		ARG 3 x
 		ARG 4 z
 	METHOD isWithinDistance (IIIIIZ)Z
+		COMMENT Check if a chunk {@code (x,z)} is within a {@code viewDistance} which is centered on {@code (centerX, centerZ)}
 		ARG 0 centerX
 		ARG 1 centerZ
 		ARG 2 viewDistance
 		ARG 3 x
 		ARG 4 z
-		ARG 5 serachAllChunks
+		ARG 5 includeOuterChunksAdjacentToViewBorder
 	METHOD of (Lnet/minecraft/world/level/ChunkPos;I)Lnet/minecraft/server/level/ChunkTrackingView;
 		ARG 0 center
 		ARG 1 viewDistance
 	CLASS Positioned
 		METHOD squareIntersects (Lnet/minecraft/server/level/ChunkTrackingView$Positioned;)Z
+			COMMENT Determines if another {@link ChunkTrackingView}'s bounds intersects with its own
 			ARG 1 other
