@@ -347,17 +347,17 @@ CLASS com/mojang/blaze3d/platform/GlStateManager
 		ARG 5 format
 		ARG 6 pixels
 		ARG 7 output
-	CLASS LogicOp
-		METHOD <init> (Ljava/lang/String;II)V
-			ARG 3 value
-	CLASS DestFactor
-		METHOD <init> (Ljava/lang/String;II)V
-			ARG 3 value
 	CLASS BooleanState
 		METHOD <init> (I)V
 			ARG 1 state
 		METHOD setEnabled (Z)V
 			ARG 1 enabled
+	CLASS DestFactor
+		METHOD <init> (Ljava/lang/String;II)V
+			ARG 3 value
+	CLASS LogicOp
+		METHOD <init> (Ljava/lang/String;II)V
+			ARG 3 value
 	CLASS SourceFactor
 		METHOD <init> (Ljava/lang/String;II)V
 			ARG 3 value

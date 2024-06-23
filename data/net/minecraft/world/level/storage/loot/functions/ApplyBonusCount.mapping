@@ -18,6 +18,11 @@ CLASS net/minecraft/world/level/storage/loot/functions/ApplyBonusCount
 	METHOD run (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/storage/loot/LootContext;)Lnet/minecraft/world/item/ItemStack;
 		ARG 1 stack
 		ARG 2 context
+	CLASS BinomialWithBonusCount
+		COMMENT Applies a bonus based on a binomial distribution with {@code n = enchantmentLevel + extraRounds} and {@code p = probability}.
+		METHOD <init> (IF)V
+			ARG 1 extraRounds
+			ARG 2 probability
 	CLASS Formula
 		METHOD calculateNewCount (Lnet/minecraft/util/RandomSource;II)I
 			ARG 1 random
@@ -29,8 +34,3 @@ CLASS net/minecraft/world/level/storage/loot/functions/ApplyBonusCount
 		COMMENT Adds a bonus count based on the enchantment level scaled by a constant multiplier.
 		METHOD <init> (I)V
 			ARG 1 bonusMultiplier
-	CLASS BinomialWithBonusCount
-		COMMENT Applies a bonus based on a binomial distribution with {@code n = enchantmentLevel + extraRounds} and {@code p = probability}.
-		METHOD <init> (IF)V
-			ARG 1 extraRounds
-			ARG 2 probability

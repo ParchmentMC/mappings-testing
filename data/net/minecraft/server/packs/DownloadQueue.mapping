@@ -12,9 +12,9 @@ CLASS net/minecraft/server/packs/DownloadQueue
 	METHOD runDownload (Lnet/minecraft/server/packs/DownloadQueue$BatchConfig;Ljava/util/Map;)Lnet/minecraft/server/packs/DownloadQueue$BatchResult;
 		ARG 1 batchConfig
 		ARG 2 downloads
-	CLASS LogEntry
+	CLASS FileInfoEntry
 		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 			ARG 0 instance
-	CLASS FileInfoEntry
+	CLASS LogEntry
 		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 			ARG 0 instance

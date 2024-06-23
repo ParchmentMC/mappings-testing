@@ -3,6 +3,12 @@ CLASS com/mojang/blaze3d/vertex/VertexFormat
 		ARG 1 elementMapping
 	METHOD equals (Ljava/lang/Object;)Z
 		ARG 1 other
+	CLASS IndexType
+		METHOD <init> (Ljava/lang/String;III)V
+			ARG 3 asGLType
+			ARG 4 bytes
+		METHOD least (I)Lcom/mojang/blaze3d/vertex/VertexFormat$IndexType;
+			ARG 0 indexCount
 	CLASS Mode
 		METHOD <init> (Ljava/lang/String;IIIIZ)V
 			ARG 3 asGLMode
@@ -11,9 +17,3 @@ CLASS com/mojang/blaze3d/vertex/VertexFormat
 			ARG 6 connectedPrimitives
 		METHOD indexCount (I)I
 			ARG 1 vertices
-	CLASS IndexType
-		METHOD <init> (Ljava/lang/String;III)V
-			ARG 3 asGLType
-			ARG 4 bytes
-		METHOD least (I)Lcom/mojang/blaze3d/vertex/VertexFormat$IndexType;
-			ARG 0 indexCount

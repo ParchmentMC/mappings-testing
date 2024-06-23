@@ -1,7 +1,7 @@
 CLASS net/minecraft/client/particle/CritParticle
 	METHOD getQuadSize (F)F
 		ARG 1 scaleFactor
-	CLASS Provider
+	CLASS DamageIndicatorProvider
 		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
 			ARG 1 sprites
 		METHOD createParticle (Lnet/minecraft/core/particles/SimpleParticleType;Lnet/minecraft/client/multiplayer/ClientLevel;DDDDDD)Lnet/minecraft/client/particle/Particle;
@@ -25,7 +25,7 @@ CLASS net/minecraft/client/particle/CritParticle
 			ARG 9 xSpeed
 			ARG 11 ySpeed
 			ARG 13 zSpeed
-	CLASS DamageIndicatorProvider
+	CLASS Provider
 		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
 			ARG 1 sprites
 		METHOD createParticle (Lnet/minecraft/core/particles/SimpleParticleType;Lnet/minecraft/client/multiplayer/ClientLevel;DDDDDD)Lnet/minecraft/client/particle/Particle;

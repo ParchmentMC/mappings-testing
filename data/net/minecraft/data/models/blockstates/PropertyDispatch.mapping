@@ -117,17 +117,6 @@ CLASS net/minecraft/data/models/blockstates/PropertyDispatch
 			ARG 4 property4Value
 			ARG 5 property5Value
 			ARG 6 variant
-	CLASS TriFunction
-		METHOD apply (Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-			ARG 1 p1
-			ARG 2 p2
-			ARG 3 p3
-	CLASS QuadFunction
-		METHOD apply (Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-			ARG 1 p1
-			ARG 2 p2
-			ARG 3 p3
-			ARG 4 p4
 	CLASS PentaFunction
 		METHOD apply (Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 			ARG 1 p1
@@ -135,3 +124,14 @@ CLASS net/minecraft/data/models/blockstates/PropertyDispatch
 			ARG 3 p3
 			ARG 4 p4
 			ARG 5 p5
+	CLASS QuadFunction
+		METHOD apply (Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+			ARG 1 p1
+			ARG 2 p2
+			ARG 3 p3
+			ARG 4 p4
+	CLASS TriFunction
+		METHOD apply (Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+			ARG 1 p1
+			ARG 2 p2
+			ARG 3 p3

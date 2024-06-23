@@ -18,11 +18,11 @@ CLASS net/minecraft/world/entity/animal/AbstractFish
 		ARG 1 distanceToClosestPlayer
 	METHOD travel (Lnet/minecraft/world/phys/Vec3;)V
 		ARG 1 travelVector
+	CLASS FishMoveControl
+		METHOD <init> (Lnet/minecraft/world/entity/animal/AbstractFish;)V
+			ARG 1 fish
 	CLASS FishSwimGoal
 		METHOD <init> (Lnet/minecraft/world/entity/animal/AbstractFish;)V
 			ARG 1 fish
 		METHOD canUse ()Z
 			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
-	CLASS FishMoveControl
-		METHOD <init> (Lnet/minecraft/world/entity/animal/AbstractFish;)V
-			ARG 1 fish

@@ -14,6 +14,21 @@ CLASS net/minecraft/client/particle/SuspendedParticle
 		ARG 9 xSpeed
 		ARG 11 ySpeed
 		ARG 13 zSpeed
+	CLASS CrimsonSporeProvider
+		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
+			ARG 1 sprites
+		METHOD createParticle (Lnet/minecraft/core/particles/SimpleParticleType;Lnet/minecraft/client/multiplayer/ClientLevel;DDDDDD)Lnet/minecraft/client/particle/Particle;
+			ARG 1 type
+			ARG 2 level
+			ARG 3 x
+			ARG 5 y
+			ARG 7 z
+			ARG 9 xSpeed
+			ARG 11 ySpeed
+			ARG 13 zSpeed
+	CLASS SporeBlossomAirProvider
+		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
+			ARG 1 sprites
 	CLASS UnderwaterProvider
 		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
 			ARG 1 sprites
@@ -38,18 +53,3 @@ CLASS net/minecraft/client/particle/SuspendedParticle
 			ARG 9 xSpeed
 			ARG 11 ySpeed
 			ARG 13 zSpeed
-	CLASS CrimsonSporeProvider
-		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
-			ARG 1 sprites
-		METHOD createParticle (Lnet/minecraft/core/particles/SimpleParticleType;Lnet/minecraft/client/multiplayer/ClientLevel;DDDDDD)Lnet/minecraft/client/particle/Particle;
-			ARG 1 type
-			ARG 2 level
-			ARG 3 x
-			ARG 5 y
-			ARG 7 z
-			ARG 9 xSpeed
-			ARG 11 ySpeed
-			ARG 13 zSpeed
-	CLASS SporeBlossomAirProvider
-		METHOD <init> (Lnet/minecraft/client/particle/SpriteSet;)V
-			ARG 1 sprites

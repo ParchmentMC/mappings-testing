@@ -15,12 +15,12 @@ CLASS net/minecraft/client/gui/screens/reporting/ChatSelectionScreen
 		METHOD updateHeading (Lnet/minecraft/client/multiplayer/chat/LoggedChatMessage$Player;Z)V
 			ARG 1 loggedPlayerChatMessage
 			ARG 2 canReport
-		CLASS Heading
-			METHOD canCombine (Lnet/minecraft/client/gui/screens/reporting/ChatSelectionScreen$ChatSelectionList$Heading;)Z
-				ARG 1 other
 		CLASS DividerEntry
 			METHOD <init> (Lnet/minecraft/client/gui/screens/reporting/ChatSelectionScreen$ChatSelectionList;Lnet/minecraft/network/chat/Component;)V
 				ARG 2 text
+		CLASS Heading
+			METHOD canCombine (Lnet/minecraft/client/gui/screens/reporting/ChatSelectionScreen$ChatSelectionList$Heading;)Z
+				ARG 1 other
 		CLASS MessageEntry
 			METHOD <init> (Lnet/minecraft/client/gui/screens/reporting/ChatSelectionScreen$ChatSelectionList;ILnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/Component;Lnet/minecraft/client/GuiMessageTag;ZZ)V
 				ARG 2 chatId
