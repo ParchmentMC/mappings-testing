@@ -13,6 +13,8 @@ CLASS net/minecraft/core/Holder
 		ARG 1 location
 	METHOD is (Lnet/minecraft/tags/TagKey;)Z
 		ARG 1 tagKey
+	METHOD lambda$getRegisteredName$0 (Lnet/minecraft/resources/ResourceKey;)Ljava/lang/String;
+		ARG 0 key
 	CLASS Reference
 		METHOD <init> (Lnet/minecraft/core/Holder$Reference$Type;Lnet/minecraft/core/HolderOwner;Lnet/minecraft/resources/ResourceKey;Ljava/lang/Object;)V
 			ARG 1 type

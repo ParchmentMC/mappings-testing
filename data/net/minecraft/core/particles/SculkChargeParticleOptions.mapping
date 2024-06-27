@@ -3,3 +3,5 @@ CLASS net/minecraft/core/particles/SculkChargeParticleOptions
 		ARG 0 sculkOptions
 	METHOD lambda$static$1 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 0 instance
+	METHOD lambda$static$2 (Lnet/minecraft/core/particles/SculkChargeParticleOptions;)Ljava/lang/Float;
+		ARG 0 particleOptions

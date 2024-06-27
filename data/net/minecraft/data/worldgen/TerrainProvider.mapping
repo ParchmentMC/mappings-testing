@@ -47,4 +47,10 @@ CLASS net/minecraft/data/worldgen/TerrainProvider
 		ARG 3 amplified
 	METHOD ridgeSpline (Lnet/minecraft/util/ToFloatFunction;FFFFFFLnet/minecraft/util/ToFloatFunction;)Lnet/minecraft/util/CubicSpline;
 		ARG 0 ridgesFolded
+		ARG 1 y1
+		ARG 2 y2
+		ARG 3 y3
+		ARG 4 y4
+		ARG 5 y5
+		ARG 6 minSmoothing
 		ARG 7 transform

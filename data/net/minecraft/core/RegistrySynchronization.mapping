@@ -1,6 +1,12 @@
 CLASS net/minecraft/core/RegistrySynchronization
+	METHOD lambda$ownedNetworkableRegistries$4 (Lnet/minecraft/core/RegistryAccess$RegistryEntry;)Z
+		ARG 0 registry
 	METHOD lambda$packRegistries$0 (Lcom/mojang/serialization/DynamicOps;Lnet/minecraft/core/RegistryAccess;Ljava/util/Set;Ljava/util/function/BiConsumer;Lnet/minecraft/resources/RegistryDataLoader$RegistryData;)V
 		ARG 4 registryData
+	METHOD lambda$packRegistry$2 (Lnet/minecraft/core/Registry;Ljava/util/Set;Lnet/minecraft/resources/RegistryDataLoader$RegistryData;Lcom/mojang/serialization/DynamicOps;Ljava/util/List;Lnet/minecraft/core/Holder$Reference;)V
+		ARG 5 value
+	METHOD lambda$packRegistry$3 (Ljava/util/Set;Lnet/minecraft/resources/RegistryDataLoader$RegistryData;Lcom/mojang/serialization/DynamicOps;Ljava/util/function/BiConsumer;Lnet/minecraft/core/Registry;)V
+		ARG 4 registry
 	METHOD networkSafeRegistries (Lnet/minecraft/core/LayeredRegistryAccess;)Ljava/util/stream/Stream;
 		ARG 0 registryAccess
 	METHOD networkedRegistries (Lnet/minecraft/core/LayeredRegistryAccess;)Ljava/util/stream/Stream;

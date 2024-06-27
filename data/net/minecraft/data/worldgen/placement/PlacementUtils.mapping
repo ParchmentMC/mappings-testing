@@ -1,6 +1,10 @@
 CLASS net/minecraft/data/worldgen/placement/PlacementUtils
 	METHOD bootstrap (Lnet/minecraft/data/worldgen/BootstrapContext;)V
 		ARG 0 context
+	METHOD countExtra (IFI)Lnet/minecraft/world/level/levelgen/placement/PlacementModifier;
+		ARG 0 baseValue
+		ARG 1 chance
+		ARG 2 addedAmount
 	METHOD createKey (Ljava/lang/String;)Lnet/minecraft/resources/ResourceKey;
 		ARG 0 key
 	METHOD filtered (Lnet/minecraft/world/level/levelgen/feature/Feature;Lnet/minecraft/world/level/levelgen/feature/configurations/FeatureConfiguration;Lnet/minecraft/world/level/levelgen/blockpredicates/BlockPredicate;)Lnet/minecraft/core/Holder;
