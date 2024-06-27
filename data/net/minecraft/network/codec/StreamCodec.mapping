@@ -71,6 +71,8 @@ CLASS net/minecraft/network/codec/StreamCodec
 		ARG 1 decoder
 	METHOD recursive (Ljava/util/function/UnaryOperator;)Lnet/minecraft/network/codec/StreamCodec;
 		ARG 0 modifier
+	METHOD unit (Ljava/lang/Object;)Lnet/minecraft/network/codec/StreamCodec;
+		ARG 0 expectedValue
 	CLASS CodecOperation
 		METHOD apply (Lnet/minecraft/network/codec/StreamCodec;)Lnet/minecraft/network/codec/StreamCodec;
 			ARG 1 codec

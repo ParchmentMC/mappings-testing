@@ -9,11 +9,16 @@ CLASS net/minecraft/network/chat/ChatType
 	METHOD bind (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/network/chat/ChatType$Bound;
 		ARG 0 chatTypeKey
 		ARG 1 entity
+	METHOD bootstrap (Lnet/minecraft/data/worldgen/BootstrapContext;)V
+		ARG 0 context
 	METHOD create (Ljava/lang/String;)Lnet/minecraft/resources/ResourceKey;
 		ARG 0 key
 	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 0 instance
 	CLASS Bound
+		METHOD <init> (Lnet/minecraft/core/Holder;Lnet/minecraft/network/chat/Component;)V
+			ARG 1 chatType
+			ARG 2 name
 		METHOD decorate (Lnet/minecraft/network/chat/Component;)Lnet/minecraft/network/chat/Component;
 			ARG 1 content
 		METHOD decorateNarration (Lnet/minecraft/network/chat/Component;)Lnet/minecraft/network/chat/Component;

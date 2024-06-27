@@ -12,6 +12,7 @@ CLASS net/minecraft/network/protocol/game/ClientboundLightUpdatePacketData
 		ARG 1 chunkPos
 		ARG 2 levelLightEngine
 		ARG 3 lightLayer
+		ARG 4 index
 		ARG 5 skyLight
 		ARG 6 blockLight
 		ARG 7 updates

@@ -1,0 +1,7 @@
+CLASS net/minecraft/network/protocol/common/ClientboundResourcePackPushPacket
+	METHOD <init> (Ljava/util/UUID;Ljava/lang/String;Ljava/lang/String;ZLjava/util/Optional;)V
+		ARG 1 id
+		ARG 2 url
+		ARG 3 hash
+		ARG 4 required
+		ARG 5 prompt
