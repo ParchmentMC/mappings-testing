@@ -6,6 +6,18 @@ CLASS net/minecraft/resources/RegistryDataLoader
 		ARG 0 registry
 	METHOD createInfoForNewRegistry (Lnet/minecraft/core/WritableRegistry;)Lnet/minecraft/resources/RegistryOps$RegistryInfo;
 		ARG 0 registry
+	METHOD lambda$createContext$8 (Ljava/util/Map;Lnet/minecraft/resources/RegistryDataLoader$Loader;)V
+		ARG 1 loader
+	METHOD lambda$load$2 (Lnet/minecraft/server/packs/resources/ResourceManager;Lnet/minecraft/resources/RegistryDataLoader$Loader;Lnet/minecraft/resources/RegistryOps$RegistryInfoLookup;)V
+		ARG 1 loader
+		ARG 2 infoLookup
+	METHOD lambda$load$3 (Ljava/util/Map;Lnet/minecraft/server/packs/resources/ResourceProvider;Lnet/minecraft/resources/RegistryDataLoader$Loader;Lnet/minecraft/resources/RegistryOps$RegistryInfoLookup;)V
+		ARG 2 loader
+		ARG 3 infoLookup
+	METHOD lambda$load$5 (Lnet/minecraft/resources/RegistryDataLoader$LoadingFunction;Lnet/minecraft/resources/RegistryOps$RegistryInfoLookup;Lnet/minecraft/resources/RegistryDataLoader$Loader;)V
+		ARG 2 loader
+	METHOD lambda$load$6 (Ljava/util/Map;Lnet/minecraft/resources/RegistryDataLoader$Loader;)V
+		ARG 1 loader
 	METHOD load (Ljava/util/Map;Lnet/minecraft/server/packs/resources/ResourceProvider;Lnet/minecraft/core/RegistryAccess;Ljava/util/List;)Lnet/minecraft/core/RegistryAccess$Frozen;
 		ARG 0 elements
 		ARG 1 resourceProvider
@@ -49,6 +61,10 @@ CLASS net/minecraft/resources/RegistryDataLoader
 		METHOD loadFromResources (Lnet/minecraft/server/packs/resources/ResourceManager;Lnet/minecraft/resources/RegistryOps$RegistryInfoLookup;)V
 			ARG 1 resouceManager
 			ARG 2 registryInfoLookup
+	CLASS LoadingFunction
+		METHOD apply (Lnet/minecraft/resources/RegistryDataLoader$Loader;Lnet/minecraft/resources/RegistryOps$RegistryInfoLookup;)V
+			ARG 1 loader
+			ARG 2 registryInfoLookup
 	CLASS RegistryData
 		METHOD <init> (Lnet/minecraft/resources/ResourceKey;Lcom/mojang/serialization/Codec;)V
 			ARG 1 key
@@ -58,7 +74,3 @@ CLASS net/minecraft/resources/RegistryDataLoader
 			ARG 2 loadingErrors
 		METHOD runWithArguments (Ljava/util/function/BiConsumer;)V
 			ARG 1 runner
-	CLASS LoadingFunction
-		METHOD apply (Lnet/minecraft/resources/RegistryDataLoader$Loader;Lnet/minecraft/resources/RegistryOps$RegistryInfoLookup;)V
-			ARG 1 loader
-			ARG 2 registryInfoLookup
