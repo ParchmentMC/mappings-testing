@@ -2,12 +2,13 @@ CLASS net/minecraft/util/datafix/fixes/WorldGenSettingsFix
 	METHOD <init> (Lcom/mojang/datafixers/schemas/Schema;)V
 		ARG 1 outputSchema
 	METHOD defaultOverworld (Lcom/mojang/serialization/Dynamic;J)Lcom/mojang/serialization/Dynamic;
-		ARG 0 dynamic
+		ARG 0 data
 		ARG 1 seed
 	METHOD fix (Lcom/mojang/serialization/Dynamic;)Lcom/mojang/serialization/Dynamic;
-		ARG 0 dynamic
+		ARG 0 data
 	METHOD fixFlatStructures (Lcom/mojang/serialization/DynamicOps;Lcom/mojang/serialization/OptionalDynamic;)Ljava/util/Map;
 		ARG 0 ops
+		ARG 1 generatorOptions
 	METHOD getInt (Ljava/lang/String;I)I
 		ARG 0 string
 		ARG 1 defaultValue
@@ -17,25 +18,32 @@ CLASS net/minecraft/util/datafix/fixes/WorldGenSettingsFix
 		ARG 2 minValue
 	METHOD noise (JLcom/mojang/serialization/DynamicLike;Lcom/mojang/serialization/Dynamic;Lcom/mojang/serialization/Dynamic;)Lcom/mojang/serialization/Dynamic;
 		ARG 0 seed
-		ARG 2 dynamic
+		ARG 2 data
 		ARG 3 settings
 		ARG 4 biomeNoise
 	METHOD setSpacing (Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;I)V
 		ARG 2 spacing
-		ARG 3 minSpacing
 	METHOD vanillaBiomeSource (Lcom/mojang/serialization/Dynamic;JZZ)Lcom/mojang/serialization/Dynamic;
-		ARG 0 dynamic
+		ARG 0 data
 		ARG 1 seed
 		ARG 3 legacyBiomeInitLayer
 		ARG 4 largeBiomes
 	METHOD vanillaLevels (Lcom/mojang/serialization/Dynamic;JLcom/mojang/serialization/Dynamic;Z)Ljava/lang/Object;
-		ARG 0 dynamic
+		ARG 0 data
 		ARG 1 seed
 		ARG 4 caves
 	CLASS StructureFeatureConfiguration
 		METHOD <init> (III)V
-			ARG 1 sapcing
+			ARG 1 spacing
 			ARG 2 separation
 			ARG 3 salt
+		METHOD lambda$static$0 (Lnet/minecraft/util/datafix/fixes/WorldGenSettingsFix$StructureFeatureConfiguration;)Ljava/lang/Integer;
+			ARG 0 config
+		METHOD lambda$static$1 (Lnet/minecraft/util/datafix/fixes/WorldGenSettingsFix$StructureFeatureConfiguration;)Ljava/lang/Integer;
+			ARG 0 config
+		METHOD lambda$static$2 (Lnet/minecraft/util/datafix/fixes/WorldGenSettingsFix$StructureFeatureConfiguration;)Ljava/lang/Integer;
+			ARG 0 config
+		METHOD lambda$static$3 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
 		METHOD serialize (Lcom/mojang/serialization/DynamicOps;)Lcom/mojang/serialization/Dynamic;
 			ARG 1 ops

@@ -10,8 +10,13 @@ CLASS net/minecraft/util/SpawnUtil
 		ARG 2 level
 		ARG 3 pos
 		ARG 4 attempts
+		ARG 5 spread
 		ARG 6 yOffset
 		ARG 7 strategy
 	CLASS Strategy
 		METHOD canSpawnOn (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Z
 			ARG 1 level
+			ARG 2 targetPos
+			ARG 3 targetState
+			ARG 4 attemptedPos
+			ARG 5 attemptedState

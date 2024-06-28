@@ -2,20 +2,34 @@ CLASS net/minecraft/util/datafix/fixes/ChunkProtoTickListFix
 	METHOD <init> (Lcom/mojang/datafixers/schemas/Schema;)V
 		ARG 1 outputSchema
 	METHOD createTick (Lcom/mojang/serialization/Dynamic;Ljava/util/function/Supplier;IIIILjava/util/function/Function;)Lcom/mojang/serialization/Dynamic;
-		ARG 1 dynamic
+		ARG 1 data
+		ARG 2 palette
 		ARG 3 x
 		ARG 4 y
 		ARG 5 z
+		ARG 6 index
+		ARG 7 idGetter
 	METHOD getBlock (Lcom/mojang/serialization/Dynamic;)Ljava/lang/String;
-		ARG 0 dynamic
+		ARG 0 data
 	METHOD getLiquid (Lcom/mojang/serialization/Dynamic;)Ljava/lang/String;
-		ARG 0 dynamic
+		ARG 0 data
 	METHOD makeTickList (Lcom/mojang/serialization/Dynamic;Lit/unimi/dsi/fastutil/ints/Int2ObjectMap;BIILjava/lang/String;Ljava/util/function/Function;)Lcom/mojang/serialization/Dynamic;
-		ARG 1 dynamic
+		ARG 1 data
+		ARG 2 palette
+		ARG 3 y
 		ARG 4 x
 		ARG 5 z
 		ARG 6 name
+		ARG 7 idGetter
 	CLASS PoorMansPalettedContainer
 		METHOD <init> (Ljava/util/List;[J)V
 			ARG 1 palette
 			ARG 2 data
+		METHOD get (III)Lcom/mojang/serialization/Dynamic;
+			ARG 1 x
+			ARG 2 y
+			ARG 3 z
+		METHOD getIndex (III)I
+			ARG 1 x
+			ARG 2 y
+			ARG 3 z

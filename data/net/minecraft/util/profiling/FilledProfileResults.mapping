@@ -32,3 +32,7 @@ CLASS net/minecraft/util/profiling/FilledProfileResults
 	METHOD isDirectChild (Ljava/lang/String;Ljava/lang/String;)Z
 		ARG 0 sectionPath
 		ARG 1 entry
+	CLASS CounterCollector
+		METHOD addValue (Ljava/util/Iterator;J)V
+			ARG 1 counters
+			ARG 2 value

@@ -17,6 +17,7 @@ CLASS net/minecraft/util/ParticleUtils
 		ARG 2 direction
 		ARG 3 particle
 		ARG 4 speed
+		ARG 5 spread
 	METHOD spawnParticles (Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;IDDZLnet/minecraft/core/particles/ParticleOptions;)V
 		ARG 0 level
 		ARG 1 pos
@@ -29,6 +30,7 @@ CLASS net/minecraft/util/ParticleUtils
 		ARG 0 axis
 		ARG 1 level
 		ARG 2 pos
+		ARG 3 spread
 		ARG 5 particle
 		ARG 6 count
 	METHOD spawnParticlesOnBlockFace (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/particles/ParticleOptions;Lnet/minecraft/util/valueproviders/IntProvider;Lnet/minecraft/core/Direction;Ljava/util/function/Supplier;D)V
@@ -38,6 +40,7 @@ CLASS net/minecraft/util/ParticleUtils
 		ARG 3 count
 		ARG 4 direction
 		ARG 5 speedSupplier
+		ARG 6 spread
 	METHOD spawnParticlesOnBlockFaces (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/particles/ParticleOptions;Lnet/minecraft/util/valueproviders/IntProvider;)V
 		ARG 0 level
 		ARG 1 pos

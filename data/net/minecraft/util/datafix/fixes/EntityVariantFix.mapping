@@ -9,4 +9,5 @@ CLASS net/minecraft/util/datafix/fixes/EntityVariantFix
 	METHOD updateAndRename (Lcom/mojang/serialization/Dynamic;Ljava/lang/String;Ljava/lang/String;Ljava/util/function/Function;)Lcom/mojang/serialization/Dynamic;
 		ARG 0 dynamic
 		ARG 1 fieldName
+		ARG 2 newFieldName
 		ARG 3 fixer

@@ -4,3 +4,5 @@ CLASS net/minecraft/util/datafix/fixes/EntityPaintingItemFrameDirectionFix
 		ARG 2 changesType
 	METHOD doFix (Lcom/mojang/serialization/Dynamic;ZZ)Lcom/mojang/serialization/Dynamic;
 		ARG 1 dynamic
+		ARG 2 fixDirection
+		ARG 3 fixItemRotation

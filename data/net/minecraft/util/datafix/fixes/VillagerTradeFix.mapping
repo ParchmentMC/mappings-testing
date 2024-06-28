@@ -2,4 +2,5 @@ CLASS net/minecraft/util/datafix/fixes/VillagerTradeFix
 	METHOD <init> (Lcom/mojang/datafixers/schemas/Schema;)V
 		ARG 1 outputSchema
 	METHOD updateItemStack (Lcom/mojang/datafixers/OpticFinder;Lcom/mojang/datafixers/Typed;)Lcom/mojang/datafixers/Typed;
+		ARG 1 id
 		ARG 2 typed

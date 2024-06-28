@@ -1,8 +1,22 @@
 CLASS net/minecraft/util/NativeModuleLister
 	METHOD addCrashSection (Lnet/minecraft/CrashReportCategory;)V
 		ARG 0 crashSection
+	METHOD findLangAndCodepage ([I)Ljava/util/OptionalInt;
+		ARG 0 versionValue
+	METHOD langTableKey (Ljava/lang/String;II)Ljava/lang/String;
+		ARG 0 key
+		ARG 1 lang
+		ARG 2 codepage
+	METHOD queryVersionString (Lcom/sun/jna/Pointer;Ljava/lang/String;Lcom/sun/jna/ptr/IntByReference;)Ljava/lang/String;
+		ARG 0 block
+		ARG 1 subBlock
+		ARG 2 size
 	METHOD queryVersionValue (Lcom/sun/jna/Pointer;Ljava/lang/String;Lcom/sun/jna/ptr/IntByReference;)Lcom/sun/jna/Pointer;
-		ARG 0 potiner
+		ARG 0 block
+		ARG 1 subBlock
+		ARG 2 size
+	METHOD tryGetVersion (Ljava/lang/String;)Ljava/util/Optional;
+		ARG 0 filename
 	CLASS NativeModuleInfo
 		METHOD <init> (Ljava/lang/String;Ljava/util/Optional;)V
 			ARG 1 name

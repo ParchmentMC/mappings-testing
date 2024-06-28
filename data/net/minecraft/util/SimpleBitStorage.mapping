@@ -5,10 +5,13 @@ CLASS net/minecraft/util/SimpleBitStorage
 	METHOD <init> (II[I)V
 		ARG 1 bits
 		ARG 2 size
+		ARG 3 data
 	METHOD <init> (II[J)V
 		ARG 1 bits
 		ARG 2 size
 		ARG 3 data
+	METHOD cellIndex (I)I
+		ARG 1 index
 	CLASS InitializationException
 		METHOD <init> (Ljava/lang/String;)V
 			ARG 1 message

@@ -6,7 +6,13 @@ CLASS net/minecraft/util/datafix/fixes/BitStorageAlignFix
 		ARG 1 bitWidth
 		ARG 2 inputData
 	METHOD updateBitStorage (Lcom/mojang/serialization/Dynamic;Lcom/mojang/serialization/Dynamic;II)Lcom/mojang/serialization/Dynamic;
+		ARG 0 output
+		ARG 1 data
 		ARG 2 numBits
 		ARG 3 bitWidth
 	METHOD updateHeightmaps (Lcom/mojang/datafixers/Typed;)Lcom/mojang/datafixers/Typed;
-		ARG 1 typed
+		ARG 1 data
+	METHOD updateSections (Lcom/mojang/datafixers/OpticFinder;Lcom/mojang/datafixers/OpticFinder;Lcom/mojang/datafixers/OpticFinder;Lcom/mojang/datafixers/Typed;)Lcom/mojang/datafixers/Typed;
+		ARG 0 sections
+		ARG 2 palette
+		ARG 3 data

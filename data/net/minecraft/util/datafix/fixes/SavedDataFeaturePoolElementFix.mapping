@@ -13,9 +13,10 @@ CLASS net/minecraft/util/datafix/fixes/SavedDataFeaturePoolElementFix
 		ARG 1 name
 		ARG 2 stateProviderType
 		ARG 3 state
+		ARG 4 staaeProviderName
 		ARG 5 foliagePlacerType
 		ARG 6 leavesState
 	METHOD updateChildren (Lcom/mojang/serialization/Dynamic;)Lcom/mojang/serialization/Dynamic;
-		ARG 0 dynamic
+		ARG 0 data
 	METHOD updateChildren (Ljava/util/stream/Stream;)Ljava/util/stream/Stream;
-		ARG 0 dynamicStream
+		ARG 0 children

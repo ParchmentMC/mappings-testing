@@ -5,4 +5,5 @@ CLASS net/minecraft/util/datafix/fixes/OverreachingTickFix
 		ARG 0 tag
 		ARG 1 x
 		ARG 2 z
+		ARG 3 ticks
 		ARG 4 id

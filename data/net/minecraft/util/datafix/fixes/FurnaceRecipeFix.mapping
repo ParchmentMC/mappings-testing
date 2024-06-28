@@ -6,3 +6,5 @@ CLASS net/minecraft/util/datafix/fixes/FurnaceRecipeFix
 		ARG 1 type
 	METHOD updateFurnaceContents (Lcom/mojang/datafixers/types/Type;Lcom/mojang/datafixers/types/Type;Lcom/mojang/datafixers/Typed;)Lcom/mojang/datafixers/Typed;
 		ARG 1 type
+		ARG 2 recipesUsed
+		ARG 3 data
