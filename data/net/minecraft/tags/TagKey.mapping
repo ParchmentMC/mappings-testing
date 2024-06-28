@@ -1,4 +1,7 @@
 CLASS net/minecraft/tags/TagKey
+	METHOD <init> (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/resources/ResourceLocation;)V
+		ARG 1 registry
+		ARG 2 location
 	METHOD cast (Lnet/minecraft/resources/ResourceKey;)Ljava/util/Optional;
 		ARG 1 registry
 	METHOD codec (Lnet/minecraft/resources/ResourceKey;)Lcom/mojang/serialization/Codec;

@@ -8,6 +8,7 @@ CLASS net/minecraft/server/rcon/thread/RconClient
 	METHOD send (IILjava/lang/String;)V
 		COMMENT Sends the given response message to the client
 		ARG 1 id
+		ARG 2 type
 		ARG 3 message
 	METHOD sendAuthFailure ()V
 		COMMENT Sends the standard RCon 'authorization failed' response packet

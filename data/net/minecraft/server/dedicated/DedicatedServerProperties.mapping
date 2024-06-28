@@ -19,6 +19,8 @@ CLASS net/minecraft/server/dedicated/DedicatedServerProperties
 		ARG 0 property
 	METHOD lambda$new$2 (Ljava/lang/String;)Lcom/google/gson/JsonObject;
 		ARG 0 property
+	METHOD lambda$new$3 (Ljava/lang/String;)Ljava/lang/String;
+		ARG 0 property
 	METHOD parseResourcePackPrompt (Ljava/lang/String;)Lnet/minecraft/network/chat/Component;
 		ARG 0 json
 	CLASS WorldDimensionData

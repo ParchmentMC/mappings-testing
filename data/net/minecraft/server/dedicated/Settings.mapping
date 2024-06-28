@@ -6,55 +6,57 @@ CLASS net/minecraft/server/dedicated/Settings
 		ARG 1 byName
 	METHOD get (Ljava/lang/String;I)I
 		ARG 1 key
-		ARG 2 value
+		ARG 2 defaultValue
 	METHOD get (Ljava/lang/String;J)J
 		ARG 1 key
-		ARG 2 value
+		ARG 2 defaultValue
 	METHOD get (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 		ARG 1 key
-		ARG 2 value
+		ARG 2 defaultValue
 	METHOD get (Ljava/lang/String;Ljava/util/function/Function;Ljava/lang/Object;)Ljava/lang/Object;
 		ARG 1 key
 		ARG 2 mapper
 		ARG 3 value
 	METHOD get (Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;Ljava/lang/Object;)Ljava/lang/Object;
 		ARG 1 key
-		ARG 2 mapper
-		ARG 3 toString
-		ARG 4 value
+		ARG 2 serializer
+		ARG 3 deserializer
+		ARG 4 defaultValue
 	METHOD get (Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/UnaryOperator;Ljava/util/function/Function;Ljava/lang/Object;)Ljava/lang/Object;
 		ARG 1 key
-		ARG 2 mapper
-		ARG 4 toString
-		ARG 5 value
+		ARG 2 serializer
+		ARG 3 modifier
+		ARG 4 deserializer
+		ARG 5 defaultValue
 	METHOD get (Ljava/lang/String;Ljava/util/function/UnaryOperator;I)I
 		ARG 1 key
-		ARG 3 value
+		ARG 2 modifier
+		ARG 3 defaultValue
 	METHOD get (Ljava/lang/String;Z)Z
 		ARG 1 key
-		ARG 2 value
+		ARG 2 defaultValue
 	METHOD getLegacy (Ljava/lang/String;Ljava/util/function/Function;)Ljava/lang/Object;
 		ARG 1 key
-		ARG 2 mapper
+		ARG 2 serializer
 	METHOD getLegacyBoolean (Ljava/lang/String;)Ljava/lang/Boolean;
 		ARG 1 key
 	METHOD getLegacyString (Ljava/lang/String;)Ljava/lang/String;
 		ARG 1 key
 	METHOD getMutable (Ljava/lang/String;I)Lnet/minecraft/server/dedicated/Settings$MutableValue;
 		ARG 1 key
-		ARG 2 value
+		ARG 2 defaultValue
 	METHOD getMutable (Ljava/lang/String;Ljava/util/function/Function;Ljava/lang/Object;)Lnet/minecraft/server/dedicated/Settings$MutableValue;
 		ARG 1 key
-		ARG 2 mapper
-		ARG 3 value
+		ARG 2 serializer
+		ARG 3 defaultValue
 	METHOD getMutable (Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;Ljava/lang/Object;)Lnet/minecraft/server/dedicated/Settings$MutableValue;
 		ARG 1 key
-		ARG 2 mapper
-		ARG 3 toString
-		ARG 4 value
+		ARG 2 serializer
+		ARG 3 deserializer
+		ARG 4 defaultValue
 	METHOD getMutable (Ljava/lang/String;Z)Lnet/minecraft/server/dedicated/Settings$MutableValue;
 		ARG 1 key
-		ARG 2 value
+		ARG 2 defaultValue
 	METHOD getStringRaw (Ljava/lang/String;)Ljava/lang/String;
 		ARG 1 key
 	METHOD lambda$dispatchNumberOrString$1 (Ljava/util/function/IntFunction;Ljava/util/function/Function;Ljava/lang/String;)Ljava/lang/Object;

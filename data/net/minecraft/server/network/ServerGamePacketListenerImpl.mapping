@@ -18,12 +18,22 @@ CLASS net/minecraft/server/network/ServerGamePacketListenerImpl
 		ARG 0 value
 	METHOD clampVertical (D)D
 		ARG 0 value
+	METHOD collectSignedArguments (Lnet/minecraft/network/protocol/game/ServerboundChatCommandSignedPacket;Lnet/minecraft/network/chat/SignableCommand;Lnet/minecraft/network/chat/LastSeenMessages;)Ljava/util/Map;
+		ARG 1 packet
+		ARG 2 command
+		ARG 3 lastSeenMessages
+	METHOD collectUnsignedArguments (Ljava/util/List;)Ljava/util/Map;
+		ARG 1 arguments
 	METHOD containsInvalidValues (DDDFF)Z
 		ARG 0 x
 		ARG 2 y
 		ARG 4 z
 		ARG 6 yRot
 		ARG 7 xRot
+	METHOD createSignedArgumentMismatchException (Ljava/lang/String;Ljava/util/List;Ljava/util/List;)Lnet/minecraft/network/chat/SignedMessageChain$DecodeException;
+		ARG 0 command
+		ARG 1 signedArguments
+		ARG 2 unsignedArguments
 	METHOD filterTextPacket (Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 message
 		ARG 2 processor

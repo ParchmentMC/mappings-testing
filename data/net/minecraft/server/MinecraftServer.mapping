@@ -108,7 +108,13 @@ CLASS net/minecraft/server/MinecraftServer
 		ARG 3 player
 	METHOD kickUnlistedPlayers (Lnet/minecraft/commands/CommandSourceStack;)V
 		ARG 1 commandSource
+	METHOD lambda$getSelectedPacks$30 (Ljava/util/Collection;Ljava/lang/String;)Z
+		ARG 1 packId
 	METHOD lambda$loadStatusIcon$11 (Ljava/nio/file/Path;)Z
+		ARG 0 path
+	METHOD lambda$loadStatusIcon$12 (Ljava/nio/file/Path;)Z
+		ARG 0 path
+	METHOD lambda$loadStatusIcon$14 (Ljava/nio/file/Path;)Ljava/util/Optional;
 		ARG 0 path
 	METHOD lambda$new$0 (Lnet/minecraft/util/profiling/ProfileResults;)V
 		ARG 1 results

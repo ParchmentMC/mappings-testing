@@ -2,3 +2,5 @@ CLASS net/minecraft/server/packs/PackLocationInfo
 	METHOD createChatLink (ZLnet/minecraft/network/chat/Component;)Lnet/minecraft/network/chat/Component;
 		ARG 1 enabled
 		ARG 2 text
+	METHOD lambda$createChatLink$0 (ZLnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/Style;)Lnet/minecraft/network/chat/Style;
+		ARG 3 style
