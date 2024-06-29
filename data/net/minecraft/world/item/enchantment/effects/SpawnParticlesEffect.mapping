@@ -17,6 +17,12 @@ CLASS net/minecraft/world/item/enchantment/effects/SpawnParticlesEffect
 			ARG 0 instance
 		METHOD lambda$static$2 (Lnet/minecraft/world/item/enchantment/effects/SpawnParticlesEffect$PositionSource;)Lcom/mojang/serialization/DataResult;
 			ARG 0 sourceType
+	CLASS VelocitySource
+		METHOD getVelocity (DLnet/minecraft/util/RandomSource;)D
+			ARG 1 scale
+			ARG 3 random
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
 	CLASS PositionSourceType
 		METHOD <init> (Ljava/lang/String;ILjava/lang/String;Lnet/minecraft/world/item/enchantment/effects/SpawnParticlesEffect$PositionSourceType$CoordinateSource;)V
 			ARG 3 id
@@ -42,9 +48,3 @@ CLASS net/minecraft/world/item/enchantment/effects/SpawnParticlesEffect
 				ARG 3 center
 				ARG 5 size
 				ARG 6 random
-	CLASS VelocitySource
-		METHOD getVelocity (DLnet/minecraft/util/RandomSource;)D
-			ARG 1 scale
-			ARG 3 random
-		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
-			ARG 0 instance

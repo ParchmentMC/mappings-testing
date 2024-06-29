@@ -52,14 +52,14 @@ CLASS net/minecraft/server/level/ChunkHolder
 	METHOD updateFutures (Lnet/minecraft/server/level/ChunkMap;Ljava/util/concurrent/Executor;)V
 		ARG 1 chunkMap
 		ARG 2 executor
+	CLASS PlayerProvider
+		METHOD getPlayers (Lnet/minecraft/world/level/ChunkPos;Z)Ljava/util/List;
+			COMMENT Returns the players tracking the given chunk.
+			ARG 1 pos
+			ARG 2 boundaryOnly
 	CLASS LevelChangeListener
 		METHOD onLevelChange (Lnet/minecraft/world/level/ChunkPos;Ljava/util/function/IntSupplier;ILjava/util/function/IntConsumer;)V
 			ARG 1 chunkPos
 			ARG 2 queueLevelGetter
 			ARG 3 ticketLevel
 			ARG 4 queueLevelSetter
-	CLASS PlayerProvider
-		METHOD getPlayers (Lnet/minecraft/world/level/ChunkPos;Z)Ljava/util/List;
-			COMMENT Returns the players tracking the given chunk.
-			ARG 1 pos
-			ARG 2 boundaryOnly

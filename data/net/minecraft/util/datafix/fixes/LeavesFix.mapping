@@ -19,6 +19,20 @@ CLASS net/minecraft/util/datafix/fixes/LeavesFix
 		ARG 1 index
 	METHOD lambda$static$0 (Lit/unimi/dsi/fastutil/objects/Object2IntOpenHashMap;)V
 		ARG 0 map
+	CLASS Section
+		METHOD <init> (Lcom/mojang/datafixers/Typed;Lcom/mojang/datafixers/schemas/Schema;)V
+			ARG 1 data
+			ARG 2 schema
+		METHOD getBlock (I)I
+			ARG 1 index
+		METHOD getStateId (Ljava/lang/String;ZI)I
+			ARG 1 name
+			ARG 2 persistent
+			ARG 3 distance
+		METHOD readStorage (Lcom/mojang/serialization/Dynamic;)V
+			ARG 1 data
+		METHOD write (Lcom/mojang/datafixers/Typed;)Lcom/mojang/datafixers/Typed;
+			ARG 1 data
 	CLASS LeavesSection
 		METHOD getDistance (I)I
 			ARG 1 index
@@ -35,17 +49,3 @@ CLASS net/minecraft/util/datafix/fixes/LeavesFix
 			ARG 1 index
 			ARG 2 block
 			ARG 3 distance
-	CLASS Section
-		METHOD <init> (Lcom/mojang/datafixers/Typed;Lcom/mojang/datafixers/schemas/Schema;)V
-			ARG 1 data
-			ARG 2 schema
-		METHOD getBlock (I)I
-			ARG 1 index
-		METHOD getStateId (Ljava/lang/String;ZI)I
-			ARG 1 name
-			ARG 2 persistent
-			ARG 3 distance
-		METHOD readStorage (Lcom/mojang/serialization/Dynamic;)V
-			ARG 1 data
-		METHOD write (Lcom/mojang/datafixers/Typed;)Lcom/mojang/datafixers/Typed;
-			ARG 1 data
