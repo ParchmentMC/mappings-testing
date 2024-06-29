@@ -9,3 +9,23 @@ CLASS net/minecraft/world/level/levelgen/feature/configurations/LargeDripstoneCo
 		ARG 7 windSpeed
 		ARG 8 minRadiusForWind
 		ARG 9 minBluntnessForWind
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/feature/configurations/LargeDripstoneConfiguration;)Ljava/lang/Integer;
+		ARG 0 config
+	METHOD lambda$static$1 (Lnet/minecraft/world/level/levelgen/feature/configurations/LargeDripstoneConfiguration;)Lnet/minecraft/util/valueproviders/IntProvider;
+		ARG 0 config
+	METHOD lambda$static$2 (Lnet/minecraft/world/level/levelgen/feature/configurations/LargeDripstoneConfiguration;)Lnet/minecraft/util/valueproviders/FloatProvider;
+		ARG 0 config
+	METHOD lambda$static$3 (Lnet/minecraft/world/level/levelgen/feature/configurations/LargeDripstoneConfiguration;)Ljava/lang/Float;
+		ARG 0 config
+	METHOD lambda$static$4 (Lnet/minecraft/world/level/levelgen/feature/configurations/LargeDripstoneConfiguration;)Lnet/minecraft/util/valueproviders/FloatProvider;
+		ARG 0 config
+	METHOD lambda$static$5 (Lnet/minecraft/world/level/levelgen/feature/configurations/LargeDripstoneConfiguration;)Lnet/minecraft/util/valueproviders/FloatProvider;
+		ARG 0 config
+	METHOD lambda$static$6 (Lnet/minecraft/world/level/levelgen/feature/configurations/LargeDripstoneConfiguration;)Lnet/minecraft/util/valueproviders/FloatProvider;
+		ARG 0 config
+	METHOD lambda$static$7 (Lnet/minecraft/world/level/levelgen/feature/configurations/LargeDripstoneConfiguration;)Ljava/lang/Integer;
+		ARG 0 config
+	METHOD lambda$static$8 (Lnet/minecraft/world/level/levelgen/feature/configurations/LargeDripstoneConfiguration;)Ljava/lang/Float;
+		ARG 0 config
+	METHOD lambda$static$9 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

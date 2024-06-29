@@ -1,3 +1,7 @@
 CLASS net/minecraft/world/level/levelgen/feature/configurations/ProbabilityFeatureConfiguration
 	METHOD <init> (F)V
 		ARG 1 probability
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/feature/configurations/ProbabilityFeatureConfiguration;)Ljava/lang/Float;
+		ARG 0 config
+	METHOD lambda$static$1 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

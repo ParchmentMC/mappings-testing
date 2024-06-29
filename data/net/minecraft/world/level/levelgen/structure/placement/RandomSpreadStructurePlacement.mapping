@@ -17,5 +17,7 @@ CLASS net/minecraft/world/level/levelgen/structure/placement/RandomSpreadStructu
 		ARG 1 seed
 		ARG 3 regionX
 		ARG 4 regionZ
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	METHOD validate (Lnet/minecraft/world/level/levelgen/structure/placement/RandomSpreadStructurePlacement;)Lcom/mojang/serialization/DataResult;
 		ARG 0 placement

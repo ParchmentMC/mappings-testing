@@ -1,3 +1,7 @@
 CLASS net/minecraft/world/entity/ai/village/poi/PoiType
+	METHOD <init> (Ljava/util/Set;II)V
+		ARG 1 matchingStates
+		ARG 2 maxTickets
+		ARG 3 validRange
 	METHOD is (Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 1 state

@@ -3,6 +3,14 @@ CLASS net/minecraft/world/level/levelgen/heightproviders/VeryBiasedToBottomHeigh
 		ARG 1 minInclusive
 		ARG 2 maxInclusive
 		ARG 3 inner
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/heightproviders/VeryBiasedToBottomHeight;)Lnet/minecraft/world/level/levelgen/VerticalAnchor;
+		ARG 0 provider
+	METHOD lambda$static$1 (Lnet/minecraft/world/level/levelgen/heightproviders/VeryBiasedToBottomHeight;)Lnet/minecraft/world/level/levelgen/VerticalAnchor;
+		ARG 0 provider
+	METHOD lambda$static$2 (Lnet/minecraft/world/level/levelgen/heightproviders/VeryBiasedToBottomHeight;)Ljava/lang/Integer;
+		ARG 0 provider
+	METHOD lambda$static$3 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	METHOD of (Lnet/minecraft/world/level/levelgen/VerticalAnchor;Lnet/minecraft/world/level/levelgen/VerticalAnchor;I)Lnet/minecraft/world/level/levelgen/heightproviders/VeryBiasedToBottomHeight;
 		ARG 0 minInclusive
 		ARG 1 maxInclusive

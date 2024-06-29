@@ -19,3 +19,13 @@ CLASS net/minecraft/world/level/levelgen/feature/trunkplacers/CherryTrunkPlacer
 		ARG 9 secondBranchStartOffsetFromTop
 		ARG 10 doubleBranch
 		ARG 11 currentPos
+	METHOD lambda$static$2 (Lnet/minecraft/world/level/levelgen/feature/trunkplacers/CherryTrunkPlacer;)Lnet/minecraft/util/valueproviders/IntProvider;
+		ARG 0 trunkPlacer
+	METHOD lambda$static$3 (Lnet/minecraft/world/level/levelgen/feature/trunkplacers/CherryTrunkPlacer;)Lnet/minecraft/util/valueproviders/IntProvider;
+		ARG 0 trunkPlacer
+	METHOD lambda$static$4 (Lnet/minecraft/world/level/levelgen/feature/trunkplacers/CherryTrunkPlacer;)Lnet/minecraft/util/valueproviders/UniformInt;
+		ARG 0 trunkPlacer
+	METHOD lambda$static$5 (Lnet/minecraft/world/level/levelgen/feature/trunkplacers/CherryTrunkPlacer;)Lnet/minecraft/util/valueproviders/IntProvider;
+		ARG 0 trunkPlacer
+	METHOD lambda$static$6 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

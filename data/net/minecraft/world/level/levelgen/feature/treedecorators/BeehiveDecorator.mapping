@@ -3,3 +3,5 @@ CLASS net/minecraft/world/level/levelgen/feature/treedecorators/BeehiveDecorator
 		COMMENT Probability to generate a beehive
 	METHOD <init> (F)V
 		ARG 1 probability
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/feature/treedecorators/BeehiveDecorator;)Ljava/lang/Float;
+		ARG 0 decorator

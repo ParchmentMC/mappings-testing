@@ -10,3 +10,11 @@ CLASS net/minecraft/world/level/levelgen/feature/stateproviders/RandomizedIntSta
 	METHOD findProperty (Lnet/minecraft/world/level/block/state/BlockState;Ljava/lang/String;)Lnet/minecraft/world/level/block/state/properties/IntegerProperty;
 		ARG 0 state
 		ARG 1 propertyName
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/feature/stateproviders/RandomizedIntStateProvider;)Lnet/minecraft/world/level/levelgen/feature/stateproviders/BlockStateProvider;
+		ARG 0 provider
+	METHOD lambda$static$1 (Lnet/minecraft/world/level/levelgen/feature/stateproviders/RandomizedIntStateProvider;)Ljava/lang/String;
+		ARG 0 provider
+	METHOD lambda$static$2 (Lnet/minecraft/world/level/levelgen/feature/stateproviders/RandomizedIntStateProvider;)Lnet/minecraft/util/valueproviders/IntProvider;
+		ARG 0 provider
+	METHOD lambda$static$3 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

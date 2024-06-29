@@ -10,3 +10,17 @@ CLASS net/minecraft/world/level/levelgen/feature/treedecorators/AttachedToLeaves
 		ARG 1 context
 		ARG 2 pos
 		ARG 3 direction
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/feature/treedecorators/AttachedToLeavesDecorator;)Ljava/lang/Float;
+		ARG 0 decorator
+	METHOD lambda$static$1 (Lnet/minecraft/world/level/levelgen/feature/treedecorators/AttachedToLeavesDecorator;)Ljava/lang/Integer;
+		ARG 0 decorator
+	METHOD lambda$static$2 (Lnet/minecraft/world/level/levelgen/feature/treedecorators/AttachedToLeavesDecorator;)Ljava/lang/Integer;
+		ARG 0 decorator
+	METHOD lambda$static$3 (Lnet/minecraft/world/level/levelgen/feature/treedecorators/AttachedToLeavesDecorator;)Lnet/minecraft/world/level/levelgen/feature/stateproviders/BlockStateProvider;
+		ARG 0 decorator
+	METHOD lambda$static$4 (Lnet/minecraft/world/level/levelgen/feature/treedecorators/AttachedToLeavesDecorator;)Ljava/lang/Integer;
+		ARG 0 decorator
+	METHOD lambda$static$5 (Lnet/minecraft/world/level/levelgen/feature/treedecorators/AttachedToLeavesDecorator;)Ljava/util/List;
+		ARG 0 decorator
+	METHOD lambda$static$6 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

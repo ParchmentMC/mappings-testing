@@ -13,6 +13,12 @@ CLASS net/minecraft/world/level/levelgen/feature/trunkplacers/TrunkPlacer
 		ARG 2 pos
 	METHOD lambda$isDirt$3 (Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 0 state
+	METHOD lambda$trunkPlacerParts$0 (Lnet/minecraft/world/level/levelgen/feature/trunkplacers/TrunkPlacer;)Ljava/lang/Integer;
+		ARG 0 trunkPlacer
+	METHOD lambda$trunkPlacerParts$1 (Lnet/minecraft/world/level/levelgen/feature/trunkplacers/TrunkPlacer;)Ljava/lang/Integer;
+		ARG 0 trunkPlacer
+	METHOD lambda$trunkPlacerParts$2 (Lnet/minecraft/world/level/levelgen/feature/trunkplacers/TrunkPlacer;)Ljava/lang/Integer;
+		ARG 0 trunkPlacer
 	METHOD placeLog (Lnet/minecraft/world/level/LevelSimulatedReader;Ljava/util/function/BiConsumer;Lnet/minecraft/util/RandomSource;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/levelgen/feature/configurations/TreeConfiguration;)Z
 		ARG 1 level
 		ARG 2 blockSetter

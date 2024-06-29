@@ -12,3 +12,5 @@ CLASS net/minecraft/world/level/levelgen/carver/ConfiguredWorldCarver
 		ARG 7 carvingMask
 	METHOD isStartChunk (Lnet/minecraft/util/RandomSource;)Z
 		ARG 1 random
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/carver/ConfiguredWorldCarver;)Lnet/minecraft/world/level/levelgen/carver/WorldCarver;
+		ARG 0 carver

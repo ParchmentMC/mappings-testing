@@ -5,3 +5,5 @@ CLASS net/minecraft/world/item/armortrim/TrimMaterial
 		ARG 2 itemModelIndex
 		ARG 3 description
 		ARG 4 overrideArmorMaterials
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

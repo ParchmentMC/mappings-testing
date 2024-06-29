@@ -1,5 +1,7 @@
 CLASS net/minecraft/world/level/levelgen/placement/RarityFilter
 	METHOD <init> (I)V
 		ARG 1 chance
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/placement/RarityFilter;)Ljava/lang/Integer;
+		ARG 0 filter
 	METHOD onAverageOnceEvery (I)Lnet/minecraft/world/level/levelgen/placement/RarityFilter;
 		ARG 0 chance

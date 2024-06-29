@@ -5,3 +5,5 @@ CLASS net/minecraft/world/level/levelgen/feature/stateproviders/WeightedStatePro
 		ARG 1 weightedList
 	METHOD create (Lnet/minecraft/util/random/SimpleWeightedRandomList;)Lcom/mojang/serialization/DataResult;
 		ARG 0 weightedList
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/feature/stateproviders/WeightedStateProvider;)Lnet/minecraft/util/random/SimpleWeightedRandomList;
+		ARG 0 provider

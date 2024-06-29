@@ -8,3 +8,5 @@ CLASS net/minecraft/world/level/levelgen/NoiseSettings
 		ARG 3 noiseSizeVertical
 	METHOD guardY (Lnet/minecraft/world/level/levelgen/NoiseSettings;)Lcom/mojang/serialization/DataResult;
 		ARG 0 settings
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

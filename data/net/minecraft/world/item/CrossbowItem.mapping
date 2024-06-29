@@ -31,6 +31,12 @@ CLASS net/minecraft/world/item/CrossbowItem
 		ARG 1 stack
 	METHOD isCharged (Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 0 crossbowStack
+	METHOD lambda$onUseTick$1 (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/core/Holder;)V
+		ARG 2 sound
+	METHOD lambda$onUseTick$2 (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/core/Holder;)V
+		ARG 2 sound
+	METHOD lambda$releaseUsing$0 (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/core/Holder;)V
+		ARG 2 sound
 	METHOD onUseTick (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;I)V
 		COMMENT Called as the item is being used by an entity.
 		ARG 1 level

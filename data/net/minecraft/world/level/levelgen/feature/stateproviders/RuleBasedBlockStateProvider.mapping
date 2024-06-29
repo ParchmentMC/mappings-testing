@@ -3,7 +3,12 @@ CLASS net/minecraft/world/level/levelgen/feature/stateproviders/RuleBasedBlockSt
 		ARG 1 level
 		ARG 2 random
 		ARG 3 pos
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	METHOD simple (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/levelgen/feature/stateproviders/RuleBasedBlockStateProvider;
 		ARG 0 block
 	METHOD simple (Lnet/minecraft/world/level/levelgen/feature/stateproviders/BlockStateProvider;)Lnet/minecraft/world/level/levelgen/feature/stateproviders/RuleBasedBlockStateProvider;
 		ARG 0 fallback
+	CLASS Rule
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance

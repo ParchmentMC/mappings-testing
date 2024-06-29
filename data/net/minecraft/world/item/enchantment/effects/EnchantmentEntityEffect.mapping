@@ -5,3 +5,5 @@ CLASS net/minecraft/world/item/enchantment/effects/EnchantmentEntityEffect
 		ARG 3 item
 		ARG 4 entity
 		ARG 5 origin
+	METHOD bootstrap (Lnet/minecraft/core/Registry;)Lcom/mojang/serialization/MapCodec;
+		ARG 0 registry

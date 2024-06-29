@@ -80,16 +80,6 @@ CLASS net/minecraft/world/effect/MobEffectInstance
 		ARG 2 onExpirationRunnable
 	METHOD update (Lnet/minecraft/world/effect/MobEffectInstance;)Z
 		ARG 1 other
-	CLASS Details
-		METHOD create (IIZZLjava/util/Optional;Ljava/util/Optional;)Lnet/minecraft/world/effect/MobEffectInstance$Details;
-			ARG 0 amplifier
-			ARG 1 duration
-			ARG 2 ambient
-			ARG 3 showParticles
-			ARG 4 showIcon
-			ARG 5 hiddenEffect
-		METHOD lambda$static$1 (Lcom/mojang/serialization/Codec;Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
-			ARG 1 instance
 	CLASS BlendState
 		METHOD computeTarget (Lnet/minecraft/world/effect/MobEffectInstance;)F
 			ARG 0 effect
@@ -104,3 +94,13 @@ CLASS net/minecraft/world/effect/MobEffectInstance
 			ARG 1 effectInstance
 		METHOD tick (Lnet/minecraft/world/effect/MobEffectInstance;)V
 			ARG 1 effect
+	CLASS Details
+		METHOD create (IIZZLjava/util/Optional;Ljava/util/Optional;)Lnet/minecraft/world/effect/MobEffectInstance$Details;
+			ARG 0 amplifier
+			ARG 1 duration
+			ARG 2 ambient
+			ARG 3 showParticles
+			ARG 4 showIcon
+			ARG 5 hiddenEffect
+		METHOD lambda$static$1 (Lcom/mojang/serialization/Codec;Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 1 instance

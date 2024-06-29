@@ -6,5 +6,7 @@ CLASS net/minecraft/world/item/enchantment/ConditionalEffect
 		ARG 0 params
 	METHOD lambda$codec$4 (Lcom/mojang/serialization/Codec;Lnet/minecraft/world/level/storage/loot/parameters/LootContextParamSet;Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 2 instance
+	METHOD lambda$conditionCodec$3 (Lnet/minecraft/world/level/storage/loot/parameters/LootContextParamSet;Lnet/minecraft/world/level/storage/loot/predicates/LootItemCondition;)Lcom/mojang/serialization/DataResult;
+		ARG 1 condition
 	METHOD matches (Lnet/minecraft/world/level/storage/loot/LootContext;)Z
 		ARG 1 context

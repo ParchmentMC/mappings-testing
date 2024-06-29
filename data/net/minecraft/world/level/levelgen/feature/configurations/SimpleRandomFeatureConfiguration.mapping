@@ -1,3 +1,5 @@
 CLASS net/minecraft/world/level/levelgen/feature/configurations/SimpleRandomFeatureConfiguration
 	METHOD <init> (Lnet/minecraft/core/HolderSet;)V
 		ARG 1 features
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/feature/configurations/SimpleRandomFeatureConfiguration;)Lnet/minecraft/core/HolderSet;
+		ARG 0 config

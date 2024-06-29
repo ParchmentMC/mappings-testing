@@ -10,3 +10,10 @@ CLASS net/minecraft/world/level/storage/loot/entries/DynamicLoot
 		ARG 5 functions
 	METHOD dynamicEntry (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/world/level/storage/loot/entries/LootPoolSingletonContainer$Builder;
 		ARG 0 dynamicDropsName
+	METHOD lambda$dynamicEntry$2 (Lnet/minecraft/resources/ResourceLocation;IILjava/util/List;Ljava/util/List;)Lnet/minecraft/world/level/storage/loot/entries/LootPoolSingletonContainer;
+		ARG 1 weight
+		ARG 2 quality
+		ARG 3 conditions
+		ARG 4 functions
+	METHOD lambda$static$1 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

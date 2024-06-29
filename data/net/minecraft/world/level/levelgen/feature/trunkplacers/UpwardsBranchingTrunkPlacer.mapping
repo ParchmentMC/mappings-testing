@@ -7,6 +7,16 @@ CLASS net/minecraft/world/level/levelgen/feature/trunkplacers/UpwardsBranchingTr
 		ARG 5 placeBranchPerLogProbability
 		ARG 6 extraBranchLength
 		ARG 7 canGrowThrough
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/feature/trunkplacers/UpwardsBranchingTrunkPlacer;)Lnet/minecraft/util/valueproviders/IntProvider;
+		ARG 0 trunkPlacer
+	METHOD lambda$static$1 (Lnet/minecraft/world/level/levelgen/feature/trunkplacers/UpwardsBranchingTrunkPlacer;)Ljava/lang/Float;
+		ARG 0 trunkPlacer
+	METHOD lambda$static$2 (Lnet/minecraft/world/level/levelgen/feature/trunkplacers/UpwardsBranchingTrunkPlacer;)Lnet/minecraft/util/valueproviders/IntProvider;
+		ARG 0 trunkPlacer
+	METHOD lambda$static$3 (Lnet/minecraft/world/level/levelgen/feature/trunkplacers/UpwardsBranchingTrunkPlacer;)Lnet/minecraft/core/HolderSet;
+		ARG 0 trunkPlacer
+	METHOD lambda$static$4 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	METHOD placeBranch (Lnet/minecraft/world/level/LevelSimulatedReader;Ljava/util/function/BiConsumer;Lnet/minecraft/util/RandomSource;ILnet/minecraft/world/level/levelgen/feature/configurations/TreeConfiguration;Ljava/util/List;Lnet/minecraft/core/BlockPos$MutableBlockPos;ILnet/minecraft/core/Direction;II)V
 		ARG 1 level
 		ARG 2 blockSetter

@@ -24,7 +24,27 @@ CLASS net/minecraft/world/level/levelgen/structure/structures/JigsawStructure
 		ARG 9 poolAliases
 		ARG 10 dimensionPadding
 		ARG 11 liquidSettings
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/structure/structures/JigsawStructure;)Lnet/minecraft/core/Holder;
+		ARG 0 structure
+	METHOD lambda$static$1 (Lnet/minecraft/world/level/levelgen/structure/structures/JigsawStructure;)Ljava/util/Optional;
+		ARG 0 structure
 	METHOD lambda$static$10 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 0 instance
+	METHOD lambda$static$2 (Lnet/minecraft/world/level/levelgen/structure/structures/JigsawStructure;)Ljava/lang/Integer;
+		ARG 0 structure
+	METHOD lambda$static$3 (Lnet/minecraft/world/level/levelgen/structure/structures/JigsawStructure;)Lnet/minecraft/world/level/levelgen/heightproviders/HeightProvider;
+		ARG 0 structure
+	METHOD lambda$static$4 (Lnet/minecraft/world/level/levelgen/structure/structures/JigsawStructure;)Ljava/lang/Boolean;
+		ARG 0 structure
+	METHOD lambda$static$5 (Lnet/minecraft/world/level/levelgen/structure/structures/JigsawStructure;)Ljava/util/Optional;
+		ARG 0 structure
+	METHOD lambda$static$6 (Lnet/minecraft/world/level/levelgen/structure/structures/JigsawStructure;)Ljava/lang/Integer;
+		ARG 0 structure
+	METHOD lambda$static$7 (Lnet/minecraft/world/level/levelgen/structure/structures/JigsawStructure;)Ljava/util/List;
+		ARG 0 structure
+	METHOD lambda$static$8 (Lnet/minecraft/world/level/levelgen/structure/structures/JigsawStructure;)Lnet/minecraft/world/level/levelgen/structure/pools/DimensionPadding;
+		ARG 0 structure
+	METHOD lambda$static$9 (Lnet/minecraft/world/level/levelgen/structure/structures/JigsawStructure;)Lnet/minecraft/world/level/levelgen/structure/templatesystem/LiquidSettings;
+		ARG 0 structure
 	METHOD verifyRange (Lnet/minecraft/world/level/levelgen/structure/structures/JigsawStructure;)Lcom/mojang/serialization/DataResult;
 		ARG 0 structure

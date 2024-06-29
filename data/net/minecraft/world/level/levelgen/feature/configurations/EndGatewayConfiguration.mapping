@@ -5,3 +5,9 @@ CLASS net/minecraft/world/level/levelgen/feature/configurations/EndGatewayConfig
 	METHOD knownExit (Lnet/minecraft/core/BlockPos;Z)Lnet/minecraft/world/level/levelgen/feature/configurations/EndGatewayConfiguration;
 		ARG 0 exit
 		ARG 1 exact
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/feature/configurations/EndGatewayConfiguration;)Ljava/util/Optional;
+		ARG 0 config
+	METHOD lambda$static$1 (Lnet/minecraft/world/level/levelgen/feature/configurations/EndGatewayConfiguration;)Ljava/lang/Boolean;
+		ARG 0 config
+	METHOD lambda$static$2 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

@@ -4,3 +4,5 @@ CLASS net/minecraft/world/level/levelgen/feature/featuresize/FeatureSize
 	METHOD getSizeAtHeight (II)I
 		ARG 1 height
 		ARG 2 midpoint
+	METHOD lambda$minClippedHeightCodec$2 (Lnet/minecraft/world/level/levelgen/feature/featuresize/FeatureSize;)Ljava/util/OptionalInt;
+		ARG 0 size

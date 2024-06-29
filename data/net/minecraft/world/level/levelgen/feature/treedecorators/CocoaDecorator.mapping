@@ -3,3 +3,5 @@ CLASS net/minecraft/world/level/levelgen/feature/treedecorators/CocoaDecorator
 		ARG 1 probability
 	METHOD lambda$place$1 (ILnet/minecraft/core/BlockPos;)Z
 		ARG 1 pos
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/feature/treedecorators/CocoaDecorator;)Ljava/lang/Float;
+		ARG 0 decorator

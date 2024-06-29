@@ -2,3 +2,9 @@ CLASS net/minecraft/world/level/levelgen/feature/configurations/LayerConfigurati
 	METHOD <init> (ILnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 height
 		ARG 2 state
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/feature/configurations/LayerConfiguration;)Ljava/lang/Integer;
+		ARG 0 config
+	METHOD lambda$static$1 (Lnet/minecraft/world/level/levelgen/feature/configurations/LayerConfiguration;)Lnet/minecraft/world/level/block/state/BlockState;
+		ARG 0 config
+	METHOD lambda$static$2 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

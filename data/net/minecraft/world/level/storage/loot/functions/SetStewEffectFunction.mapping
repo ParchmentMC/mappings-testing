@@ -10,3 +10,6 @@ CLASS net/minecraft/world/level/storage/loot/functions/SetStewEffectFunction
 		METHOD withEffect (Lnet/minecraft/core/Holder;Lnet/minecraft/world/level/storage/loot/providers/number/NumberProvider;)Lnet/minecraft/world/level/storage/loot/functions/SetStewEffectFunction$Builder;
 			ARG 1 effect
 			ARG 2 amplifier
+	CLASS EffectEntry
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance

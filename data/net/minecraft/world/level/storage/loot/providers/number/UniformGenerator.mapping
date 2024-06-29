@@ -7,3 +7,5 @@ CLASS net/minecraft/world/level/storage/loot/providers/number/UniformGenerator
 	METHOD between (FF)Lnet/minecraft/world/level/storage/loot/providers/number/UniformGenerator;
 		ARG 0 min
 		ARG 1 max
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

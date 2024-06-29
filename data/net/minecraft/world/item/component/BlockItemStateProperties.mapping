@@ -3,6 +3,8 @@ CLASS net/minecraft/world/item/component/BlockItemStateProperties
 		ARG 1 state
 	METHOD get (Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
 		ARG 1 property
+	METHOD lambda$updateState$0 (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Lnet/minecraft/world/level/block/state/BlockState;
+		ARG 2 value
 	METHOD updateState (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/String;)Lnet/minecraft/world/level/block/state/BlockState;
 		ARG 0 state
 		ARG 1 property

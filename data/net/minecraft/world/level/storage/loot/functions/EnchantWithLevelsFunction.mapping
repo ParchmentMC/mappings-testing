@@ -6,6 +6,13 @@ CLASS net/minecraft/world/level/storage/loot/functions/EnchantWithLevelsFunction
 		ARG 1 condtions
 		ARG 2 levels
 		ARG 3 options
+	METHOD enchantWithLevels (Lnet/minecraft/core/HolderLookup$Provider;Lnet/minecraft/world/level/storage/loot/providers/number/NumberProvider;)Lnet/minecraft/world/level/storage/loot/functions/EnchantWithLevelsFunction$Builder;
+		ARG 0 registries
+		ARG 1 levels
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/storage/loot/functions/EnchantWithLevelsFunction;)Lnet/minecraft/world/level/storage/loot/providers/number/NumberProvider;
+		ARG 0 function
+	METHOD lambda$static$1 (Lnet/minecraft/world/level/storage/loot/functions/EnchantWithLevelsFunction;)Ljava/util/Optional;
+		ARG 0 function
 	METHOD lambda$static$2 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 0 instance
 	METHOD run (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/storage/loot/LootContext;)Lnet/minecraft/world/item/ItemStack;

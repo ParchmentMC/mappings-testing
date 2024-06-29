@@ -3,3 +3,5 @@ CLASS net/minecraft/world/level/block/entity/trialspawner/TrialSpawnerConfig
 		ARG 1 players
 	METHOD calculateTargetTotalMobs (I)I
 		ARG 1 players
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

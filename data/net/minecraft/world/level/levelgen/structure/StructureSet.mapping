@@ -7,3 +7,8 @@ CLASS net/minecraft/world/level/levelgen/structure/StructureSet
 	METHOD entry (Lnet/minecraft/core/Holder;I)Lnet/minecraft/world/level/levelgen/structure/StructureSet$StructureSelectionEntry;
 		ARG 0 structure
 		ARG 1 weight
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
+	CLASS StructureSelectionEntry
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance

@@ -2,6 +2,7 @@ CLASS net/minecraft/world/level/levelgen/feature/AbstractHugeMushroomFeature
 	METHOD getTreeHeight (Lnet/minecraft/util/RandomSource;)I
 		ARG 1 random
 	METHOD getTreeRadiusForHeight (IIII)I
+		ARG 2 height
 		ARG 3 foliageRadius
 		ARG 4 y
 	METHOD isValidPosition (Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;ILnet/minecraft/core/BlockPos$MutableBlockPos;Lnet/minecraft/world/level/levelgen/feature/configurations/HugeMushroomFeatureConfiguration;)Z

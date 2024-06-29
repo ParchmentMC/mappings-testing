@@ -1,5 +1,9 @@
 CLASS net/minecraft/world/level/levelgen/placement/HeightmapPlacement
 	METHOD <init> (Lnet/minecraft/world/level/levelgen/Heightmap$Types;)V
 		ARG 1 heightmap
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/placement/HeightmapPlacement;)Lnet/minecraft/world/level/levelgen/Heightmap$Types;
+		ARG 0 placement
+	METHOD lambda$static$1 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	METHOD onHeightmap (Lnet/minecraft/world/level/levelgen/Heightmap$Types;)Lnet/minecraft/world/level/levelgen/placement/HeightmapPlacement;
 		ARG 0 heightmap

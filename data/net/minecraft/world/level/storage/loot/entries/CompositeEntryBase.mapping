@@ -8,6 +8,8 @@ CLASS net/minecraft/world/level/storage/loot/entries/CompositeEntryBase
 		ARG 1 children
 	METHOD createCodec (Lnet/minecraft/world/level/storage/loot/entries/CompositeEntryBase$CompositeEntryConstructor;)Lcom/mojang/serialization/MapCodec;
 		ARG 0 factory
+	METHOD lambda$createCodec$1 (Lnet/minecraft/world/level/storage/loot/entries/CompositeEntryBase$CompositeEntryConstructor;Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 1 instance
 	CLASS CompositeEntryConstructor
 		METHOD create (Ljava/util/List;Ljava/util/List;)Lnet/minecraft/world/level/storage/loot/entries/CompositeEntryBase;
 			ARG 1 children

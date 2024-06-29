@@ -6,3 +6,5 @@ CLASS net/minecraft/world/entity/ai/control/SmoothSwimmingMoveControl
 		ARG 4 inWaterSpeedModifier
 		ARG 5 outsideWaterSpeedModifier
 		ARG 6 applyGravity
+	METHOD getTurningSpeedFactor (F)F
+		ARG 0 degreesToTurn

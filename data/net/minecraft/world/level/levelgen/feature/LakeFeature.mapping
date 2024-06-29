@@ -1,3 +1,6 @@
 CLASS net/minecraft/world/level/levelgen/feature/LakeFeature
 	METHOD canReplaceBlock (Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 1 state
+	CLASS Configuration
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance

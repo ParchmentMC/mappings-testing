@@ -12,6 +12,8 @@ CLASS net/minecraft/world/level/storage/loot/predicates/EntityHasScoreCondition
 		ARG 5 scoreRange
 	METHOD hasScores (Lnet/minecraft/world/level/storage/loot/LootContext$EntityTarget;)Lnet/minecraft/world/level/storage/loot/predicates/EntityHasScoreCondition$Builder;
 		ARG 0 entityTarget
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	METHOD test (Lnet/minecraft/world/level/storage/loot/LootContext;)Z
 		ARG 1 context
 	CLASS Builder

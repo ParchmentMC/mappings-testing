@@ -3,3 +3,11 @@ CLASS net/minecraft/world/level/levelgen/feature/configurations/HugeMushroomFeat
 		ARG 1 capProvider
 		ARG 2 stemProvider
 		ARG 3 foliageRadius
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/feature/configurations/HugeMushroomFeatureConfiguration;)Lnet/minecraft/world/level/levelgen/feature/stateproviders/BlockStateProvider;
+		ARG 0 config
+	METHOD lambda$static$1 (Lnet/minecraft/world/level/levelgen/feature/configurations/HugeMushroomFeatureConfiguration;)Lnet/minecraft/world/level/levelgen/feature/stateproviders/BlockStateProvider;
+		ARG 0 config
+	METHOD lambda$static$2 (Lnet/minecraft/world/level/levelgen/feature/configurations/HugeMushroomFeatureConfiguration;)Ljava/lang/Integer;
+		ARG 0 config
+	METHOD lambda$static$3 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

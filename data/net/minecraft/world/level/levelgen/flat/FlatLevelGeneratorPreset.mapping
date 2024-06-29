@@ -1,0 +1,7 @@
+CLASS net/minecraft/world/level/levelgen/flat/FlatLevelGeneratorPreset
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/flat/FlatLevelGeneratorPreset;)Lnet/minecraft/core/Holder;
+		ARG 0 preset
+	METHOD lambda$static$1 (Lnet/minecraft/world/level/levelgen/flat/FlatLevelGeneratorPreset;)Lnet/minecraft/world/level/levelgen/flat/FlatLevelGeneratorSettings;
+		ARG 0 preset
+	METHOD lambda$static$2 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

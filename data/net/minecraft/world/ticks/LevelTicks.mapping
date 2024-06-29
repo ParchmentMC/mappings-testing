@@ -15,9 +15,11 @@ CLASS net/minecraft/world/ticks/LevelTicks
 		ARG 4 profiler
 	METHOD copyArea (Lnet/minecraft/world/level/levelgen/structure/BoundingBox;Lnet/minecraft/core/Vec3i;)V
 		ARG 1 area
+		ARG 2 offset
 	METHOD copyAreaFrom (Lnet/minecraft/world/ticks/LevelTicks;Lnet/minecraft/world/level/levelgen/structure/BoundingBox;Lnet/minecraft/core/Vec3i;)V
 		ARG 1 levelTicks
 		ARG 2 area
+		ARG 3 offset
 	METHOD drainContainers (JI)V
 		ARG 1 gameTime
 		ARG 3 maxAllowedTicks
@@ -41,3 +43,9 @@ CLASS net/minecraft/world/ticks/LevelTicks
 		ARG 1 gameTime
 		ARG 3 maxAllowedTicks
 		ARG 4 ticker
+	METHOD updateContainerScheduling (Lnet/minecraft/world/ticks/ScheduledTick;)V
+		ARG 1 tick
+	CLASS PosAndContainerConsumer
+		METHOD accept (JLnet/minecraft/world/ticks/LevelChunkTicks;)V
+			ARG 1 pos
+			ARG 3 container

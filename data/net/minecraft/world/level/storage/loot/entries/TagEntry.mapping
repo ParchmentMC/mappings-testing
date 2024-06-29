@@ -15,7 +15,21 @@ CLASS net/minecraft/world/level/storage/loot/entries/TagEntry
 		ARG 2 generatorConsumer
 	METHOD lambda$createItemStack$3 (Ljava/util/function/Consumer;Lnet/minecraft/core/Holder;)V
 		ARG 1 item
+	METHOD lambda$expandTag$5 (Lnet/minecraft/tags/TagKey;IILjava/util/List;Ljava/util/List;)Lnet/minecraft/world/level/storage/loot/entries/LootPoolSingletonContainer;
+		ARG 1 weight
+		ARG 2 quality
+		ARG 3 conditions
+		ARG 4 functions
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/storage/loot/entries/TagEntry;)Lnet/minecraft/tags/TagKey;
+		ARG 0 entry
+	METHOD lambda$static$1 (Lnet/minecraft/world/level/storage/loot/entries/TagEntry;)Ljava/lang/Boolean;
+		ARG 0 entry
 	METHOD lambda$static$2 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 0 instance
+	METHOD lambda$tagContents$4 (Lnet/minecraft/tags/TagKey;IILjava/util/List;Ljava/util/List;)Lnet/minecraft/world/level/storage/loot/entries/LootPoolSingletonContainer;
+		ARG 1 weight
+		ARG 2 quality
+		ARG 3 conditions
+		ARG 4 functions
 	METHOD tagContents (Lnet/minecraft/tags/TagKey;)Lnet/minecraft/world/level/storage/loot/entries/LootPoolSingletonContainer$Builder;
 		ARG 0 tag

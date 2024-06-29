@@ -24,5 +24,11 @@ CLASS net/minecraft/world/level/gameevent/vibrations/VibrationInfo
 		ARG 0 info
 	METHOD lambda$static$1 (Lnet/minecraft/world/level/gameevent/vibrations/VibrationInfo;)Ljava/util/Optional;
 		ARG 0 info
+	METHOD lambda$static$2 (Lnet/minecraft/core/Holder;Ljava/lang/Float;Lnet/minecraft/world/phys/Vec3;Ljava/util/Optional;Ljava/util/Optional;)Lnet/minecraft/world/level/gameevent/vibrations/VibrationInfo;
+		ARG 0 gameEvent
+		ARG 1 distance
+		ARG 2 pos
+		ARG 3 uuid
+		ARG 4 entity
 	METHOD lambda$static$3 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 0 instance

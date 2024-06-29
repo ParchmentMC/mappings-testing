@@ -4,3 +4,5 @@ CLASS net/minecraft/world/level/storage/loot/providers/score/ContextScoreboardNa
 		ARG 1 target
 	METHOD forTarget (Lnet/minecraft/world/level/storage/loot/LootContext$EntityTarget;)Lnet/minecraft/world/level/storage/loot/providers/score/ScoreboardNameProvider;
 		ARG 0 target
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

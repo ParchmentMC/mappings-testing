@@ -1,3 +1,9 @@
 CLASS net/minecraft/world/level/saveddata/maps/MapDecoration
+	METHOD <init> (Lnet/minecraft/core/Holder;BBBLjava/util/Optional;)V
+		ARG 1 type
+		ARG 2 x
+		ARG 3 y
+		ARG 4 rot
+		ARG 5 name
 	METHOD equals (Ljava/lang/Object;)Z
 		ARG 1 other

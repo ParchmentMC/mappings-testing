@@ -13,3 +13,31 @@ CLASS net/minecraft/world/level/levelgen/feature/configurations/RootSystemConfig
 		ARG 11 hangingRootPlacementAttempts
 		ARG 12 allowedVerticalWaterForTree
 		ARG 13 allowedTreePosition
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/feature/configurations/RootSystemConfiguration;)Lnet/minecraft/core/Holder;
+		ARG 0 config
+	METHOD lambda$static$1 (Lnet/minecraft/world/level/levelgen/feature/configurations/RootSystemConfiguration;)Ljava/lang/Integer;
+		ARG 0 config
+	METHOD lambda$static$10 (Lnet/minecraft/world/level/levelgen/feature/configurations/RootSystemConfiguration;)Ljava/lang/Integer;
+		ARG 0 config
+	METHOD lambda$static$11 (Lnet/minecraft/world/level/levelgen/feature/configurations/RootSystemConfiguration;)Ljava/lang/Integer;
+		ARG 0 config
+	METHOD lambda$static$12 (Lnet/minecraft/world/level/levelgen/feature/configurations/RootSystemConfiguration;)Lnet/minecraft/world/level/levelgen/blockpredicates/BlockPredicate;
+		ARG 0 config
+	METHOD lambda$static$13 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
+	METHOD lambda$static$2 (Lnet/minecraft/world/level/levelgen/feature/configurations/RootSystemConfiguration;)Ljava/lang/Integer;
+		ARG 0 config
+	METHOD lambda$static$3 (Lnet/minecraft/world/level/levelgen/feature/configurations/RootSystemConfiguration;)Lnet/minecraft/tags/TagKey;
+		ARG 0 config
+	METHOD lambda$static$4 (Lnet/minecraft/world/level/levelgen/feature/configurations/RootSystemConfiguration;)Lnet/minecraft/world/level/levelgen/feature/stateproviders/BlockStateProvider;
+		ARG 0 config
+	METHOD lambda$static$5 (Lnet/minecraft/world/level/levelgen/feature/configurations/RootSystemConfiguration;)Ljava/lang/Integer;
+		ARG 0 config
+	METHOD lambda$static$6 (Lnet/minecraft/world/level/levelgen/feature/configurations/RootSystemConfiguration;)Ljava/lang/Integer;
+		ARG 0 config
+	METHOD lambda$static$7 (Lnet/minecraft/world/level/levelgen/feature/configurations/RootSystemConfiguration;)Ljava/lang/Integer;
+		ARG 0 config
+	METHOD lambda$static$8 (Lnet/minecraft/world/level/levelgen/feature/configurations/RootSystemConfiguration;)Ljava/lang/Integer;
+		ARG 0 config
+	METHOD lambda$static$9 (Lnet/minecraft/world/level/levelgen/feature/configurations/RootSystemConfiguration;)Lnet/minecraft/world/level/levelgen/feature/stateproviders/BlockStateProvider;
+		ARG 0 config

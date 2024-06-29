@@ -3,6 +3,8 @@ CLASS net/minecraft/world/level/levelgen/feature/treedecorators/AlterGroundDecor
 		ARG 1 provider
 	METHOD lambda$place$1 (ILnet/minecraft/core/BlockPos;)Z
 		ARG 1 pos
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/feature/treedecorators/AlterGroundDecorator;)Lnet/minecraft/world/level/levelgen/feature/stateproviders/BlockStateProvider;
+		ARG 0 decorator
 	METHOD placeBlockAt (Lnet/minecraft/world/level/levelgen/feature/treedecorators/TreeDecorator$Context;Lnet/minecraft/core/BlockPos;)V
 		ARG 1 context
 		ARG 2 pos

@@ -8,3 +8,15 @@ CLASS net/minecraft/world/level/levelgen/feature/stateproviders/NoiseThresholdPr
 		ARG 7 defaultState
 		ARG 8 lowStates
 		ARG 9 highStates
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/feature/stateproviders/NoiseThresholdProvider;)Ljava/lang/Float;
+		ARG 0 provider
+	METHOD lambda$static$1 (Lnet/minecraft/world/level/levelgen/feature/stateproviders/NoiseThresholdProvider;)Ljava/lang/Float;
+		ARG 0 provider
+	METHOD lambda$static$2 (Lnet/minecraft/world/level/levelgen/feature/stateproviders/NoiseThresholdProvider;)Lnet/minecraft/world/level/block/state/BlockState;
+		ARG 0 provider
+	METHOD lambda$static$3 (Lnet/minecraft/world/level/levelgen/feature/stateproviders/NoiseThresholdProvider;)Ljava/util/List;
+		ARG 0 provider
+	METHOD lambda$static$4 (Lnet/minecraft/world/level/levelgen/feature/stateproviders/NoiseThresholdProvider;)Ljava/util/List;
+		ARG 0 provider
+	METHOD lambda$static$5 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

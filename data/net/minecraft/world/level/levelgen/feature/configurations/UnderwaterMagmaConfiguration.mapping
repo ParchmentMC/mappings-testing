@@ -3,3 +3,11 @@ CLASS net/minecraft/world/level/levelgen/feature/configurations/UnderwaterMagmaC
 		ARG 1 floorSearchRange
 		ARG 2 placementRadiusAroundFloor
 		ARG 3 placementProbabilityPerValidPosition
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/feature/configurations/UnderwaterMagmaConfiguration;)Ljava/lang/Integer;
+		ARG 0 config
+	METHOD lambda$static$1 (Lnet/minecraft/world/level/levelgen/feature/configurations/UnderwaterMagmaConfiguration;)Ljava/lang/Integer;
+		ARG 0 config
+	METHOD lambda$static$2 (Lnet/minecraft/world/level/levelgen/feature/configurations/UnderwaterMagmaConfiguration;)Ljava/lang/Float;
+		ARG 0 config
+	METHOD lambda$static$3 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

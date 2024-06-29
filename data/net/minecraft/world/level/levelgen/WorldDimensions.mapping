@@ -1,4 +1,6 @@
 CLASS net/minecraft/world/level/levelgen/WorldDimensions
+	METHOD <init> (Ljava/util/Map;)V
+		ARG 1 dimensions
 	METHOD <init> (Lnet/minecraft/core/Registry;)V
 		ARG 1 stemRegistry
 	METHOD bake (Lnet/minecraft/core/Registry;)Lnet/minecraft/world/level/levelgen/WorldDimensions$Complete;
@@ -19,6 +21,8 @@ CLASS net/minecraft/world/level/levelgen/WorldDimensions
 		ARG 1 stem
 	METHOD keysInOrder (Ljava/util/stream/Stream;)Ljava/util/stream/Stream;
 		ARG 0 stemKeys
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	METHOD replaceOverworldGenerator (Lnet/minecraft/core/RegistryAccess;Lnet/minecraft/world/level/chunk/ChunkGenerator;)Lnet/minecraft/world/level/levelgen/WorldDimensions;
 		ARG 1 registryAccess
 		ARG 2 chunkGenerator

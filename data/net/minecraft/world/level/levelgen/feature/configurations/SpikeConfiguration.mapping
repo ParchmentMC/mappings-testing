@@ -7,3 +7,11 @@ CLASS net/minecraft/world/level/levelgen/feature/configurations/SpikeConfigurati
 		ARG 1 crystalInvulnerable
 		ARG 2 spikes
 		ARG 3 crystalBeamTarget
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/feature/configurations/SpikeConfiguration;)Ljava/lang/Boolean;
+		ARG 0 config
+	METHOD lambda$static$1 (Lnet/minecraft/world/level/levelgen/feature/configurations/SpikeConfiguration;)Ljava/util/List;
+		ARG 0 config
+	METHOD lambda$static$2 (Lnet/minecraft/world/level/levelgen/feature/configurations/SpikeConfiguration;)Ljava/util/Optional;
+		ARG 0 config
+	METHOD lambda$static$3 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

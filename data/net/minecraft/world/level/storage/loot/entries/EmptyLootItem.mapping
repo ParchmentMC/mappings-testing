@@ -5,3 +5,5 @@ CLASS net/minecraft/world/level/storage/loot/entries/EmptyLootItem
 		ARG 2 quality
 		ARG 3 conditions
 		ARG 4 functions
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

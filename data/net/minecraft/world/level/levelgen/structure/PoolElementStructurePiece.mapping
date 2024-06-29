@@ -8,6 +8,7 @@ CLASS net/minecraft/world/level/levelgen/structure/PoolElementStructurePiece
 		ARG 3 position
 		ARG 4 groundLevelDelta
 		ARG 5 rotation
+		ARG 6 boundingBox
 		ARG 7 liquidSettings
 	METHOD addJunction (Lnet/minecraft/world/level/levelgen/structure/pools/JigsawJunction;)V
 		ARG 1 junction

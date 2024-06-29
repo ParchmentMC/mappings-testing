@@ -3,6 +3,14 @@ CLASS net/minecraft/world/level/levelgen/placement/SurfaceRelativeThresholdFilte
 		ARG 1 heightmap
 		ARG 2 minInclusive
 		ARG 3 maxInclusive
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/placement/SurfaceRelativeThresholdFilter;)Lnet/minecraft/world/level/levelgen/Heightmap$Types;
+		ARG 0 filter
+	METHOD lambda$static$1 (Lnet/minecraft/world/level/levelgen/placement/SurfaceRelativeThresholdFilter;)Ljava/lang/Integer;
+		ARG 0 filter
+	METHOD lambda$static$2 (Lnet/minecraft/world/level/levelgen/placement/SurfaceRelativeThresholdFilter;)Ljava/lang/Integer;
+		ARG 0 filter
+	METHOD lambda$static$3 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	METHOD of (Lnet/minecraft/world/level/levelgen/Heightmap$Types;II)Lnet/minecraft/world/level/levelgen/placement/SurfaceRelativeThresholdFilter;
 		ARG 0 heightmap
 		ARG 1 minInclusive

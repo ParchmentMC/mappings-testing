@@ -9,6 +9,10 @@ CLASS net/minecraft/world/level/storage/loot/functions/CopyCustomDataFunction
 		ARG 0 source
 	METHOD lambda$run$4 (Ljava/util/function/Supplier;Lnet/minecraft/nbt/Tag;Lnet/minecraft/world/level/storage/loot/functions/CopyCustomDataFunction$CopyOperation;)V
 		ARG 2 operation
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/storage/loot/functions/CopyCustomDataFunction;)Lnet/minecraft/world/level/storage/loot/providers/nbt/NbtProvider;
+		ARG 0 function
+	METHOD lambda$static$1 (Lnet/minecraft/world/level/storage/loot/functions/CopyCustomDataFunction;)Ljava/util/List;
+		ARG 0 function
 	METHOD lambda$static$2 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 0 instance
 	CLASS Builder
@@ -23,6 +27,7 @@ CLASS net/minecraft/world/level/storage/loot/functions/CopyCustomDataFunction
 			ARG 3 mergeStrategy
 	CLASS CopyOperation
 		METHOD apply (Ljava/util/function/Supplier;Lnet/minecraft/nbt/Tag;)V
+			ARG 1 sourceTag
 			ARG 2 tag
 		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 			ARG 0 instance

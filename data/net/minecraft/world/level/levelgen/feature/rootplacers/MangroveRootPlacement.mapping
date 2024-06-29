@@ -1,0 +1,15 @@
+CLASS net/minecraft/world/level/levelgen/feature/rootplacers/MangroveRootPlacement
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/feature/rootplacers/MangroveRootPlacement;)Lnet/minecraft/core/HolderSet;
+		ARG 0 placement
+	METHOD lambda$static$1 (Lnet/minecraft/world/level/levelgen/feature/rootplacers/MangroveRootPlacement;)Lnet/minecraft/core/HolderSet;
+		ARG 0 placement
+	METHOD lambda$static$2 (Lnet/minecraft/world/level/levelgen/feature/rootplacers/MangroveRootPlacement;)Lnet/minecraft/world/level/levelgen/feature/stateproviders/BlockStateProvider;
+		ARG 0 placement
+	METHOD lambda$static$3 (Lnet/minecraft/world/level/levelgen/feature/rootplacers/MangroveRootPlacement;)Ljava/lang/Integer;
+		ARG 0 placement
+	METHOD lambda$static$4 (Lnet/minecraft/world/level/levelgen/feature/rootplacers/MangroveRootPlacement;)Ljava/lang/Integer;
+		ARG 0 placement
+	METHOD lambda$static$5 (Lnet/minecraft/world/level/levelgen/feature/rootplacers/MangroveRootPlacement;)Ljava/lang/Float;
+		ARG 0 placement
+	METHOD lambda$static$6 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

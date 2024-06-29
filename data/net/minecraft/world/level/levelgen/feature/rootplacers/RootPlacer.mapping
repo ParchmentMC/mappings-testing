@@ -13,6 +13,12 @@ CLASS net/minecraft/world/level/levelgen/feature/rootplacers/RootPlacer
 	METHOD getTrunkOrigin (Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Lnet/minecraft/core/BlockPos;
 		ARG 1 pos
 		ARG 2 random
+	METHOD lambda$rootPlacerParts$0 (Lnet/minecraft/world/level/levelgen/feature/rootplacers/RootPlacer;)Lnet/minecraft/util/valueproviders/IntProvider;
+		ARG 0 placement
+	METHOD lambda$rootPlacerParts$1 (Lnet/minecraft/world/level/levelgen/feature/rootplacers/RootPlacer;)Lnet/minecraft/world/level/levelgen/feature/stateproviders/BlockStateProvider;
+		ARG 0 placement
+	METHOD lambda$rootPlacerParts$2 (Lnet/minecraft/world/level/levelgen/feature/rootplacers/RootPlacer;)Ljava/util/Optional;
+		ARG 0 placement
 	METHOD placeRoot (Lnet/minecraft/world/level/LevelSimulatedReader;Ljava/util/function/BiConsumer;Lnet/minecraft/util/RandomSource;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/levelgen/feature/configurations/TreeConfiguration;)V
 		ARG 1 level
 		ARG 2 blockSetter

@@ -2,6 +2,12 @@ CLASS net/minecraft/world/level/levelgen/heightproviders/UniformHeight
 	METHOD <init> (Lnet/minecraft/world/level/levelgen/VerticalAnchor;Lnet/minecraft/world/level/levelgen/VerticalAnchor;)V
 		ARG 1 minInclusive
 		ARG 2 maxInclusive
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/heightproviders/UniformHeight;)Lnet/minecraft/world/level/levelgen/VerticalAnchor;
+		ARG 0 provider
+	METHOD lambda$static$1 (Lnet/minecraft/world/level/levelgen/heightproviders/UniformHeight;)Lnet/minecraft/world/level/levelgen/VerticalAnchor;
+		ARG 0 provider
+	METHOD lambda$static$2 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	METHOD of (Lnet/minecraft/world/level/levelgen/VerticalAnchor;Lnet/minecraft/world/level/levelgen/VerticalAnchor;)Lnet/minecraft/world/level/levelgen/heightproviders/UniformHeight;
 		ARG 0 minInclusive
 		ARG 1 maxInclusive

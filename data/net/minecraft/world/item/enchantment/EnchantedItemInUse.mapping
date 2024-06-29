@@ -3,3 +3,5 @@ CLASS net/minecraft/world/item/enchantment/EnchantedItemInUse
 		ARG 1 itemStack
 		ARG 2 inSlot
 		ARG 3 owner
+	METHOD lambda$new$0 (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/EquipmentSlot;Lnet/minecraft/world/item/Item;)V
+		ARG 2 item

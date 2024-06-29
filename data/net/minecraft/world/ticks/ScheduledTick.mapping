@@ -4,6 +4,12 @@ CLASS net/minecraft/world/ticks/ScheduledTick
 		ARG 2 pos
 		ARG 3 triggerTick
 		ARG 5 subTickOrder
+	METHOD <init> (Ljava/lang/Object;Lnet/minecraft/core/BlockPos;JLnet/minecraft/world/ticks/TickPriority;J)V
+		ARG 1 type
+		ARG 2 pos
+		ARG 3 triggerTick
+		ARG 5 priority
+		ARG 6 subTickOrder
 	METHOD probe (Ljava/lang/Object;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/ticks/ScheduledTick;
 		ARG 0 type
 		ARG 1 pos

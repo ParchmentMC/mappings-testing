@@ -3,5 +3,7 @@ CLASS net/minecraft/world/item/component/WritableBookContent
 		ARG 1 pages
 	METHOD getPages (Z)Ljava/util/stream/Stream;
 		ARG 1 filtered
+	METHOD lambda$getPages$1 (ZLnet/minecraft/server/network/Filterable;)Ljava/lang/String;
+		ARG 1 page
 	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 0 instance

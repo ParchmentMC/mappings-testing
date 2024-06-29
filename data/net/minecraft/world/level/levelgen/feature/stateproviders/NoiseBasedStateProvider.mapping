@@ -6,5 +6,11 @@ CLASS net/minecraft/world/level/levelgen/feature/stateproviders/NoiseBasedStateP
 	METHOD getNoiseValue (Lnet/minecraft/core/BlockPos;D)D
 		ARG 1 pos
 		ARG 2 delta
+	METHOD lambda$noiseCodec$0 (Lnet/minecraft/world/level/levelgen/feature/stateproviders/NoiseBasedStateProvider;)Ljava/lang/Long;
+		ARG 0 provider
+	METHOD lambda$noiseCodec$1 (Lnet/minecraft/world/level/levelgen/feature/stateproviders/NoiseBasedStateProvider;)Lnet/minecraft/world/level/levelgen/synth/NormalNoise$NoiseParameters;
+		ARG 0 provider
+	METHOD lambda$noiseCodec$2 (Lnet/minecraft/world/level/levelgen/feature/stateproviders/NoiseBasedStateProvider;)Ljava/lang/Float;
+		ARG 0 provider
 	METHOD noiseCodec (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/Products$P3;
 		ARG 0 instance

@@ -8,6 +8,8 @@ CLASS net/minecraft/world/level/storage/loot/entries/LootPoolEntryContainer
 		ARG 1 lootContext
 	METHOD commonFields (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/Products$P1;
 		ARG 0 instance
+	METHOD lambda$commonFields$0 (Lnet/minecraft/world/level/storage/loot/entries/LootPoolEntryContainer;)Ljava/util/List;
+		ARG 0 container
 	METHOD validate (Lnet/minecraft/world/level/storage/loot/ValidationContext;)V
 		ARG 1 validationContext
 	CLASS Builder

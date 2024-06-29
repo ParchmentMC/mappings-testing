@@ -5,3 +5,15 @@ CLASS net/minecraft/world/level/levelgen/feature/configurations/SpringConfigurat
 		ARG 3 rockCount
 		ARG 4 holeCount
 		ARG 5 validBlocks
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/feature/configurations/SpringConfiguration;)Lnet/minecraft/world/level/material/FluidState;
+		ARG 0 config
+	METHOD lambda$static$1 (Lnet/minecraft/world/level/levelgen/feature/configurations/SpringConfiguration;)Ljava/lang/Boolean;
+		ARG 0 config
+	METHOD lambda$static$2 (Lnet/minecraft/world/level/levelgen/feature/configurations/SpringConfiguration;)Ljava/lang/Integer;
+		ARG 0 config
+	METHOD lambda$static$3 (Lnet/minecraft/world/level/levelgen/feature/configurations/SpringConfiguration;)Ljava/lang/Integer;
+		ARG 0 config
+	METHOD lambda$static$4 (Lnet/minecraft/world/level/levelgen/feature/configurations/SpringConfiguration;)Lnet/minecraft/core/HolderSet;
+		ARG 0 config
+	METHOD lambda$static$5 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

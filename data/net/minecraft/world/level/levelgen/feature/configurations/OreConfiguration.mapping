@@ -15,6 +15,14 @@ CLASS net/minecraft/world/level/levelgen/feature/configurations/OreConfiguration
 		ARG 2 state
 		ARG 3 size
 		ARG 4 discardChanceOnAirExposure
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/feature/configurations/OreConfiguration;)Ljava/util/List;
+		ARG 0 config
+	METHOD lambda$static$1 (Lnet/minecraft/world/level/levelgen/feature/configurations/OreConfiguration;)Ljava/lang/Integer;
+		ARG 0 config
+	METHOD lambda$static$2 (Lnet/minecraft/world/level/levelgen/feature/configurations/OreConfiguration;)Ljava/lang/Float;
+		ARG 0 config
+	METHOD lambda$static$3 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	METHOD target (Lnet/minecraft/world/level/levelgen/structure/templatesystem/RuleTest;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/levelgen/feature/configurations/OreConfiguration$TargetBlockState;
 		ARG 0 target
 		ARG 1 state
@@ -22,3 +30,9 @@ CLASS net/minecraft/world/level/levelgen/feature/configurations/OreConfiguration
 		METHOD <init> (Lnet/minecraft/world/level/levelgen/structure/templatesystem/RuleTest;Lnet/minecraft/world/level/block/state/BlockState;)V
 			ARG 1 target
 			ARG 2 state
+		METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/feature/configurations/OreConfiguration$TargetBlockState;)Lnet/minecraft/world/level/levelgen/structure/templatesystem/RuleTest;
+			ARG 0 state
+		METHOD lambda$static$1 (Lnet/minecraft/world/level/levelgen/feature/configurations/OreConfiguration$TargetBlockState;)Lnet/minecraft/world/level/block/state/BlockState;
+			ARG 0 state
+		METHOD lambda$static$2 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance

@@ -2,6 +2,8 @@ CLASS net/minecraft/world/level/storage/loot/predicates/LootItemBlockStateProper
 	COMMENT A LootItemCondition that checks whether the {@linkplain LootContextParams#BLOCK_STATE block state} matches a given Block and {@link StatePropertiesPredicate}.
 	METHOD hasBlockStateProperties (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/world/level/storage/loot/predicates/LootItemBlockStatePropertyCondition$Builder;
 		ARG 0 block
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	METHOD test (Lnet/minecraft/world/level/storage/loot/LootContext;)Z
 		ARG 1 context
 	METHOD validate (Lnet/minecraft/world/level/storage/loot/predicates/LootItemBlockStatePropertyCondition;)Lcom/mojang/serialization/DataResult;

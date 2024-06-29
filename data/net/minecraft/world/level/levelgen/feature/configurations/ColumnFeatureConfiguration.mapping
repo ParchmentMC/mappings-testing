@@ -2,3 +2,9 @@ CLASS net/minecraft/world/level/levelgen/feature/configurations/ColumnFeatureCon
 	METHOD <init> (Lnet/minecraft/util/valueproviders/IntProvider;Lnet/minecraft/util/valueproviders/IntProvider;)V
 		ARG 1 reach
 		ARG 2 height
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/feature/configurations/ColumnFeatureConfiguration;)Lnet/minecraft/util/valueproviders/IntProvider;
+		ARG 0 config
+	METHOD lambda$static$1 (Lnet/minecraft/world/level/levelgen/feature/configurations/ColumnFeatureConfiguration;)Lnet/minecraft/util/valueproviders/IntProvider;
+		ARG 0 config
+	METHOD lambda$static$2 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

@@ -7,6 +7,12 @@ CLASS net/minecraft/world/item/enchantment/TargetedConditionalEffect
 		ARG 1 params
 	METHOD lambda$codec$0 (Lcom/mojang/serialization/Codec;Lnet/minecraft/world/level/storage/loot/parameters/LootContextParamSet;Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 2 instance
+	METHOD lambda$equipmentDropsCodec$2 (Lnet/minecraft/world/item/enchantment/EnchantmentTarget;)Lcom/mojang/serialization/DataResult;
+		ARG 0 target
+	METHOD lambda$equipmentDropsCodec$3 (Lnet/minecraft/world/item/enchantment/EnchantmentTarget;Ljava/lang/Object;Ljava/util/Optional;)Lnet/minecraft/world/item/enchantment/TargetedConditionalEffect;
+		ARG 0 enchanted
+		ARG 1 effect
+		ARG 2 requirements
 	METHOD lambda$equipmentDropsCodec$4 (Lcom/mojang/serialization/Codec;Lnet/minecraft/world/level/storage/loot/parameters/LootContextParamSet;Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 2 instance
 	METHOD matches (Lnet/minecraft/world/level/storage/loot/LootContext;)Z

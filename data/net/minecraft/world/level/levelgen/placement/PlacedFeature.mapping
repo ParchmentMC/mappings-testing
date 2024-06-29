@@ -1,4 +1,10 @@
 CLASS net/minecraft/world/level/levelgen/placement/PlacedFeature
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/placement/PlacedFeature;)Lnet/minecraft/core/Holder;
+		ARG 0 feature
+	METHOD lambda$static$1 (Lnet/minecraft/world/level/levelgen/placement/PlacedFeature;)Ljava/util/List;
+		ARG 0 feature
+	METHOD lambda$static$2 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	METHOD place (Lnet/minecraft/world/level/WorldGenLevel;Lnet/minecraft/world/level/chunk/ChunkGenerator;Lnet/minecraft/util/RandomSource;Lnet/minecraft/core/BlockPos;)Z
 		ARG 1 level
 		ARG 2 generator

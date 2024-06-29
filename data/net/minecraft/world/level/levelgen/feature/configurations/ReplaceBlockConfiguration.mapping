@@ -4,3 +4,7 @@ CLASS net/minecraft/world/level/levelgen/feature/configurations/ReplaceBlockConf
 	METHOD <init> (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 targetState
 		ARG 2 state
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/feature/configurations/ReplaceBlockConfiguration;)Ljava/util/List;
+		ARG 0 config
+	METHOD lambda$static$1 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

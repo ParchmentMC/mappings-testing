@@ -3,6 +3,14 @@ CLASS net/minecraft/world/level/levelgen/placement/NoiseThresholdCountPlacement
 		ARG 1 noiseLevel
 		ARG 3 belowNoise
 		ARG 4 aboveNoise
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/placement/NoiseThresholdCountPlacement;)Ljava/lang/Double;
+		ARG 0 placement
+	METHOD lambda$static$1 (Lnet/minecraft/world/level/levelgen/placement/NoiseThresholdCountPlacement;)Ljava/lang/Integer;
+		ARG 0 placement
+	METHOD lambda$static$2 (Lnet/minecraft/world/level/levelgen/placement/NoiseThresholdCountPlacement;)Ljava/lang/Integer;
+		ARG 0 placement
+	METHOD lambda$static$3 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	METHOD of (DII)Lnet/minecraft/world/level/levelgen/placement/NoiseThresholdCountPlacement;
 		ARG 0 noiseLevel
 		ARG 2 belowNoise

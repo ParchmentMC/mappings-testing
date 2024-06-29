@@ -4,6 +4,8 @@ CLASS net/minecraft/world/entity/monster/warden/AngerManagement
 		ARG 2 angerByUuid
 	METHOD clearAnger (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 entity
+	METHOD codec (Ljava/util/function/Predicate;)Lcom/mojang/serialization/Codec;
+		ARG 0 filter
 	METHOD convertFromUuids (Lnet/minecraft/server/level/ServerLevel;)V
 		ARG 1 level
 	METHOD getActiveAnger (Lnet/minecraft/world/entity/Entity;)I
@@ -11,6 +13,10 @@ CLASS net/minecraft/world/entity/monster/warden/AngerManagement
 	METHOD increaseAnger (Lnet/minecraft/world/entity/Entity;I)I
 		ARG 1 entity
 		ARG 2 offset
+	METHOD lambda$codec$2 (Ljava/util/function/Predicate;Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 1 instance
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	METHOD tick (Lnet/minecraft/server/level/ServerLevel;Ljava/util/function/Predicate;)V
 		ARG 1 level
 		ARG 2 predicate

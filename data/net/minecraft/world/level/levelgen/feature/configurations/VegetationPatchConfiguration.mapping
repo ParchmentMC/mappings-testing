@@ -10,3 +10,25 @@ CLASS net/minecraft/world/level/levelgen/feature/configurations/VegetationPatchC
 		ARG 8 vegetationChance
 		ARG 9 xzRadius
 		ARG 10 extraEdgeColumnChance
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/feature/configurations/VegetationPatchConfiguration;)Lnet/minecraft/tags/TagKey;
+		ARG 0 config
+	METHOD lambda$static$1 (Lnet/minecraft/world/level/levelgen/feature/configurations/VegetationPatchConfiguration;)Lnet/minecraft/world/level/levelgen/feature/stateproviders/BlockStateProvider;
+		ARG 0 config
+	METHOD lambda$static$10 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
+	METHOD lambda$static$2 (Lnet/minecraft/world/level/levelgen/feature/configurations/VegetationPatchConfiguration;)Lnet/minecraft/core/Holder;
+		ARG 0 config
+	METHOD lambda$static$3 (Lnet/minecraft/world/level/levelgen/feature/configurations/VegetationPatchConfiguration;)Lnet/minecraft/world/level/levelgen/placement/CaveSurface;
+		ARG 0 config
+	METHOD lambda$static$4 (Lnet/minecraft/world/level/levelgen/feature/configurations/VegetationPatchConfiguration;)Lnet/minecraft/util/valueproviders/IntProvider;
+		ARG 0 config
+	METHOD lambda$static$5 (Lnet/minecraft/world/level/levelgen/feature/configurations/VegetationPatchConfiguration;)Ljava/lang/Float;
+		ARG 0 config
+	METHOD lambda$static$6 (Lnet/minecraft/world/level/levelgen/feature/configurations/VegetationPatchConfiguration;)Ljava/lang/Integer;
+		ARG 0 config
+	METHOD lambda$static$7 (Lnet/minecraft/world/level/levelgen/feature/configurations/VegetationPatchConfiguration;)Ljava/lang/Float;
+		ARG 0 config
+	METHOD lambda$static$8 (Lnet/minecraft/world/level/levelgen/feature/configurations/VegetationPatchConfiguration;)Lnet/minecraft/util/valueproviders/IntProvider;
+		ARG 0 config
+	METHOD lambda$static$9 (Lnet/minecraft/world/level/levelgen/feature/configurations/VegetationPatchConfiguration;)Ljava/lang/Float;
+		ARG 0 config

@@ -26,6 +26,13 @@ CLASS net/minecraft/world/level/levelgen/structure/structures/RuinedPortalStruct
 		ARG 10 builder
 	METHOD lambda$findSuitableY$3 (Lnet/minecraft/world/level/chunk/ChunkGenerator;Lnet/minecraft/world/level/LevelHeightAccessor;Lnet/minecraft/world/level/levelgen/RandomState;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/NoiseColumn;
 		ARG 3 pos
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/structure/structures/RuinedPortalStructure;)Ljava/util/List;
+		ARG 0 structure
+	METHOD lambda$static$1 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	METHOD sample (Lnet/minecraft/world/level/levelgen/WorldgenRandom;F)Z
 		ARG 0 random
 		ARG 1 threshold
+	CLASS Setup
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance

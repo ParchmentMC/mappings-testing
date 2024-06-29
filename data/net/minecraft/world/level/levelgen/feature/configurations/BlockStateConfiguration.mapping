@@ -1,3 +1,5 @@
 CLASS net/minecraft/world/level/levelgen/feature/configurations/BlockStateConfiguration
 	METHOD <init> (Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 state
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/feature/configurations/BlockStateConfiguration;)Lnet/minecraft/world/level/block/state/BlockState;
+		ARG 0 config

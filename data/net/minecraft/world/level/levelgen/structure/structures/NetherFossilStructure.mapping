@@ -2,3 +2,7 @@ CLASS net/minecraft/world/level/levelgen/structure/structures/NetherFossilStruct
 	METHOD <init> (Lnet/minecraft/world/level/levelgen/structure/Structure$StructureSettings;Lnet/minecraft/world/level/levelgen/heightproviders/HeightProvider;)V
 		ARG 1 settings
 		ARG 2 height
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/structure/structures/NetherFossilStructure;)Lnet/minecraft/world/level/levelgen/heightproviders/HeightProvider;
+		ARG 0 structure
+	METHOD lambda$static$1 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

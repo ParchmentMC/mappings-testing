@@ -15,6 +15,12 @@ CLASS net/minecraft/world/item/component/ItemContainerContents
 		ARG 0 items
 	METHOD fromSlots (Ljava/util/List;)Lnet/minecraft/world/item/component/ItemContainerContents;
 		ARG 0 slots
+	METHOD lambda$nonEmptyItems$2 (Lnet/minecraft/world/item/ItemStack;)Z
+		ARG 0 stack
+	METHOD lambda$nonEmptyStream$1 (Lnet/minecraft/world/item/ItemStack;)Z
+		ARG 0 stack
+	METHOD lambda$static$0 (Lnet/minecraft/world/item/component/ItemContainerContents;)Ljava/util/List;
+		ARG 0 contents
 	CLASS Slot
 		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 			ARG 0 instance

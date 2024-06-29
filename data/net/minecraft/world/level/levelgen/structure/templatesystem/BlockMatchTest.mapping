@@ -1,3 +1,5 @@
 CLASS net/minecraft/world/level/levelgen/structure/templatesystem/BlockMatchTest
 	METHOD <init> (Lnet/minecraft/world/level/block/Block;)V
 		ARG 1 block
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/structure/templatesystem/BlockMatchTest;)Lnet/minecraft/world/level/block/Block;
+		ARG 0 test

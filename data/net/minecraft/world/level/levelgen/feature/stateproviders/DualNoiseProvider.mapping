@@ -9,3 +9,11 @@ CLASS net/minecraft/world/level/levelgen/feature/stateproviders/DualNoiseProvide
 		ARG 8 states
 	METHOD getSlowNoiseValue (Lnet/minecraft/core/BlockPos;)D
 		ARG 1 pos
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/feature/stateproviders/DualNoiseProvider;)Lnet/minecraft/util/InclusiveRange;
+		ARG 0 provider
+	METHOD lambda$static$1 (Lnet/minecraft/world/level/levelgen/feature/stateproviders/DualNoiseProvider;)Lnet/minecraft/world/level/levelgen/synth/NormalNoise$NoiseParameters;
+		ARG 0 provider
+	METHOD lambda$static$2 (Lnet/minecraft/world/level/levelgen/feature/stateproviders/DualNoiseProvider;)Ljava/lang/Float;
+		ARG 0 provider
+	METHOD lambda$static$3 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

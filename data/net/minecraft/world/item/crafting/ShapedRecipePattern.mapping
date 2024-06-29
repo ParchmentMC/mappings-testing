@@ -8,6 +8,8 @@ CLASS net/minecraft/world/item/crafting/ShapedRecipePattern
 		ARG 0 row
 	METHOD fromNetwork (Lnet/minecraft/network/RegistryFriendlyByteBuf;)Lnet/minecraft/world/item/crafting/ShapedRecipePattern;
 		ARG 0 buffer
+	METHOD lambda$static$2 (Lnet/minecraft/world/item/crafting/ShapedRecipePattern;)Lcom/mojang/serialization/DataResult;
+		ARG 0 pattern
 	METHOD lastNonSpace (Ljava/lang/String;)I
 		ARG 0 row
 	METHOD matches (Lnet/minecraft/world/item/crafting/CraftingInput;)Z
@@ -30,3 +32,11 @@ CLASS net/minecraft/world/item/crafting/ShapedRecipePattern
 	CLASS Data
 		METHOD lambda$static$10 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 			ARG 0 instance
+		METHOD lambda$static$4 (Ljava/util/List;)Lcom/mojang/serialization/DataResult;
+			ARG 0 patternEntry
+		METHOD lambda$static$7 (Ljava/lang/String;)Lcom/mojang/serialization/DataResult;
+			ARG 0 symbol
+		METHOD lambda$static$8 (Lnet/minecraft/world/item/crafting/ShapedRecipePattern$Data;)Ljava/util/Map;
+			ARG 0 data
+		METHOD lambda$static$9 (Lnet/minecraft/world/item/crafting/ShapedRecipePattern$Data;)Ljava/util/List;
+			ARG 0 data

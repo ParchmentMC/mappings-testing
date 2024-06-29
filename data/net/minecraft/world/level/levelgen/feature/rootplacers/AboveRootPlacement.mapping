@@ -1,0 +1,7 @@
+CLASS net/minecraft/world/level/levelgen/feature/rootplacers/AboveRootPlacement
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/feature/rootplacers/AboveRootPlacement;)Lnet/minecraft/world/level/levelgen/feature/stateproviders/BlockStateProvider;
+		ARG 0 placement
+	METHOD lambda$static$1 (Lnet/minecraft/world/level/levelgen/feature/rootplacers/AboveRootPlacement;)Ljava/lang/Float;
+		ARG 0 placement
+	METHOD lambda$static$2 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

@@ -1,4 +1,7 @@
 CLASS net/minecraft/world/level/block/PressurePlateBlock
+	METHOD <init> (Lnet/minecraft/world/level/block/state/properties/BlockSetType;Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
+		ARG 1 type
+		ARG 2 properties
 	METHOD createBlockStateDefinition (Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V
 		ARG 1 builder
 	METHOD getSignalForState (Lnet/minecraft/world/level/block/state/BlockState;)I
@@ -6,6 +9,10 @@ CLASS net/minecraft/world/level/block/PressurePlateBlock
 	METHOD getSignalStrength (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)I
 		ARG 1 level
 		ARG 2 pos
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/block/PressurePlateBlock;)Lnet/minecraft/world/level/block/state/properties/BlockSetType;
+		ARG 0 pressurePlate
+	METHOD lambda$static$1 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	METHOD setSignalForState (Lnet/minecraft/world/level/block/state/BlockState;I)Lnet/minecraft/world/level/block/state/BlockState;
 		ARG 1 state
 		ARG 2 strength

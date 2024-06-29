@@ -2,3 +2,9 @@ CLASS net/minecraft/world/level/levelgen/feature/configurations/RandomBooleanFea
 	METHOD <init> (Lnet/minecraft/core/Holder;Lnet/minecraft/core/Holder;)V
 		ARG 1 featureTrue
 		ARG 2 featureFalse
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/feature/configurations/RandomBooleanFeatureConfiguration;)Lnet/minecraft/core/Holder;
+		ARG 0 config
+	METHOD lambda$static$1 (Lnet/minecraft/world/level/levelgen/feature/configurations/RandomBooleanFeatureConfiguration;)Lnet/minecraft/core/Holder;
+		ARG 0 config
+	METHOD lambda$static$2 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

@@ -10,6 +10,8 @@ CLASS net/minecraft/world/entity/player/ProfilePublicKey
 			ARG 1 other
 		METHOD hasExpired (Ljava/time/Duration;)Z
 			ARG 1 gracePeriod
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
 		METHOD signedPayload (Ljava/util/UUID;)[B
 			ARG 1 profileId
 		METHOD validateSignature (Lnet/minecraft/util/SignatureValidator;Ljava/util/UUID;)Z

@@ -10,6 +10,28 @@ CLASS net/minecraft/world/level/levelgen/feature/configurations/TreeConfiguratio
 		ARG 8 decorators
 		ARG 9 ignoreVines
 		ARG 10 forceDirt
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/feature/configurations/TreeConfiguration;)Lnet/minecraft/world/level/levelgen/feature/stateproviders/BlockStateProvider;
+		ARG 0 config
+	METHOD lambda$static$1 (Lnet/minecraft/world/level/levelgen/feature/configurations/TreeConfiguration;)Lnet/minecraft/world/level/levelgen/feature/trunkplacers/TrunkPlacer;
+		ARG 0 config
+	METHOD lambda$static$10 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
+	METHOD lambda$static$2 (Lnet/minecraft/world/level/levelgen/feature/configurations/TreeConfiguration;)Lnet/minecraft/world/level/levelgen/feature/stateproviders/BlockStateProvider;
+		ARG 0 config
+	METHOD lambda$static$3 (Lnet/minecraft/world/level/levelgen/feature/configurations/TreeConfiguration;)Lnet/minecraft/world/level/levelgen/feature/foliageplacers/FoliagePlacer;
+		ARG 0 config
+	METHOD lambda$static$4 (Lnet/minecraft/world/level/levelgen/feature/configurations/TreeConfiguration;)Ljava/util/Optional;
+		ARG 0 config
+	METHOD lambda$static$5 (Lnet/minecraft/world/level/levelgen/feature/configurations/TreeConfiguration;)Lnet/minecraft/world/level/levelgen/feature/stateproviders/BlockStateProvider;
+		ARG 0 config
+	METHOD lambda$static$6 (Lnet/minecraft/world/level/levelgen/feature/configurations/TreeConfiguration;)Lnet/minecraft/world/level/levelgen/feature/featuresize/FeatureSize;
+		ARG 0 config
+	METHOD lambda$static$7 (Lnet/minecraft/world/level/levelgen/feature/configurations/TreeConfiguration;)Ljava/util/List;
+		ARG 0 config
+	METHOD lambda$static$8 (Lnet/minecraft/world/level/levelgen/feature/configurations/TreeConfiguration;)Ljava/lang/Boolean;
+		ARG 0 config
+	METHOD lambda$static$9 (Lnet/minecraft/world/level/levelgen/feature/configurations/TreeConfiguration;)Ljava/lang/Boolean;
+		ARG 0 config
 	CLASS TreeConfigurationBuilder
 		METHOD <init> (Lnet/minecraft/world/level/levelgen/feature/stateproviders/BlockStateProvider;Lnet/minecraft/world/level/levelgen/feature/trunkplacers/TrunkPlacer;Lnet/minecraft/world/level/levelgen/feature/stateproviders/BlockStateProvider;Lnet/minecraft/world/level/levelgen/feature/foliageplacers/FoliagePlacer;Ljava/util/Optional;Lnet/minecraft/world/level/levelgen/feature/featuresize/FeatureSize;)V
 			ARG 1 trunkProvider

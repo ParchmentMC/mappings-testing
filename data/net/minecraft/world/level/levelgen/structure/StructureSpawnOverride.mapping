@@ -1,4 +1,6 @@
 CLASS net/minecraft/world/level/levelgen/structure/StructureSpawnOverride
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	CLASS BoundingBoxType
 		METHOD <init> (Ljava/lang/String;ILjava/lang/String;)V
 			ARG 3 id

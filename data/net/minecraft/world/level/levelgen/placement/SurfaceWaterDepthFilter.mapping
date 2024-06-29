@@ -3,3 +3,7 @@ CLASS net/minecraft/world/level/levelgen/placement/SurfaceWaterDepthFilter
 		ARG 1 maxWaterDepth
 	METHOD forMaxDepth (I)Lnet/minecraft/world/level/levelgen/placement/SurfaceWaterDepthFilter;
 		ARG 0 maxWaterDepth
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/placement/SurfaceWaterDepthFilter;)Ljava/lang/Integer;
+		ARG 0 filter
+	METHOD lambda$static$1 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

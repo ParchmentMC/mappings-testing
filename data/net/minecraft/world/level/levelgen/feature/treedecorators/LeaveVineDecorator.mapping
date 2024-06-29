@@ -5,3 +5,5 @@ CLASS net/minecraft/world/level/levelgen/feature/treedecorators/LeaveVineDecorat
 		ARG 0 pos
 		ARG 1 sideProperty
 		ARG 2 context
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/levelgen/feature/treedecorators/LeaveVineDecorator;)Ljava/lang/Float;
+		ARG 0 decorator
