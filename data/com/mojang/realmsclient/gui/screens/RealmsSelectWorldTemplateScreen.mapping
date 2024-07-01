@@ -24,5 +24,10 @@ CLASS com/mojang/realmsclient/gui/screens/RealmsSelectWorldTemplateScreen
 		METHOD <init> (Lcom/mojang/realmsclient/gui/screens/RealmsSelectWorldTemplateScreen;Lcom/mojang/realmsclient/dto/WorldTemplate;)V
 			ARG 2 template
 	CLASS WorldTemplateList
+		METHOD <init> (Lcom/mojang/realmsclient/gui/screens/RealmsSelectWorldTemplateScreen;)V
+			ARG 1 parent
 		METHOD <init> (Lcom/mojang/realmsclient/gui/screens/RealmsSelectWorldTemplateScreen;Ljava/lang/Iterable;)V
+			ARG 1 parent
 			ARG 2 templates
+		METHOD addEntry (Lcom/mojang/realmsclient/dto/WorldTemplate;)V
+			ARG 1 template

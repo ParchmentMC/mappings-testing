@@ -9,6 +9,9 @@ CLASS com/mojang/math/MatrixUtil
 	METHOD mulComponentWise (Lorg/joml/Matrix4f;F)Lorg/joml/Matrix4f;
 		ARG 0 matrix
 		ARG 1 scalar
+	METHOD qrGivensQuat (FF)Lcom/mojang/math/GivensParameters;
+		ARG 0 input1
+		ARG 1 input2
 	METHOD similarityTransform (Lorg/joml/Matrix3f;Lorg/joml/Matrix3f;)V
 		ARG 0 input
 		ARG 1 tempStorage
