@@ -10,13 +10,15 @@ CLASS net/minecraft/util/datafix/fixes/ChunkHeightAndBiomeFix
 		ARG 0 data
 		ARG 1 overworld
 		ARG 2 lowestY
+		ARG 3 isTallChunk
 	METHOD getFixedHeightmap (Lcom/mojang/serialization/Dynamic;)Lcom/mojang/serialization/Dynamic;
 		ARG 0 dynamic
 	METHOD getOldBiome ([II)I
 		ARG 0 biomes
 		ARG 1 index
 	METHOD makeBiomeContainer (Lcom/mojang/serialization/Dynamic;Lit/unimi/dsi/fastutil/ints/Int2IntFunction;)Lcom/mojang/serialization/Dynamic;
-		ARG 0 dynamic
+		ARG 0 data
+		ARG 1 oldBiomeGetter
 	METHOD makeOptimizedPalettedContainer (Lcom/mojang/serialization/Dynamic;Lcom/mojang/serialization/Dynamic;)Lcom/mojang/serialization/Dynamic;
 		ARG 0 palette
 		ARG 1 blockStates
@@ -28,6 +30,7 @@ CLASS net/minecraft/util/datafix/fixes/ChunkHeightAndBiomeFix
 	METHOD padPaletteEntries (Lcom/mojang/serialization/Dynamic;Lcom/mojang/serialization/Dynamic;Ljava/util/List;)Lcom/mojang/serialization/Dynamic;
 		ARG 0 palette
 		ARG 1 blockStates
+		ARG 2 paletteEntries
 	METHOD predictChunkStatusBeforeSurface (Lcom/mojang/serialization/Dynamic;Ljava/util/Set;)Lcom/mojang/serialization/Dynamic;
 		ARG 1 data
 		ARG 2 blockPalette
@@ -36,9 +39,12 @@ CLASS net/minecraft/util/datafix/fixes/ChunkHeightAndBiomeFix
 	METHOD updateCarvingMasks (Lcom/mojang/serialization/Dynamic;II)Lcom/mojang/serialization/Dynamic;
 		ARG 0 data
 		ARG 1 sectionCount
+		ARG 2 offset
 	METHOD updateChunkTag (Lcom/mojang/serialization/Dynamic;ZZZLjava/util/function/Supplier;)Lcom/mojang/serialization/Dynamic;
 		ARG 0 chunkTag
 		ARG 1 overworld
+		ARG 2 isTallChunk
 		ARG 3 isNoiseGenerator
+		ARG 4 paletteSupplier
 	METHOD updateHeightmaps (Lcom/mojang/serialization/Dynamic;)Lcom/mojang/serialization/Dynamic;
 		ARG 0 data

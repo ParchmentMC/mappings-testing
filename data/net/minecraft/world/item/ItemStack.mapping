@@ -28,7 +28,7 @@ CLASS net/minecraft/world/item/ItemStack
 		ARG 1 tooltipAdder
 		ARG 2 player
 		ARG 3 attribute
-		ARG 4 modfier
+		ARG 4 modifier
 	METHOD addToTooltip (Lnet/minecraft/core/component/DataComponentType;Lnet/minecraft/world/item/Item$TooltipContext;Ljava/util/function/Consumer;Lnet/minecraft/world/item/TooltipFlag;)V
 		ARG 1 component
 		ARG 2 context
