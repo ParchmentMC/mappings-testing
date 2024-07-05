@@ -3,7 +3,7 @@ CLASS net/minecraft/world/item/SmithingTemplateItem
 		ARG 1 appliesTo
 		ARG 2 ingredients
 		ARG 3 upgradeDescription
-		ARG 4 baseSlorDescription
+		ARG 4 baseSlotDescription
 		ARG 5 additionsSlotDescription
 		ARG 6 baseSlotEmptyIcons
 		ARG 7 additionalSlotEmptyIcons
