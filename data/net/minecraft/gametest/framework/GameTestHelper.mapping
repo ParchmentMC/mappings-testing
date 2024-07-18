@@ -181,8 +181,8 @@ CLASS net/minecraft/gametest/framework/GameTestHelper
 		ARG 1 condition
 		ARG 2 failureMessage
 	METHOD assertValueEqual (Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/String;)V
-		ARG 1 value1
-		ARG 2 value2
+		ARG 1 actual
+		ARG 2 expected
 		ARG 3 valueName
 	METHOD destroyBlock (Lnet/minecraft/core/BlockPos;)V
 		ARG 1 pos
