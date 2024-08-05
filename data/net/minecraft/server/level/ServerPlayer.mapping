@@ -11,7 +11,7 @@ CLASS net/minecraft/server/level/ServerPlayer
 		ARG 3 gameProfile
 		ARG 4 clientInformation
 	METHOD acceptsSystemMessages (Z)Z
-		ARG 1 bypassHiddenChat
+		ARG 1 overlay
 	METHOD addAdditionalSaveData (Lnet/minecraft/nbt/CompoundTag;)V
 		ARG 1 compound
 	METHOD attack (Lnet/minecraft/world/entity/Entity;)V
@@ -195,7 +195,7 @@ CLASS net/minecraft/server/level/ServerPlayer
 		ARG 1 serverStatus
 	METHOD sendSystemMessage (Lnet/minecraft/network/chat/Component;Z)V
 		ARG 1 component
-		ARG 2 bypassHiddenChat
+		ARG 2 overlay
 	METHOD setCamera (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 entityToSpectate
 	METHOD setChatSession (Lnet/minecraft/network/chat/RemoteChatSession;)V
