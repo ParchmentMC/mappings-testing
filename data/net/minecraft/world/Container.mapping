@@ -38,7 +38,7 @@ CLASS net/minecraft/world/Container
 		COMMENT Removes a stack from the given slot and returns it.
 		ARG 1 slot
 	METHOD setChanged ()V
-		COMMENT Called whenever this container is changed.
+		COMMENT Called when the contents of this container have changed.
 	METHOD setItem (ILnet/minecraft/world/item/ItemStack;)V
 		COMMENT Sets the given item stack to the specified slot in the inventory (can be crafting or armor sections).
 		ARG 1 slot

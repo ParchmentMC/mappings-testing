@@ -74,7 +74,7 @@ CLASS net/minecraft/server/level/ServerPlayer
 		ARG 5 movementZ
 		ARG 7 onGround
 	METHOD doCloseContainer ()V
-		COMMENT Invoked when the container the player has opened is to be closed, either by a call to {@link #closeContainer} or a packet.
+		COMMENT Invoked when the active container of the player is to be closed, either by a call to {@link #closeContainer()} or a packet.
 	METHOD drop (Lnet/minecraft/world/item/ItemStack;ZZ)Lnet/minecraft/world/entity/item/ItemEntity;
 		ARG 1 droppedItem
 		ARG 2 dropAround
