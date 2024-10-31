@@ -26,6 +26,8 @@ CLASS net/minecraft/world/item/BundleItem
 		ARG 0 bundle
 	METHOD lambda$getAllBundleItemColors$0 (Lnet/minecraft/world/item/Item;)Lnet/minecraft/world/item/BundleItem;
 		ARG 0 item
+	METHOD playDropContentsSound (Lnet/minecraft/world/entity/Entity;)V
+		ARG 0 entity
 	METHOD playDropContentsSound (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/Entity;)V
 		ARG 0 level
 		ARG 1 entity

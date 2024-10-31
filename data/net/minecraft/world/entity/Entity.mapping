@@ -44,6 +44,9 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 killed
 		ARG 2 scoreValue
 		ARG 3 source
+	METHOD awardKillScore (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/damagesource/DamageSource;)V
+		ARG 1 entity
+		ARG 2 damageSource
 	METHOD baseTick ()V
 		COMMENT Gets called every tick from main Entity class
 	METHOD broadcastToPlayer (Lnet/minecraft/server/level/ServerPlayer;)Z
@@ -153,6 +156,11 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 entity
 	METHOD distanceToSqr (Lnet/minecraft/world/phys/Vec3;)D
 		ARG 1 vec
+	METHOD doCheckFallDamage (DDDZ)V
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+		ARG 7 onGround
 	METHOD doWaterSplashEffect ()V
 		COMMENT Plays the {@link #getSplashSound() splash sound}, and the {@link ParticleType#WATER_BUBBLE} and {@link ParticleType#WATER_SPLASH} particles.
 	METHOD ejectPassengers ()V
@@ -441,6 +449,8 @@ CLASS net/minecraft/world/entity/Entity
 	METHOD lookAt (Lnet/minecraft/commands/arguments/EntityAnchorArgument$Anchor;Lnet/minecraft/world/phys/Vec3;)V
 		ARG 1 anchor
 		ARG 2 target
+	METHOD makeBoundingBox (Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/world/phys/AABB;
+		ARG 1 position
 	METHOD makeStuckInBlock (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/phys/Vec3;)V
 		ARG 1 state
 		ARG 2 motionMultiplier

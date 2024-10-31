@@ -8,6 +8,8 @@ CLASS net/minecraft/world/entity/player/Inventory
 	METHOD add (Lnet/minecraft/world/item/ItemStack;)Z
 		COMMENT Adds the stack to the first empty slot in the player's inventory. Returns {@code false} if it's not possible to place the entire stack in the inventory.
 		ARG 1 stack
+	METHOD addAndPickItem (Lnet/minecraft/world/item/ItemStack;)V
+		ARG 1 stack
 	METHOD addResource (ILnet/minecraft/world/item/ItemStack;)I
 		ARG 1 slot
 		ARG 2 stack
@@ -33,6 +35,9 @@ CLASS net/minecraft/world/entity/player/Inventory
 		ARG 1 contents
 	METHOD findSlotMatchingCraftingIngredient (Lnet/minecraft/core/Holder;)I
 		ARG 1 ingredient
+	METHOD findSlotMatchingCraftingIngredient (Lnet/minecraft/core/Holder;Lnet/minecraft/world/item/ItemStack;)I
+		ARG 1 item
+		ARG 2 stack
 	METHOD findSlotMatchingItem (Lnet/minecraft/world/item/ItemStack;)I
 		COMMENT Finds the stack or an equivalent one in the main inventory
 		ARG 1 stack
