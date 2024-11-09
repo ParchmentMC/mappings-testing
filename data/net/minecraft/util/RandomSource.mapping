@@ -19,8 +19,8 @@ CLASS net/minecraft/util/RandomSource
 	METHOD setSeed (J)V
 		ARG 1 seed
 	METHOD triangle (DD)D
-		ARG 1 min
-		ARG 3 max
+		ARG 1 center
+		ARG 3 maxDeviation
 	METHOD triangle (FF)F
-		ARG 1 min
-		ARG 2 max
+		ARG 1 center
+		ARG 2 maxDeviation
