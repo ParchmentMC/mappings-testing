@@ -32,7 +32,7 @@ jobs:
 
       - name: Obtain GAV info
         id: info
-        run: ./gradlew --quiet printGHActionsOutput >> "$GITHUB_OUTPUT"
+        run: ./gradlew --quiet -PreleaseType=nightly printGHActionsOutput >> "$GITHUB_OUTPUT"
   
       - name: Publish export
         run: ./gradlew publishExport -PreleaseType=nightly

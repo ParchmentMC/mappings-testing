@@ -35,7 +35,7 @@ jobs:
 
       - name: Obtain GAV info
         id: info
-        run: ./gradlew --quiet printGHActionsOutput >> "$GITHUB_OUTPUT"
+        run: ./gradlew --quiet -PreleaseType=release printGHActionsOutput >> "$GITHUB_OUTPUT"
   
       - name: Publish export
         run: ./gradlew publishExport -PreleaseType=release
