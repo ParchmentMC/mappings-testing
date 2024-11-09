@@ -82,8 +82,8 @@ tasks.register('printGHActionsOutput') {
     doLast {
         println("CI_VERSION=${project.version}")
         println("CI_GROUP=${project.group}")
-        println("CI_ARTIFACT=parchment-${"1.21.3"}")
-        println("CI_GAME_VERSION=${"1.21.3"}")
+        println("CI_ARTIFACT=parchment-${project.compass.version.get()}")
+        println("CI_GAME_VERSION=${project.compass.version.get()}")
     }
 }
 
