@@ -52,7 +52,7 @@ jobs:
             --webhook-url="$WEBHOOK" \
             --username "ParchmentMC" \
             --color "0xFF0000" \
-            --title "New bleeding for \`$CI_GAME_VERSION!\`" \
+            --title "New bleeding for \`$CI_GAME_VERSION\`!" \
             --field "Version;\`$CI_VERSION\`;false" \
             --field "Group;\`$CI_GROUP\`;true" \
             --field "Artifact;\`$CI_ARTIFACT\`;true" \
