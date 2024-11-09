@@ -1,6 +1,8 @@
 on: 
   workflow_dispatch:
   push:
+    branches:
+      - 'releases/**'
 
 name: Publish bleeding export
 
