@@ -252,8 +252,12 @@ CLASS net/minecraft/world/entity/Entity
 		ARG 1 partialTick
 	METHOD getX (D)D
 		ARG 1 scale
+	METHOD getXRot ()F
+		COMMENT Gets the rotation of this entity around the x-axis (the pitch) in degrees.
 	METHOD getY (D)D
 		ARG 1 scale
+	METHOD getYRot ()F
+		COMMENT Gets the rotation of this entity around the y-axis (the yaw) in degrees.
 	METHOD getZ (D)D
 		ARG 1 scale
 	METHOD handleDamageEvent (Lnet/minecraft/world/damagesource/DamageSource;)V
@@ -627,6 +631,7 @@ CLASS net/minecraft/world/entity/Entity
 	METHOD setViewScale (D)V
 		ARG 0 renderDistWeight
 	METHOD setXRot (F)V
+		COMMENT Sets the rotation of this entity around the x-axis (the pitch) in degrees.
 		ARG 1 xRot
 	METHOD setYBodyRot (F)V
 		COMMENT Set the body Y rotation of the entity.
@@ -635,6 +640,7 @@ CLASS net/minecraft/world/entity/Entity
 		COMMENT Sets the head's Y rotation of the entity.
 		ARG 1 yHeadRot
 	METHOD setYRot (F)V
+		COMMENT Sets the rotation of this entity around the y-axis (the yaw) in degrees.
 		ARG 1 yRot
 	METHOD shouldBlockExplode (Lnet/minecraft/world/level/Explosion;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;F)Z
 		ARG 1 explosion
