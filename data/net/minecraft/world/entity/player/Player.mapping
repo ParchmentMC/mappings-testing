@@ -172,6 +172,7 @@ CLASS net/minecraft/world/entity/player/Player
 	METHOD lambda$readAdditionalSaveData$2 (Lnet/minecraft/world/phys/Vec3;)V
 		ARG 1 currentImpulseImpactPos
 	METHOD magicCrit (Lnet/minecraft/world/entity/Entity;)V
+		COMMENT Called when the entity hit is dealt extra melee damage due to an enchantment.
 		ARG 1 entityHit
 	METHOD makeStuckInBlock (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/phys/Vec3;)V
 		ARG 1 state
@@ -267,6 +268,7 @@ CLASS net/minecraft/world/entity/player/Player
 	METHOD setShoulderEntityRight (Lnet/minecraft/nbt/CompoundTag;)V
 		ARG 1 entityCompound
 	METHOD startAutoSpinAttack (IFLnet/minecraft/world/item/ItemStack;)V
+		COMMENT Starts the attack used by the Riptide enchantment.
 		ARG 1 ticks
 		ARG 2 damage
 		ARG 3 itemStack

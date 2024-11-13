@@ -1,11 +1,11 @@
 CLASS net/minecraft/commands/arguments/selector/EntitySelectorParser
-	METHOD <init> (Lcom/mojang/brigadier/StringReader;)V
-		ARG 1 reader
 	METHOD <init> (Lcom/mojang/brigadier/StringReader;Z)V
 		ARG 1 reader
 		ARG 2 allowSelectors
 	METHOD addPredicate (Ljava/util/function/Predicate;)V
 		ARG 1 predicate
+	METHOD allowSelectors (Ljava/lang/Object;)Z
+		ARG 0 suggestionProvider
 	METHOD createAabb (DDD)Lnet/minecraft/world/phys/AABB;
 		ARG 1 sizeX
 		ARG 3 sizeY
