@@ -17,8 +17,8 @@ CLASS net/minecraft/client/renderer/ShaderInstance
 		ARG 1 name
 	METHOD setDefaultUniforms (Lcom/mojang/blaze3d/vertex/VertexFormat$Mode;Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;Lcom/mojang/blaze3d/platform/Window;)V
 		ARG 1 mode
-		ARG 2 projectionMatrix
-		ARG 3 frustrumMatrix
+		ARG 2 frustumMatrix
+		ARG 3 projectionMatrix
 		ARG 4 window
 	METHOD setSampler (Ljava/lang/String;Ljava/lang/Object;)V
 		ARG 1 name
