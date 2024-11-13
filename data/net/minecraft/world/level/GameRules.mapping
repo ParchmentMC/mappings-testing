@@ -1,8 +1,4 @@
 CLASS net/minecraft/world/level/GameRules
-	METHOD <init> (Lcom/mojang/serialization/DynamicLike;)V
-		ARG 1 tag
-	METHOD <init> (Ljava/util/Map;)V
-		ARG 1 rules
 	METHOD <init> (Ljava/util/Map;Lnet/minecraft/world/flag/FeatureFlagSet;)V
 		ARG 1 rules
 		ARG 2 enabledFeatures
@@ -66,11 +62,6 @@ CLASS net/minecraft/world/level/GameRules
 		METHOD equals (Ljava/lang/Object;)Z
 			ARG 1 other
 	CLASS Type
-		METHOD <init> (Ljava/util/function/Supplier;Ljava/util/function/Function;Ljava/util/function/BiConsumer;Lnet/minecraft/world/level/GameRules$VisitorCaller;)V
-			ARG 1 argument
-			ARG 2 constructor
-			ARG 3 callback
-			ARG 4 visitorCaller
 		METHOD <init> (Ljava/util/function/Supplier;Ljava/util/function/Function;Ljava/util/function/BiConsumer;Lnet/minecraft/world/level/GameRules$VisitorCaller;Lnet/minecraft/world/flag/FeatureFlagSet;)V
 			ARG 1 argument
 			ARG 2 constructor
@@ -132,11 +123,6 @@ CLASS net/minecraft/world/level/GameRules
 			ARG 2 value
 		METHOD create (I)Lnet/minecraft/world/level/GameRules$Type;
 			ARG 0 defaultValue
-		METHOD create (IIILjava/util/function/BiConsumer;)Lnet/minecraft/world/level/GameRules$Type;
-			ARG 0 defaultValue
-			ARG 1 min
-			ARG 2 max
-			ARG 3 changeListener
 		METHOD create (IIILnet/minecraft/world/flag/FeatureFlagSet;Ljava/util/function/BiConsumer;)Lnet/minecraft/world/level/GameRules$Type;
 			ARG 0 defaultValue
 			ARG 1 min

@@ -1,6 +1,4 @@
 CLASS net/minecraft/world/phys/shapes/EntityCollisionContext
-	METHOD <init> (Lnet/minecraft/world/entity/Entity;)V
-		ARG 1 entity
 	METHOD <init> (Lnet/minecraft/world/entity/Entity;Z)V
 		ARG 1 entity
 		ARG 2 canStandOnFluid

@@ -16,12 +16,6 @@ CLASS net/minecraft/util/worldupdate/WorldUpgrader
 			ARG 4 folderName
 			ARG 5 upgradingStatus
 			ARG 6 finishedStatus
-		METHOD <init> (Lnet/minecraft/util/worldupdate/WorldUpgrader;Lnet/minecraft/util/datafix/DataFixTypes;Ljava/lang/String;Ljava/lang/String;Lnet/minecraft/network/chat/MutableComponent;Lnet/minecraft/network/chat/MutableComponent;)V
-			ARG 2 dataFixType
-			ARG 3 type
-			ARG 4 folderName
-			ARG 5 upgradingStatus
-			ARG 6 finishedStatus
 		METHOD createStorage (Lnet/minecraft/world/level/chunk/storage/RegionStorageInfo;Ljava/nio/file/Path;)Ljava/lang/AutoCloseable;
 			ARG 1 regionStorageInfo
 			ARG 2 path
@@ -46,11 +40,6 @@ CLASS net/minecraft/util/worldupdate/WorldUpgrader
 			ARG 3 dimension
 	CLASS SimpleRegionStorageUpgrader
 		METHOD <init> (Lnet/minecraft/util/worldupdate/WorldUpgrader;Lnet/minecraft/util/datafix/DataFixTypes;Ljava/lang/String;Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/Component;)V
-			ARG 2 dataFixType
-			ARG 3 type
-			ARG 4 upgradingStatus
-			ARG 5 finishedStatus
-		METHOD <init> (Lnet/minecraft/util/worldupdate/WorldUpgrader;Lnet/minecraft/util/datafix/DataFixTypes;Ljava/lang/String;Lnet/minecraft/network/chat/MutableComponent;Lnet/minecraft/network/chat/MutableComponent;)V
 			ARG 2 dataFixType
 			ARG 3 type
 			ARG 4 upgradingStatus

@@ -1,10 +1,4 @@
 CLASS net/minecraft/client/animation/KeyframeAnimations
-	METHOD animate (Lnet/minecraft/client/model/HierarchicalModel;Lnet/minecraft/client/animation/AnimationDefinition;JFLorg/joml/Vector3f;)V
-		ARG 0 model
-		ARG 1 animationDefinition
-		ARG 2 accumulatedTime
-		ARG 4 scale
-		ARG 5 animationVecCache
 	METHOD animate (Lnet/minecraft/client/model/Model;Lnet/minecraft/client/animation/AnimationDefinition;JFLorg/joml/Vector3f;)V
 		ARG 0 model
 		ARG 1 definition

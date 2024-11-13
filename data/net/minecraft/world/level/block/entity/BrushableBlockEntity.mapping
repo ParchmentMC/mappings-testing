@@ -8,24 +8,16 @@ CLASS net/minecraft/world/level/block/entity/BrushableBlockEntity
 		ARG 4 player
 		ARG 5 hitDirection
 		ARG 6 stack
-	METHOD brush (JLnet/minecraft/world/entity/player/Player;Lnet/minecraft/core/Direction;)Z
-		ARG 1 startTick
-		ARG 3 player
-		ARG 4 hitDirection
 	METHOD brushingCompleted (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/item/ItemStack;)V
 		ARG 1 level
 		ARG 2 player
 		ARG 3 stack
-	METHOD brushingCompleted (Lnet/minecraft/world/entity/player/Player;)V
-		ARG 1 player
 	METHOD checkReset (Lnet/minecraft/server/level/ServerLevel;)V
 		ARG 1 level
 	METHOD dropContent (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/item/ItemStack;)V
 		ARG 1 level
 		ARG 2 player
 		ARG 3 stack
-	METHOD dropContent (Lnet/minecraft/world/entity/player/Player;)V
-		ARG 1 player
 	METHOD setLootTable (Lnet/minecraft/resources/ResourceKey;J)V
 		ARG 1 lootTable
 		ARG 2 seed
@@ -37,5 +29,3 @@ CLASS net/minecraft/world/level/block/entity/BrushableBlockEntity
 		ARG 1 level
 		ARG 2 player
 		ARG 3 stack
-	METHOD unpackLootTable (Lnet/minecraft/world/entity/player/Player;)V
-		ARG 1 player

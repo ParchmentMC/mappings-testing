@@ -7,10 +7,6 @@ CLASS net/minecraft/client/gui/screens/inventory/BookEditScreen
 		COMMENT Determines if the signing screen is open
 	FIELD lastClickTime J
 		COMMENT In milliseconds
-	METHOD <init> (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/InteractionHand;)V
-		ARG 1 owner
-		ARG 2 book
-		ARG 3 hand
 	METHOD <init> (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/item/component/WritableBookContent;)V
 		ARG 1 owner
 		ARG 2 book

@@ -5,13 +5,6 @@ CLASS net/minecraft/client/resources/model/UnbakedModel
 		ARG 3 state
 	METHOD resolveDependencies (Lnet/minecraft/client/resources/model/UnbakedModel$Resolver;)V
 		ARG 1 resolver
-	METHOD resolveDependencies (Lnet/minecraft/client/resources/model/UnbakedModel$Resolver;Lnet/minecraft/client/resources/model/UnbakedModel$ResolutionContext;)V
-		ARG 1 resolver
-		ARG 2 resolutionContext
-	METHOD resolveParents (Ljava/util/function/Function;)V
-		ARG 1 resolver
 	CLASS Resolver
 		METHOD resolve (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/resources/model/UnbakedModel;
-			ARG 1 modelLocation
-		METHOD resolveForOverride (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/resources/model/UnbakedModel;
 			ARG 1 modelLocation

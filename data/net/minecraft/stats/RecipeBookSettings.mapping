@@ -9,11 +9,6 @@ CLASS net/minecraft/stats/RecipeBookSettings
 		ARG 1 bookType
 	METHOD isOpen (Lnet/minecraft/world/inventory/RecipeBookType;)Z
 		ARG 1 bookType
-	METHOD lambda$new$0 (Ljava/util/EnumMap;)V
-		ARG 0 states
-	METHOD lambda$read$1 (Lnet/minecraft/nbt/CompoundTag;Ljava/util/Map;Lnet/minecraft/world/inventory/RecipeBookType;Lcom/mojang/datafixers/util/Pair;)V
-		ARG 2 bookType
-		ARG 3 fieldKeys
 	METHOD lambda$read$3 (Lnet/minecraft/nbt/CompoundTag;Ljava/util/Map;Lnet/minecraft/world/inventory/RecipeBookType;Lcom/mojang/datafixers/util/Pair;)V
 		ARG 2 type
 		ARG 3 settings
@@ -21,9 +16,6 @@ CLASS net/minecraft/stats/RecipeBookSettings
 		ARG 1 settings
 	METHOD lambda$setOpen$1 (ZLnet/minecraft/stats/RecipeBookSettings$TypeSettings;)Lnet/minecraft/stats/RecipeBookSettings$TypeSettings;
 		ARG 1 settings
-	METHOD lambda$write$2 (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/world/inventory/RecipeBookType;Lcom/mojang/datafixers/util/Pair;)V
-		ARG 2 bookType
-		ARG 3 fieldKeys
 	METHOD lambda$write$4 (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/world/inventory/RecipeBookType;Lcom/mojang/datafixers/util/Pair;)V
 		ARG 2 type
 		ARG 3 settings

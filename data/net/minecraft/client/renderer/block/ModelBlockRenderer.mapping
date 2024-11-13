@@ -178,12 +178,3 @@ CLASS net/minecraft/client/renderer/block/ModelBlockRenderer
 			ARG 6 shapeFlags
 				COMMENT the bit set to store the shape flags in. The first bit will be {@code true} if the face should be offset, and the second if the face is less than a block in width and height.
 			ARG 7 shade
-		METHOD calculate (Lnet/minecraft/world/level/BlockAndTintGetter;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;[FLjava/util/BitSet;Lnet/minecraft/client/renderer/block/model/BakedQuad;)V
-			ARG 1 level
-			ARG 2 state
-			ARG 3 pos
-			ARG 4 shape
-				COMMENT the array, of length 12, containing the shape bounds
-			ARG 5 shapeFlags
-				COMMENT the bit set to store the shape flags in. The first bit will be {@code true} if the face should be offset, and the second if the face is less than a block in width and height.
-			ARG 6 quad

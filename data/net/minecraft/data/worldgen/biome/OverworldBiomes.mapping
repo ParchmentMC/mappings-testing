@@ -52,9 +52,6 @@ CLASS net/minecraft/data/worldgen/biome/OverworldBiomes
 		ARG 0 placedFeatures
 		ARG 1 worldCarvers
 		ARG 2 isDeep
-	METHOD darkForest (Lnet/minecraft/core/HolderGetter;Lnet/minecraft/core/HolderGetter;)Lnet/minecraft/world/level/biome/Biome;
-		ARG 0 placedFeatures
-		ARG 1 worldCarvers
 	METHOD darkForest (Lnet/minecraft/core/HolderGetter;Lnet/minecraft/core/HolderGetter;Z)Lnet/minecraft/world/level/biome/Biome;
 		ARG 0 placedFeatures
 		ARG 1 worldCarvers

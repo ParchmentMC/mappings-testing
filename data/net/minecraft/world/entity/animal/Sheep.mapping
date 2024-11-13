@@ -19,20 +19,12 @@ CLASS net/minecraft/world/entity/animal/Sheep
 		ARG 1 level
 		ARG 2 father
 		ARG 3 mother
-	METHOD getOffspringColor (Lnet/minecraft/world/entity/animal/Animal;Lnet/minecraft/world/entity/animal/Animal;)Lnet/minecraft/world/item/DyeColor;
-		COMMENT Attempts to mix both parent sheep to come up with a mixed dye color.
-		ARG 1 father
-		ARG 2 mother
 	METHOD getRandomSheepColor (Lnet/minecraft/util/RandomSource;)Lnet/minecraft/world/item/DyeColor;
 		ARG 0 random
 	METHOD isSheared ()Z
 		COMMENT Returns {@code true} if a sheep's wool has been sheared.
 	METHOD lambda$registerGoals$1 (Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 0 stack
-	METHOD lambda$static$0 (Ljava/util/EnumMap;)V
-		ARG 0 map
-	METHOD lambda$static$1 (Lnet/minecraft/world/item/DyeColor;)Lnet/minecraft/world/item/DyeColor;
-		ARG 0 color
 	METHOD makeCraftInput (Lnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/item/DyeColor;)Lnet/minecraft/world/item/crafting/CraftingInput;
 		ARG 0 color1
 		ARG 1 color2
@@ -51,5 +43,3 @@ CLASS net/minecraft/world/entity/animal/Sheep
 	METHOD setSheared (Z)V
 		COMMENT Makes a sheep sheared if set to {@code true}.
 		ARG 1 sheared
-	METHOD shear (Lnet/minecraft/sounds/SoundSource;)V
-		ARG 1 category

@@ -134,8 +134,6 @@ CLASS net/minecraft/server/level/ServerLevel
 		ARG 1 pos
 	METHOD isVillage (Lnet/minecraft/core/SectionPos;)Z
 		ARG 1 pos
-	METHOD lambda$clearBlockEvents$15 (Lnet/minecraft/world/level/levelgen/structure/BoundingBox;Lnet/minecraft/world/level/BlockEventData;)Z
-		ARG 1 event
 	METHOD lambda$findLightningRod$4 (Lnet/minecraft/core/Holder;)Z
 		ARG 0 pointOfInterestType
 	METHOD lambda$findLightningRod$5 (Lnet/minecraft/core/BlockPos;)Z
@@ -146,10 +144,6 @@ CLASS net/minecraft/server/level/ServerLevel
 		ARG 1 entity
 	METHOD lambda$getEntities$10 (Ljava/util/function/Predicate;Ljava/util/List;ILnet/minecraft/world/entity/Entity;)Lnet/minecraft/util/AbortableIterationConsumer$Continuation;
 		ARG 3 entity
-	METHOD lambda$getTypeCount$17 (Lit/unimi/dsi/fastutil/objects/Object2IntMap$Entry;)Ljava/lang/String;
-		ARG 0 entry
-	METHOD lambda$getWatchdogStats$16 (Lnet/minecraft/world/entity/Entity;)Ljava/lang/String;
-		ARG 0 entity
 	METHOD lambda$tick$2 (Lnet/minecraft/world/TickRateManager;Lnet/minecraft/util/profiling/ProfilerFiller;Lnet/minecraft/world/entity/Entity;)V
 		ARG 3 entity
 	METHOD lambda$wakeUpAllPlayers$3 (Lnet/minecraft/server/level/ServerPlayer;)V
@@ -183,8 +177,6 @@ CLASS net/minecraft/server/level/ServerLevel
 		ARG 3 skipSave
 	METHOD saveDebugReport (Ljava/nio/file/Path;)V
 		ARG 1 path
-	METHOD saveLevelData ()V
-		COMMENT Saves the chunks to disk.
 	METHOD saveLevelData (Z)V
 		ARG 1 join
 	METHOD sectionsToVillage (Lnet/minecraft/core/SectionPos;)I
@@ -240,8 +232,6 @@ CLASS net/minecraft/server/level/ServerLevel
 		ARG 2 weatherTime
 		ARG 3 isRaining
 		ARG 4 isThundering
-	METHOD shouldDiscardEntity (Lnet/minecraft/world/entity/Entity;)Z
-		ARG 1 entity
 	METHOD startTickingChunk (Lnet/minecraft/world/level/chunk/LevelChunk;)V
 		ARG 1 chunk
 	METHOD tick (Ljava/util/function/BooleanSupplier;)V

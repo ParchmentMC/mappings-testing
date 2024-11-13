@@ -39,20 +39,6 @@ CLASS net/minecraft/util/ExtraCodecs
 		ARG 3 factory
 		ARG 4 minGetter
 		ARG 5 maxGetter
-	METHOD lambda$ensureHomogenous$47 (Ljava/util/function/Function;Ljava/util/Collection;)Lcom/mojang/serialization/DataResult;
-		ARG 1 value
-	METHOD lambda$floatRangeMinExclusiveWithMessage$40 (FFLjava/util/function/Function;Ljava/lang/Float;)Lcom/mojang/serialization/DataResult;
-		ARG 3 value
-	METHOD lambda$intRange$38 (IILjava/lang/Integer;)Ljava/lang/String;
-		ARG 2 value
-	METHOD lambda$intRangeWithMessage$35 (IILjava/util/function/Function;Ljava/lang/Integer;)Lcom/mojang/serialization/DataResult;
-		ARG 3 value
-	METHOD lambda$nonEmptyHolderSet$45 (Lnet/minecraft/core/HolderSet;)Lcom/mojang/serialization/DataResult;
-		ARG 0 value
-	METHOD lambda$nonEmptyList$43 (Ljava/util/List;)Lcom/mojang/serialization/DataResult;
-		ARG 0 value
-	METHOD lambda$sizeLimitedMap$81 (ILjava/util/Map;)Lcom/mojang/serialization/DataResult;
-		ARG 1 value
 	METHOD lambda$static$10 (Lorg/joml/Quaternionf;)Ljava/util/List;
 		ARG 0 quaternion
 	METHOD lambda$static$11 (Lorg/joml/AxisAngle4f;)Ljava/lang/Float;
@@ -69,92 +55,41 @@ CLASS net/minecraft/util/ExtraCodecs
 		ARG 0 matrix
 	METHOD lambda$static$17 (Lorg/joml/Vector3f;)Ljava/lang/Integer;
 		ARG 0 color
-	METHOD lambda$static$17 (Lorg/joml/Vector4f;)Ljava/lang/Integer;
-		ARG 0 color
 	METHOD lambda$static$18 (Lorg/joml/Vector4f;)Ljava/lang/Integer;
 		ARG 0 color
-	METHOD lambda$static$19 (Ljava/lang/Integer;)Lcom/mojang/serialization/DataResult;
-		ARG 0 value
 	METHOD lambda$static$2 (Ljava/util/List;)Lorg/joml/Vector3f;
 		ARG 0 values
 	METHOD lambda$static$20 (Ljava/lang/Integer;)Lcom/mojang/serialization/DataResult;
 		ARG 0 value
 	METHOD lambda$static$3 (Ljava/util/List;)Lcom/mojang/serialization/DataResult;
 		ARG 0 list
-	METHOD lambda$static$36 (Ljava/lang/Integer;)Ljava/lang/String;
-		ARG 0 value
 	METHOD lambda$static$37 (Ljava/lang/Integer;)Ljava/lang/String;
 		ARG 0 value
 	METHOD lambda$static$38 (Ljava/lang/Integer;)Ljava/lang/String;
 		ARG 0 value
 	METHOD lambda$static$4 (Lorg/joml/Vector3f;)Ljava/util/List;
 		ARG 0 vector
-	METHOD lambda$static$41 (Ljava/lang/Float;)Ljava/lang/String;
-		ARG 0 value
 	METHOD lambda$static$44 (Ljava/lang/Float;)Ljava/lang/String;
 		ARG 0 value
 	METHOD lambda$static$45 (Ljava/lang/Float;)Ljava/lang/String;
 		ARG 0 value
-	METHOD lambda$static$49 (Ljava/lang/String;)Lcom/mojang/serialization/DataResult;
-		ARG 0 pattern
 	METHOD lambda$static$5 (Ljava/util/List;)Lorg/joml/Vector4f;
 		ARG 0 values
-	METHOD lambda$static$52 (Ljava/lang/String;)Lcom/mojang/serialization/DataResult;
-		ARG 0 string
-	METHOD lambda$static$53 ([B)Ljava/lang/String;
-		ARG 0 value
-	METHOD lambda$static$54 (Ljava/lang/String;)Lcom/mojang/serialization/DataResult;
-		ARG 0 value
 	METHOD lambda$static$55 (Ljava/lang/String;)Lcom/mojang/serialization/DataResult;
 		ARG 0 pattern
-	METHOD lambda$static$55 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/util/ExtraCodecs$TagOrElementLocation;
-		ARG 0 location
-	METHOD lambda$static$56 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/util/ExtraCodecs$TagOrElementLocation;
-		ARG 0 location
-	METHOD lambda$static$57 (Ljava/lang/String;)Lcom/mojang/serialization/DataResult;
-		ARG 0 value
 	METHOD lambda$static$58 (Ljava/lang/String;)Lcom/mojang/serialization/DataResult;
 		ARG 0 data
-	METHOD lambda$static$58 (Ljava/util/Optional;)Ljava/util/OptionalLong;
-		ARG 0 value
-	METHOD lambda$static$59 (Ljava/util/OptionalLong;)Ljava/util/Optional;
-		ARG 0 value
 	METHOD lambda$static$6 (Ljava/util/List;)Lcom/mojang/serialization/DataResult;
 		ARG 0 list
 	METHOD lambda$static$60 (Ljava/lang/String;)Lcom/mojang/serialization/DataResult;
 		ARG 0 value
-	METHOD lambda$static$60 (Ljava/util/stream/LongStream;)Ljava/util/BitSet;
-		ARG 0 longs
-	METHOD lambda$static$61 (Ljava/util/BitSet;)Ljava/util/stream/LongStream;
-		ARG 0 bitSet
 	METHOD lambda$static$61 (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/util/ExtraCodecs$TagOrElementLocation;
 		ARG 0 location
-	METHOD lambda$static$62 (Lcom/mojang/authlib/properties/Property;)Ljava/util/Optional;
-		ARG 0 property
 	METHOD lambda$static$63 (Ljava/lang/String;)Lcom/mojang/serialization/DataResult;
 		ARG 0 value
-	METHOD lambda$static$63 (Ljava/lang/String;Ljava/lang/String;Ljava/util/Optional;)Lcom/mojang/authlib/properties/Property;
-		ARG 0 name
-		ARG 1 value
-		ARG 2 signature
-	METHOD lambda$static$64 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
-		ARG 0 instance
-	METHOD lambda$static$68 (Lcom/mojang/datafixers/util/Either;)Lcom/mojang/authlib/properties/PropertyMap;
-		ARG 0 either
 	METHOD lambda$static$7 (Lorg/joml/Vector4f;)Ljava/util/List;
 		ARG 0 vector
-	METHOD lambda$static$71 (Ljava/lang/String;)Lcom/mojang/serialization/DataResult;
-		ARG 0 value
-	METHOD lambda$static$72 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
-		ARG 0 instance
-	METHOD lambda$static$74 (Lcom/mojang/authlib/GameProfile;Lcom/mojang/authlib/properties/PropertyMap;)Lcom/mojang/authlib/GameProfile;
-		ARG 0 gameProfile
-		ARG 1 properties
-	METHOD lambda$static$75 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
-		ARG 0 instance
 	METHOD lambda$static$77 (Ljava/lang/String;)Lcom/mojang/serialization/DataResult;
-		ARG 0 value
-	METHOD lambda$static$79 (Ljava/lang/String;)Lcom/mojang/serialization/DataResult;
 		ARG 0 value
 	METHOD lambda$static$8 (Ljava/util/List;)Lorg/joml/Quaternionf;
 		ARG 0 values
@@ -162,8 +97,6 @@ CLASS net/minecraft/util/ExtraCodecs
 		ARG 0 value
 	METHOD lambda$static$9 (Ljava/util/List;)Lcom/mojang/serialization/DataResult;
 		ARG 0 list
-	METHOD lambda$temporalCodec$50 (Ljava/time/format/DateTimeFormatter;Ljava/lang/String;)Lcom/mojang/serialization/DataResult;
-		ARG 1 value
 	METHOD nonEmptyHolderSet (Lcom/mojang/serialization/Codec;)Lcom/mojang/serialization/Codec;
 		ARG 0 codec
 	METHOD nonEmptyList (Lcom/mojang/serialization/Codec;)Lcom/mojang/serialization/Codec;

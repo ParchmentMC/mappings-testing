@@ -79,12 +79,8 @@ CLASS net/minecraft/client/gui/Gui
 			COMMENT the health of the mount entity.
 	METHOD isShowingChatDisabledByPlayer ()Z
 		COMMENT {@return {@code true} if the chat disabled message is being shown, {@code false} otherwise}
-	METHOD lambda$displayScoreboardSidebar$6 (Lnet/minecraft/world/scores/PlayerScoreEntry;)Z
-		ARG 0 entry
 	METHOD lambda$displayScoreboardSidebar$7 (Lnet/minecraft/world/scores/PlayerScoreEntry;)Z
 		ARG 0 scoreEntry
-	METHOD lambda$displayScoreboardSidebar$7 (Lnet/minecraft/world/scores/Scoreboard;Lnet/minecraft/network/chat/numbers/NumberFormat;Lnet/minecraft/world/scores/PlayerScoreEntry;)Lnet/minecraft/client/gui/Gui$1DisplayEntry;
-		ARG 3 scoreEntry
 	METHOD lambda$displayScoreboardSidebar$8 (Lnet/minecraft/world/scores/Scoreboard;Lnet/minecraft/network/chat/numbers/NumberFormat;Lnet/minecraft/world/scores/PlayerScoreEntry;)Lnet/minecraft/client/gui/Gui$1DisplayEntry;
 		ARG 3 scoreEntry
 	METHOD lambda$new$0 (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/DeltaTracker;)V

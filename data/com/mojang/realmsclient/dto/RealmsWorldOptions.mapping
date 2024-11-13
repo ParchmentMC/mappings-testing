@@ -1,15 +1,4 @@
 CLASS com/mojang/realmsclient/dto/RealmsWorldOptions
-	METHOD <init> (ZZIZIIZLjava/lang/String;Ljava/lang/String;Lcom/mojang/realmsclient/dto/RealmsServer$Compatibility;)V
-		ARG 1 pvp
-		ARG 2 spawnMonsters
-		ARG 3 spawnProtection
-		ARG 4 commandBlocks
-		ARG 5 difficulty
-		ARG 6 gameMode
-		ARG 7 forceGameMode
-		ARG 8 slotName
-		ARG 9 version
-		ARG 10 compatibility
 	METHOD <init> (ZZIZIIZZLjava/lang/String;Ljava/lang/String;Lcom/mojang/realmsclient/dto/RealmsServer$Compatibility;)V
 		ARG 1 pvp
 		ARG 2 spawnMonsters
@@ -22,19 +11,6 @@ CLASS com/mojang/realmsclient/dto/RealmsWorldOptions
 		ARG 9 slotName
 		ARG 10 version
 		ARG 11 compatibility
-	METHOD <init> (ZZZZIZIIZLjava/lang/String;Ljava/lang/String;Lcom/mojang/realmsclient/dto/RealmsServer$Compatibility;)V
-		ARG 1 pvp
-		ARG 2 spawnAnimals
-		ARG 3 spawnMonsters
-		ARG 4 spawnNPCs
-		ARG 5 spawnProtection
-		ARG 6 commandBlocks
-		ARG 7 difficulty
-		ARG 8 gameMode
-		ARG 9 forceGameMode
-		ARG 10 slotName
-		ARG 11 version
-		ARG 12 compatibility
 	METHOD createDefaultsWith (Lnet/minecraft/world/level/GameType;Lnet/minecraft/world/Difficulty;ZLjava/lang/String;Ljava/lang/String;)Lcom/mojang/realmsclient/dto/RealmsWorldOptions;
 		ARG 0 gameMode
 		ARG 1 difficulty
@@ -48,8 +24,6 @@ CLASS com/mojang/realmsclient/dto/RealmsWorldOptions
 		ARG 1 slotIndex
 	METHOD getSlotName (I)Ljava/lang/String;
 		ARG 1 slotIndex
-	METHOD parse (Lcom/google/gson/JsonObject;)Lcom/mojang/realmsclient/dto/RealmsWorldOptions;
-		ARG 0 json
 	METHOD parse (Lcom/google/gson/JsonObject;Lcom/mojang/realmsclient/dto/RealmsSettings;)Lcom/mojang/realmsclient/dto/RealmsWorldOptions;
 		ARG 0 json
 		ARG 1 realmsSettings

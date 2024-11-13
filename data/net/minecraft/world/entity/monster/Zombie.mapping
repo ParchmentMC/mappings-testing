@@ -10,18 +10,12 @@ CLASS net/minecraft/world/entity/monster/Zombie
 	METHOD convertVillagerToZombieVillager (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/Villager;)Z
 		ARG 1 level
 		ARG 2 villager
-	METHOD doHurtTarget (Lnet/minecraft/world/entity/Entity;)Z
-		ARG 1 entity
 	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
 		ARG 1 damageSource
 	METHOD getSpawnAsBabyOdds (Lnet/minecraft/util/RandomSource;)Z
 		ARG 0 random
 	METHOD handleAttributes (F)V
 		ARG 1 difficulty
-	METHOD hurt (Lnet/minecraft/world/damagesource/DamageSource;F)Z
-		COMMENT Called when the entity is attacked.
-		ARG 1 source
-		ARG 2 amount
 	METHOD isBaby ()Z
 		COMMENT If Animal, checks if the age timer is negative
 	METHOD lambda$convertToZombieType$1 (Lnet/minecraft/world/entity/monster/Zombie;)V

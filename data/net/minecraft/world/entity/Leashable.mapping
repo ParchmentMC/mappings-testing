@@ -41,8 +41,6 @@ CLASS net/minecraft/world/entity/Leashable
 	METHOD tickLeash (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/Entity;)V
 		ARG 0 level
 		ARG 1 entity
-	METHOD tickLeash (Lnet/minecraft/world/entity/Entity;)V
-		ARG 0 entity
 	METHOD writeLeashData (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/world/entity/Leashable$LeashData;)V
 		ARG 1 tag
 		ARG 2 leashData

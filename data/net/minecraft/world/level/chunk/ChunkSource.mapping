@@ -24,9 +24,6 @@ CLASS net/minecraft/world/level/chunk/ChunkSource
 		ARG 4 isEmpty
 	METHOD setSpawnSettings (Z)V
 		ARG 1 spawnSettings
-	METHOD setSpawnSettings (ZZ)V
-		ARG 1 hostile
-		ARG 2 peaceful
 	METHOD tick (Ljava/util/function/BooleanSupplier;Z)V
 		ARG 1 hasTimeLeft
 		ARG 2 tickChunks

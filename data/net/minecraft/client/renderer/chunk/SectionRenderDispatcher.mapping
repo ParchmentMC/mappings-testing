@@ -1,11 +1,4 @@
 CLASS net/minecraft/client/renderer/chunk/SectionRenderDispatcher
-	METHOD <init> (Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/client/renderer/LevelRenderer;Ljava/util/concurrent/Executor;Lnet/minecraft/client/renderer/RenderBuffers;Lnet/minecraft/client/renderer/block/BlockRenderDispatcher;Lnet/minecraft/client/renderer/blockentity/BlockEntityRenderDispatcher;)V
-		ARG 1 level
-		ARG 2 renderer
-		ARG 3 executor
-		ARG 4 buffers
-		ARG 5 blockRenderer
-		ARG 6 blockEntityRenderer
 	METHOD <init> (Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/client/renderer/LevelRenderer;Lnet/minecraft/TracingExecutor;Lnet/minecraft/client/renderer/RenderBuffers;Lnet/minecraft/client/renderer/block/BlockRenderDispatcher;Lnet/minecraft/client/renderer/blockentity/BlockEntityRenderDispatcher;)V
 		ARG 1 level
 		ARG 2 renderer
@@ -29,11 +22,6 @@ CLASS net/minecraft/client/renderer/chunk/SectionRenderDispatcher
 		ARG 1 meshData
 		ARG 2 vertexBuffer
 	CLASS RenderSection
-		METHOD <init> (Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher;IIII)V
-			ARG 2 index
-			ARG 3 originX
-			ARG 4 originY
-			ARG 5 originZ
 		METHOD <init> (Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher;IJ)V
 			ARG 2 index
 			ARG 3 sectionNode
@@ -43,68 +31,35 @@ CLASS net/minecraft/client/renderer/chunk/SectionRenderDispatcher
 			ARG 1 regionCache
 		METHOD doesChunkExistAt (J)Z
 			ARG 1 pos
-		METHOD doesChunkExistAt (Lnet/minecraft/core/BlockPos;)Z
-			ARG 1 pos
 		METHOD getBuffer (Lnet/minecraft/client/renderer/RenderType;)Lcom/mojang/blaze3d/vertex/VertexBuffer;
 			ARG 1 renderType
 		METHOD getNeighborSectionNode (Lnet/minecraft/core/Direction;)J
 			ARG 1 direction
-		METHOD getRelativeOrigin (Lnet/minecraft/core/Direction;)Lnet/minecraft/core/BlockPos;
-			ARG 1 direction
-		METHOD isAxisAlignedWith (III)Z
-			ARG 1 x
-			ARG 2 y
-			ARG 3 z
 		METHOD rebuildSectionAsync (Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher;Lnet/minecraft/client/renderer/chunk/RenderRegionCache;)V
 			ARG 1 sectionRenderDispatcher
 			ARG 2 regionCache
-		METHOD resortTransparency (Lnet/minecraft/client/renderer/RenderType;Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher;)Z
-			ARG 1 renderType
-			ARG 2 sectionRenderDispatcher
 		METHOD resortTransparency (Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher;)V
 			ARG 1 dispatcher
 		METHOD setCompiled (Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$CompiledSection;)V
 			ARG 1 compiled
 		METHOD setDirty (Z)V
 			ARG 1 playerChanged
-		METHOD setOrigin (III)V
-			ARG 1 x
-			ARG 2 y
-			ARG 3 z
 		METHOD setSectionNode (J)V
 			ARG 1 sectionNode
 		METHOD updateGlobalBlockEntities (Ljava/util/Collection;)V
 			ARG 1 blockEntities
 		CLASS CompileTask
-			METHOD <init> (Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$RenderSection;DZ)V
-				ARG 1 renderSection
-				ARG 2 distAtCreation
-				ARG 4 isHighPriority
 			METHOD <init> (Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$RenderSection;Z)V
 				ARG 2 isRecompile
-			METHOD compareTo (Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$RenderSection$CompileTask;)I
-				ARG 1 other
 			METHOD doTask (Lnet/minecraft/client/renderer/SectionBufferBuilderPack;)Ljava/util/concurrent/CompletableFuture;
 				ARG 1 sectionBufferBuilderPack
 		CLASS RebuildTask
-			METHOD <init> (Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$RenderSection;DLnet/minecraft/client/renderer/chunk/RenderChunkRegion;Z)V
-				ARG 2 distAtCreation
-				ARG 4 region
-				ARG 5 isHighPriority
 			METHOD <init> (Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$RenderSection;Lnet/minecraft/client/renderer/chunk/RenderChunkRegion;Z)V
 				ARG 2 region
 				ARG 3 isRecompile
-			METHOD lambda$doTask$1 (Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$CompiledSection;Ljava/util/List;Ljava/lang/Throwable;)Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$SectionTaskResult;
-				ARG 3 exception
 		CLASS ResortTransparencyTask
-			METHOD <init> (Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$RenderSection;DLnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$CompiledSection;)V
-				ARG 2 distAtCreation
-				ARG 4 compiledSection
 			METHOD <init> (Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$RenderSection;Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$CompiledSection;)V
 				ARG 2 compiledSection
-			METHOD lambda$doTask$1 (Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$SectionTaskResult;Ljava/lang/Throwable;)Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$SectionTaskResult;
-				ARG 1 result
-				ARG 2 exception
 	CLASS CompiledSection
 		METHOD facesCanSeeEachother (Lnet/minecraft/core/Direction;Lnet/minecraft/core/Direction;)Z
 			ARG 1 face1

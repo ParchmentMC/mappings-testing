@@ -94,9 +94,6 @@ CLASS net/minecraft/server/level/ServerPlayer
 		ARG 2 angle
 		ARG 3 forced
 		ARG 4 useCharge
-	METHOD findRespawnPositionAndUseSpawnBlock (ZLnet/minecraft/world/level/portal/DimensionTransition$PostDimensionTransition;)Lnet/minecraft/world/level/portal/DimensionTransition;
-		ARG 1 keepInventory
-		ARG 2 postDimensionTransition
 	METHOD findRespawnPositionAndUseSpawnBlock (ZLnet/minecraft/world/level/portal/TeleportTransition$PostTeleportTransition;)Lnet/minecraft/world/level/portal/TeleportTransition;
 		ARG 1 useCharge
 		ARG 2 postTeleportTransition
@@ -113,15 +110,8 @@ CLASS net/minecraft/server/level/ServerPlayer
 		ARG 1 scoreHolder
 		ARG 2 teamMember
 		ARG 3 crtieria
-	METHOD hurt (Lnet/minecraft/world/damagesource/DamageSource;F)Z
-		COMMENT Called when the entity is attacked.
-		ARG 1 source
-		ARG 2 amount
 	METHOD initMenu (Lnet/minecraft/world/inventory/AbstractContainerMenu;)V
 		ARG 1 menu
-	METHOD isInvulnerableTo (Lnet/minecraft/world/damagesource/DamageSource;)Z
-		COMMENT Returns whether this Entity is invulnerable to the given DamageSource.
-		ARG 1 source
 	METHOD isPvpAllowed ()Z
 		COMMENT Returns if other players can attack this player
 	METHOD isReachableBedBlock (Lnet/minecraft/core/BlockPos;)Z
@@ -134,36 +124,14 @@ CLASS net/minecraft/server/level/ServerPlayer
 		ARG 1 spawnDimension
 	METHOD lambda$addAdditionalSaveData$9 (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/nbt/Tag;)V
 		ARG 1 raidOmenPosition
-	METHOD lambda$awardRecipesByKey$22 (Lnet/minecraft/resources/ResourceLocation;)Ljava/util/stream/Stream;
-		ARG 1 recipe
-	METHOD lambda$awardStat$17 (ILnet/minecraft/world/scores/ScoreAccess;)V
-		ARG 1 score
-	METHOD lambda$awardStat$21 (ILnet/minecraft/world/scores/ScoreAccess;)V
-		ARG 1 score
 	METHOD lambda$awardStat$23 (ILnet/minecraft/world/scores/ScoreAccess;)V
 		ARG 1 score
-	METHOD lambda$die$13 (Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/Style;)Lnet/minecraft/network/chat/Style;
-		ARG 1 style
-	METHOD lambda$drop$24 (Lnet/minecraft/world/entity/player/Inventory;I)V
-		ARG 2 slot
-	METHOD lambda$loadAndSpawnEnderpearls$10 (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/entity/Entity;
-		ARG 1 entity
-	METHOD lambda$loadAndSpawnEnderpearls$11 (Lnet/minecraft/nbt/Tag;)V
-		ARG 1 pearlTag
 	METHOD lambda$loadAndSpawnEnderpearls$12 (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/entity/Entity;
 		ARG 1 entity
 	METHOD lambda$loadAndSpawnEnderpearls$13 (Lnet/minecraft/nbt/Tag;)V
 		ARG 1 enderPearlTag
 	METHOD lambda$loadAndSpawnParentVehicle$10 (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/entity/Entity;
 		ARG 1 entity
-	METHOD lambda$readAdditionalSaveData$0 (Lnet/minecraft/world/entity/monster/warden/WardenSpawnTracker;)V
-		ARG 1 wardenSpawnTracker
-	METHOD lambda$readAdditionalSaveData$1 (Lnet/minecraft/core/BlockPos;)V
-		ARG 1 raidOmenPosition
-	METHOD lambda$readAdditionalSaveData$3 (Lnet/minecraft/world/entity/monster/warden/WardenSpawnTracker;)V
-		ARG 1 wardenSpawnTracker
-	METHOD lambda$readAdditionalSaveData$4 (Lnet/minecraft/core/BlockPos;)V
-		ARG 1 raidOmenPosition
 	METHOD lambda$readAdditionalSaveData$4 (Lnet/minecraft/world/entity/monster/warden/WardenSpawnTracker;)V
 		ARG 1 wardenSpawnTracker
 	METHOD lambda$readAdditionalSaveData$5 (Lnet/minecraft/resources/ResourceKey;)Z
@@ -172,34 +140,12 @@ CLASS net/minecraft/server/level/ServerPlayer
 		ARG 1 pos
 	METHOD lambda$saveEnderPearls$11 (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/nbt/Tag;)V
 		ARG 1 enderPearlDimension
-	METHOD lambda$saveEnderPearls$9 (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/nbt/Tag;)V
-		ARG 1 dimension
-	METHOD lambda$startSleepInBed$15 (Lnet/minecraft/world/entity/monster/Monster;)Z
-		ARG 1 monster
-	METHOD lambda$startSleepInBed$19 (Lnet/minecraft/world/entity/monster/Monster;)Z
-		ARG 1 monster
 	METHOD lambda$startSleepInBed$21 (Lnet/minecraft/world/entity/monster/Monster;)Z
 		ARG 1 monster
-	METHOD lambda$tellNeutralMobsThatIDied$11 (Lnet/minecraft/world/entity/Mob;)Z
-		ARG 0 mob
-	METHOD lambda$tellNeutralMobsThatIDied$12 (Lnet/minecraft/world/entity/Mob;)V
-		ARG 1 mob
-	METHOD lambda$tellNeutralMobsThatIDied$15 (Lnet/minecraft/world/entity/Mob;)Z
-		ARG 0 mob
-	METHOD lambda$tellNeutralMobsThatIDied$16 (Lnet/minecraft/world/entity/Mob;)V
-		ARG 1 mob
 	METHOD lambda$tellNeutralMobsThatIDied$17 (Lnet/minecraft/world/entity/Mob;)Z
 		ARG 0 mob
 	METHOD lambda$tellNeutralMobsThatIDied$18 (Lnet/minecraft/world/entity/Mob;)V
 		ARG 1 mob
-	METHOD lambda$tellNeutralMobsThatIDied$8 (Lnet/minecraft/world/entity/Mob;)Z
-		ARG 0 mob
-	METHOD lambda$tellNeutralMobsThatIDied$9 (Lnet/minecraft/world/entity/Mob;)V
-		ARG 1 mob
-	METHOD lambda$updateScoreForCriteria$12 (ILnet/minecraft/world/scores/ScoreAccess;)V
-		ARG 1 score
-	METHOD lambda$updateScoreForCriteria$5 (ILnet/minecraft/world/scores/ScoreAccess;)V
-		ARG 1 score
 	METHOD loadAndSpawnEnderpearls (Ljava/util/Optional;)V
 		ARG 1 tag
 	METHOD loadAndSpawnParentVehicle (Ljava/util/Optional;)V
@@ -224,8 +170,6 @@ CLASS net/minecraft/server/level/ServerPlayer
 	METHOD noCollisionNoLiquid (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/phys/AABB;)Z
 		ARG 1 level
 		ARG 2 collisionBox
-	METHOD onEffectRemoved (Lnet/minecraft/world/effect/MobEffectInstance;)V
-		ARG 1 effect
 	METHOD onEnchantmentPerformed (Lnet/minecraft/world/item/ItemStack;I)V
 		ARG 1 enchantedItem
 		ARG 2 cost
@@ -305,11 +249,6 @@ CLASS net/minecraft/server/level/ServerPlayer
 		ARG 1 lastClientInput
 	METHOD setLastSectionPos (Lnet/minecraft/core/SectionPos;)V
 		ARG 1 sectionPos
-	METHOD setPlayerInput (FFZZ)V
-		ARG 1 strafe
-		ARG 2 forward
-		ARG 3 jumping
-		ARG 4 sneaking
 	METHOD setRaidOmenPosition (Lnet/minecraft/core/BlockPos;)V
 		ARG 1 raidOmenPosition
 	METHOD setRespawnPosition (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/core/BlockPos;FZZ)V
@@ -343,21 +282,6 @@ CLASS net/minecraft/server/level/ServerPlayer
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
-	METHOD teleportTo (Lnet/minecraft/server/level/ServerLevel;DDDFF)V
-		ARG 1 newLevel
-		ARG 2 x
-		ARG 4 y
-		ARG 6 z
-		ARG 8 yaw
-		ARG 9 pitch
-	METHOD teleportTo (Lnet/minecraft/server/level/ServerLevel;DDDFFZ)V
-		ARG 1 level
-		ARG 2 x
-		ARG 4 y
-		ARG 6 z
-		ARG 8 yaw
-		ARG 9 pitch
-		ARG 10 setCamera
 	METHOD tick ()V
 		COMMENT Called to update the entity's position/logic.
 	METHOD triggerDimensionChangeTriggers (Lnet/minecraft/server/level/ServerLevel;)V

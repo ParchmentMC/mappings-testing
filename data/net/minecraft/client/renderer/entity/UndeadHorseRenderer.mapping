@@ -1,12 +1,6 @@
 CLASS net/minecraft/client/renderer/entity/UndeadHorseRenderer
-	METHOD <init> (Lnet/minecraft/client/renderer/entity/EntityRendererProvider$Context;Lnet/minecraft/client/model/geom/ModelLayerLocation;)V
-		ARG 1 context
-		ARG 2 layer
 	METHOD <init> (Lnet/minecraft/client/renderer/entity/EntityRendererProvider$Context;Lnet/minecraft/client/model/geom/ModelLayerLocation;Lnet/minecraft/client/model/geom/ModelLayerLocation;Z)V
 		ARG 1 context
 		ARG 2 adultModelLayer
 		ARG 3 babyModelLayer
 		ARG 4 skeletonHorse
-	METHOD getTextureLocation (Lnet/minecraft/world/entity/animal/horse/AbstractHorse;)Lnet/minecraft/resources/ResourceLocation;
-		COMMENT Returns the location of an entity's texture.
-		ARG 1 entity

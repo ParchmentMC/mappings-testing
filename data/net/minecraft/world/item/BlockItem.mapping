@@ -5,8 +5,6 @@ CLASS net/minecraft/world/item/BlockItem
 	METHOD canPlace (Lnet/minecraft/world/item/context/BlockPlaceContext;Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 1 context
 		ARG 2 state
-	METHOD getDescriptionId ()Ljava/lang/String;
-		COMMENT Returns the unlocalized name of this item.
 	METHOD getPlaceSound (Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/sounds/SoundEvent;
 		ARG 1 state
 	METHOD getPlacementState (Lnet/minecraft/world/item/context/BlockPlaceContext;)Lnet/minecraft/world/level/block/state/BlockState;

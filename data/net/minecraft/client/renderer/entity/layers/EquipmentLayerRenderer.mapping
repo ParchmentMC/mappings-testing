@@ -22,22 +22,3 @@ CLASS net/minecraft/client/renderer/entity/layers/EquipmentLayerRenderer
 		ARG 6 bufferSource
 		ARG 7 packedLight
 		ARG 8 playerTexture
-	METHOD renderLayers (Lnet/minecraft/world/item/equipment/EquipmentModel$LayerType;Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/client/model/Model;Lnet/minecraft/world/item/ItemStack;Ljava/util/function/Function;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;I)V
-		ARG 1 layerType
-		ARG 2 equipmentModel
-		ARG 3 armorModel
-		ARG 4 item
-		ARG 5 renderType
-		ARG 6 poseStack
-		ARG 7 bufferSource
-		ARG 8 packedLight
-	METHOD renderLayers (Lnet/minecraft/world/item/equipment/EquipmentModel$LayerType;Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/client/model/Model;Lnet/minecraft/world/item/ItemStack;Ljava/util/function/Function;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;ILnet/minecraft/resources/ResourceLocation;)V
-		ARG 1 layerType
-		ARG 2 equipmentModel
-		ARG 3 armorModel
-		ARG 4 item
-		ARG 5 renderType
-		ARG 6 poseStack
-		ARG 7 bufferSource
-		ARG 8 packedLight
-		ARG 9 playerTexture

@@ -15,9 +15,6 @@ CLASS com/mojang/blaze3d/platform/GlStateManager
 		ARG 3 dstFactorAlpha
 	METHOD _clear (I)V
 		ARG 0 mask
-	METHOD _clear (IZ)V
-		ARG 0 mask
-		ARG 1 checkError
 	METHOD _clearColor (FFFF)V
 		ARG 0 red
 		ARG 1 green
@@ -103,10 +100,6 @@ CLASS com/mojang/blaze3d/platform/GlStateManager
 		ARG 0 target
 		ARG 1 offset
 		ARG 2 data
-	METHOD _glClientWaitSync (JII)I
-		ARG 0 sync
-		ARG 2 flags
-		ARG 3 timeout
 	METHOD _glClientWaitSync (JIJ)I
 		ARG 0 sync
 		ARG 2 flags
@@ -349,10 +342,6 @@ CLASS com/mojang/blaze3d/platform/GlStateManager
 	METHOD glShaderSource (ILjava/lang/String;)V
 		ARG 0 type
 		ARG 1 source
-	METHOD glShaderSource (ILjava/util/List;)V
-		ARG 0 shader
-			COMMENT The shader object whose source code is to be replaced.
-		ARG 1 shaderData
 	METHOD lambda$static$0 (I)Lcom/mojang/blaze3d/platform/GlStateManager$TextureState;
 		ARG 0 index
 	METHOD setupGui3DDiffuseLighting (Lorg/joml/Vector3f;Lorg/joml/Vector3f;)V

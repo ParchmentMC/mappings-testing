@@ -6,10 +6,6 @@ CLASS net/minecraft/world/entity/vehicle/ContainerEntity
 		ARG 1 damageSource
 		ARG 2 level
 		ARG 3 entity
-	METHOD chestVehicleDestroyed (Lnet/minecraft/world/damagesource/DamageSource;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/Entity;)V
-		ARG 1 damageSource
-		ARG 2 level
-		ARG 3 entity
 	METHOD getChestVehicleItem (I)Lnet/minecraft/world/item/ItemStack;
 		ARG 1 slot
 	METHOD getChestVehicleSlot (I)Lnet/minecraft/world/entity/SlotAccess;
@@ -32,10 +28,6 @@ CLASS net/minecraft/world/entity/vehicle/ContainerEntity
 	METHOD setContainerLootTable (Lnet/minecraft/resources/ResourceKey;)V
 		ARG 1 lootTable
 	METHOD setContainerLootTableSeed (J)V
-		ARG 1 lootTableSeed
-	METHOD setLootTable (Lnet/minecraft/resources/ResourceKey;)V
-		ARG 1 lootTable
-	METHOD setLootTableSeed (J)V
 		ARG 1 lootTableSeed
 	METHOD unpackChestVehicleLootTable (Lnet/minecraft/world/entity/player/Player;)V
 		ARG 1 player

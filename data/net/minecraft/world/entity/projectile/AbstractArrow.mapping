@@ -17,8 +17,6 @@ CLASS net/minecraft/world/entity/projectile/AbstractArrow
 		ARG 1 compound
 	METHOD addBubbleParticles (Lnet/minecraft/world/phys/Vec3;)V
 		ARG 1 pos
-	METHOD addBubblePatricles (Lnet/minecraft/world/phys/Vec3;)V
-		ARG 1 pos
 	METHOD doKnockback (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/damagesource/DamageSource;)V
 		ARG 1 entity
 		ARG 2 damageSource
@@ -89,8 +87,6 @@ CLASS net/minecraft/world/entity/projectile/AbstractArrow
 		ARG 5 z
 		ARG 7 velocity
 		ARG 8 inaccuracy
-	METHOD shotFromCrossbow ()Z
-		COMMENT Whether the arrow was shot from a crossbow.
 	METHOD shouldRenderAtSqrDistance (D)Z
 		COMMENT Checks if the entity is in range to render.
 		ARG 1 distance

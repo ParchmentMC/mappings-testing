@@ -71,17 +71,10 @@ CLASS net/minecraft/world/effect/MobEffectInstance
 		ARG 2 entity
 		ARG 3 damageSource
 		ARG 4 amount
-	METHOD onMobHurt (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/damagesource/DamageSource;F)V
-		ARG 1 livingEntity
-		ARG 2 damageSource
-		ARG 3 amount
 	METHOD onMobRemoved (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/Entity$RemovalReason;)V
 		ARG 1 level
 		ARG 2 entity
 		ARG 3 reason
-	METHOD onMobRemoved (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/Entity$RemovalReason;)V
-		ARG 1 livingEntity
-		ARG 2 reason
 	METHOD setDetailsFrom (Lnet/minecraft/world/effect/MobEffectInstance;)V
 		ARG 1 effectInstance
 	METHOD tick (Lnet/minecraft/world/entity/LivingEntity;Ljava/lang/Runnable;)Z

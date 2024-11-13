@@ -1,6 +1,4 @@
 CLASS net/minecraft/client/model/Model
-	METHOD <init> (Ljava/util/function/Function;)V
-		ARG 1 renderType
 	METHOD <init> (Lnet/minecraft/client/model/geom/ModelPart;Ljava/util/function/Function;)V
 		ARG 1 root
 		ARG 2 renderType

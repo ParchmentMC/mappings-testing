@@ -1,20 +1,10 @@
 CLASS net/minecraft/client/renderer/ShaderManager
-	METHOD <init> (Lnet/minecraft/client/renderer/texture/TextureManager;)V
-		ARG 1 textureManager
 	METHOD <init> (Lnet/minecraft/client/renderer/texture/TextureManager;Ljava/util/function/Consumer;)V
 		ARG 1 textureManager
 		ARG 2 recoveryHandler
-	METHOD compileProgram (Lnet/minecraft/client/renderer/ShaderProgram;)Lnet/minecraft/client/renderer/CompiledShaderProgram;
-		ARG 1 program
-	METHOD compileShader (Lnet/minecraft/client/renderer/ShaderManager$ShaderCompilationKey;)Lcom/mojang/blaze3d/shaders/CompiledShader;
-		ARG 1 compilationKey
 	METHOD createPreprocessor (Ljava/util/Map;Lnet/minecraft/resources/ResourceLocation;)Lcom/mojang/blaze3d/preprocessor/GlslPreprocessor;
 		ARG 0 shaderResources
 		ARG 1 shaderLocation
-	METHOD getOrCompileShader (Lnet/minecraft/resources/ResourceLocation;Lcom/mojang/blaze3d/shaders/CompiledShader$Type;Lnet/minecraft/client/renderer/ShaderDefines;)Lcom/mojang/blaze3d/shaders/CompiledShader;
-		ARG 1 id
-		ARG 2 type
-		ARG 3 defines
 	METHOD getPostChain (Lnet/minecraft/resources/ResourceLocation;Ljava/util/Set;)Lnet/minecraft/client/renderer/PostChain;
 		ARG 1 id
 		ARG 2 externalTargets
@@ -31,9 +21,6 @@ CLASS net/minecraft/client/renderer/ShaderManager
 		ARG 1 config
 		ARG 2 vertexShader
 		ARG 3 fragmentShader
-	METHOD loadPostChain (Lnet/minecraft/resources/ResourceLocation;Ljava/util/Set;)Lnet/minecraft/client/renderer/PostChain;
-		ARG 1 id
-		ARG 2 externalTargets
 	METHOD loadPostChain (Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/server/packs/resources/Resource;Lcom/google/common/collect/ImmutableMap$Builder;)V
 		ARG 0 location
 		ARG 1 postChain

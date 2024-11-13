@@ -31,9 +31,6 @@ CLASS net/minecraft/network/chat/Component
 	METHOD score (Lnet/minecraft/commands/arguments/selector/SelectorPattern;Ljava/lang/String;)Lnet/minecraft/network/chat/MutableComponent;
 		ARG 0 selectorPattern
 		ARG 1 objective
-	METHOD selector (Ljava/lang/String;Ljava/util/Optional;)Lnet/minecraft/network/chat/MutableComponent;
-		ARG 0 pattern
-		ARG 1 separator
 	METHOD selector (Lnet/minecraft/commands/arguments/selector/SelectorPattern;Ljava/util/Optional;)Lnet/minecraft/network/chat/MutableComponent;
 		ARG 0 selectorPattern
 		ARG 1 seperator

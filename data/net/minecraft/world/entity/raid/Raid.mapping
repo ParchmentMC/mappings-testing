@@ -19,17 +19,12 @@ CLASS net/minecraft/world/entity/raid/Raid
 		ARG 3 isRecruited
 	METHOD findRandomSpawnPos (I)Lnet/minecraft/core/BlockPos;
 		ARG 1 attempts
-	METHOD findRandomSpawnPos (II)Lnet/minecraft/core/BlockPos;
-		ARG 1 offsetMultiplier
-		ARG 2 maxTry
 	METHOD getDefaultNumSpawns (Lnet/minecraft/world/entity/raid/Raid$RaiderType;IZ)I
 		ARG 1 raiderType
 		ARG 2 wave
 		ARG 3 shouldSpawnBonusGroup
 	METHOD getLeader (I)Lnet/minecraft/world/entity/raid/Raider;
 		ARG 1 wave
-	METHOD getLeaderBannerInstance (Lnet/minecraft/core/HolderGetter;)Lnet/minecraft/world/item/ItemStack;
-		ARG 0 patternRegistry
 	METHOD getNumGroups (Lnet/minecraft/world/Difficulty;)I
 		ARG 1 difficulty
 	METHOD getOminousBannerInstance (Lnet/minecraft/core/HolderGetter;)Lnet/minecraft/world/item/ItemStack;
@@ -40,17 +35,11 @@ CLASS net/minecraft/world/entity/raid/Raid
 		ARG 3 wave
 		ARG 4 difficulty
 		ARG 5 shouldSpawnBonusGroup
-	METHOD getValidSpawnPos (I)Ljava/util/Optional;
-		ARG 1 offsetMultiplier
 	METHOD joinRaid (ILnet/minecraft/world/entity/raid/Raider;Lnet/minecraft/core/BlockPos;Z)V
 		ARG 1 wave
 		ARG 2 raider
 		ARG 3 pos
 		ARG 4 isRecruited
-	METHOD lambda$addWaveMob$2 (Ljava/lang/Integer;)Ljava/util/Set;
-		ARG 0 value
-	METHOD lambda$moveRaidCenterToNearbyVillageSection$1 (Lnet/minecraft/core/BlockPos;)D
-		ARG 1 pos
 	METHOD lambda$validPlayer$0 (Lnet/minecraft/server/level/ServerPlayer;)Z
 		ARG 1 player
 	METHOD playSound (Lnet/minecraft/core/BlockPos;)V

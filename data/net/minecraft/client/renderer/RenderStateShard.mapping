@@ -12,8 +12,6 @@ CLASS net/minecraft/client/renderer/RenderStateShard
 		METHOD <init> (Ljava/util/OptionalDouble;)V
 			ARG 1 width
 	CLASS ShaderStateShard
-		METHOD <init> (Ljava/util/function/Supplier;)V
-			ARG 1 shader
 		METHOD <init> (Lnet/minecraft/client/renderer/ShaderProgram;)V
 			ARG 1 shader
 	CLASS BooleanStateShard
@@ -27,10 +25,6 @@ CLASS net/minecraft/client/renderer/RenderStateShard
 			ARG 1 useOverlay
 	CLASS TextureStateShard
 		METHOD <init> (Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/util/TriState;Z)V
-			ARG 1 texture
-			ARG 2 blur
-			ARG 3 mipmap
-		METHOD <init> (Lnet/minecraft/resources/ResourceLocation;ZZ)V
 			ARG 1 texture
 			ARG 2 blur
 			ARG 3 mipmap

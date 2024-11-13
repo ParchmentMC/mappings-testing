@@ -6,19 +6,8 @@ CLASS net/minecraft/client/resources/model/ModelDiscovery
 		ARG 1 modelLocation
 	METHOD loadBlockModel (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/resources/model/UnbakedModel;
 		ARG 1 modelLocation
-	METHOD registerItemTopModel (Lnet/minecraft/resources/ResourceLocation;)V
-		ARG 1 itemId
-	METHOD registerSpecialItemTopModel (Lnet/minecraft/client/resources/model/ModelResourceLocation;)V
-		ARG 1 modelLocation
 	METHOD registerStandardModels (Lnet/minecraft/client/resources/model/BlockStateModelLoader$LoadedModels;)V
 		ARG 1 loadedModels
 	METHOD registerTopModel (Lnet/minecraft/client/resources/model/ModelResourceLocation;Lnet/minecraft/client/resources/model/UnbakedModel;)V
 		ARG 1 id
 		ARG 2 model
-	CLASS ResolverImpl
-		METHOD isReferenceRecursive (Lnet/minecraft/resources/ResourceLocation;Z)Z
-			ARG 1 modelLocation
-			ARG 2 override
-		METHOD resolve (Lnet/minecraft/resources/ResourceLocation;Z)Lnet/minecraft/client/resources/model/UnbakedModel;
-			ARG 1 modelLocation
-			ARG 2 override

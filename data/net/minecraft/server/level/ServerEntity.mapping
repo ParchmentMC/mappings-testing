@@ -9,8 +9,6 @@ CLASS net/minecraft/server/level/ServerEntity
 		ARG 1 player
 	METHOD broadcastAndSend (Lnet/minecraft/network/protocol/Packet;)V
 		ARG 1 packet
-	METHOD handleMinecartPosRot (Lnet/minecraft/world/entity/vehicle/NewMinecartBehavior;)V
-		ARG 1 newMinecartBehavior
 	METHOD handleMinecartPosRot (Lnet/minecraft/world/entity/vehicle/NewMinecartBehavior;BBZ)V
 		ARG 1 behavior
 		ARG 2 yRot

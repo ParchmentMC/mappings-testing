@@ -1,25 +1,14 @@
 CLASS net/minecraft/world/entity/projectile/ThrownPotion
-	METHOD <init> (Lnet/minecraft/world/level/Level;DDD)V
-		ARG 1 level
-		ARG 2 x
-		ARG 4 y
-		ARG 6 z
 	METHOD <init> (Lnet/minecraft/world/level/Level;DDDLnet/minecraft/world/item/ItemStack;)V
 		ARG 1 level
 		ARG 2 x
 		ARG 4 y
 		ARG 6 z
 		ARG 8 item
-	METHOD <init> (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;)V
-		ARG 1 level
-		ARG 2 shooter
 	METHOD <init> (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;)V
 		ARG 1 level
 		ARG 2 owner
 		ARG 3 item
-	METHOD applySplash (Ljava/lang/Iterable;Lnet/minecraft/world/entity/Entity;)V
-		ARG 1 effects
-		ARG 2 entity
 	METHOD applySplash (Lnet/minecraft/server/level/ServerLevel;Ljava/lang/Iterable;Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 level
 		ARG 2 effects

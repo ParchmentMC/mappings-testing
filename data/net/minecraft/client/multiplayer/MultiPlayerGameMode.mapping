@@ -45,10 +45,6 @@ CLASS net/minecraft/client/multiplayer/MultiPlayerGameMode
 		ARG 5 player
 	METHOD handlePickItem (I)V
 		ARG 1 index
-	METHOD handlePlaceRecipe (ILnet/minecraft/world/item/crafting/RecipeHolder;Z)V
-		ARG 1 containerId
-		ARG 2 recipe
-		ARG 3 shiftDown
 	METHOD handlePlaceRecipe (ILnet/minecraft/world/item/crafting/display/RecipeDisplayId;Z)V
 		ARG 1 containerId
 		ARG 2 recipe
@@ -83,8 +79,6 @@ CLASS net/minecraft/client/multiplayer/MultiPlayerGameMode
 	METHOD lambda$startDestroyBlock$0 (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;I)Lnet/minecraft/network/protocol/Packet;
 		ARG 3 sequence
 	METHOD lambda$startDestroyBlock$1 (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;I)Lnet/minecraft/network/protocol/Packet;
-		ARG 4 sequence
-	METHOD lambda$useItem$5 (Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/entity/player/Player;Lorg/apache/commons/lang3/mutable/MutableObject;I)Lnet/minecraft/network/protocol/Packet;
 		ARG 4 sequence
 	METHOD lambda$useItemOn$4 (Lorg/apache/commons/lang3/mutable/MutableObject;Lnet/minecraft/client/player/LocalPlayer;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;I)Lnet/minecraft/network/protocol/Packet;
 		ARG 5 sequence

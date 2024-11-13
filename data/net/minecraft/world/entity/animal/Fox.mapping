@@ -7,26 +7,16 @@ CLASS net/minecraft/world/entity/animal/Fox
 		ARG 1 stack
 	METHOD canHoldItem (Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 1 stack
-	METHOD canTakeItem (Lnet/minecraft/world/item/ItemStack;)Z
-		ARG 1 itemstack
 	METHOD checkFoxSpawnRules (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/world/entity/EntitySpawnReason;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z
 		ARG 0 entityType
 		ARG 1 level
 		ARG 2 spawnReason
 		ARG 3 pos
 		ARG 4 random
-	METHOD checkFoxSpawnRules (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z
-		ARG 0 fox
-		ARG 1 level
-		ARG 2 spawnType
-		ARG 3 pos
-		ARG 4 random
 	METHOD dropItemStack (Lnet/minecraft/world/item/ItemStack;)V
 		ARG 1 stack
 	METHOD getCrouchAmount (F)F
 		ARG 1 partialTick
-	METHOD getEatingSound (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/sounds/SoundEvent;
-		ARG 1 itemStack
 	METHOD getFlag (I)Z
 		ARG 1 flagId
 	METHOD getHeadRollAngle (F)F
@@ -43,13 +33,9 @@ CLASS net/minecraft/world/entity/animal/Fox
 		ARG 1 livingEntity
 	METHOD isSleeping ()Z
 		COMMENT Returns whether player is sleeping or not
-	METHOD lambda$registerGoals$4 (Lnet/minecraft/world/entity/LivingEntity;)Z
-		ARG 0 livingEntity
 	METHOD lambda$registerGoals$4 (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/server/level/ServerLevel;)Z
 		ARG 0 entity
 		ARG 1 level
-	METHOD lambda$registerGoals$5 (Lnet/minecraft/world/entity/LivingEntity;)Z
-		ARG 0 livingEntity
 	METHOD lambda$registerGoals$5 (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/server/level/ServerLevel;)Z
 		ARG 0 entity
 		ARG 1 level
@@ -73,9 +59,6 @@ CLASS net/minecraft/world/entity/animal/Fox
 	METHOD onOffspringSpawnedFromEgg (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/entity/Mob;)V
 		ARG 1 player
 		ARG 2 child
-	METHOD pickUpItem (Lnet/minecraft/world/entity/item/ItemEntity;)V
-		COMMENT Tests if this entity should pick up a weapon or an armor piece. Entity drops current weapon or armor if the new one is better.
-		ARG 1 itemEntity
 	METHOD playAmbientSound ()V
 		COMMENT Plays living's sound at its position
 	METHOD readAdditionalSaveData (Lnet/minecraft/nbt/CompoundTag;)V
@@ -107,16 +90,6 @@ CLASS net/minecraft/world/entity/animal/Fox
 		COMMENT Called to update the entity's position/logic.
 	METHOD trusts (Ljava/util/UUID;)Z
 		ARG 1 uuid
-	CLASS Type
-		METHOD <init> (Ljava/lang/String;IILjava/lang/String;)V
-			ARG 3 id
-			ARG 4 name
-		METHOD byBiome (Lnet/minecraft/core/Holder;)Lnet/minecraft/world/entity/animal/Fox$Type;
-			ARG 0 biome
-		METHOD byId (I)Lnet/minecraft/world/entity/animal/Fox$Type;
-			ARG 0 index
-		METHOD byName (Ljava/lang/String;)Lnet/minecraft/world/entity/animal/Fox$Type;
-			ARG 0 name
 	CLASS Variant
 		METHOD <init> (Ljava/lang/String;IILjava/lang/String;)V
 			ARG 3 id
@@ -149,8 +122,6 @@ CLASS net/minecraft/world/entity/animal/Fox
 		METHOD start ()V
 			COMMENT Execute a one shot task or start executing a continuous task
 	CLASS FoxGroupData
-		METHOD <init> (Lnet/minecraft/world/entity/animal/Fox$Type;)V
-			ARG 1 type
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Fox$Variant;)V
 			ARG 1 variant
 	CLASS FoxPanicGoal
@@ -262,11 +233,6 @@ CLASS net/minecraft/world/entity/animal/Fox
 		METHOD tick ()V
 			COMMENT Keep ticking a continuous task that has already been started
 	CLASS DefendTrustedTargetGoal
-		METHOD <init> (Lnet/minecraft/world/entity/animal/Fox;Ljava/lang/Class;ZZLjava/util/function/Predicate;)V
-			ARG 2 targetType
-			ARG 3 mustSee
-			ARG 4 mustReach
-			ARG 5 predicate
 		METHOD <init> (Lnet/minecraft/world/entity/animal/Fox;Ljava/lang/Class;ZZLnet/minecraft/world/entity/ai/targeting/TargetingConditions$Selector;)V
 			ARG 2 targetType
 			ARG 3 mustSee
@@ -286,6 +252,3 @@ CLASS net/minecraft/world/entity/animal/Fox
 			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 		METHOD start ()V
 			COMMENT Execute a one shot task or start executing a continuous task
-	CLASS FoxAlertableEntitiesSelector
-		METHOD test (Lnet/minecraft/world/entity/LivingEntity;)Z
-			ARG 1 entity

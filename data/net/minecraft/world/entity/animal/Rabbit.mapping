@@ -9,12 +9,6 @@ CLASS net/minecraft/world/entity/animal/Rabbit
 		ARG 2 spawnReason
 		ARG 3 pos
 		ARG 4 random
-	METHOD checkRabbitSpawnRules (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z
-		ARG 0 rabbit
-		ARG 1 level
-		ARG 2 spawnType
-		ARG 3 pos
-		ARG 4 random
 	METHOD facePoint (DD)V
 		ARG 1 x
 		ARG 3 z

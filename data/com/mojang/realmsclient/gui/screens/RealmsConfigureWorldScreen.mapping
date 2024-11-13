@@ -38,8 +38,6 @@ CLASS com/mojang/realmsclient/gui/screens/RealmsConfigureWorldScreen
 		ARG 2 value
 	METHOD saveSlotSettings (Lcom/mojang/realmsclient/dto/RealmsWorldOptions;)V
 		ARG 1 worldOptions
-	METHOD saveSlotSettingsLocally (Lcom/mojang/realmsclient/dto/RealmsWorldOptions;)V
-		ARG 1 worldOptions
 	METHOD show (Lnet/minecraft/client/gui/components/Button;)V
 		ARG 1 button
 	METHOD switchToEmptySlot (ILcom/mojang/realmsclient/dto/RealmsServer;)V

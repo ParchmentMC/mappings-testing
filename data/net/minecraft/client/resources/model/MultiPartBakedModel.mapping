@@ -3,7 +3,3 @@ CLASS net/minecraft/client/resources/model/MultiPartBakedModel
 		ARG 1 selectors
 	METHOD getFirstModel (Ljava/util/List;)Lnet/minecraft/client/resources/model/BakedModel;
 		ARG 0 selectors
-	CLASS Builder
-		METHOD add (Ljava/util/function/Predicate;Lnet/minecraft/client/resources/model/BakedModel;)V
-			ARG 1 predicate
-			ARG 2 model

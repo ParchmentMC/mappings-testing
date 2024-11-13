@@ -10,22 +10,6 @@ CLASS net/minecraft/client/renderer/FogRenderer
 		ARG 1 partialTick
 	METHOD lambda$getPriorityFogFunction$1 (Lnet/minecraft/world/entity/LivingEntity;FLnet/minecraft/client/renderer/FogRenderer$MobEffectFogFunction;)Z
 		ARG 2 effect
-	METHOD lambda$setupColor$0 (Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/world/level/biome/BiomeManager;FIII)Lnet/minecraft/world/phys/Vec3;
-		ARG 3 x
-		ARG 4 y
-		ARG 5 z
-	METHOD setupColor (Lnet/minecraft/client/Camera;FLnet/minecraft/client/multiplayer/ClientLevel;IF)V
-		ARG 0 activeRenderInfo
-		ARG 1 partialTicks
-		ARG 2 level
-		ARG 3 renderDistanceChunks
-		ARG 4 bossColorModifier
-	METHOD setupFog (Lnet/minecraft/client/Camera;Lnet/minecraft/client/renderer/FogRenderer$FogMode;FZF)V
-		ARG 0 camera
-		ARG 1 fogMode
-		ARG 2 farPlaneDistance
-		ARG 3 shouldCreateFog
-		ARG 4 partialTick
 	METHOD setupFog (Lnet/minecraft/client/Camera;Lnet/minecraft/client/renderer/FogRenderer$FogMode;Lorg/joml/Vector4f;FZF)Lnet/minecraft/client/renderer/FogParameters;
 		ARG 0 camera
 		ARG 1 fogMode

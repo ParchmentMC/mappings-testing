@@ -12,18 +12,6 @@ CLASS net/minecraft/world/level/storage/loot/ValidationContext
 		ARG 1 reporter
 		ARG 2 contextKeySet
 		ARG 3 resolver
-	METHOD <init> (Lnet/minecraft/util/ProblemReporter;Lnet/minecraft/world/level/storage/loot/parameters/LootContextParamSet;)V
-		ARG 1 reporter
-		ARG 2 params
-	METHOD <init> (Lnet/minecraft/util/ProblemReporter;Lnet/minecraft/world/level/storage/loot/parameters/LootContextParamSet;Ljava/util/Optional;Ljava/util/Set;)V
-		ARG 1 reporter
-		ARG 2 params
-		ARG 3 resolver
-		ARG 4 visitedElements
-	METHOD <init> (Lnet/minecraft/util/ProblemReporter;Lnet/minecraft/world/level/storage/loot/parameters/LootContextParamSet;Lnet/minecraft/core/HolderGetter$Provider;)V
-		ARG 1 reporter
-		ARG 2 params
-		ARG 3 resolver
 	METHOD enterElement (Ljava/lang/String;Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/world/level/storage/loot/ValidationContext;
 		ARG 1 name
 		ARG 2 key
@@ -37,11 +25,5 @@ CLASS net/minecraft/world/level/storage/loot/ValidationContext
 		ARG 1 problem
 	METHOD setContextKeySet (Lnet/minecraft/util/context/ContextKeySet;)Lnet/minecraft/world/level/storage/loot/ValidationContext;
 		ARG 1 contextKeySet
-	METHOD setParams (Lnet/minecraft/world/level/storage/loot/parameters/LootContextParamSet;)Lnet/minecraft/world/level/storage/loot/ValidationContext;
-		COMMENT Create a new ValidationContext with the given LootContextParamSet.
-		ARG 1 params
 	METHOD validateContextUsage (Lnet/minecraft/world/level/storage/loot/LootContextUser;)V
 		ARG 1 user
-	METHOD validateUser (Lnet/minecraft/world/level/storage/loot/LootContextUser;)V
-		COMMENT Validate the given LootContextUser.
-		ARG 1 lootContextUser

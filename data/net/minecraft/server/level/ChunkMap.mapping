@@ -75,8 +75,6 @@ CLASS net/minecraft/server/level/ChunkMap
 	METHOD handleChunkLoadFailure (Ljava/lang/Throwable;Lnet/minecraft/world/level/ChunkPos;)Lnet/minecraft/world/level/chunk/ChunkAccess;
 		ARG 1 exception
 		ARG 2 chunkPos
-	METHOD isChunkDataValid (Lnet/minecraft/nbt/CompoundTag;)Z
-		ARG 0 tag
 	METHOD isChunkOnTrackedBorder (Lnet/minecraft/server/level/ServerPlayer;II)Z
 		COMMENT Checks if a chunk is on the edge of the player's view distance.
 		ARG 1 player
@@ -148,8 +146,6 @@ CLASS net/minecraft/server/level/ChunkMap
 	METHOD onChunkReadyToSend (Lnet/minecraft/server/level/ChunkHolder;Lnet/minecraft/world/level/chunk/LevelChunk;)V
 		ARG 1 chunkHolder
 		ARG 2 chunk
-	METHOD onChunkReadyToSend (Lnet/minecraft/world/level/chunk/LevelChunk;)V
-		ARG 1 chunk
 	METHOD onFullChunkStatusChange (Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/server/level/FullChunkStatus;)V
 		ARG 1 chunkPos
 		ARG 2 fullChunkStatus
@@ -183,8 +179,6 @@ CLASS net/minecraft/server/level/ChunkMap
 		ARG 1 chunk
 	METHOD saveAllChunks (Z)V
 		ARG 1 flush
-	METHOD saveChunkIfNeeded (Lnet/minecraft/server/level/ChunkHolder;)Z
-		ARG 1 holder
 	METHOD saveChunkIfNeeded (Lnet/minecraft/server/level/ChunkHolder;J)Z
 		ARG 1 chunk
 		ARG 2 gametime

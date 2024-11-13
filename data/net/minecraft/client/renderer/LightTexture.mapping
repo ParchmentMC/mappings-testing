@@ -8,8 +8,6 @@ CLASS net/minecraft/client/renderer/LightTexture
 		ARG 1 entity
 		ARG 2 gamma
 		ARG 3 partialTick
-	METHOD clampColor (Lorg/joml/Vector3f;)V
-		ARG 0 color
 	METHOD getBrightness (FI)F
 		ARG 0 ambientLight
 		ARG 1 lightLevel
@@ -21,10 +19,6 @@ CLASS net/minecraft/client/renderer/LightTexture
 	METHOD lightCoordsWithEmission (II)I
 		ARG 0 packedLight
 		ARG 1 emmision
-	METHOD loadShader (Lnet/minecraft/server/packs/resources/ResourceProvider;)V
-		ARG 1 resourceProvider
-	METHOD notGamma (F)F
-		ARG 1 value
 	METHOD pack (II)I
 		ARG 0 blockLight
 		ARG 1 skyLight

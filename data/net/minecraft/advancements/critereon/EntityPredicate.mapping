@@ -50,10 +50,6 @@ CLASS net/minecraft/advancements/critereon/EntityPredicate
 		METHOD of (Lnet/minecraft/core/HolderGetter;Lnet/minecraft/world/entity/EntityType;)Lnet/minecraft/advancements/critereon/EntityPredicate$Builder;
 			ARG 1 entityTypeRegistry
 			ARG 2 entityType
-		METHOD of (Lnet/minecraft/tags/TagKey;)Lnet/minecraft/advancements/critereon/EntityPredicate$Builder;
-			ARG 1 entityTypeTag
-		METHOD of (Lnet/minecraft/world/entity/EntityType;)Lnet/minecraft/advancements/critereon/EntityPredicate$Builder;
-			ARG 1 entityType
 		METHOD passenger (Lnet/minecraft/advancements/critereon/EntityPredicate$Builder;)Lnet/minecraft/advancements/critereon/EntityPredicate$Builder;
 			ARG 1 passenger
 		METHOD periodicTick (I)Lnet/minecraft/advancements/critereon/EntityPredicate$Builder;

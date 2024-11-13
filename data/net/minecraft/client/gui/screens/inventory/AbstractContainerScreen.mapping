@@ -32,12 +32,6 @@ CLASS net/minecraft/client/gui/screens/inventory/AbstractContainerScreen
 		ARG 2 scanCode
 	METHOD checkHotbarMouseClicked (I)V
 		ARG 1 keyCode
-	METHOD checkItemSlotActionKeyPressed (II)Z
-		ARG 1 keysym
-		ARG 2 scancode
-	METHOD findSlot (DD)Lnet/minecraft/world/inventory/Slot;
-		ARG 1 mouseX
-		ARG 3 mouseY
 	METHOD getHoveredSlot (DD)Lnet/minecraft/world/inventory/Slot;
 		ARG 1 mouseX
 		ARG 3 mouseY
@@ -105,11 +99,6 @@ CLASS net/minecraft/client/gui/screens/inventory/AbstractContainerScreen
 	METHOD renderSlot (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/world/inventory/Slot;)V
 		ARG 1 guiGraphics
 		ARG 2 slot
-	METHOD renderSlotHighlight (Lnet/minecraft/client/gui/GuiGraphics;III)V
-		ARG 0 guiGraphics
-		ARG 1 x
-		ARG 2 y
-		ARG 3 blitOffset
 	METHOD renderSlotHighlightBack (Lnet/minecraft/client/gui/GuiGraphics;)V
 		ARG 1 guiGraphics
 	METHOD renderSlotHighlightFront (Lnet/minecraft/client/gui/GuiGraphics;)V
@@ -120,9 +109,6 @@ CLASS net/minecraft/client/gui/screens/inventory/AbstractContainerScreen
 		ARG 1 guiGraphics
 		ARG 2 x
 		ARG 3 y
-	METHOD resetHoveredSlot (DD)V
-		ARG 1 mouseX
-		ARG 3 mouseY
 	METHOD showTooltipWithItemInHand (Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 1 stack
 	METHOD slotClicked (Lnet/minecraft/world/inventory/Slot;IILnet/minecraft/world/inventory/ClickType;)V
