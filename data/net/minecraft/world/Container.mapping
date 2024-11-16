@@ -20,7 +20,7 @@ CLASS net/minecraft/world/Container
 		COMMENT Returns the stack in the given slot.
 		ARG 1 slot
 	METHOD getMaxStackSize ()I
-		COMMENT Returns the maximum stack size for an inventory slot. Seems to always be 64, possibly will be extended.
+		COMMENT Returns the maximum stack size for an inventory slot.
 	METHOD getMaxStackSize (Lnet/minecraft/world/item/ItemStack;)I
 		ARG 1 stack
 	METHOD hasAnyMatching (Ljava/util/function/Predicate;)Z
@@ -38,7 +38,7 @@ CLASS net/minecraft/world/Container
 		COMMENT Removes a stack from the given slot and returns it.
 		ARG 1 slot
 	METHOD setChanged ()V
-		COMMENT For block entities, ensures the chunk containing the block entity is saved to disk later - the game won't think it hasn't changed and skip it.
+		COMMENT Called when the contents of this container have changed.
 	METHOD setItem (ILnet/minecraft/world/item/ItemStack;)V
 		COMMENT Sets the given item stack to the specified slot in the inventory (can be crafting or armor sections).
 		ARG 1 slot
@@ -46,7 +46,6 @@ CLASS net/minecraft/world/Container
 	METHOD startOpen (Lnet/minecraft/world/entity/player/Player;)V
 		ARG 1 player
 	METHOD stillValid (Lnet/minecraft/world/entity/player/Player;)Z
-		COMMENT Don't rename this method to canInteractWith due to conflicts with Container
 		ARG 1 player
 	METHOD stillValidBlockEntity (Lnet/minecraft/world/level/block/entity/BlockEntity;Lnet/minecraft/world/entity/player/Player;)Z
 		ARG 0 blockEntity
