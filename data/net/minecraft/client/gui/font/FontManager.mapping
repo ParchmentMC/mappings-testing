@@ -51,5 +51,7 @@ CLASS net/minecraft/client/gui/font/FontManager
 			ARG 1 builderId
 			ARG 2 filter
 			ARG 3 glyphProvider
+		METHOD lambda$listBuilders$0 (Lnet/minecraft/client/gui/font/FontManager$BuilderResult;)Ljava/util/stream/Stream;
+			ARG 0 builder
 		METHOD resolve (Ljava/util/function/Function;)Ljava/util/Optional;
 			ARG 1 providerResolver

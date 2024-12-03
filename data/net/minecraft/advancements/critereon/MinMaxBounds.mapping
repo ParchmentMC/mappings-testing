@@ -80,6 +80,8 @@ CLASS net/minecraft/advancements/critereon/MinMaxBounds
 		METHOD fromReader (Lcom/mojang/brigadier/StringReader;Ljava/util/function/Function;)Lnet/minecraft/advancements/critereon/MinMaxBounds$Doubles;
 			ARG 0 reader
 			ARG 1 formatter
+		METHOD lambda$fromReader$1 (Ljava/lang/Double;)Ljava/lang/Double;
+			ARG 0 value
 		METHOD lambda$squareOpt$0 (Ljava/lang/Double;)Ljava/lang/Double;
 			ARG 0 val
 		METHOD matches (D)Z

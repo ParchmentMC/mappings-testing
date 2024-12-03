@@ -18,6 +18,8 @@ CLASS net/minecraft/advancements/critereon/ItemUsedOnLocationTrigger
 		METHOD itemUsedOnLocation (Lnet/minecraft/advancements/critereon/LocationPredicate$Builder;Lnet/minecraft/advancements/critereon/ItemPredicate$Builder;)Lnet/minecraft/advancements/critereon/ItemUsedOnLocationTrigger$TriggerInstance;
 			ARG 0 location
 			ARG 1 tool
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
 		METHOD matches (Lnet/minecraft/world/level/storage/loot/LootContext;)Z
 			ARG 1 context
 		METHOD placedBlock (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/advancements/Criterion;

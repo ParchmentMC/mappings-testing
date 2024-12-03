@@ -35,7 +35,7 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 11 alpha
 	METHOD addFrustumQuad (Lcom/mojang/blaze3d/vertex/VertexConsumer;Lorg/joml/Matrix4f;IIIIIII)V
 		ARG 1 consumer
-		ARG 2 matrix
+		ARG 2 pose
 		ARG 3 index1
 		ARG 4 index2
 		ARG 5 index3
@@ -44,8 +44,8 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 8 green
 		ARG 9 blue
 	METHOD addFrustumVertex (Lcom/mojang/blaze3d/vertex/VertexConsumer;Lorg/joml/Matrix4f;I)V
-		ARG 1 consumer
-		ARG 2 matrix
+		ARG 1 buffer
+		ARG 2 pose
 		ARG 3 vertexIndex
 	METHOD addParticle (Lnet/minecraft/core/particles/ParticleOptions;DDDDDD)V
 		ARG 1 options
@@ -210,7 +210,7 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 9 camZ
 	METHOD renderDebug (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/Camera;)V
 		ARG 1 poseStack
-		ARG 2 buffer
+		ARG 2 bufferSource
 		ARG 3 camera
 	METHOD renderEndSky (Lcom/mojang/blaze3d/vertex/PoseStack;)V
 		ARG 1 poseStack
@@ -238,7 +238,7 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 12 alpha
 	METHOD renderHitOutline (Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;Lnet/minecraft/world/entity/Entity;DDDLnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 poseStack
-		ARG 2 consumer
+		ARG 2 buffer
 		ARG 3 entity
 		ARG 4 camX
 		ARG 6 camY
@@ -311,7 +311,7 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 9 projectionMatrix
 	METHOD renderShape (Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;Lnet/minecraft/world/phys/shapes/VoxelShape;DDDFFFF)V
 		ARG 0 poseStack
-		ARG 1 consumer
+		ARG 1 buffer
 		ARG 2 shape
 		ARG 3 x
 		ARG 5 y
@@ -335,7 +335,7 @@ CLASS net/minecraft/client/renderer/LevelRenderer
 		ARG 7 camZ
 	METHOD renderVoxelShape (Lcom/mojang/blaze3d/vertex/PoseStack;Lcom/mojang/blaze3d/vertex/VertexConsumer;Lnet/minecraft/world/phys/shapes/VoxelShape;DDDFFFFZ)V
 		ARG 0 poseStack
-		ARG 1 consumer
+		ARG 1 buffer
 		ARG 2 shape
 		ARG 3 x
 		ARG 5 y

@@ -31,6 +31,8 @@ CLASS net/minecraft/client/telemetry/TelemetryProperty
 	CLASS Exporter
 		METHOD apply (Lcom/mojang/authlib/minecraft/TelemetryPropertyContainer;Ljava/lang/String;Ljava/lang/Object;)V
 			ARG 1 container
+			ARG 2 exportKey
+			ARG 3 value
 	CLASS GameMode
 		METHOD <init> (Ljava/lang/String;ILjava/lang/String;I)V
 			ARG 3 key

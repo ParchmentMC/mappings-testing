@@ -83,6 +83,8 @@ CLASS net/minecraft/client/renderer/debug/DebugRenderer
 		ARG 7 z
 		ARG 9 color
 		ARG 10 scale
+		ARG 11 center
+		ARG 12 offset
 		ARG 13 transparent
 	METHOD renderFloatingText (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Ljava/lang/String;IIII)V
 		ARG 0 poseStack

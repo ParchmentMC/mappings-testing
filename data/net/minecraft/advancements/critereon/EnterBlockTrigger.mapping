@@ -7,6 +7,10 @@ CLASS net/minecraft/advancements/critereon/EnterBlockTrigger
 	CLASS TriggerInstance
 		METHOD entersBlock (Lnet/minecraft/world/level/block/Block;)Lnet/minecraft/advancements/Criterion;
 			ARG 0 block
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
+		METHOD lambda$validate$4 (Lnet/minecraft/advancements/critereon/EnterBlockTrigger$TriggerInstance;Lnet/minecraft/core/Holder;)Ljava/util/Optional;
+			ARG 1 block
 		METHOD matches (Lnet/minecraft/world/level/block/state/BlockState;)Z
 			ARG 1 state
 		METHOD validate (Lnet/minecraft/advancements/critereon/EnterBlockTrigger$TriggerInstance;)Lcom/mojang/serialization/DataResult;

@@ -3,7 +3,7 @@ CLASS net/minecraft/client/renderer/entity/LightningBoltRenderer
 		COMMENT Returns the location of an entity's texture.
 		ARG 1 entity
 	METHOD quad (Lorg/joml/Matrix4f;Lcom/mojang/blaze3d/vertex/VertexConsumer;FFIFFFFFFFZZZZ)V
-		ARG 0 matrix
+		ARG 0 pose
 		ARG 1 consumer
 		ARG 2 x1
 		ARG 3 z1

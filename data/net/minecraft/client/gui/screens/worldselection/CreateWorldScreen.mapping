@@ -28,6 +28,7 @@ CLASS net/minecraft/client/gui/screens/worldselection/CreateWorldScreen
 		ARG 1 debug
 	METHOD createNewWorld (Lnet/minecraft/world/level/storage/PrimaryLevelData$SpecialWorldProperty;Lnet/minecraft/core/LayeredRegistryAccess;Lcom/mojang/serialization/Lifecycle;)V
 		ARG 1 specialWorldProperty
+		ARG 2 registryAccess
 		ARG 3 worldGenSettingsLifecycle
 	METHOD createTempDataPackDirFromExistingWorld (Ljava/nio/file/Path;Lnet/minecraft/client/Minecraft;)Ljava/nio/file/Path;
 		ARG 0 datapackDir
@@ -38,6 +39,10 @@ CLASS net/minecraft/client/gui/screens/worldselection/CreateWorldScreen
 		ARG 1 keyCode
 		ARG 2 scanCode
 		ARG 3 modifiers
+	METHOD lambda$init$5 (Lnet/minecraft/client/gui/components/AbstractWidget;)V
+		ARG 1 widget
+	METHOD lambda$tryApplyNewDataPacks$10 (Lnet/minecraft/server/packs/repository/PackRepository;Lnet/minecraft/world/level/WorldDataConfiguration;Ljava/util/function/Consumer;Z)V
+		ARG 4 confirmed
 	METHOD openDataPackSelectionScreen (Lnet/minecraft/world/level/WorldDataConfiguration;)V
 		ARG 1 worldDataConfiguration
 	METHOD openExperimentsScreen (Lnet/minecraft/world/level/WorldDataConfiguration;)V

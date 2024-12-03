@@ -13,6 +13,8 @@ CLASS net/minecraft/client/multiplayer/ClientCommonPacketListenerImpl
 		ARG 1 details
 	METHOD handleCustomPayload (Lnet/minecraft/network/protocol/common/custom/CustomPacketPayload;)V
 		ARG 1 payload
+	METHOD lambda$storeDisconnectionReport$0 (Lnet/minecraft/server/ServerLinks$Entry;)Ljava/util/List;
+		ARG 0 entry
 	METHOD parseResourcePackUrl (Ljava/lang/String;)Ljava/net/URL;
 		ARG 0 url
 	METHOD preparePackPrompt (Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/Component;)Lnet/minecraft/network/chat/Component;
@@ -34,6 +36,8 @@ CLASS net/minecraft/client/multiplayer/ClientCommonPacketListenerImpl
 			ARG 4 requests
 			ARG 5 required
 			ARG 6 prompt
+		METHOD lambda$new$0 (Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/gui/screens/Screen;ZLjava/util/List;Lnet/minecraft/client/multiplayer/ClientCommonPacketListenerImpl;Z)V
+			ARG 5 confirmed
 		METHOD update (Lnet/minecraft/client/Minecraft;Ljava/util/UUID;Ljava/net/URL;Ljava/lang/String;ZLnet/minecraft/network/chat/Component;)Lnet/minecraft/client/multiplayer/ClientCommonPacketListenerImpl$PackConfirmScreen;
 			ARG 1 minecraft
 			ARG 2 id

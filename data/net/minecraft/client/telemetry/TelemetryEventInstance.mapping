@@ -1,3 +1,6 @@
 CLASS net/minecraft/client/telemetry/TelemetryEventInstance
+	METHOD <init> (Lnet/minecraft/client/telemetry/TelemetryEventType;Lnet/minecraft/client/telemetry/TelemetryPropertyMap;)V
+		ARG 1 type
+		ARG 2 properties
 	METHOD export (Lcom/mojang/authlib/minecraft/TelemetrySession;)Lcom/mojang/authlib/minecraft/TelemetryEvent;
 		ARG 1 session

@@ -1,4 +1,6 @@
 CLASS net/minecraft/advancements/critereon/DefaultBlockInteractionTrigger
+	METHOD lambda$trigger$0 (Lnet/minecraft/world/level/storage/loot/LootContext;Lnet/minecraft/advancements/critereon/DefaultBlockInteractionTrigger$TriggerInstance;)Z
+		ARG 1 instance
 	METHOD trigger (Lnet/minecraft/server/level/ServerPlayer;Lnet/minecraft/core/BlockPos;)V
 		ARG 1 player
 		ARG 2 pos

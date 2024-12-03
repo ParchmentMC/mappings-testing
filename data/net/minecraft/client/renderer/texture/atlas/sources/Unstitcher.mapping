@@ -4,9 +4,24 @@ CLASS net/minecraft/client/renderer/texture/atlas/sources/Unstitcher
 		ARG 2 regions
 		ARG 3 xDivisor
 		ARG 5 yDivisor
+	METHOD lambda$static$0 (Lnet/minecraft/client/renderer/texture/atlas/sources/Unstitcher;)Lnet/minecraft/resources/ResourceLocation;
+		ARG 0 unstitcher
+	METHOD lambda$static$1 (Lnet/minecraft/client/renderer/texture/atlas/sources/Unstitcher;)Ljava/util/List;
+		ARG 0 unstitcher
+	METHOD lambda$static$2 (Lnet/minecraft/client/renderer/texture/atlas/sources/Unstitcher;)Ljava/lang/Double;
+		ARG 0 unstitcher
+	METHOD lambda$static$3 (Lnet/minecraft/client/renderer/texture/atlas/sources/Unstitcher;)Ljava/lang/Double;
+		ARG 0 unstitcher
+	METHOD lambda$static$4 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
+	CLASS Region
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
 	CLASS RegionInstance
 		METHOD <init> (Lnet/minecraft/client/renderer/texture/atlas/sources/LazyLoadedImage;Lnet/minecraft/client/renderer/texture/atlas/sources/Unstitcher$Region;DD)V
 			ARG 1 image
 			ARG 2 region
 			ARG 3 xDivisor
 			ARG 5 yDivisor
+		METHOD apply (Lnet/minecraft/client/renderer/texture/atlas/SpriteResourceLoader;)Lnet/minecraft/client/renderer/texture/SpriteContents;
+			ARG 1 loader

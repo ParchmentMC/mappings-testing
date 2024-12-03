@@ -12,6 +12,10 @@ CLASS net/minecraft/client/gui/components/SubtitleOverlay
 			ARG 1 location
 		METHOD isAudibleFrom (Lnet/minecraft/world/phys/Vec3;)Z
 			ARG 1 location
+		METHOD lambda$getClosest$0 (Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/client/gui/components/SubtitleOverlay$SoundPlayedAt;)D
+			ARG 1 sound
+		METHOD lambda$purgeOldInstances$2 (JDLnet/minecraft/client/gui/components/SubtitleOverlay$SoundPlayedAt;)Z
+			ARG 4 sound
 		METHOD purgeOldInstances (D)V
 			ARG 1 displayTime
 		METHOD refresh (Lnet/minecraft/world/phys/Vec3;)V

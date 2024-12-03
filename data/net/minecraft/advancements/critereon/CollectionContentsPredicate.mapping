@@ -12,5 +12,7 @@ CLASS net/minecraft/advancements/critereon/CollectionContentsPredicate
 		METHOD test (Ljava/lang/Iterable;)Z
 			ARG 1 contents
 	CLASS Multiple
+		METHOD lambda$test$0 (Ljava/lang/Object;Ljava/util/function/Predicate;)Z
+			ARG 1 value
 		METHOD test (Ljava/lang/Iterable;)Z
 			ARG 1 contents

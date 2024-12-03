@@ -3,8 +3,22 @@ CLASS net/minecraft/client/renderer/texture/atlas/sources/PalettedPermutations
 		ARG 1 textures
 		ARG 2 paletteKey
 		ARG 3 permutations
+	METHOD createPaletteMapping ([I[I)Ljava/util/function/IntUnaryOperator;
+		ARG 0 palette1
+		ARG 1 palette2
 	METHOD lambda$createPaletteMapping$7 (Lit/unimi/dsi/fastutil/ints/Int2IntMap;I)I
 		ARG 1 color
+	METHOD lambda$static$0 (Lnet/minecraft/client/renderer/texture/atlas/sources/PalettedPermutations;)Ljava/util/List;
+		ARG 0 palettedPermutations
+	METHOD lambda$static$1 (Lnet/minecraft/client/renderer/texture/atlas/sources/PalettedPermutations;)Lnet/minecraft/resources/ResourceLocation;
+		ARG 0 palettedPermutations
+	METHOD lambda$static$2 (Lnet/minecraft/client/renderer/texture/atlas/sources/PalettedPermutations;)Ljava/util/Map;
+		ARG 0 palettedPermutations
+	METHOD lambda$static$3 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	METHOD loadPaletteEntryFromImage (Lnet/minecraft/server/packs/resources/ResourceManager;Lnet/minecraft/resources/ResourceLocation;)[I
 		ARG 0 resourceMananger
 		ARG 1 palette
+	CLASS PalettedSpriteSupplier
+		METHOD apply (Lnet/minecraft/client/renderer/texture/atlas/SpriteResourceLoader;)Lnet/minecraft/client/renderer/texture/SpriteContents;
+			ARG 1 loader

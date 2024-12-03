@@ -30,6 +30,10 @@ CLASS net/minecraft/advancements/critereon/StatePropertiesPredicate
 			ARG 1 property
 			ARG 2 value
 	CLASS ValueMatcher
+		METHOD lambda$static$0 (Lnet/minecraft/advancements/critereon/StatePropertiesPredicate$ValueMatcher;)Lcom/mojang/datafixers/util/Either;
+			ARG 0 value
+		METHOD lambda$static$1 (Lnet/minecraft/advancements/critereon/StatePropertiesPredicate$ValueMatcher;)Lcom/mojang/datafixers/util/Either;
+			ARG 0 value
 		METHOD match (Lnet/minecraft/world/level/block/state/StateHolder;Lnet/minecraft/world/level/block/state/properties/Property;)Z
 			ARG 1 stateHolder
 			ARG 2 property

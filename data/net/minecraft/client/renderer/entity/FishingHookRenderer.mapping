@@ -4,6 +4,7 @@ CLASS net/minecraft/client/renderer/entity/FishingHookRenderer
 		ARG 1 denominator
 	METHOD getPlayerHandPos (Lnet/minecraft/world/entity/player/Player;FF)Lnet/minecraft/world/phys/Vec3;
 		ARG 1 player
+		ARG 2 attackAngle
 		ARG 3 partialTick
 	METHOD getTextureLocation (Lnet/minecraft/world/entity/projectile/FishingHook;)Lnet/minecraft/resources/ResourceLocation;
 		COMMENT Returns the location of an entity's texture.

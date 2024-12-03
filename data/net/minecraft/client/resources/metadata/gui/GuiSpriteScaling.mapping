@@ -7,6 +7,8 @@ CLASS net/minecraft/client/resources/metadata/gui/GuiSpriteScaling
 			ARG 3 key
 			ARG 4 codec
 	CLASS NineSlice
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
 		METHOD validate (Lnet/minecraft/client/resources/metadata/gui/GuiSpriteScaling$NineSlice;)Lcom/mojang/serialization/DataResult;
 			ARG 0 nineSlice
 		CLASS Border
@@ -16,3 +18,5 @@ CLASS net/minecraft/client/resources/metadata/gui/GuiSpriteScaling
 				ARG 0 nineSliceBorder
 			METHOD lambda$static$3 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 				ARG 0 instance
+			METHOD lambda$static$4 (Lnet/minecraft/client/resources/metadata/gui/GuiSpriteScaling$NineSlice$Border;)Lcom/mojang/datafixers/util/Either;
+				ARG 0 value

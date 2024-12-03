@@ -9,7 +9,7 @@ CLASS net/minecraft/client/renderer/FogRenderer
 		ARG 4 y
 		ARG 5 z
 	METHOD setupColor (Lnet/minecraft/client/Camera;FLnet/minecraft/client/multiplayer/ClientLevel;IF)V
-		ARG 0 activeRenderInfo
+		ARG 0 camera
 		ARG 1 partialTicks
 		ARG 2 level
 		ARG 3 renderDistanceChunks
@@ -27,11 +27,14 @@ CLASS net/minecraft/client/renderer/FogRenderer
 		METHOD getModifiedVoidDarkness (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/effect/MobEffectInstance;FF)F
 			ARG 1 entity
 			ARG 2 effectInstance
+			ARG 3 fogginess
 			ARG 4 partialTick
 		METHOD isEnabled (Lnet/minecraft/world/entity/LivingEntity;F)Z
 			ARG 1 entity
+			ARG 2 partialTick
 		METHOD setupFog (Lnet/minecraft/client/renderer/FogRenderer$FogData;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/effect/MobEffectInstance;FF)V
 			ARG 1 fogData
 			ARG 2 entity
 			ARG 3 effectInstance
 			ARG 4 farPlaneDistance
+			ARG 5 partialTick

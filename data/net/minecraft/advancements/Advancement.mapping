@@ -27,6 +27,9 @@ CLASS net/minecraft/advancements/Advancement
 		ARG 0 instance
 	METHOD lambda$validate$6 (Lnet/minecraft/advancements/Advancement;Lnet/minecraft/advancements/AdvancementRequirements;)Lnet/minecraft/advancements/Advancement;
 		ARG 1 requirements
+	METHOD lambda$validate$9 (Lnet/minecraft/util/ProblemReporter;Lnet/minecraft/core/HolderGetter$Provider;Ljava/lang/String;Lnet/minecraft/advancements/Criterion;)V
+		ARG 2 name
+		ARG 3 criterion
 	METHOD name (Lnet/minecraft/advancements/AdvancementHolder;)Lnet/minecraft/network/chat/Component;
 		ARG 0 advancement
 	METHOD read (Lnet/minecraft/network/RegistryFriendlyByteBuf;)Lnet/minecraft/advancements/Advancement;
