@@ -1,0 +1,5 @@
+CLASS net/minecraft/world/item/crafting/RecipeBookCategories
+	METHOD bootstrap (Lnet/minecraft/core/Registry;)Lnet/minecraft/world/item/crafting/RecipeBookCategory;
+		ARG 0 registry
+	METHOD register (Ljava/lang/String;)Lnet/minecraft/world/item/crafting/RecipeBookCategory;
+		ARG 0 name

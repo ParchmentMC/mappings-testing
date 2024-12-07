@@ -13,6 +13,7 @@ CLASS net/minecraft/util/datafix/fixes/BitStorageAlignFix
 	METHOD updateHeightmaps (Lcom/mojang/datafixers/Typed;)Lcom/mojang/datafixers/Typed;
 		ARG 1 data
 	METHOD updateSections (Lcom/mojang/datafixers/OpticFinder;Lcom/mojang/datafixers/OpticFinder;Lcom/mojang/datafixers/OpticFinder;Lcom/mojang/datafixers/Typed;)Lcom/mojang/datafixers/Typed;
-		ARG 0 sections
-		ARG 2 palette
+		ARG 0 sectionsFinder
+		ARG 1 sectionElementFinder
+		ARG 2 paletteFinder
 		ARG 3 data

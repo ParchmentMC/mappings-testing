@@ -58,6 +58,11 @@ CLASS net/minecraft/gametest/framework/StructureUtils
 		ARG 0 rotationSteps
 	METHOD getRotationStepsForRotation (Lnet/minecraft/world/level/block/Rotation;)I
 		ARG 0 rotation
+	METHOD getStartCorner (Lnet/minecraft/gametest/framework/GameTestInfo;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Rotation;Lnet/minecraft/server/level/ServerLevel;)Lnet/minecraft/core/BlockPos;
+		ARG 0 gameTestInfo
+		ARG 1 pos
+		ARG 2 rotation
+		ARG 3 level
 	METHOD getStructureBoundingBox (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Vec3i;Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/levelgen/structure/BoundingBox;
 		ARG 0 pos
 		ARG 1 offset

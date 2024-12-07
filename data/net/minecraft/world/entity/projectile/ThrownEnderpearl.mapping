@@ -1,7 +1,8 @@
 CLASS net/minecraft/world/entity/projectile/ThrownEnderpearl
-	METHOD <init> (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;)V
+	METHOD <init> (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;)V
 		ARG 1 level
-		ARG 2 shooter
+		ARG 2 owner
+		ARG 3 item
 	METHOD isAllowedToTeleportOwner (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/level/Level;)Z
 		ARG 0 entity
 		ARG 1 level

@@ -1,0 +1,6 @@
+CLASS com/mojang/blaze3d/platform/FramerateLimitTracker
+	METHOD <init> (Lnet/minecraft/client/Options;Lnet/minecraft/client/Minecraft;)V
+		ARG 1 options
+		ARG 2 minecraft
+	METHOD setFramerateLimit (I)V
+		ARG 1 framerateLimit

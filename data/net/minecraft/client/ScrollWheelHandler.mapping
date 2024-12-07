@@ -1,0 +1,8 @@
+CLASS net/minecraft/client/ScrollWheelHandler
+	METHOD getNextScrollWheelSelection (DII)I
+		ARG 0 yOffset
+		ARG 2 selected
+		ARG 3 selectionSize
+	METHOD onMouseScroll (DD)Lorg/joml/Vector2i;
+		ARG 1 xOffset
+		ARG 3 yOffset

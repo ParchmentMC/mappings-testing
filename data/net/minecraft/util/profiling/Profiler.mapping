@@ -1,0 +1,7 @@
+CLASS net/minecraft/util/profiling/Profiler
+	METHOD decorateFiller (Lnet/minecraft/util/profiling/ProfilerFiller;)Lnet/minecraft/util/profiling/ProfilerFiller;
+		ARG 0 filler
+	METHOD startUsing (Lnet/minecraft/util/profiling/ProfilerFiller;)V
+		ARG 0 profiler
+	METHOD use (Lnet/minecraft/util/profiling/ProfilerFiller;)Lnet/minecraft/util/profiling/Profiler$Scope;
+		ARG 0 profiler

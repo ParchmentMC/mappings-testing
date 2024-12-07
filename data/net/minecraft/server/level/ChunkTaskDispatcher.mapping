@@ -1,0 +1,16 @@
+CLASS net/minecraft/server/level/ChunkTaskDispatcher
+	METHOD <init> (Lnet/minecraft/util/thread/TaskScheduler;Ljava/util/concurrent/Executor;)V
+		ARG 1 executor
+		ARG 2 dispatcher
+	METHOD onRelease (J)V
+		ARG 1 chunkPos
+	METHOD release (JLjava/lang/Runnable;Z)V
+		ARG 1 chunkPos
+		ARG 3 afterRelease
+		ARG 4 fullClear
+	METHOD scheduleForExecution (Lnet/minecraft/server/level/ChunkTaskPriorityQueue$TasksForChunk;)V
+		ARG 1 tasks
+	METHOD submit (Ljava/lang/Runnable;JLjava/util/function/IntSupplier;)V
+		ARG 1 task
+		ARG 2 chunkPos
+		ARG 4 queueLevelSupplier

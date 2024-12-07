@@ -1,0 +1,3 @@
+CLASS net/minecraft/data/models/EquipmentModelProvider
+	METHOD <init> (Lnet/minecraft/data/PackOutput;)V
+		ARG 1 packOutput

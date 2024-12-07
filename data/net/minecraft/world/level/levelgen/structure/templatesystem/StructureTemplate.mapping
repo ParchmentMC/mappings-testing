@@ -52,6 +52,12 @@ CLASS net/minecraft/world/level/levelgen/structure/templatesystem/StructureTempl
 	METHOD getBoundingBox (Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/levelgen/structure/BoundingBox;
 		ARG 1 settings
 		ARG 2 startPos
+	METHOD getJigsaws (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Rotation;)Ljava/util/List;
+		ARG 1 pos
+		ARG 2 rotation
+	METHOD getJointType (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/entity/JigsawBlockEntity$JointType;
+		ARG 0 tag
+		ARG 1 state
 	METHOD getSize (Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/core/Vec3i;
 		ARG 1 rotation
 	METHOD getZeroPositionWithTransform (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Mirror;Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/core/BlockPos;
@@ -64,8 +70,21 @@ CLASS net/minecraft/world/level/levelgen/structure/templatesystem/StructureTempl
 		ARG 2 rotation
 		ARG 3 sizeX
 		ARG 4 sizeZ
+	METHOD lambda$buildInfoList$0 (Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate$StructureBlockInfo;)I
+		ARG 0 structureBlockInfo
+	METHOD lambda$buildInfoList$1 (Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate$StructureBlockInfo;)I
+		ARG 0 structureBlockInfo
+	METHOD lambda$buildInfoList$2 (Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate$StructureBlockInfo;)I
+		ARG 0 structureBlockInfo
 	METHOD lambda$fillEntityList$3 (Lnet/minecraft/world/entity/Entity;)Z
 		ARG 0 entity
+	METHOD lambda$placeEntities$5 (Lnet/minecraft/world/level/block/Rotation;Lnet/minecraft/world/level/block/Mirror;Lnet/minecraft/world/phys/Vec3;ZLnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/world/entity/Entity;)V
+		ARG 5 entity
+	METHOD lambda$updateShapeAtEdge$4 (Lnet/minecraft/core/BlockPos$MutableBlockPos;IIILnet/minecraft/core/BlockPos$MutableBlockPos;Lnet/minecraft/world/level/LevelAccessor;ILnet/minecraft/core/Direction;III)V
+		ARG 7 direction
+		ARG 8 faceX
+		ARG 9 faceY
+		ARG 10 faceZ
 	METHOD load (Lnet/minecraft/core/HolderGetter;Lnet/minecraft/nbt/CompoundTag;)V
 		ARG 1 blockGetter
 		ARG 2 tag
@@ -129,6 +148,8 @@ CLASS net/minecraft/world/level/levelgen/structure/templatesystem/StructureTempl
 			ARG 1 blocks
 		METHOD blocks (Lnet/minecraft/world/level/block/Block;)Ljava/util/List;
 			ARG 1 block
+		METHOD lambda$blocks$0 (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate$StructureBlockInfo;)Z
+			ARG 1 structureBlockInfo
 	CLASS SimplePalette
 		METHOD addMapping (Lnet/minecraft/world/level/block/state/BlockState;I)V
 			ARG 1 state
@@ -137,6 +158,11 @@ CLASS net/minecraft/world/level/levelgen/structure/templatesystem/StructureTempl
 			ARG 1 state
 		METHOD stateFor (I)Lnet/minecraft/world/level/block/state/BlockState;
 			ARG 1 id
+	CLASS JigsawBlockInfo
+		METHOD of (Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate$StructureBlockInfo;)Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate$JigsawBlockInfo;
+			ARG 0 structureBlockInfo
+		METHOD withInfo (Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate$StructureBlockInfo;)Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate$JigsawBlockInfo;
+			ARG 1 info
 	CLASS StructureBlockInfo
 		METHOD <init> (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/nbt/CompoundTag;)V
 			ARG 1 pos

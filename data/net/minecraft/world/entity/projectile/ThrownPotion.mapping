@@ -1,17 +1,24 @@
 CLASS net/minecraft/world/entity/projectile/ThrownPotion
-	METHOD <init> (Lnet/minecraft/world/level/Level;DDD)V
+	METHOD <init> (Lnet/minecraft/world/level/Level;DDDLnet/minecraft/world/item/ItemStack;)V
 		ARG 1 level
 		ARG 2 x
 		ARG 4 y
 		ARG 6 z
-	METHOD <init> (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;)V
+		ARG 8 item
+	METHOD <init> (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;)V
 		ARG 1 level
-		ARG 2 shooter
-	METHOD applySplash (Ljava/lang/Iterable;Lnet/minecraft/world/entity/Entity;)V
-		ARG 1 effects
-		ARG 2 entity
+		ARG 2 owner
+		ARG 3 item
+	METHOD applySplash (Lnet/minecraft/server/level/ServerLevel;Ljava/lang/Iterable;Lnet/minecraft/world/entity/Entity;)V
+		ARG 1 level
+		ARG 2 effects
+		ARG 3 entity
+	METHOD applyWater (Lnet/minecraft/server/level/ServerLevel;)V
+		ARG 1 level
 	METHOD dowseFire (Lnet/minecraft/core/BlockPos;)V
 		ARG 1 pos
+	METHOD lambda$static$0 (Lnet/minecraft/world/entity/LivingEntity;)Z
+		ARG 0 entity
 	METHOD makeAreaOfEffectCloud (Lnet/minecraft/world/item/alchemy/PotionContents;)V
 		ARG 1 potionContents
 	METHOD onHit (Lnet/minecraft/world/phys/HitResult;)V

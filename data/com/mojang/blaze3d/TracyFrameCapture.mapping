@@ -1,0 +1,6 @@
+CLASS com/mojang/blaze3d/TracyFrameCapture
+	METHOD capture (Lcom/mojang/blaze3d/pipeline/RenderTarget;)V
+		ARG 1 renderTarget
+	METHOD resize (II)V
+		ARG 1 width
+		ARG 2 height

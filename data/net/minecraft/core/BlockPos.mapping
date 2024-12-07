@@ -29,6 +29,8 @@ CLASS net/minecraft/core/BlockPos
 	METHOD betweenClosed (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;)Ljava/lang/Iterable;
 		ARG 0 firstPos
 		ARG 1 secondPos
+	METHOD betweenClosed (Lnet/minecraft/world/phys/AABB;)Ljava/lang/Iterable;
+		ARG 0 box
 	METHOD betweenClosedStream (IIIIII)Ljava/util/stream/Stream;
 		ARG 0 minX
 		ARG 1 minY

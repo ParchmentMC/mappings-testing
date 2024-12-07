@@ -1,0 +1,17 @@
+CLASS net/minecraft/server/commands/RotateCommand
+	METHOD lambda$register$1 (Lcom/mojang/brigadier/context/CommandContext;)I
+		ARG 0 context
+	METHOD lambda$register$2 (Lcom/mojang/brigadier/context/CommandContext;)I
+		ARG 0 context
+	METHOD lambda$register$3 (Lcom/mojang/brigadier/context/CommandContext;)I
+		ARG 0 context
+	METHOD register (Lcom/mojang/brigadier/CommandDispatcher;)V
+		ARG 0 dispatcher
+	METHOD rotate (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/commands/arguments/coordinates/Coordinates;)I
+		ARG 0 source
+		ARG 1 entity
+		ARG 2 coordinates
+	METHOD rotate (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/server/commands/LookAt;)I
+		ARG 0 source
+		ARG 1 entity
+		ARG 2 lookAt

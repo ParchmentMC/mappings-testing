@@ -1,0 +1,13 @@
+CLASS net/minecraft/client/resources/model/ModelDiscovery
+	METHOD <init> (Ljava/util/Map;Lnet/minecraft/client/resources/model/UnbakedModel;)V
+		ARG 1 inputModels
+		ARG 2 missingModel
+	METHOD getBlockModel (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/resources/model/UnbakedModel;
+		ARG 1 modelLocation
+	METHOD loadBlockModel (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/resources/model/UnbakedModel;
+		ARG 1 modelLocation
+	METHOD registerStandardModels (Lnet/minecraft/client/resources/model/BlockStateModelLoader$LoadedModels;)V
+		ARG 1 loadedModels
+	METHOD registerTopModel (Lnet/minecraft/client/resources/model/ModelResourceLocation;Lnet/minecraft/client/resources/model/UnbakedModel;)V
+		ARG 1 id
+		ARG 2 model

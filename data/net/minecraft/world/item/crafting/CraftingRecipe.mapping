@@ -1,0 +1,5 @@
+CLASS net/minecraft/world/item/crafting/CraftingRecipe
+	METHOD defaultCraftingReminder (Lnet/minecraft/world/item/crafting/CraftingInput;)Lnet/minecraft/core/NonNullList;
+		ARG 0 input
+	METHOD getRemainingItems (Lnet/minecraft/world/item/crafting/CraftingInput;)Lnet/minecraft/core/NonNullList;
+		ARG 1 input

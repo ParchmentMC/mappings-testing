@@ -2,3 +2,5 @@ CLASS net/minecraft/world/level/block/DropExperienceBlock
 	METHOD <init> (Lnet/minecraft/util/valueproviders/IntProvider;Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
 		ARG 1 xpRange
 		ARG 2 properties
+	METHOD lambda$static$1 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

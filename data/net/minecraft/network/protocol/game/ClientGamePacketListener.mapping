@@ -9,8 +9,6 @@ CLASS net/minecraft/network/protocol/game/ClientGamePacketListener
 	METHOD handleAddObjective (Lnet/minecraft/network/protocol/game/ClientboundSetObjectivePacket;)V
 		COMMENT May create a scoreboard objective, remove an objective from the scoreboard or update an objectives' displayname
 		ARG 1 packet
-	METHOD handleAddOrRemoveRecipes (Lnet/minecraft/network/protocol/game/ClientboundRecipePacket;)V
-		ARG 1 packet
 	METHOD handleAnimate (Lnet/minecraft/network/protocol/game/ClientboundAnimatePacket;)V
 		COMMENT Renders a specified animation: Waking up a player, a living entity swinging its currently held item, being hurt or receiving a critical hit by normal or magical means
 		ARG 1 packet
@@ -80,6 +78,8 @@ CLASS net/minecraft/network/protocol/game/ClientGamePacketListener
 		ARG 1 packet
 	METHOD handleEntityLinkPacket (Lnet/minecraft/network/protocol/game/ClientboundSetEntityLinkPacket;)V
 		ARG 1 packet
+	METHOD handleEntityPositionSync (Lnet/minecraft/network/protocol/game/ClientboundEntityPositionSyncPacket;)V
+		ARG 1 packet
 	METHOD handleExplosion (Lnet/minecraft/network/protocol/game/ClientboundExplodePacket;)V
 		COMMENT Initiates a new explosion (sound, particles, drop spawn) for the affected blocks indicated by the packet.
 		ARG 1 packet
@@ -110,6 +110,8 @@ CLASS net/minecraft/network/protocol/game/ClientGamePacketListener
 		COMMENT Updates the worlds MapStorage with the specified MapData for the specified map-identifier and invokes a MapItemRenderer for it
 		ARG 1 packet
 	METHOD handleMerchantOffers (Lnet/minecraft/network/protocol/game/ClientboundMerchantOffersPacket;)V
+		ARG 1 packet
+	METHOD handleMinecartAlongTrack (Lnet/minecraft/network/protocol/game/ClientboundMoveMinecartPacket;)V
 		ARG 1 packet
 	METHOD handleMoveEntity (Lnet/minecraft/network/protocol/game/ClientboundMoveEntityPacket;)V
 		COMMENT Updates the specified entity's position by the specified relative moment and absolute rotation. Note that subclassing of the packet allows for the specification of a subset of this data (e.g. only rel. position, abs. rotation or both).
@@ -146,6 +148,12 @@ CLASS net/minecraft/network/protocol/game/ClientGamePacketListener
 		ARG 1 packet
 	METHOD handleProjectilePowerPacket (Lnet/minecraft/network/protocol/game/ClientboundProjectilePowerPacket;)V
 		ARG 1 packet
+	METHOD handleRecipeBookAdd (Lnet/minecraft/network/protocol/game/ClientboundRecipeBookAddPacket;)V
+		ARG 1 packet
+	METHOD handleRecipeBookRemove (Lnet/minecraft/network/protocol/game/ClientboundRecipeBookRemovePacket;)V
+		ARG 1 packet
+	METHOD handleRecipeBookSettings (Lnet/minecraft/network/protocol/game/ClientboundRecipeBookSettingsPacket;)V
+		ARG 1 packet
 	METHOD handleRemoveEntities (Lnet/minecraft/network/protocol/game/ClientboundRemoveEntitiesPacket;)V
 		ARG 1 packet
 	METHOD handleRemoveMobEffect (Lnet/minecraft/network/protocol/game/ClientboundRemoveMobEffectPacket;)V
@@ -156,6 +164,8 @@ CLASS net/minecraft/network/protocol/game/ClientGamePacketListener
 		ARG 1 packet
 	METHOD handleRotateMob (Lnet/minecraft/network/protocol/game/ClientboundRotateHeadPacket;)V
 		COMMENT Updates the direction in which the specified entity is looking, normally this head rotation is independent of the rotation of the entity itself
+		ARG 1 packet
+	METHOD handleRotatePlayer (Lnet/minecraft/network/protocol/game/ClientboundPlayerRotationPacket;)V
 		ARG 1 packet
 	METHOD handleSelectAdvancementsTab (Lnet/minecraft/network/protocol/game/ClientboundSelectAdvancementsTabPacket;)V
 		ARG 1 packet
@@ -173,12 +183,11 @@ CLASS net/minecraft/network/protocol/game/ClientGamePacketListener
 		ARG 1 packet
 	METHOD handleSetCamera (Lnet/minecraft/network/protocol/game/ClientboundSetCameraPacket;)V
 		ARG 1 packet
-	METHOD handleSetCarriedItem (Lnet/minecraft/network/protocol/game/ClientboundSetCarriedItemPacket;)V
-		COMMENT Updates which hotbar slot of the player is currently selected
-		ARG 1 packet
 	METHOD handleSetChunkCacheCenter (Lnet/minecraft/network/protocol/game/ClientboundSetChunkCacheCenterPacket;)V
 		ARG 1 packet
 	METHOD handleSetChunkCacheRadius (Lnet/minecraft/network/protocol/game/ClientboundSetChunkCacheRadiusPacket;)V
+		ARG 1 packet
+	METHOD handleSetCursorItem (Lnet/minecraft/network/protocol/game/ClientboundSetCursorItemPacket;)V
 		ARG 1 packet
 	METHOD handleSetDisplayObjective (Lnet/minecraft/network/protocol/game/ClientboundSetDisplayObjectivePacket;)V
 		COMMENT Removes or sets the ScoreObjective to be displayed at a particular scoreboard position (list, sidebar, below name)
@@ -196,6 +205,10 @@ CLASS net/minecraft/network/protocol/game/ClientGamePacketListener
 	METHOD handleSetExperience (Lnet/minecraft/network/protocol/game/ClientboundSetExperiencePacket;)V
 		ARG 1 packet
 	METHOD handleSetHealth (Lnet/minecraft/network/protocol/game/ClientboundSetHealthPacket;)V
+		ARG 1 packet
+	METHOD handleSetHeldSlot (Lnet/minecraft/network/protocol/game/ClientboundSetHeldSlotPacket;)V
+		ARG 1 packet
+	METHOD handleSetPlayerInventory (Lnet/minecraft/network/protocol/game/ClientboundSetPlayerInventoryPacket;)V
 		ARG 1 packet
 	METHOD handleSetPlayerTeamPacket (Lnet/minecraft/network/protocol/game/ClientboundSetPlayerTeamPacket;)V
 		COMMENT Updates a team managed by the scoreboard: Create/Remove the team registration, Register/Remove the player-team-memberships, Set team displayname/prefix/suffix and/or whether friendly fire is enabled

@@ -1,0 +1,10 @@
+CLASS net/minecraft/world/entity/vehicle/OldMinecartBehavior
+	METHOD getPos (DDD)Lnet/minecraft/world/phys/Vec3;
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD getPosOffs (DDDD)Lnet/minecraft/world/phys/Vec3;
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+		ARG 7 scale

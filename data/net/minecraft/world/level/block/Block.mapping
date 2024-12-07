@@ -70,8 +70,6 @@ CLASS net/minecraft/world/level/block/Block
 		ARG 1 level
 		ARG 2 pos
 		ARG 3 state
-	METHOD getDescriptionId ()Ljava/lang/String;
-		COMMENT @return the description ID of this block, for use with language files.
 	METHOD getDrops (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/entity/BlockEntity;)Ljava/util/List;
 		ARG 0 state
 		ARG 1 level
@@ -159,12 +157,10 @@ CLASS net/minecraft/world/level/block/Block
 		ARG 3 state
 		ARG 4 placer
 		ARG 5 stack
-	METHOD shouldRenderFace (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;Lnet/minecraft/core/BlockPos;)Z
-		ARG 0 state
-		ARG 1 level
-		ARG 2 offset
-		ARG 3 face
-		ARG 4 pos
+	METHOD shouldRenderFace (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/Direction;)Z
+		ARG 0 currentFace
+		ARG 1 neighboringFace
+		ARG 2 face
 	METHOD spawnDestroyParticles (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
 		ARG 1 level
 		ARG 2 player
@@ -182,9 +178,7 @@ CLASS net/minecraft/world/level/block/Block
 		ARG 2 pos
 		ARG 3 heldItem
 		ARG 4 amount
-	METHOD updateEntityAfterFallOn (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/world/entity/Entity;)V
-		COMMENT Called when an Entity lands on this Block.
-		COMMENT This method is responsible for doing any modification on the motion of the entity that should result from the landing.
+	METHOD updateEntityMovementAfterFallOn (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 level
 		ARG 2 entity
 	METHOD updateFromNeighbourShapes (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
@@ -206,8 +200,7 @@ CLASS net/minecraft/world/level/block/Block
 		ARG 3 pos
 		ARG 4 flags
 		ARG 5 recursionLeft
-	METHOD wasExploded (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/Explosion;)V
-		COMMENT Called when this Block is destroyed by an Explosion
+	METHOD wasExploded (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/Explosion;)V
 		ARG 1 level
 		ARG 2 pos
 		ARG 3 explosion
@@ -219,10 +212,6 @@ CLASS net/minecraft/world/level/block/Block
 	CLASS 2
 		METHOD rehash (I)V
 			ARG 1 newN
-	CLASS BlockStatePairKey
-		METHOD <init> (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/Direction;)V
-			ARG 1 first
-			ARG 2 second
-			ARG 3 direction
+	CLASS ShapePairKey
 		METHOD equals (Ljava/lang/Object;)Z
 			ARG 1 other

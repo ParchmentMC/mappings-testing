@@ -1,0 +1,11 @@
+CLASS net/minecraft/util/profiling/Zone
+	METHOD <init> (Lnet/minecraft/util/profiling/ProfilerFiller;)V
+		ARG 1 profiler
+	METHOD addText (Ljava/lang/String;)Lnet/minecraft/util/profiling/Zone;
+		ARG 1 text
+	METHOD addText (Ljava/util/function/Supplier;)Lnet/minecraft/util/profiling/Zone;
+		ARG 1 text
+	METHOD addValue (J)Lnet/minecraft/util/profiling/Zone;
+		ARG 1 value
+	METHOD setColor (I)Lnet/minecraft/util/profiling/Zone;
+		ARG 1 color

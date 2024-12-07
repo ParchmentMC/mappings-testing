@@ -22,7 +22,10 @@ CLASS net/minecraft/util/datafix/fixes/WorldGenSettingsFix
 		ARG 3 settings
 		ARG 4 biomeNoise
 	METHOD setSpacing (Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;I)V
+		ARG 0 map
+		ARG 1 structure
 		ARG 2 spacing
+		ARG 3 minValue
 	METHOD vanillaBiomeSource (Lcom/mojang/serialization/Dynamic;JZZ)Lcom/mojang/serialization/Dynamic;
 		ARG 0 data
 		ARG 1 seed
@@ -31,6 +34,7 @@ CLASS net/minecraft/util/datafix/fixes/WorldGenSettingsFix
 	METHOD vanillaLevels (Lcom/mojang/serialization/Dynamic;JLcom/mojang/serialization/Dynamic;Z)Ljava/lang/Object;
 		ARG 0 data
 		ARG 1 seed
+		ARG 3 generator
 		ARG 4 caves
 	CLASS StructureFeatureConfiguration
 		METHOD <init> (III)V

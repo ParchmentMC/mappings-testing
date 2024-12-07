@@ -3,5 +3,8 @@ CLASS net/minecraft/client/resources/model/UnbakedModel
 		ARG 1 baker
 		ARG 2 spriteGetter
 		ARG 3 state
-	METHOD resolveParents (Ljava/util/function/Function;)V
+	METHOD resolveDependencies (Lnet/minecraft/client/resources/model/UnbakedModel$Resolver;)V
 		ARG 1 resolver
+	CLASS Resolver
+		METHOD resolve (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/resources/model/UnbakedModel;
+			ARG 1 modelLocation

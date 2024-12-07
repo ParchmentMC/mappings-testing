@@ -1,22 +1,18 @@
 CLASS net/minecraft/client/renderer/entity/LightningBoltRenderer
-	METHOD getTextureLocation (Lnet/minecraft/world/entity/LightningBolt;)Lnet/minecraft/resources/ResourceLocation;
-		COMMENT Returns the location of an entity's texture.
-		ARG 1 entity
 	METHOD quad (Lorg/joml/Matrix4f;Lcom/mojang/blaze3d/vertex/VertexConsumer;FFIFFFFFFFZZZZ)V
-		ARG 0 matrix
-		ARG 1 consumer
+		ARG 0 pose
+		ARG 1 buffer
 		ARG 2 x1
 		ARG 3 z1
-		ARG 4 index
+		ARG 4 sectionY
 		ARG 5 x2
 		ARG 6 z2
 		ARG 7 red
 		ARG 8 green
 		ARG 9 blue
-	METHOD render (Lnet/minecraft/world/entity/LightningBolt;FFLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;I)V
-		ARG 1 entity
-		ARG 2 entityYaw
-		ARG 3 partialTicks
-		ARG 4 poseStack
-		ARG 5 buffer
-		ARG 6 packedLight
+		ARG 10 innerThickness
+		ARG 11 outerThickness
+		ARG 12 addThicknessLeftSideX
+		ARG 13 addThicknessLeftSideZ
+		ARG 14 addThicknessRightSideX
+		ARG 15 addThicknessRightSideZ

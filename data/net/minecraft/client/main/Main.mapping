@@ -1,6 +1,14 @@
 CLASS net/minecraft/client/main/Main
 	METHOD emptyStringToEmptyOptional (Ljava/lang/String;)Ljava/util/Optional;
 		ARG 0 input
+	METHOD hasValidUuid (Ljoptsimple/OptionSpec;Ljoptsimple/OptionSet;Lorg/slf4j/Logger;)Z
+		ARG 0 uuidOption
+		ARG 1 options
+		ARG 2 logger
+	METHOD isUuidValid (Ljoptsimple/OptionSpec;Ljoptsimple/OptionSet;Lorg/slf4j/Logger;)Z
+		ARG 0 uuidOption
+		ARG 1 optionSet
+		ARG 2 logger
 	METHOD main ([Ljava/lang/String;)V
 		ARG 0 args
 	METHOD ofNullable (Ljava/lang/Integer;)Ljava/util/OptionalInt;

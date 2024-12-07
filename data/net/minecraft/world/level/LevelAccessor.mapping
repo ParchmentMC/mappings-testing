@@ -57,16 +57,13 @@ CLASS net/minecraft/world/level/LevelAccessor
 		ARG 2 type
 		ARG 3 pos
 		ARG 4 data
-	METHOD neighborShapeChanged (Lnet/minecraft/core/Direction;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;II)V
+	METHOD neighborShapeChanged (Lnet/minecraft/core/Direction;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;II)V
 		ARG 1 direction
-		ARG 2 queried
-			COMMENT The block state of the current block
-		ARG 3 pos
-			COMMENT The position of the neighbor block
-		ARG 4 offsetPos
-			COMMENT The position of the current block
+		ARG 2 pos
+		ARG 3 neighborPos
+		ARG 4 neighborState
 		ARG 5 flags
-		ARG 6 recursionLevel
+		ARG 6 recursionLeft
 	METHOD playSound (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/core/BlockPos;Lnet/minecraft/sounds/SoundEvent;Lnet/minecraft/sounds/SoundSource;)V
 		ARG 1 player
 		ARG 2 pos
@@ -80,21 +77,3 @@ CLASS net/minecraft/world/level/LevelAccessor
 		ARG 4 source
 		ARG 5 volume
 		ARG 6 pitch
-	METHOD scheduleTick (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Block;I)V
-		ARG 1 pos
-		ARG 2 block
-		ARG 3 delay
-	METHOD scheduleTick (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Block;ILnet/minecraft/world/ticks/TickPriority;)V
-		ARG 1 pos
-		ARG 2 block
-		ARG 3 delay
-		ARG 4 priority
-	METHOD scheduleTick (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/material/Fluid;I)V
-		ARG 1 pos
-		ARG 2 fluid
-		ARG 3 delay
-	METHOD scheduleTick (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/material/Fluid;ILnet/minecraft/world/ticks/TickPriority;)V
-		ARG 1 pos
-		ARG 2 fluid
-		ARG 3 delay
-		ARG 4 priority

@@ -9,6 +9,9 @@ CLASS net/minecraft/world/level/levelgen/feature/treedecorators/TreeDecorator
 			ARG 4 logs
 			ARG 5 leaves
 			ARG 6 roots
+		METHOD checkBlock (Lnet/minecraft/core/BlockPos;Ljava/util/function/Predicate;)Z
+			ARG 1 pos
+			ARG 2 predicate
 		METHOD isAir (Lnet/minecraft/core/BlockPos;)Z
 			ARG 1 pos
 		METHOD placeVine (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/properties/BooleanProperty;)V

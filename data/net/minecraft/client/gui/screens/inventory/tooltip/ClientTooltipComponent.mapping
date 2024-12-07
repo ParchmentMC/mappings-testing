@@ -3,13 +3,17 @@ CLASS net/minecraft/client/gui/screens/inventory/tooltip/ClientTooltipComponent
 		ARG 0 text
 	METHOD create (Lnet/minecraft/world/inventory/tooltip/TooltipComponent;)Lnet/minecraft/client/gui/screens/inventory/tooltip/ClientTooltipComponent;
 		ARG 0 visualTooltipComponent
+	METHOD getHeight (Lnet/minecraft/client/gui/Font;)I
+		ARG 1 font
 	METHOD getWidth (Lnet/minecraft/client/gui/Font;)I
 		ARG 1 font
-	METHOD renderImage (Lnet/minecraft/client/gui/Font;IILnet/minecraft/client/gui/GuiGraphics;)V
+	METHOD renderImage (Lnet/minecraft/client/gui/Font;IIIILnet/minecraft/client/gui/GuiGraphics;)V
 		ARG 1 font
 		ARG 2 x
 		ARG 3 y
-		ARG 4 guiGraphics
+		ARG 4 width
+		ARG 5 height
+		ARG 6 guiGraphics
 	METHOD renderText (Lnet/minecraft/client/gui/Font;IILorg/joml/Matrix4f;Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;)V
 		ARG 1 font
 		ARG 2 mouseX

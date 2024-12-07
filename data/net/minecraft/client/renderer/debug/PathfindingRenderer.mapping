@@ -10,8 +10,11 @@ CLASS net/minecraft/client/renderer/debug/PathfindingRenderer
 		ARG 5 z
 	METHOD renderPath (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/world/level/pathfinder/Path;FZZDDD)V
 		ARG 0 poseStack
-		ARG 1 buffer
+		ARG 1 bufferSource
 		ARG 2 path
+		ARG 3 nodeSize
+		ARG 4 renderDebugNodes
+		ARG 5 renderDebugInfo
 		ARG 6 x
 		ARG 8 y
 		ARG 10 z

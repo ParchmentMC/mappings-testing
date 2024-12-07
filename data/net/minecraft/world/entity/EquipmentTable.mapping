@@ -1,4 +1,7 @@
 CLASS net/minecraft/world/entity/EquipmentTable
+	METHOD <init> (Lnet/minecraft/resources/ResourceKey;F)V
+		ARG 1 lootTable
+		ARG 2 dropChance
 	METHOD createForAllSlots (F)Ljava/util/Map;
 		ARG 0 dropChance
 	METHOD createForAllSlots (Ljava/util/List;F)Ljava/util/Map;

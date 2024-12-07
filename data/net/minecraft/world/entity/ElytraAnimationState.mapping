@@ -1,0 +1,9 @@
+CLASS net/minecraft/world/entity/ElytraAnimationState
+	METHOD <init> (Lnet/minecraft/world/entity/LivingEntity;)V
+		ARG 1 entity
+	METHOD getRotX (F)F
+		ARG 1 partialTick
+	METHOD getRotY (F)F
+		ARG 1 partialTick
+	METHOD getRotZ (F)F
+		ARG 1 partialTick

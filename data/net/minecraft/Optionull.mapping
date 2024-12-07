@@ -36,3 +36,6 @@ CLASS net/minecraft/Optionull
 		ARG 0 value
 		ARG 1 mapper
 		ARG 2 supplier
+	METHOD orElse (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+		ARG 0 value
+		ARG 1 defaultValue

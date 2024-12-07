@@ -117,6 +117,8 @@ CLASS net/minecraft/client/gui/components/AbstractSelectionList
 		ARG 1 scroll
 	METHOD setSelected (Lnet/minecraft/client/gui/components/AbstractSelectionList$Entry;)V
 		ARG 1 selected
+	METHOD setSelectedIndex (I)V
+		ARG 1 selected
 	METHOD updateScrollingState (DDI)V
 		ARG 1 mouseX
 		ARG 3 mouseY

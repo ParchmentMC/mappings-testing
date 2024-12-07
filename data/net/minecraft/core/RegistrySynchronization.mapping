@@ -1,4 +1,6 @@
 CLASS net/minecraft/core/RegistrySynchronization
+	METHOD isNetworkable (Lnet/minecraft/resources/ResourceKey;)Z
+		ARG 0 registryKey
 	METHOD lambda$ownedNetworkableRegistries$4 (Lnet/minecraft/core/RegistryAccess$RegistryEntry;)Z
 		ARG 0 registry
 	METHOD lambda$packRegistries$0 (Lcom/mojang/serialization/DynamicOps;Lnet/minecraft/core/RegistryAccess;Ljava/util/Set;Ljava/util/function/BiConsumer;Lnet/minecraft/resources/RegistryDataLoader$RegistryData;)V

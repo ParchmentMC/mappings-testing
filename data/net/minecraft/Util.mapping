@@ -1,7 +1,51 @@
 CLASS net/minecraft/Util
 	METHOD allOf (Ljava/util/List;)Ljava/util/function/Predicate;
 		ARG 0 predicates
+	METHOD allOf (Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+		ARG 0 predicate
+	METHOD allOf (Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+		ARG 0 predicate1
+		ARG 1 predicate2
+	METHOD allOf (Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+		ARG 0 predicate1
+		ARG 1 predicate2
+		ARG 2 predicate3
+	METHOD allOf (Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+		ARG 0 predicate1
+		ARG 1 predicate2
+		ARG 2 predicate3
+		ARG 3 predicate4
+	METHOD allOf (Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+		ARG 0 predicate1
+		ARG 1 predicate2
+		ARG 2 predicate3
+		ARG 3 predicate4
+		ARG 4 predicate5
+	METHOD allOf ([Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+		ARG 0 predicates
 	METHOD anyOf (Ljava/util/List;)Ljava/util/function/Predicate;
+		ARG 0 predicates
+	METHOD anyOf (Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+		ARG 0 predicate
+	METHOD anyOf (Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+		ARG 0 predicate1
+		ARG 1 predicate2
+	METHOD anyOf (Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+		ARG 0 predicate1
+		ARG 1 predicate2
+		ARG 2 predicate3
+	METHOD anyOf (Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+		ARG 0 predicate1
+		ARG 1 predicate2
+		ARG 2 predicate3
+		ARG 3 predicate4
+	METHOD anyOf (Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
+		ARG 0 predicate1
+		ARG 1 predicate2
+		ARG 2 predicate3
+		ARG 3 predicate4
+		ARG 4 predicate5
+	METHOD anyOf ([Ljava/util/function/Predicate;)Ljava/util/function/Predicate;
 		ARG 0 predicates
 	METHOD blockUntilDone (Ljava/util/function/Function;)Ljava/util/concurrent/CompletableFuture;
 		ARG 0 task
@@ -91,6 +135,8 @@ CLASS net/minecraft/Util
 		ARG 0 width
 		ARG 1 height
 		ARG 2 list
+	METHOD lambda$getVmArguments$19 (Ljava/lang/String;)Z
+		ARG 0 argument
 	METHOD lastOf (Ljava/util/List;)Ljava/lang/Object;
 		ARG 0 list
 	METHOD logAndPauseIfInIde (Ljava/lang/String;)V
@@ -106,9 +152,12 @@ CLASS net/minecraft/Util
 	METHOD makeDescriptionId (Ljava/lang/String;Lnet/minecraft/resources/ResourceLocation;)Ljava/lang/String;
 		ARG 0 type
 		ARG 1 id
-	METHOD makeExecutor (Ljava/lang/String;)Ljava/util/concurrent/ExecutorService;
-		ARG 0 serviceName
-	METHOD makeIoExecutor (Ljava/lang/String;Z)Ljava/util/concurrent/ExecutorService;
+	METHOD makeEnumMap (Ljava/lang/Class;Ljava/util/function/Function;)Ljava/util/EnumMap;
+		ARG 0 enumClass
+		ARG 1 valueGetter
+	METHOD makeExecutor (Ljava/lang/String;)Lnet/minecraft/TracingExecutor;
+		ARG 0 name
+	METHOD makeIoExecutor (Ljava/lang/String;Z)Lnet/minecraft/TracingExecutor;
 		ARG 0 name
 		ARG 1 daemon
 	METHOD memoize (Ljava/util/function/BiFunction;)Ljava/util/function/BiFunction;
@@ -142,6 +191,9 @@ CLASS net/minecraft/Util
 		ARG 0 type
 		ARG 1 data
 		ARG 2 partial
+	METHOD runNamed (Ljava/lang/Runnable;Ljava/lang/String;)V
+		ARG 0 task
+		ARG 1 name
 	METHOD runWithRetries (ILjava/lang/String;[Ljava/util/function/BooleanSupplier;)Z
 		ARG 0 maxTries
 		ARG 1 actionName
@@ -154,6 +206,7 @@ CLASS net/minecraft/Util
 		ARG 0 current
 		ARG 1 latest
 		ARG 2 oldBackup
+		ARG 3 restore
 	METHOD sanitizeName (Ljava/lang/String;Lnet/minecraft/CharPredicate;)Ljava/lang/String;
 		ARG 0 fileName
 		ARG 1 characterValidator
@@ -175,8 +228,6 @@ CLASS net/minecraft/Util
 	METHOD shuffledCopy ([Ljava/lang/Object;Lnet/minecraft/util/RandomSource;)Ljava/util/List;
 		ARG 0 array
 		ARG 1 random
-	METHOD shutdownExecutor (Ljava/util/concurrent/ExecutorService;)V
-		ARG 0 service
 	METHOD singleKeyCache (Ljava/util/function/Function;)Lnet/minecraft/util/SingleKeyCache;
 		ARG 0 computeValue
 	METHOD throwAsRuntime (Ljava/lang/Throwable;)V
@@ -187,12 +238,6 @@ CLASS net/minecraft/Util
 	METHOD toShuffledList (Ljava/util/stream/Stream;Lnet/minecraft/util/RandomSource;)Ljava/util/List;
 		ARG 0 stream
 		ARG 1 random
-	METHOD wrapThreadWithTaskName (Ljava/lang/String;Ljava/lang/Runnable;)Ljava/lang/Runnable;
-		ARG 0 name
-		ARG 1 task
-	METHOD wrapThreadWithTaskName (Ljava/lang/String;Ljava/util/function/Supplier;)Ljava/util/function/Supplier;
-		ARG 0 name
-		ARG 1 task
 	METHOD writeAndReadTypedOrThrow (Lcom/mojang/datafixers/Typed;Lcom/mojang/datafixers/types/Type;Ljava/util/function/UnaryOperator;)Lcom/mojang/datafixers/Typed;
 		ARG 0 typed
 		ARG 1 type

@@ -1,0 +1,3 @@
+CLASS net/minecraft/network/protocol/game/ClientboundMoveMinecartPacket
+	METHOD getEntity (Lnet/minecraft/world/level/Level;)Lnet/minecraft/world/entity/Entity;
+		ARG 1 level

@@ -1,0 +1,14 @@
+CLASS com/mojang/realmsclient/client/worldupload/RealmsUploadWorldPacker
+	METHOD <init> (Ljava/nio/file/Path;Ljava/util/function/BooleanSupplier;)V
+		ARG 1 directoryToPack
+		ARG 2 isCanceled
+	METHOD addFileToTarGz (Lorg/apache/commons/compress/archivers/tar/TarArchiveOutputStream;Ljava/nio/file/Path;Ljava/lang/String;Z)V
+		ARG 1 stream
+		ARG 2 directory
+		ARG 3 prefix
+		ARG 4 isRootDirectory
+	METHOD pack (Ljava/nio/file/Path;Ljava/util/function/BooleanSupplier;)Ljava/io/File;
+		ARG 0 directoryToPack
+		ARG 1 isCanceled
+	METHOD verifyBelowSizeLimit (J)V
+		ARG 1 size

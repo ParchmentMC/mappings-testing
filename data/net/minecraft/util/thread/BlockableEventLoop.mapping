@@ -9,6 +9,8 @@ CLASS net/minecraft/util/thread/BlockableEventLoop
 		ARG 1 task
 	METHOD executeIfPossible (Ljava/lang/Runnable;)V
 		ARG 1 task
+	METHOD isNonRecoverable (Ljava/lang/Throwable;)Z
+		ARG 0 error
 	METHOD managedBlock (Ljava/util/function/BooleanSupplier;)V
 		COMMENT Drive the executor until the given BooleanSupplier returns true
 		ARG 1 isDone
@@ -20,7 +22,3 @@ CLASS net/minecraft/util/thread/BlockableEventLoop
 		ARG 1 supplier
 	METHOD submitAsync (Ljava/lang/Runnable;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 task
-	METHOD tell (Ljava/lang/Runnable;)V
-		ARG 1 task
-	METHOD wrapRunnable (Ljava/lang/Runnable;)Ljava/lang/Runnable;
-		ARG 1 runnable

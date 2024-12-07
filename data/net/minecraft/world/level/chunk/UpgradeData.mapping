@@ -4,6 +4,8 @@ CLASS net/minecraft/world/level/chunk/UpgradeData
 		ARG 2 level
 	METHOD <init> (Lnet/minecraft/world/level/LevelHeightAccessor;)V
 		ARG 1 level
+	METHOD <init> (Lnet/minecraft/world/level/chunk/UpgradeData;)V
+		ARG 1 other
 	METHOD lambda$new$1 (Ljava/lang/String;)Ljava/util/Optional;
 		ARG 0 id
 	METHOD lambda$new$3 (Ljava/lang/String;)Ljava/util/Optional;

@@ -4,6 +4,8 @@ CLASS net/minecraft/world/level/block/state/properties/Property
 		ARG 2 clazz
 	METHOD equals (Ljava/lang/Object;)Z
 		ARG 1 other
+	METHOD getInternalIndex (Ljava/lang/Comparable;)I
+		ARG 1 value
 	METHOD getName (Ljava/lang/Comparable;)Ljava/lang/String;
 		COMMENT @return the name for the given value.
 		ARG 1 value

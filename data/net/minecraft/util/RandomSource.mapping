@@ -21,3 +21,6 @@ CLASS net/minecraft/util/RandomSource
 	METHOD triangle (DD)D
 		ARG 1 center
 		ARG 3 maxDeviation
+	METHOD triangle (FF)F
+		ARG 1 center
+		ARG 2 maxDeviation

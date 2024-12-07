@@ -1,13 +1,14 @@
 CLASS net/minecraft/network/protocol/game/ServerboundMovePlayerPacket
-	METHOD <init> (DDDFFZZZ)V
+	METHOD <init> (DDDFFZZZZ)V
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
 		ARG 7 yRot
 		ARG 8 xRot
 		ARG 9 onGround
-		ARG 10 hasPos
-		ARG 11 hasRot
+		ARG 10 horizontalCollision
+		ARG 11 hasPos
+		ARG 12 hasRot
 	METHOD getX (D)D
 		ARG 1 defaultValue
 	METHOD getXRot (F)F
@@ -21,43 +22,54 @@ CLASS net/minecraft/network/protocol/game/ServerboundMovePlayerPacket
 	METHOD handle (Lnet/minecraft/network/protocol/game/ServerGamePacketListener;)V
 		COMMENT Passes this Packet on to the NetHandler for processing.
 		ARG 1 handler
+	METHOD packFlags (ZZ)I
+		ARG 0 onGround
+		ARG 1 horizontalCollision
+	METHOD unpackHorizontalCollision (I)Z
+		ARG 0 flags
+	METHOD unpackOnGround (I)Z
+		ARG 0 flags
 	CLASS Pos
-		METHOD <init> (DDDZ)V
+		METHOD <init> (DDDZZ)V
 			ARG 1 x
 			ARG 3 y
 			ARG 5 z
 			ARG 7 onGround
+			ARG 8 horizontalCollision
 		METHOD read (Lnet/minecraft/network/FriendlyByteBuf;)Lnet/minecraft/network/protocol/game/ServerboundMovePlayerPacket$Pos;
 			ARG 0 buffer
 		METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
 			COMMENT Writes the raw packet data to the data stream.
 			ARG 1 buffer
 	CLASS Rot
-		METHOD <init> (FFZ)V
+		METHOD <init> (FFZZ)V
 			ARG 1 yRot
 			ARG 2 xRot
 			ARG 3 onGround
+			ARG 4 horizontalCollision
 		METHOD read (Lnet/minecraft/network/FriendlyByteBuf;)Lnet/minecraft/network/protocol/game/ServerboundMovePlayerPacket$Rot;
 			ARG 0 buffer
 		METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
 			COMMENT Writes the raw packet data to the data stream.
 			ARG 1 buffer
 	CLASS PosRot
-		METHOD <init> (DDDFFZ)V
+		METHOD <init> (DDDFFZZ)V
 			ARG 1 x
 			ARG 3 y
 			ARG 5 z
 			ARG 7 yRot
 			ARG 8 xRot
 			ARG 9 onGround
+			ARG 10 horizontalCollision
 		METHOD read (Lnet/minecraft/network/FriendlyByteBuf;)Lnet/minecraft/network/protocol/game/ServerboundMovePlayerPacket$PosRot;
 			ARG 0 buffer
 		METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
 			COMMENT Writes the raw packet data to the data stream.
 			ARG 1 buffer
 	CLASS StatusOnly
-		METHOD <init> (Z)V
+		METHOD <init> (ZZ)V
 			ARG 1 onGround
+			ARG 2 horizontalCollision
 		METHOD read (Lnet/minecraft/network/FriendlyByteBuf;)Lnet/minecraft/network/protocol/game/ServerboundMovePlayerPacket$StatusOnly;
 			ARG 0 buffer
 		METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V

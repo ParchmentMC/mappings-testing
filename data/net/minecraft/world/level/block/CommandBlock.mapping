@@ -4,13 +4,13 @@ CLASS net/minecraft/world/level/block/CommandBlock
 		ARG 2 properties
 	METHOD createBlockStateDefinition (Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V
 		ARG 1 builder
-	METHOD execute (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/BaseCommandBlock;Z)V
+	METHOD execute (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/BaseCommandBlock;Z)V
 		ARG 1 state
 		ARG 2 level
 		ARG 3 pos
 		ARG 4 logic
 		ARG 5 canTrigger
-	METHOD executeChain (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)V
+	METHOD executeChain (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)V
 		ARG 0 level
 		ARG 1 pos
 		ARG 2 direction
@@ -24,16 +24,11 @@ CLASS net/minecraft/world/level/block/CommandBlock
 		ARG 1 context
 	METHOD hasAnalogOutputSignal (Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 1 state
+	METHOD lambda$static$1 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	METHOD mirror (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Mirror;)Lnet/minecraft/world/level/block/state/BlockState;
 		ARG 1 state
 		ARG 2 mirror
-	METHOD neighborChanged (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Block;Lnet/minecraft/core/BlockPos;Z)V
-		ARG 1 state
-		ARG 2 level
-		ARG 3 pos
-		ARG 4 block
-		ARG 5 fromPos
-		ARG 6 isMoving
 	METHOD rotate (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/Rotation;)Lnet/minecraft/world/level/block/state/BlockState;
 		ARG 1 state
 		ARG 2 rotation
@@ -43,3 +38,8 @@ CLASS net/minecraft/world/level/block/CommandBlock
 		ARG 3 state
 		ARG 4 placer
 		ARG 5 stack
+	METHOD setPoweredAndUpdate (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/entity/CommandBlockEntity;Z)V
+		ARG 1 level
+		ARG 2 pos
+		ARG 3 blockEntity
+		ARG 4 powered

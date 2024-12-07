@@ -2,12 +2,19 @@ CLASS net/minecraft/util/datafix/fixes/StructuresBecomeConfiguredFix
 	METHOD <init> (Lcom/mojang/datafixers/schemas/Schema;)V
 		ARG 1 outputSchema
 	METHOD findUpdatedStructureType (Lcom/mojang/serialization/Dynamic;Lcom/mojang/serialization/Dynamic;)Lcom/mojang/serialization/Dynamic;
+		ARG 1 structureName
 		ARG 2 data
 	METHOD fix (Lcom/mojang/serialization/Dynamic;)Lcom/mojang/serialization/Dynamic;
 		ARG 1 data
 	METHOD guessConfiguration (Lcom/mojang/serialization/Dynamic;Lnet/minecraft/util/datafix/fixes/StructuresBecomeConfiguredFix$Conversion;)Ljava/util/Optional;
 		ARG 1 data
 		ARG 2 conversion
+	METHOD lambda$fix$0 (Lcom/mojang/serialization/Dynamic;Lcom/mojang/serialization/Dynamic;)Lcom/mojang/serialization/Dynamic;
+		ARG 2 starts
+	METHOD lambda$fix$1 (Lcom/mojang/serialization/Dynamic;Lcom/mojang/serialization/Dynamic;)Lcom/mojang/serialization/Dynamic;
+		ARG 2 references
+	METHOD lambda$fix$2 (Lcom/mojang/serialization/Dynamic;Lcom/mojang/serialization/Dynamic;)Lcom/mojang/serialization/Dynamic;
+		ARG 2 structures
 	METHOD updateReferences (Lcom/mojang/serialization/Dynamic;Lcom/mojang/serialization/Dynamic;)Lcom/mojang/serialization/Dynamic;
 		ARG 1 references
 		ARG 2 data

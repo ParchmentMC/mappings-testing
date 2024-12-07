@@ -1,0 +1,5 @@
+CLASS com/mojang/realmsclient/client/UploadStatus
+	METHOD onWrite (J)V
+		ARG 1 bytes
+	METHOD setTotalBytes (J)V
+		ARG 1 totalBytes

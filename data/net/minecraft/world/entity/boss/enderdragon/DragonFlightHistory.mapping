@@ -1,0 +1,11 @@
+CLASS net/minecraft/world/entity/boss/enderdragon/DragonFlightHistory
+	METHOD copyFrom (Lnet/minecraft/world/entity/boss/enderdragon/DragonFlightHistory;)V
+		ARG 1 other
+	METHOD get (I)Lnet/minecraft/world/entity/boss/enderdragon/DragonFlightHistory$Sample;
+		ARG 1 index
+	METHOD get (IF)Lnet/minecraft/world/entity/boss/enderdragon/DragonFlightHistory$Sample;
+		ARG 1 index
+		ARG 2 partialTick
+	METHOD record (DF)V
+		ARG 1 y
+		ARG 3 yRot

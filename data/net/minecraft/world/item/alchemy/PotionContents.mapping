@@ -10,6 +10,8 @@ CLASS net/minecraft/world/item/alchemy/PotionContents
 		ARG 1 tooltipAdder
 		ARG 2 durationFactor
 		ARG 3 ticksPerSecond
+	METHOD applyToLivingEntity (Lnet/minecraft/world/entity/LivingEntity;)V
+		ARG 1 entity
 	METHOD createItemStack (Lnet/minecraft/world/item/Item;Lnet/minecraft/core/Holder;)Lnet/minecraft/world/item/ItemStack;
 		ARG 0 item
 		ARG 1 potion
@@ -21,8 +23,15 @@ CLASS net/minecraft/world/item/alchemy/PotionContents
 		ARG 0 potion
 	METHOD getColorOptional (Ljava/lang/Iterable;)Ljava/util/OptionalInt;
 		ARG 0 effects
+	METHOD getName (Ljava/lang/String;)Lnet/minecraft/network/chat/Component;
+		ARG 1 name
 	METHOD is (Lnet/minecraft/core/Holder;)Z
 		ARG 1 potion
+	METHOD lambda$addPotionTooltip$4 (Ljava/util/List;Lnet/minecraft/core/Holder;Lnet/minecraft/world/entity/ai/attributes/AttributeModifier;)V
+		ARG 1 attribute
+		ARG 2 modifier
+	METHOD lambda$getName$1 (Lnet/minecraft/core/Holder;)Ljava/lang/String;
+		ARG 0 potion
 	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 0 instance
 	METHOD withEffectAdded (Lnet/minecraft/world/effect/MobEffectInstance;)Lnet/minecraft/world/item/alchemy/PotionContents;

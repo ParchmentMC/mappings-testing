@@ -10,7 +10,7 @@ CLASS net/minecraft/util/worldupdate/WorldUpgrader
 	METHOD resolveRecreateDirectory (Ljava/nio/file/Path;)Ljava/nio/file/Path;
 		ARG 0 path
 	CLASS AbstractUpgrader
-		METHOD <init> (Lnet/minecraft/util/worldupdate/WorldUpgrader;Lnet/minecraft/util/datafix/DataFixTypes;Ljava/lang/String;Ljava/lang/String;Lnet/minecraft/network/chat/MutableComponent;Lnet/minecraft/network/chat/MutableComponent;)V
+		METHOD <init> (Lnet/minecraft/util/worldupdate/WorldUpgrader;Lnet/minecraft/util/datafix/DataFixTypes;Ljava/lang/String;Ljava/lang/String;Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/Component;)V
 			ARG 2 dataFixType
 			ARG 3 type
 			ARG 4 folderName
@@ -39,7 +39,7 @@ CLASS net/minecraft/util/worldupdate/WorldUpgrader
 			ARG 2 chunkPos
 			ARG 3 dimension
 	CLASS SimpleRegionStorageUpgrader
-		METHOD <init> (Lnet/minecraft/util/worldupdate/WorldUpgrader;Lnet/minecraft/util/datafix/DataFixTypes;Ljava/lang/String;Lnet/minecraft/network/chat/MutableComponent;Lnet/minecraft/network/chat/MutableComponent;)V
+		METHOD <init> (Lnet/minecraft/util/worldupdate/WorldUpgrader;Lnet/minecraft/util/datafix/DataFixTypes;Ljava/lang/String;Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/Component;)V
 			ARG 2 dataFixType
 			ARG 3 type
 			ARG 4 upgradingStatus

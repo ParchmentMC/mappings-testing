@@ -1,11 +1,11 @@
 CLASS net/minecraft/world/item/enchantment/TargetedConditionalEffect
-	METHOD codec (Lcom/mojang/serialization/Codec;Lnet/minecraft/world/level/storage/loot/parameters/LootContextParamSet;)Lcom/mojang/serialization/Codec;
+	METHOD codec (Lcom/mojang/serialization/Codec;Lnet/minecraft/util/context/ContextKeySet;)Lcom/mojang/serialization/Codec;
 		ARG 0 codec
-		ARG 1 params
-	METHOD equipmentDropsCodec (Lcom/mojang/serialization/Codec;Lnet/minecraft/world/level/storage/loot/parameters/LootContextParamSet;)Lcom/mojang/serialization/Codec;
+		ARG 1 contextKeySet
+	METHOD equipmentDropsCodec (Lcom/mojang/serialization/Codec;Lnet/minecraft/util/context/ContextKeySet;)Lcom/mojang/serialization/Codec;
 		ARG 0 codec
-		ARG 1 params
-	METHOD lambda$codec$0 (Lcom/mojang/serialization/Codec;Lnet/minecraft/world/level/storage/loot/parameters/LootContextParamSet;Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 1 contextKeySet
+	METHOD lambda$codec$0 (Lcom/mojang/serialization/Codec;Lnet/minecraft/util/context/ContextKeySet;Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 2 instance
 	METHOD lambda$equipmentDropsCodec$2 (Lnet/minecraft/world/item/enchantment/EnchantmentTarget;)Lcom/mojang/serialization/DataResult;
 		ARG 0 target
@@ -13,7 +13,7 @@ CLASS net/minecraft/world/item/enchantment/TargetedConditionalEffect
 		ARG 0 enchanted
 		ARG 1 effect
 		ARG 2 requirements
-	METHOD lambda$equipmentDropsCodec$4 (Lcom/mojang/serialization/Codec;Lnet/minecraft/world/level/storage/loot/parameters/LootContextParamSet;Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+	METHOD lambda$equipmentDropsCodec$4 (Lcom/mojang/serialization/Codec;Lnet/minecraft/util/context/ContextKeySet;Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 2 instance
 	METHOD matches (Lnet/minecraft/world/level/storage/loot/LootContext;)Z
 		ARG 1 context

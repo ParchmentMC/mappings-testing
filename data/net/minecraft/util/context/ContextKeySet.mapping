@@ -1,0 +1,11 @@
+CLASS net/minecraft/util/context/ContextKeySet
+	METHOD <init> (Ljava/util/Set;Ljava/util/Set;)V
+		ARG 1 required
+		ARG 2 allowed
+	METHOD lambda$toString$0 (Lnet/minecraft/util/context/ContextKey;)Ljava/lang/String;
+		ARG 1 key
+	CLASS Builder
+		METHOD optional (Lnet/minecraft/util/context/ContextKey;)Lnet/minecraft/util/context/ContextKeySet$Builder;
+			ARG 1 key
+		METHOD required (Lnet/minecraft/util/context/ContextKey;)Lnet/minecraft/util/context/ContextKeySet$Builder;
+			ARG 1 key

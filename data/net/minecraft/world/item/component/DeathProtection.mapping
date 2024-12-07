@@ -1,0 +1,6 @@
+CLASS net/minecraft/world/item/component/DeathProtection
+	METHOD applyEffects (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/LivingEntity;)V
+		ARG 1 stack
+		ARG 2 entity
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

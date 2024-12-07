@@ -1,6 +1,8 @@
 CLASS net/minecraft/world/item/enchantment/EnchantmentHelper
 	METHOD canStoreEnchantments (Lnet/minecraft/world/item/ItemStack;)Z
 		ARG 0 stack
+	METHOD createBook (Lnet/minecraft/world/item/enchantment/EnchantmentInstance;)Lnet/minecraft/world/item/ItemStack;
+		ARG 0 enchantmant
 	METHOD doPostAttackEffects (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/damagesource/DamageSource;)V
 		ARG 0 level
 		ARG 1 entity
@@ -10,6 +12,12 @@ CLASS net/minecraft/world/item/enchantment/EnchantmentHelper
 		ARG 1 entity
 		ARG 2 damageSource
 		ARG 3 itemSource
+	METHOD doPostAttackEffectsWithItemSourceOnBreak (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/damagesource/DamageSource;Lnet/minecraft/world/item/ItemStack;Ljava/util/function/Consumer;)V
+		ARG 0 level
+		ARG 1 entity
+		ARG 2 damageSource
+		ARG 3 itemSource
+		ARG 4 onBreak
 	METHOD enchantItem (Lnet/minecraft/util/RandomSource;Lnet/minecraft/world/item/ItemStack;ILjava/util/stream/Stream;)Lnet/minecraft/world/item/ItemStack;
 		ARG 0 random
 		ARG 1 stack
@@ -103,6 +111,9 @@ CLASS net/minecraft/world/item/enchantment/EnchantmentHelper
 		ARG 0 level
 		ARG 1 entity
 		ARG 2 damageSource
+	METHOD lambda$processDurabilityChange$0 (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/item/ItemStack;Lorg/apache/commons/lang3/mutable/MutableFloat;Lnet/minecraft/core/Holder;I)V
+		ARG 3 enchantment
+		ARG 4 enchantmentLevel
 	METHOD modifyArmorEffectiveness (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/damagesource/DamageSource;F)F
 		ARG 0 level
 		ARG 1 tool
@@ -144,10 +155,10 @@ CLASS net/minecraft/world/item/enchantment/EnchantmentHelper
 		ARG 5 pos
 		ARG 6 state
 		ARG 7 onBreak
-	METHOD onProjectileSpawned (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/projectile/AbstractArrow;Ljava/util/function/Consumer;)V
+	METHOD onProjectileSpawned (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/projectile/Projectile;Ljava/util/function/Consumer;)V
 		ARG 0 level
-		ARG 1 firedFromWeapon
-		ARG 2 arrow
+		ARG 1 firedFiredFromWeapon
+		ARG 2 projectile
 		ARG 3 onBreak
 	METHOD pickHighestLevel (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/core/component/DataComponentType;)Ljava/util/Optional;
 		ARG 0 stack

@@ -2,7 +2,7 @@ CLASS net/minecraft/world/level/block/TurtleEggBlock
 	METHOD canBeReplaced (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/item/context/BlockPlaceContext;)Z
 		ARG 1 state
 		ARG 2 useContext
-	METHOD canDestroyEgg (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/Entity;)Z
+	METHOD canDestroyEgg (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/Entity;)Z
 		ARG 1 level
 		ARG 2 entity
 	METHOD createBlockStateDefinition (Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V

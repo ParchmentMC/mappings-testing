@@ -1,0 +1,10 @@
+CLASS net/minecraft/world/level/block/BonemealableFeaturePlacerBlock
+	METHOD <init> (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
+		ARG 1 feature
+		ARG 2 properties
+	METHOD lambda$performBonemeal$2 (Lnet/minecraft/core/Registry;)Ljava/util/Optional;
+		ARG 1 registry
+	METHOD lambda$static$0 (Lnet/minecraft/world/level/block/BonemealableFeaturePlacerBlock;)Lnet/minecraft/resources/ResourceKey;
+		ARG 0 block
+	METHOD lambda$static$1 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

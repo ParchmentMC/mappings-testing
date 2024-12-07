@@ -15,6 +15,8 @@ CLASS net/minecraft/world/entity/projectile/AbstractArrow
 		ARG 5 firedFromWeapon
 	METHOD addAdditionalSaveData (Lnet/minecraft/nbt/CompoundTag;)V
 		ARG 1 compound
+	METHOD addBubbleParticles (Lnet/minecraft/world/phys/Vec3;)V
+		ARG 1 pos
 	METHOD doKnockback (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/damagesource/DamageSource;)V
 		ARG 1 entity
 		ARG 2 damageSource
@@ -36,6 +38,8 @@ CLASS net/minecraft/world/entity/projectile/AbstractArrow
 		COMMENT Whether the arrow has a stream of critical hit particles flying behind it.
 	METHOD isNoPhysics ()Z
 		COMMENT Whether the arrow can noClip
+	METHOD lambda$hitBlockEnchantmentEffects$0 (Lnet/minecraft/world/item/Item;)V
+		ARG 1 item
 	METHOD lerpMotion (DDD)V
 		COMMENT Updates the entity motion clientside, called by packets from the server
 		ARG 1 x
@@ -63,6 +67,8 @@ CLASS net/minecraft/world/entity/projectile/AbstractArrow
 	METHOD setFlag (IZ)V
 		ARG 1 id
 		ARG 2 value
+	METHOD setInGround (Z)V
+		ARG 1 inGround
 	METHOD setNoPhysics (Z)V
 		COMMENT Sets if this arrow can noClip
 		ARG 1 noPhysics
@@ -81,11 +87,11 @@ CLASS net/minecraft/world/entity/projectile/AbstractArrow
 		ARG 5 z
 		ARG 7 velocity
 		ARG 8 inaccuracy
-	METHOD shotFromCrossbow ()Z
-		COMMENT Whether the arrow was shot from a crossbow.
 	METHOD shouldRenderAtSqrDistance (D)Z
 		COMMENT Checks if the entity is in range to render.
 		ARG 1 distance
+	METHOD stepMoveAndHit (Lnet/minecraft/world/phys/BlockHitResult;)V
+		ARG 1 hitResult
 	METHOD tick ()V
 		COMMENT Called to update the entity's position/logic.
 	METHOD tryPickup (Lnet/minecraft/world/entity/player/Player;)Z

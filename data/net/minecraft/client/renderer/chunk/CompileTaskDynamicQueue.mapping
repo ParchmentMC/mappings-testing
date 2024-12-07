@@ -1,0 +1,7 @@
+CLASS net/minecraft/client/renderer/chunk/CompileTaskDynamicQueue
+	METHOD add (Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$RenderSection$CompileTask;)V
+		ARG 1 task
+	METHOD poll (Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$RenderSection$CompileTask;
+		ARG 1 cameraPosition
+	METHOD removeTaskByIndex (I)Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$RenderSection$CompileTask;
+		ARG 1 index

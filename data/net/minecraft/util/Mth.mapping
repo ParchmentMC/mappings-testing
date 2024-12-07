@@ -99,11 +99,6 @@ CLASS net/minecraft/util/Mth
 		ARG 2 inputMax
 		ARG 3 outputMin
 		ARG 4 outputMax
-	METHOD color (FFF)I
-		COMMENT Makes an integer color from the given red, green, and blue float values
-		ARG 0 r
-		ARG 1 g
-		ARG 2 b
 	METHOD cos (F)F
 		COMMENT cos looked up in the sin table with the appropriate offset
 		ARG 0 value
@@ -119,6 +114,8 @@ CLASS net/minecraft/util/Mth
 		COMMENT {@return the absolute of the difference between two angles in degrees}
 		ARG 0 start
 		ARG 1 end
+	METHOD easeInOutSine (F)F
+		ARG 0 value
 	METHOD equal (DD)Z
 		ARG 0 x
 		ARG 2 y
@@ -188,6 +185,9 @@ CLASS net/minecraft/util/Mth
 		ARG 0 xDistance
 		ARG 2 yDistance
 		ARG 4 zDistance
+	METHOD length (FF)F
+		ARG 0 xDistance
+		ARG 1 yDistance
 	METHOD lengthSquared (DD)D
 		ARG 0 xDistance
 		ARG 2 yDistance
@@ -207,6 +207,10 @@ CLASS net/minecraft/util/Mth
 			COMMENT Start value for the lerp
 		ARG 4 end
 			COMMENT End value for the lerp
+	METHOD lerp (DLnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/world/phys/Vec3;
+		ARG 0 delta
+		ARG 2 start
+		ARG 3 end
 	METHOD lerp (FFF)F
 		COMMENT Method for linear interpolation of floats
 		ARG 0 delta
@@ -291,6 +295,8 @@ CLASS net/minecraft/util/Mth
 		ARG 1 lowerBound
 		ARG 2 upperBound
 		ARG 3 steps
+	METHOD packDegrees (F)B
+		ARG 0 degrees
 	METHOD positiveCeilDiv (II)I
 		COMMENT Returns the smallest (closest to negative infinity) int value that is greater than or equal to the algebraic quotient.
 		COMMENT @see java.lang.Math#floorDiv(int, int)
@@ -329,6 +335,10 @@ CLASS net/minecraft/util/Mth
 		COMMENT Linearly interpolates an angle between the start between the start and end values given as degrees.
 		ARG 0 delta
 			COMMENT A value between 0 and 1 that indicates the percentage of the lerp. (0 will give the start value and 1 will give the end value)
+		ARG 1 start
+		ARG 2 end
+	METHOD rotLerpRad (FFF)F
+		ARG 0 delta
 		ARG 1 start
 		ARG 2 end
 	METHOD rotateIfNecessary (FFF)F
@@ -373,6 +383,8 @@ CLASS net/minecraft/util/Mth
 	METHOD triangleWave (FF)F
 		ARG 0 input
 		ARG 1 period
+	METHOD unpackDegrees (B)F
+		ARG 0 degrees
 	METHOD wobble (D)D
 		ARG 0 input
 	METHOD wrapDegrees (D)D
@@ -383,4 +395,6 @@ CLASS net/minecraft/util/Mth
 		ARG 0 value
 	METHOD wrapDegrees (I)I
 		COMMENT Adjust the angle so that its value is in the range [-180;180)
+		ARG 0 angle
+	METHOD wrapDegrees (J)F
 		ARG 0 angle

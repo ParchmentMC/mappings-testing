@@ -29,6 +29,9 @@ CLASS com/mojang/blaze3d/platform/Window
 		ARG 1 window
 		ARG 3 framebufferWidth
 		ARG 4 framebufferHeight
+	METHOD onIconify (JZ)V
+		ARG 1 window
+		ARG 3 iconified
 	METHOD onMove (JII)V
 		ARG 1 window
 		ARG 3 x
@@ -39,8 +42,6 @@ CLASS com/mojang/blaze3d/platform/Window
 		ARG 4 height
 	METHOD setErrorSection (Ljava/lang/String;)V
 		ARG 1 errorSection
-	METHOD setFramerateLimit (I)V
-		ARG 1 limit
 	METHOD setGuiScale (D)V
 		ARG 1 scaleFactor
 	METHOD setHeight (I)V
@@ -54,11 +55,16 @@ CLASS com/mojang/blaze3d/platform/Window
 		ARG 1 title
 	METHOD setWidth (I)V
 		ARG 1 framebufferWidth
+	METHOD setWindowCloseCallback (Ljava/lang/Runnable;)V
+		ARG 1 windowCloseCallback
 	METHOD setWindowed (II)V
 		ARG 1 windowedWidth
 		ARG 2 windowedHeight
-	METHOD updateFullscreen (Z)V
+	METHOD updateDisplay (Lcom/mojang/blaze3d/TracyFrameCapture;)V
+		ARG 1 tracyFrameCapture
+	METHOD updateFullscreen (ZLcom/mojang/blaze3d/TracyFrameCapture;)V
 		ARG 1 vsyncEnabled
+		ARG 2 tracyFrameCapture
 	METHOD updateRawMouseInput (Z)V
 		ARG 1 enableRawMouseMotion
 	METHOD updateVsync (Z)V

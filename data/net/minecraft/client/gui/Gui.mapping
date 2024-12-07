@@ -35,6 +35,9 @@ CLASS net/minecraft/client/gui/Gui
 			COMMENT the GuiGraphics object used for rendering.
 		ARG 2 objective
 			COMMENT the objective representing the scoreboard sidebar.
+	METHOD getAirBubbleYLine (II)I
+		ARG 1 vehicleMaxHealth
+		ARG 2 startX
 	METHOD getBossOverlay ()Lnet/minecraft/client/gui/components/BossHealthOverlay;
 		COMMENT {@return the {@link BossHealthOverlay} instance associated with the client}
 	METHOD getCameraPlayer ()Lnet/minecraft/world/entity/player/Player;
@@ -43,6 +46,13 @@ CLASS net/minecraft/client/gui/Gui
 		COMMENT @return the player entity that the camera is focused on, or null if the camera is not focused on a player.
 	METHOD getChat ()Lnet/minecraft/client/gui/components/ChatComponent;
 		COMMENT {@return a pointer to the persistent Chat GUI, containing all previous chat messages and such}
+	METHOD getCurrentAirSupplyBubble (III)I
+		ARG 0 currentAirSupply
+		ARG 1 maxAirSupply
+		ARG 2 offset
+	METHOD getEmptyBubbleDelayDuration (IZ)I
+		ARG 0 airSupply
+		ARG 1 inWater
 	METHOD getFont ()Lnet/minecraft/client/gui/Font;
 		COMMENT {@return the {@link Font} used for rendering text in the GUI}
 	METHOD getGuiTicks ()I
@@ -69,9 +79,9 @@ CLASS net/minecraft/client/gui/Gui
 			COMMENT the health of the mount entity.
 	METHOD isShowingChatDisabledByPlayer ()Z
 		COMMENT {@return {@code true} if the chat disabled message is being shown, {@code false} otherwise}
-	METHOD lambda$displayScoreboardSidebar$6 (Lnet/minecraft/world/scores/PlayerScoreEntry;)Z
-		ARG 0 entry
-	METHOD lambda$displayScoreboardSidebar$7 (Lnet/minecraft/world/scores/Scoreboard;Lnet/minecraft/network/chat/numbers/NumberFormat;Lnet/minecraft/world/scores/PlayerScoreEntry;)Lnet/minecraft/client/gui/Gui$1DisplayEntry;
+	METHOD lambda$displayScoreboardSidebar$7 (Lnet/minecraft/world/scores/PlayerScoreEntry;)Z
+		ARG 0 scoreEntry
+	METHOD lambda$displayScoreboardSidebar$8 (Lnet/minecraft/world/scores/Scoreboard;Lnet/minecraft/network/chat/numbers/NumberFormat;Lnet/minecraft/world/scores/PlayerScoreEntry;)Lnet/minecraft/client/gui/Gui$1DisplayEntry;
 		ARG 3 scoreEntry
 	METHOD lambda$new$0 (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/DeltaTracker;)V
 		ARG 1 guiGraphics
@@ -85,9 +95,19 @@ CLASS net/minecraft/client/gui/Gui
 	METHOD onDisconnected ()V
 		COMMENT Called when the player is disconnected from the server.
 		COMMENT Resets various UI elements and clears messages.
+	METHOD playAirBubblePoppedSound (ILnet/minecraft/world/entity/player/Player;I)V
+		ARG 1 bubble
+		ARG 2 player
+		ARG 3 pitch
 	METHOD render (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/DeltaTracker;)V
 		ARG 1 guiGraphics
 		ARG 2 deltaTracker
+	METHOD renderAirBubbles (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/world/entity/player/Player;III)V
+		ARG 1 guiGraphics
+		ARG 2 player
+		ARG 3 vehicleMaxHealth
+		ARG 4 y
+		ARG 5 x
 	METHOD renderArmor (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/world/entity/player/Player;IIII)V
 		ARG 0 guiGraphics
 		ARG 1 player
@@ -101,6 +121,9 @@ CLASS net/minecraft/client/gui/Gui
 	METHOD renderChat (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/DeltaTracker;)V
 		ARG 1 guiGraphics
 		ARG 2 deltaTracker
+	METHOD renderConfusionOverlay (Lnet/minecraft/client/gui/GuiGraphics;F)V
+		ARG 1 guiGraphics
+		ARG 2 intensity
 	METHOD renderCrosshair (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/DeltaTracker;)V
 		ARG 1 guiGraphics
 		ARG 2 deltaTracker

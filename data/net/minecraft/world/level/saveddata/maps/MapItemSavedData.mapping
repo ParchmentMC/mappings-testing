@@ -22,10 +22,21 @@ CLASS net/minecraft/world/level/saveddata/maps/MapItemSavedData
 		ARG 1 pos
 		ARG 2 type
 		ARG 3 mapDecorationType
+	METHOD calculateDecorationLocationAndType (Lnet/minecraft/core/Holder;Lnet/minecraft/world/level/LevelAccessor;DFF)Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData$MapDecorationLocation;
+		ARG 1 decorationType
+		ARG 2 level
+		ARG 3 yRot
+		ARG 5 x
+		ARG 6 z
+	METHOD calculateRotation (Lnet/minecraft/world/level/LevelAccessor;D)B
+		ARG 1 level
+		ARG 2 yRot
 	METHOD checkBanners (Lnet/minecraft/world/level/BlockGetter;II)V
 		ARG 1 reader
 		ARG 2 x
 		ARG 3 z
+	METHOD clampMapCoordinate (F)B
+		ARG 0 coord
 	METHOD createForClient (BZLnet/minecraft/resources/ResourceKey;)Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData;
 		ARG 0 scale
 		ARG 1 locked
@@ -37,6 +48,9 @@ CLASS net/minecraft/world/level/saveddata/maps/MapItemSavedData
 		ARG 5 trackingPosition
 		ARG 6 unlimitedTracking
 		ARG 7 dimension
+	METHOD decorationTypeForPlayerOutsideMap (FF)Lnet/minecraft/core/Holder;
+		ARG 1 x
+		ARG 2 z
 	METHOD getFrameKey (I)Ljava/lang/String;
 		ARG 0 entityId
 	METHOD getHoldingPlayer (Lnet/minecraft/world/entity/player/Player;)Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData$HoldingPlayer;
@@ -44,13 +58,28 @@ CLASS net/minecraft/world/level/saveddata/maps/MapItemSavedData
 	METHOD getUpdatePacket (Lnet/minecraft/world/level/saveddata/maps/MapId;Lnet/minecraft/world/entity/player/Player;)Lnet/minecraft/network/protocol/Packet;
 		ARG 1 mapId
 		ARG 2 player
+	METHOD hasMapInvisibilityItemEquipped (Lnet/minecraft/world/entity/player/Player;)Z
+		ARG 0 player
+	METHOD isInsideMap (FF)Z
+		ARG 0 x
+		ARG 1 z
 	METHOD isTrackedCountOverLimit (I)Z
 		ARG 1 trackedCount
+	METHOD lambda$addTargetDecoration$6 (Ljava/lang/String;Lnet/minecraft/world/item/component/MapDecorations$Entry;Lnet/minecraft/world/item/component/MapDecorations;)Lnet/minecraft/world/item/component/MapDecorations;
+		ARG 2 decorations
+	METHOD lambda$save$3 (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/nbt/Tag;)V
+		ARG 1 dimension
 	METHOD load (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData;
 		ARG 0 tag
 		ARG 1 levelRegistry
 	METHOD mapMatcher (Lnet/minecraft/world/item/ItemStack;)Ljava/util/function/Predicate;
 		ARG 0 stack
+	METHOD playerDecorationTypeAndRotation (Lnet/minecraft/core/Holder;Lnet/minecraft/world/level/LevelAccessor;DFF)Lcom/mojang/datafixers/util/Pair;
+		ARG 1 decorationType
+		ARG 2 level
+		ARG 3 yRot
+		ARG 5 x
+		ARG 6 z
 	METHOD removeDecoration (Ljava/lang/String;)V
 		ARG 1 identifier
 	METHOD removedFromFrame (Lnet/minecraft/core/BlockPos;I)V

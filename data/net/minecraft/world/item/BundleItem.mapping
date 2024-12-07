@@ -1,12 +1,44 @@
 CLASS net/minecraft/world/item/BundleItem
-	METHOD dropContents (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/player/Player;)Z
-		ARG 0 stack
+	METHOD <init> (Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/world/item/Item$Properties;)V
+		ARG 1 openFrontModel
+		ARG 2 openBackModel
+		ARG 3 properties
+	METHOD broadcastChangesOnContainerMenu (Lnet/minecraft/world/entity/player/Player;)V
 		ARG 1 player
+	METHOD dropContent (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/player/Player;)Z
+		ARG 1 stack
+		ARG 2 player
+	METHOD dropContent (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/item/ItemStack;)V
+		ARG 1 level
+		ARG 2 player
+		ARG 3 stack
+	METHOD getByColor (Lnet/minecraft/world/item/DyeColor;)Lnet/minecraft/world/item/Item;
+		ARG 0 color
 	METHOD getFullnessDisplay (Lnet/minecraft/world/item/ItemStack;)F
 		ARG 0 stack
-	METHOD playDropContentsSound (Lnet/minecraft/world/entity/Entity;)V
+	METHOD getNumberOfItemsToShow (Lnet/minecraft/world/item/ItemStack;)I
+		ARG 0 bundle
+	METHOD getSelectedItem (Lnet/minecraft/world/item/ItemStack;)I
+		ARG 0 bundle
+	METHOD getSelectedItemStack (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/ItemStack;
+		ARG 0 bundle
+	METHOD hasSelectedItem (Lnet/minecraft/world/item/ItemStack;)Z
+		ARG 0 bundle
+	METHOD lambda$getAllBundleItemColors$0 (Lnet/minecraft/world/item/Item;)Lnet/minecraft/world/item/BundleItem;
+		ARG 0 item
+	METHOD playDropContentsSound (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/Entity;)V
+		ARG 0 level
 		ARG 1 entity
+	METHOD playInsertFailSound (Lnet/minecraft/world/entity/Entity;)V
+		ARG 0 entity
 	METHOD playInsertSound (Lnet/minecraft/world/entity/Entity;)V
-		ARG 1 entity
+		ARG 0 entity
 	METHOD playRemoveOneSound (Lnet/minecraft/world/entity/Entity;)V
-		ARG 1 entity
+		ARG 0 entity
+	METHOD removeOneItemFromBundle (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/item/component/BundleContents;)Ljava/util/Optional;
+		ARG 0 stack
+		ARG 1 player
+		ARG 2 bundleContents
+	METHOD toggleSelectedItem (Lnet/minecraft/world/item/ItemStack;I)V
+		ARG 0 bundle
+		ARG 1 selectedItem

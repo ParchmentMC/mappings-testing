@@ -21,16 +21,11 @@ CLASS net/minecraft/world/level/storage/loot/LootContext
 	METHOD getLuck ()F
 		COMMENT The luck value for this loot context. This is usually just the player's {@linkplain Attributes#LUCK luck value}, however it may be modified depending on the context of the looting.
 		COMMENT When fishing for example it is increased based on the Luck of the Sea enchantment.
-	METHOD getParam (Lnet/minecraft/world/level/storage/loot/parameters/LootContextParam;)Ljava/lang/Object;
-		COMMENT Get the value of the given parameter.
-		COMMENT
-		COMMENT @throws NoSuchElementException if the parameter is not present in this context
-		ARG 1 param
-	METHOD getParamOrNull (Lnet/minecraft/world/level/storage/loot/parameters/LootContextParam;)Ljava/lang/Object;
-		COMMENT Get the value of the given parameter if it is present in this context, null otherwise.
+	METHOD getOptionalParameter (Lnet/minecraft/util/context/ContextKey;)Ljava/lang/Object;
 		ARG 1 parameter
-	METHOD hasParam (Lnet/minecraft/world/level/storage/loot/parameters/LootContextParam;)Z
-		COMMENT Check whether the given parameter is present in this context.
+	METHOD getParameter (Lnet/minecraft/util/context/ContextKey;)Ljava/lang/Object;
+		ARG 1 parameter
+	METHOD hasParameter (Lnet/minecraft/util/context/ContextKey;)Z
 		ARG 1 parameter
 	METHOD hasVisitedElement (Lnet/minecraft/world/level/storage/loot/LootContext$VisitedEntry;)Z
 		ARG 1 element
@@ -51,7 +46,7 @@ CLASS net/minecraft/world/level/storage/loot/LootContext
 		COMMENT Represents a type of entity that can be looked up in a {@link LootContext} using a {@link LootContextParam}.
 		FIELD THIS Lnet/minecraft/world/level/storage/loot/LootContext$EntityTarget;
 			COMMENT Looks up {@link LootContextParams#THIS_ENTITY}.
-		METHOD <init> (Ljava/lang/String;ILjava/lang/String;Lnet/minecraft/world/level/storage/loot/parameters/LootContextParam;)V
+		METHOD <init> (Ljava/lang/String;ILjava/lang/String;Lnet/minecraft/util/context/ContextKey;)V
 			ARG 3 name
 			ARG 4 param
 		METHOD getByName (Ljava/lang/String;)Lnet/minecraft/world/level/storage/loot/LootContext$EntityTarget;

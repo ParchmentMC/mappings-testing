@@ -1,0 +1,11 @@
+CLASS net/minecraft/client/gui/components/debugchart/ProfilerPieChart
+	METHOD <init> (Lnet/minecraft/client/gui/Font;)V
+		ARG 1 font
+	METHOD profilerPieChartKeyPress (I)V
+		ARG 1 index
+	METHOD render (Lnet/minecraft/client/gui/GuiGraphics;)V
+		ARG 1 guiGraphics
+	METHOD setBottomOffset (I)V
+		ARG 1 bottomOffset
+	METHOD setPieChartResults (Lnet/minecraft/util/profiling/ProfileResults;)V
+		ARG 1 pieChartResults

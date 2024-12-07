@@ -33,6 +33,13 @@ CLASS net/minecraft/client/multiplayer/ClientChunkCache
 	CLASS Storage
 		METHOD <init> (Lnet/minecraft/client/multiplayer/ClientChunkCache;I)V
 			ARG 2 chunkRadius
+		METHOD addEmptySections (Lnet/minecraft/world/level/chunk/LevelChunk;)V
+			ARG 1 chunk
+		METHOD drop (ILnet/minecraft/world/level/chunk/LevelChunk;)V
+			ARG 1 chunkIndex
+			ARG 2 chunk
+		METHOD dropEmptySections (Lnet/minecraft/world/level/chunk/LevelChunk;)V
+			ARG 1 chunk
 		METHOD dumpChunks (Ljava/lang/String;)V
 			ARG 1 filePath
 		METHOD getChunk (I)Lnet/minecraft/world/level/chunk/LevelChunk;
@@ -43,10 +50,11 @@ CLASS net/minecraft/client/multiplayer/ClientChunkCache
 		METHOD inRange (II)Z
 			ARG 1 x
 			ARG 2 z
+		METHOD onSectionEmptinessChanged (IIIZ)V
+			ARG 1 x
+			ARG 2 y
+			ARG 3 z
+			ARG 4 isEmpty
 		METHOD replace (ILnet/minecraft/world/level/chunk/LevelChunk;)V
 			ARG 1 chunkIndex
 			ARG 2 chunk
-		METHOD replace (ILnet/minecraft/world/level/chunk/LevelChunk;Lnet/minecraft/world/level/chunk/LevelChunk;)Lnet/minecraft/world/level/chunk/LevelChunk;
-			ARG 1 chunkIndex
-			ARG 2 chunk
-			ARG 3 replaceWith

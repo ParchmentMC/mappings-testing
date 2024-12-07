@@ -10,6 +10,10 @@ CLASS net/minecraft/world/inventory/ChestMenu
 		ARG 3 playerInventory
 		ARG 4 container
 		ARG 5 rows
+	METHOD addChestGrid (Lnet/minecraft/world/Container;II)V
+		ARG 1 container
+		ARG 2 x
+		ARG 3 y
 	METHOD fiveRows (ILnet/minecraft/world/entity/player/Inventory;)Lnet/minecraft/world/inventory/ChestMenu;
 		ARG 0 containerId
 		ARG 1 playerInventory

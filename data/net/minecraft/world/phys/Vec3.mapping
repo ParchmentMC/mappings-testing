@@ -3,8 +3,12 @@ CLASS net/minecraft/world/phys/Vec3
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
+	METHOD <init> (Lnet/minecraft/core/Vec3i;)V
+		ARG 1 vector
 	METHOD <init> (Lorg/joml/Vector3f;)V
 		ARG 1 vector
+	METHOD add (D)Lnet/minecraft/world/phys/Vec3;
+		ARG 1 amount
 	METHOD add (DDD)Lnet/minecraft/world/phys/Vec3;
 		COMMENT Adds the specified x,y,z vector components to this vector and returns the resulting vector. Does not change this vector.
 		ARG 1 x
@@ -64,6 +68,8 @@ CLASS net/minecraft/world/phys/Vec3
 		ARG 0 packed
 	METHOD get (Lnet/minecraft/core/Direction$Axis;)D
 		ARG 1 axis
+	METHOD lambda$static$1 (Ljava/util/List;)Lcom/mojang/serialization/DataResult;
+		ARG 0 list
 	METHOD length ()D
 		COMMENT Returns the length of the vector.
 	METHOD lerp (Lnet/minecraft/world/phys/Vec3;D)Lnet/minecraft/world/phys/Vec3;
@@ -82,11 +88,15 @@ CLASS net/minecraft/world/phys/Vec3
 	METHOD offsetRandom (Lnet/minecraft/util/RandomSource;F)Lnet/minecraft/world/phys/Vec3;
 		ARG 1 random
 		ARG 2 factor
+	METHOD projectedOn (Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/world/phys/Vec3;
+		ARG 1 vector
 	METHOD relative (Lnet/minecraft/core/Direction;D)Lnet/minecraft/world/phys/Vec3;
 		ARG 1 direction
 		ARG 2 length
 	METHOD scale (D)Lnet/minecraft/world/phys/Vec3;
 		ARG 1 factor
+	METHOD subtract (D)Lnet/minecraft/world/phys/Vec3;
+		ARG 1 amount
 	METHOD subtract (DDD)Lnet/minecraft/world/phys/Vec3;
 		ARG 1 x
 		ARG 3 y

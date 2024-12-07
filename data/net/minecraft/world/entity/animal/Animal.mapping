@@ -4,10 +4,10 @@ CLASS net/minecraft/world/entity/animal/Animal
 	METHOD canMate (Lnet/minecraft/world/entity/animal/Animal;)Z
 		COMMENT Returns {@code true} if the mob is currently able to mate with the specified mob.
 		ARG 1 otherAnimal
-	METHOD checkAnimalSpawnRules (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z
-		ARG 0 animal
+	METHOD checkAnimalSpawnRules (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/world/entity/EntitySpawnReason;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z
+		ARG 0 entityType
 		ARG 1 level
-		ARG 2 spawnType
+		ARG 2 spawnReason
 		ARG 3 pos
 		ARG 4 random
 	METHOD finalizeSpawnChildFromBreeding (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/animal/Animal;Lnet/minecraft/world/entity/AgeableMob;)V

@@ -1,0 +1,5 @@
+CLASS net/minecraft/client/renderer/debug/RedstoneWireOrientationsRenderer
+	METHOD <init> (Lnet/minecraft/client/Minecraft;)V
+		ARG 1 minecraft
+	METHOD addWireOrientations (Lnet/minecraft/network/protocol/common/custom/RedstoneWireOrientationsDebugPayload;)V
+		ARG 1 payload

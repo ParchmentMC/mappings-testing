@@ -120,6 +120,8 @@ CLASS net/minecraft/data/models/BlockModelGenerators
 		ARG 1 craftingTableBlock
 		ARG 2 craftingTableMaterialBlock
 		ARG 3 textureMappingGetter
+	METHOD createCreakingHeart (Lnet/minecraft/world/level/block/Block;)V
+		ARG 1 block
 	METHOD createCropBlock (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/state/properties/Property;[I)V
 		ARG 1 cropBlock
 		ARG 2 ageProperty
@@ -210,6 +212,8 @@ CLASS net/minecraft/data/models/BlockModelGenerators
 		ARG 1 growingPlantBlock
 		ARG 2 plantBlock
 		ARG 3 tintState
+	METHOD createHangingMoss (Lnet/minecraft/world/level/block/Block;)V
+		ARG 1 block
 	METHOD createHangingSign (Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/Block;)V
 		ARG 1 particleBlock
 		ARG 2 hangingSignBlock
@@ -229,6 +233,8 @@ CLASS net/minecraft/data/models/BlockModelGenerators
 		ARG 1 location
 		ARG 2 textureMapping
 		ARG 3 modelOutput
+	METHOD createMossyCarpet (Lnet/minecraft/world/level/block/Block;)V
+		ARG 1 block
 	METHOD createMultiface (Lnet/minecraft/world/level/block/Block;)V
 		ARG 1 multifaceBlock
 	METHOD createMushroomBlock (Lnet/minecraft/world/level/block/Block;)V

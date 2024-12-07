@@ -1,10 +1,31 @@
 CLASS net/minecraft/world/level/portal/PortalShape
-	METHOD <init> (Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction$Axis;)V
-		ARG 1 level
-		ARG 2 bottomLeft
-		ARG 3 axis
-	METHOD calculateBottomLeft (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/core/BlockPos;
+	METHOD <init> (Lnet/minecraft/core/Direction$Axis;ILnet/minecraft/core/Direction;Lnet/minecraft/core/BlockPos;II)V
+		ARG 1 axis
+		ARG 2 numPortalBlocks
+		ARG 3 rightDir
+		ARG 4 bottomLeft
+		ARG 5 width
+		ARG 6 height
+	METHOD calculateBottomLeft (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/Direction;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/core/BlockPos;
+		ARG 0 level
+		ARG 1 direction
+		ARG 2 pos
+	METHOD calculateHeight (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;ILorg/apache/commons/lang3/mutable/MutableInt;)I
+		ARG 0 level
 		ARG 1 pos
+		ARG 2 direction
+		ARG 3 width
+		ARG 4 portalBlocks
+	METHOD calculateWidth (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)I
+		ARG 0 level
+		ARG 1 bottomLeft
+		ARG 2 direction
+	METHOD createPortalBlocks (Lnet/minecraft/world/level/LevelAccessor;)V
+		ARG 1 level
+	METHOD findAnyShape (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction$Axis;)Lnet/minecraft/world/level/portal/PortalShape;
+		ARG 0 level
+		ARG 1 bottomLeft
+		ARG 2 axis
 	METHOD findCollisionFreePosition (Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/EntityDimensions;)Lnet/minecraft/world/phys/Vec3;
 		ARG 0 pos
 		ARG 1 level
@@ -19,22 +40,32 @@ CLASS net/minecraft/world/level/portal/PortalShape
 		ARG 1 bottomLeft
 		ARG 2 predicate
 		ARG 3 axis
-	METHOD getDistanceUntilEdgeAboveFrame (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)I
+	METHOD getDistanceUntilEdgeAboveFrame (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)I
+		ARG 0 level
 		ARG 1 pos
 		ARG 2 direction
-	METHOD getDistanceUntilTop (Lnet/minecraft/core/BlockPos$MutableBlockPos;)I
+	METHOD getDistanceUntilTop (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;Lnet/minecraft/core/BlockPos$MutableBlockPos;ILorg/apache/commons/lang3/mutable/MutableInt;)I
+		ARG 0 level
 		ARG 1 pos
+		ARG 2 direction
+		ARG 3 checkPos
+		ARG 4 width
+		ARG 5 portalBlocks
 	METHOD getRelativePosition (Lnet/minecraft/BlockUtil$FoundRectangle;Lnet/minecraft/core/Direction$Axis;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/entity/EntityDimensions;)Lnet/minecraft/world/phys/Vec3;
 		ARG 0 foundRectangle
 		ARG 1 axis
 		ARG 2 pos
 		ARG 3 entityDimensions
-	METHOD hasTopFrame (Lnet/minecraft/core/BlockPos$MutableBlockPos;I)Z
+	METHOD hasTopFrame (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;Lnet/minecraft/core/BlockPos$MutableBlockPos;II)Z
+		ARG 0 level
 		ARG 1 pos
-		ARG 2 distanceToTop
+		ARG 2 direction
+		ARG 3 checkPos
+		ARG 4 width
+		ARG 5 distanceUntilTop
 	METHOD isEmpty (Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 0 state
-	METHOD lambda$createPortalBlocks$2 (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)V
+	METHOD lambda$createPortalBlocks$2 (Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)V
 		ARG 2 pos
 	METHOD lambda$findCollisionFreePosition$3 (DLnet/minecraft/world/phys/Vec3;)Lnet/minecraft/world/phys/Vec3;
 		ARG 2 freePos

@@ -1,0 +1,5 @@
+CLASS net/minecraft/world/item/equipment/trim/TrimPattern
+	METHOD copyWithStyle (Lnet/minecraft/core/Holder;)Lnet/minecraft/network/chat/Component;
+		ARG 1 material
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

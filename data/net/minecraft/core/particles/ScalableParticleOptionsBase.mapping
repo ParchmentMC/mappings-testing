@@ -1,3 +1,5 @@
 CLASS net/minecraft/core/particles/ScalableParticleOptionsBase
 	METHOD <init> (F)V
 		ARG 1 scale
+	METHOD lambda$static$1 (Ljava/lang/Float;)Lcom/mojang/serialization/DataResult;
+		ARG 0 scale

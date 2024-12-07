@@ -1,3 +1,6 @@
 CLASS net/minecraft/client/telemetry/TelemetryEventSender
+	METHOD decorate (Ljava/util/function/Consumer;)Lnet/minecraft/client/telemetry/TelemetryEventSender;
+		ARG 1 propertyAdder
 	METHOD send (Lnet/minecraft/client/telemetry/TelemetryEventType;Ljava/util/function/Consumer;)V
 		ARG 1 eventType
+		ARG 2 propertyAdder

@@ -1,0 +1,7 @@
+CLASS net/minecraft/client/renderer/block/model/VariantSelector
+	METHOD getValueHelper (Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/String;)Ljava/lang/Comparable;
+		ARG 0 property
+		ARG 1 value
+	METHOD predicate (Lnet/minecraft/world/level/block/state/StateDefinition;Ljava/lang/String;)Ljava/util/function/Predicate;
+		ARG 0 stateDefinition
+		ARG 1 value

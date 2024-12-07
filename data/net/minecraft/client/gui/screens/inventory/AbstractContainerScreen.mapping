@@ -25,12 +25,14 @@ CLASS net/minecraft/client/gui/screens/inventory/AbstractContainerScreen
 		ARG 1 menu
 		ARG 2 playerInventory
 		ARG 3 title
+	METHOD addItemSlotMouseAction (Lnet/minecraft/client/gui/ItemSlotMouseAction;)V
+		ARG 1 itemSlotMouseAction
 	METHOD checkHotbarKeyPressed (II)Z
 		ARG 1 keyCode
 		ARG 2 scanCode
 	METHOD checkHotbarMouseClicked (I)V
 		ARG 1 keyCode
-	METHOD findSlot (DD)Lnet/minecraft/world/inventory/Slot;
+	METHOD getHoveredSlot (DD)Lnet/minecraft/world/inventory/Slot;
 		ARG 1 mouseX
 		ARG 3 mouseY
 	METHOD getTooltipFromContainerItem (Lnet/minecraft/world/item/ItemStack;)Ljava/util/List;
@@ -74,6 +76,11 @@ CLASS net/minecraft/client/gui/screens/inventory/AbstractContainerScreen
 		ARG 1 mouseX
 		ARG 3 mouseY
 		ARG 5 button
+	METHOD onMouseClickAction (Lnet/minecraft/world/inventory/Slot;Lnet/minecraft/world/inventory/ClickType;)V
+		ARG 1 slot
+		ARG 2 type
+	METHOD onStopHovering (Lnet/minecraft/world/inventory/Slot;)V
+		ARG 1 slot
 	METHOD renderBg (Lnet/minecraft/client/gui/GuiGraphics;FII)V
 		ARG 1 guiGraphics
 		ARG 2 partialTick
@@ -92,15 +99,18 @@ CLASS net/minecraft/client/gui/screens/inventory/AbstractContainerScreen
 	METHOD renderSlot (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/world/inventory/Slot;)V
 		ARG 1 guiGraphics
 		ARG 2 slot
-	METHOD renderSlotHighlight (Lnet/minecraft/client/gui/GuiGraphics;III)V
-		ARG 0 guiGraphics
-		ARG 1 x
-		ARG 2 y
-		ARG 3 blitOffset
+	METHOD renderSlotHighlightBack (Lnet/minecraft/client/gui/GuiGraphics;)V
+		ARG 1 guiGraphics
+	METHOD renderSlotHighlightFront (Lnet/minecraft/client/gui/GuiGraphics;)V
+		ARG 1 guiGraphics
+	METHOD renderSlots (Lnet/minecraft/client/gui/GuiGraphics;)V
+		ARG 1 guiGraphics
 	METHOD renderTooltip (Lnet/minecraft/client/gui/GuiGraphics;II)V
 		ARG 1 guiGraphics
 		ARG 2 x
 		ARG 3 y
+	METHOD showTooltipWithItemInHand (Lnet/minecraft/world/item/ItemStack;)Z
+		ARG 1 stack
 	METHOD slotClicked (Lnet/minecraft/world/inventory/Slot;IILnet/minecraft/world/inventory/ClickType;)V
 		COMMENT Called when the mouse is clicked over a slot or outside the gui.
 		ARG 1 slot

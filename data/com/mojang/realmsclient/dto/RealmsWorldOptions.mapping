@@ -1,22 +1,31 @@
 CLASS com/mojang/realmsclient/dto/RealmsWorldOptions
-	METHOD <init> (ZZZZIZIIZLjava/lang/String;Ljava/lang/String;Lcom/mojang/realmsclient/dto/RealmsServer$Compatibility;)V
+	METHOD <init> (ZZIZIIZZLjava/lang/String;Ljava/lang/String;Lcom/mojang/realmsclient/dto/RealmsServer$Compatibility;)V
 		ARG 1 pvp
-		ARG 2 spawnAnimals
-		ARG 3 spawnMonsters
-		ARG 4 spawnNPCs
-		ARG 5 spawnProtection
-		ARG 6 commandBlocks
-		ARG 7 difficulty
-		ARG 8 gameMode
-		ARG 9 forceGameMode
-		ARG 10 slotName
-		ARG 11 version
-		ARG 12 compatibility
+		ARG 2 spawnMonsters
+		ARG 3 spawnProtection
+		ARG 4 commandBlocks
+		ARG 5 difficulty
+		ARG 6 gameMode
+		ARG 7 hardcore
+		ARG 8 forceGameMode
+		ARG 9 slotName
+		ARG 10 version
+		ARG 11 compatibility
+	METHOD createDefaultsWith (Lnet/minecraft/world/level/GameType;Lnet/minecraft/world/Difficulty;ZLjava/lang/String;Ljava/lang/String;)Lcom/mojang/realmsclient/dto/RealmsWorldOptions;
+		ARG 0 gameMode
+		ARG 1 difficulty
+		ARG 2 hardcore
+		ARG 3 version
+		ARG 4 slotName
+	METHOD createFromSettings (Lnet/minecraft/world/level/LevelSettings;Ljava/lang/String;)Lcom/mojang/realmsclient/dto/RealmsWorldOptions;
+		ARG 0 settings
+		ARG 1 version
 	METHOD getDefaultSlotName (I)Ljava/lang/String;
 		ARG 1 slotIndex
 	METHOD getSlotName (I)Ljava/lang/String;
 		ARG 1 slotIndex
-	METHOD parse (Lcom/google/gson/JsonObject;)Lcom/mojang/realmsclient/dto/RealmsWorldOptions;
+	METHOD parse (Lcom/google/gson/JsonObject;Lcom/mojang/realmsclient/dto/RealmsSettings;)Lcom/mojang/realmsclient/dto/RealmsWorldOptions;
 		ARG 0 json
+		ARG 1 realmsSettings
 	METHOD setEmpty (Z)V
 		ARG 1 empty

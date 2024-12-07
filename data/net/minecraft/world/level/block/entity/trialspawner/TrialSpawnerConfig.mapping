@@ -5,3 +5,22 @@ CLASS net/minecraft/world/level/block/entity/trialspawner/TrialSpawnerConfig
 		ARG 1 players
 	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 0 instance
+	CLASS Builder
+		METHOD itemsToDropWhenOminous (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawnerConfig$Builder;
+			ARG 1 itemsToDropWhenOminous
+		METHOD lootTablesToEject (Lnet/minecraft/util/random/SimpleWeightedRandomList;)Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawnerConfig$Builder;
+			ARG 1 lootTablesToEject
+		METHOD simultaneousMobs (F)Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawnerConfig$Builder;
+			ARG 1 simultaneousMobs
+		METHOD simultaneousMobsAddedPerPlayer (F)Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawnerConfig$Builder;
+			ARG 1 simultaneousMobsAddedPerPlayer
+		METHOD spawnPotentialsDefinition (Lnet/minecraft/util/random/SimpleWeightedRandomList;)Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawnerConfig$Builder;
+			ARG 1 spawnPotentialsDefinition
+		METHOD spawnRange (I)Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawnerConfig$Builder;
+			ARG 1 spawnRange
+		METHOD ticksBetweenSpawn (I)Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawnerConfig$Builder;
+			ARG 1 ticksBetweenSpawn
+		METHOD totalMobs (F)Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawnerConfig$Builder;
+			ARG 1 totalMobs
+		METHOD totalMobsAddedPerPlayer (F)Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawnerConfig$Builder;
+			ARG 1 totalMobsAddedPerPlayer

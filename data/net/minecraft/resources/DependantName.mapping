@@ -1,0 +1,5 @@
+CLASS net/minecraft/resources/DependantName
+	METHOD fixed (Ljava/lang/Object;)Lnet/minecraft/resources/DependantName;
+		ARG 0 value
+	METHOD get (Lnet/minecraft/resources/ResourceKey;)Ljava/lang/Object;
+		ARG 1 key

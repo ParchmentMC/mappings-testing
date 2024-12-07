@@ -10,11 +10,12 @@ CLASS net/minecraft/client/renderer/DimensionSpecialEffects
 	METHOD getBrightnessDependentFogColor (Lnet/minecraft/world/phys/Vec3;F)Lnet/minecraft/world/phys/Vec3;
 		ARG 1 fogColor
 		ARG 2 brightness
-	METHOD getSunriseColor (FF)[F
+	METHOD getSunriseOrSunsetColor (F)I
 		ARG 1 timeOfDay
-		ARG 2 partialTicks
 	METHOD isFoggyAt (II)Z
 		ARG 1 x
 		ARG 2 y
+	METHOD isSunriseOrSunset (F)Z
+		ARG 1 timeOfDay
 	METHOD lambda$static$0 (Lit/unimi/dsi/fastutil/objects/Object2ObjectArrayMap;)V
 		ARG 0 dimensionEffectMap

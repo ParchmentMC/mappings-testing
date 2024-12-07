@@ -1,0 +1,5 @@
+CLASS net/minecraft/core/dispenser/MinecartDispenseItemBehavior
+	METHOD <init> (Lnet/minecraft/world/entity/EntityType;)V
+		ARG 1 entityType
+	METHOD getRailShape (Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/state/properties/RailShape;
+		ARG 0 state

@@ -1,0 +1,6 @@
+CLASS com/mojang/blaze3d/resource/GraphicsResourceAllocator
+	METHOD acquire (Lcom/mojang/blaze3d/resource/ResourceDescriptor;)Ljava/lang/Object;
+		ARG 1 descriptor
+	METHOD release (Lcom/mojang/blaze3d/resource/ResourceDescriptor;Ljava/lang/Object;)V
+		ARG 1 descriptor
+		ARG 2 value

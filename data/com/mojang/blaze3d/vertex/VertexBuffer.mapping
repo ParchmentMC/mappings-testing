@@ -1,12 +1,8 @@
 CLASS com/mojang/blaze3d/vertex/VertexBuffer
-	METHOD <init> (Lcom/mojang/blaze3d/vertex/VertexBuffer$Usage;)V
+	METHOD <init> (Lcom/mojang/blaze3d/buffers/BufferUsage;)V
 		ARG 1 usage
-	METHOD _drawWithShader (Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;Lnet/minecraft/client/renderer/ShaderInstance;)V
-		ARG 1 modelViewMatrix
-		ARG 2 projectionMatrix
-		ARG 3 shader
-	METHOD drawWithShader (Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;Lnet/minecraft/client/renderer/ShaderInstance;)V
-		ARG 1 modelViewMatrix
+	METHOD drawWithShader (Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;Lnet/minecraft/client/renderer/CompiledShaderProgram;)V
+		ARG 1 frustumMatrix
 		ARG 2 projectionMatrix
 		ARG 3 shader
 	METHOD upload (Lcom/mojang/blaze3d/vertex/MeshData;)V
@@ -19,6 +15,3 @@ CLASS com/mojang/blaze3d/vertex/VertexBuffer
 	METHOD uploadVertexBuffer (Lcom/mojang/blaze3d/vertex/MeshData$DrawState;Ljava/nio/ByteBuffer;)Lcom/mojang/blaze3d/vertex/VertexFormat;
 		ARG 1 drawState
 		ARG 2 buffer
-	CLASS Usage
-		METHOD <init> (Ljava/lang/String;II)V
-			ARG 3 id

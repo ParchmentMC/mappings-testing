@@ -1,0 +1,11 @@
+CLASS net/minecraft/world/entity/Relative
+	METHOD <init> (Ljava/lang/String;II)V
+		ARG 3 bit
+	METHOD isSet (I)Z
+		ARG 1 data
+	METHOD pack (Ljava/util/Set;)I
+		ARG 0 relatives
+	METHOD union ([Ljava/util/Set;)Ljava/util/Set;
+		ARG 0 sets
+	METHOD unpack (I)Ljava/util/Set;
+		ARG 0 data

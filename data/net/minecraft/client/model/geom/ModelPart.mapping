@@ -38,6 +38,8 @@ CLASS net/minecraft/client/model/geom/ModelPart
 		ARG 3 packedLight
 		ARG 4 packedOverlay
 		ARG 5 color
+	METHOD rotateBy (Lorg/joml/Quaternionf;)V
+		ARG 1 quaternion
 	METHOD setInitialPose (Lnet/minecraft/client/model/geom/PartPose;)V
 		ARG 1 initialPose
 	METHOD setPos (FFF)V

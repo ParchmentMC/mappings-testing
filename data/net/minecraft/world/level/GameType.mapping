@@ -25,6 +25,10 @@ CLASS net/minecraft/world/level/GameType
 		COMMENT Returns {@code true} if this is the CREATIVE game type
 	METHOD isSurvival ()Z
 		COMMENT Returns {@code true} if this is the SURVIVAL or ADVENTURE game type
+	METHOD isValidId (I)Z
+		ARG 0 id
+	METHOD lambda$isValidId$0 (ILnet/minecraft/world/level/GameType;)Z
+		ARG 1 gameType
 	METHOD updatePlayerAbilities (Lnet/minecraft/world/entity/player/Abilities;)V
 		COMMENT Configures the player abilities based on the game type
 		ARG 1 abilities

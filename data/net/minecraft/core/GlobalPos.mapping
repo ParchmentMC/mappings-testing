@@ -4,6 +4,10 @@ CLASS net/minecraft/core/GlobalPos
 		ARG 2 pos
 	METHOD equals (Ljava/lang/Object;)Z
 		ARG 1 other
+	METHOD isCloseEnough (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/core/BlockPos;I)Z
+		ARG 1 dimension
+		ARG 2 pos
+		ARG 3 maxDistance
 	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 		ARG 0 instance
 	METHOD of (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/core/GlobalPos;

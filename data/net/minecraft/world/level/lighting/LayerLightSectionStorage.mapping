@@ -27,6 +27,8 @@ CLASS net/minecraft/world/level/lighting/LayerLightSectionStorage
 		ARG 1 levelPos
 	METHOD initializeSection (J)V
 		ARG 1 sectionPos
+	METHOD lightOnInColumn (J)Z
+		ARG 1 columnPos
 	METHOD lightOnInSection (J)Z
 		ARG 1 sectionPos
 	METHOD markNewInconsistencies (Lnet/minecraft/world/level/lighting/LightEngine;)V

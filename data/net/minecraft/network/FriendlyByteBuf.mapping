@@ -135,6 +135,9 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		ARG 1 exception
 	METHOD lambda$writeJsonWithCodec$3 (Ljava/lang/Object;Ljava/lang/String;)Lio/netty/handler/codec/EncoderException;
 		ARG 1 exception
+	METHOD lambda$writeMap$5 (Lnet/minecraft/network/codec/StreamEncoder;Lnet/minecraft/network/codec/StreamEncoder;Ljava/lang/Object;Ljava/lang/Object;)V
+		ARG 3 key
+		ARG 4 value
 	METHOD lambda$writeWithCodec$1 (Ljava/lang/Object;Ljava/lang/String;)Lio/netty/handler/codec/EncoderException;
 		ARG 1 exception
 	METHOD limitValue (Ljava/util/function/IntFunction;I)Ljava/util/function/IntFunction;
@@ -207,9 +210,13 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		COMMENT Reads a ChunkPos encoded as a long from the buffer.
 		COMMENT
 		COMMENT @see #writeChunkPos
+	METHOD readChunkPos (Lio/netty/buffer/ByteBuf;)Lnet/minecraft/world/level/ChunkPos;
+		ARG 0 buffer
 	METHOD readCollection (Ljava/util/function/IntFunction;Lnet/minecraft/network/codec/StreamDecoder;)Ljava/util/Collection;
 		ARG 1 collectionFactory
 		ARG 2 elementReader
+	METHOD readContainerId (Lio/netty/buffer/ByteBuf;)I
+		ARG 0 buffer
 	METHOD readDate ()Ljava/util/Date;
 		COMMENT Read a timestamp as milliseconds since the unix epoch.
 		COMMENT
@@ -321,6 +328,8 @@ CLASS net/minecraft/network/FriendlyByteBuf
 		COMMENT Reads a compressed long from the buffer. To do so it maximally reads 10 byte-sized chunks whose most significant bit dictates whether another byte should be read.
 		COMMENT
 		COMMENT @see #writeVarLong
+	METHOD readVec3 (Lio/netty/buffer/ByteBuf;)Lnet/minecraft/world/phys/Vec3;
+		ARG 0 buffer
 	METHOD readVector3f (Lio/netty/buffer/ByteBuf;)Lorg/joml/Vector3f;
 		ARG 0 buffer
 	METHOD readWithCodec (Lcom/mojang/serialization/DynamicOps;Lcom/mojang/serialization/Codec;Lnet/minecraft/nbt/NbtAccounter;)Ljava/lang/Object;
@@ -502,6 +511,9 @@ CLASS net/minecraft/network/FriendlyByteBuf
 	METHOD writeCharSequence (Ljava/lang/CharSequence;Ljava/nio/charset/Charset;)I
 		ARG 1 charSequence
 		ARG 2 charset
+	METHOD writeChunkPos (Lio/netty/buffer/ByteBuf;Lnet/minecraft/world/level/ChunkPos;)V
+		ARG 0 buffer
+		ARG 1 chunkPos
 	METHOD writeChunkPos (Lnet/minecraft/world/level/ChunkPos;)Lnet/minecraft/network/FriendlyByteBuf;
 		COMMENT Writes a ChunkPos encoded as a long to the buffer.
 		COMMENT
@@ -510,6 +522,11 @@ CLASS net/minecraft/network/FriendlyByteBuf
 	METHOD writeCollection (Ljava/util/Collection;Lnet/minecraft/network/codec/StreamEncoder;)V
 		ARG 1 collection
 		ARG 2 elementWriter
+	METHOD writeContainerId (I)V
+		ARG 1 containerId
+	METHOD writeContainerId (Lio/netty/buffer/ByteBuf;I)V
+		ARG 0 buffer
+		ARG 1 containerId
 	METHOD writeDate (Ljava/util/Date;)Lnet/minecraft/network/FriendlyByteBuf;
 		COMMENT Write a timestamp as milliseconds since the unix epoch.
 		COMMENT
@@ -631,6 +648,9 @@ CLASS net/minecraft/network/FriendlyByteBuf
 	METHOD writeVarLong (J)Lnet/minecraft/network/FriendlyByteBuf;
 		COMMENT Writes a compressed long to the buffer. The smallest number of bytes to fit the passed long will be written. Of each such byte only 7 bits will be used to describe the actual value since its most significant bit dictates whether the next byte is part of that same long. Micro-optimization for long values that are usually small.
 		ARG 1 value
+	METHOD writeVec3 (Lio/netty/buffer/ByteBuf;Lnet/minecraft/world/phys/Vec3;)V
+		ARG 0 buffer
+		ARG 1 vec3
 	METHOD writeVec3 (Lnet/minecraft/world/phys/Vec3;)V
 		ARG 1 vec3
 	METHOD writeVector3f (Lio/netty/buffer/ByteBuf;Lorg/joml/Vector3f;)V

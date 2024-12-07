@@ -1,0 +1,6 @@
+CLASS net/minecraft/client/renderer/entity/AbstractHoglinRenderer
+	METHOD <init> (Lnet/minecraft/client/renderer/entity/EntityRendererProvider$Context;Lnet/minecraft/client/model/geom/ModelLayerLocation;Lnet/minecraft/client/model/geom/ModelLayerLocation;F)V
+		ARG 1 context
+		ARG 2 adultModel
+		ARG 3 babyModel
+		ARG 4 shadowRadius

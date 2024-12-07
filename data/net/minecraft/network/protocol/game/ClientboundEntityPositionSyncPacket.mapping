@@ -1,0 +1,3 @@
+CLASS net/minecraft/network/protocol/game/ClientboundEntityPositionSyncPacket
+	METHOD of (Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/network/protocol/game/ClientboundEntityPositionSyncPacket;
+		ARG 0 entity

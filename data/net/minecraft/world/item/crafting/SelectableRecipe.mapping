@@ -1,0 +1,12 @@
+CLASS net/minecraft/world/item/crafting/SelectableRecipe
+	METHOD lambda$noRecipeCodec$0 (Lnet/minecraft/world/item/crafting/display/SlotDisplay;)Lnet/minecraft/world/item/crafting/SelectableRecipe;
+		ARG 0 display
+	CLASS SingleInputSet
+		METHOD acceptsInput (Lnet/minecraft/world/item/ItemStack;)Z
+			ARG 1 stack
+		METHOD lambda$acceptsInput$0 (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/crafting/SelectableRecipe$SingleInputEntry;)Z
+			ARG 1 entry
+		METHOD lambda$selectByInput$1 (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/crafting/SelectableRecipe$SingleInputEntry;)Z
+			ARG 1 entry
+		METHOD selectByInput (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/crafting/SelectableRecipe$SingleInputSet;
+			ARG 1 stack

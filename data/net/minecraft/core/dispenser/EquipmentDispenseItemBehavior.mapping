@@ -1,0 +1,6 @@
+CLASS net/minecraft/core/dispenser/EquipmentDispenseItemBehavior
+	METHOD dispenseEquipment (Lnet/minecraft/core/dispenser/BlockSource;Lnet/minecraft/world/item/ItemStack;)Z
+		ARG 0 blockSource
+		ARG 1 item
+	METHOD lambda$dispenseEquipment$0 (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/LivingEntity;)Z
+		ARG 1 entity

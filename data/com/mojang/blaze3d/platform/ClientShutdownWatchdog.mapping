@@ -1,0 +1,4 @@
+CLASS com/mojang/blaze3d/platform/ClientShutdownWatchdog
+	METHOD startShutdownWatchdog (Ljava/io/File;J)V
+		ARG 0 file
+		ARG 1 threadId

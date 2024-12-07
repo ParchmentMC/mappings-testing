@@ -11,6 +11,11 @@ CLASS net/minecraft/world/level/NaturalSpawner
 		ARG 1 entities
 		ARG 2 chunkGetter
 		ARG 3 calculator
+	METHOD getFilteredSpawningCategories (Lnet/minecraft/world/level/NaturalSpawner$SpawnState;ZZZ)Ljava/util/List;
+		ARG 0 spawnState
+		ARG 1 spawnFriendlies
+		ARG 2 spawnEnemies
+		ARG 3 spawnPassives
 	METHOD getMobForSpawn (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/EntityType;)Lnet/minecraft/world/entity/Mob;
 		ARG 0 level
 		ARG 1 entityType
@@ -95,13 +100,11 @@ CLASS net/minecraft/world/level/NaturalSpawner
 		ARG 3 pos
 		ARG 4 filter
 		ARG 5 callback
-	METHOD spawnForChunk (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/chunk/LevelChunk;Lnet/minecraft/world/level/NaturalSpawner$SpawnState;ZZZ)V
+	METHOD spawnForChunk (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/chunk/LevelChunk;Lnet/minecraft/world/level/NaturalSpawner$SpawnState;Ljava/util/List;)V
 		ARG 0 level
 		ARG 1 chunk
 		ARG 2 spawnState
-		ARG 3 spawnFriendlies
-		ARG 4 spawnMonsters
-		ARG 5 forcedDespawn
+		ARG 3 categories
 	METHOD spawnMobsForChunkGeneration (Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/core/Holder;Lnet/minecraft/world/level/ChunkPos;Lnet/minecraft/util/RandomSource;)V
 		ARG 0 levelAccessor
 		ARG 1 biome
@@ -120,9 +123,11 @@ CLASS net/minecraft/world/level/NaturalSpawner
 			ARG 1 entityType
 			ARG 2 pos
 			ARG 3 chunk
-		METHOD canSpawnForCategory (Lnet/minecraft/world/entity/MobCategory;Lnet/minecraft/world/level/ChunkPos;)Z
+		METHOD canSpawnForCategoryGlobal (Lnet/minecraft/world/entity/MobCategory;)Z
 			ARG 1 category
-			ARG 2 pos
+		METHOD canSpawnForCategoryLocal (Lnet/minecraft/world/entity/MobCategory;Lnet/minecraft/world/level/ChunkPos;)Z
+			ARG 1 category
+			ARG 2 chunkPos
 	CLASS ChunkGetter
 		METHOD query (JLjava/util/function/Consumer;)V
 			ARG 1 chunkPos

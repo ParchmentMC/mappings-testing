@@ -1,4 +1,13 @@
 CLASS net/minecraft/world/level/BlockGetter
+	METHOD addCollisionsAlongTravel (Ljava/util/Set;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/AABB;)V
+		ARG 0 output
+		ARG 1 start
+		ARG 2 end
+		ARG 3 boundingBox
+	METHOD boxTraverseBlocks (Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/AABB;)Ljava/lang/Iterable;
+		ARG 0 oldPosition
+		ARG 1 position
+		ARG 2 boundingBox
 	METHOD clip (Lnet/minecraft/world/level/ClipContext;)Lnet/minecraft/world/phys/BlockHitResult;
 		COMMENT Checks if there's block between {@code from} and {@code to} of context.
 		COMMENT This uses the collision shape of provided block.

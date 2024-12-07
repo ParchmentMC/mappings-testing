@@ -1,20 +1,39 @@
 CLASS net/minecraft/recipebook/ServerPlaceRecipe
-	METHOD <init> (Lnet/minecraft/world/inventory/RecipeBookMenu;)V
+	METHOD <init> (Lnet/minecraft/recipebook/ServerPlaceRecipe$CraftingMenuAccess;Lnet/minecraft/world/entity/player/Inventory;ZIILjava/util/List;Ljava/util/List;)V
 		ARG 1 menu
-	METHOD getStackSize (ZIZ)I
-		ARG 1 placeAll
-		ARG 2 maxPossible
-		ARG 3 recipeMatches
-	METHOD handleRecipeClicked (Lnet/minecraft/world/item/crafting/RecipeHolder;Z)V
-		ARG 1 recipe
-		ARG 2 placeAll
-	METHOD moveItemToGrid (Lnet/minecraft/world/inventory/Slot;Lnet/minecraft/world/item/ItemStack;I)I
+		ARG 2 inventory
+		ARG 3 useMaxItems
+		ARG 4 gridWidth
+		ARG 5 gridHeight
+		ARG 6 inputGridSlots
+		ARG 7 slotsToClear
+	METHOD calculateAmountToCraft (IZ)I
+		ARG 1 max
+		ARG 2 recipeMatches
+	METHOD moveItemToGrid (Lnet/minecraft/world/inventory/Slot;Lnet/minecraft/core/Holder;I)I
 		ARG 1 slot
-		ARG 2 stack
-		ARG 3 maxAmount
-	METHOD recipeClicked (Lnet/minecraft/server/level/ServerPlayer;Lnet/minecraft/world/item/crafting/RecipeHolder;Z)V
-		ARG 1 player
-		ARG 2 recipe
-		ARG 3 placeAll
+		ARG 2 item
+		ARG 3 count
+	METHOD placeRecipe (Lnet/minecraft/recipebook/ServerPlaceRecipe$CraftingMenuAccess;IILjava/util/List;Ljava/util/List;Lnet/minecraft/world/entity/player/Inventory;Lnet/minecraft/world/item/crafting/RecipeHolder;ZZ)Lnet/minecraft/world/inventory/RecipeBookMenu$PostPlaceAction;
+		ARG 0 menu
+		ARG 1 gridWidth
+		ARG 2 gridHeight
+		ARG 3 inputGridSlots
+		ARG 4 slotsToClear
+		ARG 5 inventory
+		ARG 6 recipe
+		ARG 7 useMaxItems
+		ARG 8 isCreative
+	METHOD placeRecipe (Lnet/minecraft/world/item/crafting/RecipeHolder;Lnet/minecraft/world/entity/player/StackedItemContents;)V
+		ARG 1 recipe
+		ARG 2 stackedItemContents
 	METHOD testClearGrid ()Z
 		COMMENT Places the output of the recipe into the player's inventory.
+	METHOD tryPlaceRecipe (Lnet/minecraft/world/item/crafting/RecipeHolder;Lnet/minecraft/world/entity/player/StackedItemContents;)Lnet/minecraft/world/inventory/RecipeBookMenu$PostPlaceAction;
+		ARG 1 recipe
+		ARG 2 stackedItemContents
+	CLASS CraftingMenuAccess
+		METHOD fillCraftSlotsStackedContents (Lnet/minecraft/world/entity/player/StackedItemContents;)V
+			ARG 1 stackedItemContents
+		METHOD recipeMatches (Lnet/minecraft/world/item/crafting/RecipeHolder;)Z
+			ARG 1 recipe

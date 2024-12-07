@@ -1,0 +1,16 @@
+CLASS net/minecraft/util/datafix/fixes/TrialSpawnerConfigInRegistryFix
+	METHOD <init> (Lcom/mojang/datafixers/schemas/Schema;)V
+		ARG 1 outputSchema
+	METHOD fixTag (Lcom/mojang/serialization/Dynamic;)Lcom/mojang/serialization/Dynamic;
+		ARG 1 tag
+	CLASS VanillaTrialChambers
+		METHOD asDynamic (Lnet/minecraft/nbt/CompoundTag;)Lcom/mojang/serialization/Dynamic;
+			ARG 0 tag
+		METHOD parse (Ljava/lang/String;)Lnet/minecraft/nbt/CompoundTag;
+			ARG 0 config
+		METHOD register (Lnet/minecraft/resources/ResourceLocation;Ljava/lang/String;Ljava/lang/String;)V
+			ARG 0 name
+			ARG 1 normal
+			ARG 2 ominous
+		METHOD removeDefaults (Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/nbt/CompoundTag;
+			ARG 0 tag

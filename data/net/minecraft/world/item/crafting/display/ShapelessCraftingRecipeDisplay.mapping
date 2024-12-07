@@ -1,0 +1,5 @@
+CLASS net/minecraft/world/item/crafting/display/ShapelessCraftingRecipeDisplay
+	METHOD lambda$isEnabled$1 (Lnet/minecraft/world/flag/FeatureFlagSet;Lnet/minecraft/world/item/crafting/display/SlotDisplay;)Z
+		ARG 1 display
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

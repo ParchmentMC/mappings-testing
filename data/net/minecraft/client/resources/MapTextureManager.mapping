@@ -1,0 +1,18 @@
+CLASS net/minecraft/client/resources/MapTextureManager
+	METHOD <init> (Lnet/minecraft/client/renderer/texture/TextureManager;)V
+		ARG 1 textureManager
+	METHOD getOrCreateMapInstance (Lnet/minecraft/world/level/saveddata/maps/MapId;Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData;)Lnet/minecraft/client/resources/MapTextureManager$MapInstance;
+		ARG 1 id
+		ARG 2 data
+	METHOD prepareMapTexture (Lnet/minecraft/world/level/saveddata/maps/MapId;Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData;)Lnet/minecraft/resources/ResourceLocation;
+		ARG 1 id
+		ARG 2 data
+	METHOD update (Lnet/minecraft/world/level/saveddata/maps/MapId;Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData;)V
+		ARG 1 id
+		ARG 2 data
+	CLASS MapInstance
+		METHOD <init> (Lnet/minecraft/client/resources/MapTextureManager;ILnet/minecraft/world/level/saveddata/maps/MapItemSavedData;)V
+			ARG 2 id
+			ARG 3 data
+		METHOD replaceMapData (Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData;)V
+			ARG 1 data

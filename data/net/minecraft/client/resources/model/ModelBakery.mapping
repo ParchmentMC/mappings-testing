@@ -1,27 +1,12 @@
 CLASS net/minecraft/client/resources/model/ModelBakery
-	METHOD <init> (Lnet/minecraft/client/color/block/BlockColors;Lnet/minecraft/util/profiling/ProfilerFiller;Ljava/util/Map;Ljava/util/Map;)V
-		ARG 1 blockColors
-		ARG 2 profilerFiller
-		ARG 3 modelResources
-		ARG 4 blockStateResources
+	METHOD <init> (Ljava/util/Map;Ljava/util/Map;Lnet/minecraft/client/resources/model/UnbakedModel;)V
+		ARG 1 topModels
+		ARG 2 unbackedModels
+		ARG 3 missingModel
 	METHOD bakeModels (Lnet/minecraft/client/resources/model/ModelBakery$TextureGetter;)V
 		ARG 1 textureGetter
-	METHOD getModel (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/resources/model/UnbakedModel;
-		ARG 1 modelLocation
 	METHOD lambda$static$0 (I)Lnet/minecraft/resources/ResourceLocation;
 		ARG 0 index
-	METHOD loadBlockModel (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/block/model/BlockModel;
-		ARG 1 location
-	METHOD loadItemModelAndDependencies (Lnet/minecraft/resources/ResourceLocation;)V
-		ARG 1 modelLocation
-	METHOD loadSpecialItemModelAndDependencies (Lnet/minecraft/client/resources/model/ModelResourceLocation;)V
-		ARG 1 modelLocation
-	METHOD registerModel (Lnet/minecraft/client/resources/model/ModelResourceLocation;Lnet/minecraft/client/resources/model/UnbakedModel;)V
-		ARG 1 modelLocation
-		ARG 2 model
-	METHOD registerModelAndLoadDependencies (Lnet/minecraft/client/resources/model/ModelResourceLocation;Lnet/minecraft/client/resources/model/UnbakedModel;)V
-		ARG 1 modelLocation
-		ARG 2 model
 	CLASS TextureGetter
 		METHOD get (Lnet/minecraft/client/resources/model/ModelResourceLocation;Lnet/minecraft/client/resources/model/Material;)Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;
 			ARG 1 modelLocation
@@ -33,3 +18,5 @@ CLASS net/minecraft/client/resources/model/ModelBakery
 		METHOD bakeUncached (Lnet/minecraft/client/resources/model/UnbakedModel;Lnet/minecraft/client/resources/model/ModelState;)Lnet/minecraft/client/resources/model/BakedModel;
 			ARG 1 model
 			ARG 2 state
+		METHOD getModel (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/resources/model/UnbakedModel;
+			ARG 1 name

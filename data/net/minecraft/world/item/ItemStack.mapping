@@ -34,12 +34,19 @@ CLASS net/minecraft/world/item/ItemStack
 		ARG 2 context
 		ARG 3 tooltipAdder
 		ARG 4 tooltipFlag
+	METHOD applyAfterUseComponentSideEffects (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/ItemStack;
+		ARG 1 entity
+		ARG 2 stack
 	METHOD applyComponents (Lnet/minecraft/core/component/DataComponentMap;)V
 		ARG 1 components
 	METHOD applyComponents (Lnet/minecraft/core/component/DataComponentPatch;)V
 		ARG 1 components
 	METHOD applyComponentsAndValidate (Lnet/minecraft/core/component/DataComponentPatch;)V
 		ARG 1 components
+	METHOD applyDamage (ILnet/minecraft/server/level/ServerPlayer;Ljava/util/function/Consumer;)V
+		ARG 1 damage
+		ARG 2 player
+		ARG 3 onBreak
 	METHOD canBeHurtBy (Lnet/minecraft/world/damagesource/DamageSource;)Z
 		ARG 1 damageSource
 	METHOD canBreakBlockInAdventureMode (Lnet/minecraft/world/level/block/state/pattern/BlockInWorld;)Z
@@ -109,9 +116,12 @@ CLASS net/minecraft/world/item/ItemStack
 		ARG 2 item
 		ARG 3 entity
 		ARG 4 slot
-	METHOD hurtEnemy (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/player/Player;)Z
-		ARG 1 target
+	METHOD hurtEnemy (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/LivingEntity;)Z
+		ARG 1 enemy
 		ARG 2 attacker
+	METHOD hurtWithoutBreaking (ILnet/minecraft/world/entity/player/Player;)V
+		ARG 1 damage
+		ARG 2 player
 	METHOD interactLivingEntity (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResult;
 		ARG 1 player
 		ARG 2 entity
@@ -155,15 +165,8 @@ CLASS net/minecraft/world/item/ItemStack
 		ARG 1 other
 	METHOD isStackable ()Z
 		COMMENT Returns {@code true} if the {@code ItemStack} can hold 2 or more units of the item.
-	METHOD lambda$static$1 (Lnet/minecraft/core/Holder;)Lcom/mojang/serialization/DataResult;
-		ARG 0 item
-	METHOD lambda$static$3 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
-		ARG 0 instance
-	METHOD lambda$static$6 (Lnet/minecraft/core/Holder;Lnet/minecraft/core/component/DataComponentPatch;)Lnet/minecraft/world/item/ItemStack;
-		ARG 0 item
-		ARG 1 components
-	METHOD lambda$static$7 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
-		ARG 0 instance
+	METHOD isValidRepairItem (Lnet/minecraft/world/item/ItemStack;)Z
+		ARG 1 item
 	METHOD lenientOptionalFieldOf (Ljava/lang/String;)Lcom/mojang/serialization/MapCodec;
 		ARG 0 fieldName
 	METHOD limitSize (I)V
@@ -193,7 +196,7 @@ CLASS net/minecraft/world/item/ItemStack
 		COMMENT Called as the stack is being used by an entity.
 		ARG 1 level
 		ARG 2 livingEntity
-		ARG 3 count
+		ARG 3 remainingUseDuration
 	METHOD overrideOtherStackedOnMe (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/inventory/Slot;Lnet/minecraft/world/inventory/ClickAction;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/entity/SlotAccess;)Z
 		ARG 1 stack
 		ARG 2 slot
@@ -210,9 +213,13 @@ CLASS net/minecraft/world/item/ItemStack
 	METHOD parseOptional (Lnet/minecraft/core/HolderLookup$Provider;Lnet/minecraft/nbt/CompoundTag;)Lnet/minecraft/world/item/ItemStack;
 		ARG 0 lookupProvider
 		ARG 1 tag
-	METHOD postHurtEnemy (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/player/Player;)V
-		ARG 1 target
+	METHOD postHurtEnemy (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/entity/LivingEntity;)V
+		ARG 1 enemy
 		ARG 2 attacker
+	METHOD processDurabilityChange (ILnet/minecraft/server/level/ServerLevel;Lnet/minecraft/server/level/ServerPlayer;)I
+		ARG 1 damage
+		ARG 2 level
+		ARG 3 player
 	METHOD releaseUsing (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;I)V
 		COMMENT Called when the player releases the use item button.
 		ARG 1 level
@@ -260,11 +267,10 @@ CLASS net/minecraft/world/item/ItemStack
 		ARG 1 component
 		ARG 2 defaultValue
 		ARG 3 updater
-	METHOD use (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResultHolder;
-		COMMENT Called when the {@code ItemStack} is equipped and right-clicked. Replaces the {@code ItemStack} with the return value.
+	METHOD use (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResult;
 		ARG 1 level
 		ARG 2 player
-		ARG 3 usedHand
+		ARG 3 hand
 	METHOD useOn (Lnet/minecraft/world/item/context/UseOnContext;)Lnet/minecraft/world/InteractionResult;
 		ARG 1 context
 	METHOD validateComponents (Lnet/minecraft/core/component/DataComponentMap;)Lcom/mojang/serialization/DataResult;

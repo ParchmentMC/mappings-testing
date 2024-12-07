@@ -1,0 +1,7 @@
+CLASS net/minecraft/world/item/equipment/ArmorType
+	METHOD <init> (Ljava/lang/String;ILnet/minecraft/world/entity/EquipmentSlot;ILjava/lang/String;)V
+		ARG 3 slot
+		ARG 4 unitDurability
+		ARG 5 name
+	METHOD getDurability (I)I
+		ARG 1 durabilityMultiplier

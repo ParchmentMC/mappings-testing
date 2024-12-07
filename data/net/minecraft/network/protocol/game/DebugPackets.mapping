@@ -67,3 +67,6 @@ CLASS net/minecraft/network/protocol/game/DebugPackets
 	METHOD sendVillageSectionsPacket (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;)V
 		ARG 0 level
 		ARG 1 pos
+	METHOD sendWireUpdates (Lnet/minecraft/world/level/Level;Lnet/minecraft/network/protocol/common/custom/RedstoneWireOrientationsDebugPayload;)V
+		ARG 0 level
+		ARG 1 payload

@@ -1,0 +1,5 @@
+CLASS net/minecraft/world/entity/EntitySpawnReason
+	METHOD ignoresLightRequirements (Lnet/minecraft/world/entity/EntitySpawnReason;)Z
+		ARG 0 reason
+	METHOD isSpawner (Lnet/minecraft/world/entity/EntitySpawnReason;)Z
+		ARG 0 reason

@@ -1,3 +1,9 @@
 CLASS net/minecraft/client/renderer/blockentity/ShulkerBoxRenderer
 	METHOD <init> (Lnet/minecraft/client/renderer/blockentity/BlockEntityRendererProvider$Context;)V
 		ARG 1 context
+	CLASS ShulkerBoxModel
+		METHOD <init> (Lnet/minecraft/client/model/geom/ModelPart;)V
+			ARG 1 root
+		METHOD animate (Lnet/minecraft/world/level/block/entity/ShulkerBoxBlockEntity;F)V
+			ARG 1 blockEntity
+			ARG 2 partialTick

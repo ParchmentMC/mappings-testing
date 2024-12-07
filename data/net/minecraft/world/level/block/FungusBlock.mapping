@@ -10,6 +10,8 @@ CLASS net/minecraft/world/level/block/FungusBlock
 		ARG 2 level
 		ARG 3 pos
 		ARG 4 context
+	METHOD lambda$static$2 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
 	METHOD mayPlaceOn (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Z
 		ARG 1 state
 		ARG 2 level

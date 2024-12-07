@@ -1,0 +1,6 @@
+CLASS net/minecraft/world/item/component/ConsumableListener
+	METHOD onConsume (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/component/Consumable;)V
+		ARG 1 level
+		ARG 2 entity
+		ARG 3 stack
+		ARG 4 consumable

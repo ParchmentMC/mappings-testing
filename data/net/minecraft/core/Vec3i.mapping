@@ -26,6 +26,8 @@ CLASS net/minecraft/core/Vec3i
 	METHOD cross (Lnet/minecraft/core/Vec3i;)Lnet/minecraft/core/Vec3i;
 		COMMENT Calculate the cross product of this and the given Vector
 		ARG 1 vector
+	METHOD distChessboard (Lnet/minecraft/core/Vec3i;)I
+		ARG 1 vector
 	METHOD distManhattan (Lnet/minecraft/core/Vec3i;)I
 		ARG 1 vector
 	METHOD distSqr (Lnet/minecraft/core/Vec3i;)D

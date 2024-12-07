@@ -1,4 +1,9 @@
 CLASS net/minecraft/util/datafix/ExtraDataFixUtils
+	METHOD blockState (Ljava/lang/String;)Lcom/mojang/serialization/Dynamic;
+		ARG 0 blockId
+	METHOD blockState (Ljava/lang/String;Ljava/util/Map;)Lcom/mojang/serialization/Dynamic;
+		ARG 0 blockId
+		ARG 1 properties
 	METHOD cast (Lcom/mojang/datafixers/types/Type;Lcom/mojang/datafixers/Typed;)Lcom/mojang/datafixers/Typed;
 		ARG 0 type
 		ARG 1 data
@@ -6,3 +11,14 @@ CLASS net/minecraft/util/datafix/ExtraDataFixUtils
 		ARG 0 filters
 	METHOD fixBlockPos (Lcom/mojang/serialization/Dynamic;)Lcom/mojang/serialization/Dynamic;
 		ARG 0 data
+	METHOD fixStringField (Lcom/mojang/serialization/Dynamic;Ljava/lang/String;Ljava/util/function/UnaryOperator;)Lcom/mojang/serialization/Dynamic;
+		ARG 0 data
+		ARG 1 fieldName
+		ARG 2 fixer
+	METHOD patchSubType (Lcom/mojang/datafixers/types/Type;Lcom/mojang/datafixers/types/Type;Lcom/mojang/datafixers/types/Type;)Lcom/mojang/datafixers/types/Type;
+		ARG 0 type
+		ARG 1 oldSubType
+		ARG 2 newSubType
+	METHOD typePatcher (Lcom/mojang/datafixers/types/Type;Lcom/mojang/datafixers/types/Type;)Lcom/mojang/datafixers/TypeRewriteRule;
+		ARG 0 oldType
+		ARG 1 newType

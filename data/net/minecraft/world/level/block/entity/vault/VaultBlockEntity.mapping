@@ -6,6 +6,10 @@ CLASS net/minecraft/world/level/block/entity/vault/VaultBlockEntity
 		ARG 0 codec
 		ARG 1 value
 		ARG 2 levelRegistry
+	METHOD lambda$getUpdateTag$0 (Lnet/minecraft/core/HolderLookup$Provider;Lnet/minecraft/nbt/CompoundTag;)V
+		ARG 2 tag
+	METHOD lambda$loadAdditional$1 (Lnet/minecraft/world/level/block/entity/vault/VaultConfig;)V
+		ARG 1 config
 	METHOD setConfig (Lnet/minecraft/world/level/block/entity/vault/VaultConfig;)V
 		ARG 1 config
 	CLASS Client
@@ -80,11 +84,12 @@ CLASS net/minecraft/world/level/block/entity/vault/VaultBlockEntity
 			ARG 1 serverData
 			ARG 2 pos
 			ARG 3 sound
-		METHOD resolveItemsToEject (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/block/entity/vault/VaultConfig;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;)Ljava/util/List;
+		METHOD resolveItemsToEject (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/level/block/entity/vault/VaultConfig;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/item/ItemStack;)Ljava/util/List;
 			ARG 0 level
 			ARG 1 config
 			ARG 2 pos
 			ARG 3 player
+			ARG 4 key
 		METHOD setVaultState (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/block/entity/vault/VaultConfig;Lnet/minecraft/world/level/block/entity/vault/VaultSharedData;)V
 			ARG 0 level
 			ARG 1 pos

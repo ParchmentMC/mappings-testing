@@ -1,0 +1,4 @@
+CLASS net/minecraft/util/SmoothDouble
+	METHOD getNewDeltaValue (DD)D
+		ARG 1 input
+		ARG 3 multiplier

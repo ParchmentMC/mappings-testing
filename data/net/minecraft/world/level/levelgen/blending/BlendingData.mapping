@@ -80,10 +80,15 @@ CLASS net/minecraft/world/level/levelgen/blending/BlendingData
 		ARG 1 chunkX
 		ARG 2 chunkZ
 		ARG 3 oldNoiseGeneration
-	METHOD validateArraySize (Lnet/minecraft/world/level/levelgen/blending/BlendingData;)Lcom/mojang/serialization/DataResult;
-		ARG 0 blendingData
+	METHOD unpack (Lnet/minecraft/world/level/levelgen/blending/BlendingData$Packed;)Lnet/minecraft/world/level/levelgen/blending/BlendingData;
+		ARG 0 packed
 	METHOD zeroIfNegative (I)I
 		ARG 0 value
+	CLASS Packed
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
+		METHOD validateArraySize (Lnet/minecraft/world/level/levelgen/blending/BlendingData$Packed;)Lcom/mojang/serialization/DataResult;
+			ARG 0 packed
 	CLASS BiomeConsumer
 		METHOD consume (IILnet/minecraft/core/Holder;)V
 			ARG 1 x

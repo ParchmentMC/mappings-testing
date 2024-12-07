@@ -1,6 +1,17 @@
 CLASS net/minecraft/client/gui/screens/recipebook/RecipeButton
-	METHOD init (Lnet/minecraft/client/gui/screens/recipebook/RecipeCollection;Lnet/minecraft/client/gui/screens/recipebook/RecipeBookPage;)V
+	METHOD <init> (Lnet/minecraft/client/gui/screens/recipebook/SlotSelectTime;)V
+		ARG 1 slotSelectTime
+	METHOD getTooltipText (Lnet/minecraft/world/item/ItemStack;)Ljava/util/List;
+		ARG 1 stack
+	METHOD init (Lnet/minecraft/client/gui/screens/recipebook/RecipeCollection;ZLnet/minecraft/client/gui/screens/recipebook/RecipeBookPage;Lnet/minecraft/util/context/ContextMap;)V
 		ARG 1 collection
-		ARG 2 recipeBookPage
+		ARG 2 isFiltering
+		ARG 3 page
+		ARG 4 contextMap
 	METHOD isValidClickButton (I)Z
 		ARG 1 button
+	METHOD lambda$init$0 (Lnet/minecraft/util/context/ContextMap;Lnet/minecraft/world/item/crafting/display/RecipeDisplayEntry;)Lnet/minecraft/client/gui/screens/recipebook/RecipeButton$ResolvedEntry;
+		ARG 1 entry
+	CLASS ResolvedEntry
+		METHOD selectItem (I)Lnet/minecraft/world/item/ItemStack;
+			ARG 1 index

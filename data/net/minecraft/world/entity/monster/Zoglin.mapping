@@ -3,14 +3,10 @@ CLASS net/minecraft/world/entity/monster/Zoglin
 		ARG 1 compound
 	METHOD blockedByShield (Lnet/minecraft/world/entity/LivingEntity;)V
 		ARG 1 entity
-	METHOD doHurtTarget (Lnet/minecraft/world/entity/Entity;)Z
-		ARG 1 entity
+	METHOD findNearestValidAttackTarget (Lnet/minecraft/server/level/ServerLevel;)Ljava/util/Optional;
+		ARG 1 level
 	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
 		ARG 1 damageSource
-	METHOD hurt (Lnet/minecraft/world/damagesource/DamageSource;F)Z
-		COMMENT Called when the entity is attacked.
-		ARG 1 source
-		ARG 2 amount
 	METHOD initCoreActivity (Lnet/minecraft/world/entity/ai/Brain;)V
 		ARG 0 brain
 	METHOD initFightActivity (Lnet/minecraft/world/entity/ai/Brain;)V
@@ -19,8 +15,14 @@ CLASS net/minecraft/world/entity/monster/Zoglin
 		ARG 0 brain
 	METHOD isBaby ()Z
 		COMMENT If Animal, checks if the age timer is negative
-	METHOD isTargetable (Lnet/minecraft/world/entity/LivingEntity;)Z
-		ARG 1 livingEntity
+	METHOD isTargetable (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LivingEntity;)Z
+		ARG 1 level
+		ARG 2 entity
+	METHOD lambda$findNearestValidAttackTarget$1 (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LivingEntity;)Z
+		ARG 2 entity
+	METHOD lambda$initIdleActivity$0 (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/monster/Zoglin;)Ljava/util/Optional;
+		ARG 0 level
+		ARG 1 zoglin
 	METHOD makeBrain (Lcom/mojang/serialization/Dynamic;)Lnet/minecraft/world/entity/ai/Brain;
 		ARG 1 dynamic
 	METHOD onSyncedDataUpdated (Lnet/minecraft/network/syncher/EntityDataAccessor;)V

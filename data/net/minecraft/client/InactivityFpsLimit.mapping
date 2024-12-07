@@ -1,0 +1,5 @@
+CLASS net/minecraft/client/InactivityFpsLimit
+	METHOD <init> (Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;)V
+		ARG 3 id
+		ARG 4 serializedName
+		ARG 5 key

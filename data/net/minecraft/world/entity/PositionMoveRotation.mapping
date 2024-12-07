@@ -1,0 +1,16 @@
+CLASS net/minecraft/world/entity/PositionMoveRotation
+	METHOD calculateAbsolute (Lnet/minecraft/world/entity/PositionMoveRotation;Lnet/minecraft/world/entity/PositionMoveRotation;Ljava/util/Set;)Lnet/minecraft/world/entity/PositionMoveRotation;
+		ARG 0 current
+		ARG 1 after
+		ARG 2 relatives
+	METHOD calculateDelta (DDLjava/util/Set;Lnet/minecraft/world/entity/Relative;)D
+		ARG 0 position
+		ARG 2 deltaMovement
+		ARG 4 relatives
+		ARG 5 deltaRelative
+	METHOD of (Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/entity/PositionMoveRotation;
+		ARG 0 entity
+	METHOD of (Lnet/minecraft/world/level/portal/TeleportTransition;)Lnet/minecraft/world/entity/PositionMoveRotation;
+		ARG 0 teleportTransition
+	METHOD ofEntityUsingLerpTarget (Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/entity/PositionMoveRotation;
+		ARG 0 entity

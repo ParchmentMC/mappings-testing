@@ -5,10 +5,26 @@ CLASS net/minecraft/data/DataProvider
 		ARG 0 map
 	METHOD run (Lnet/minecraft/data/CachedOutput;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 output
+	METHOD saveAll (Lnet/minecraft/data/CachedOutput;Lcom/mojang/serialization/Codec;Lnet/minecraft/data/PackOutput$PathProvider;Ljava/util/Map;)Ljava/util/concurrent/CompletableFuture;
+		ARG 0 output
+		ARG 1 codec
+		ARG 2 pathProvider
+		ARG 3 entries
 	METHOD saveStable (Lnet/minecraft/data/CachedOutput;Lcom/google/gson/JsonElement;Ljava/nio/file/Path;)Ljava/util/concurrent/CompletableFuture;
 		ARG 0 output
 		ARG 1 json
 		ARG 2 path
+	METHOD saveStable (Lnet/minecraft/data/CachedOutput;Lcom/mojang/serialization/Codec;Ljava/lang/Object;Ljava/nio/file/Path;)Ljava/util/concurrent/CompletableFuture;
+		ARG 0 output
+		ARG 1 codec
+		ARG 2 value
+		ARG 3 path
+	METHOD saveStable (Lnet/minecraft/data/CachedOutput;Lcom/mojang/serialization/DynamicOps;Lcom/mojang/serialization/Codec;Ljava/lang/Object;Ljava/nio/file/Path;)Ljava/util/concurrent/CompletableFuture;
+		ARG 0 output
+		ARG 1 ops
+		ARG 2 codec
+		ARG 3 value
+		ARG 4 path
 	METHOD saveStable (Lnet/minecraft/data/CachedOutput;Lnet/minecraft/core/HolderLookup$Provider;Lcom/mojang/serialization/Codec;Ljava/lang/Object;Ljava/nio/file/Path;)Ljava/util/concurrent/CompletableFuture;
 		ARG 0 output
 		ARG 1 registries

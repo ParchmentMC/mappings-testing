@@ -1,8 +1,11 @@
 CLASS net/minecraft/client/gui/components/toasts/Toast
-	METHOD render (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/gui/components/toasts/ToastComponent;J)Lnet/minecraft/client/gui/components/toasts/Toast$Visibility;
+	METHOD render (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/gui/Font;J)V
 		ARG 1 guiGraphics
-		ARG 2 toastComponent
-		ARG 3 timeSinceLastVisible
+		ARG 2 font
+		ARG 3 visibilityTime
+	METHOD update (Lnet/minecraft/client/gui/components/toasts/ToastManager;J)V
+		ARG 1 toastManager
+		ARG 2 visibilityTime
 	CLASS Visibility
 		METHOD <init> (Ljava/lang/String;ILnet/minecraft/sounds/SoundEvent;)V
 			ARG 3 soundEvent

@@ -1,0 +1,7 @@
+CLASS net/minecraft/client/renderer/entity/layers/WingsLayer
+	METHOD <init> (Lnet/minecraft/client/renderer/entity/RenderLayerParent;Lnet/minecraft/client/model/geom/EntityModelSet;Lnet/minecraft/client/renderer/entity/layers/EquipmentLayerRenderer;)V
+		ARG 1 renderer
+		ARG 2 models
+		ARG 3 equipmentRenderer
+	METHOD getPlayerElytraTexture (Lnet/minecraft/client/renderer/entity/state/HumanoidRenderState;)Lnet/minecraft/resources/ResourceLocation;
+		ARG 0 renderState

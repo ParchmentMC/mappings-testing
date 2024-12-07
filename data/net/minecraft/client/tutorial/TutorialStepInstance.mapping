@@ -8,8 +8,7 @@ CLASS net/minecraft/client/tutorial/TutorialStepInstance
 	METHOD onGetItem (Lnet/minecraft/world/item/ItemStack;)V
 		COMMENT Called when the player pick up an ItemStack
 		ARG 1 stack
-	METHOD onInput (Lnet/minecraft/client/player/Input;)V
-		COMMENT Handles the player movement
+	METHOD onInput (Lnet/minecraft/client/player/ClientInput;)V
 		ARG 1 input
 	METHOD onLookAt (Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/world/phys/HitResult;)V
 		COMMENT Handles blocks and entities hovering

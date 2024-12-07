@@ -23,12 +23,9 @@ CLASS net/minecraft/world/entity/item/ItemEntity
 		ARG 1 originStack
 	METHOD getItem ()Lnet/minecraft/world/item/ItemStack;
 		COMMENT Gets the item that this entity represents.
-	METHOD getSpin (F)F
-		ARG 1 partialTicks
-	METHOD hurt (Lnet/minecraft/world/damagesource/DamageSource;F)Z
-		COMMENT Called when the entity is attacked.
-		ARG 1 source
-		ARG 2 amount
+	METHOD getSpin (FF)F
+		ARG 0 age
+		ARG 1 bobOffset
 	METHOD isAttackable ()Z
 		COMMENT Returns {@code true} if it's possible to attack this entity with an item.
 	METHOD lambda$mergeWithNeighbours$0 (Lnet/minecraft/world/entity/item/ItemEntity;)Z
@@ -56,6 +53,8 @@ CLASS net/minecraft/world/entity/item/ItemEntity
 	METHOD readAdditionalSaveData (Lnet/minecraft/nbt/CompoundTag;)V
 		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
 		ARG 1 compound
+	METHOD setFluidMovement (D)V
+		ARG 1 multiplier
 	METHOD setItem (Lnet/minecraft/world/item/ItemStack;)V
 		COMMENT Sets the item that this entity represents.
 		ARG 1 stack

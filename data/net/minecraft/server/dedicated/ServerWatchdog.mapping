@@ -1,5 +1,8 @@
 CLASS net/minecraft/server/dedicated/ServerWatchdog
 	METHOD <init> (Lnet/minecraft/server/dedicated/DedicatedServer;)V
 		ARG 1 server
+	METHOD createWatchdogCrashReport (Ljava/lang/String;J)Lnet/minecraft/CrashReport;
+		ARG 0 title
+		ARG 1 threadId
 	METHOD lambda$run$1 (Lnet/minecraft/server/level/ServerLevel;)Ljava/lang/String;
 		ARG 0 level

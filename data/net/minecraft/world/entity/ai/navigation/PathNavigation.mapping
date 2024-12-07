@@ -93,6 +93,8 @@ CLASS net/minecraft/world/entity/ai/navigation/PathNavigation
 		ARG 1 canSwim
 	METHOD setMaxVisitedNodesMultiplier (F)V
 		ARG 1 multiplier
+	METHOD setRequiredPathLength (F)V
+		ARG 1 requiredPathLength
 	METHOD setSpeedModifier (D)V
 		COMMENT Sets the speed
 		ARG 1 speed

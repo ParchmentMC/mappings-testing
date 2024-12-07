@@ -27,9 +27,13 @@ CLASS net/minecraft/server/level/ServerChunkCache
 	METHOD broadcastAndSend (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/network/protocol/Packet;)V
 		ARG 1 entity
 		ARG 2 packet
+	METHOD broadcastChangedChunks (Lnet/minecraft/util/profiling/ProfilerFiller;)V
+		ARG 1 profiler
 	METHOD chunkAbsent (Lnet/minecraft/server/level/ChunkHolder;I)Z
 		ARG 1 chunkHolder
 		ARG 2 status
+	METHOD collectTickingChunks (Ljava/util/List;)V
+		ARG 1 output
 	METHOD gatherStats ()Ljava/lang/String;
 		COMMENT Converts the instance data to a readable string.
 	METHOD getChunkDebugData (Lnet/minecraft/world/level/ChunkPos;)Ljava/lang/String;
@@ -58,8 +62,14 @@ CLASS net/minecraft/server/level/ServerChunkCache
 		ARG 2 z
 	METHOD isPositionTicking (J)Z
 		ARG 1 chunkPos
+	METHOD lambda$collectTickingChunks$3 (Ljava/util/List;Lnet/minecraft/server/level/ChunkHolder;)V
+		ARG 2 chunk
+	METHOD lambda$getChunkFuture$2 (Ljava/util/concurrent/CompletableFuture;)Ljava/util/concurrent/CompletionStage;
+		ARG 0 future
 	METHOD move (Lnet/minecraft/server/level/ServerPlayer;)V
 		ARG 1 player
+	METHOD onChunkReadyToSend (Lnet/minecraft/server/level/ChunkHolder;)V
+		ARG 1 chunkHolder
 	METHOD onLightUpdate (Lnet/minecraft/world/level/LightLayer;Lnet/minecraft/core/SectionPos;)V
 		ARG 1 type
 		ARG 2 pos
@@ -74,15 +84,16 @@ CLASS net/minecraft/server/level/ServerChunkCache
 		ARG 1 flush
 	METHOD setSimulationDistance (I)V
 		ARG 1 simulationDistance
-	METHOD setSpawnSettings (ZZ)V
-		ARG 1 hostile
-		ARG 2 peaceful
 	METHOD setViewDistance (I)V
 		ARG 1 viewDistance
 	METHOD storeInCache (JLnet/minecraft/world/level/chunk/ChunkAccess;Lnet/minecraft/world/level/chunk/status/ChunkStatus;)V
 		ARG 1 chunkPos
 		ARG 3 chunk
 		ARG 4 chunkStatus
+	METHOD tickChunks (Lnet/minecraft/util/profiling/ProfilerFiller;JLjava/util/List;)V
+		ARG 1 profiler
+		ARG 2 timeInhabited
+		ARG 4 chunks
 	METHOD updateChunkForced (Lnet/minecraft/world/level/ChunkPos;Z)V
 		ARG 1 pos
 		ARG 2 add

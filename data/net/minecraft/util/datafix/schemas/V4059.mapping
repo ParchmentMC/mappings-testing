@@ -1,0 +1,7 @@
+CLASS net/minecraft/util/datafix/schemas/V4059
+	METHOD components (Lcom/mojang/datafixers/schemas/Schema;)Ljava/util/SequencedMap;
+		ARG 0 schema
+	METHOD registerTypes (Lcom/mojang/datafixers/schemas/Schema;Ljava/util/Map;Ljava/util/Map;)V
+		ARG 1 schema
+		ARG 2 entityTypes
+		ARG 3 blockEntityTypes

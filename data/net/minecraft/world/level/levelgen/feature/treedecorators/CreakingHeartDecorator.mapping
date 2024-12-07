@@ -1,0 +1,5 @@
+CLASS net/minecraft/world/level/levelgen/feature/treedecorators/CreakingHeartDecorator
+	METHOD <init> (F)V
+		ARG 1 probability
+	METHOD lambda$place$2 (Lnet/minecraft/world/level/levelgen/feature/treedecorators/TreeDecorator$Context;Lnet/minecraft/core/BlockPos;)Z
+		ARG 1 pos

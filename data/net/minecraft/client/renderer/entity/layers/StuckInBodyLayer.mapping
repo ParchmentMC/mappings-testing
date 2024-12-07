@@ -1,25 +1,17 @@
 CLASS net/minecraft/client/renderer/entity/layers/StuckInBodyLayer
-	METHOD <init> (Lnet/minecraft/client/renderer/entity/LivingEntityRenderer;)V
+	METHOD <init> (Lnet/minecraft/client/renderer/entity/LivingEntityRenderer;Lnet/minecraft/client/model/Model;Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/client/renderer/entity/layers/StuckInBodyLayer$PlacementStyle;)V
 		ARG 1 renderer
-	METHOD numStuck (Lnet/minecraft/world/entity/LivingEntity;)I
-		ARG 1 entity
-	METHOD render (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;ILnet/minecraft/world/entity/LivingEntity;FFFFFF)V
+		ARG 2 model
+		ARG 3 texture
+		ARG 4 placementStyle
+	METHOD numStuck (Lnet/minecraft/client/renderer/entity/state/PlayerRenderState;)I
+		ARG 1 renderState
+	METHOD renderStuckItem (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IFFF)V
 		ARG 1 poseStack
-		ARG 2 buffer
+		ARG 2 bufferSource
 		ARG 3 packedLight
-		ARG 4 livingEntity
-		ARG 5 limbSwing
-		ARG 6 limbSwingAmount
-		ARG 7 partialTicks
-		ARG 8 ageInTicks
-		ARG 9 netHeadYaw
-		ARG 10 headPitch
-	METHOD renderStuckItem (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;ILnet/minecraft/world/entity/Entity;FFFF)V
-		ARG 1 poseStack
-		ARG 2 buffer
-		ARG 3 packedLight
-		ARG 4 entity
-		ARG 5 x
-		ARG 6 y
-		ARG 7 z
-		ARG 8 partialTick
+		ARG 4 x
+		ARG 5 y
+		ARG 6 z
+	METHOD snapToFace (F)F
+		ARG 0 value

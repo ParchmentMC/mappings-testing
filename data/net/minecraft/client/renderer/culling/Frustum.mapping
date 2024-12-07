@@ -7,13 +7,15 @@ CLASS net/minecraft/client/renderer/culling/Frustum
 	METHOD calculateFrustum (Lorg/joml/Matrix4f;Lorg/joml/Matrix4f;)V
 		ARG 1 frustum
 		ARG 2 projection
-	METHOD cubeInFrustum (DDDDDD)Z
+	METHOD cubeInFrustum (DDDDDD)I
 		ARG 1 minX
 		ARG 3 minY
 		ARG 5 minZ
 		ARG 7 maxX
 		ARG 9 maxY
 		ARG 11 maxZ
+	METHOD cubeInFrustum (Lnet/minecraft/world/level/levelgen/structure/BoundingBox;)I
+		ARG 1 boundingBox
 	METHOD isVisible (Lnet/minecraft/world/phys/AABB;)Z
 		ARG 1 aabb
 	METHOD offsetToFullyIncludeCameraCube (I)Lnet/minecraft/client/renderer/culling/Frustum;

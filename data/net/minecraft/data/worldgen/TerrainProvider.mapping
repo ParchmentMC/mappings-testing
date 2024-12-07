@@ -3,21 +3,35 @@ CLASS net/minecraft/data/worldgen/TerrainProvider
 		ARG 0 erosion
 		ARG 1 ridges
 		ARG 2 ridgesFolded
+		ARG 3 highErosionHighWeirdness
+		ARG 4 lowErosionHighWeirdness
+		ARG 5 highErosionMidWeirdness
+		ARG 6 lowErosionMidWeirdness
 		ARG 7 transform
 	METHOD buildErosionOffsetSpline (Lnet/minecraft/util/ToFloatFunction;Lnet/minecraft/util/ToFloatFunction;FFFFFFZZLnet/minecraft/util/ToFloatFunction;)Lnet/minecraft/util/CubicSpline;
 		ARG 0 erosion
 		ARG 1 ridgesFolded
+		ARG 5 magnitude
+		ARG 8 extended
+		ARG 9 useMaxSlope
 		ARG 10 transform
 	METHOD buildMountainRidgeSplineWithPoints (Lnet/minecraft/util/ToFloatFunction;FZLnet/minecraft/util/ToFloatFunction;)Lnet/minecraft/util/CubicSpline;
 		ARG 0 ridgesFolded
+		ARG 1 magnitude
+		ARG 2 useMaxSlope
 		ARG 3 transform
 	METHOD buildRidgeJaggednessSpline (Lnet/minecraft/util/ToFloatFunction;Lnet/minecraft/util/ToFloatFunction;FFLnet/minecraft/util/ToFloatFunction;)Lnet/minecraft/util/CubicSpline;
 		ARG 0 ridges
 		ARG 1 ridgesFolded
+		ARG 2 highWeirdnessMagnitude
+		ARG 3 midWeirdnessMagnitude
 		ARG 4 transform
 	METHOD buildWeirdnessJaggednessSpline (Lnet/minecraft/util/ToFloatFunction;FLnet/minecraft/util/ToFloatFunction;)Lnet/minecraft/util/CubicSpline;
 		ARG 0 ridges
+		ARG 1 magnitude
 		ARG 2 transform
+	METHOD calculateMountainRidgeZeroContinentalnessPoint (F)F
+		ARG 0 input
 	METHOD calculateSlope (FFFF)F
 		ARG 0 y1
 		ARG 1 y2
@@ -27,7 +41,13 @@ CLASS net/minecraft/data/worldgen/TerrainProvider
 		ARG 0 erosion
 		ARG 1 ridges
 		ARG 2 ridgesFolded
+		ARG 3 value
+		ARG 4 higherValues
 		ARG 5 transform
+	METHOD mountainContinentalness (FFF)F
+		ARG 0 heightFactor
+		ARG 1 magnitude
+		ARG 2 cutoffHeight
 	METHOD overworldFactor (Lnet/minecraft/util/ToFloatFunction;Lnet/minecraft/util/ToFloatFunction;Lnet/minecraft/util/ToFloatFunction;Lnet/minecraft/util/ToFloatFunction;Z)Lnet/minecraft/util/CubicSpline;
 		ARG 0 continents
 		ARG 1 erosion

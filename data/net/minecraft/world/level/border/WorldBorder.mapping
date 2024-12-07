@@ -11,6 +11,12 @@ CLASS net/minecraft/world/level/border/WorldBorder
 		ARG 1 pos
 	METHOD clampToBounds (Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/core/BlockPos;
 		ARG 1 pos
+	METHOD clampVec3ToBound (DDD)Lnet/minecraft/world/phys/Vec3;
+		ARG 1 x
+		ARG 3 y
+		ARG 5 z
+	METHOD clampVec3ToBound (Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/world/phys/Vec3;
+		ARG 1 vec3
 	METHOD getDistanceToBorder (DD)D
 		ARG 1 x
 		ARG 3 z

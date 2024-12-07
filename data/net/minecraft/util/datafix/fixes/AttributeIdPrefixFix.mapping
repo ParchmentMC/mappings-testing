@@ -1,0 +1,5 @@
+CLASS net/minecraft/util/datafix/fixes/AttributeIdPrefixFix
+	METHOD <init> (Lcom/mojang/datafixers/schemas/Schema;)V
+		ARG 1 outputSchema
+	METHOD replaceId (Ljava/lang/String;)Ljava/lang/String;
+		ARG 0 id

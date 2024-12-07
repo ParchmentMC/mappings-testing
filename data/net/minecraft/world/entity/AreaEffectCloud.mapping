@@ -12,13 +12,17 @@ CLASS net/minecraft/world/entity/AreaEffectCloud
 		ARG 1 pose
 	METHOD isWaiting ()Z
 		COMMENT Returns {@code true} if the cloud is waiting. While waiting, the radius is ignored and the cloud shows fewer particles in its area.
-	METHOD lambda$tick$0 (Ljava/util/Map$Entry;)Z
+	METHOD lambda$serverTick$0 (Ljava/util/Map$Entry;)Z
 		ARG 1 victim
+	METHOD lambda$serverTick$1 (I)I
+		ARG 0 duration
 	METHOD onSyncedDataUpdated (Lnet/minecraft/network/syncher/EntityDataAccessor;)V
 		ARG 1 key
 	METHOD readAdditionalSaveData (Lnet/minecraft/nbt/CompoundTag;)V
 		COMMENT (abstract) Protected helper method to read subclass entity data from NBT.
 		ARG 1 compound
+	METHOD serverTick (Lnet/minecraft/server/level/ServerLevel;)V
+		ARG 1 level
 	METHOD setDuration (I)V
 		ARG 1 duration
 	METHOD setDurationOnUse (I)V

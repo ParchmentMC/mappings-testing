@@ -1,0 +1,15 @@
+CLASS net/minecraft/world/entity/monster/creaking/Creaking
+	METHOD setIsActive (Z)V
+		ARG 1 isActive
+	CLASS CreakingJumpControl
+		METHOD <init> (Lnet/minecraft/world/entity/monster/creaking/Creaking;Lnet/minecraft/world/entity/monster/creaking/Creaking;)V
+			ARG 2 creaking
+	CLASS CreakingLookControl
+		METHOD <init> (Lnet/minecraft/world/entity/monster/creaking/Creaking;Lnet/minecraft/world/entity/monster/creaking/Creaking;)V
+			ARG 2 creaking
+	CLASS CreakingMoveControl
+		METHOD <init> (Lnet/minecraft/world/entity/monster/creaking/Creaking;Lnet/minecraft/world/entity/monster/creaking/Creaking;)V
+			ARG 2 creaking
+	CLASS CreakingBodyRotationControl
+		METHOD <init> (Lnet/minecraft/world/entity/monster/creaking/Creaking;Lnet/minecraft/world/entity/monster/creaking/Creaking;)V
+			ARG 2 creaking

@@ -10,215 +10,138 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		COMMENT Applies scissoring based on the provided screen rectangle.
 		ARG 1 rectangle
 			COMMENT the screen rectangle to apply scissoring with. Can be null to disable scissoring.
-	METHOD blit (IIIIILnet/minecraft/client/renderer/texture/TextureAtlasSprite;)V
-		COMMENT Blits a portion of the specified texture atlas sprite onto the screen at the given coordinates.
-		ARG 1 x
-			COMMENT the x-coordinate of the blit position.
-		ARG 2 y
-			COMMENT the y-coordinate of the blit position.
-		ARG 3 blitOffset
-			COMMENT the z-level offset for rendering order.
-		ARG 4 width
-			COMMENT the width of the blitted portion.
-		ARG 5 height
-			COMMENT the height of the blitted portion.
-		ARG 6 sprite
-			COMMENT the texture atlas sprite to blit.
-	METHOD blit (IIIIILnet/minecraft/client/renderer/texture/TextureAtlasSprite;FFFF)V
-		COMMENT Blits a portion of the specified texture atlas sprite onto the screen at the given coordinates with a color tint.
-		ARG 1 x
-			COMMENT the x-coordinate of the blit position.
-		ARG 2 y
-			COMMENT the y-coordinate of the blit position.
-		ARG 3 blitOffset
-			COMMENT the z-level offset for rendering order.
-		ARG 4 width
-			COMMENT the width of the blitted portion.
-		ARG 5 height
-			COMMENT the height of the blitted portion.
-		ARG 6 sprite
-			COMMENT the texture atlas sprite to blit.
-		ARG 7 red
-			COMMENT the red component of the color tint.
-		ARG 8 green
-			COMMENT the green component of the color tint.
-		ARG 9 blue
-			COMMENT the blue component of the color tint.
-		ARG 10 alpha
-			COMMENT the alpha component of the color tint.
-	METHOD blit (Lnet/minecraft/resources/ResourceLocation;IIFFIIII)V
-		COMMENT Blits a portion of the texture specified by the atlas location onto the screen at the given position and dimensions with texture coordinates.
-		ARG 1 atlasLocation
-			COMMENT the location of the texture atlas.
-		ARG 2 x
-			COMMENT the x-coordinate of the top-left corner of the blit position.
-		ARG 3 y
-			COMMENT the y-coordinate of the top-left corner of the blit position.
-		ARG 4 uOffset
-			COMMENT the horizontal texture coordinate offset.
-		ARG 5 vOffset
-			COMMENT the vertical texture coordinate offset.
-		ARG 6 width
-			COMMENT the width of the blitted portion.
-		ARG 7 height
-			COMMENT the height of the blitted portion.
-		ARG 8 textureWidth
-			COMMENT the width of the texture.
-		ARG 9 textureHeight
-			COMMENT the height of the texture.
-	METHOD blit (Lnet/minecraft/resources/ResourceLocation;IIIFFIIII)V
-		COMMENT Blits a portion of the texture specified by the atlas location onto the screen at the given coordinates with a blit offset and texture coordinates.
-		ARG 1 atlasLocation
-			COMMENT the location of the texture atlas.
-		ARG 2 x
-			COMMENT the x-coordinate of the blit position.
-		ARG 3 y
-			COMMENT the y-coordinate of the blit position.
-		ARG 4 blitOffset
-			COMMENT the z-level offset for rendering order.
-		ARG 5 uOffset
-			COMMENT the horizontal texture coordinate offset.
-		ARG 6 vOffset
-			COMMENT the vertical texture coordinate offset.
-		ARG 7 uWidth
-			COMMENT the width of the blitted portion in texture coordinates.
-		ARG 8 vHeight
-			COMMENT the height of the blitted portion in texture coordinates.
-		ARG 9 textureWidth
-			COMMENT the width of the texture.
-		ARG 10 textureHeight
-			COMMENT the height of the texture.
-	METHOD blit (Lnet/minecraft/resources/ResourceLocation;IIIIFFIIII)V
-		COMMENT Blits a portion of the texture specified by the atlas location onto the screen at the given position and dimensions with texture coordinates.
-		ARG 1 atlasLocation
-			COMMENT the location of the texture atlas.
-		ARG 2 x
-			COMMENT the x-coordinate of the top-left corner of the blit position.
-		ARG 3 y
-			COMMENT the y-coordinate of the top-left corner of the blit position.
-		ARG 4 width
-			COMMENT the width of the blitted portion.
-		ARG 5 height
-			COMMENT the height of the blitted portion.
-		ARG 6 uOffset
-			COMMENT the horizontal texture coordinate offset.
-		ARG 7 vOffset
-			COMMENT the vertical texture coordinate offset.
-		ARG 8 uWidth
-			COMMENT the width of the blitted portion in texture coordinates.
-		ARG 9 vHeight
-			COMMENT the height of the blitted portion in texture coordinates.
-		ARG 10 textureWidth
-			COMMENT the width of the texture.
-		ARG 11 textureHeight
-			COMMENT the height of the texture.
-	METHOD blit (Lnet/minecraft/resources/ResourceLocation;IIIIII)V
-		COMMENT Blits a portion of the texture specified by the atlas location onto the screen at the given coordinates.
-		ARG 1 atlasLocation
-			COMMENT the location of the texture atlas.
-		ARG 2 x
-			COMMENT the x-coordinate of the blit position.
-		ARG 3 y
-			COMMENT the y-coordinate of the blit position.
-		ARG 4 uOffset
-			COMMENT the horizontal texture coordinate offset.
-		ARG 5 vOffset
-			COMMENT the vertical texture coordinate offset.
-		ARG 6 uWidth
-			COMMENT the width of the blitted portion in texture coordinates.
-		ARG 7 vHeight
-			COMMENT the height of the blitted portion in texture coordinates.
-	METHOD blit (Lnet/minecraft/resources/ResourceLocation;IIIIIIIFFII)V
-		COMMENT Performs the inner blit operation for rendering a texture with the specified coordinates and texture coordinates.
-		ARG 1 atlasLocation
-			COMMENT the location of the texture atlas.
-		ARG 2 x1
-			COMMENT the x-coordinate of the first corner of the blit position.
-		ARG 3 x2
-			COMMENT the x-coordinate of the second corner of the blit position.
-		ARG 4 y1
-			COMMENT the y-coordinate of the first corner of the blit position.
-		ARG 5 y2
-			COMMENT the y-coordinate of the second corner of the blit position.
-		ARG 6 blitOffset
-			COMMENT the z-level offset for rendering order.
-		ARG 7 uWidth
-			COMMENT the width of the blitted portion in texture coordinates.
-		ARG 8 vHeight
-			COMMENT the height of the blitted portion in texture coordinates.
-		ARG 9 uOffset
-			COMMENT the horizontal texture coordinate offset.
-		ARG 10 vOffset
-			COMMENT the vertical texture coordinate offset.
-		ARG 11 textureWidth
-			COMMENT the width of the texture.
-		ARG 12 textureHeight
-			COMMENT the height of the texture.
-	METHOD blitNineSlicedSprite (Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;Lnet/minecraft/client/resources/metadata/gui/GuiSpriteScaling$NineSlice;IIIII)V
-		ARG 1 sprite
-		ARG 2 nineSlice
+	METHOD blit (Ljava/util/function/Function;Lnet/minecraft/resources/ResourceLocation;IIFFIIII)V
+		ARG 1 renderTypeGetter
+		ARG 2 atlasLocation
 		ARG 3 x
 		ARG 4 y
-		ARG 5 blitOffset
+		ARG 5 uOffset
+		ARG 6 vOffset
+		ARG 7 uWidth
+		ARG 8 vHeight
+		ARG 9 textureWidth
+		ARG 10 textureHeight
+	METHOD blit (Ljava/util/function/Function;Lnet/minecraft/resources/ResourceLocation;IIFFIIIII)V
+		ARG 1 renderTypeGetter
+		ARG 2 atlasLocation
+		ARG 3 x
+		ARG 4 y
+		ARG 5 uOffset
+		ARG 6 vOffset
+		ARG 7 uWidth
+		ARG 8 vHeight
+		ARG 9 textureWidth
+		ARG 10 textureHeight
+		ARG 11 color
+	METHOD blit (Ljava/util/function/Function;Lnet/minecraft/resources/ResourceLocation;IIFFIIIIII)V
+		ARG 1 renderTypeGetter
+		ARG 2 atlasLocation
+		ARG 3 x
+		ARG 4 y
+		ARG 5 uOffset
+		ARG 6 vOffset
+		ARG 7 uWidth
+		ARG 8 vHeight
+		ARG 9 width
+		ARG 10 height
+		ARG 11 textureWidth
+		ARG 12 textureHeight
+	METHOD blit (Ljava/util/function/Function;Lnet/minecraft/resources/ResourceLocation;IIFFIIIIIII)V
+		ARG 1 renderTypeGetter
+		ARG 2 atlasLocation
+		ARG 3 x
+		ARG 4 y
+		ARG 5 uOffset
+		ARG 6 vOffset
+		ARG 7 uWidth
+		ARG 8 vHeight
+		ARG 9 width
+		ARG 10 height
+		ARG 11 textureWidth
+		ARG 12 textureHeight
+		ARG 13 color
+	METHOD blitNineSliceInnerSegment (Ljava/util/function/Function;Lnet/minecraft/client/resources/metadata/gui/GuiSpriteScaling$NineSlice;Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;IIIIIIIIIII)V
+		ARG 1 renderTypeGetter
+		ARG 2 nineSlice
+		ARG 3 sprite
+		ARG 4 x
+		ARG 5 y
 		ARG 6 width
 		ARG 7 height
-	METHOD blitSprite (Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;IIIII)V
-		ARG 1 sprite
-		ARG 2 x
-		ARG 3 y
-		ARG 4 blitOffset
+		ARG 8 uPosition
+		ARG 9 vPosition
+		ARG 10 spriteWidth
+		ARG 11 spriteHeight
+		ARG 12 nineSliceWidth
+		ARG 13 nineSliceHeight
+		ARG 14 blitOffset
+	METHOD blitNineSlicedSprite (Ljava/util/function/Function;Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;Lnet/minecraft/client/resources/metadata/gui/GuiSpriteScaling$NineSlice;IIIII)V
+		ARG 1 renderTypeGetter
+		ARG 2 sprite
+		ARG 3 nineSlice
+		ARG 4 x
+		ARG 5 y
+		ARG 6 blitOffset
+		ARG 7 width
+		ARG 8 height
+	METHOD blitSprite (Ljava/util/function/Function;Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;IIII)V
+		ARG 1 renderTypeGetter
+		ARG 2 sprite
+		ARG 3 x
+		ARG 4 y
 		ARG 5 width
 		ARG 6 height
-	METHOD blitSprite (Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;IIIIIIIII)V
-		ARG 1 sprite
-		ARG 2 textureWidth
-		ARG 3 textureHeight
-		ARG 4 uPosition
-		ARG 5 vPosition
-		ARG 6 x
-		ARG 7 y
-		ARG 8 blitOffset
-		ARG 9 uWidth
-		ARG 10 vHeight
-	METHOD blitSprite (Lnet/minecraft/resources/ResourceLocation;IIII)V
-		ARG 1 sprite
-		ARG 2 x
-		ARG 3 y
-		ARG 4 width
-		ARG 5 height
-	METHOD blitSprite (Lnet/minecraft/resources/ResourceLocation;IIIII)V
-		ARG 1 sprite
-		ARG 2 x
-		ARG 3 y
-		ARG 4 blitOffset
+	METHOD blitSprite (Ljava/util/function/Function;Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;IIIII)V
+		ARG 1 renderTypeGetter
+		ARG 2 sprite
+		ARG 3 x
+		ARG 4 y
 		ARG 5 width
 		ARG 6 height
-	METHOD blitSprite (Lnet/minecraft/resources/ResourceLocation;IIIIIIII)V
-		ARG 1 sprite
-		ARG 2 textureWidth
-		ARG 3 textureHeight
-		ARG 4 uPosition
-		ARG 5 vPosition
-		ARG 6 x
-		ARG 7 y
-		ARG 8 uWidth
-		ARG 9 vHeight
-	METHOD blitSprite (Lnet/minecraft/resources/ResourceLocation;IIIIIIIII)V
-		ARG 1 sprite
-		ARG 2 textureWidth
-		ARG 3 textureHeight
-		ARG 4 uPosition
-		ARG 5 vPosition
-		ARG 6 x
-		ARG 7 y
-		ARG 8 blitOffset
+		ARG 7 blitOffset
+	METHOD blitSprite (Ljava/util/function/Function;Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;IIIIIIIII)V
+		ARG 1 renderTypeGetter
+		ARG 2 sprite
+		ARG 3 textureWidth
+		ARG 4 textureHeight
+		ARG 5 uPosition
+		ARG 6 vPosition
+		ARG 7 x
+		ARG 8 y
 		ARG 9 uWidth
 		ARG 10 vHeight
-	METHOD blitTiledSprite (Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;IIIIIIIIIII)V
-		ARG 1 sprite
-		ARG 2 x
-		ARG 3 y
-		ARG 4 blitOffset
+		ARG 11 blitOffset
+	METHOD blitSprite (Ljava/util/function/Function;Lnet/minecraft/resources/ResourceLocation;IIII)V
+		ARG 1 renderTypeGetter
+		ARG 2 sprite
+		ARG 3 x
+		ARG 4 y
+		ARG 5 width
+		ARG 6 height
+	METHOD blitSprite (Ljava/util/function/Function;Lnet/minecraft/resources/ResourceLocation;IIIII)V
+		ARG 1 renderTypeGetter
+		ARG 2 sprite
+		ARG 3 x
+		ARG 4 y
+		ARG 5 width
+		ARG 6 height
+		ARG 7 blitOffset
+	METHOD blitSprite (Ljava/util/function/Function;Lnet/minecraft/resources/ResourceLocation;IIIIIIII)V
+		ARG 1 renderTypeGetter
+		ARG 2 sprite
+		ARG 3 textureWidth
+		ARG 4 textureHeight
+		ARG 5 uPosition
+		ARG 6 vPosition
+		ARG 7 x
+		ARG 8 y
+		ARG 9 uWidth
+		ARG 10 vHeight
+	METHOD blitTiledSprite (Ljava/util/function/Function;Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;IIIIIIIIIII)V
+		ARG 1 renderTypeGetter
+		ARG 2 sprite
+		ARG 3 x
+		ARG 4 y
 		ARG 5 width
 		ARG 6 height
 		ARG 7 uPosition
@@ -227,8 +150,7 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 10 spriteHeight
 		ARG 11 nineSliceWidth
 		ARG 12 nineSliceHeight
-	METHOD bufferSource ()Lnet/minecraft/client/renderer/MultiBufferSource$BufferSource;
-		COMMENT {@return returns the buffer source for rendering.}
+		ARG 13 blitOffset
 	METHOD containsPointInScissor (II)Z
 		ARG 1 x
 		ARG 2 y
@@ -270,10 +192,8 @@ CLASS net/minecraft/client/gui/GuiGraphics
 			COMMENT the y-coordinate of the string.
 		ARG 5 color
 			COMMENT the color of the string.
-	METHOD drawManaged (Ljava/lang/Runnable;)V
-		COMMENT Executes a runnable while managing the render state. The render state is flushed before and after executing the runnable.
-		ARG 1 runnable
-			COMMENT the runnable to execute.
+	METHOD drawSpecial (Ljava/util/function/Consumer;)V
+		ARG 1 drawer
 	METHOD drawString (Lnet/minecraft/client/gui/Font;Ljava/lang/String;III)I
 		COMMENT Draws a string at the specified coordinates using the given font, text, and color. Returns the width of the drawn string.
 		COMMENT <p>
@@ -528,12 +448,6 @@ CLASS net/minecraft/client/gui/GuiGraphics
 		ARG 6 z
 	METHOD flush ()V
 		COMMENT Flushes the render state, ending the current batch and enabling depth testing.
-	METHOD flushIfManaged ()V
-		COMMENT Flushes the render state if it is managed.
-		COMMENT @deprecated This method is deprecated.
-	METHOD flushIfUnmanaged ()V
-		COMMENT Flushes the render state if it is not managed.
-		COMMENT @deprecated This method is deprecated.
 	METHOD guiHeight ()I
 		COMMENT {@return returns the height of the GUI screen in pixels}
 	METHOD guiWidth ()I
@@ -560,58 +474,18 @@ CLASS net/minecraft/client/gui/GuiGraphics
 			COMMENT the y-coordinate of the line.
 		ARG 5 color
 			COMMENT the color of the line.
-	METHOD innerBlit (Lnet/minecraft/resources/ResourceLocation;IIIIIFFFF)V
-		COMMENT Performs the inner blit operation for rendering a texture with the specified coordinates and texture coordinates without color tinting.
-		ARG 1 atlasLocation
-			COMMENT the location of the texture atlas.
-		ARG 2 x1
-			COMMENT the x-coordinate of the first corner of the blit position.
-		ARG 3 x2
-			COMMENT the x-coordinate of the second corner of the blit position.
-		ARG 4 y1
-			COMMENT the y-coordinate of the first corner of the blit position.
-		ARG 5 y2
-			COMMENT the y-coordinate of the second corner of the blit position.
-		ARG 6 blitOffset
-			COMMENT the z-level offset for rendering order.
+	METHOD innerBlit (Ljava/util/function/Function;Lnet/minecraft/resources/ResourceLocation;IIIIFFFFI)V
+		ARG 1 renderTypeGetter
+		ARG 2 atlasLocation
+		ARG 3 x1
+		ARG 4 x2
+		ARG 5 y1
+		ARG 6 y2
 		ARG 7 minU
-			COMMENT the minimum horizontal texture coordinate.
 		ARG 8 maxU
-			COMMENT the maximum horizontal texture coordinate.
 		ARG 9 minV
-			COMMENT the minimum vertical texture coordinate.
 		ARG 10 maxV
-			COMMENT the maximum vertical texture coordinate.
-	METHOD innerBlit (Lnet/minecraft/resources/ResourceLocation;IIIIIFFFFFFFF)V
-		COMMENT Performs the inner blit operation for rendering a texture with the specified coordinates, texture coordinates, and color tint.
-		ARG 1 atlasLocation
-			COMMENT the location of the texture atlas.
-		ARG 2 x1
-			COMMENT the x-coordinate of the first corner of the blit position.
-		ARG 3 x2
-			COMMENT the x-coordinate of the second corner of the blit position.
-		ARG 4 y1
-			COMMENT the y-coordinate of the first corner of the blit position.
-		ARG 5 y2
-			COMMENT the y-coordinate of the second corner of the blit position.
-		ARG 6 blitOffset
-			COMMENT the z-level offset for rendering order.
-		ARG 7 minU
-			COMMENT the minimum horizontal texture coordinate.
-		ARG 8 maxU
-			COMMENT the maximum horizontal texture coordinate.
-		ARG 9 minV
-			COMMENT the minimum vertical texture coordinate.
-		ARG 10 maxV
-			COMMENT the maximum vertical texture coordinate.
-		ARG 11 red
-			COMMENT the red component of the color tint.
-		ARG 12 green
-			COMMENT the green component of the color tint.
-		ARG 13 blue
-			COMMENT the blue component of the color tint.
-		ARG 14 alpha
-			COMMENT the alpha component of the color tint.
+		ARG 11 color
 	METHOD pose ()Lcom/mojang/blaze3d/vertex/PoseStack;
 		COMMENT {@return returns the PoseStack used for transformations and rendering.}
 	METHOD renderComponentHoverEffect (Lnet/minecraft/client/gui/Font;Lnet/minecraft/network/chat/Style;II)V
@@ -634,6 +508,12 @@ CLASS net/minecraft/client/gui/GuiGraphics
 			COMMENT the x-coordinate of the mouse position.
 		ARG 4 mouseY
 			COMMENT the y-coordinate of the mouse position.
+	METHOD renderComponentTooltip (Lnet/minecraft/client/gui/Font;Ljava/util/List;IILnet/minecraft/resources/ResourceLocation;)V
+		ARG 1 font
+		ARG 2 tooltipLines
+		ARG 3 mouseX
+		ARG 4 mouseY
+		ARG 5 sprite
 	METHOD renderFakeItem (Lnet/minecraft/world/item/ItemStack;II)V
 		COMMENT Renders a fake item stack at the specified coordinates.
 		ARG 1 stack
@@ -719,6 +599,20 @@ CLASS net/minecraft/client/gui/GuiGraphics
 			COMMENT the random seed.
 		ARG 5 guiOffset
 			COMMENT the GUI offset.
+	METHOD renderItemBar (Lnet/minecraft/world/item/ItemStack;II)V
+		ARG 1 stack
+		ARG 2 x
+		ARG 3 y
+	METHOD renderItemCooldown (Lnet/minecraft/world/item/ItemStack;II)V
+		ARG 1 stack
+		ARG 2 x
+		ARG 3 y
+	METHOD renderItemCount (Lnet/minecraft/client/gui/Font;Lnet/minecraft/world/item/ItemStack;IILjava/lang/String;)V
+		ARG 1 font
+		ARG 2 stack
+		ARG 3 x
+		ARG 4 y
+		ARG 5 text
 	METHOD renderItemDecorations (Lnet/minecraft/client/gui/Font;Lnet/minecraft/world/item/ItemStack;II)V
 		COMMENT Renders additional decorations for an item stack at the specified coordinates.
 		ARG 1 font
@@ -763,6 +657,12 @@ CLASS net/minecraft/client/gui/GuiGraphics
 			COMMENT the x-coordinate of the mouse position.
 		ARG 4 mouseY
 			COMMENT the y-coordinate of the mouse position.
+	METHOD renderTooltip (Lnet/minecraft/client/gui/Font;Ljava/util/List;IILnet/minecraft/resources/ResourceLocation;)V
+		ARG 1 font
+		ARG 2 tooltipLines
+		ARG 3 mouseX
+		ARG 4 mouseY
+		ARG 5 sprite
 	METHOD renderTooltip (Lnet/minecraft/client/gui/Font;Ljava/util/List;Ljava/util/Optional;II)V
 		COMMENT Renders a tooltip with customizable components at the specified mouse coordinates.
 		ARG 1 font
@@ -775,6 +675,13 @@ CLASS net/minecraft/client/gui/GuiGraphics
 			COMMENT the x-coordinate of the mouse position.
 		ARG 5 mouseY
 			COMMENT the y-coordinate of the mouse position.
+	METHOD renderTooltip (Lnet/minecraft/client/gui/Font;Ljava/util/List;Ljava/util/Optional;IILnet/minecraft/resources/ResourceLocation;)V
+		ARG 1 font
+		ARG 2 tooltipLines
+		ARG 3 visualTooltipComponent
+		ARG 4 mouseX
+		ARG 5 mouseY
+		ARG 6 sprite
 	METHOD renderTooltip (Lnet/minecraft/client/gui/Font;Ljava/util/List;Lnet/minecraft/client/gui/screens/inventory/tooltip/ClientTooltipPositioner;II)V
 		COMMENT Renders a tooltip with multiple lines of formatted text using a custom tooltip positioner at the specified mouse coordinates.
 		ARG 1 font
@@ -797,6 +704,12 @@ CLASS net/minecraft/client/gui/GuiGraphics
 			COMMENT the x-coordinate of the mouse position.
 		ARG 4 mouseY
 			COMMENT the y-coordinate of the mouse position.
+	METHOD renderTooltip (Lnet/minecraft/client/gui/Font;Lnet/minecraft/network/chat/Component;IILnet/minecraft/resources/ResourceLocation;)V
+		ARG 1 font
+		ARG 2 text
+		ARG 3 mouseX
+		ARG 4 mouseY
+		ARG 5 sprite
 	METHOD renderTooltip (Lnet/minecraft/client/gui/Font;Lnet/minecraft/world/item/ItemStack;II)V
 		COMMENT Renders a tooltip for an item stack at the specified mouse coordinates.
 		ARG 1 font
@@ -807,28 +720,13 @@ CLASS net/minecraft/client/gui/GuiGraphics
 			COMMENT the x-coordinate of the mouse position.
 		ARG 4 mouseY
 			COMMENT the y-coordinate of the mouse position.
-	METHOD renderTooltipInternal (Lnet/minecraft/client/gui/Font;Ljava/util/List;IILnet/minecraft/client/gui/screens/inventory/tooltip/ClientTooltipPositioner;)V
-		COMMENT Renders an internal tooltip with customizable tooltip components at the specified mouse coordinates using a tooltip positioner.
+	METHOD renderTooltipInternal (Lnet/minecraft/client/gui/Font;Ljava/util/List;IILnet/minecraft/client/gui/screens/inventory/tooltip/ClientTooltipPositioner;Lnet/minecraft/resources/ResourceLocation;)V
 		ARG 1 font
-			COMMENT the font used for rendering text.
-		ARG 2 components
-			COMMENT the tooltip components to render.
+		ARG 2 tooltipLines
 		ARG 3 mouseX
-			COMMENT the x-coordinate of the mouse position.
 		ARG 4 mouseY
-			COMMENT the y-coordinate of the mouse position.
 		ARG 5 tooltipPositioner
-			COMMENT the positioner to determine the tooltip's position.
-	METHOD setColor (FFFF)V
-		COMMENT Sets the current rendering color.
-		ARG 1 red
-			COMMENT the red component of the color.
-		ARG 2 green
-			COMMENT the green component of the color.
-		ARG 3 blue
-			COMMENT the blue component of the color.
-		ARG 4 alpha
-			COMMENT the alpha component of the color.
+		ARG 6 sprite
 	METHOD vLine (IIII)V
 		COMMENT Draws a vertical line from minY to maxY at the specified x-coordinate with the given color.
 		ARG 1 x

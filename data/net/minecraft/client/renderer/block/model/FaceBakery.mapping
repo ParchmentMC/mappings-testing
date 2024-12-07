@@ -5,7 +5,7 @@ CLASS net/minecraft/client/renderer/block/model/FaceBakery
 	METHOD applyModelRotation (Lorg/joml/Vector3f;Lcom/mojang/math/Transformation;)V
 		ARG 1 pos
 		ARG 2 transform
-	METHOD bakeQuad (Lorg/joml/Vector3f;Lorg/joml/Vector3f;Lnet/minecraft/client/renderer/block/model/BlockElementFace;Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;Lnet/minecraft/core/Direction;Lnet/minecraft/client/resources/model/ModelState;Lnet/minecraft/client/renderer/block/model/BlockElementRotation;Z)Lnet/minecraft/client/renderer/block/model/BakedQuad;
+	METHOD bakeQuad (Lorg/joml/Vector3f;Lorg/joml/Vector3f;Lnet/minecraft/client/renderer/block/model/BlockElementFace;Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;Lnet/minecraft/core/Direction;Lnet/minecraft/client/resources/model/ModelState;Lnet/minecraft/client/renderer/block/model/BlockElementRotation;ZI)Lnet/minecraft/client/renderer/block/model/BakedQuad;
 		ARG 1 posFrom
 		ARG 2 posTo
 		ARG 3 face
@@ -14,16 +14,16 @@ CLASS net/minecraft/client/renderer/block/model/FaceBakery
 		ARG 6 transform
 		ARG 7 rotation
 		ARG 8 shade
-	METHOD bakeVertex ([IILnet/minecraft/core/Direction;Lnet/minecraft/client/renderer/block/model/BlockFaceUV;[FLnet/minecraft/client/renderer/texture/TextureAtlasSprite;Lcom/mojang/math/Transformation;Lnet/minecraft/client/renderer/block/model/BlockElementRotation;Z)V
+		ARG 9 lightEmission
+	METHOD bakeVertex ([IILnet/minecraft/core/Direction;Lnet/minecraft/client/renderer/block/model/BlockFaceUV;[FLnet/minecraft/client/renderer/texture/TextureAtlasSprite;Lcom/mojang/math/Transformation;Lnet/minecraft/client/renderer/block/model/BlockElementRotation;)V
 		ARG 1 vertexData
 		ARG 2 vertexIndex
 		ARG 3 facing
 		ARG 4 blockFaceUV
 		ARG 5 posDiv16
 		ARG 6 sprite
-		ARG 7 rotation
+		ARG 7 transformation
 		ARG 8 partRotation
-		ARG 9 shade
 	METHOD calculateFacing ([I)Lnet/minecraft/core/Direction;
 		ARG 0 faceData
 	METHOD fillVertex ([IILorg/joml/Vector3f;Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;Lnet/minecraft/client/renderer/block/model/BlockFaceUV;)V
@@ -32,14 +32,13 @@ CLASS net/minecraft/client/renderer/block/model/FaceBakery
 		ARG 3 vector
 		ARG 4 sprite
 		ARG 5 blockFaceUV
-	METHOD makeVertices (Lnet/minecraft/client/renderer/block/model/BlockFaceUV;Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;Lnet/minecraft/core/Direction;[FLcom/mojang/math/Transformation;Lnet/minecraft/client/renderer/block/model/BlockElementRotation;Z)[I
+	METHOD makeVertices (Lnet/minecraft/client/renderer/block/model/BlockFaceUV;Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;Lnet/minecraft/core/Direction;[FLcom/mojang/math/Transformation;Lnet/minecraft/client/renderer/block/model/BlockElementRotation;)[I
 		ARG 1 uvs
 		ARG 2 sprite
 		ARG 3 orientation
 		ARG 4 posDiv16
-		ARG 5 rotation
+		ARG 5 transformation
 		ARG 6 partRotation
-		ARG 7 shade
 	METHOD recalculateWinding ([ILnet/minecraft/core/Direction;)V
 		ARG 1 vertices
 		ARG 2 direction

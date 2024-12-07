@@ -9,6 +9,8 @@ CLASS net/minecraft/world/entity/monster/ZombieVillager
 		COMMENT Gets the pitch of living sounds in living entities.
 	METHOD isConverting ()Z
 		COMMENT Returns whether this zombie is in the process of converting to a villager
+	METHOD lambda$finishConversion$4 (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/npc/Villager;)V
+		ARG 2 villager
 	METHOD lambda$new$0 (Lnet/minecraft/core/Holder$Reference;)V
 		ARG 1 profession
 	METHOD lambda$readAdditionalSaveData$2 (Lnet/minecraft/world/item/trading/MerchantOffers;)V
@@ -25,6 +27,8 @@ CLASS net/minecraft/world/entity/monster/ZombieVillager
 		ARG 1 gossips
 	METHOD setTradeOffers (Lnet/minecraft/world/item/trading/MerchantOffers;)V
 		ARG 1 tradeOffers
+	METHOD setVillagerConversionTime (I)V
+		ARG 1 villagerConversionTime
 	METHOD setVillagerXp (I)V
 		ARG 1 villagerXp
 	METHOD startConverting (Ljava/util/UUID;I)V

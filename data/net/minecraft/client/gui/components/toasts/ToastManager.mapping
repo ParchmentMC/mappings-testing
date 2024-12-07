@@ -1,0 +1,22 @@
+CLASS net/minecraft/client/gui/components/toasts/ToastManager
+	METHOD <init> (Lnet/minecraft/client/Minecraft;)V
+		ARG 1 minecraft
+	METHOD addToast (Lnet/minecraft/client/gui/components/toasts/Toast;)V
+		ARG 1 toast
+	METHOD findFreeSlotsIndex (I)I
+		ARG 1 slots
+	METHOD getToast (Ljava/lang/Class;Ljava/lang/Object;)Lnet/minecraft/client/gui/components/toasts/Toast;
+		ARG 1 toastClass
+		ARG 2 token
+	METHOD render (Lnet/minecraft/client/gui/GuiGraphics;)V
+		ARG 1 guiGraphics
+	CLASS ToastInstance
+		METHOD <init> (Lnet/minecraft/client/gui/components/toasts/ToastManager;Lnet/minecraft/client/gui/components/toasts/Toast;II)V
+			ARG 2 toast
+			ARG 3 firstSlotIndex
+			ARG 4 occupiedSlotCount
+		METHOD calculateVisiblePortion (J)V
+			ARG 1 visibilityTime
+		METHOD render (Lnet/minecraft/client/gui/GuiGraphics;I)V
+			ARG 1 guiGraphics
+			ARG 2 guiWidth

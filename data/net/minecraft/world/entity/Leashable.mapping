@@ -16,6 +16,8 @@ CLASS net/minecraft/world/entity/Leashable
 	METHOD handleLeashAtDistance (Lnet/minecraft/world/entity/Entity;F)Z
 		ARG 1 leashHolder
 		ARG 2 distance
+	METHOD lambda$writeLeashData$0 (Ljava/util/UUID;)Lnet/minecraft/nbt/Tag;
+		ARG 0 uuid
 	METHOD legacyElasticRangeLeashBehaviour (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/Entity;F)V
 		ARG 0 entity
 		ARG 1 leashHolder
@@ -36,8 +38,9 @@ CLASS net/minecraft/world/entity/Leashable
 	METHOD setLeashedTo (Lnet/minecraft/world/entity/Entity;Z)V
 		ARG 1 leashHolder
 		ARG 2 broadcastPacket
-	METHOD tickLeash (Lnet/minecraft/world/entity/Entity;)V
-		ARG 0 entity
+	METHOD tickLeash (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/Entity;)V
+		ARG 0 level
+		ARG 1 entity
 	METHOD writeLeashData (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/world/entity/Leashable$LeashData;)V
 		ARG 1 tag
 		ARG 2 leashData

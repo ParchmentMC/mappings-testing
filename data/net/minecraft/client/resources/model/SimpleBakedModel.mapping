@@ -1,24 +1,21 @@
 CLASS net/minecraft/client/resources/model/SimpleBakedModel
-	METHOD <init> (Ljava/util/List;Ljava/util/Map;ZZZLnet/minecraft/client/renderer/texture/TextureAtlasSprite;Lnet/minecraft/client/renderer/block/model/ItemTransforms;Lnet/minecraft/client/renderer/block/model/ItemOverrides;)V
+	METHOD <init> (Ljava/util/List;Ljava/util/Map;ZZZLnet/minecraft/client/renderer/texture/TextureAtlasSprite;Lnet/minecraft/client/renderer/block/model/ItemTransforms;)V
 		ARG 1 unculledFaces
 		ARG 2 culledFaces
 		ARG 3 hasAmbientOcclusion
-		ARG 4 usesBlockLight
+		ARG 4 useBlockLight
 		ARG 5 isGui3d
 		ARG 6 particleIcon
 		ARG 7 transforms
-		ARG 8 overrides
 	CLASS Builder
-		METHOD <init> (Lnet/minecraft/client/renderer/block/model/BlockModel;Lnet/minecraft/client/renderer/block/model/ItemOverrides;Z)V
-			ARG 1 blockModel
-			ARG 2 overrides
-			ARG 3 isGui3d
-		METHOD <init> (ZZZLnet/minecraft/client/renderer/block/model/ItemTransforms;Lnet/minecraft/client/renderer/block/model/ItemOverrides;)V
+		METHOD <init> (Lnet/minecraft/client/renderer/block/model/BlockModel;Z)V
+			ARG 1 model
+			ARG 2 isGui3d
+		METHOD <init> (ZZZLnet/minecraft/client/renderer/block/model/ItemTransforms;)V
 			ARG 1 hasAmbientOcclusion
-			ARG 2 usesBlockLight
+			ARG 2 useBlockLight
 			ARG 3 isGui3d
-			ARG 4 transforms
-			ARG 5 overrides
+			ARG 4 trnsforms
 		METHOD addCulledFace (Lnet/minecraft/core/Direction;Lnet/minecraft/client/renderer/block/model/BakedQuad;)Lnet/minecraft/client/resources/model/SimpleBakedModel$Builder;
 			ARG 1 facing
 			ARG 2 quad

@@ -1,0 +1,7 @@
+CLASS net/minecraft/client/renderer/entity/state/EnderDragonRenderState
+	METHOD getHeadPartYOffset (ILnet/minecraft/world/entity/boss/enderdragon/DragonFlightHistory$Sample;Lnet/minecraft/world/entity/boss/enderdragon/DragonFlightHistory$Sample;)F
+		ARG 1 part
+		ARG 2 start
+		ARG 3 current
+	METHOD getHistoricalPos (I)Lnet/minecraft/world/entity/boss/enderdragon/DragonFlightHistory$Sample;
+		ARG 1 index

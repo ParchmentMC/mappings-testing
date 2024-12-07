@@ -1,11 +1,4 @@
 CLASS net/minecraft/client/model/geom/PartPose
-	METHOD <init> (FFFFFF)V
-		ARG 1 x
-		ARG 2 y
-		ARG 3 z
-		ARG 4 xRot
-		ARG 5 yRot
-		ARG 6 zRot
 	METHOD offset (FFF)Lnet/minecraft/client/model/geom/PartPose;
 		ARG 0 x
 		ARG 1 y
@@ -21,3 +14,15 @@ CLASS net/minecraft/client/model/geom/PartPose
 		ARG 0 xRot
 		ARG 1 yRot
 		ARG 2 zRot
+	METHOD scaled (F)Lnet/minecraft/client/model/geom/PartPose;
+		ARG 1 scale
+	METHOD scaled (FFF)Lnet/minecraft/client/model/geom/PartPose;
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD translated (FFF)Lnet/minecraft/client/model/geom/PartPose;
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD withScale (F)Lnet/minecraft/client/model/geom/PartPose;
+		ARG 1 scale

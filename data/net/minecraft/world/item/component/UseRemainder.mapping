@@ -1,0 +1,11 @@
+CLASS net/minecraft/world/item/component/UseRemainder
+	METHOD convertIntoRemainder (Lnet/minecraft/world/item/ItemStack;IZLnet/minecraft/world/item/component/UseRemainder$OnExtraCreatedRemainder;)Lnet/minecraft/world/item/ItemStack;
+		ARG 1 stack
+		ARG 2 count
+		ARG 3 hasInfiniteMaterials
+		ARG 4 onExtraCreated
+	METHOD equals (Ljava/lang/Object;)Z
+		ARG 1 other
+	CLASS OnExtraCreatedRemainder
+		METHOD apply (Lnet/minecraft/world/item/ItemStack;)V
+			ARG 1 stack

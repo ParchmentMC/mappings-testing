@@ -1,0 +1,12 @@
+CLASS com/mojang/blaze3d/framegraph/FramePass
+	METHOD createsInternal (Ljava/lang/String;Lcom/mojang/blaze3d/resource/ResourceDescriptor;)Lcom/mojang/blaze3d/resource/ResourceHandle;
+		ARG 1 name
+		ARG 2 descriptor
+	METHOD executes (Ljava/lang/Runnable;)V
+		ARG 1 task
+	METHOD reads (Lcom/mojang/blaze3d/resource/ResourceHandle;)V
+		ARG 1 handle
+	METHOD readsAndWrites (Lcom/mojang/blaze3d/resource/ResourceHandle;)Lcom/mojang/blaze3d/resource/ResourceHandle;
+		ARG 1 handle
+	METHOD requires (Lcom/mojang/blaze3d/framegraph/FramePass;)V
+		ARG 1 pass

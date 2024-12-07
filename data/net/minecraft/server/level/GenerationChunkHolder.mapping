@@ -3,6 +3,8 @@ CLASS net/minecraft/server/level/GenerationChunkHolder
 		ARG 1 pos
 	METHOD acquireStatusBump (Lnet/minecraft/world/level/chunk/status/ChunkStatus;)Z
 		ARG 1 status
+	METHOD addSaveDependency (Ljava/util/concurrent/CompletableFuture;)V
+		ARG 1 saveDependency
 	METHOD applyStep (Lnet/minecraft/world/level/chunk/status/ChunkStep;Lnet/minecraft/server/level/GeneratingChunkMap;Lnet/minecraft/util/StaticCache2D;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 step
 		ARG 2 chunkMap

@@ -1,0 +1,8 @@
+CLASS net/minecraft/util/profiling/TracyZoneFiller
+	CLASS PlotAndValue
+		METHOD <init> (Ljava/lang/String;)V
+			ARG 1 name
+		METHOD add (I)V
+			ARG 1 value
+		METHOD set (I)V
+			ARG 1 value

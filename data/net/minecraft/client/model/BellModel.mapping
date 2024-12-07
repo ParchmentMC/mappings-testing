@@ -1,0 +1,6 @@
+CLASS net/minecraft/client/model/BellModel
+	METHOD <init> (Lnet/minecraft/client/model/geom/ModelPart;)V
+		ARG 1 root
+	METHOD setupAnim (Lnet/minecraft/world/level/block/entity/BellBlockEntity;F)V
+		ARG 1 bell
+		ARG 2 partialTick

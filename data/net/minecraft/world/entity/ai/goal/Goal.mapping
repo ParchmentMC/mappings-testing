@@ -5,6 +5,10 @@ CLASS net/minecraft/world/entity/ai/goal/Goal
 		COMMENT @return whether the goal should continue executing
 	METHOD canUse ()Z
 		COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
+	METHOD getServerLevel (Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/server/level/ServerLevel;
+		ARG 0 entity
+	METHOD getServerLevel (Lnet/minecraft/world/level/Level;)Lnet/minecraft/server/level/ServerLevel;
+		ARG 0 level
 	METHOD reducedTickDelay (I)I
 		ARG 0 reduction
 	METHOD setFlags (Ljava/util/EnumSet;)V

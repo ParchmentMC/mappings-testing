@@ -1,0 +1,4 @@
+CLASS net/minecraft/server/commands/LookAt
+	METHOD perform (Lnet/minecraft/commands/CommandSourceStack;Lnet/minecraft/world/entity/Entity;)V
+		ARG 1 source
+		ARG 2 entity

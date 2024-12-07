@@ -56,12 +56,8 @@ CLASS com/mojang/realmsclient/client/RealmsClient
 	METHOD requestDownloadInfo (JI)Lcom/mojang/realmsclient/dto/WorldDownload;
 		ARG 1 worldId
 		ARG 3 slotId
-	METHOD requestUploadInfo (JLjava/lang/String;)Lcom/mojang/realmsclient/dto/UploadInfo;
+	METHOD requestUploadInfo (J)Lcom/mojang/realmsclient/dto/UploadInfo;
 		ARG 1 worldId
-		ARG 3 token
-	METHOD resetWorldWithSeed (JLcom/mojang/realmsclient/util/WorldGenerationInfo;)Ljava/lang/Boolean;
-		ARG 1 worldId
-		ARG 3 generationInfo
 	METHOD resetWorldWithTemplate (JLjava/lang/String;)Ljava/lang/Boolean;
 		ARG 1 worldId
 		ARG 3 worldTemplateId

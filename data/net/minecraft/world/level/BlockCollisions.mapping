@@ -5,6 +5,12 @@ CLASS net/minecraft/world/level/BlockCollisions
 		ARG 3 box
 		ARG 4 onlySuffocatingBlocks
 		ARG 5 resultProvider
+	METHOD <init> (Lnet/minecraft/world/level/CollisionGetter;Lnet/minecraft/world/phys/shapes/CollisionContext;Lnet/minecraft/world/phys/AABB;ZLjava/util/function/BiFunction;)V
+		ARG 1 collisionGetter
+		ARG 2 context
+		ARG 3 box
+		ARG 4 onlySuffocatingBlocks
+		ARG 5 resultProvider
 	METHOD getChunk (II)Lnet/minecraft/world/level/BlockGetter;
 		ARG 1 x
 		ARG 2 z

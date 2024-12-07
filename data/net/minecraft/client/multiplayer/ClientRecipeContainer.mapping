@@ -1,0 +1,4 @@
+CLASS net/minecraft/client/multiplayer/ClientRecipeContainer
+	METHOD <init> (Ljava/util/Map;Lnet/minecraft/world/item/crafting/SelectableRecipe$SingleInputSet;)V
+		ARG 1 itemSets
+		ARG 2 stonecutterRecipes

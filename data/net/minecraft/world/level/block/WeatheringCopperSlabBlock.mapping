@@ -2,3 +2,5 @@ CLASS net/minecraft/world/level/block/WeatheringCopperSlabBlock
 	METHOD <init> (Lnet/minecraft/world/level/block/WeatheringCopper$WeatherState;Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
 		ARG 1 weatherState
 		ARG 2 properties
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

@@ -3,10 +3,10 @@ CLASS net/minecraft/world/entity/animal/WaterAnimal
 		COMMENT Gets called every tick from main Entity class
 	METHOD checkSpawnObstruction (Lnet/minecraft/world/level/LevelReader;)Z
 		ARG 1 level
-	METHOD checkSurfaceWaterAnimalSpawnRules (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z
-		ARG 0 waterAnimal
+	METHOD checkSurfaceWaterAnimalSpawnRules (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/world/entity/EntitySpawnReason;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z
+		ARG 0 entityType
 		ARG 1 level
-		ARG 2 spawnType
+		ARG 2 spawnReason
 		ARG 3 pos
 		ARG 4 random
 	METHOD getAmbientSoundInterval ()I

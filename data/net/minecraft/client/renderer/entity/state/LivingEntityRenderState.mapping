@@ -1,0 +1,3 @@
+CLASS net/minecraft/client/renderer/entity/state/LivingEntityRenderState
+	METHOD hasPose (Lnet/minecraft/world/entity/Pose;)Z
+		ARG 1 pose

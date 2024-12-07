@@ -3,3 +3,11 @@ CLASS net/minecraft/world/item/crafting/CustomRecipe
 		ARG 1 category
 	METHOD isSpecial ()Z
 		COMMENT If true, this recipe does not appear in the recipe book and does not respect recipe unlocking (and the doLimitedCrafting gamerule)
+	CLASS Serializer
+		METHOD <init> (Lnet/minecraft/world/item/crafting/CustomRecipe$Serializer$Factory;)V
+			ARG 1 factory
+		METHOD lambda$new$0 (Lnet/minecraft/world/item/crafting/CustomRecipe$Serializer$Factory;Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 1 instance
+		CLASS Factory
+			METHOD create (Lnet/minecraft/world/item/crafting/CraftingBookCategory;)Lnet/minecraft/world/item/crafting/CraftingRecipe;
+				ARG 1 category

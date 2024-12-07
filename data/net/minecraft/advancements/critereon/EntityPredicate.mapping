@@ -44,10 +44,12 @@ CLASS net/minecraft/advancements/critereon/EntityPredicate
 			ARG 1 movement
 		METHOD nbt (Lnet/minecraft/advancements/critereon/NbtPredicate;)Lnet/minecraft/advancements/critereon/EntityPredicate$Builder;
 			ARG 1 nbt
-		METHOD of (Lnet/minecraft/tags/TagKey;)Lnet/minecraft/advancements/critereon/EntityPredicate$Builder;
-			ARG 1 entityTypeTag
-		METHOD of (Lnet/minecraft/world/entity/EntityType;)Lnet/minecraft/advancements/critereon/EntityPredicate$Builder;
-			ARG 1 entityType
+		METHOD of (Lnet/minecraft/core/HolderGetter;Lnet/minecraft/tags/TagKey;)Lnet/minecraft/advancements/critereon/EntityPredicate$Builder;
+			ARG 1 entityTypeRegistry
+			ARG 2 entityTypeTag
+		METHOD of (Lnet/minecraft/core/HolderGetter;Lnet/minecraft/world/entity/EntityType;)Lnet/minecraft/advancements/critereon/EntityPredicate$Builder;
+			ARG 1 entityTypeRegistry
+			ARG 2 entityType
 		METHOD passenger (Lnet/minecraft/advancements/critereon/EntityPredicate$Builder;)Lnet/minecraft/advancements/critereon/EntityPredicate$Builder;
 			ARG 1 passenger
 		METHOD periodicTick (I)Lnet/minecraft/advancements/critereon/EntityPredicate$Builder;

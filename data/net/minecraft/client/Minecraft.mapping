@@ -40,9 +40,6 @@ CLASS net/minecraft/client/Minecraft
 		ARG 2 gameConfig
 	METHOD debugClientMetricsStart (Ljava/util/function/Consumer;)Z
 		ARG 1 logger
-	METHOD debugFpsMeterKeyPress (I)V
-		COMMENT Update debugProfilerName in response to number keys in debug screen
-		ARG 1 keyCount
 	METHOD delayCrash (Lnet/minecraft/CrashReport;)V
 		ARG 1 report
 	METHOD delayCrashRaw (Lnet/minecraft/CrashReport;)V
@@ -142,14 +139,14 @@ CLASS net/minecraft/client/Minecraft
 	METHOD reloadResourcePacks (ZLnet/minecraft/client/Minecraft$GameLoadCookie;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 error
 		ARG 2 gameLoadCookie
-	METHOD renderFpsMeter (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/util/profiling/ProfileResults;)V
-		ARG 1 guiGraphics
-		ARG 2 profileResults
 	METHOD rollbackResourcePacks (Ljava/lang/Throwable;Lnet/minecraft/client/Minecraft$GameLoadCookie;)V
 		ARG 1 throwable
 		ARG 2 gameLoadCookie
 	METHOD runTick (Z)V
 		ARG 1 renderLevel
+	METHOD saveReport (Ljava/io/File;Lnet/minecraft/CrashReport;)I
+		ARG 0 file
+		ARG 1 crashReport
 	METHOD setCameraEntity (Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 viewingEntity
 	METHOD setLastInputType (Lnet/minecraft/client/InputType;)V
@@ -175,6 +172,8 @@ CLASS net/minecraft/client/Minecraft
 		COMMENT Called when the window is closing. Sets 'running' to false which allows the game loop to exit cleanly.
 	METHOD tick ()V
 		COMMENT Runs the current tick.
+	METHOD triggerResourcePackRecovery (Ljava/lang/Exception;)V
+		ARG 1 error
 	METHOD updateLevelInEngines (Lnet/minecraft/client/multiplayer/ClientLevel;)V
 		ARG 1 level
 	METHOD updateMaxMipLevel (I)V

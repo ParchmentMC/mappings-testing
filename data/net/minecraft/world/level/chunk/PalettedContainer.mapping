@@ -13,6 +13,8 @@ CLASS net/minecraft/world/level/chunk/PalettedContainer
 		ARG 1 registry
 		ARG 2 strategy
 		ARG 3 data
+	METHOD <init> (Lnet/minecraft/world/level/chunk/PalettedContainer;)V
+		ARG 1 other
 	METHOD codec (Lnet/minecraft/core/IdMap;Lcom/mojang/serialization/Codec;Lnet/minecraft/world/level/chunk/PalettedContainer$Strategy;Ljava/lang/Object;Lnet/minecraft/world/level/chunk/PalettedContainerRO$Unpacker;)Lcom/mojang/serialization/Codec;
 		ARG 0 registry
 		ARG 1 codec
@@ -97,6 +99,8 @@ CLASS net/minecraft/world/level/chunk/PalettedContainer
 	METHOD write (Lnet/minecraft/network/FriendlyByteBuf;)V
 		ARG 1 buffer
 	CLASS Data
+		METHOD copy (Lnet/minecraft/world/level/chunk/PaletteResize;)Lnet/minecraft/world/level/chunk/PalettedContainer$Data;
+			ARG 1 resizeHandler
 		METHOD copyFrom (Lnet/minecraft/world/level/chunk/Palette;Lnet/minecraft/util/BitStorage;)V
 			ARG 1 palette
 			ARG 2 bitStorage

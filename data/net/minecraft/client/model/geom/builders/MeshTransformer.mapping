@@ -1,0 +1,5 @@
+CLASS net/minecraft/client/model/geom/builders/MeshTransformer
+	METHOD apply (Lnet/minecraft/client/model/geom/builders/MeshDefinition;)Lnet/minecraft/client/model/geom/builders/MeshDefinition;
+		ARG 1 mesh
+	METHOD scaling (F)Lnet/minecraft/client/model/geom/builders/MeshTransformer;
+		ARG 0 scale

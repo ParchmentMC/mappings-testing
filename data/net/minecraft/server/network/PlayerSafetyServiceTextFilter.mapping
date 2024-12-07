@@ -1,0 +1,12 @@
+CLASS net/minecraft/server/network/PlayerSafetyServiceTextFilter
+	METHOD <init> (Ljava/net/URL;Lnet/minecraft/server/network/ServerTextFilter$MessageEncoder;Lnet/minecraft/server/network/ServerTextFilter$IgnoreStrategy;Ljava/util/concurrent/ExecutorService;Lcom/microsoft/aad/msal4j/ConfidentialClientApplication;Lcom/microsoft/aad/msal4j/ClientCredentialParameters;Ljava/util/Set;I)V
+		ARG 1 chatEndpoint
+		ARG 2 chatEncoder
+		ARG 3 chatIgnoreStrategy
+		ARG 4 workerPool
+		ARG 5 client
+		ARG 6 clientParameters
+		ARG 7 fullyFilteredEvents
+		ARG 8 connectionReadTimeoutMs
+	METHOD createTextFilterFromConfig (Ljava/lang/String;)Lnet/minecraft/server/network/ServerTextFilter;
+		ARG 0 config

@@ -16,15 +16,17 @@ CLASS net/minecraft/world/effect/MobEffect
 	METHOD addAttributeModifiers (Lnet/minecraft/world/entity/ai/attributes/AttributeMap;I)V
 		ARG 1 attributeMap
 		ARG 2 amplifier
-	METHOD applyEffectTick (Lnet/minecraft/world/entity/LivingEntity;I)Z
-		ARG 1 livingEntity
-		ARG 2 amplifier
-	METHOD applyInstantenousEffect (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/LivingEntity;ID)V
-		ARG 1 source
-		ARG 2 indirectSource
-		ARG 3 livingEntity
-		ARG 4 amplifier
-		ARG 5 health
+	METHOD applyEffectTick (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LivingEntity;I)Z
+		ARG 1 level
+		ARG 2 entity
+		ARG 3 amplifier
+	METHOD applyInstantenousEffect (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/LivingEntity;ID)V
+		ARG 1 level
+		ARG 2 source
+		ARG 3 indirectSource
+		ARG 4 entity
+		ARG 5 amplifier
+		ARG 6 health
 	METHOD createModifiers (ILjava/util/function/BiConsumer;)V
 		ARG 1 amplifier
 		ARG 2 output
@@ -38,21 +40,29 @@ CLASS net/minecraft/world/effect/MobEffect
 		COMMENT Get if the potion is beneficial to the player. Beneficial potions are shown on the first row of the HUD
 	METHOD isInstantenous ()Z
 		COMMENT Returns {@code true} if the potion has an instant effect instead of a continuous one (e.g. Harming)
+	METHOD lambda$new$0 (ILnet/minecraft/world/effect/MobEffectInstance;)Lnet/minecraft/core/particles/ParticleOptions;
+		ARG 1 effect
+	METHOD lambda$new$1 (Lnet/minecraft/core/particles/ParticleOptions;Lnet/minecraft/world/effect/MobEffectInstance;)Lnet/minecraft/core/particles/ParticleOptions;
+		ARG 1 effect
+	METHOD lambda$onEffectAdded$2 (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/sounds/SoundEvent;)V
+		ARG 1 sound
 	METHOD onEffectAdded (Lnet/minecraft/world/entity/LivingEntity;I)V
-		ARG 1 livingEntity
+		ARG 1 entity
 		ARG 2 amplifier
 	METHOD onEffectStarted (Lnet/minecraft/world/entity/LivingEntity;I)V
-		ARG 1 livingEntity
+		ARG 1 entity
 		ARG 2 amplifier
-	METHOD onMobHurt (Lnet/minecraft/world/entity/LivingEntity;ILnet/minecraft/world/damagesource/DamageSource;F)V
-		ARG 1 livingEntity
-		ARG 2 amplifier
-		ARG 3 damageSource
-		ARG 4 amount
-	METHOD onMobRemoved (Lnet/minecraft/world/entity/LivingEntity;ILnet/minecraft/world/entity/Entity$RemovalReason;)V
-		ARG 1 livingEntity
-		ARG 2 amplifier
-		ARG 3 reason
+	METHOD onMobHurt (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LivingEntity;ILnet/minecraft/world/damagesource/DamageSource;F)V
+		ARG 1 level
+		ARG 2 entity
+		ARG 3 amplifier
+		ARG 4 damageSource
+		ARG 5 amount
+	METHOD onMobRemoved (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LivingEntity;ILnet/minecraft/world/entity/Entity$RemovalReason;)V
+		ARG 1 level
+		ARG 2 entity
+		ARG 3 amplifier
+		ARG 4 reason
 	METHOD removeAttributeModifiers (Lnet/minecraft/world/entity/ai/attributes/AttributeMap;)V
 		ARG 1 attributeMap
 	METHOD requiredFeatures ([Lnet/minecraft/world/flag/FeatureFlag;)Lnet/minecraft/world/effect/MobEffect;

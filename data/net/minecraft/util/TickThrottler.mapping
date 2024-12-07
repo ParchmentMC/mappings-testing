@@ -1,0 +1,4 @@
+CLASS net/minecraft/util/TickThrottler
+	METHOD <init> (II)V
+		ARG 1 incrementStep
+		ARG 2 threshold

@@ -1,0 +1,8 @@
+CLASS com/mojang/blaze3d/resource/CrossFrameResourcePool
+	METHOD <init> (I)V
+		ARG 1 framesToKeepResource
+	CLASS ResourceEntry
+		METHOD <init> (Lcom/mojang/blaze3d/resource/ResourceDescriptor;Ljava/lang/Object;I)V
+			ARG 1 descriptor
+			ARG 2 value
+			ARG 3 framesToLive

@@ -8,18 +8,17 @@ CLASS net/minecraft/client/gui/screens/TitleScreen
 		ARG 2 logoRenderer
 	METHOD confirmDemo (Z)V
 		ARG 1 confirmed
-	METHOD createDemoMenuOptions (II)V
-		COMMENT Adds Demo buttons on Main Menu for players who are playing Demo.
+	METHOD createDemoMenuOptions (II)I
 		ARG 1 y
 		ARG 2 rowHeight
-	METHOD createNormalMenuOptions (II)V
-		COMMENT Adds Singleplayer and Multiplayer buttons on Main Menu for players who have bought the game.
+	METHOD createNormalMenuOptions (II)I
+		ARG 1 y
+		ARG 2 rowHeight
+	METHOD createTestWorldButton (II)I
 		ARG 1 y
 		ARG 2 rowHeight
 	METHOD fadeWidgets (F)V
 		ARG 1 alpha
-	METHOD lambda$createNormalMenuOptions$6 (Lnet/minecraft/client/gui/components/Button;)V
-		ARG 1 button
 	METHOD lambda$createNormalMenuOptions$7 (Lnet/minecraft/client/gui/components/Button;)V
 		ARG 1 button
 	METHOD lambda$createNormalMenuOptions$8 (Lnet/minecraft/client/gui/components/Button;)V

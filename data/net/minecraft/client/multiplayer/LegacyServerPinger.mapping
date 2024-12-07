@@ -12,6 +12,7 @@ CLASS net/minecraft/client/multiplayer/LegacyServerPinger
 		ARG 2 exception
 	CLASS Output
 		METHOD handleResponse (ILjava/lang/String;Ljava/lang/String;II)V
+			ARG 1 protocolVersion
 			ARG 2 version
 			ARG 3 motd
 			ARG 4 players

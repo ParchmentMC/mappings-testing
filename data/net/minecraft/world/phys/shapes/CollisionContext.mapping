@@ -2,6 +2,10 @@ CLASS net/minecraft/world/phys/shapes/CollisionContext
 	METHOD canStandOnFluid (Lnet/minecraft/world/level/material/FluidState;Lnet/minecraft/world/level/material/FluidState;)Z
 		ARG 1 fluid1
 		ARG 2 fluid2
+	METHOD getCollisionShape (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/CollisionGetter;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/shapes/VoxelShape;
+		ARG 1 state
+		ARG 2 collisionGetter
+		ARG 3 pos
 	METHOD isAbove (Lnet/minecraft/world/phys/shapes/VoxelShape;Lnet/minecraft/core/BlockPos;Z)Z
 		ARG 1 shape
 		ARG 2 pos
@@ -10,3 +14,6 @@ CLASS net/minecraft/world/phys/shapes/CollisionContext
 		ARG 1 item
 	METHOD of (Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/phys/shapes/CollisionContext;
 		ARG 0 entity
+	METHOD of (Lnet/minecraft/world/entity/Entity;Z)Lnet/minecraft/world/phys/shapes/CollisionContext;
+		ARG 0 entity
+		ARG 1 canStandOnFluid

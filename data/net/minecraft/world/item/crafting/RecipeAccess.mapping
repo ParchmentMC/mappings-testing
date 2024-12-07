@@ -1,0 +1,3 @@
+CLASS net/minecraft/world/item/crafting/RecipeAccess
+	METHOD propertySet (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/world/item/crafting/RecipePropertySet;
+		ARG 1 propertySet

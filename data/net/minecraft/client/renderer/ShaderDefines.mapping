@@ -1,0 +1,16 @@
+CLASS net/minecraft/client/renderer/ShaderDefines
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
+	METHOD withOverrides (Lnet/minecraft/client/renderer/ShaderDefines;)Lnet/minecraft/client/renderer/ShaderDefines;
+		ARG 1 defines
+	CLASS Builder
+		METHOD define (Ljava/lang/String;)Lnet/minecraft/client/renderer/ShaderDefines$Builder;
+			ARG 1 flag
+		METHOD define (Ljava/lang/String;F)Lnet/minecraft/client/renderer/ShaderDefines$Builder;
+			ARG 1 key
+			ARG 2 value
+		METHOD define (Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/client/renderer/ShaderDefines$Builder;
+			ARG 1 key
+			ARG 2 value
+		METHOD escapeNewLines (Ljava/lang/String;)Ljava/lang/String;
+			ARG 0 str

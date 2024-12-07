@@ -1,0 +1,11 @@
+CLASS net/minecraft/util/datafix/fixes/AttributesRenameLegacy
+	METHOD <init> (Lcom/mojang/datafixers/schemas/Schema;Ljava/lang/String;Ljava/util/function/UnaryOperator;)V
+		ARG 1 outputSchema
+		ARG 2 name
+		ARG 3 renames
+	METHOD fixEntity (Lcom/mojang/datafixers/Typed;)Lcom/mojang/datafixers/Typed;
+		ARG 1 entityTag
+	METHOD fixItemStackTag (Lcom/mojang/datafixers/Typed;)Lcom/mojang/datafixers/Typed;
+		ARG 1 itemStackTag
+	METHOD fixName (Lcom/mojang/serialization/Dynamic;)Lcom/mojang/serialization/Dynamic;
+		ARG 1 name

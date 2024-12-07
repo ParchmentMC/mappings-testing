@@ -12,3 +12,5 @@ CLASS net/minecraft/world/entity/monster/piglin/AbstractPiglin
 		ARG 1 compound
 	METHOD setImmuneToZombification (Z)V
 		ARG 1 immuneToZombification
+	METHOD setTimeInOverworld (I)V
+		ARG 1 timeInOverworld

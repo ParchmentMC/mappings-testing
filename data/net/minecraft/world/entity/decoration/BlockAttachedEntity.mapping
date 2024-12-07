@@ -3,5 +3,6 @@ CLASS net/minecraft/world/entity/decoration/BlockAttachedEntity
 		ARG 1 entityType
 		ARG 2 level
 		ARG 3 pos
-	METHOD dropItem (Lnet/minecraft/world/entity/Entity;)V
-		ARG 1 entity
+	METHOD dropItem (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/Entity;)V
+		ARG 1 level
+		ARG 2 entity

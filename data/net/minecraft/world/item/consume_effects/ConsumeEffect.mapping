@@ -1,0 +1,10 @@
+CLASS net/minecraft/world/item/consume_effects/ConsumeEffect
+	METHOD apply (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/LivingEntity;)Z
+		ARG 1 level
+		ARG 2 stack
+		ARG 3 entity
+	CLASS Type
+		METHOD register (Ljava/lang/String;Lcom/mojang/serialization/MapCodec;Lnet/minecraft/network/codec/StreamCodec;)Lnet/minecraft/world/item/consume_effects/ConsumeEffect$Type;
+			ARG 0 name
+			ARG 1 codec
+			ARG 2 streamCodec

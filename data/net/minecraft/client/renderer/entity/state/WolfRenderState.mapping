@@ -1,0 +1,3 @@
+CLASS net/minecraft/client/renderer/entity/state/WolfRenderState
+	METHOD getBodyRollAngle (F)F
+		ARG 1 angle

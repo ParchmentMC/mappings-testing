@@ -1,0 +1,9 @@
+CLASS net/minecraft/locale/DeprecatedTranslationsInfo
+	METHOD applyToMap (Ljava/util/Map;)V
+		ARG 1 translations
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
+	METHOD loadFromJson (Ljava/io/InputStream;)Lnet/minecraft/locale/DeprecatedTranslationsInfo;
+		ARG 0 inputStream
+	METHOD loadFromResource (Ljava/lang/String;)Lnet/minecraft/locale/DeprecatedTranslationsInfo;
+		ARG 0 name

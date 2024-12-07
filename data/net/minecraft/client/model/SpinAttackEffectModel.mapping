@@ -1,0 +1,3 @@
+CLASS net/minecraft/client/model/SpinAttackEffectModel
+	METHOD boxName (I)Ljava/lang/String;
+		ARG 0 index

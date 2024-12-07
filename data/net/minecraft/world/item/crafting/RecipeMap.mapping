@@ -1,0 +1,14 @@
+CLASS net/minecraft/world/item/crafting/RecipeMap
+	METHOD <init> (Lcom/google/common/collect/Multimap;Ljava/util/Map;)V
+		ARG 1 byType
+		ARG 2 byKey
+	METHOD byKey (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/world/item/crafting/RecipeHolder;
+		ARG 1 key
+	METHOD byType (Lnet/minecraft/world/item/crafting/RecipeType;)Ljava/util/Collection;
+		ARG 1 type
+	METHOD create (Ljava/lang/Iterable;)Lnet/minecraft/world/item/crafting/RecipeMap;
+		ARG 0 recipes
+	METHOD getRecipesFor (Lnet/minecraft/world/item/crafting/RecipeType;Lnet/minecraft/world/item/crafting/RecipeInput;Lnet/minecraft/world/level/Level;)Ljava/util/stream/Stream;
+		ARG 1 type
+		ARG 2 input
+		ARG 3 level

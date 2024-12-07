@@ -5,8 +5,9 @@ CLASS net/minecraft/world/entity/monster/hoglin/HoglinAi
 	METHOD broadcastRetreat (Lnet/minecraft/world/entity/monster/hoglin/Hoglin;Lnet/minecraft/world/entity/LivingEntity;)V
 		ARG 0 hoglin
 		ARG 1 target
-	METHOD findNearestValidAttackTarget (Lnet/minecraft/world/entity/monster/hoglin/Hoglin;)Ljava/util/Optional;
-		ARG 0 hoglin
+	METHOD findNearestValidAttackTarget (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/monster/hoglin/Hoglin;)Ljava/util/Optional;
+		ARG 0 level
+		ARG 1 hoglin
 	METHOD getSoundForActivity (Lnet/minecraft/world/entity/monster/hoglin/Hoglin;Lnet/minecraft/world/entity/schedule/Activity;)Lnet/minecraft/sounds/SoundEvent;
 		ARG 0 hoglin
 		ARG 1 activity
@@ -39,9 +40,10 @@ CLASS net/minecraft/world/entity/monster/hoglin/HoglinAi
 		ARG 1 activity
 	METHOD makeBrain (Lnet/minecraft/world/entity/ai/Brain;)Lnet/minecraft/world/entity/ai/Brain;
 		ARG 0 brain
-	METHOD maybeRetaliate (Lnet/minecraft/world/entity/monster/hoglin/Hoglin;Lnet/minecraft/world/entity/LivingEntity;)V
-		ARG 0 hoglin
-		ARG 1 livingEntity
+	METHOD maybeRetaliate (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/monster/hoglin/Hoglin;Lnet/minecraft/world/entity/LivingEntity;)V
+		ARG 0 level
+		ARG 1 hoglin
+		ARG 2 entity
 	METHOD onHitTarget (Lnet/minecraft/world/entity/monster/hoglin/Hoglin;Lnet/minecraft/world/entity/LivingEntity;)V
 		ARG 0 hoglin
 		ARG 1 target
@@ -63,6 +65,7 @@ CLASS net/minecraft/world/entity/monster/hoglin/HoglinAi
 		ARG 0 hoglin
 	METHOD wantsToStopFleeing (Lnet/minecraft/world/entity/monster/hoglin/Hoglin;)Z
 		ARG 0 hoglin
-	METHOD wasHurtBy (Lnet/minecraft/world/entity/monster/hoglin/Hoglin;Lnet/minecraft/world/entity/LivingEntity;)V
-		ARG 0 hoglin
-		ARG 1 livingEntity
+	METHOD wasHurtBy (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/monster/hoglin/Hoglin;Lnet/minecraft/world/entity/LivingEntity;)V
+		ARG 0 level
+		ARG 1 hoglin
+		ARG 2 entity

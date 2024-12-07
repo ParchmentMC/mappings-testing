@@ -4,7 +4,7 @@ CLASS net/minecraft/world/effect/InfestedMobEffect
 		ARG 2 color
 		ARG 3 chanceToSpawn
 		ARG 4 spawnedCount
-	METHOD spawnSilverfish (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;DDD)V
+	METHOD spawnSilverfish (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/LivingEntity;DDD)V
 		ARG 1 level
 		ARG 2 entity
 		ARG 3 x

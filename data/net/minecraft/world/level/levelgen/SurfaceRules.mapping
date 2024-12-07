@@ -61,6 +61,7 @@ CLASS net/minecraft/world/level/levelgen/SurfaceRules
 			ARG 3 chunk
 			ARG 4 noiseChunk
 			ARG 5 biomeGetter
+			ARG 6 biomeRegistry
 			ARG 7 context
 		METHOD blockCoordToSurfaceCell (I)I
 			ARG 0 blockCoord

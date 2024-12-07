@@ -1,0 +1,4 @@
+CLASS net/minecraft/world/level/redstone/DefaultRedstoneWireEvaluator
+	METHOD calculateTargetStrength (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)I
+		ARG 1 level
+		ARG 2 pos

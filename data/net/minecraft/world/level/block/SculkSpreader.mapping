@@ -47,6 +47,8 @@ CLASS net/minecraft/world/level/block/SculkSpreader
 			ARG 0 level
 			ARG 1 fromPos
 			ARG 2 toPos
+		METHOD isPosUnreasonable (Lnet/minecraft/core/BlockPos;)Z
+			ARG 1 pos
 		METHOD isUnobstructed (Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)Z
 			ARG 0 level
 			ARG 1 pos

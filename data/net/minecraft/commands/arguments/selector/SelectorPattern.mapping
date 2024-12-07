@@ -1,0 +1,5 @@
+CLASS net/minecraft/commands/arguments/selector/SelectorPattern
+	METHOD equals (Ljava/lang/Object;)Z
+		ARG 1 other
+	METHOD parse (Ljava/lang/String;)Lcom/mojang/serialization/DataResult;
+		ARG 0 pattern

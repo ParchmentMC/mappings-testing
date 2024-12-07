@@ -4,17 +4,26 @@ CLASS net/minecraft/client/renderer/ViewArea
 		ARG 2 level
 		ARG 3 viewDistance
 		ARG 4 levelRenderer
+	METHOD containsSection (III)Z
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
 	METHOD createSections (Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher;)V
 		ARG 1 sectionRenderDispatcher
+	METHOD getRenderSection (III)Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$RenderSection;
+		ARG 1 x
+		ARG 2 y
+		ARG 3 z
+	METHOD getRenderSection (J)Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$RenderSection;
+		ARG 1 sectionPos
 	METHOD getRenderSectionAt (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$RenderSection;
 		ARG 1 pos
 	METHOD getSectionIndex (III)I
 		ARG 1 x
 		ARG 2 y
 		ARG 3 z
-	METHOD repositionCamera (DD)V
-		ARG 1 viewEntityX
-		ARG 3 viewEntityZ
+	METHOD repositionCamera (Lnet/minecraft/core/SectionPos;)V
+		ARG 1 newSectionPos
 	METHOD setDirty (IIIZ)V
 		ARG 1 sectionX
 		ARG 2 sectionY

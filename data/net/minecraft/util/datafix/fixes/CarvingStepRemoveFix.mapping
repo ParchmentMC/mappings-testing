@@ -1,0 +1,5 @@
+CLASS net/minecraft/util/datafix/fixes/CarvingStepRemoveFix
+	METHOD <init> (Lcom/mojang/datafixers/schemas/Schema;)V
+		ARG 1 outputSchema
+	METHOD fixChunk (Lcom/mojang/datafixers/Typed;)Lcom/mojang/datafixers/Typed;
+		ARG 0 chunkTag

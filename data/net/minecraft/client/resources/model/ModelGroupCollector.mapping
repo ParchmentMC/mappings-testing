@@ -1,0 +1,12 @@
+CLASS net/minecraft/client/resources/model/ModelGroupCollector
+	METHOD build (Lnet/minecraft/client/color/block/BlockColors;Lnet/minecraft/client/resources/model/BlockStateModelLoader$LoadedModels;)Lit/unimi/dsi/fastutil/objects/Object2IntMap;
+		ARG 0 blockColors
+		ARG 1 loadedModels
+	CLASS GroupKey
+		METHOD create (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/client/resources/model/UnbakedModel;Ljava/util/List;)Lnet/minecraft/client/resources/model/ModelGroupCollector$GroupKey;
+			ARG 0 state
+			ARG 1 model
+			ARG 2 properties
+		METHOD getColoringValues (Lnet/minecraft/world/level/block/state/BlockState;Ljava/util/List;)Ljava/util/List;
+			ARG 0 state
+			ARG 1 properties

@@ -13,6 +13,8 @@ CLASS net/minecraft/world/ticks/ScheduledTick
 	METHOD probe (Ljava/lang/Object;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/ticks/ScheduledTick;
 		ARG 0 type
 		ARG 1 pos
+	METHOD toSavedTick (J)Lnet/minecraft/world/ticks/SavedTick;
+		ARG 1 gametime
 	CLASS 1
 		METHOD equals (Lnet/minecraft/world/ticks/ScheduledTick;Lnet/minecraft/world/ticks/ScheduledTick;)Z
 			ARG 1 first

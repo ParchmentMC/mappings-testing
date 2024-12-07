@@ -13,9 +13,8 @@ CLASS com/mojang/blaze3d/platform/GlStateManager
 		ARG 1 dstFactor
 		ARG 2 srcFactorAlpha
 		ARG 3 dstFactorAlpha
-	METHOD _clear (IZ)V
+	METHOD _clear (I)V
 		ARG 0 mask
-		ARG 1 checkError
 	METHOD _clearColor (FFFF)V
 		ARG 0 red
 		ARG 1 green
@@ -97,6 +96,14 @@ CLASS com/mojang/blaze3d/platform/GlStateManager
 		ARG 0 target
 		ARG 1 data
 		ARG 2 usage
+	METHOD _glBufferSubData (IILjava/nio/ByteBuffer;)V
+		ARG 0 target
+		ARG 1 offset
+		ARG 2 data
+	METHOD _glClientWaitSync (JIJ)I
+		ARG 0 sync
+		ARG 2 flags
+		ARG 3 timeout
 	METHOD _glCopyTexSubImage2D (IIIIIIII)V
 		ARG 0 target
 		ARG 1 level
@@ -112,6 +119,8 @@ CLASS com/mojang/blaze3d/platform/GlStateManager
 		ARG 0 frameBuffer
 	METHOD _glDeleteRenderbuffers (I)V
 		ARG 0 renderBuffer
+	METHOD _glDeleteSync (J)V
+		ARG 0 sync
 	METHOD _glDeleteVertexArrays (I)V
 		ARG 0 array
 	METHOD _glDrawPixels (IIIIJ)V
@@ -120,6 +129,9 @@ CLASS com/mojang/blaze3d/platform/GlStateManager
 		ARG 2 format
 		ARG 3 type
 		ARG 4 pixels
+	METHOD _glFenceSync (II)J
+		ARG 0 condition
+		ARG 1 flags
 	METHOD _glFramebufferRenderbuffer (IIII)V
 		ARG 0 target
 		ARG 1 attachment
@@ -140,6 +152,11 @@ CLASS com/mojang/blaze3d/platform/GlStateManager
 	METHOD _glMapBuffer (II)Ljava/nio/ByteBuffer;
 		ARG 0 target
 		ARG 1 access
+	METHOD _glMapBufferRange (IIII)Ljava/nio/ByteBuffer;
+		ARG 0 target
+		ARG 1 offset
+		ARG 2 length
+		ARG 3 access
 	METHOD _glRenderbufferStorage (IIII)V
 		ARG 0 target
 		ARG 1 internalFormat
@@ -322,10 +339,9 @@ CLASS com/mojang/blaze3d/platform/GlStateManager
 		ARG 1 pname
 	METHOD glLinkProgram (I)V
 		ARG 0 program
-	METHOD glShaderSource (ILjava/util/List;)V
-		ARG 0 shader
-			COMMENT The shader object whose source code is to be replaced.
-		ARG 1 shaderData
+	METHOD glShaderSource (ILjava/lang/String;)V
+		ARG 0 type
+		ARG 1 source
 	METHOD lambda$static$0 (I)Lcom/mojang/blaze3d/platform/GlStateManager$TextureState;
 		ARG 0 index
 	METHOD setupGui3DDiffuseLighting (Lorg/joml/Vector3f;Lorg/joml/Vector3f;)V
@@ -361,3 +377,6 @@ CLASS com/mojang/blaze3d/platform/GlStateManager
 	CLASS SourceFactor
 		METHOD <init> (Ljava/lang/String;II)V
 			ARG 3 value
+	CLASS FramebufferState
+		METHOD update (I)Z
+			ARG 1 binding

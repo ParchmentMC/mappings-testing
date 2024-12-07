@@ -1,0 +1,37 @@
+CLASS net/minecraft/world/item/component/Consumable
+	METHOD canConsume (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;)Z
+		ARG 1 entity
+		ARG 2 stack
+	METHOD emitParticlesAndSounds (Lnet/minecraft/util/RandomSource;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;I)V
+		ARG 1 random
+		ARG 2 entity
+		ARG 3 stack
+		ARG 4 amount
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance
+	METHOD onConsume (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/ItemStack;
+		ARG 1 level
+		ARG 2 entity
+		ARG 3 stack
+	METHOD shouldEmitParticlesAndSounds (I)Z
+		ARG 1 remainingUseDuration
+	METHOD startConsuming (Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResult;
+		ARG 1 entity
+		ARG 2 stack
+		ARG 3 hand
+	CLASS Builder
+		METHOD animation (Lnet/minecraft/world/item/ItemUseAnimation;)Lnet/minecraft/world/item/component/Consumable$Builder;
+			ARG 1 animation
+		METHOD consumeSeconds (F)Lnet/minecraft/world/item/component/Consumable$Builder;
+			ARG 1 consumeSounds
+		METHOD hasConsumeParticles (Z)Lnet/minecraft/world/item/component/Consumable$Builder;
+			ARG 1 hasConsumeParticles
+		METHOD onConsume (Lnet/minecraft/world/item/consume_effects/ConsumeEffect;)Lnet/minecraft/world/item/component/Consumable$Builder;
+			ARG 1 effect
+		METHOD sound (Lnet/minecraft/core/Holder;)Lnet/minecraft/world/item/component/Consumable$Builder;
+			ARG 1 sound
+		METHOD soundAfterConsume (Lnet/minecraft/core/Holder;)Lnet/minecraft/world/item/component/Consumable$Builder;
+			ARG 1 consumptionSound
+	CLASS OverrideConsumeSound
+		METHOD getConsumeSound (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/sounds/SoundEvent;
+			ARG 1 stack

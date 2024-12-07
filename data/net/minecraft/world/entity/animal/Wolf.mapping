@@ -6,42 +6,33 @@ CLASS net/minecraft/world/entity/animal/Wolf
 	METHOD canMate (Lnet/minecraft/world/entity/animal/Animal;)Z
 		COMMENT Returns {@code true} if the mob is currently able to mate with the specified mob.
 		ARG 1 otherAnimal
-	METHOD checkWolfSpawnRules (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z
-		ARG 0 wolf
+	METHOD checkWolfSpawnRules (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/world/entity/EntitySpawnReason;Lnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;)Z
+		ARG 0 entityType
 		ARG 1 level
-		ARG 2 spawnType
+		ARG 2 spawnReason
 		ARG 3 pos
 		ARG 4 random
 	METHOD die (Lnet/minecraft/world/damagesource/DamageSource;)V
 		COMMENT Called when the mob's health reaches 0.
 		ARG 1 cause
-	METHOD getBodyRollAngle (FF)F
-		ARG 1 partialTicks
-		ARG 2 offset
 	METHOD getHeadRollAngle (F)F
-		ARG 1 partialTicks
+		ARG 1 partialTick
 	METHOD getHurtSound (Lnet/minecraft/world/damagesource/DamageSource;)Lnet/minecraft/sounds/SoundEvent;
 		ARG 1 damageSource
 	METHOD getMaxHeadXRot ()I
 		COMMENT The speed it takes to move the entity's rotationPitch through the faceEntity method. This is only currently use in wolves.
 	METHOD getMaxSpawnClusterSize ()I
 		COMMENT Will return how many at most can spawn in a chunk at once.
+	METHOD getShakeAnim (F)F
+		ARG 1 partialTick
 	METHOD getSoundVolume ()F
 		COMMENT Returns the volume for the sounds this mob makes.
 	METHOD getWetShade (F)F
 		COMMENT Used when calculating the amount of shading to apply while the wolf is wet.
-		ARG 1 partialTicks
-	METHOD hurt (Lnet/minecraft/world/damagesource/DamageSource;F)Z
-		COMMENT Called when the entity is attacked.
-		ARG 1 source
-		ARG 2 amount
+		ARG 1 partialTick
 	METHOD isFood (Lnet/minecraft/world/item/ItemStack;)Z
 		COMMENT Checks if the parameter is an item which this animal can be fed to breed it (wheat, carrots or seeds depending on the animal type)
 		ARG 1 stack
-	METHOD isWet ()Z
-		COMMENT True if the wolf is wet
-	METHOD lambda$static$0 (Lnet/minecraft/world/entity/LivingEntity;)Z
-		ARG 0 entity
 	METHOD mobInteract (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResult;
 		ARG 1 player
 		ARG 2 hand

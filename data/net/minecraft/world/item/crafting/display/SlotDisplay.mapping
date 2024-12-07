@@ -1,0 +1,38 @@
+CLASS net/minecraft/world/item/crafting/display/SlotDisplay
+	METHOD isEnabled (Lnet/minecraft/world/flag/FeatureFlagSet;)Z
+		ARG 1 enabledFeatures
+	METHOD resolve (Lnet/minecraft/util/context/ContextMap;Lnet/minecraft/world/item/crafting/display/DisplayContentsFactory;)Ljava/util/stream/Stream;
+		ARG 1 context
+		ARG 2 output
+	METHOD resolveForFirstStack (Lnet/minecraft/util/context/ContextMap;)Lnet/minecraft/world/item/ItemStack;
+		ARG 1 context
+	METHOD resolveForStacks (Lnet/minecraft/util/context/ContextMap;)Ljava/util/List;
+		ARG 1 context
+	CLASS Composite
+		METHOD lambda$isEnabled$2 (Lnet/minecraft/world/flag/FeatureFlagSet;Lnet/minecraft/world/item/crafting/display/SlotDisplay;)Z
+			ARG 1 display
+		METHOD lambda$resolve$1 (Lnet/minecraft/util/context/ContextMap;Lnet/minecraft/world/item/crafting/display/DisplayContentsFactory;Lnet/minecraft/world/item/crafting/display/SlotDisplay;)Ljava/util/stream/Stream;
+			ARG 2 slotDisplay
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
+	CLASS WithRemainder
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
+	CLASS TagSlotDisplay
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
+	CLASS ItemSlotDisplay
+		METHOD <init> (Lnet/minecraft/world/item/Item;)V
+			ARG 1 item
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
+	CLASS ItemStackSlotDisplay
+		METHOD equals (Ljava/lang/Object;)Z
+			ARG 1 other
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
+	CLASS SmithingTrimDemoSlotDisplay
+		METHOD lambda$resolve$2 (Lnet/minecraft/world/item/ItemStack;)Z
+			ARG 0 stack
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance

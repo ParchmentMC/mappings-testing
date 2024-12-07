@@ -4,3 +4,9 @@ CLASS net/minecraft/world/entity/OminousItemSpawner
 		ARG 1 item
 	METHOD setItem (Lnet/minecraft/world/item/ItemStack;)V
 		ARG 1 item
+	METHOD spawnProjectile (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/item/ProjectileItem;Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/entity/Entity;
+		ARG 1 level
+		ARG 2 projectileItem
+		ARG 3 stack
+	METHOD tickServer (Lnet/minecraft/server/level/ServerLevel;)V
+		ARG 1 level

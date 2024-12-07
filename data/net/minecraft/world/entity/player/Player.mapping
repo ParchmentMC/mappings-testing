@@ -6,10 +6,6 @@ CLASS net/minecraft/world/entity/player/Player
 		ARG 2 pos
 		ARG 3 yRot
 		ARG 4 gameProfile
-	METHOD actuallyHurt (Lnet/minecraft/world/damagesource/DamageSource;F)V
-		COMMENT Deals damage to the entity. This will take the armor of the entity into consideration before damaging the health bar.
-		ARG 1 damageSrc
-		ARG 2 damageAmount
 	METHOD addAdditionalSaveData (Lnet/minecraft/nbt/CompoundTag;)V
 		ARG 1 compound
 	METHOD addItem (Lnet/minecraft/world/item/ItemStack;)Z
@@ -58,8 +54,6 @@ CLASS net/minecraft/world/entity/player/Player
 		ARG 2 distance
 	METHOD canPlayerFitWithinBlocksAndEntitiesWhen (Lnet/minecraft/world/entity/Pose;)Z
 		ARG 1 pose
-	METHOD canTakeItem (Lnet/minecraft/world/item/ItemStack;)Z
-		ARG 1 itemstack
 	METHOD causeFoodExhaustion (F)V
 		COMMENT Increases exhaustion level by the supplied amount.
 		ARG 1 exhaustion
@@ -73,6 +67,8 @@ CLASS net/minecraft/world/entity/player/Player
 	METHOD die (Lnet/minecraft/world/damagesource/DamageSource;)V
 		COMMENT Called when the mob's health reaches 0.
 		ARG 1 cause
+	METHOD disableShield (Lnet/minecraft/world/item/ItemStack;)V
+		ARG 1 stack
 	METHOD displayClientMessage (Lnet/minecraft/network/chat/Component;Z)V
 		ARG 1 chatComponent
 		ARG 2 actionBar
@@ -127,12 +123,12 @@ CLASS net/minecraft/world/entity/player/Player
 		ARG 1 levels
 	METHOD giveExperiencePoints (I)V
 		ARG 1 xpPoints
+	METHOD handleCreativeModeItemDrop (Lnet/minecraft/world/item/ItemStack;)V
+		ARG 1 stack
 	METHOD hasCorrectToolForDrops (Lnet/minecraft/world/level/block/state/BlockState;)Z
 		ARG 1 state
-	METHOD hurt (Lnet/minecraft/world/damagesource/DamageSource;F)Z
-		COMMENT Called when the entity is attacked.
-		ARG 1 source
-		ARG 2 amount
+	METHOD hasPermissions (I)Z
+		ARG 1 permissionLevel
 	METHOD hurtArmor (Lnet/minecraft/world/damagesource/DamageSource;F)V
 		ARG 1 damageSource
 		ARG 2 damage
@@ -148,13 +144,12 @@ CLASS net/minecraft/world/entity/player/Player
 		ARG 1 maxUpStep
 	METHOD isAlwaysExperienceDropper ()Z
 		COMMENT Only use is to identify if class is an instance of player for experience dropping
+	METHOD isEquipped (Lnet/minecraft/world/item/Item;)Z
+		ARG 1 item
 	METHOD isHurt ()Z
 		COMMENT Checks if the player's health is not full and not zero.
 	METHOD isImmobile ()Z
 		COMMENT Dead and sleeping entities cannot move
-	METHOD isInvulnerableTo (Lnet/minecraft/world/damagesource/DamageSource;)Z
-		COMMENT Returns whether this Entity is invulnerable to the given DamageSource.
-		ARG 1 source
 	METHOD isLocalPlayer ()Z
 		COMMENT Returns whether this is a {@link net.minecraft.client.player.LocalPlayer}.
 	METHOD isModelPartShown (Lnet/minecraft/world/entity/player/PlayerModelPart;)Z
@@ -165,12 +160,18 @@ CLASS net/minecraft/world/entity/player/Player
 		COMMENT Returns whether the player is asleep and the screen has fully faded.
 	METHOD isSpectator ()Z
 		COMMENT Returns {@code true} if the player is in spectator mode.
-	METHOD jumpFromGround ()V
-		COMMENT Causes this entity to do an upwards motion (jumping).
+	METHOD lambda$addAdditionalSaveData$3 (Lnet/minecraft/core/GlobalPos;)Ljava/util/Optional;
+		ARG 0 pos
+	METHOD lambda$decorateDisplayNameComponent$6 (Ljava/lang/String;Lnet/minecraft/network/chat/Style;)Lnet/minecraft/network/chat/Style;
+		ARG 2 style
 	METHOD lambda$playShoulderEntityAmbientSound$0 (Lnet/minecraft/world/entity/EntityType;)Z
 		ARG 0 entityType
+	METHOD lambda$playShoulderEntityAmbientSound$1 (Lnet/minecraft/world/entity/EntityType;)V
+		ARG 1 entityType
 	METHOD lambda$readAdditionalSaveData$2 (Lnet/minecraft/world/phys/Vec3;)V
 		ARG 1 currentImpulseImpactPos
+	METHOD lambda$respawnEntityOnShoulder$5 (Lnet/minecraft/world/entity/Entity;)V
+		ARG 1 entity
 	METHOD magicCrit (Lnet/minecraft/world/entity/Entity;)V
 		COMMENT Called when the entity hit is dealt extra melee damage due to an enchantment.
 		ARG 1 entityHit

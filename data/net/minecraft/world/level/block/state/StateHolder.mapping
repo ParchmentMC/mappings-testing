@@ -8,9 +8,11 @@ CLASS net/minecraft/world/level/block/state/StateHolder
 		ARG 1 holderFunction
 	METHOD cycle (Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Object;
 		ARG 1 property
-	METHOD findNextInCollection (Ljava/util/Collection;Ljava/lang/Object;)Ljava/lang/Object;
-		ARG 0 collection
-		ARG 1 value
+	METHOD findNextInCollection (Ljava/util/List;Ljava/lang/Object;)Ljava/lang/Object;
+		ARG 0 possibleValues
+		ARG 1 currentValue
+	METHOD getNullableValue (Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
+		ARG 1 property
 	METHOD getOptionalValue (Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/util/Optional;
 		ARG 1 property
 	METHOD getProperties ()Ljava/util/Collection;
@@ -18,12 +20,11 @@ CLASS net/minecraft/world/level/block/state/StateHolder
 	METHOD getValue (Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
 		COMMENT @return the value of the given Property for this state
 		ARG 1 property
+	METHOD getValueOrElse (Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/Comparable;
+		ARG 1 property
+		ARG 2 defaultValue
 	METHOD hasProperty (Lnet/minecraft/world/level/block/state/properties/Property;)Z
 		ARG 1 property
-	METHOD lambda$codec$0 (Lnet/minecraft/world/level/block/state/StateHolder;)Ljava/lang/Object;
-		ARG 0 type
-	METHOD lambda$codec$1 (Lnet/minecraft/world/level/block/state/StateHolder;Ljava/util/Optional;)Lnet/minecraft/world/level/block/state/StateHolder;
-		ARG 1 result
 	METHOD makeNeighbourValues (Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/util/Map;
 		ARG 1 property
 		ARG 2 value
@@ -32,6 +33,10 @@ CLASS net/minecraft/world/level/block/state/StateHolder
 	METHOD setValue (Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/Object;
 		ARG 1 property
 		ARG 2 value
+	METHOD setValueInternal (Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;Ljava/lang/Comparable;)Ljava/lang/Object;
+		ARG 1 property
+		ARG 2 value
+		ARG 3 comparable
 	METHOD trySetValue (Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/Object;
 		ARG 1 property
 		ARG 2 value

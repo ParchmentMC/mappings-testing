@@ -1,0 +1,6 @@
+CLASS net/minecraft/client/gui/screens/worldselection/CreateWorldCallback
+	METHOD create (Lnet/minecraft/client/gui/screens/worldselection/CreateWorldScreen;Lnet/minecraft/core/LayeredRegistryAccess;Lnet/minecraft/world/level/storage/PrimaryLevelData;Ljava/nio/file/Path;)Z
+		ARG 1 createWorldScreen
+		ARG 2 registryAccess
+		ARG 3 levelData
+		ARG 4 tempDataPackDir

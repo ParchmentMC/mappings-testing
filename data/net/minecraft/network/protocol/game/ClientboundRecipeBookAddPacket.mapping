@@ -1,0 +1,6 @@
+CLASS net/minecraft/network/protocol/game/ClientboundRecipeBookAddPacket
+	CLASS Entry
+		METHOD <init> (Lnet/minecraft/world/item/crafting/display/RecipeDisplayEntry;ZZ)V
+			ARG 1 contents
+			ARG 2 notification
+			ARG 3 highlight

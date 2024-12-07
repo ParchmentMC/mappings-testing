@@ -1,9 +1,12 @@
 CLASS net/minecraft/client/renderer/blockentity/SignRenderer
 	METHOD <init> (Lnet/minecraft/client/renderer/blockentity/BlockEntityRendererProvider$Context;)V
 		ARG 1 context
-	METHOD createSignModel (Lnet/minecraft/client/model/geom/EntityModelSet;Lnet/minecraft/world/level/block/state/properties/WoodType;)Lnet/minecraft/client/renderer/blockentity/SignRenderer$SignModel;
-		ARG 0 entityModelSet
+	METHOD createSignLayer (Z)Lnet/minecraft/client/model/geom/builders/LayerDefinition;
+		ARG 0 standingSign
+	METHOD createSignModel (Lnet/minecraft/client/model/geom/EntityModelSet;Lnet/minecraft/world/level/block/state/properties/WoodType;Z)Lnet/minecraft/client/model/Model;
+		ARG 0 modelSet
 		ARG 1 woodType
+		ARG 2 standingSign
 	METHOD getDarkColor (Lnet/minecraft/world/level/block/entity/SignText;)I
 		ARG 0 signText
 	METHOD getSignMaterial (Lnet/minecraft/world/level/block/state/properties/WoodType;)Lnet/minecraft/client/resources/model/Material;
@@ -13,8 +16,6 @@ CLASS net/minecraft/client/renderer/blockentity/SignRenderer
 		ARG 1 textColor
 	METHOD lambda$new$0 (Lnet/minecraft/world/level/block/state/properties/WoodType;)Lnet/minecraft/world/level/block/state/properties/WoodType;
 		ARG 0 woodType
-	METHOD lambda$new$1 (Lnet/minecraft/client/renderer/blockentity/BlockEntityRendererProvider$Context;Lnet/minecraft/world/level/block/state/properties/WoodType;)Lnet/minecraft/client/renderer/blockentity/SignRenderer$SignModel;
-		ARG 1 woodType
 	METHOD renderSign (Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IILnet/minecraft/world/level/block/state/properties/WoodType;Lnet/minecraft/client/model/Model;)V
 		ARG 1 poseStack
 		ARG 2 buffer
@@ -22,12 +23,6 @@ CLASS net/minecraft/client/renderer/blockentity/SignRenderer
 		ARG 4 packedOverlay
 		ARG 5 woodType
 		ARG 6 model
-	METHOD renderSignModel (Lcom/mojang/blaze3d/vertex/PoseStack;IILnet/minecraft/client/model/Model;Lcom/mojang/blaze3d/vertex/VertexConsumer;)V
-		ARG 1 poseStack
-		ARG 2 packedLight
-		ARG 3 packedOverlay
-		ARG 4 model
-		ARG 5 vertexConsumer
 	METHOD renderSignText (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/entity/SignText;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IIIZ)V
 		ARG 1 pos
 		ARG 2 text
@@ -55,6 +50,3 @@ CLASS net/minecraft/client/renderer/blockentity/SignRenderer
 		ARG 1 poseStack
 		ARG 2 isFrontText
 		ARG 3 offset
-	CLASS SignModel
-		METHOD <init> (Lnet/minecraft/client/model/geom/ModelPart;)V
-			ARG 1 root

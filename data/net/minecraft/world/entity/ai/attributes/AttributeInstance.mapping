@@ -12,6 +12,8 @@ CLASS net/minecraft/world/entity/ai/attributes/AttributeInstance
 		ARG 1 modifier
 	METHOD addPermanentModifier (Lnet/minecraft/world/entity/ai/attributes/AttributeModifier;)V
 		ARG 1 modifier
+	METHOD addPermanentModifiers (Ljava/util/Collection;)V
+		ARG 1 modifiers
 	METHOD addTransientModifier (Lnet/minecraft/world/entity/ai/attributes/AttributeModifier;)V
 		ARG 1 modifier
 	METHOD getModifier (Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/world/entity/ai/attributes/AttributeModifier;

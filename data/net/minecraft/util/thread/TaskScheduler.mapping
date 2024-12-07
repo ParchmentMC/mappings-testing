@@ -1,0 +1,10 @@
+CLASS net/minecraft/util/thread/TaskScheduler
+	METHOD schedule (Ljava/lang/Runnable;)V
+		ARG 1 task
+	METHOD scheduleWithResult (Ljava/util/function/Consumer;)Ljava/util/concurrent/CompletableFuture;
+		ARG 1 resultConsumer
+	METHOD wrapExecutor (Ljava/lang/String;Ljava/util/concurrent/Executor;)Lnet/minecraft/util/thread/TaskScheduler;
+		ARG 0 name
+		ARG 1 executor
+	METHOD wrapRunnable (Ljava/lang/Runnable;)Ljava/lang/Runnable;
+		ARG 1 runnable

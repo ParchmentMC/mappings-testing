@@ -1,17 +1,36 @@
 CLASS net/minecraft/client/multiplayer/RegistryDataCollector
+	METHOD addCrashDetails (Lnet/minecraft/CrashReport;Ljava/util/Map;Ljava/util/List;)V
+		ARG 0 crashReport
+		ARG 1 dynamicRegistries
+		ARG 2 staticRegistries
 	METHOD appendContents (Lnet/minecraft/resources/ResourceKey;Ljava/util/List;)V
 		ARG 1 registryKey
 		ARG 2 registryEntries
 	METHOD appendTags (Ljava/util/Map;)V
 		ARG 1 tags
-	METHOD collectGameRegistries (Lnet/minecraft/server/packs/resources/ResourceProvider;Lnet/minecraft/core/RegistryAccess;Z)Lnet/minecraft/core/RegistryAccess$Frozen;
+	METHOD collectGameRegistries (Lnet/minecraft/server/packs/resources/ResourceProvider;Lnet/minecraft/core/RegistryAccess$Frozen;Z)Lnet/minecraft/core/RegistryAccess$Frozen;
 		ARG 1 resourceProvider
 		ARG 2 registryAccess
 		ARG 3 isMemoryConnection
+	METHOD loadNewElementsAndTags (Lnet/minecraft/server/packs/resources/ResourceProvider;Lnet/minecraft/client/multiplayer/RegistryDataCollector$ContentsCollector;Z)Lnet/minecraft/core/RegistryAccess;
+		ARG 1 resourceProvider
+		ARG 2 contentCollector
+		ARG 3 isMemoryConnection
+	METHOD loadOnlyTags (Lnet/minecraft/client/multiplayer/RegistryDataCollector$TagCollector;Lnet/minecraft/core/RegistryAccess$Frozen;Z)V
+		ARG 1 tagCollector
+		ARG 2 registryAccess
+		ARG 3 isMemoryConnection
+	METHOD resolveRegistryTags (Lnet/minecraft/core/RegistryAccess$Frozen;Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/tags/TagNetworkSerialization$NetworkPayload;)Lnet/minecraft/core/Registry$PendingTags;
+		ARG 0 registryAccess
+		ARG 1 registryKey
+		ARG 2 payload
+	CLASS TagCollector
+		METHOD append (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/tags/TagNetworkSerialization$NetworkPayload;)V
+			ARG 1 registryKey
+			ARG 2 payload
+		METHOD forEach (Ljava/util/function/BiConsumer;)V
+			ARG 1 action
 	CLASS ContentsCollector
 		METHOD append (Lnet/minecraft/resources/ResourceKey;Ljava/util/List;)V
 			ARG 1 registryKey
 			ARG 2 entries
-		METHOD loadRegistries (Lnet/minecraft/server/packs/resources/ResourceProvider;Lnet/minecraft/core/RegistryAccess;)Lnet/minecraft/core/RegistryAccess;
-			ARG 1 resourceProvider
-			ARG 2 registryAccess

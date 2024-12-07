@@ -1,0 +1,16 @@
+CLASS net/minecraft/client/renderer/MapRenderer
+	METHOD <init> (Lnet/minecraft/client/resources/MapDecorationTextureManager;Lnet/minecraft/client/resources/MapTextureManager;)V
+		ARG 1 decorationTextures
+		ARG 2 mapTextureManager
+	METHOD extractDecorationRenderState (Lnet/minecraft/world/level/saveddata/maps/MapDecoration;)Lnet/minecraft/client/renderer/state/MapRenderState$MapDecorationRenderState;
+		ARG 1 decoration
+	METHOD extractRenderState (Lnet/minecraft/world/level/saveddata/maps/MapId;Lnet/minecraft/world/level/saveddata/maps/MapItemSavedData;Lnet/minecraft/client/renderer/state/MapRenderState;)V
+		ARG 1 id
+		ARG 2 savedData
+		ARG 3 renderState
+	METHOD render (Lnet/minecraft/client/renderer/state/MapRenderState;Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;ZI)V
+		ARG 1 renderState
+		ARG 2 poseStack
+		ARG 3 bufferSource
+		ARG 4 active
+		ARG 5 packedLight

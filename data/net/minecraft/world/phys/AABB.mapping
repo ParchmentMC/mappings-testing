@@ -11,6 +11,15 @@ CLASS net/minecraft/world/phys/AABB
 	METHOD <init> (Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;)V
 		ARG 1 start
 		ARG 2 end
+	METHOD clip (DDDDDDLnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;)Ljava/util/Optional;
+		ARG 0 minX
+		ARG 2 minY
+		ARG 4 minZ
+		ARG 6 maxX
+		ARG 8 maxY
+		ARG 10 maxZ
+		ARG 12 from
+		ARG 13 to
 	METHOD clip (Ljava/lang/Iterable;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/BlockHitResult;
 		ARG 0 boxes
 		ARG 1 start
@@ -34,6 +43,9 @@ CLASS net/minecraft/world/phys/AABB
 		ARG 19 startSide
 		ARG 21 startOtherA
 		ARG 23 startOtherB
+	METHOD collidedAlongVector (Lnet/minecraft/world/phys/Vec3;Ljava/util/List;)Z
+		ARG 1 vector
+		ARG 2 boxes
 	METHOD contains (DDD)Z
 		ARG 1 x
 		ARG 3 y
@@ -42,17 +54,17 @@ CLASS net/minecraft/world/phys/AABB
 		COMMENT Returns if the supplied Vec3D is completely inside the bounding box
 		ARG 1 vec
 	METHOD contract (DDD)Lnet/minecraft/world/phys/AABB;
-		COMMENT Creates a new {@link AxisAlignedBB} that has been contracted by the given amount, with positive changes decreasing max values and negative changes increasing min values.
+		COMMENT Creates a new {@link AABB} that has been contracted by the given amount, with positive changes decreasing max values and negative changes increasing min values.
 		COMMENT <br/>
 		COMMENT If the amount to contract by is larger than the length of a side, then the side will wrap (still creating a valid AABB - see last sample).
 		COMMENT
 		COMMENT <h3>Samples:</h3>
 		COMMENT <table>
 		COMMENT <tr><th>Input</th><th>Result</th></tr>
-		COMMENT <tr><td><pre><code>new AxisAlignedBB(0, 0, 0, 4, 4, 4).contract(2, 2, 2)</code></pre></td><td><pre><samp>box[0.0, 0.0, 0.0 -> 2.0, 2.0, 2.0]</samp></pre></td></tr>
-		COMMENT <tr><td><pre><code>new AxisAlignedBB(0, 0, 0, 4, 4, 4).contract(-2, -2, -2)</code></pre></td><td><pre><samp>box[2.0, 2.0, 2.0 -> 4.0, 4.0, 4.0]</samp></pre></td></tr>
-		COMMENT <tr><td><pre><code>new AxisAlignedBB(5, 5, 5, 7, 7, 7).contract(0, 1, -1)</code></pre></td><td><pre><samp>box[5.0, 5.0, 6.0 -> 7.0, 6.0, 7.0]</samp></pre></td></tr>
-		COMMENT <tr><td><pre><code>new AxisAlignedBB(-2, -2, -2, 2, 2, 2).contract(4, -4, 0)</code></pre></td><td><pre><samp>box[-8.0, 2.0, -2.0 -> -2.0, 8.0, 2.0]</samp></pre></td></tr>
+		COMMENT <tr><td><pre><code>new AABB(0, 0, 0, 4, 4, 4).contract(2, 2, 2)</code></pre></td><td><pre><samp>box[0.0, 0.0, 0.0 -> 2.0, 2.0, 2.0]</samp></pre></td></tr>
+		COMMENT <tr><td><pre><code>new AABB(0, 0, 0, 4, 4, 4).contract(-2, -2, -2)</code></pre></td><td><pre><samp>box[2.0, 2.0, 2.0 -> 4.0, 4.0, 4.0]</samp></pre></td></tr>
+		COMMENT <tr><td><pre><code>new AABB(5, 5, 5, 7, 7, 7).contract(0, 1, -1)</code></pre></td><td><pre><samp>box[5.0, 5.0, 6.0 -> 7.0, 6.0, 7.0]</samp></pre></td></tr>
+		COMMENT <tr><td><pre><code>new AABB(-2, -2, -2, 2, 2, 2).contract(4, -4, 0)</code></pre></td><td><pre><samp>box[-8.0, 2.0, -2.0 -> -2.0, 8.0, 2.0]</samp></pre></td></tr>
 		COMMENT </table>
 		COMMENT
 		COMMENT <h3>See Also:</h3>
@@ -67,7 +79,7 @@ CLASS net/minecraft/world/phys/AABB
 		ARG 3 y
 		ARG 5 z
 	METHOD deflate (D)Lnet/minecraft/world/phys/AABB;
-		COMMENT Creates a new {@link AxisAlignedBB} that is expanded by the given value in all directions. Equivalent to {@link #grow(double)} with value set to the negative of the value provided here. Passing a negative value to this method values will grow the AABB.
+		COMMENT Creates a new {@link AABB} that is expanded by the given value in all directions. Equivalent to {@link #grow(double)} with value set to the negative of the value provided here. Passing a negative value to this method values will grow the AABB.
 		COMMENT <br/>
 		COMMENT Side lengths will be decreased by 2 times the value of the parameter, since both min and max are changed.
 		COMMENT <br/>
@@ -87,14 +99,14 @@ CLASS net/minecraft/world/phys/AABB
 	METHOD equals (Ljava/lang/Object;)Z
 		ARG 1 other
 	METHOD expandTowards (DDD)Lnet/minecraft/world/phys/AABB;
-		COMMENT Creates a new {@link AxisAlignedBB} that has been expanded by the given amount, with positive changes increasing max values and negative changes decreasing min values.
+		COMMENT Creates a new {@link AABB} that has been expanded by the given amount, with positive changes increasing max values and negative changes decreasing min values.
 		COMMENT
 		COMMENT <h3>Samples:</h3>
 		COMMENT <table>
 		COMMENT <tr><th>Input</th><th>Result</th></tr>
-		COMMENT <tr><td><pre><code>new AxisAlignedBB(0, 0, 0, 1, 1, 1).expand(2, 2, 2)</code></pre></td><td><pre><samp>box[0, 0, 0 -> 3, 3, 3]</samp></pre></td><td>
-		COMMENT <tr><td><pre><code>new AxisAlignedBB(0, 0, 0, 1, 1, 1).expand(-2, -2, -2)</code></pre></td><td><pre><samp>box[-2, -2, -2 -> 1, 1, 1]</samp></pre></td><td>
-		COMMENT <tr><td><pre><code>new AxisAlignedBB(5, 5, 5, 7, 7, 7).expand(0, 1, -1)</code></pre></td><td><pre><samp>box[5, 5, 4, 7, 8, 7]</samp></pre></td><td>
+		COMMENT <tr><td><pre><code>new AABB(0, 0, 0, 1, 1, 1).expand(2, 2, 2)</code></pre></td><td><pre><samp>box[0, 0, 0 -> 3, 3, 3]</samp></pre></td><td>
+		COMMENT <tr><td><pre><code>new AABB(0, 0, 0, 1, 1, 1).expand(-2, -2, -2)</code></pre></td><td><pre><samp>box[-2, -2, -2 -> 1, 1, 1]</samp></pre></td><td>
+		COMMENT <tr><td><pre><code>new AABB(5, 5, 5, 7, 7, 7).expand(0, 1, -1)</code></pre></td><td><pre><samp>box[5, 5, 4, 7, 8, 7]</samp></pre></td><td>
 		COMMENT </table>
 		COMMENT
 		COMMENT <h3>See Also:</h3>
@@ -110,6 +122,19 @@ CLASS net/minecraft/world/phys/AABB
 		ARG 5 z
 	METHOD expandTowards (Lnet/minecraft/world/phys/Vec3;)Lnet/minecraft/world/phys/AABB;
 		ARG 1 vector
+	METHOD getDirection (DDDDDDLnet/minecraft/world/phys/Vec3;[DLnet/minecraft/core/Direction;DDD)Lnet/minecraft/core/Direction;
+		ARG 0 minX
+		ARG 2 minY
+		ARG 4 minZ
+		ARG 6 maxX
+		ARG 8 maxY
+		ARG 10 maxZ
+		ARG 12 start
+		ARG 13 mineDistance
+		ARG 14 facing
+		ARG 15 deltaX
+		ARG 17 deltaY
+		ARG 19 deltaZ
 	METHOD getDirection (Lnet/minecraft/world/phys/AABB;Lnet/minecraft/world/phys/Vec3;[DLnet/minecraft/core/Direction;DDD)Lnet/minecraft/core/Direction;
 		ARG 0 aabb
 		ARG 1 start
@@ -121,7 +146,7 @@ CLASS net/minecraft/world/phys/AABB
 	METHOD getSize ()D
 		COMMENT Returns the average length of the edges of the bounding box.
 	METHOD inflate (D)Lnet/minecraft/world/phys/AABB;
-		COMMENT Creates a new {@link AxisAlignedBB} that is expanded by the given value in all directions. Equivalent to {@link #grow(double, double, double)} with the given value for all 3 params. Negative values will shrink the AABB.
+		COMMENT Creates a new {@link AABB} that is expanded by the given value in all directions. Equivalent to {@link #grow(double, double, double)} with the given value for all 3 params. Negative values will shrink the AABB.
 		COMMENT <br/>
 		COMMENT Side lengths will be increased by 2 times the value of the parameter, since both min and max are changed.
 		COMMENT <br/>
@@ -130,7 +155,7 @@ CLASS net/minecraft/world/phys/AABB
 		COMMENT @return A modified AABB.
 		ARG 1 value
 	METHOD inflate (DDD)Lnet/minecraft/world/phys/AABB;
-		COMMENT Creates a new {@link AxisAlignedBB} that has been contracted by the given amount in both directions. Negative values will shrink the AABB instead of expanding it.
+		COMMENT Creates a new {@link AABB} that has been contracted by the given amount in both directions. Negative values will shrink the AABB instead of expanding it.
 		COMMENT <br/>
 		COMMENT Side lengths will be increased by 2 times the value of the parameters, since both min and max are changed.
 		COMMENT <br/>
@@ -139,10 +164,10 @@ CLASS net/minecraft/world/phys/AABB
 		COMMENT <h3>Samples:</h3>
 		COMMENT <table>
 		COMMENT <tr><th>Input</th><th>Result</th></tr>
-		COMMENT <tr><td><pre><code>new AxisAlignedBB(0, 0, 0, 1, 1, 1).grow(2, 2, 2)</code></pre></td><td><pre><samp>box[-2.0, -2.0, -2.0 -> 3.0, 3.0, 3.0]</samp></pre></td></tr>
-		COMMENT <tr><td><pre><code>new AxisAlignedBB(0, 0, 0, 6, 6, 6).grow(-2, -2, -2)</code></pre></td><td><pre><samp>box[2.0, 2.0, 2.0 -> 4.0, 4.0, 4.0]</samp></pre></td></tr>
-		COMMENT <tr><td><pre><code>new AxisAlignedBB(5, 5, 5, 7, 7, 7).grow(0, 1, -1)</code></pre></td><td><pre><samp>box[5.0, 4.0, 6.0 -> 7.0, 8.0, 6.0]</samp></pre></td></tr>
-		COMMENT <tr><td><pre><code>new AxisAlignedBB(1, 1, 1, 3, 3, 3).grow(-4, -2, -3)</code></pre></td><td><pre><samp>box[-1.0, 1.0, 0.0 -> 5.0, 3.0, 4.0]</samp></pre></td></tr>
+		COMMENT <tr><td><pre><code>new AABB(0, 0, 0, 1, 1, 1).grow(2, 2, 2)</code></pre></td><td><pre><samp>box[-2.0, -2.0, -2.0 -> 3.0, 3.0, 3.0]</samp></pre></td></tr>
+		COMMENT <tr><td><pre><code>new AABB(0, 0, 0, 6, 6, 6).grow(-2, -2, -2)</code></pre></td><td><pre><samp>box[2.0, 2.0, 2.0 -> 4.0, 4.0, 4.0]</samp></pre></td></tr>
+		COMMENT <tr><td><pre><code>new AABB(5, 5, 5, 7, 7, 7).grow(0, 1, -1)</code></pre></td><td><pre><samp>box[5.0, 4.0, 6.0 -> 7.0, 8.0, 6.0]</samp></pre></td></tr>
+		COMMENT <tr><td><pre><code>new AABB(1, 1, 1, 3, 3, 3).grow(-4, -2, -3)</code></pre></td><td><pre><samp>box[-1.0, 1.0, 0.0 -> 5.0, 3.0, 4.0]</samp></pre></td></tr>
 		COMMENT </table>
 		COMMENT
 		COMMENT <h3>See Also:</h3>

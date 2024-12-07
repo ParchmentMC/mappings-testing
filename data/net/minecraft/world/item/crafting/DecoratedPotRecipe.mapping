@@ -1,0 +1,9 @@
+CLASS net/minecraft/world/item/crafting/DecoratedPotRecipe
+	METHOD back (Lnet/minecraft/world/item/crafting/CraftingInput;)Lnet/minecraft/world/item/ItemStack;
+		ARG 0 input
+	METHOD front (Lnet/minecraft/world/item/crafting/CraftingInput;)Lnet/minecraft/world/item/ItemStack;
+		ARG 0 input
+	METHOD left (Lnet/minecraft/world/item/crafting/CraftingInput;)Lnet/minecraft/world/item/ItemStack;
+		ARG 0 input
+	METHOD right (Lnet/minecraft/world/item/crafting/CraftingInput;)Lnet/minecraft/world/item/ItemStack;
+		ARG 0 input

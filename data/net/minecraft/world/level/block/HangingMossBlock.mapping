@@ -1,0 +1,9 @@
+CLASS net/minecraft/world/level/block/HangingMossBlock
+	METHOD canGrowInto (Lnet/minecraft/world/level/block/state/BlockState;)Z
+		ARG 1 state
+	METHOD canStayAtPosition (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Z
+		ARG 1 level
+		ARG 2 pos
+	METHOD getTip (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/core/BlockPos;
+		ARG 1 level
+		ARG 2 pos

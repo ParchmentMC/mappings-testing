@@ -32,11 +32,15 @@ CLASS net/minecraft/client/gui/font/providers/UnihexProvider
 		METHOD <init> (Lnet/minecraft/resources/ResourceLocation;Ljava/util/List;)V
 			ARG 1 hexFile
 			ARG 2 sizeOverrides
+		METHOD lambda$static$2 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
 		METHOD load (Lnet/minecraft/server/packs/resources/ResourceManager;)Lcom/mojang/blaze3d/font/GlyphProvider;
 			ARG 1 resourceManager
 		METHOD loadData (Ljava/io/InputStream;)Lnet/minecraft/client/gui/font/providers/UnihexProvider;
 			ARG 1 inputStream
 	CLASS Dimensions
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
 		METHOD left (I)I
 			ARG 0 packedDimensions
 		METHOD pack (II)I
@@ -55,6 +59,13 @@ CLASS net/minecraft/client/gui/font/providers/UnihexProvider
 		METHOD read (ILit/unimi/dsi/fastutil/bytes/ByteList;)Lnet/minecraft/client/gui/font/providers/UnihexProvider$LineData;
 			ARG 0 index
 			ARG 1 byteList
+	CLASS ReaderOutput
+		METHOD accept (ILnet/minecraft/client/gui/font/providers/UnihexProvider$LineData;)V
+			ARG 1 codepoint
+			ARG 2 lineData
+	CLASS OverrideRange
+		METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+			ARG 0 instance
 	CLASS ShortContents
 		METHOD read (ILit/unimi/dsi/fastutil/bytes/ByteList;)Lnet/minecraft/client/gui/font/providers/UnihexProvider$LineData;
 			ARG 0 index

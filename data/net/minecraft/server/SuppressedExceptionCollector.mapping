@@ -1,0 +1,4 @@
+CLASS net/minecraft/server/SuppressedExceptionCollector
+	METHOD addEntry (Ljava/lang/String;Ljava/lang/Throwable;)V
+		ARG 1 id
+		ARG 2 throwable

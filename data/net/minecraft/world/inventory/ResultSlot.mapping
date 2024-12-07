@@ -9,6 +9,13 @@ CLASS net/minecraft/world/inventory/ResultSlot
 	METHOD checkTakeAchievements (Lnet/minecraft/world/item/ItemStack;)V
 		ARG 1 stack
 			COMMENT the output - ie, iron ingots, and pickaxes, not ore and wood.
+	METHOD copyAllInputItems (Lnet/minecraft/world/item/crafting/CraftingInput;)Lnet/minecraft/core/NonNullList;
+		ARG 0 input
+	METHOD getRemainingItems (Lnet/minecraft/world/item/crafting/CraftingInput;Lnet/minecraft/world/level/Level;)Lnet/minecraft/core/NonNullList;
+		ARG 1 input
+		ARG 2 level
+	METHOD lambda$getRemainingItems$0 (Lnet/minecraft/world/item/crafting/CraftingInput;Lnet/minecraft/world/item/crafting/RecipeHolder;)Lnet/minecraft/core/NonNullList;
+		ARG 1 recipe
 	METHOD mayPlace (Lnet/minecraft/world/item/ItemStack;)Z
 		COMMENT Check if the stack is allowed to be placed in this slot, used for armor slots as well as furnace fuel.
 		ARG 1 stack

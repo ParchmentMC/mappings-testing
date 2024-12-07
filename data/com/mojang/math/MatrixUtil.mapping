@@ -1,4 +1,8 @@
 CLASS com/mojang/math/MatrixUtil
+	METHOD approxGivensQuat (FFF)Lcom/mojang/math/GivensParameters;
+		ARG 0 topCorner
+		ARG 1 oppositeDiagonalAverage
+		ARG 2 bottomCorner
 	METHOD eigenvalueJacobi (Lorg/joml/Matrix3f;I)Lorg/joml/Quaternionf;
 		ARG 0 input
 		ARG 1 iterations

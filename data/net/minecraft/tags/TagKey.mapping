@@ -21,3 +21,7 @@ CLASS net/minecraft/tags/TagKey
 		ARG 1 location
 	METHOD lambda$hashedCodec$4 (Lnet/minecraft/tags/TagKey;)Ljava/lang/String;
 		ARG 0 tagKey
+	METHOD lambda$streamCodec$5 (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/tags/TagKey;
+		ARG 1 location
+	METHOD streamCodec (Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/network/codec/StreamCodec;
+		ARG 0 registry

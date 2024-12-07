@@ -1,0 +1,20 @@
+CLASS net/minecraft/recipebook/PlaceRecipeHelper
+	METHOD placeRecipe (IIIILjava/lang/Iterable;Lnet/minecraft/recipebook/PlaceRecipeHelper$Output;)V
+		ARG 0 gridWidth
+		ARG 1 gridHeight
+		ARG 2 width
+		ARG 3 height
+		ARG 4 ingredients
+		ARG 5 output
+	METHOD placeRecipe (IILnet/minecraft/world/item/crafting/Recipe;Ljava/lang/Iterable;Lnet/minecraft/recipebook/PlaceRecipeHelper$Output;)V
+		ARG 0 width
+		ARG 1 height
+		ARG 2 recipe
+		ARG 3 ingredients
+		ARG 4 output
+	CLASS Output
+		METHOD addItemToSlot (Ljava/lang/Object;III)V
+			ARG 1 item
+			ARG 2 slot
+			ARG 3 x
+			ARG 4 y

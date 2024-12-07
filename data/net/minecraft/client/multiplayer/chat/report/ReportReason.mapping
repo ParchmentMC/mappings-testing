@@ -1,3 +1,5 @@
 CLASS net/minecraft/client/multiplayer/chat/report/ReportReason
 	METHOD <init> (Ljava/lang/String;ILjava/lang/String;)V
 		ARG 3 name
+	METHOD getIncompatibleCategories (Lnet/minecraft/client/multiplayer/chat/report/ReportType;)Ljava/util/List;
+		ARG 0 reportType

@@ -1,0 +1,3 @@
+CLASS net/minecraft/client/model/DonkeyModel
+	METHOD modifyMesh (Lnet/minecraft/client/model/geom/builders/PartDefinition;)V
+		ARG 0 partDefinition

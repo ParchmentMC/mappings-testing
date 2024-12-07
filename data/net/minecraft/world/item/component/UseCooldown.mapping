@@ -1,0 +1,8 @@
+CLASS net/minecraft/world/item/component/UseCooldown
+	METHOD <init> (F)V
+		ARG 1 seconds
+	METHOD apply (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/entity/LivingEntity;)V
+		ARG 1 stack
+		ARG 2 entity
+	METHOD lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+		ARG 0 instance

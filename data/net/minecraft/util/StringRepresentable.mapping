@@ -23,6 +23,9 @@ CLASS net/minecraft/util/StringRepresentable
 		METHOD byName (Ljava/lang/String;Ljava/lang/Enum;)Ljava/lang/Enum;
 			ARG 1 name
 			ARG 2 defaultValue
+		METHOD byName (Ljava/lang/String;Ljava/util/function/Supplier;)Ljava/lang/Enum;
+			ARG 1 name
+			ARG 2 defaultValue
 	CLASS StringRepresentableCodec
 		METHOD <init> ([Lnet/minecraft/util/StringRepresentable;Ljava/util/function/Function;Ljava/util/function/ToIntFunction;)V
 			ARG 1 values

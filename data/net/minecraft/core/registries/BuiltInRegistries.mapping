@@ -1,4 +1,8 @@
 CLASS net/minecraft/core/registries/BuiltInRegistries
+	METHOD acquireBootstrapRegistrationLookup (Lnet/minecraft/core/Registry;)Lnet/minecraft/core/HolderGetter;
+		ARG 0 registry
+	METHOD bindBootstrappedTagsToEmpty (Lnet/minecraft/core/Registry;)V
+		ARG 0 registry
 	METHOD internalRegister (Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/core/WritableRegistry;Lnet/minecraft/core/registries/BuiltInRegistries$RegistryBootstrap;)Lnet/minecraft/core/WritableRegistry;
 		ARG 0 key
 		ARG 1 registry

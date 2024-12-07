@@ -1,0 +1,3 @@
+CLASS net/minecraft/client/model/CreakingModel
+	METHOD getHeadModelParts (Lnet/minecraft/client/renderer/entity/state/CreakingRenderState;)Ljava/util/List;
+		ARG 1 renderState

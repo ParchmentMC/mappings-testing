@@ -1,0 +1,8 @@
+CLASS net/minecraft/world/entity/ConversionParams
+	METHOD single (Lnet/minecraft/world/entity/Mob;ZZ)Lnet/minecraft/world/entity/ConversionParams;
+		ARG 0 mob
+		ARG 1 keepEquipment
+		ARG 2 preserveCanPickUpLoot
+	CLASS AfterConversion
+		METHOD finalizeConversion (Lnet/minecraft/world/entity/Mob;)V
+			ARG 1 mob

@@ -2,7 +2,7 @@ CLASS net/minecraft/world/entity/vehicle/ContainerEntity
 	METHOD addChestVehicleSaveData (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/core/HolderLookup$Provider;)V
 		ARG 1 tag
 		ARG 2 levelRegistry
-	METHOD chestVehicleDestroyed (Lnet/minecraft/world/damagesource/DamageSource;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/Entity;)V
+	METHOD chestVehicleDestroyed (Lnet/minecraft/world/damagesource/DamageSource;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/Entity;)V
 		ARG 1 damageSource
 		ARG 2 level
 		ARG 3 entity
@@ -25,9 +25,9 @@ CLASS net/minecraft/world/entity/vehicle/ContainerEntity
 	METHOD setChestVehicleItem (ILnet/minecraft/world/item/ItemStack;)V
 		ARG 1 slot
 		ARG 2 stack
-	METHOD setLootTable (Lnet/minecraft/resources/ResourceKey;)V
+	METHOD setContainerLootTable (Lnet/minecraft/resources/ResourceKey;)V
 		ARG 1 lootTable
-	METHOD setLootTableSeed (J)V
+	METHOD setContainerLootTableSeed (J)V
 		ARG 1 lootTableSeed
 	METHOD unpackChestVehicleLootTable (Lnet/minecraft/world/entity/player/Player;)V
 		ARG 1 player

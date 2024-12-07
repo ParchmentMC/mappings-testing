@@ -1,0 +1,60 @@
+CLASS net/minecraft/client/renderer/Octree
+	METHOD <init> (Lnet/minecraft/core/SectionPos;III)V
+		ARG 1 cameraSectionPos
+		ARG 2 viewDistance
+		ARG 3 sectionGridSizeY
+		ARG 4 minY
+	METHOD add (Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$RenderSection;)Z
+		ARG 1 section
+	METHOD isClose (DDDDDDI)Z
+		ARG 1 minX
+		ARG 3 minY
+		ARG 5 minZ
+		ARG 7 maxX
+		ARG 9 maxY
+		ARG 11 maxZ
+		ARG 13 radius
+	METHOD visitNodes (Lnet/minecraft/client/renderer/Octree$OctreeVisitor;Lnet/minecraft/client/renderer/culling/Frustum;I)V
+		ARG 1 visitor
+		ARG 2 frustum
+		ARG 3 nearbyRadius
+	CLASS Leaf
+		METHOD <init> (Lnet/minecraft/client/renderer/Octree;Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$RenderSection;)V
+			ARG 2 section
+	CLASS Node
+		METHOD visitNodes (Lnet/minecraft/client/renderer/Octree$OctreeVisitor;ZLnet/minecraft/client/renderer/culling/Frustum;IIZ)V
+			ARG 1 visitor
+			ARG 2 isLeafNode
+			ARG 3 frustum
+			ARG 4 recursionDepth
+			ARG 5 nearbyRadius
+			ARG 6 isNearby
+	CLASS Branch
+		METHOD <init> (Lnet/minecraft/client/renderer/Octree;Lnet/minecraft/world/level/levelgen/structure/BoundingBox;)V
+			ARG 2 boundingBox
+		METHOD add (Lnet/minecraft/client/renderer/chunk/SectionRenderDispatcher$RenderSection;)Z
+			ARG 1 section
+		METHOD createChildBoundingBox (ZZZ)Lnet/minecraft/world/level/levelgen/structure/BoundingBox;
+			ARG 1 xDiffNegative
+			ARG 2 yDiffNegative
+			ARG 3 zDiffNegative
+		METHOD getNodeIndex (Lnet/minecraft/client/renderer/Octree$AxisSorting;ZZZ)I
+			ARG 0 sorting
+			ARG 1 xDiffNegative
+			ARG 2 yDiffNegative
+			ARG 3 zDiffNegative
+	CLASS AxisSorting
+		METHOD <init> (Ljava/lang/String;IIII)V
+			ARG 3 xShift
+			ARG 4 yShift
+			ARG 5 zShift
+		METHOD getAxisSorting (III)Lnet/minecraft/client/renderer/Octree$AxisSorting;
+			ARG 0 xDiff
+			ARG 1 yDiff
+			ARG 2 zDiff
+	CLASS OctreeVisitor
+		METHOD visit (Lnet/minecraft/client/renderer/Octree$Node;ZIZ)V
+			ARG 1 node
+			ARG 2 isLeafNode
+			ARG 3 recursionDepth
+			ARG 4 isNearby

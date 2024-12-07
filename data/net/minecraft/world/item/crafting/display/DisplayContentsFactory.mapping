@@ -1,0 +1,12 @@
+CLASS net/minecraft/world/item/crafting/display/DisplayContentsFactory
+	CLASS ForStacks
+		METHOD forStack (Lnet/minecraft/core/Holder;)Ljava/lang/Object;
+			ARG 1 item
+		METHOD forStack (Lnet/minecraft/world/item/Item;)Ljava/lang/Object;
+			ARG 1 item
+		METHOD forStack (Lnet/minecraft/world/item/ItemStack;)Ljava/lang/Object;
+			ARG 1 stack
+	CLASS ForRemainders
+		METHOD addRemainder (Ljava/lang/Object;Ljava/util/List;)Ljava/lang/Object;
+			ARG 1 remainder
+			ARG 2 remainderItems

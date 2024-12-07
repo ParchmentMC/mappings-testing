@@ -6,10 +6,17 @@ CLASS net/minecraft/client/model/WardenModel
 		ARG 2 pitch
 	METHOD animateIdlePose (F)V
 		ARG 1 ageInTicks
-	METHOD animateTendrils (Lnet/minecraft/world/entity/monster/warden/Warden;FF)V
-		ARG 1 entity
+	METHOD animateTendrils (Lnet/minecraft/client/renderer/entity/state/WardenRenderState;F)V
+		ARG 1 renderState
 		ARG 2 ageInTicks
-		ARG 3 partialTick
 	METHOD animateWalk (FF)V
 		ARG 1 limbSwing
 		ARG 2 limbSwingAmount
+	METHOD getBioluminescentLayerModelParts (Lnet/minecraft/client/renderer/entity/state/WardenRenderState;)Ljava/util/List;
+		ARG 1 renderState
+	METHOD getHeartLayerModelParts (Lnet/minecraft/client/renderer/entity/state/WardenRenderState;)Ljava/util/List;
+		ARG 1 renderState
+	METHOD getPulsatingSpotsLayerModelParts (Lnet/minecraft/client/renderer/entity/state/WardenRenderState;)Ljava/util/List;
+		ARG 1 renderState
+	METHOD getTendrilsLayerModelParts (Lnet/minecraft/client/renderer/entity/state/WardenRenderState;)Ljava/util/List;
+		ARG 1 renderState

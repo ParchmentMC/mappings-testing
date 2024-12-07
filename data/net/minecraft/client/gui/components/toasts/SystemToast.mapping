@@ -8,18 +8,18 @@ CLASS net/minecraft/client/gui/components/toasts/SystemToast
 		ARG 1 id
 		ARG 2 title
 		ARG 3 message
-	METHOD add (Lnet/minecraft/client/gui/components/toasts/ToastComponent;Lnet/minecraft/client/gui/components/toasts/SystemToast$SystemToastId;Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/Component;)V
-		ARG 0 toastComponent
+	METHOD add (Lnet/minecraft/client/gui/components/toasts/ToastManager;Lnet/minecraft/client/gui/components/toasts/SystemToast$SystemToastId;Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/Component;)V
+		ARG 0 toastManager
 		ARG 1 id
 		ARG 2 title
 		ARG 3 message
-	METHOD addOrUpdate (Lnet/minecraft/client/gui/components/toasts/ToastComponent;Lnet/minecraft/client/gui/components/toasts/SystemToast$SystemToastId;Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/Component;)V
-		ARG 0 toastComponent
+	METHOD addOrUpdate (Lnet/minecraft/client/gui/components/toasts/ToastManager;Lnet/minecraft/client/gui/components/toasts/SystemToast$SystemToastId;Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/Component;)V
+		ARG 0 toastManager
 		ARG 1 id
 		ARG 2 title
 		ARG 3 message
-	METHOD forceHide (Lnet/minecraft/client/gui/components/toasts/ToastComponent;Lnet/minecraft/client/gui/components/toasts/SystemToast$SystemToastId;)V
-		ARG 0 toastComponent
+	METHOD forceHide (Lnet/minecraft/client/gui/components/toasts/ToastManager;Lnet/minecraft/client/gui/components/toasts/SystemToast$SystemToastId;)V
+		ARG 0 toastManager
 		ARG 1 id
 	METHOD multiline (Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/gui/components/toasts/SystemToast$SystemToastId;Lnet/minecraft/network/chat/Component;Lnet/minecraft/network/chat/Component;)Lnet/minecraft/client/gui/components/toasts/SystemToast;
 		ARG 0 minecraft

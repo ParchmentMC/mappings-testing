@@ -1,7 +1,13 @@
 CLASS net/minecraft/commands/arguments/ResourceKeyArgument
 	METHOD <init> (Lnet/minecraft/resources/ResourceKey;)V
 		ARG 1 registryKey
+	METHOD getAdvancement (Lcom/mojang/brigadier/context/CommandContext;Ljava/lang/String;)Lnet/minecraft/advancements/AdvancementHolder;
+		ARG 0 context
+		ARG 1 argument
 	METHOD getConfiguredFeature (Lcom/mojang/brigadier/context/CommandContext;Ljava/lang/String;)Lnet/minecraft/core/Holder$Reference;
+		ARG 0 context
+		ARG 1 argument
+	METHOD getRecipe (Lcom/mojang/brigadier/context/CommandContext;Ljava/lang/String;)Lnet/minecraft/world/item/crafting/RecipeHolder;
 		ARG 0 context
 		ARG 1 argument
 	METHOD getRegistry (Lcom/mojang/brigadier/context/CommandContext;Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/core/Registry;
@@ -26,6 +32,10 @@ CLASS net/minecraft/commands/arguments/ResourceKeyArgument
 		ARG 0 structureType
 	METHOD lambda$static$2 (Ljava/lang/Object;)Lcom/mojang/brigadier/Message;
 		ARG 0 templatePoolType
+	METHOD lambda$static$3 (Ljava/lang/Object;)Lcom/mojang/brigadier/Message;
+		ARG 0 recipe
+	METHOD lambda$static$4 (Ljava/lang/Object;)Lcom/mojang/brigadier/Message;
+		ARG 0 advancement
 	METHOD listSuggestions (Lcom/mojang/brigadier/context/CommandContext;Lcom/mojang/brigadier/suggestion/SuggestionsBuilder;)Ljava/util/concurrent/CompletableFuture;
 		ARG 1 context
 		ARG 2 builder

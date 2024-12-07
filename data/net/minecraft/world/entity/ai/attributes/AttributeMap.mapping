@@ -7,6 +7,8 @@ CLASS net/minecraft/world/entity/ai/attributes/AttributeMap
 		ARG 1 map
 	METHOD assignBaseValues (Lnet/minecraft/world/entity/ai/attributes/AttributeMap;)V
 		ARG 1 map
+	METHOD assignPermanentModifiers (Lnet/minecraft/world/entity/ai/attributes/AttributeMap;)V
+		ARG 1 map
 	METHOD getBaseValue (Lnet/minecraft/core/Holder;)D
 		ARG 1 attribute
 	METHOD getInstance (Lnet/minecraft/core/Holder;)Lnet/minecraft/world/entity/ai/attributes/AttributeInstance;

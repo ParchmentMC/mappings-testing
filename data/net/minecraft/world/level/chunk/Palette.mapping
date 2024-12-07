@@ -1,4 +1,6 @@
 CLASS net/minecraft/world/level/chunk/Palette
+	METHOD copy (Lnet/minecraft/world/level/chunk/PaletteResize;)Lnet/minecraft/world/level/chunk/Palette;
+		ARG 1 resizeHandler
 	METHOD idFor (Ljava/lang/Object;)I
 		ARG 1 state
 	METHOD maybeHas (Ljava/util/function/Predicate;)Z

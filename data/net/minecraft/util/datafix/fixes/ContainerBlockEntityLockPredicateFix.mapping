@@ -1,0 +1,7 @@
+CLASS net/minecraft/util/datafix/fixes/ContainerBlockEntityLockPredicateFix
+	METHOD <init> (Lcom/mojang/datafixers/schemas/Schema;)V
+		ARG 1 outputSchema
+	METHOD fixBlockEntity (Lcom/mojang/datafixers/Typed;)Lcom/mojang/datafixers/Typed;
+		ARG 0 data
+	METHOD lambda$fixBlockEntity$0 (Lcom/mojang/serialization/Dynamic;)Lcom/mojang/serialization/Dynamic;
+		ARG 0 tag

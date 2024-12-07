@@ -5,24 +5,27 @@ CLASS net/minecraft/client/gui/components/PlayerFaceRenderer
 		ARG 2 x
 		ARG 3 y
 		ARG 4 size
-	METHOD draw (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/resources/ResourceLocation;III)V
+	METHOD draw (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/client/resources/PlayerSkin;IIII)V
 		ARG 0 guiGraphics
-		ARG 1 atlasLocation
+		ARG 1 skin
 		ARG 2 x
 		ARG 3 y
 		ARG 4 size
-	METHOD draw (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/resources/ResourceLocation;IIIZZ)V
+		ARG 5 color
+	METHOD draw (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/resources/ResourceLocation;IIIZZI)V
 		ARG 0 guiGraphics
-		ARG 1 atlasLocation
+		ARG 1 skinTexture
 		ARG 2 x
 		ARG 3 y
 		ARG 4 size
 		ARG 5 drawHat
 		ARG 6 upsideDown
-	METHOD drawHat (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/resources/ResourceLocation;IIIZ)V
+		ARG 7 color
+	METHOD drawHat (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/resources/ResourceLocation;IIIZI)V
 		ARG 0 guiGraphics
-		ARG 1 atlasLocation
+		ARG 1 skinTexture
 		ARG 2 x
 		ARG 3 y
 		ARG 4 size
 		ARG 5 upsideDown
+		ARG 6 color

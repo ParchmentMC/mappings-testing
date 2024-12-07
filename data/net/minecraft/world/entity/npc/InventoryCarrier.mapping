@@ -1,8 +1,9 @@
 CLASS net/minecraft/world/entity/npc/InventoryCarrier
-	METHOD pickUpItem (Lnet/minecraft/world/entity/Mob;Lnet/minecraft/world/entity/npc/InventoryCarrier;Lnet/minecraft/world/entity/item/ItemEntity;)V
-		ARG 0 mob
-		ARG 1 carrier
-		ARG 2 itemEntity
+	METHOD pickUpItem (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/world/entity/Mob;Lnet/minecraft/world/entity/npc/InventoryCarrier;Lnet/minecraft/world/entity/item/ItemEntity;)V
+		ARG 0 level
+		ARG 1 mob
+		ARG 2 carrier
+		ARG 3 itemEntity
 	METHOD readInventoryFromTag (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/core/HolderLookup$Provider;)V
 		ARG 1 tag
 		ARG 2 levelRegistry

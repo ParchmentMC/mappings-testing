@@ -22,3 +22,5 @@ CLASS net/minecraft/client/multiplayer/PlayerInfo
 		ARG 1 latency
 	METHOD setTabListDisplayName (Lnet/minecraft/network/chat/Component;)V
 		ARG 1 displayName
+	METHOD setTabListOrder (I)V
+		ARG 1 tabListOrder

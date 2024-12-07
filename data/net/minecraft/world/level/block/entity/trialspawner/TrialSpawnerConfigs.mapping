@@ -1,0 +1,25 @@
+CLASS net/minecraft/world/level/block/entity/trialspawner/TrialSpawnerConfigs
+	METHOD bootstrap (Lnet/minecraft/data/worldgen/BootstrapContext;)V
+		ARG 0 context
+	METHOD customSpawnData (Lnet/minecraft/world/entity/EntityType;Ljava/util/function/Consumer;)Lnet/minecraft/world/level/SpawnData;
+		ARG 0 entityType
+		ARG 1 tagConsumer
+	METHOD customSpawnDataWithEquipment (Lnet/minecraft/world/entity/EntityType;Ljava/util/function/Consumer;Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/world/level/SpawnData;
+		ARG 0 entityType
+		ARG 1 tagConsumer
+		ARG 2 lootTableKey
+	METHOD register (Lnet/minecraft/data/worldgen/BootstrapContext;Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawnerConfigs$Keys;Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawnerConfig;Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawnerConfig;)V
+		ARG 0 context
+		ARG 1 keys
+		ARG 2 normal
+		ARG 3 ominous
+	METHOD registryKey (Ljava/lang/String;)Lnet/minecraft/resources/ResourceKey;
+		ARG 0 name
+	METHOD spawnData (Lnet/minecraft/world/entity/EntityType;)Lnet/minecraft/world/level/SpawnData;
+		ARG 0 entityType
+	METHOD spawnDataWithEquipment (Lnet/minecraft/world/entity/EntityType;Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/world/level/SpawnData;
+		ARG 0 entityType
+		ARG 1 lootTableKey
+	CLASS Keys
+		METHOD of (Ljava/lang/String;)Lnet/minecraft/world/level/block/entity/trialspawner/TrialSpawnerConfigs$Keys;
+			ARG 0 key

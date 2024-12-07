@@ -1,0 +1,32 @@
+CLASS net/minecraft/client/renderer/LevelEventHandler
+	METHOD <init> (Lnet/minecraft/client/Minecraft;Lnet/minecraft/world/level/Level;Lnet/minecraft/client/renderer/LevelRenderer;)V
+		ARG 1 minecraft
+		ARG 2 level
+		ARG 3 levelRenderer
+	METHOD globalLevelEvent (ILnet/minecraft/core/BlockPos;I)V
+		COMMENT Handles a global level event. This includes playing sounds that should be heard by any player, regardless of position and dimension, such as the Wither spawning.
+		ARG 1 type
+		ARG 2 pos
+		ARG 3 data
+	METHOD levelEvent (ILnet/minecraft/core/BlockPos;I)V
+		ARG 1 type
+		ARG 2 pos
+		ARG 3 data
+	METHOD notifyNearbyEntities (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Z)V
+		COMMENT Notifies living entities in a 3 block range of the specified {@code pos} that a record is or isn't playing nearby, dependent on the specified {@code playing} parameter.
+		COMMENT This is used to make parrots start or stop partying.
+		ARG 1 level
+		ARG 2 pos
+		ARG 3 playing
+	METHOD playJukeboxSong (Lnet/minecraft/core/Holder;Lnet/minecraft/core/BlockPos;)V
+		ARG 1 song
+		ARG 2 pos
+	METHOD shootParticles (ILnet/minecraft/core/BlockPos;Lnet/minecraft/util/RandomSource;Lnet/minecraft/core/particles/SimpleParticleType;)V
+		ARG 1 direction
+		ARG 2 pos
+		ARG 3 random
+		ARG 4 particleType
+	METHOD stopJukeboxSong (Lnet/minecraft/core/BlockPos;)V
+		ARG 1 pos
+	METHOD stopJukeboxSongAndNotifyNearby (Lnet/minecraft/core/BlockPos;)V
+		ARG 1 pos

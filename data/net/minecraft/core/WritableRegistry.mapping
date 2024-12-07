@@ -1,4 +1,7 @@
 CLASS net/minecraft/core/WritableRegistry
+	METHOD bindTag (Lnet/minecraft/tags/TagKey;Ljava/util/List;)V
+		ARG 1 tag
+		ARG 2 values
 	METHOD register (Lnet/minecraft/resources/ResourceKey;Ljava/lang/Object;Lnet/minecraft/core/RegistrationInfo;)Lnet/minecraft/core/Holder$Reference;
 		ARG 1 key
 		ARG 2 value

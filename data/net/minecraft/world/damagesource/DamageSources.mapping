@@ -26,6 +26,8 @@ CLASS net/minecraft/world/damagesource/DamageSources
 	METHOD indirectMagic (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/damagesource/DamageSource;
 		ARG 1 causingEntity
 		ARG 2 directEntity
+	METHOD mace (Lnet/minecraft/world/entity/Entity;)Lnet/minecraft/world/damagesource/DamageSource;
+		ARG 1 entity
 	METHOD mobAttack (Lnet/minecraft/world/entity/LivingEntity;)Lnet/minecraft/world/damagesource/DamageSource;
 		ARG 1 mob
 	METHOD mobProjectile (Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/LivingEntity;)Lnet/minecraft/world/damagesource/DamageSource;

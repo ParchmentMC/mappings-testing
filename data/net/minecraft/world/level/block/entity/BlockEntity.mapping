@@ -25,6 +25,8 @@ CLASS net/minecraft/world/level/block/entity/BlockEntity
 		ARG 1 registries
 	METHOD hasLevel ()Z
 		COMMENT @return whether this BlockEntity's level has been set
+	METHOD isValidBlockState (Lnet/minecraft/world/level/block/state/BlockState;)Z
+		ARG 1 state
 	METHOD lambda$loadWithComponents$1 (Lnet/minecraft/core/component/DataComponentMap;)V
 		ARG 1 components
 	METHOD loadAdditional (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/core/HolderLookup$Provider;)V
@@ -81,6 +83,8 @@ CLASS net/minecraft/world/level/block/entity/BlockEntity
 	METHOD triggerEvent (II)Z
 		ARG 1 id
 		ARG 2 type
+	METHOD validateBlockState (Lnet/minecraft/world/level/block/state/BlockState;)V
+		ARG 1 state
 	CLASS DataComponentInput
 		METHOD get (Lnet/minecraft/core/component/DataComponentType;)Ljava/lang/Object;
 			ARG 1 component
