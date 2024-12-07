@@ -21,5 +21,7 @@ CLASS net/minecraft/data/PackOutput
 		METHOD file (Lnet/minecraft/resources/ResourceLocation;Ljava/lang/String;)Ljava/nio/file/Path;
 			ARG 1 location
 			ARG 2 extension
+		METHOD json (Lnet/minecraft/resources/ResourceKey;)Ljava/nio/file/Path;
+			ARG 1 key
 		METHOD json (Lnet/minecraft/resources/ResourceLocation;)Ljava/nio/file/Path;
 			ARG 1 location

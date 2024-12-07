@@ -3,6 +3,8 @@ CLASS net/minecraft/world/entity/animal/Bee
 		ARG 1 compound
 	METHOD aiStep ()V
 		COMMENT Called frequently, so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn.
+	METHOD attractsBees (Lnet/minecraft/world/level/block/state/BlockState;)Z
+		ARG 0 state
 	METHOD checkFallDamage (DZLnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)V
 		ARG 1 y
 		ARG 3 onGround
@@ -35,6 +37,8 @@ CLASS net/minecraft/world/entity/animal/Bee
 		ARG 1 pos
 	METHOD jumpInLiquid (Lnet/minecraft/tags/TagKey;)V
 		ARG 1 fluidTag
+	METHOD lambda$registerGoals$0 (Lnet/minecraft/world/item/ItemStack;)Z
+		ARG 0 stack
 	METHOD pathfindRandomlyTowards (Lnet/minecraft/core/BlockPos;)V
 		ARG 1 pos
 	METHOD playStepSound (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
@@ -129,6 +133,8 @@ CLASS net/minecraft/world/entity/animal/Bee
 		METHOD tick ()V
 			COMMENT Keep ticking a continuous task that has already been started
 	CLASS BeeLocateHiveGoal
+		METHOD lambda$findNearbyHivesWithSpace$0 (Lnet/minecraft/core/Holder;)Z
+			ARG 0 poiRecord
 		METHOD lambda$findNearbyHivesWithSpace$1 (Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;)D
 			ARG 1 pos
 		METHOD start ()V

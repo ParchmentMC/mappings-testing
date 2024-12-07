@@ -34,6 +34,15 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 		ARG 1 state
 		ARG 2 level
 		ARG 3 pos
+	METHOD getCloneItemStack (Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/item/ItemStack;
+		ARG 1 level
+		ARG 2 pos
+		ARG 3 state
+	METHOD getCloneItemStack (Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Z)Lnet/minecraft/world/item/ItemStack;
+		ARG 1 level
+		ARG 2 pos
+		ARG 3 state
+		ARG 4 includeData
 	METHOD getCollisionShape (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/phys/shapes/CollisionContext;)Lnet/minecraft/world/phys/shapes/VoxelShape;
 		ARG 1 state
 		ARG 2 level
@@ -271,6 +280,8 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 			ARG 1 state
 		METHOD lambda$new$1 (Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/material/MapColor;
 			ARG 0 state
+		METHOD lambda$new$2 (Lnet/minecraft/world/level/block/state/BlockState;)I
+			ARG 0 state
 		METHOD lambda$new$3 (Lnet/minecraft/resources/ResourceKey;)Ljava/util/Optional;
 			ARG 0 key
 		METHOD lambda$new$4 (Lnet/minecraft/resources/ResourceKey;)Ljava/lang/String;
@@ -296,6 +307,12 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 			ARG 0 state
 			ARG 1 level
 			ARG 2 pos
+		METHOD lambda$offsetType$12 (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/Vec3;
+			ARG 0 state
+			ARG 1 pos
+		METHOD lambda$offsetType$13 (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/Vec3;
+			ARG 0 state
+			ARG 1 pos
 		METHOD lightLevel (Ljava/util/function/ToIntFunction;)Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;
 			ARG 1 lightEmission
 		METHOD mapColor (Ljava/util/function/Function;)Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;
@@ -368,6 +385,13 @@ CLASS net/minecraft/world/level/block/state/BlockBehaviour
 		METHOD getBlockSupportShape (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/shapes/VoxelShape;
 			ARG 1 level
 			ARG 2 pos
+		METHOD getCloneItemStack (Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/item/ItemStack;
+			ARG 1 level
+			ARG 2 pos
+		METHOD getCloneItemStack (Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;Z)Lnet/minecraft/world/item/ItemStack;
+			ARG 1 level
+			ARG 2 pos
+			ARG 3 includeData
 		METHOD getCollisionShape (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/shapes/VoxelShape;
 			ARG 1 level
 			ARG 2 pos

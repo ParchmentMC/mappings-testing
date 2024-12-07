@@ -37,6 +37,9 @@ CLASS net/minecraft/world/entity/raid/Raider
 		METHOD tick ()V
 			COMMENT Keep ticking a continuous task that has already been started
 	CLASS HoldGroundAttackGoal
+		METHOD <init> (Lnet/minecraft/world/entity/monster/AbstractIllager;F)V
+			ARG 1 mob
+			ARG 2 radius
 		METHOD <init> (Lnet/minecraft/world/entity/raid/Raider;Lnet/minecraft/world/entity/monster/AbstractIllager;F)V
 			ARG 2 mob
 			ARG 3 hostileRadiusSquare
@@ -66,6 +69,8 @@ CLASS net/minecraft/world/entity/raid/Raider
 			COMMENT Returns whether execution should begin. You can also read and cache any state necessary for execution in this method as well.
 		METHOD hasNotVisited (Lnet/minecraft/core/BlockPos;)Z
 			ARG 1 pos
+		METHOD lambda$hasSuitablePoi$0 (Lnet/minecraft/core/Holder;)Z
+			ARG 0 poi
 		METHOD start ()V
 			COMMENT Execute a one shot task or start executing a continuous task
 		METHOD stop ()V
