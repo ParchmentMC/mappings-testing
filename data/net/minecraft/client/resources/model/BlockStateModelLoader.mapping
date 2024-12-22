@@ -17,13 +17,13 @@ CLASS net/minecraft/client/resources/model/BlockStateModelLoader
 		ARG 3 model
 	METHOD loadBlockStateDefinitions (Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/world/level/block/state/StateDefinition;)V
 		ARG 1 blockStateId
-		ARG 2 stateDefenition
+		ARG 2 stateDefinition
 	METHOD loadBlockStates (Lnet/minecraft/client/resources/model/UnbakedModel;Lnet/minecraft/server/packs/resources/ResourceManager;Ljava/util/concurrent/Executor;)Ljava/util/concurrent/CompletableFuture;
 		ARG 0 model
 		ARG 1 resourceManager
 		ARG 2 executor
 	METHOD predicate (Lnet/minecraft/world/level/block/state/StateDefinition;Ljava/lang/String;)Ljava/util/function/Predicate;
-		ARG 0 stateDefentition
+		ARG 0 stateDefinition
 		ARG 1 properties
 	METHOD registerModelGroup (Ljava/lang/Iterable;)V
 		ARG 1 models

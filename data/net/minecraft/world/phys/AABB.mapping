@@ -130,7 +130,7 @@ CLASS net/minecraft/world/phys/AABB
 		ARG 8 maxY
 		ARG 10 maxZ
 		ARG 12 start
-		ARG 13 mineDistance
+		ARG 13 minDistance
 		ARG 14 facing
 		ARG 15 deltaX
 		ARG 17 deltaY

@@ -47,7 +47,7 @@ CLASS net/minecraft/client/renderer/entity/ItemRenderer
 		ARG 3 leftHand
 		ARG 4 poseStack
 		ARG 5 bufferSource
-		ARG 6 packedLIght
+		ARG 6 packedLight
 		ARG 7 packedOverlay
 		ARG 8 model
 	METHOD renderBundleItem (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemDisplayContext;ZLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;IILnet/minecraft/client/resources/model/BakedModel;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;I)V
