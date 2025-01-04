@@ -664,7 +664,7 @@ CLASS net/minecraft/world/entity/Entity
 	METHOD setPos (Lnet/minecraft/world/phys/Vec3;)V
 		ARG 1 pos
 	METHOD setPosRaw (DDD)V
-		COMMENT Directly updates the {@link #posX}, {@link posY}, and {@link posZ} fields, without performing any collision checks, updating the bounding box position, or sending any packets. In general, this is not what you want and {@link #setPosition} is better, as that handles the bounding box.
+		COMMENT Directly updates the {@link position}, {@link blockPosition} and {@link chunkPosition} fields, without performing any collision checks, updating the bounding box position, or sending any packets. In general, this is not what you want and {@link #setPos} is better, as that handles the bounding box.
 		ARG 1 x
 		ARG 3 y
 		ARG 5 z
